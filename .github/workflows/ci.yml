@@ -1,0 +1,22 @@
+name: Verificar Desafío Gramatical
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Instalar dependencias
+        run: bun install --frozen-lockfile
+      - name: Ejecutar pruebas
+        run: bun run test
+      - name: Comprobar código
+        run: bun run lint
+      - name: Compilar aplicación
+        run: bun run build
