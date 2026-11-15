@@ -1,15 +1,21 @@
 name: Verificar Desafío Gramatical
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
+
 jobs:
   verificar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - name: Obtener código
+        uses: actions/checkout@v4
+      - name: Preparar Bun
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
       - name: Instalar dependencias
@@ -17,6 +23,7 @@ jobs:
       - name: Ejecutar pruebas
         run: bun run test
       - name: Comprobar código
-        run: bunx eslint . --rule "prettier/prettier: off"
+        run: |
+          bunx eslint . --rule "prettier/prettier: off"
       - name: Compilar aplicación
         run: bun run build
