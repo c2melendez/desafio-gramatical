@@ -17,6 +17,6 @@ jobs:
       - name: Ejecutar pruebas
         run: bun run test
       - name: Comprobar código
-        run: bunx eslint . --rule 'prettier/prettier: off'
+        run: bunx eslint . --rule "prettier/prettier: off"
       - name: Compilar aplicación
         run: bun run build
