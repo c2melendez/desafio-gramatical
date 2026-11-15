@@ -22,11 +22,43 @@ export const Route = createFileRoute("/jugar")({
   component: Play,
 });
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// Se guarda una cola por modalidad y nivel para evitar repeticiones entre partidas.
+// Solo se vuelve a barajar cuando se ha agotado todo el banco.
 function buildItems(modo: Mode, nivel: Level): any[] {
-  if (modo === "clasificar") return shuffle(SENTENCES[nivel]).slice(0, 5);
-  if (modo === "quiz") return shuffle(QUIZ[nivel]).slice(0, 8).map((q) => ({ ...q, order: shuffle(q.options.map((_, i) => i)) }));
-  return shuffle(BUILD[nivel]).map((b) => ({ ...b, bank: shuffle(b.tiles.map((t, k) => ({ ...t, k }))) }));
+  const source = modo === "clasificar" ? SENTENCES[nivel] : modo === "quiz" ? QUIZ[nivel] : BUILD[nivel];
+  const key = `desafio-gramatical:cola:${modo}:${nivel}`;
+  const ids = new Set(source.map((x) => x.id));
+  let queue: string[] = [];
+  try {
+    const stored = JSON.parse(localStorage.getItem(key) || "[]");
+    if (Array.isArray(stored)) queue = stored.filter((id): id is string => typeof id === "string" && ids.has(id));
+  } catch { /* Sin almacenamiento disponible: se crea una cola nueva. */ }
+  const batchSize = modo === "quiz" ? 8 : 5;
+  const selected: string[] = [];
+  while (selected.length < Math.min(batchSize, source.length)) {
+    if (!queue.length) {
+      queue = shuffle(source.map((x) => x.id));
+      // Evitar una repetición inmediata en el límite de ciclos.
+      if (selected.length && queue[0] === selected[selected.length - 1] && queue.length > 1) {
+        [queue[0], queue[1]] = [queue[1], queue[0]];
+      }
+    }
+    const id = queue.shift()!;
+    if (!selected.includes(id)) selected.push(id);
+  }
+  try { localStorage.setItem(key, JSON.stringify(queue)); } catch { /* almacenamiento opcional */ }
+  return selected.map((id) => {
+    const item = source.find((x) => x.id === id)!;
+    if (modo === "quiz") {
+      const q = item as (typeof QUIZ)[Level][number];
+      return { ...q, order: shuffle(q.options.map((_, i) => i)) };
+    }
+    if (modo === "construir") {
+      const b = item as (typeof BUILD)[Level][number];
+      return { ...b, bank: shuffle(b.tiles.map((t, k) => ({ ...t, k }))) };
+    }
+    return item;
+  });
 }
 
 function Play() {
