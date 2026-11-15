@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: desafio-gramatical
+    runtime: node
+    plan: free
+    region: virginia
+    repo: https://github.com/c2melendez/desafio-gramatical
+    branch: main
+    autoDeployTrigger: commit
+    buildCommand: bun install --frozen-lockfile && bun run build
+    startCommand: node .output/server/index.mjs
+    healthCheckPath: /
+    envVars:
+      - key: NITRO_PRESET
+        value: node-server
+      - key: NODE_ENV
+        value: production
