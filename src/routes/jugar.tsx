@@ -27,6 +27,7 @@ export const Route = createFileRoute("/jugar")({
 
 // Se guarda una cola por modalidad y nivel para evitar repeticiones entre partidas.
 // Solo se vuelve a barajar cuando se ha agotado todo el banco.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function buildItems(modo: Mode, nivel: Level): any[] {
   const source = modo === "clasificar" ? [...SENTENCES[nivel], ...EXTRA_SENTENCES[nivel]] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel]] : [...BUILD[nivel], ...EXTRA_BUILD[nivel]];
   const key = `desafio-gramatical:cola:${modo}:${nivel}`;
