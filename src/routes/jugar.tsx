@@ -150,9 +150,9 @@ function Play() {
       <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuenow={idx + 1} aria-valuemax={items.length} aria-valuemin={1}>
         <div className="h-full bg-primary transition-all" style={{ width: `${((idx + 1) / items.length) * 100}%` }} />
       </div>
-      {modo === "clasificar" && <ClassifyGame key={`${run}-${idx}`} {...props} />}
-      {modo === "quiz" && <QuizGame key={`${run}-${idx}`} {...props} />}
-      {modo === "construir" && <BuildGame key={`${run}-${idx}`} {...props} />}
+      {modo === "clasificar" && <ClassifyGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
+      {modo === "quiz" && <QuizGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
+      {modo === "construir" && <BuildGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
     </main>
   );
 }
