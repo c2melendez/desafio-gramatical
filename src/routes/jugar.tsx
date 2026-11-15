@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BUILD, LEVELS, LEVEL_LABEL, MODE_LABEL, QUIZ, SENTENCES, pointsFor, saveHistory, shuffle, type Level, type Mistake, type Mode } from "@/lib/grammar";
+import { EXTRA_QUIZ } from "@/lib/extra-quiz";
 import { ClassifyGame } from "@/components/games/ClassifyGame";
 import { QuizGame } from "@/components/games/QuizGame";
 import { BuildGame } from "@/components/games/BuildGame";
@@ -25,7 +26,7 @@ export const Route = createFileRoute("/jugar")({
 // Se guarda una cola por modalidad y nivel para evitar repeticiones entre partidas.
 // Solo se vuelve a barajar cuando se ha agotado todo el banco.
 function buildItems(modo: Mode, nivel: Level): any[] {
-  const source = modo === "clasificar" ? SENTENCES[nivel] : modo === "quiz" ? QUIZ[nivel] : BUILD[nivel];
+  const source = modo === "clasificar" ? SENTENCES[nivel] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel]] : BUILD[nivel];
   const key = `desafio-gramatical:cola:${modo}:${nivel}`;
   const ids = new Set(source.map((x) => x.id));
   let queue: string[] = [];
