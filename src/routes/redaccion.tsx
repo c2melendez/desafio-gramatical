@@ -17,6 +17,9 @@ import type {OrganizationEditorCase} from "@/lib/organization-editor-cases";
 import type {ElisionErrorCase} from "@/lib/elision-error-cases";
 import type {ElisionChoiceCase} from "@/lib/elision-choice-cases";
 import type {ElisionEditorCase} from "@/lib/elision-editor-cases";
+import type {GeneralizationErrorCase} from "@/lib/generalization-error-cases";
+import type {GeneralizationChoiceCase} from "@/lib/generalization-choice-cases";
+import type {GeneralizationEditorCase} from "@/lib/generalization-editor-cases";
 
 const modes:Mode[]=["clasificar","quiz","construir"];
 export const Route=createFileRoute("/redaccion")({
@@ -67,7 +70,7 @@ function WritingPlay(){
   }else setIdx(i=>i+1);
  };
  if(!items)return <main className="p-8 text-center">Preparando retos de redacción…</main>;
- const title=subtema==="Corrección"&&modo==="quiz"?"Corrección precisa":subtema==="Organización textual"&&modo==="quiz"?"Continúa el texto":subtema==="Elisión y adición"&&modo==="quiz"?"Revisión precisa":gameNames("Redacción")[modo];
+ const title=subtema==="Corrección"&&modo==="quiz"?"Corrección precisa":subtema==="Organización textual"&&modo==="quiz"?"Continúa el texto":subtema==="Elisión y adición"&&modo==="quiz"?"Revisión precisa":subtema==="Generalización e integración"&&modo==="quiz"?"Conclusión sustentada":gameNames("Redacción")[modo];
  const levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(items.length===0)return <main className="mx-auto max-w-xl p-6"><p>Este contenido aún no tiene ejercicios.</p><Link to="/" className="underline">← Inicio</Link></main>;
  if(finished){
@@ -112,8 +115,8 @@ function WritingPlay(){
   <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={items.length} aria-valuenow={idx+1}>
    <div className="h-full bg-primary" style={{width:`${100*(idx+1)/items.length}%`}}/>
   </div>
-  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props} item={item as WritingChallenge|ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase|ElisionErrorCase}/>}
-  {modo==="quiz"&&<ConnectorGame key={item.id} {...props} item={item as WritingChallenge|ConnectorCase|CorrectionChoiceCase|OrganizationChoiceCase|ElisionChoiceCase}/>}
-  {modo==="construir"&&<ExpertEditor key={item.id} {...props} item={item as WritingChallenge|ConnectorEditorCase|CorrectionEditorCase|OrganizationEditorCase|ElisionEditorCase}/>}
+  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props} item={item as WritingChallenge|ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase|ElisionErrorCase|GeneralizationErrorCase}/>}
+  {modo==="quiz"&&<ConnectorGame key={item.id} {...props} item={item as WritingChallenge|ConnectorCase|CorrectionChoiceCase|OrganizationChoiceCase|ElisionChoiceCase|GeneralizationChoiceCase}/>}
+  {modo==="construir"&&<ExpertEditor key={item.id} {...props} item={item as WritingChallenge|ConnectorEditorCase|CorrectionEditorCase|OrganizationEditorCase|ElisionEditorCase|GeneralizationEditorCase}/>}
  </main>;
 }
