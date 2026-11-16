@@ -599,5 +599,22 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "answer": 2,
     "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
     "reviewStatus": "editorial-draft"
+  },
+  {
+    "id": "reading-main-quiz-v1-avanzado-35",
+    "level": "avanzado",
+    "subtopic": "Idea principal",
+    "title": "Bibliotecas por distrito",
+    "passage": "Una investigación sobre asistencia a bibliotecas observó que algunos distritos mejoraron su promedio anual, aunque otros sufrieron cierres temporales. Las encuestas fueron voluntarias y registraron horarios diferentes. Los autores recomendaron describir cada distrito por separado y reconocer que la muestra no permite atribuir las mejoras a una única medida municipal.",
+    "question": "¿Qué opción sintetiza mejor la idea central del texto?",
+    "options": [
+      "Las encuestas fueron voluntarias.",
+      "Los resultados de asistencia a bibliotecas deben interpretarse considerando diferencias entre distritos y selección de participantes.",
+      "El pasaje demuestra resultados idénticos para toda la población sin excepciones.",
+      "El autor confirma una explicación causal exclusiva sin examinar otras condiciones."
+    ],
+    "answer": 1,
+    "explanation": "La respuesta central considera distintos distritos y límites de las encuestas, en vez de confundir un detalle del método con la conclusión principal.",
+    "reviewStatus": "editorial-draft"
   }
 ];
