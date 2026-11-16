@@ -2,8 +2,10 @@ import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
-import {READING_SUBTOPICS,readingItems,type ReadingChallenge,type ReadingSubtopic} from "@/lib/reading";
+import {READING_SUBTOPICS,readingItems,readingPool,type ReadingChallenge,type ReadingItem,type ReadingSubtopic} from "@/lib/reading";
 import {ReadingDetective,ReadingInference,ReadingReconstruct} from "@/components/games/ReadingGames";
+import {rotationKey,readRotation,recordRotation,writeRotation} from "@/lib/rotation";
+import type {MainIdeaChoiceCase} from "@/lib/main-idea-choice-cases";
 
 const modes:Mode[]=["clasificar","quiz","construir"];
 export const Route=createFileRoute("/lectura")({
@@ -21,7 +23,7 @@ export const Route=createFileRoute("/lectura")({
 function ReadingPlay(){
  const {subtema,modo,nivel}=Route.useSearch();
  const [run,setRun]=useState(0);
- const [items,setItems]=useState<ReadingChallenge[]|null>(null);
+ const [items,setItems]=useState<ReadingItem[]|null>(null);
  const [idx,setIdx]=useState(0);
  const [correct,setCorrect]=useState(0);
  const [total,setTotal]=useState(0);
@@ -35,6 +37,12 @@ function ReadingPlay(){
   setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[nivel,subtema,modo,run]);
  const report=(ok:boolean,m?:Mistake)=>{
+  if(items?.[idx]){
+   const key=rotationKey("espanol","Comprensión lectora",subtema,modo,nivel);
+   const ids=readingPool(nivel,subtema,modo).map(q=>q.id);
+   const state=readRotation(key,ids);
+   writeRotation(key,recordRotation(state,items[idx].id,ok));
+  }
   setTotal(t=>t+1);
   if(ok){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
   else {setStreak(0);if(m)setMistakes(ms=>[...ms,m])}
@@ -93,8 +101,8 @@ function ReadingPlay(){
   <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={items.length} aria-valuenow={idx+1}>
    <div className="h-full bg-primary" style={{width:`${100*(idx+1)/items.length}%`}}/>
   </div>
-  {modo==="clasificar"&&<ReadingDetective key={item.id} {...props}/>}
-  {modo==="quiz"&&<ReadingInference key={item.id} {...props}/>}
-  {modo==="construir"&&<ReadingReconstruct key={item.id} {...props}/>}
+  {modo==="clasificar"&&<ReadingDetective key={item.id} {...props} item={item as ReadingChallenge}/>}
+  {modo==="quiz"&&<ReadingInference key={item.id} {...props} item={item as ReadingChallenge|MainIdeaChoiceCase}/>}
+  {modo==="construir"&&<ReadingReconstruct key={item.id} {...props} item={item as ReadingChallenge}/>}
  </main>;
 }
