@@ -4,8 +4,11 @@ import type {GameProps} from "./types";
 import {ERROR_TYPES,checkWritingSequence,type WritingChallenge} from "@/lib/writing";
 import type {ConnectorErrorCase} from "@/lib/connector-error-cases";
 import type {ConnectorEditorCase} from "@/lib/connector-editor-cases";
+import type {CorrectionErrorCase} from "@/lib/correction-error-cases";
+import type {CorrectionEditorCase} from "@/lib/correction-editor-cases";
+import type {CorrectionChoiceCase} from "@/lib/correction-choice-cases";
 
-export function ErrorHunter(props:GameProps<WritingChallenge|ConnectorErrorCase>){
+export function ErrorHunter(props:GameProps<WritingChallenge|ConnectorErrorCase|CorrectionErrorCase>){
  if("correctConnector" in props.item)return <ConnectorCorrection {...props} item={props.item}/>;
  return <LegacyErrorHunter {...props} item={props.item}/>;
 }
@@ -51,7 +54,8 @@ function LegacyErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge>
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
-function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorCase>){
+function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorCase|CorrectionErrorCase>){
+ const correction=item.subtopic==="Corrección";
  const [choice,setChoice]=useState<string|null>(null);
  const submit=(option:string)=>{
   if(choice!==null)return;setChoice(option);
@@ -60,7 +64,7 @@ function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorC
  };
  return <section className="space-y-4" aria-label="Cazador de errores: corrección de conectores">
   <h2 className="text-xl font-black">Cazador de errores</h2>
-  <p>El conector entre comillas es incorrecto. Selecciona el que lo reemplaza sin alterar la relación lógica.</p>
+  <p>{correction?"El fragmento entre comillas necesita corregirse. Elige su reemplazo preciso.":"El conector entre comillas es incorrecto. Selecciona el que lo reemplaza sin alterar la relación lógica."}</p>
   <div className="card-ink bg-card p-5"><p className="font-semibold text-xl leading-relaxed">{item.flawed}</p></div>
   <div className="grid grid-cols-2 gap-2">{item.options.map(option=><button key={option}
    disabled={choice!==null} onClick={()=>submit(option)}
@@ -75,7 +79,7 @@ function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorC
   </div>}
  </section>;
 }
-export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallenge|import("@/lib/connector-cases").ConnectorCase>){
+export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallenge|import("@/lib/connector-cases").ConnectorCase|CorrectionChoiceCase>){
  const [choice,setChoice]=useState<string|null>(null);
  const send=(option:string)=>{
   if(choice!==null)return;
@@ -84,8 +88,8 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
   report(ok,ok?undefined:{prompt:item.gap,given:option,correct:item.connector,exp:"explanation" in item ? item.explanation : "El conector «"+item.connector+"» expresa la relación lógica adecuada para el contexto."});
  };
  return <section className="space-y-4" aria-label="Conector correcto">
-  <h2 className="text-xl font-black">Conector correcto</h2>
-  <p>Lee las dos ideas. Elige el conector que establezca la relación lógica indicada por el sentido del texto.</p>
+  <h2 className="text-xl font-black">{item.subtopic==="Corrección"?"Corrección precisa":"Conector correcto"}</h2>
+  <p>{item.subtopic==="Corrección"?"Completa el enunciado con la forma correcta según la gramática, la ortografía o el contexto.":"Lee las dos ideas. Elige el conector que establezca la relación lógica indicada por el sentido del texto."}</p>
   <div className="card-ink bg-card p-5">
    <p className="text-xl font-semibold leading-relaxed">{item.gap.replace("___",choice??"_______")}</p>
   </div>
@@ -98,7 +102,7 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
-export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge|ConnectorEditorCase>){
+export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge|ConnectorEditorCase|CorrectionEditorCase>){
  const [sequence,setSequence]=useState<number[]>([]);
  const [checked,setChecked]=useState(false);
  // Cinco órdenes distintos, nunca el orden correcto de presentación.
