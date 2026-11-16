@@ -24,6 +24,8 @@ jobs:
         run: bun run build
       - name: Ejecutar pruebas
         run: bun run test
+      - name: Auditar cobertura del banco y objetivos de la Fase A
+        run: bun run audit:content
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"
