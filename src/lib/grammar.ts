@@ -157,7 +157,7 @@ export function checkBuild(item: BuildQ, chosen: Tile[]): BuildResult {
 export const pointsFor = (streak: number) => 10 + Math.min(streak, 5) * 2;
 
 export type Mistake = { prompt: string; given: string; correct: string; exp: string };
-export type HistoryEntry = { date: string; mode: Mode; level: Level; score: number; correct: number; total: number; bestStreak: number };
+export type HistoryEntry = { date: string; mode: Mode; level: Level; score: number; correct: number; total: number; bestStreak: number; area?: string; topic?: string; subtopic?: string };
 const KEY = "desafio-gramatical:historial";
 export function loadHistory(): HistoryEntry[] {
   try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { return []; }
