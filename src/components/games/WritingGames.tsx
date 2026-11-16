@@ -60,7 +60,11 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
 export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge>){
  const [sequence,setSequence]=useState<number[]>([]);
  const [checked,setChecked]=useState(false);
- const order=[2,0,1];
+ // Cinco órdenes distintos, nunca el orden correcto de presentación.
+ // El índice deriva del ID estable, evitando repetir la misma disposición en todas las rondas.
+ const permutations=[[2,0,1],[1,2,0],[2,1,0],[1,0,2],[0,2,1]];
+ const hash=[...item.id].reduce((n,char)=>n*31+char.charCodeAt(0),0)>>>0;
+ const order=permutations[hash%permutations.length];
  const correct=checkWritingSequence(item.steps,sequence);
  const check=()=>{
   if(checked||sequence.length!==3)return;
