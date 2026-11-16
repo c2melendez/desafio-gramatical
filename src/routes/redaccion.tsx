@@ -2,7 +2,7 @@ import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
-import {WRITING_SUBTOPICS,writingItems,type WritingChallenge,type WritingItem,type WritingSubtopic} from "@/lib/writing";
+import {WRITING_SUBTOPICS,writingItems,writingPool,type WritingChallenge,type WritingItem,type WritingSubtopic} from "@/lib/writing";
 import {ErrorHunter,ConnectorGame,ExpertEditor} from "@/components/games/WritingGames";
 import {rotationKey,readRotation,recordRotation,writeRotation} from "@/lib/rotation";
 
@@ -38,7 +38,7 @@ function WritingPlay(){
  const report=(ok:boolean,m?:Mistake)=>{
   if(items?.[idx]){
    const key=rotationKey("espanol","Redacción",subtema,modo,nivel);
-   const ids=items.map(x=>x.id);
+   const ids=writingPool(nivel,subtema,modo).map(x=>x.id);
    const state=readRotation(key,ids);
    writeRotation(key,recordRotation(state,items[idx].id,ok));
   }
