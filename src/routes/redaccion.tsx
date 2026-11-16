@@ -61,7 +61,7 @@ function WritingPlay(){
   }else setIdx(i=>i+1);
  };
  if(!items)return <main className="p-8 text-center">Preparando retos de redacción…</main>;
- const title=gameNames("Redacción")[modo];
+ const title=subtema==="Corrección"&&modo==="quiz"?"Corrección precisa":gameNames("Redacción")[modo];
  const levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(items.length===0)return <main className="mx-auto max-w-xl p-6"><p>Este contenido aún no tiene ejercicios.</p><Link to="/" className="underline">← Inicio</Link></main>;
  if(finished){
