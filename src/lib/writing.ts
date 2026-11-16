@@ -5,6 +5,9 @@ import {CONNECTOR_EDITOR_CASES,type ConnectorEditorCase} from "./connector-edito
 import {CORRECTION_ERROR_CASES,type CorrectionErrorCase} from "./correction-error-cases";
 import {CORRECTION_CHOICE_CASES,type CorrectionChoiceCase} from "./correction-choice-cases";
 import {CORRECTION_EDITOR_CASES,type CorrectionEditorCase} from "./correction-editor-cases";
+import {ORGANIZATION_ERROR_CASES,type OrganizationErrorCase} from "./organization-error-cases";
+import {ORGANIZATION_CHOICE_CASES,type OrganizationChoiceCase} from "./organization-choice-cases";
+import {ORGANIZATION_EDITOR_CASES,type OrganizationEditorCase} from "./organization-editor-cases";
 import {readRotation,rotationKey,selectRotation} from "./rotation";
 export const WRITING_SUBTOPICS = ["Corrección","Conectores","Organización textual","Elisión y adición","Generalización e integración"] as const;
 export type WritingSubtopic = typeof WRITING_SUBTOPICS[number];
@@ -586,7 +589,7 @@ export const WRITING_BANK:WritingChallenge[]=SEEDS.flatMap((seed,s)=>{
    steps:[a,b,c] as [string,string,string]};
  });
 });
-export type WritingItem=WritingChallenge|ConnectorCase|ConnectorErrorCase|ConnectorEditorCase|CorrectionErrorCase|CorrectionChoiceCase|CorrectionEditorCase;
+export type WritingItem=WritingChallenge|ConnectorCase|ConnectorErrorCase|ConnectorEditorCase|CorrectionErrorCase|CorrectionChoiceCase|CorrectionEditorCase|OrganizationErrorCase|OrganizationChoiceCase|OrganizationEditorCase;
 export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
  const initial:WritingItem[]=WRITING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
  if(subtopic==="Conectores"){
@@ -598,6 +601,11 @@ export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):Writ
   if(mode==="quiz")initial.push(...CORRECTION_CHOICE_CASES.filter(q=>q.level===level));
   if(mode==="clasificar")initial.push(...CORRECTION_ERROR_CASES.filter(q=>q.level===level));
   if(mode==="construir")initial.push(...CORRECTION_EDITOR_CASES.filter(q=>q.level===level));
+ }
+ if(subtopic==="Organización textual"){
+  if(mode==="quiz")initial.push(...ORGANIZATION_CHOICE_CASES.filter(q=>q.level===level));
+  if(mode==="clasificar")initial.push(...ORGANIZATION_ERROR_CASES.filter(q=>q.level===level));
+  if(mode==="construir")initial.push(...ORGANIZATION_EDITOR_CASES.filter(q=>q.level===level));
  }
  return initial;
 }
