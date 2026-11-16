@@ -637,5 +637,23 @@ export const CONNECTOR_ERROR_CASES:ConnectorErrorCase[]=[
     ],
     "explanation": "La fecha y la procedencia son criterios de revisión que se suman.",
     "reviewStatus": "editorial-draft"
+  },
+  {
+    "id": "writing-conectores-hunter-v2-avanzado-36",
+    "level": "avanzado",
+    "subtopic": "Conectores",
+    "flawed": "La revisión muestra respuestas contradictorias; «además», es necesario discutir sus límites antes de establecer una conclusión.",
+    "errorType": "Conector inadecuado",
+    "correction": "La necesidad de discutir los límites es una consecuencia de haber detectado respuestas contradictorias.",
+    "correctSentence": "La revisión muestra respuestas contradictorias; por tanto, es necesario discutir sus límites antes de establecer una conclusión.",
+    "correctConnector": "por tanto",
+    "options": [
+      "sin embargo",
+      "por tanto",
+      "porque",
+      "además"
+    ],
+    "explanation": "La necesidad de discutir los límites es una consecuencia de haber detectado respuestas contradictorias.",
+    "reviewStatus": "editorial-draft"
   }
 ];
