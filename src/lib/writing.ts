@@ -554,7 +554,7 @@ const SEEDS:Seed[]=[
 const connectorGroups:Record<string,string>={
  "y":"addition","además":"addition",
  "porque":"cause",
- "por tanto":"consequence","por eso":"consequence","por ello":"consequence","por consiguiente":"consequence",
+ "por tanto":"consequence","por eso":"consequence","por ello":"consequence","por consiguiente":"consequence","en consecuencia":"consequence",
  "sin embargo":"contrast","no obstante":"contrast","aunque":"contrast","aun así":"contrast","en cambio":"contrast",
  "después":"time","luego":"time","a continuación":"time","antes de que":"prior"
 };
