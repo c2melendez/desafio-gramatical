@@ -97,7 +97,7 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
   <div className="card-ink bg-card p-5">
    <p className="text-xl font-semibold leading-relaxed">{item.gap.replace("___",choice??"_______")}</p>
   </div>
-  <div className="grid grid-cols-2 gap-3">{item.options.map(o=><button key={o} disabled={choice!==null} onClick={()=>send(o)}
+  <div className={item.subtopic==="Organización textual"?"grid grid-cols-1 gap-3":"grid grid-cols-2 gap-3"}>{item.options.map(o=><button key={o} disabled={choice!==null} onClick={()=>send(o)}
    className={`tile text-sm ${choice===null?"bg-card":o===item.connector?"bg-success-soft":o===choice?"bg-destructive-soft":"bg-muted opacity-60"}`}>{o}</button>)}</div>
   {choice!==null&&<div aria-live="polite" className="space-y-3">
    <p className={`rounded-lg border-2 border-foreground p-4 ${choice===item.connector?"bg-success-soft":"bg-destructive-soft"}`}>
@@ -125,7 +125,7 @@ export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChalleng
  };
  return <section className="space-y-4" aria-label="Editor experto">
   <h2 className="text-xl font-black">Editor experto</h2>
-  <p>Ordena las tres frases para construir un párrafo coherente. Selecciona las fichas de principio a fin.</p>
+  <p>{item.subtopic==="Organización textual"?"Ordena tres fragmentos para construir un texto con introducción, desarrollo y cierre coherentes.":"Ordena las tres frases para construir un párrafo coherente. Selecciona las fichas de principio a fin."}</p>
   <div className="border-2 border-dashed border-foreground rounded-xl p-3 min-h-28 flex flex-col gap-2" aria-label="Párrafo en construcción" aria-live="polite">
    {sequence.length===0&&<p className="text-muted-foreground">El párrafo aparecerá aquí…</p>}
    {sequence.map((n,i)=><button key={n} disabled={checked} onClick={()=>setSequence(xs=>xs.filter(z=>z!==n))}
