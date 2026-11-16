@@ -524,7 +524,7 @@ export const GENERALIZATION_CHOICE_CASES:GeneralizationChoiceCase[]=[
       "documentar el criterio y evaluar el efecto de las exclusiones.",
       "afirmar que el resultado es universal sin nuevos datos."
     ],
-    "explanation": "La selección de observaciones modifica las estimaciones.",
+    "explanation": "La selección de observaciones modifica las estimaciones y exige examinar cuánto cambian los resultados.",
     "reviewStatus": "editorial-draft"
   },
   {
