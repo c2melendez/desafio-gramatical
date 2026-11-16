@@ -509,7 +509,7 @@ export const GENERALIZATION_CHOICE_CASES:GeneralizationChoiceCase[]=[
       "prescindir del contexto de población y medición.",
       "separar el efecto de tarifas del cambio en consumo."
     ],
-    "explanation": "El gasto combina más de un factor.",
+    "explanation": "El gasto combina los efectos de los precios y de las cantidades consumidas; ambos deben examinarse.",
     "reviewStatus": "editorial-draft"
   },
   {
