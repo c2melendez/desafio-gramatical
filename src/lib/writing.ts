@@ -1,5 +1,7 @@
 import type {Level,Mode} from "./grammar";
 import {CONNECTOR_CASES,type ConnectorCase} from "./connector-cases";
+import {CONNECTOR_ERROR_CASES,type ConnectorErrorCase} from "./connector-error-cases";
+import {CONNECTOR_EDITOR_CASES,type ConnectorEditorCase} from "./connector-editor-cases";
 import {readRotation,rotationKey,selectRotation} from "./rotation";
 export const WRITING_SUBTOPICS = ["Corrección","Conectores","Organización textual","Elisión y adición","Generalización e integración"] as const;
 export type WritingSubtopic = typeof WRITING_SUBTOPICS[number];
@@ -581,10 +583,14 @@ export const WRITING_BANK:WritingChallenge[]=SEEDS.flatMap((seed,s)=>{
    steps:[a,b,c] as [string,string,string]};
  });
 });
-export type WritingItem=WritingChallenge|ConnectorCase;
+export type WritingItem=WritingChallenge|ConnectorCase|ConnectorErrorCase|ConnectorEditorCase;
 export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
  const initial:WritingItem[]=WRITING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
- if(mode==="quiz"&&subtopic==="Conectores")initial.push(...CONNECTOR_CASES.filter(q=>q.level===level));
+ if(subtopic==="Conectores"){
+  if(mode==="quiz")initial.push(...CONNECTOR_CASES.filter(q=>q.level===level));
+  if(mode==="clasificar")initial.push(...CONNECTOR_ERROR_CASES.filter(q=>q.level===level));
+  if(mode==="construir")initial.push(...CONNECTOR_EDITOR_CASES.filter(q=>q.level===level));
+ }
  return initial;
 }
 export function writingItems(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
