@@ -27,6 +27,7 @@ function Home() {
  const selectedArea=AREAS.find(a=>a.id===areaId)!;
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
  const active=availableModule(areaId,topic,subtopic);
+ const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const names=gameNames(topic);
  const onArea=(id:AreaId)=>{
   const target=AREAS.find(a=>a.id===id)!;
@@ -74,7 +75,7 @@ function Home() {
      </label>
     </div>
     <p aria-live="polite" className={`rounded-lg px-3 py-2 text-sm font-bold ${active?"bg-success-soft":"bg-muted"}`}>
-      {active?"✓ Módulo disponible: los tres juegos existentes se conservan.":
+      {active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
       "🛠️ Módulo planificado: puedes explorar los juegos, pero aún no está desarrollado."}
     </p>
    </section>
@@ -110,15 +111,18 @@ function Home() {
     <div aria-live="polite" className="rounded-xl border-2 border-foreground bg-accent/40 p-4 text-sm">
       <strong>Tu ruta:</strong> {selectedArea.label} → {topic} → {subtopic} → {names[mode]} → {level==="principiante"?"Básico":LEVEL_LABEL[level]}
     </div>
-    {active?
-     <Link to="/jugar" search={{modo:mode,nivel:level}} className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
-     <div className="tile w-full cursor-not-allowed bg-muted py-4 text-center font-bold" role="status">🔒 Juego en desarrollo · selecciona Categorías gramaticales para jugar</div>
+    {active?(reading?
+     <Link to="/lectura" search={{subtema:subtopic as import("@/lib/reading").ReadingSubtopic,modo:mode,nivel:level}}
+      className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
+     <Link to="/jugar" search={{modo:mode,nivel:level}}
+      className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>):
+     <div className="tile w-full cursor-not-allowed bg-muted py-4 text-center font-bold" role="status">🔒 Juego en desarrollo · prueba Comprensión lectora o Categorías gramaticales</div>
     }
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
    </section>
    <aside className="rounded-xl border-2 border-foreground bg-card p-4 text-sm space-y-2">
     <h2 className="text-lg font-black">Sobre la evolución de Desafío Gramatical</h2>
-    <p>La aplicación inicia esta etapa manteniendo intactos los juegos de clasificación, cuestionarios y construcción de oraciones. El resto del catálogo se desarrollará progresivamente, sin mostrar temas sin preguntas como si estuvieran listos.</p>
+    <p>La aplicación conserva los tres juegos gramaticales originales y ya incluye Comprensión lectora: Detective de ideas, Verdad o inferencia y Reconstruye el texto. El resto del catálogo se ampliará progresivamente.</p>
     <p className="text-muted-foreground">Recurso educativo independiente. No afiliado ni avalado por la UNAH. Los puntos del juego no equivalen al puntaje de la prueba PHUMA.</p>
    </aside>
   </main>
