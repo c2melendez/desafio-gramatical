@@ -10,7 +10,7 @@ describe("Redacción: tres juegos, cinco subtemas y tres dificultades",()=>{
   for(const level of LEVELS)for(const topic of WRITING_SUBTOPICS){
    for(const mode of ["clasificar","quiz","construir"] as Mode[]){
     const rounds=writingItems(level,topic,mode);
-    expect(rounds).toHaveLength(["Conectores","Corrección","Organización textual","Elisión y adición"].includes(topic)?10:3);
+    expect(rounds).toHaveLength(["Conectores","Corrección","Organización textual","Elisión y adición","Generalización e integración"].includes(topic)?10:3);
     expect(new Set(rounds.map(x=>x.id)).size).toBe(rounds.length);
    }
    expect(availableModule("espanol","Redacción",topic)).toBe(true);
