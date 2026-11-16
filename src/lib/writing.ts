@@ -28,7 +28,7 @@ const SEEDS:Seed[]=[
         "Ayer compramos un cuaderno y lo escribimos en el cuaderno.",
         "Redundancia",
         "La repetición de «cuaderno» puede evitarse con «escribimos en él».",
-        "La estudiante revisó su tarea ___ la entregó.",
+        "La estudiante revisó su tarea ___ la entregara.",
         "antes de que",
         "La estudiante terminó su borrador.",
         "Revisó las respuestas.",
@@ -254,7 +254,7 @@ const SEEDS:Seed[]=[
         "El aviso comienza diciendo «Gracias por asistir» antes de anunciar el evento.",
         "Orden temporal",
         "En una invitación se presenta el acontecimiento antes del agradecimiento final.",
-        "Los equipos acordaron las reglas ___ empezaron el juego.",
+        "Los equipos acordaron las reglas ___ empezara el juego.",
         "antes de que",
         "Se anunció la fecha de la actividad.",
         "Se informó el horario y lugar.",
@@ -399,7 +399,7 @@ const SEEDS:Seed[]=[
         "Información omitida",
         "Se debe agregar el indicador y la magnitud o criterio relevante para interpretar la comparación.",
         "El primer grupo mejoró; ___, ambos centros conservaron diferencias iniciales.",
-        "aunque",
+        "sin embargo",
         "Se especificó la medida de comparación.",
         "Se consignaron los resultados de cada grupo.",
         "Se matizó el alcance de la diferencia observada."
@@ -551,16 +551,27 @@ const SEEDS:Seed[]=[
     ]
   }
 ];
-const distractors=["además","por eso","sin embargo","porque","y","aunque","por tanto","no obstante","en cambio","a continuación","antes de que","luego","después","por ello","por consiguiente","aun así","es decir"];
+const connectorGroups:Record<string,string>={
+ "y":"addition","además":"addition",
+ "porque":"cause",
+ "por tanto":"consequence","por eso":"consequence","por ello":"consequence","por consiguiente":"consequence",
+ "sin embargo":"contrast","no obstante":"contrast","aunque":"contrast","aun así":"contrast","en cambio":"contrast",
+ "después":"time","luego":"time","a continuación":"time","antes de que":"prior"
+};
+const distractorByGroup:Record<string,[string,string,string]>={
+ addition:["sin embargo","porque","por tanto"],
+ cause:["sin embargo","además","por tanto"],
+ consequence:["sin embargo","además","porque"],
+ contrast:["por tanto","además","porque"],
+ time:["sin embargo","porque","por tanto"],
+ prior:["sin embargo","además","porque"]
+};
 export const WRITING_BANK:WritingChallenge[]=SEEDS.flatMap((seed,s)=>{
  return seed.cases.map((entry,i)=>{
   const [flawed,errorType,correction,gap,connector,a,b,c]=entry;
-  const other=distractors.filter(x=>x!==connector);
-  // Opciones fijas por reactivo; el orden no permite deducir la respuesta.
-  const offset=(s*3+i)%other.length;
-  const raw=[connector,...[0,1,2].map(j=>other[(offset+j*5)%other.length])];
-  const unique=[...new Set(raw)];
-  for(const d of other)if(unique.length<4&&!unique.includes(d))unique.push(d);
+  const group=connectorGroups[connector];
+  if(!group)throw new Error("Conector sin clase lógica: "+connector);
+  const unique=[connector,...distractorByGroup[group]];
   const rotate=(s+i)%4;
   return {id:`writing-${seed.level}-${s}-${i}`,level:seed.level,subtopic:seed.subtopic,
    flawed,errorType,correction,gap,connector,
