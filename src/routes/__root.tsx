@@ -81,14 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Desafío Gramatical" },
-      { name: "description", content: "Juegos para aprender las categorías gramaticales del español." },
+      { title: "Academia PHUMA Play" },
+      { name: "description", content: "Juegos de preparación para PHUMA: cinco áreas de estudio con tres desafíos por tema." },
       { name: "theme-color", content: "#e63b33" },
-      { property: "og:title", content: "Desafío Gramatical" },
-      { property: "og:description", content: "Juegos para aprender las categorías gramaticales del español." },
+      { property: "og:title", content: "Academia PHUMA Play" },
+      { property: "og:description", content: "Juegos de preparación para PHUMA: cinco áreas de estudio con tres desafíos por tema." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      
     ],
     links: [
       {
