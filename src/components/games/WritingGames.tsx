@@ -10,8 +10,11 @@ import type {CorrectionChoiceCase} from "@/lib/correction-choice-cases";
 import type {OrganizationErrorCase} from "@/lib/organization-error-cases";
 import type {OrganizationChoiceCase} from "@/lib/organization-choice-cases";
 import type {OrganizationEditorCase} from "@/lib/organization-editor-cases";
+import type {ElisionErrorCase} from "@/lib/elision-error-cases";
+import type {ElisionChoiceCase} from "@/lib/elision-choice-cases";
+import type {ElisionEditorCase} from "@/lib/elision-editor-cases";
 
-export function ErrorHunter(props:GameProps<WritingChallenge|ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase>){
+export function ErrorHunter(props:GameProps<WritingChallenge|ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase|ElisionErrorCase>){
  if("correctConnector" in props.item)return <ConnectorCorrection {...props} item={props.item}/>;
  return <LegacyErrorHunter {...props} item={props.item}/>;
 }
@@ -57,18 +60,19 @@ function LegacyErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge>
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
-function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase>){
+function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase|ElisionErrorCase>){
  const correction=item.subtopic==="Corrección";
  const organization=item.subtopic==="Organización textual";
+ const elision=item.subtopic==="Elisión y adición";
  const [choice,setChoice]=useState<string|null>(null);
  const submit=(option:string)=>{
   if(choice!==null)return;setChoice(option);
   const ok=option===item.correctConnector;
   report(ok,ok?undefined:{prompt:item.flawed,given:option,correct:item.correctConnector,exp:item.explanation});
  };
- return <section className="space-y-4" aria-label={organization?"Cazador de errores: organización textual":correction?"Cazador de errores: corrección":"Cazador de errores: corrección de conectores"}>
+ return <section className="space-y-4" aria-label={elision?"Cazador de errores: elisión y adición":organization?"Cazador de errores: organización textual":correction?"Cazador de errores: corrección":"Cazador de errores: corrección de conectores"}>
   <h2 className="text-xl font-black">Cazador de errores</h2>
-  <p>{organization?"Lee el problema de organización y elige la revisión editorial más adecuada.":correction?"El fragmento entre comillas necesita corregirse. Elige su reemplazo preciso.":"El conector entre comillas es incorrecto. Selecciona el que lo reemplaza sin alterar la relación lógica."}</p>
+  <p>{elision?"Identifica qué sobra o qué falta en el texto y selecciona la versión mejor justificada.":organization?"Lee el problema de organización y elige la revisión editorial más adecuada.":correction?"El fragmento entre comillas necesita corregirse. Elige su reemplazo preciso.":"El conector entre comillas es incorrecto. Selecciona el que lo reemplaza sin alterar la relación lógica."}</p>
   <div className="card-ink bg-card p-5"><p className="font-semibold text-xl leading-relaxed">{item.flawed}</p></div>
   <div className="grid grid-cols-2 gap-2">{item.options.map(option=><button key={option}
    disabled={choice!==null} onClick={()=>submit(option)}
@@ -78,12 +82,12 @@ function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorC
     <strong>{choice===item.correctConnector?"¡Corrección acertada! ":"La corrección adecuada es «"+item.correctConnector+"». "}</strong>
     {item.explanation}
    </p>
-   <div className="card-ink bg-card p-4"><strong>{organization?"Revisión recomendada:":"Versión corregida:"}</strong><p>{item.correctSentence}</p></div>
+   <div className="card-ink bg-card p-4"><strong>{organization||elision?"Revisión recomendada:":"Versión corregida:"}</strong><p>{item.correctSentence}</p></div>
    <NextButton onClick={next} isLast={isLast}/>
   </div>}
  </section>;
 }
-export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallenge|import("@/lib/connector-cases").ConnectorCase|CorrectionChoiceCase|OrganizationChoiceCase>){
+export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallenge|import("@/lib/connector-cases").ConnectorCase|CorrectionChoiceCase|OrganizationChoiceCase|ElisionChoiceCase>){
  const [choice,setChoice]=useState<string|null>(null);
  const send=(option:string)=>{
   if(choice!==null)return;
@@ -92,12 +96,12 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
   report(ok,ok?undefined:{prompt:item.gap,given:option,correct:item.connector,exp:"explanation" in item ? item.explanation : "El conector «"+item.connector+"» expresa la relación lógica adecuada para el contexto."});
  };
  return <section className="space-y-4" aria-label="Conector correcto">
-  <h2 className="text-xl font-black">{item.subtopic==="Corrección"?"Corrección precisa":item.subtopic==="Organización textual"?"Continúa el texto":"Conector correcto"}</h2>
-  <p>{item.subtopic==="Corrección"?"Completa el enunciado con la forma correcta según la gramática, la ortografía o el contexto.":item.subtopic==="Organización textual"?"Elige la oración que desarrolla el tema sin romper su coherencia ni exagerar la conclusión.":"Lee las dos ideas. Elige el conector que establezca la relación lógica indicada por el sentido del texto."}</p>
+  <h2 className="text-xl font-black">{item.subtopic==="Corrección"?"Corrección precisa":item.subtopic==="Organización textual"?"Continúa el texto":item.subtopic==="Elisión y adición"?"Revisión precisa":"Conector correcto"}</h2>
+  <p>{item.subtopic==="Corrección"?"Completa el enunciado con la forma correcta según la gramática, la ortografía o el contexto.":item.subtopic==="Organización textual"?"Elige la oración que desarrolla el tema sin romper su coherencia ni exagerar la conclusión.":item.subtopic==="Elisión y adición"?"Elige cómo quitar información redundante o recuperar información omitida sin alterar el significado.":"Lee las dos ideas. Elige el conector que establezca la relación lógica indicada por el sentido del texto."}</p>
   <div className="card-ink bg-card p-5">
    <p className="text-xl font-semibold leading-relaxed">{item.gap.replace("___",choice??"_______")}</p>
   </div>
-  <div className={item.subtopic==="Organización textual"?"grid grid-cols-1 gap-3":"grid grid-cols-2 gap-3"}>{item.options.map(o=><button key={o} disabled={choice!==null} onClick={()=>send(o)}
+  <div className={["Organización textual","Elisión y adición"].includes(item.subtopic)?"grid grid-cols-1 gap-3":"grid grid-cols-2 gap-3"}>{item.options.map(o=><button key={o} disabled={choice!==null} onClick={()=>send(o)}
    className={`tile text-sm ${choice===null?"bg-card":o===item.connector?"bg-success-soft":o===choice?"bg-destructive-soft":"bg-muted opacity-60"}`}>{o}</button>)}</div>
   {choice!==null&&<div aria-live="polite" className="space-y-3">
    <p className={`rounded-lg border-2 border-foreground p-4 ${choice===item.connector?"bg-success-soft":"bg-destructive-soft"}`}>
@@ -106,7 +110,7 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
-export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge|ConnectorEditorCase|CorrectionEditorCase|OrganizationEditorCase>){
+export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge|ConnectorEditorCase|CorrectionEditorCase|OrganizationEditorCase|ElisionEditorCase>){
  const [sequence,setSequence]=useState<number[]>([]);
  const [checked,setChecked]=useState(false);
  // Cinco órdenes distintos, nunca el orden correcto de presentación.
@@ -125,7 +129,7 @@ export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChalleng
  };
  return <section className="space-y-4" aria-label="Editor experto">
   <h2 className="text-xl font-black">Editor experto</h2>
-  <p>{item.subtopic==="Organización textual"?"Ordena tres fragmentos para construir un texto con introducción, desarrollo y cierre coherentes.":"Ordena las tres frases para construir un párrafo coherente. Selecciona las fichas de principio a fin."}</p>
+  <p>{["Organización textual","Elisión y adición"].includes(item.subtopic)?"Ordena tres fragmentos para reconstruir una revisión de contenido lógica y coherente.":"Ordena las tres frases para construir un párrafo coherente. Selecciona las fichas de principio a fin."}</p>
   <div className="border-2 border-dashed border-foreground rounded-xl p-3 min-h-28 flex flex-col gap-2" aria-label="Párrafo en construcción" aria-live="polite">
    {sequence.length===0&&<p className="text-muted-foreground">El párrafo aparecerá aquí…</p>}
    {sequence.map((n,i)=><button key={n} disabled={checked} onClick={()=>setSequence(xs=>xs.filter(z=>z!==n))}
