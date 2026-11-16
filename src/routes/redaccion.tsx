@@ -2,8 +2,9 @@ import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
-import {WRITING_SUBTOPICS,writingItems,type WritingChallenge,type WritingSubtopic} from "@/lib/writing";
+import {WRITING_SUBTOPICS,writingItems,type WritingChallenge,type WritingItem,type WritingSubtopic} from "@/lib/writing";
 import {ErrorHunter,ConnectorGame,ExpertEditor} from "@/components/games/WritingGames";
+import {rotationKey,readRotation,recordRotation,writeRotation} from "@/lib/rotation";
 
 const modes:Mode[]=["clasificar","quiz","construir"];
 export const Route=createFileRoute("/redaccion")({
@@ -21,7 +22,7 @@ export const Route=createFileRoute("/redaccion")({
 function WritingPlay(){
  const {subtema,modo,nivel}=Route.useSearch();
  const [run,setRun]=useState(0);
- const [items,setItems]=useState<WritingChallenge[]|null>(null);
+ const [items,setItems]=useState<WritingItem[]|null>(null);
  const [idx,setIdx]=useState(0);
  const [correct,setCorrect]=useState(0);
  const [total,setTotal]=useState(0);
@@ -35,6 +36,12 @@ function WritingPlay(){
   setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[nivel,subtema,modo,run]);
  const report=(ok:boolean,m?:Mistake)=>{
+  if(items?.[idx]){
+   const key=rotationKey("espanol","Redacción",subtema,modo,nivel);
+   const ids=items.map(x=>x.id);
+   const state=readRotation(key,ids);
+   writeRotation(key,recordRotation(state,items[idx].id,ok));
+  }
   setTotal(t=>t+1);
   if(ok){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
   else {setStreak(0);if(m)setMistakes(ms=>[...ms,m])}
@@ -93,8 +100,8 @@ function WritingPlay(){
   <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={items.length} aria-valuenow={idx+1}>
    <div className="h-full bg-primary" style={{width:`${100*(idx+1)/items.length}%`}}/>
   </div>
-  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props}/>}
+  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props} item={item as WritingChallenge}/>}
   {modo==="quiz"&&<ConnectorGame key={item.id} {...props}/>}
-  {modo==="construir"&&<ExpertEditor key={item.id} {...props}/>}
+  {modo==="construir"&&<ExpertEditor key={item.id} {...props} item={item as WritingChallenge}/>}
  </main>;
 }
