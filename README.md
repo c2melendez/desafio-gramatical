@@ -12,7 +12,7 @@ Plataforma independiente para practicar mediante juegos las competencias que se 
 
 La meta por cada **juego y subtema** es **30 ejercicios básicos, 50 intermedios y 70 avanzados**. La primera etapa se mide en **10/15/20**.
 
-El núcleo inicial ya se alcanzó en **Conectores, Corrección y Organización textual**, con tres juegos y 10/15/20 por nivel en cada subtema. Son **405 registros** en estos tres subtemas (incluidos **324 casos nuevos** para tres mecánicas diferenciadas). **Elisión y adición** y **Generalización e integración** siguen con su banco inicial. La cobertura de cantidad todavía no representa aprobación editorial. Véanse [Corrección](docs/fase-a-correccion-2026.md) y [Organización textual](docs/fase-a-organizacion-textual-2026.md).
+El núcleo inicial de **10/15/20** ya se alcanzó en **Conectores, Corrección, Organización textual y Elisión y adición**, cada uno con tres juegos. Son **540 registros por modalidad** en esos cuatro subtemas, incluidos **432 casos nuevos**. **Generalización e integración** permanece en el banco inicial. La cantidad alcanzada no implica aprobación editorial; véanse [Corrección](docs/fase-a-correccion-2026.md), [Organización textual](docs/fase-a-organizacion-textual-2026.md) y [Elisión y adición](docs/fase-a-elision-adicion-2026.md).
 
 La portada indica la cobertura cuantitativa para la combinación de subtema, juego y nivel elegida. No confunde escenarios compartidos con ejercicios cognitivos independientes ni presenta la cantidad como certificación pedagógica.
 
@@ -34,5 +34,6 @@ El CI realiza compilación, pruebas, auditoría de cobertura y ESLint antes de q
 - [Juegos de Redacción](docs/redaccion-juegos.md)
 - [Fase A: núcleo, rotación, validación y próximos lotes](docs/fase-a-nucleo-rotacion.md)
 - [Fase A: Organización textual, juegos y auditoría](docs/fase-a-organizacion-textual-2026.md)
+- [Fase A: Elisión y adición, juegos y auditoría](docs/fase-a-elision-adicion-2026.md)
 
 **Aviso:** contenido original no oficial, sin afiliación ni aval de la UNAH. Las dificultades son pedagógicas, no calibradas estadísticamente.
