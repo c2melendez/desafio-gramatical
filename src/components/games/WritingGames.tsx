@@ -2,8 +2,14 @@ import {useState} from "react";
 import {NextButton} from "./Feedback";
 import type {GameProps} from "./types";
 import {ERROR_TYPES,checkWritingSequence,type WritingChallenge,type WritingItem} from "@/lib/writing";
+import type {ConnectorErrorCase} from "@/lib/connector-error-cases";
+import type {ConnectorEditorCase} from "@/lib/connector-editor-cases";
 
-export function ErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge>){
+export function ErrorHunter(props:GameProps<WritingChallenge|ConnectorErrorCase>){
+ if("correctConnector" in props.item)return <ConnectorCorrection {...props} item={props.item}/>;
+ return <LegacyErrorHunter {...props} item={props.item}/>;
+}
+function LegacyErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge>){
  const [choice,setChoice]=useState<string|null>(null);
  // Evitamos distracciones semánticamente equivalentes (p. ej. acentuación/ortografía).
  // Se toman alternativas de familias diferentes al error que se desea identificar.
@@ -45,7 +51,31 @@ export function ErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
-export function ConnectorGame({item,report,next,isLast}:GameProps<WritingItem>){
+function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorCase>){
+ const [choice,setChoice]=useState<string|null>(null);
+ const submit=(option:string)=>{
+  if(choice!==null)return;setChoice(option);
+  const ok=option===item.correctConnector;
+  report(ok,ok?undefined:{prompt:item.flawed,given:option,correct:item.correctConnector,exp:item.explanation});
+ };
+ return <section className="space-y-4" aria-label="Cazador de errores: corrección de conectores">
+  <h2 className="text-xl font-black">Cazador de errores</h2>
+  <p>El conector entre comillas es incorrecto. Selecciona el que lo reemplaza sin alterar la relación lógica.</p>
+  <div className="card-ink bg-card p-5"><p className="font-semibold text-xl leading-relaxed">{item.flawed}</p></div>
+  <div className="grid grid-cols-2 gap-2">{item.options.map(option=><button key={option}
+   disabled={choice!==null} onClick={()=>submit(option)}
+   className={`tile text-left text-sm ${choice===null?"bg-card":option===item.correctConnector?"bg-success-soft":option===choice?"bg-destructive-soft":"bg-muted opacity-60"}`}>{option}</button>)}</div>
+  {choice!==null&&<div className="space-y-3" aria-live="polite">
+   <p className={`rounded-xl border-2 border-foreground p-4 ${choice===item.correctConnector?"bg-success-soft":"bg-destructive-soft"}`}>
+    <strong>{choice===item.correctConnector?"¡Corrección acertada! ":"La corrección adecuada es «"+item.correctConnector+"». "}</strong>
+    {item.explanation}
+   </p>
+   <div className="card-ink bg-card p-4"><strong>Versión corregida:</strong><p>{item.correctSentence}</p></div>
+   <NextButton onClick={next} isLast={isLast}/>
+  </div>}
+ </section>;
+}
+export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallenge|import("@/lib/connector-cases").ConnectorCase>){
  const [choice,setChoice]=useState<string|null>(null);
  const send=(option:string)=>{
   if(choice!==null)return;
@@ -68,7 +98,7 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingItem>){
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
-export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge>){
+export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge|ConnectorEditorCase>){
  const [sequence,setSequence]=useState<number[]>([]);
  const [checked,setChecked]=useState(false);
  // Cinco órdenes distintos, nunca el orden correcto de presentación.
@@ -83,7 +113,7 @@ export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChalleng
   report(correct,correct?undefined:{prompt:"Organizar el párrafo: "+item.subtopic,
    given:sequence.map(i=>item.steps[i]).join(" → "),
    correct:item.steps.join(" → "),
-   exp:"Un párrafo coherente primero presenta su tema o evidencia, desarrolla las relaciones y cierra con una conclusión sustentada."});
+   exp:"explanation" in item?item.explanation:"Un párrafo coherente primero presenta su tema o evidencia, desarrolla las relaciones y cierra con una conclusión sustentada."});
  };
  return <section className="space-y-4" aria-label="Editor experto">
   <h2 className="text-xl font-black">Editor experto</h2>
@@ -103,7 +133,7 @@ export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChalleng
   </div>:<div className="space-y-3" aria-live="polite">
    <p className={`rounded-lg border-2 border-foreground p-4 ${correct?"bg-success-soft":"bg-destructive-soft"}`}>
     <strong>{correct?"¡Párrafo coherente! ":"Revisa el orden de las ideas. "}</strong>
-    El orden propuesto primero presenta el tema, luego aporta información y finalmente permite cerrar el argumento.
+    {"explanation" in item?item.explanation:"El orden propuesto primero presenta el tema, luego aporta información y finalmente permite cerrar el argumento."}
     {!correct&&<span className="block mt-2"><strong>Orden esperado:</strong> {item.steps.join(" → ")}</span>}
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
