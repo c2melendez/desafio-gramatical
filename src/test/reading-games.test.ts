@@ -36,6 +36,15 @@ describe("Comprensión lectora: cobertura y tres juegos",()=>{
    expect(checkReadingOrder(q.order.parts,[0,1])).toBe(false);
   }
  });
+ it("todo término y expresión figurada aparece en el texto correspondiente",()=>{
+  for(const q of READING_BANK){
+   if(q.subtopic==="Vocabulario en contexto"||q.subtopic==="Lenguaje figurado"){
+    const match=q.question.match(/«([^»]+)»/);
+    expect(match?.[1]).toBeTruthy();
+    expect(q.passage.toLocaleLowerCase("es").includes(match![1].toLocaleLowerCase("es"))).toBe(true);
+   }
+  }
+ });
  it("nombres de juegos correctos y catálogo antiguo intacto",()=>{
   expect(gameNames("Comprensión lectora")).toEqual({
    clasificar:"Detective de ideas",quiz:"Verdad o inferencia",construir:"Reconstruye el texto"
