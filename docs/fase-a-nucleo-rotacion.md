@@ -1,6 +1,6 @@
 # Fase A de Academia PHUMA Play — Núcleo de contenido y rotación
 
-**16 de noviembre de 2026 · Alcance implementado:** infraestructura de cobertura, auditoría automática y primer lote de **Redacción → Conectores → Conector correcto**. No se afirma que todos los módulos de Fase A estén completos.
+**16 de noviembre de 2026 · Alcance implementado:** infraestructura de cobertura, auditoría automática y primer lote de **Redacción → Conectores en sus tres juegos**. No se afirma que todos los módulos de Fase A estén completos.
 
 ## Meta de contenidos
 
@@ -13,18 +13,22 @@ El catálogo tiene 90 subtemas × 3 juegos × 3 niveles = **810 combinaciones**,
 
 ## Primer lote aplicado y alcance real
 
-Se agregaron **36 enunciados originales** al banco `src/lib/connector-cases.ts` con clasificación de relación lógica, clave única y explicación individual.
+El subtema **Redacción → Conectores** tiene un núcleo diferenciado en sus tres juegos, con **36 nuevos casos para cada mecánica** (108 nuevos registros originales, además de los 27 registros utilizados previamente entre los tres juegos). Cada banco tiene 7 ejercicios nuevos básicos, 12 intermedios y 17 avanzados.
 
-| Nivel | Enunciados previos para este juego | Nuevos enunciados | Disponibles | Núcleo | Meta final |
-|---|---:|---:|---:|---:|---:|
-| Básico | 3 | 7 | **10** | 10 | 30 |
-| Intermedio | 3 | 12 | **15** | 15 | 50 |
-| Avanzado | 3 | 17 | **20** | 20 | 70 |
-| **Total** | **9** | **36** | **45** | **45** | **150** |
+| Juego | Modalidad | Básico | Intermedio | Avanzado | Total |
+|---|---|---:|---:|---:|---:|
+| Cazador de errores | Detectar y reemplazar un conector equivocado | 10 | 15 | 20 | **45** |
+| Conector correcto | Elegir un conector que complete una relación lógica | 10 | 15 | 20 | **45** |
+| Editor experto | Ordenar tres fragmentos de un razonamiento o párrafo | 10 | 15 | 20 | **45** |
+| **Suma** | | **30** | **45** | **60** | **135** |
 
-El primer núcleo de **Conector correcto** está completo en cantidad, pero todavía requiere validación humana de la interpretación y plausibilidad de distractores; no está completada su meta final.
+- `src/lib/connector-error-cases.ts`: nuevos enunciados con un enlace incorrecto señalado y una corrección explicada; **no** son duplicados de los casos de elegir un conector para un hueco.
+- `src/lib/connector-cases.ts`: situaciones con un espacio en blanco y cuatro conectores posibles.
+- `src/lib/connector-editor-cases.ts`: secuencias originales, con tres fragmentos completos por caso que deben organizarse para comunicar una progresión lógica.
 
-Los otros dos juegos de Conectores, así como los demás subtemas de Redacción, conservan su banco original de tres situaciones por nivel. Los nuevos enunciados **no** se reciclan como ejercicios independientes para «Cazador de errores» ni «Editor experto». El primer objetivo de Redacción, completo para los 5 subtemas × 3 juegos, sigue siendo **675 registros**; esta iteración cumple **45** de esa meta para un juego/subtema.
+En **cantidad**, las nueve combinaciones de juego/nivel del subtema Conectores alcanzan el primer núcleo de 10/15/20, aunque ninguna alcanza todavía el objetivo final de 30/50/70. Los 108 nuevos casos requieren además una **revisión docente de ambigüedades, corrección contextual y plausibilidad de distractores**. El motor del juego Cazador de errores distingue una modalidad de corrección de conectores de la clasificación de errores general anterior. El editor organiza fichas en lugar de aceptar redacción libre.
+
+El primer objetivo de **todo Redacción** comprende 5 subtemas × 3 juegos × 45 casos = **675 registros**. De ellos, **135 corresponden ahora al núcleo de Conectores**; faltan los otros subtemas y revisión especializada.
 
 ## Selección inteligente, sin recopilar datos personales
 
@@ -44,8 +48,8 @@ La rotación se aplica **ya en los juegos de Redacción**, incluso cuando el ban
 
 `src/lib/coverage.ts` calcula cobertura por área, tema, subtema, juego y nivel, mostrando una barra de progreso en el menú principal. Este indicador es **cuantitativo**: contar un enunciado no significa que haya sido aprobado por un docente.
 
-`bun run audit:content` genera una matriz de las 810 combinaciones y valida los objetivos 10/15/20 para Conectores, la unicidad de IDs, el número de alternativas, la presencia de una clave única y la existencia de explicaciones. Este comando se ejecuta como paso obligatorio de CI después de compilación y tests.
+`bun run audit:content` genera una matriz de las 810 combinaciones y valida los objetivos 10/15/20 **en los tres juegos** de Conectores, la unicidad de IDs, las cuatro alternativas y clave única en juegos de selección, la corrección visible y la calidad estructural de las secuencias de Editor experto. Este comando se ejecuta como paso obligatorio de CI después de compilación y tests.
 
 `src/test/phase-a-content.test.ts` evalúa cobertura, separación de colas por juego, selección de inéditos, priorización posterior de fallos y comportamiento ante datos dañados. `src/test/writing-games.test.ts` valida que las sesiones de diez rondas no repitan IDs.
 
-**Próximas acciones de Fase A:** completar el núcleo 10/15/20 de los juegos «Cazador de errores» y «Editor experto» en Conectores, después los otros cuatro subtemas de Redacción, y avanzar con Comprensión lectora y Gramática. Cada ampliación requiere casos realmente distintos y no simples cambios cosméticos. Los casos nuevos están sujetos a revisión editorial adicional; las pruebas automáticas por sí solas no demuestran equivalencia con la PHUMA oficial.
+**Próximas acciones de Fase A:** completar el núcleo 10/15/20 en los otros cuatro subtemas de Redacción, y después avanzar con Comprensión lectora y Gramática. Cada ampliación requiere casos realmente distintos y no simples cambios cosméticos. Los casos nuevos están sujetos a revisión editorial adicional; las pruebas automáticas por sí solas no demuestran equivalencia con la PHUMA oficial.
