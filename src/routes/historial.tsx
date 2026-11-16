@@ -5,9 +5,9 @@ import { clearHistory, loadHistory, LEVEL_LABEL, MODE_LABEL, type HistoryEntry }
 export const Route = createFileRoute("/historial")({
   head: () => ({
     meta: [
-      { title: "Historial — Desafío Gramatical" },
-      { name: "description", content: "Tus partidas, puntajes y mejores rachas en Desafío Gramatical." },
-      { property: "og:title", content: "Historial — Desafío Gramatical" },
+      { title: "Historial — Academia PHUMA Play" },
+      { name: "description", content: "Tus partidas, puntajes y mejores rachas en Academia PHUMA Play." },
+      { property: "og:title", content: "Historial — Academia PHUMA Play" },
       { property: "og:description", content: "Revisa tu progreso en los juegos de gramática." },
     ],
   }),
