@@ -11,21 +11,22 @@ Esta aplicación amplía **Desafío Gramatical** de forma gradual hacia una plat
 
 La pantalla inicial contiene cuatro pasos: Área → Tema/Subtema → Juego → Dificultad, más un resumen de la selección y acceso al historial.
 
-## Estado real de la primera etapa
+## Estado funcional actualizado — 16 de noviembre de 2026
 
-**Únicamente el módulo Comunicación y Español / Gramática y semántica / Categorías gramaticales está habilitado.** Utiliza sin reescribir los tres motores originales:
-1. Clasificar palabras (`ClassifyGame`)
-2. Quiz de conceptos (`QuizGame`)
-3. Construir oraciones (`BuildGame`)
+**Tres temas habilitados**, con **13 subtemas jugables** en el menú:
 
-Los otros 89 subtemas muestran los nombres de sus tres juegos en el menú, pero están claramente **en desarrollo** y no ofrecen un enlace activo a una partida sin datos. El menú completo constituye el esqueleto de navegación para la ampliación progresiva.
+- **Gramática y semántica → Categorías gramaticales**: Clasificar palabras, Quiz de conceptos, Construir oraciones. Tres niveles; historial original intacto.
+- **Comprensión lectora → 7 subtemas**: Detective de ideas, Verdad o inferencia y Reconstruye el texto. Nueve pasajes y 63 configuraciones de preguntas.
+- **Redacción → 5 subtemas**: Cazador de errores, Conector correcto y Editor experto. Cuarenta y cinco escenarios que se trabajan con tres mecánicas y tres niveles.
 
-No se han modificado las claves originales de `localStorage` (incluida `desafio-gramatical:cola:...`), las identidades de modos `clasificar`, `quiz` y `construir`, ni el historial. Las antiguas URL `/jugar?modo=...&nivel=...` siguen abriendo el módulo gramatical inicial. No se cambian puntuaciones históricas ni reglas de racha. Tampoco se confunden puntos de juegos con la puntuación PHUMA /1600, que es una referencia pedagógica del simulador separado.
+Quedan **77 subtemas** planificados que no ofrecen partidas hasta implementar y validar su contenido. El menú diferencia explícitamente módulos disponibles de módulos en desarrollo.
+
+Los modos internos `clasificar`, `quiz` y `construir`, los registros previos del historial y las rutas antiguas `/jugar` y `/lectura` permanecen vigentes. Se incorporó `/redaccion`, sin cambiar el nombre del repositorio ni la URL de Render.
 
 ## Desarrollo incremental previsto
 
-1. **Fase actual** — nueva marca, catálogo y menú; conservar los juegos gramaticales actuales; pruebas de regresión; publicación continua.
-2. **Español** — añadir las otras habilidades y subtemas: lectura, semántica, morfosintaxis, redacción y literatura; desarrollar datos específicos y explicaciones para cada uno de los tres juegos.
+1. **Fase completada** — nueva marca, catálogo y menú, juegos gramaticales preservados y pruebas de regresión.
+2. **Español (en curso)** — lectura y redacción ya cuentan con juegos; ampliar sus bancos, desarrollar literatura y demás subtemas de semántica y morfosintaxis.
 3. **Matemáticas** — ampliar los tres motores con operaciones, funciones, representación de gráficas, geometría y construcción de procedimientos.
 4. **Ciencias Naturales y Sociales** — incluir diagramas, cronologías, mapas, relaciones causa-efecto, clasificación y secuencias de procesos.
 5. **Habilidades Blandas** — decisiones contextualizadas, diálogo y organización de soluciones; criterios transparentes y sin afirmaciones de validez predictiva.
