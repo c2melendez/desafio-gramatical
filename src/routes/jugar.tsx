@@ -16,10 +16,10 @@ export const Route = createFileRoute("/jugar")({
   }),
   head: () => ({
     meta: [
-      { title: "Jugar — Desafío Gramatical" },
-      { name: "description", content: "Partida de Desafío Gramatical: clasifica, responde o construye oraciones." },
-      { property: "og:title", content: "Jugar — Desafío Gramatical" },
-      { property: "og:description", content: "Pon a prueba tu gramática española." },
+      { title: "Jugar — Academia PHUMA Play" },
+      { name: "description", content: "Partida de Academia PHUMA Play: clasifica, responde o construye oraciones." },
+      { property: "og:title", content: "Jugar — Academia PHUMA Play" },
+      { property: "og:description", content: "Práctica lúdica de gramática: primer módulo de Academia PHUMA Play." },
     ],
   }),
   component: Play,
