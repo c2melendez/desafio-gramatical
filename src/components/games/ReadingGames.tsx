@@ -1,0 +1,98 @@
+import {useState} from "react";
+import {NextButton} from "./Feedback";
+import type {GameProps} from "./types";
+import {EVIDENCE_LABEL,checkReadingOrder,type EvidenceTag,type ReadingChallenge} from "@/lib/reading";
+
+function Passage({item}:{item:ReadingChallenge}){
+ return <section className="card-ink bg-card p-5 space-y-3" aria-label="Texto para analizar">
+  <p className="text-xs font-bold uppercase tracking-wider text-primary">Lectura · {item.subtopic}</p>
+  <h2 className="text-xl font-black">{item.title}</h2>
+  <p className="leading-relaxed whitespace-pre-line text-base">{item.passage}</p>
+ </section>;
+}
+const TYPES:EvidenceTag[]=["explicit","inference","unsupported"];
+export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChallenge>){
+ const [picks,setPicks]=useState<Record<number,EvidenceTag>>({});
+ const [checked,setChecked]=useState(false);
+ const done=item.claims.every((_,i)=>Boolean(picks[i]));
+ const check=()=>{
+  if(!done||checked)return;
+  setChecked(true);
+  item.claims.forEach((claim,i)=>{
+   const ok=picks[i]===claim.tag;
+   report(ok,ok?undefined:{prompt:claim.text,given:EVIDENCE_LABEL[picks[i]],correct:EVIDENCE_LABEL[claim.tag],exp:claim.explanation});
+  });
+ };
+ return <div className="space-y-5">
+  <Passage item={item}/>
+  <p className="font-bold">Detective de ideas: clasifica cada afirmación según las pruebas de la lectura.</p>
+  {item.claims.map((claim,i)=><div key={i} className="card-ink bg-card p-4 space-y-3">
+   <p className="font-semibold">{i+1}. {claim.text}</p>
+   <div className="flex flex-wrap gap-2" role="group" aria-label={`Clasificación de afirmación ${i+1}`}>
+    {TYPES.map(type=><button key={type} disabled={checked} aria-pressed={picks[i]===type}
+     onClick={()=>setPicks(x=>({...x,[i]:type}))}
+     className={`rounded-lg border-2 border-foreground px-3 py-2 text-sm font-bold ${picks[i]===type?"bg-primary text-primary-foreground":"bg-muted"} disabled:cursor-default`}>{EVIDENCE_LABEL[type]}</button>)}
+   </div>
+   {checked&&<div className={`rounded-lg p-3 text-sm ${picks[i]===claim.tag?"bg-success-soft":"bg-destructive-soft"}`} aria-live="polite">
+    <strong>{picks[i]===claim.tag?"✓ Correcto":"✗ "+EVIDENCE_LABEL[claim.tag]+": "}</strong> {claim.explanation}
+   </div>}
+  </div>)}
+  {!checked?<button onClick={check} disabled={!done} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">{done?"Comprobar las tres afirmaciones":"Clasifica las tres afirmaciones"}</button>:<NextButton onClick={next} isLast={isLast}/>}
+ </div>;
+}
+export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChallenge>){
+ const [pick,setPick]=useState<number|null>(null);
+ const choose=(i:number)=>{
+  if(pick!==null)return;
+  setPick(i);
+  const ok=i===item.answer;
+  report(ok,ok?undefined:{prompt:item.question,given:item.options[i],correct:item.options[item.answer],exp:item.explanation});
+ };
+ return <div className="space-y-5">
+  <Passage item={item}/>
+  <h2 className="text-xl font-black">Verdad o inferencia</h2>
+  <p className="font-semibold">{item.question}</p>
+  <div className="grid gap-3">{item.options.map((choice,i)=><button key={i} disabled={pick!==null} onClick={()=>choose(i)}
+   className={`tile text-left ${pick===null?"bg-card":i===item.answer?"bg-success-soft":i===pick?"bg-destructive-soft":"bg-muted opacity-60"}`}>
+   {pick!==null&&i===item.answer?"✓ ":pick===i?"✗ ":""}{choice}
+  </button>)}</div>
+  {pick!==null&&<div className="space-y-3" aria-live="polite">
+   <p className={`rounded-lg border-2 border-foreground p-4 ${pick===item.answer?"bg-success-soft":"bg-destructive-soft"}`}>
+    <strong>{pick===item.answer?"¡Correcto! ":"Revisa la evidencia. "}</strong>{item.explanation}
+   </p><NextButton onClick={next} isLast={isLast}/></div>}
+ </div>;
+}
+export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge>){
+ const [sequence,setSequence]=useState<number[]>([]);
+ const [checked,setChecked]=useState(false);
+ const pieces=item.order.parts;
+ const bank=[2,0,1] as const;
+ const ok=checkReadingOrder(pieces,sequence);
+ const check=()=>{
+  if(checked||sequence.length!==pieces.length)return;
+  setChecked(true);
+  report(ok,ok?undefined:{prompt:"Reconstruye el razonamiento: "+item.title,given:sequence.map(i=>pieces[i]).join(" → "),correct:pieces.join(" → "),exp:item.order.explanation});
+ };
+ return <div className="space-y-5">
+  <Passage item={item}/>
+  <h2 className="text-xl font-black">Reconstruye el texto</h2>
+  <p>{item.order.hint} Toca las fichas en el orden correcto.</p>
+  <div className="min-h-24 border-2 border-dashed border-foreground rounded-xl p-3 flex flex-wrap gap-2" aria-live="polite" aria-label="Tu secuencia de razonamiento">
+   {sequence.length===0&&<p className="text-muted-foreground">Selecciona la primera ficha…</p>}
+   {sequence.map((idx,i)=><button key={idx} disabled={checked} onClick={()=>setSequence(xs=>xs.filter(x=>x!==idx))}
+    className="tile bg-accent text-left text-sm">{i+1}. {pieces[idx]} <span aria-hidden>×</span></button>)}
+  </div>
+  <p className="font-bold">Fichas disponibles</p>
+  <div className="grid gap-2">{bank.map(idx=><button key={idx} disabled={checked||sequence.includes(idx)}
+   onClick={()=>setSequence(xs=>[...xs,idx])} className="tile bg-card text-left text-sm disabled:opacity-30">{pieces[idx]}</button>)}</div>
+  {!checked?<div className="grid grid-cols-2 gap-2">
+   <button disabled={!sequence.length} onClick={()=>setSequence(xs=>xs.slice(0,-1))} className="tile bg-card disabled:opacity-40">↶ Deshacer</button>
+   <button disabled={!sequence.length} onClick={()=>setSequence([])} className="tile bg-card disabled:opacity-40">Vaciar</button>
+   <button disabled={sequence.length!==3} onClick={check} className="tile col-span-2 bg-primary text-primary-foreground disabled:opacity-40">Comprobar secuencia</button>
+  </div>:<div aria-live="polite" className="space-y-3">
+   <p className={`rounded-lg border-2 border-foreground p-4 ${ok?"bg-success-soft":"bg-destructive-soft"}`}>
+    <strong>{ok?"¡Orden correcto! ":"Este no es el orden lógico. "}</strong>{item.order.explanation}
+    {!ok&&<span className="block mt-2"><strong>Secuencia orientativa:</strong> {pieces.join(" → ")}</span>}
+   </p><NextButton onClick={next} isLast={isLast}/></div>}
+ </div>;
+}
