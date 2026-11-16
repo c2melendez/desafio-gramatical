@@ -1,6 +1,6 @@
 import {AREAS,type AreaId,type GameId} from "./phuma-catalog";
 import {SENTENCES,QUIZ,BUILD,type Level} from "./grammar";
-import {READING_BANK} from "./reading";
+import {readingPool} from "./reading";
 import {writingPool} from "./writing";
 
 export const CONTENT_TARGET:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
@@ -15,7 +15,7 @@ export function countContent(area:AreaId,topic:string,subtopic:string,mode:GameI
  if(area!=="espanol")return 0;
  if(topic==="Gramática y semántica"&&subtopic==="Categorías gramaticales")
   return mode==="clasificar"?SENTENCES[level].length:mode==="quiz"?QUIZ[level].length:BUILD[level].length;
- if(topic==="Comprensión lectora")return READING_BANK.filter(x=>x.level===level&&x.subtopic===subtopic).length;
+ if(topic==="Comprensión lectora")return readingPool(level,subtopic as Parameters<typeof readingPool>[1],mode).length;
  if(topic==="Redacción")return writingPool(level,subtopic as Parameters<typeof writingPool>[1],mode).length;
  return 0;
 }
