@@ -157,14 +157,14 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-intermedio-9",
     "level": "intermedio",
     "subtopic": "Corrección",
-    "flawed": "Aunque se registraron nuevos datos. «Estos» requieren una revisión cuidadosa.",
-    "correctConnector": "estos",
-    "correctSentence": "Aunque se registraron nuevos datos. estos requieren una revisión cuidadosa.",
+    "flawed": "«Aunque se registraron nuevos datos. Estos» requieren una revisión cuidadosa.",
+    "correctConnector": "Aunque se registraron nuevos datos, estos",
+    "correctSentence": "Aunque se registraron nuevos datos, estos requieren una revisión cuidadosa.",
     "options": [
-      "Estos",
-      "Éstos",
-      "estas",
-      "estos"
+      "Aunque se registraron nuevos datos, Estos",
+      "Aunque se registraron nuevos datos estos",
+      "Aunque se registraron nuevos datos; estos,",
+      "Aunque se registraron nuevos datos, estos"
     ],
     "explanation": "La secuencia inicial es una subordinada inconclusa; es preferible integrarla: «Aunque se registraron nuevos datos, estos requieren una revisión cuidadosa».",
     "reviewStatus": "editorial-draft"
@@ -173,16 +173,16 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-intermedio-10",
     "level": "intermedio",
     "subtopic": "Corrección",
-    "flawed": "El informe «está» completo, «mas» falta revisar las referencias.",
-    "correctConnector": "pero",
-    "correctSentence": "El informe pero completo, «mas» falta revisar las referencias.",
+    "flawed": "El informe está completo; «por tanto», todavía falta revisar las referencias.",
+    "correctConnector": "sin embargo",
+    "correctSentence": "El informe está completo; sin embargo, todavía falta revisar las referencias.",
     "options": [
-      "y",
-      "porque",
-      "pero",
-      "más"
+      "además",
+      "por eso",
+      "sin embargo",
+      "porque"
     ],
-    "explanation": "Para expresar un contraste claro en este contexto, «pero» conecta la conclusión con la revisión pendiente.",
+    "explanation": "La revisión pendiente contrasta con la afirmación inicial de que el informe está completo; no es su consecuencia.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -205,14 +205,14 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-intermedio-12",
     "level": "intermedio",
     "subtopic": "Corrección",
-    "flawed": "Se entregaron los resultados a «el» director ayer.",
+    "flawed": "Se entregaron los resultados «a el» director ayer.",
     "correctConnector": "al",
-    "correctSentence": "Se entregaron los resultados a al director ayer.",
+    "correctSentence": "Se entregaron los resultados al director ayer.",
     "options": [
       "al",
-      "el",
-      "él",
-      "a el"
+      "a él",
+      "a la",
+      "del"
     ],
     "explanation": "La combinación de la preposición a y el artículo el se contrae a «al».",
     "reviewStatus": "editorial-draft"
@@ -269,16 +269,16 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-intermedio-16",
     "level": "intermedio",
     "subtopic": "Corrección",
-    "flawed": "Los participantes llegaron «tarde», sin embargo iniciaron a tiempo.",
-    "correctConnector": "tarde;",
-    "correctSentence": "Los participantes llegaron tarde;, sin embargo iniciaron a tiempo.",
+    "flawed": "Los participantes llegaron «tarde, sin embargo» iniciaron a tiempo.",
+    "correctConnector": "tarde; sin embargo,",
+    "correctSentence": "Los participantes llegaron tarde; sin embargo, iniciaron a tiempo.",
     "options": [
-      "tarde;",
-      "tarde,",
-      "tarde:",
-      "tarde y"
+      "tarde; sin embargo,",
+      "tarde; porque,",
+      "tarde, por eso,",
+      "tarde, por tanto,"
     ],
-    "explanation": "El conector «sin embargo» exige separar adecuadamente dos proposiciones; un punto y coma permite hacerlo.",
+    "explanation": "Un punto y coma y una coma permiten delimitar «sin embargo» como conector entre las dos proposiciones.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -317,32 +317,32 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-avanzado-19",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "«La mayoría de los encuestados coincidieron» en la respuesta, según el análisis.",
-    "correctConnector": "La mayoría de las personas encuestadas coincidió",
-    "correctSentence": "La mayoría de las personas encuestadas coincidió en la respuesta, según el análisis.",
+    "flawed": "«Las mayorías de encuestados coincidió» en la respuesta, según el análisis.",
+    "correctConnector": "La mayoría de los encuestados coincidió",
+    "correctSentence": "La mayoría de los encuestados coincidió en la respuesta, según el análisis.",
     "options": [
-      "La mayoría de personas coincidieron",
-      "La mayoría de las personas encuestadas coincidió",
-      "La mayoría de encuestados coincidieron",
-      "Los encuestados coincidió"
+      "La mayoría de encuestados coincidían",
+      "La mayoría de los encuestados coincidió",
+      "Las mayorías de encuestados coincidía",
+      "La mayoría de encuestados coincidieron"
     ],
-    "explanation": "Con el núcleo singular «mayoría», la concordancia singular «coincidió» es una alternativa clara y evita vacilación.",
+    "explanation": "La construcción singular «la mayoría» admite concordancia singular «coincidió»; el original mezcla plural y singular de forma incoherente.",
     "reviewStatus": "editorial-draft"
   },
   {
     "id": "writing-correction-hunter-v1-avanzado-20",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "La comisión analizó el informe de las tutoras «que era incompleto».",
-    "correctConnector": "que estaba incompleto",
-    "correctSentence": "La comisión analizó el informe de las tutoras que estaba incompleto.",
+    "flawed": "La comisión revisó «su informe» cuando habían intervenido tanto la tutora como la directora.",
+    "correctConnector": "el informe de la tutora",
+    "correctSentence": "La comisión revisó el informe de la tutora cuando habían intervenido tanto la tutora como la directora.",
     "options": [
-      "que estaba incompleto",
-      "que fueron incompletas",
-      "que eran incompletos",
-      "cuyas incompletas"
+      "el informe de la tutora",
+      "el mismo informe",
+      "aquel informe",
+      "el informe suyo"
     ],
-    "explanation": "La redacción debe precisar que se refiere al informe: «La comisión analizó el informe, que estaba incompleto, de las tutoras».",
+    "explanation": "Cuando dos personas pueden ser antecedentes de «su», nombrar a la tutora elimina la ambigüedad referencial.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -381,16 +381,16 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-avanzado-23",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "La síntesis describe una tendencia, «en cambio, por lo tanto,» presenta una conclusión.",
-    "correctConnector": "y luego",
-    "correctSentence": "La síntesis describe una tendencia, y luego presenta una conclusión.",
+    "flawed": "La síntesis describe una tendencia; «sin embargo, por lo tanto» presenta una conclusión.",
+    "correctConnector": "a continuación",
+    "correctSentence": "La síntesis describe una tendencia; a continuación presenta una conclusión.",
     "options": [
-      "o bien, por consiguiente,",
-      "y luego",
-      "sin embargo, por tanto,",
-      "porque, no obstante,"
+      "porque, sin embargo",
+      "a continuación",
+      "sin embargo y por tanto",
+      "en cambio, por tanto"
     ],
-    "explanation": "La acumulación de conectores con relaciones incompatibles altera la coherencia; conviene un enlace explícito de continuación.",
+    "explanation": "Una secuencia de análisis se expresa con «a continuación» sin acumular enlaces lógicos incompatibles.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -429,32 +429,32 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-avanzado-26",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "Se comparó «la tasa y el porcentaje» como si fueran medidas equivalentes.",
-    "correctConnector": "una tasa con un porcentaje",
-    "correctSentence": "Se comparó una tasa con un porcentaje como si fueran medidas equivalentes.",
+    "flawed": "El informe «sumó directamente tasas y porcentajes» para obtener un único total.",
+    "correctConnector": "presentó por separado tasas y porcentajes",
+    "correctSentence": "El informe presentó por separado tasas y porcentajes para obtener un único total.",
     "options": [
-      "las tasas idénticas",
-      "el porcentaje con el igual",
-      "una tasa con un porcentaje",
-      "la misma tasa porcentual"
+      "mezcló tasas y porcentajes sin aclararlos",
+      "equiparó todas las magnitudes",
+      "presentó por separado tasas y porcentajes",
+      "sumó por igual tasas y porcentajes"
     ],
-    "explanation": "Deben explicitarse las magnitudes y denominadores antes de equiparar tasas y porcentajes.",
+    "explanation": "Las magnitudes con denominadores y unidades distintos no deben sumarse sin una transformación comparable.",
     "reviewStatus": "editorial-draft"
   },
   {
     "id": "writing-correction-hunter-v1-avanzado-27",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "El informe afirmó «todos» los participantes mejoraron, pese a registrar varias excepciones.",
-    "correctConnector": "que algunos",
-    "correctSentence": "El informe afirmó que algunos los participantes mejoraron, pese a registrar varias excepciones.",
+    "flawed": "El informe afirmó «todos los participantes» mejoraron, pese a registrar varias excepciones.",
+    "correctConnector": "que algunos participantes",
+    "correctSentence": "El informe afirmó que algunos participantes mejoraron, pese a registrar varias excepciones.",
     "options": [
-      "que cada uno",
-      "que algunos",
-      "que ninguno",
-      "que absolutamente todos"
+      "que ningún participante",
+      "que algunos participantes",
+      "que absolutamente todos",
+      "que cada participante"
     ],
-    "explanation": "Las excepciones invalidan el cuantificador universal «todos»; se requiere una formulación limitada.",
+    "explanation": "La evidencia de excepciones impide atribuir la mejora a todos; «que algunos participantes» limita correctamente el alcance.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -493,32 +493,32 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-avanzado-30",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "La autora concluyó «se demuestra» que las entrevistas causaron el resultado.",
-    "correctConnector": "se observa",
-    "correctSentence": "La autora concluyó se observa que las entrevistas causaron el resultado.",
+    "flawed": "El informe afirmó que «se demostró una causa exclusiva» mediante entrevistas.",
+    "correctConnector": "se recopilaron testimonios",
+    "correctSentence": "El informe afirmó que se recopilaron testimonios mediante entrevistas.",
     "options": [
-      "se confirma definitivamente",
-      "se verifica causalmente",
-      "se observa",
-      "se prueba"
+      "se confirmó causalidad definitiva",
+      "se verificó una causa inevitable",
+      "se recopilaron testimonios",
+      "se probó la única causa"
     ],
-    "explanation": "«Se observa» evita inferir causalidad a partir de testimonios sin un diseño que la establezca.",
+    "explanation": "Las entrevistas aportan testimonios, pero por sí solas no justifican afirmar que se demostró una causa exclusiva.",
     "reviewStatus": "editorial-draft"
   },
   {
     "id": "writing-correction-hunter-v1-avanzado-31",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "La muestra «representa a toda la población» porque incluyó quince voluntarios.",
-    "correctConnector": "describe a los participantes entrevistados",
-    "correctSentence": "La muestra describe a los participantes entrevistados porque incluyó quince voluntarios.",
+    "flawed": "La muestra «representa a toda la población» aunque solo incluyó quince voluntarios.",
+    "correctConnector": "describe solo a los voluntarios participantes",
+    "correctSentence": "La muestra describe solo a los voluntarios participantes aunque solo incluyó quince voluntarios.",
     "options": [
-      "incluye todos los casos posibles",
-      "describe a los participantes entrevistados",
       "es representativa por definición",
-      "demuestra universalidad"
+      "describe solo a los voluntarios participantes",
+      "demuestra un resultado universal",
+      "equivale a todos los habitantes"
     ],
-    "explanation": "El número de voluntarios no garantiza representatividad; se limita la afirmación a quienes participaron.",
+    "explanation": "La participación voluntaria y una muestra pequeña no justifican extrapolar automáticamente a toda la población.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -541,16 +541,16 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "id": "writing-correction-hunter-v1-avanzado-33",
     "level": "avanzado",
     "subtopic": "Corrección",
-    "flawed": "La reseña «descartó» una fuente por ser posterior al acontecimiento.",
-    "correctConnector": "evaluó críticamente",
-    "correctSentence": "La reseña evaluó críticamente una fuente por ser posterior al acontecimiento.",
+    "flawed": "La reseña «descartó sin examinar» una fuente elaborada cuarenta años después.",
+    "correctConnector": "examinó críticamente",
+    "correctSentence": "La reseña examinó críticamente una fuente elaborada cuarenta años después.",
     "options": [
-      "eliminó sin revisión",
-      "invalidó necesariamente",
-      "desestimó por completo",
-      "evaluó críticamente"
+      "invalidó sin contraste",
+      "rechazó automáticamente",
+      "eliminó sin verificar",
+      "examinó críticamente"
     ],
-    "explanation": "Una fuente tardía no carece automáticamente de valor: exige evaluar contexto y corroboración.",
+    "explanation": "Una fuente tardía puede aportar memoria y contexto; su valor exige examinar procedencia y contrastarla con otras.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -558,15 +558,15 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "level": "avanzado",
     "subtopic": "Corrección",
     "flawed": "Las conclusiones se presentaron «igual para todos» pese a diferencias metodológicas entre centros.",
-    "correctConnector": "según las condiciones de cada centro",
-    "correctSentence": "Las conclusiones se presentaron según las condiciones de cada centro pese a diferencias metodológicas entre centros.",
+    "correctConnector": "con cautela para cada centro",
+    "correctSentence": "Las conclusiones se presentaron con cautela para cada centro pese a diferencias metodológicas entre centros.",
     "options": [
-      "universales sin reservas",
-      "idénticas por definición",
-      "según las condiciones de cada centro",
-      "invariables entre centros"
+      "sin considerar diferencias",
+      "de forma idéntica",
+      "con cautela para cada centro",
+      "como universales"
     ],
-    "explanation": "Las diferencias de método exigen matizar conclusiones y evitar la generalización uniforme.",
+    "explanation": "Las diferencias metodológicas impiden formular conclusiones uniformes sin examinar su comparabilidad.",
     "reviewStatus": "editorial-draft"
   },
   {
