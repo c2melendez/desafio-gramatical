@@ -1,5 +1,5 @@
 import {describe,it,expect} from "vitest";
-import {WRITING_BANK,WRITING_SUBTOPICS,ERROR_TYPES,writingItems,checkWritingSequence} from "@/lib/writing";
+import {WRITING_BANK,WRITING_SUBTOPICS,ERROR_TYPES,writingItems,writingPool,checkWritingSequence} from "@/lib/writing";
 import {LEVELS,type Mode} from "@/lib/grammar";
 import {AREAS,availableModule,gameNames} from "@/lib/phuma-catalog";
 describe("Redacción: tres juegos, cinco subtemas y tres dificultades",()=>{
@@ -10,7 +10,7 @@ describe("Redacción: tres juegos, cinco subtemas y tres dificultades",()=>{
   for(const level of LEVELS)for(const topic of WRITING_SUBTOPICS){
    for(const mode of ["clasificar","quiz","construir"] as Mode[]){
     const rounds=writingItems(level,topic,mode);
-    expect(rounds).toHaveLength(3);
+    expect(rounds).toHaveLength(topic==="Conectores"&&mode==="quiz"?10:3);
     expect(new Set(rounds.map(x=>x.id)).size).toBe(3);
    }
    expect(availableModule("espanol","Redacción",topic)).toBe(true);
