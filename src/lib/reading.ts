@@ -14,7 +14,7 @@ const SEEDS:Seed[]=[
   {
     "level": "principiante",
     "title": "La biblioteca del barrio",
-    "passage": "La biblioteca del barrio ampliará su horario de dos a cinco tardes a partir del lunes. Un grupo de voluntarios ayudará a ordenar libros, pero el préstamo seguirá a cargo de la bibliotecaria. El aviso informa que el nuevo horario facilitará las visitas de estudiantes. En otra nota, varios vecinos solicitaron más mesas de lectura; aún no hay una decisión sobre esa petición.",
+    "passage": "La biblioteca del barrio ampliará su horario de dos a cinco tardes a partir del lunes. Un grupo de voluntarios ayudará a ordenar libros, pero el préstamo seguirá a cargo de la bibliotecaria. El aviso informa que el nuevo horario facilitará las visitas de estudiantes. En otra nota, varios vecinos solicitaron más mesas de lectura; aún no hay una decisión sobre esa petición. Un cartel resumió el propósito así: «abrió una puerta al conocimiento».",
     "explicit": "La biblioteca amplía de dos a cinco tardes su horario.",
     "inference": "Más estudiantes podrán visitar la biblioteca si aprovechan el horario.",
     "unsupported": "La biblioteca ya compró mesas nuevas.",
@@ -33,7 +33,7 @@ const SEEDS:Seed[]=[
   {
     "level": "principiante",
     "title": "El huerto escolar",
-    "passage": "Tres grupos de estudiantes sembraron frijoles en macetas similares. Durante cuatro semanas registraron altura y cantidad de agua. Los docentes pidieron usar la misma tierra. El informe final menciona que algunas macetas recibieron más sol, por lo que las diferencias no permiten atribuir el crecimiento únicamente al riego. Otro equipo propuso repetir el experimento con la misma exposición a luz.",
+    "passage": "Tres grupos de estudiantes sembraron frijoles en macetas similares. Durante cuatro semanas registraron altura y cantidad de agua. Los docentes pidieron usar la misma tierra. El informe final menciona que algunas macetas recibieron más sol, por lo que las diferencias no permiten atribuir el crecimiento únicamente al riego. Otro equipo propuso repetir el experimento con la misma exposición a luz. La docente escribió que esta actividad «sembraron curiosidad» entre los estudiantes.",
     "explicit": "Las macetas recibieron distinta cantidad de sol.",
     "inference": "La luz podría influir en los resultados de crecimiento.",
     "unsupported": "El grupo con más agua creció necesariamente el doble.",
@@ -52,7 +52,7 @@ const SEEDS:Seed[]=[
   {
     "level": "principiante",
     "title": "La feria de ciencias",
-    "passage": "La feria de ciencias abrió el viernes con puestos de física, biología y reciclaje. La organización informó que el puesto de reciclaje recibió 60 visitas y el de biología 45. No publicó el registro de física. Un estudiante escribió que todas las actividades fueron interesantes, una apreciación personal. El boletín escolar señaló que falta reunir los registros para calcular la asistencia total.",
+    "passage": "La feria de ciencias abrió el viernes con puestos de física, biología y reciclaje. La organización informó que el puesto de reciclaje recibió 60 visitas y el de biología 45. No publicó el registro de física. Un estudiante escribió que todas las actividades fueron interesantes, una apreciación personal. El boletín escolar señaló que falta reunir los registros para calcular la asistencia total. Una reseña destacó que «los experimentos encendieron preguntas» entre los visitantes.",
     "explicit": "Reciclaje registró 60 visitas y biología 45.",
     "inference": "Reciclaje recibió al menos 15 visitas más que biología.",
     "unsupported": "La feria recibió exactamente 105 visitantes únicos.",
@@ -71,7 +71,7 @@ const SEEDS:Seed[]=[
   {
     "level": "intermedio",
     "title": "Clubes voluntarios de lectura",
-    "passage": "Dos centros incorporaron clubes voluntarios de lectura. En el centro A, el promedio pasó de 60 a 72 puntos; en B, de 64 a 70. Los profesores aplicaron instrumentos distintos y no se asignaron participantes al azar. Un comunicado celebró las mejoras, mientras un informe técnico advirtió que los datos no establecen la causa exclusiva de los cambios. Tampoco se reportaron tasas de abandono.",
+    "passage": "Dos centros incorporaron clubes voluntarios de lectura. En el centro A, el promedio pasó de 60 a 72 puntos; en B, de 64 a 70. Los profesores aplicaron instrumentos distintos y no se asignaron participantes al azar. Un comunicado celebró las mejoras, mientras un informe técnico advirtió que los datos no establecen la causa exclusiva de los cambios. Tampoco se reportaron tasas de abandono. Los investigadores explicaron que «las cifras abrieron una ventana» para observar cambios.",
     "explicit": "A mejoró 12 puntos y B mejoró 6.",
     "inference": "El centro A registró una mejora absoluta mayor, pero no necesariamente comparable en una misma escala.",
     "unsupported": "Los clubes causaron por sí solos todas las mejoras.",
@@ -90,7 +90,7 @@ const SEEDS:Seed[]=[
   {
     "level": "intermedio",
     "title": "Agua en tres sectores",
-    "passage": "Una municipalidad registró consumos de agua antes y después de instalar dispositivos ahorradores. Norte pasó de 100 a 85 unidades, Centro de 80 a 72 y Sur de 120 a 114. Durante el período también hubo campañas de sensibilización y cambios en el clima. El titular de prensa afirmó que los dispositivos solucionaron el desperdicio; el informe técnico pidió observar varios meses para separar factores.",
+    "passage": "Una municipalidad registró consumos de agua antes y después de instalar dispositivos ahorradores. Norte pasó de 100 a 85 unidades, Centro de 80 a 72 y Sur de 120 a 114. Durante el período también hubo campañas de sensibilización y cambios en el clima. El titular de prensa afirmó que los dispositivos solucionaron el desperdicio; el informe técnico pidió observar varios meses para separar factores. La campaña celebró que «el ahorro echó raíces» en los hábitos de consumo.",
     "explicit": "El sector Norte disminuyó 15 unidades.",
     "inference": "Los dispositivos pueden haber contribuido, pero no se aisló su efecto.",
     "unsupported": "En los tres sectores el consumo se redujo exactamente un 15 %.",
@@ -109,7 +109,7 @@ const SEEDS:Seed[]=[
   {
     "level": "intermedio",
     "title": "Memoria regional",
-    "passage": "Un museo recopiló fotografías, testimonios y documentos sobre una celebración histórica. Dos relatos orales situaban el acontecimiento en fechas diferentes. La curadora explicó que una discrepancia no significa que ambos testimonios carezcan de valor: hace falta comparar registros cercanos a los hechos. Una reseña del museo destacó la diversidad de memorias; una columna de opinión sostuvo que solo un relato podía aceptarse sin discusión.",
+    "passage": "Un museo recopiló fotografías, testimonios y documentos sobre una celebración histórica. Dos relatos orales situaban el acontecimiento en fechas diferentes. La curadora explicó que una discrepancia no significa que ambos testimonios carezcan de valor: hace falta comparar registros cercanos a los hechos. Una reseña del museo destacó la diversidad de memorias; una columna de opinión sostuvo que solo un relato podía aceptarse sin discusión. La curadora señaló que «las fotografías dieron voz al pasado» de la comunidad.",
     "explicit": "Dos testimonios discrepan en la fecha del mismo acontecimiento.",
     "inference": "Contrastar documentos de época puede ayudar a aclarar la diferencia.",
     "unsupported": "El museo ya demostró que uno de los testimonios era inventado.",
@@ -128,7 +128,7 @@ const SEEDS:Seed[]=[
   {
     "level": "avanzado",
     "title": "Tutorías y sesgo de selección",
-    "passage": "En una investigación con 240 estudiantes, quienes eligieron tutorías voluntarias promediaban 75 puntos al inicio y 81 al final. Quienes no asistieron pasaron de 71 a 74. El equipo publicó las medias y reconoció que los grupos diferían antes de la intervención. Tampoco se midieron todas las condiciones de estudio doméstico. Un boletín atribuyó los ocho puntos de diferencia final exclusivamente a las tutorías; los autores del estudio rechazaron esa conclusión causal.",
+    "passage": "En una investigación con 240 estudiantes, quienes eligieron tutorías voluntarias promediaban 75 puntos al inicio y 81 al final. Quienes no asistieron pasaron de 71 a 74. El equipo publicó las medias y reconoció que los grupos diferían antes de la intervención. Tampoco se midieron todas las condiciones de estudio doméstico. Un boletín atribuyó los ocho puntos de diferencia final exclusivamente a las tutorías; los autores del estudio rechazaron esa conclusión causal. Un comentario crítico advirtió que «la cifra final proyectó una sombra» sobre las diferencias iniciales. El informe llamó confusores a las condiciones previas que podían distorsionar la estimación.",
     "explicit": "El grupo con tutorías mejoró 6 puntos y el otro 3.",
     "inference": "La diferencia de cambios es de 3 puntos, aunque no basta para estimar un efecto causal sin controlar confusores.",
     "unsupported": "Las tutorías explican necesariamente los ocho puntos de diferencia final.",
@@ -147,7 +147,7 @@ const SEEDS:Seed[]=[
   {
     "level": "avanzado",
     "title": "Riesgo de inundaciones",
-    "passage": "Un municipio costero registró más avisos de inundación tras ampliar el sistema de alertas. También aumentaron viviendas cerca de la desembocadura y hubo años con lluvias intensas. El equipo técnico advirtió que un incremento de avisos no demuestra por sí solo un aumento equivalente de inundaciones reales. Solicitó series históricas con definiciones comparables. Un editorial interpretó cada aviso adicional como prueba directa de que toda la expansión urbana causaba nuevas inundaciones.",
+    "passage": "Un municipio costero registró más avisos de inundación tras ampliar el sistema de alertas. También aumentaron viviendas cerca de la desembocadura y hubo años con lluvias intensas. El equipo técnico advirtió que un incremento de avisos no demuestra por sí solo un aumento equivalente de inundaciones reales. Solicitó series históricas con definiciones comparables. Un editorial interpretó cada aviso adicional como prueba directa de que toda la expansión urbana causaba nuevas inundaciones. El equipo indicó que «el registro iluminó zonas ciegas» y recordó que la incidencia real todavía debía estudiarse.",
     "explicit": "El número de avisos aumentó después de ampliar el sistema de alertas.",
     "inference": "Parte del aumento puede deberse a mejor detección, a más eventos reales o a ambos.",
     "unsupported": "Cada aviso adicional demuestra una inundación causada exclusivamente por nuevas viviendas.",
@@ -166,7 +166,7 @@ const SEEDS:Seed[]=[
   {
     "level": "avanzado",
     "title": "Tres fuentes sobre un acontecimiento",
-    "passage": "Un equipo analizó un decreto redactado el año de un suceso, una entrevista tomada cuarenta años después y un resumen anónimo sin fecha. El decreto aporta proximidad temporal, pero puede reflejar los intereses institucionales del autor. La entrevista conserva memorias personales, susceptibles de reelaboración. El resumen carece de datos para verificar procedencia. En su informe, los investigadores no eligieron automáticamente la fuente más antigua: contrastaron detalles con registros independientes.",
+    "passage": "Un equipo analizó un decreto redactado el año de un suceso, una entrevista tomada cuarenta años después y un resumen anónimo sin fecha. El decreto aporta proximidad temporal, pero puede reflejar los intereses institucionales del autor. La entrevista conserva memorias personales, susceptibles de reelaboración. El resumen carece de datos para verificar procedencia. En su informe, los investigadores no eligieron automáticamente la fuente más antigua: contrastaron detalles con registros independientes. La curadora señaló que «el documento habló desde su época» y por ello debía situarse en contexto.",
     "explicit": "Se examinaron un decreto, una entrevista tardía y un resumen sin autor ni fecha.",
     "inference": "La combinación de procedencia y contraste independiente ofrece más rigor que elegir solo por antigüedad.",
     "unsupported": "El resumen anónimo es la fuente más confiable porque no revela su autor.",
@@ -215,7 +215,7 @@ export function readingItems(level:Level,subtopic:ReadingSubtopic,mode:Mode):Rea
  // Cada subtema cuenta con tres lecturas por nivel, una sesión completa de tres rondas.
  const items=READING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
  // Aleatorizar ronda sin persistir colas ni tocar el historial anterior.
- return [...items].sort(()=>Math.random()-.5);
+ const result=[...items];for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;
 }
 export function checkReadingOrder(parts:readonly string[],chosen:readonly number[]):boolean{
  return chosen.length===parts.length&&new Set(chosen).size===parts.length&&chosen.every((n,i)=>n===i&&n>=0&&n<parts.length);
