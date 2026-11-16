@@ -1,4 +1,6 @@
 import type {Level,Mode} from "./grammar";
+import {CONNECTOR_CASES,type ConnectorCase} from "./connector-cases";
+import {readRotation,rotationKey,selectRotation} from "./rotation";
 export const WRITING_SUBTOPICS = ["Corrección","Conectores","Organización textual","Elisión y adición","Generalización e integración"] as const;
 export type WritingSubtopic = typeof WRITING_SUBTOPICS[number];
 export const ERROR_TYPES=["Concordancia","Redundancia","Acentuación","Precisión","Ortografía","Ambigüedad","Generalización injustificada","Puntuación","Conector inadecuado","Relación lógica inválida","Inferencia injustificada","Orden temporal","Coherencia temática","Estructura argumentativa","Organización de la comparación","Contradicción argumentativa","Jerarquización de evidencias","Referencia ambigua","Información omitida","Sesgo de selección","Integración imprecisa"] as const;
@@ -579,11 +581,16 @@ export const WRITING_BANK:WritingChallenge[]=SEEDS.flatMap((seed,s)=>{
    steps:[a,b,c] as [string,string,string]};
  });
 });
-export function writingItems(level:Level,subtopic:WritingSubtopic,_mode:Mode){
- const items=WRITING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
- const shuffled=[...items];
- for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
- return shuffled;
+export type WritingItem=WritingChallenge|ConnectorCase;
+export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
+ const initial:WritingItem[]=WRITING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
+ if(mode==="quiz"&&subtopic==="Conectores")initial.push(...CONNECTOR_CASES.filter(q=>q.level===level));
+ return initial;
+}
+export function writingItems(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
+ const pool=writingPool(level,subtopic,mode);
+ const key=rotationKey("espanol","Redacción",subtopic,mode,level);
+ return selectRotation(pool,readRotation(key,pool.map(q=>q.id)),Math.min(10,pool.length));
 }
 export function checkWritingSequence(parts:readonly string[],sequence:readonly number[]){
  return sequence.length===parts.length&&new Set(sequence).size===parts.length&&sequence.every((id,i)=>id===i);
