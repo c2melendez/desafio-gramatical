@@ -20,4 +20,8 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
     expect(matches.at(-1)?.routeId).toBe("/lectura");
   });
+  it("resolves /redaccion with generated route metadata",()=>{
+    const router=createRouter({routeTree,context:{queryClient:new QueryClient()}});
+    expect(router.matchRoutes("/redaccion").at(-1)?.routeId).toBe("/redaccion");
+  });
 });
