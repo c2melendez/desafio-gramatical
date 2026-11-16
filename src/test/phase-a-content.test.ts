@@ -5,6 +5,9 @@ import {CONNECTOR_EDITOR_CASES} from "@/lib/connector-editor-cases";
 import {CORRECTION_ERROR_CASES} from "@/lib/correction-error-cases";
 import {CORRECTION_CHOICE_CASES} from "@/lib/correction-choice-cases";
 import {CORRECTION_EDITOR_CASES} from "@/lib/correction-editor-cases";
+import {ORGANIZATION_ERROR_CASES} from "@/lib/organization-error-cases";
+import {ORGANIZATION_CHOICE_CASES} from "@/lib/organization-choice-cases";
+import {ORGANIZATION_EDITOR_CASES} from "@/lib/organization-editor-cases";
 import {writingPool,writingItems} from "@/lib/writing";
 import {coverageRows,coverageTotals,CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 import {emptyRotation,rotationKey,parseRotation,selectRotation,recordRotation} from "@/lib/rotation";
@@ -20,7 +23,7 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(CORRECTION_EDITOR_CASES).toHaveLength(36);
   expect(new Set(CONNECTOR_CASES.map(q=>q.id)).size).toBe(36);
   for(const [level,count] of [["principiante",10],["intermedio",15],["avanzado",20]] as const){
-   for(const subtopic of ["Conectores","Corrección"] as const)for(const mode of ["clasificar","quiz","construir"] as const){
+   for(const subtopic of ["Conectores","Corrección","Organización textual"] as const)for(const mode of ["clasificar","quiz","construir"] as const){
     const pool=writingPool(level,subtopic,mode);
     expect(pool).toHaveLength(count);
     expect(countContent("espanol","Redacción",subtopic,mode,level)).toBe(count);
@@ -87,6 +90,35 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   const ids=sets.flatMap(x=>x.map(y=>y.id));
   expect(new Set(ids).size).toBe(108);
  });
+ it("tiene tres bancos diferentes para Organización textual y alcanza el núcleo 10/15/20",()=>{
+  const banks=[ORGANIZATION_ERROR_CASES,ORGANIZATION_CHOICE_CASES,ORGANIZATION_EDITOR_CASES];
+  for(const bank of banks){
+   expect(bank).toHaveLength(36);
+   expect(new Set(bank.map(q=>q.id)).size).toBe(36);
+   expect(bank.filter(q=>q.level==="principiante")).toHaveLength(7);
+   expect(bank.filter(q=>q.level==="intermedio")).toHaveLength(12);
+   expect(bank.filter(q=>q.level==="avanzado")).toHaveLength(17);
+  }
+  const all=banks.flatMap(bank=>bank.map(q=>q.id));
+  expect(new Set(all).size).toBe(108);
+  for(const q of ORGANIZATION_ERROR_CASES){
+   expect(q.options).toHaveLength(4);expect(new Set(q.options).size).toBe(4);
+   expect(q.options.filter(o=>o===q.correctConnector)).toHaveLength(1);
+   expect(q.explanation.length).toBeGreaterThan(50);
+  }
+  for(const q of ORGANIZATION_CHOICE_CASES){
+   expect(q.gap.split("___")).toHaveLength(2);expect(new Set(q.options).size).toBe(4);
+   expect(q.options.filter(o=>o===q.connector)).toHaveLength(1);
+  }
+  for(const q of ORGANIZATION_EDITOR_CASES){
+   expect(q.steps).toHaveLength(3);expect(new Set(q.steps).size).toBe(3);
+  }
+  for(const level of ["principiante","intermedio","avanzado"] as const)
+   for(const mode of ["clasificar","quiz","construir"] as const){
+    expect(writingItems(level,"Organización textual",mode)).toHaveLength(10);
+    expect(writingPool(level,"Organización textual",mode)).toHaveLength(CONTENT_STAGE_ONE[level]);
+   }
+ });
  it("rotación consume inéditos antes de repetir y después prioriza fallos",()=>{
   const items=Array.from({length:15},(_,i)=>({id:"item-"+i}));
   const key=rotationKey("espanol","Redacción","Conectores","quiz","intermedio");
@@ -111,8 +143,8 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(rows).toHaveLength(810);
   const totals=coverageTotals();
   expect(totals.target).toBe(40500);
-  expect(totals.stageOneComplete).toBeGreaterThanOrEqual(18);
-  expect(rows.filter(x=>x.topic==="Redacción"&&["Conectores","Corrección"].includes(x.subtopic)).every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
+  expect(totals.stageOneComplete).toBeGreaterThanOrEqual(27);
+  expect(rows.filter(x=>x.topic==="Redacción"&&["Conectores","Corrección","Organización textual"].includes(x.subtopic)).every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
   expect(rows.some(x=>x.topic==="Literatura"&&x.available===0)).toBe(true);
  });
 });
