@@ -8,6 +8,9 @@ import {CORRECTION_EDITOR_CASES,type CorrectionEditorCase} from "./correction-ed
 import {ORGANIZATION_ERROR_CASES,type OrganizationErrorCase} from "./organization-error-cases";
 import {ORGANIZATION_CHOICE_CASES,type OrganizationChoiceCase} from "./organization-choice-cases";
 import {ORGANIZATION_EDITOR_CASES,type OrganizationEditorCase} from "./organization-editor-cases";
+import {ELISION_ERROR_CASES,type ElisionErrorCase} from "./elision-error-cases";
+import {ELISION_CHOICE_CASES,type ElisionChoiceCase} from "./elision-choice-cases";
+import {ELISION_EDITOR_CASES,type ElisionEditorCase} from "./elision-editor-cases";
 import {readRotation,rotationKey,selectRotation} from "./rotation";
 export const WRITING_SUBTOPICS = ["Corrección","Conectores","Organización textual","Elisión y adición","Generalización e integración"] as const;
 export type WritingSubtopic = typeof WRITING_SUBTOPICS[number];
@@ -589,7 +592,7 @@ export const WRITING_BANK:WritingChallenge[]=SEEDS.flatMap((seed,s)=>{
    steps:[a,b,c] as [string,string,string]};
  });
 });
-export type WritingItem=WritingChallenge|ConnectorCase|ConnectorErrorCase|ConnectorEditorCase|CorrectionErrorCase|CorrectionChoiceCase|CorrectionEditorCase|OrganizationErrorCase|OrganizationChoiceCase|OrganizationEditorCase;
+export type WritingItem=WritingChallenge|ConnectorCase|ConnectorErrorCase|ConnectorEditorCase|CorrectionErrorCase|CorrectionChoiceCase|CorrectionEditorCase|OrganizationErrorCase|OrganizationChoiceCase|OrganizationEditorCase|ElisionErrorCase|ElisionChoiceCase|ElisionEditorCase;
 export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
  const initial:WritingItem[]=WRITING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
  if(subtopic==="Conectores"){
@@ -606,6 +609,11 @@ export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):Writ
   if(mode==="quiz")initial.push(...ORGANIZATION_CHOICE_CASES.filter(q=>q.level===level));
   if(mode==="clasificar")initial.push(...ORGANIZATION_ERROR_CASES.filter(q=>q.level===level));
   if(mode==="construir")initial.push(...ORGANIZATION_EDITOR_CASES.filter(q=>q.level===level));
+ }
+ if(subtopic==="Elisión y adición"){
+  if(mode==="quiz")initial.push(...ELISION_CHOICE_CASES.filter(q=>q.level===level));
+  if(mode==="clasificar")initial.push(...ELISION_ERROR_CASES.filter(q=>q.level===level));
+  if(mode==="construir")initial.push(...ELISION_EDITOR_CASES.filter(q=>q.level===level));
  }
  return initial;
 }
