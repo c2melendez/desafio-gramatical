@@ -5,6 +5,7 @@ import {
  AREAS, CATALOG_COUNTS, FIRST_MODULE, GAME_IDS, GAME_ICONS,
  GAME_FOCUS, gameNames, availableModule, type AreaId
 } from "@/lib/phuma-catalog";
+import {CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 
 export const Route = createFileRoute("/")({
  head: () => ({
@@ -30,6 +31,9 @@ function Home() {
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
  const names=gameNames(topic);
+ const availableCount=countContent(areaId,topic,subtopic,mode,level);
+ const targetCount=CONTENT_TARGET[level];
+ const nucleus=CONTENT_STAGE_ONE[level];
  const onArea=(id:AreaId)=>{
   const target=AREAS.find(a=>a.id===id)!;
   setAreaId(id);setTopic(target.topics[0].name);setSubtopic(target.topics[0].subtopics[0]);setMode("clasificar");
@@ -106,6 +110,22 @@ function Home() {
      ))}
     </div>
     <p className="text-sm text-muted-foreground">Básico: fundamentos · Intermedio: aplicación tipo PHUMA · Avanzado: razonamiento complejo. Estos niveles son orientativos, no una clasificación oficial.</p>
+   </section>
+
+   <section className="card-ink bg-card p-4 space-y-3" aria-label="Cobertura del banco de ejercicios">
+    <div className="flex flex-wrap justify-between items-center gap-2">
+     <h2 className="font-black text-lg">Cobertura de este juego</h2>
+     <p className="text-sm font-bold">{availableCount} / {targetCount} ejercicios registrados</p>
+    </div>
+    <div className="h-3 overflow-hidden rounded-full bg-muted border border-foreground" role="progressbar"
+     aria-label="Progreso hacia la meta de contenido" aria-valuemin={0} aria-valuemax={targetCount} aria-valuenow={availableCount}>
+     <div className="h-full bg-primary" style={{width:`${Math.min(100,100*availableCount/targetCount)}%`}} />
+    </div>
+    <p className="text-sm text-muted-foreground">{availableCount>=nucleus?
+      `Primera meta de contenido alcanzada (${nucleus} ejercicios). Falta revisión pedagógica y completar ${targetCount}.`:
+      `Primera meta: ${nucleus} ejercicios; actualmente faltan ${Math.max(0,nucleus-availableCount)} para ese mínimo.`}
+    </p>
+    <p className="text-xs text-muted-foreground">Los escenarios compartidos entre mecánicas se cuentan por juego, pero no equivalen a problemas totalmente independientes. Esta cifra indica cantidad, no certificación del contenido.</p>
    </section>
 
    <section className="space-y-3">
