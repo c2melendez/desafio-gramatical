@@ -14,4 +14,10 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+  it("resolves the new reading module without falling back to 404",()=>{
+    const router=createRouter({routeTree,context:{queryClient:new QueryClient()}});
+    const matches=router.matchRoutes("/lectura");
+    expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
+    expect(matches.at(-1)?.routeId).toBe("/lectura");
+  });
 });
