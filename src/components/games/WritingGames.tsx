@@ -5,13 +5,24 @@ import {ERROR_TYPES,checkWritingSequence,type WritingChallenge} from "@/lib/writ
 
 export function ErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge>){
  const [choice,setChoice]=useState<string|null>(null);
- const wrong=ERROR_TYPES.filter(t=>t!==item.errorType);
- const shift=item.id.charCodeAt(item.id.length-1)%wrong.length;
- const types=[item.errorType,...[0,1,2].map(n=>wrong[(shift+n*4)%wrong.length])];
- const options=[...new Set(types)];
- for(const t of wrong)if(options.length<4&&!options.includes(t))options.push(t);
+ // Evitamos distracciones semánticamente equivalentes (p. ej. acentuación/ortografía).
+ // Se toman alternativas de familias diferentes al error que se desea identificar.
+ const families:Record<string,string>={
+  "Concordancia":"gramática","Acentuación":"gramática","Ortografía":"gramática","Puntuación":"gramática",
+  "Redundancia":"estilo","Precisión":"estilo","Ambigüedad":"estilo","Referencia ambigua":"estilo","Información omitida":"estilo",
+  "Generalización injustificada":"argumentación","Relación lógica inválida":"argumentación",
+  "Inferencia injustificada":"argumentación","Sesgo de selección":"argumentación","Integración imprecisa":"argumentación",
+  "Conector inadecuado":"conectores",
+  "Orden temporal":"estructura","Coherencia temática":"estructura","Estructura argumentativa":"estructura",
+  "Organización de la comparación":"estructura","Contradicción argumentativa":"estructura","Jerarquización de evidencias":"estructura"
+ };
+ const family=families[item.errorType];
+ const choices=ERROR_TYPES.filter(t=>t!==item.errorType&&families[t]!==family);
+ const options=[item.errorType,...[0,1,2].map(n=>choices[(item.id.charCodeAt(item.id.length-1)+n*7)%choices.length])];
+ for(const t of choices)if(options.length<4&&!options.includes(t))options.push(t);
+ const uniqueOptions=options.filter((v,i,a)=>a.indexOf(v)===i).slice(0,4);
  const rotate=(item.id.charCodeAt(item.id.length-2)+item.id.charCodeAt(item.id.length-1))%4;
- const shuffled=[...options.slice(rotate),...options.slice(0,rotate)];
+ const shuffled=[...uniqueOptions.slice(rotate),...uniqueOptions.slice(0,rotate)];
  const submit=(label:string)=>{
   if(choice!==null)return;
   setChoice(label);
