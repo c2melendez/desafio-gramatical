@@ -2,8 +2,9 @@ import {useState} from "react";
 import {NextButton} from "./Feedback";
 import type {GameProps} from "./types";
 import {EVIDENCE_LABEL,checkReadingOrder,type EvidenceTag,type ReadingChallenge} from "@/lib/reading";
+import type {MainIdeaChoiceCase} from "@/lib/main-idea-choice-cases";
 
-function Passage({item}:{item:ReadingChallenge}){
+function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase}){
  return <section className="card-ink bg-card p-5 space-y-3" aria-label="Texto para analizar">
   <p className="text-xs font-bold uppercase tracking-wider text-primary">Lectura · {item.subtopic}</p>
   <h2 className="text-xl font-black">{item.title}</h2>
@@ -40,7 +41,7 @@ export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChal
   {!checked?<button onClick={check} disabled={!done} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">{done?"Comprobar las tres afirmaciones":"Clasifica las tres afirmaciones"}</button>:<NextButton onClick={next} isLast={isLast}/>}
  </div>;
 }
-export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChallenge>){
+export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaChoiceCase>){
  const [pick,setPick]=useState<number|null>(null);
  const choose=(i:number)=>{
   if(pick!==null)return;
