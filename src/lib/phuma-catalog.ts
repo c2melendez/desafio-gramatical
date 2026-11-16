@@ -244,9 +244,9 @@ export const TOPIC_GAMES: Record<string,[string,string,string]> = {
     "Reconstruye el texto"
   ],
   "Gramática y semántica": [
-    "Clasifica palabras",
-    "Elige el significado",
-    "Laboratorio de oraciones"
+    "Clasificar palabras",
+    "Quiz de conceptos",
+    "Construir oraciones"
   ],
   "Redacción": [
     "Cazador de errores",
