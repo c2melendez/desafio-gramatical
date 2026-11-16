@@ -1,5 +1,7 @@
 import {describe,it,expect} from "vitest";
 import {CONNECTOR_CASES} from "@/lib/connector-cases";
+import {CONNECTOR_ERROR_CASES} from "@/lib/connector-error-cases";
+import {CONNECTOR_EDITOR_CASES} from "@/lib/connector-editor-cases";
 import {writingPool,writingItems} from "@/lib/writing";
 import {coverageRows,coverageTotals,CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 import {emptyRotation,rotationKey,parseRotation,selectRotation,recordRotation} from "@/lib/rotation";
@@ -8,14 +10,18 @@ import type {Level} from "@/lib/grammar";
 describe("Fase A: metas, validez y rotación de contenido",()=>{
  it("cumple la primera meta 10/15/20 para el juego Conector correcto",()=>{
   expect(CONNECTOR_CASES).toHaveLength(36);
+  expect(CONNECTOR_ERROR_CASES).toHaveLength(36);
+  expect(CONNECTOR_EDITOR_CASES).toHaveLength(36);
   expect(new Set(CONNECTOR_CASES.map(q=>q.id)).size).toBe(36);
   for(const [level,count] of [["principiante",10],["intermedio",15],["avanzado",20]] as const){
-   const pool=writingPool(level,"Conectores","quiz");
-   expect(pool).toHaveLength(count);
-   expect(countContent("espanol","Redacción","Conectores","quiz",level)).toBe(count);
+   for(const mode of ["clasificar","quiz","construir"] as const){
+    const pool=writingPool(level,"Conectores",mode);
+    expect(pool).toHaveLength(count);
+    expect(countContent("espanol","Redacción","Conectores",mode,level)).toBe(count);
+   }
    expect(CONTENT_STAGE_ONE[level]).toBe(count);
    expect(CONTENT_TARGET[level]).toBeGreaterThan(count);
-   expect(writingItems(level,"Conectores","quiz")).toHaveLength(10);
+   for(const mode of ["clasificar","quiz","construir"] as const)expect(writingItems(level,"Conectores",mode)).toHaveLength(10);
   }
  });
  it("valida que distractores y claves de los 36 nuevos casos sean diferentes y completos",()=>{
@@ -27,6 +33,23 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
    expect(q.explanation.length).toBeGreaterThan(40);
    expect(q.reviewStatus).toBe("editorial-draft");
   }
+ });
+ it("verifica contenido independiente y solución única de los otros dos juegos",()=>{
+  for(const q of CONNECTOR_ERROR_CASES){
+   expect(q.options).toHaveLength(4);
+   expect(new Set(q.options).size).toBe(4);
+   expect(q.options.filter(x=>x===q.correctConnector)).toHaveLength(1);
+   expect(q.correctSentence.includes("«")).toBe(false);
+   expect(q.flawed).toContain("«");
+   expect(q.explanation.length).toBeGreaterThan(42);
+  }
+  for(const q of CONNECTOR_EDITOR_CASES){
+   expect(q.steps).toHaveLength(3);
+   expect(new Set(q.steps).size).toBe(3);
+   expect(q.explanation.length).toBeGreaterThan(42);
+  }
+  const all=[...CONNECTOR_CASES,...CONNECTOR_ERROR_CASES,...CONNECTOR_EDITOR_CASES];
+  expect(new Set(all.map(x=>x.id)).size).toBe(108);
  });
  it("rotación consume inéditos antes de repetir y después prioriza fallos",()=>{
   const items=Array.from({length:15},(_,i)=>({id:"item-"+i}));
@@ -52,8 +75,8 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(rows).toHaveLength(810);
   const totals=coverageTotals();
   expect(totals.target).toBe(40500);
-  expect(totals.stageOneComplete).toBeGreaterThanOrEqual(3);
-  expect(rows.filter(x=>x.topic==="Redacción"&&x.subtopic==="Conectores"&&x.mode==="quiz").every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
+  expect(totals.stageOneComplete).toBeGreaterThanOrEqual(9);
+  expect(rows.filter(x=>x.topic==="Redacción"&&x.subtopic==="Conectores").every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
   expect(rows.some(x=>x.topic==="Literatura"&&x.available===0)).toBe(true);
  });
 });
