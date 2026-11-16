@@ -20,10 +20,10 @@ jobs:
           bun-version: latest
       - name: Instalar dependencias
         run: bun install --frozen-lockfile
+      - name: Compilar aplicación y generar rutas de TanStack Router
+        run: bun run build
       - name: Ejecutar pruebas
         run: bun run test
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"
-      - name: Compilar aplicación
-        run: bun run build
