@@ -5,6 +5,9 @@ import {gameNames} from "@/lib/phuma-catalog";
 import {WRITING_SUBTOPICS,writingItems,writingPool,type WritingChallenge,type WritingItem,type WritingSubtopic} from "@/lib/writing";
 import {ErrorHunter,ConnectorGame,ExpertEditor} from "@/components/games/WritingGames";
 import {rotationKey,readRotation,recordRotation,writeRotation} from "@/lib/rotation";
+import type {ConnectorErrorCase} from "@/lib/connector-error-cases";
+import type {ConnectorEditorCase} from "@/lib/connector-editor-cases";
+import type {ConnectorCase} from "@/lib/connector-cases";
 
 const modes:Mode[]=["clasificar","quiz","construir"];
 export const Route=createFileRoute("/redaccion")({
@@ -100,8 +103,8 @@ function WritingPlay(){
   <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={items.length} aria-valuenow={idx+1}>
    <div className="h-full bg-primary" style={{width:`${100*(idx+1)/items.length}%`}}/>
   </div>
-  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props} item={item as WritingChallenge}/>}
-  {modo==="quiz"&&<ConnectorGame key={item.id} {...props}/>}
-  {modo==="construir"&&<ExpertEditor key={item.id} {...props} item={item as WritingChallenge}/>}
+  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props} item={item as WritingChallenge|ConnectorErrorCase}/>}
+  {modo==="quiz"&&<ConnectorGame key={item.id} {...props} item={item as WritingChallenge|ConnectorCase}/>}
+  {modo==="construir"&&<ExpertEditor key={item.id} {...props} item={item as WritingChallenge|ConnectorEditorCase}/>}
  </main>;
 }
