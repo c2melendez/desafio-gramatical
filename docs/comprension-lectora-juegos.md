@@ -47,4 +47,4 @@ El banco es **intencionalmente pequeño** y reutiliza nueve pasajes para distint
 
 ## Próxima etapa
 
-Ampliar el corpus de lectura y la cantidad de variantes por subtema; posteriormente desarrollar Redacción y Literatura, manteniendo los tres niveles y un contrato estable de historial. La expansión a Matemáticas y demás áreas deberá introducir motores especializados para gráficos, operaciones y ordenamiento de procesos, no reutilizar la mecánica textual sin adaptación.
+Ampliar el corpus de lectura y la cantidad de variantes por subtema; el módulo de **Redacción ya fue implementado** y se documenta en [redaccion-juegos.md](redaccion-juegos.md). La siguiente etapa curricular es Literatura. La expansión a Matemáticas y demás áreas deberá introducir motores especializados para gráficos, operaciones y ordenamiento de procesos, no reutilizar la mecánica textual sin adaptación.
