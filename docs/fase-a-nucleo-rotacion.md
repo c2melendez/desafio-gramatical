@@ -52,4 +52,9 @@ La rotación se aplica **ya en los juegos de Redacción**, incluso cuando el ban
 
 `src/test/phase-a-content.test.ts` evalúa cobertura, separación de colas por juego, selección de inéditos, priorización posterior de fallos y comportamiento ante datos dañados. `src/test/writing-games.test.ts` valida que las sesiones de diez rondas no repitan IDs.
 
-**Próximas acciones de Fase A:** completar el núcleo 10/15/20 en **Generalización e integración**, y después avanzar con Comprensión lectora y Gramática. Consulta [el informe de Organización textual](fase-a-organizacion-textual-2026.md) y [el de Elisión y adición](fase-a-elision-adicion-2026.md). Cada ampliación requiere casos realmente distintos y no simples cambios cosméticos. Los casos nuevos están sujetos a revisión editorial adicional; las pruebas automáticas por sí solas no demuestran equivalencia con la PHUMA oficial.
+**Próximas acciones de Fase A:** revisar pedagógicamente los bancos y ampliar Comprensión lectora; el primer núcleo cuantitativo de los cinco subtemas de Redacción ya está completo, y después avanzar con Comprensión lectora y Gramática. Consulta [el informe de Organización textual](fase-a-organizacion-textual-2026.md) y [el de Elisión y adición](fase-a-elision-adicion-2026.md). Cada ampliación requiere casos realmente distintos y no simples cambios cosméticos. Los casos nuevos están sujetos a revisión editorial adicional; las pruebas automáticas por sí solas no demuestran equivalencia con la PHUMA oficial.
+
+
+## Cierre de la primera etapa cuantitativa de Redacción
+
+Los cinco subtemas alcanzan 10/15/20 por juego y nivel, con 675 registros por modalidad en Redacción. Se agregaron 108 casos en Generalización e integración. Consulte [el informe de cierre](fase-a-generalizacion-integracion-2026.md). Ningún banco se declara validado por docentes ni calibrado con estudiantes.
