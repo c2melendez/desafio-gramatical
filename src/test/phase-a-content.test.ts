@@ -2,6 +2,9 @@ import {describe,it,expect} from "vitest";
 import {CONNECTOR_CASES} from "@/lib/connector-cases";
 import {CONNECTOR_ERROR_CASES} from "@/lib/connector-error-cases";
 import {CONNECTOR_EDITOR_CASES} from "@/lib/connector-editor-cases";
+import {CORRECTION_ERROR_CASES} from "@/lib/correction-error-cases";
+import {CORRECTION_CHOICE_CASES} from "@/lib/correction-choice-cases";
+import {CORRECTION_EDITOR_CASES} from "@/lib/correction-editor-cases";
 import {writingPool,writingItems} from "@/lib/writing";
 import {coverageRows,coverageTotals,CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 import {emptyRotation,rotationKey,parseRotation,selectRotation,recordRotation} from "@/lib/rotation";
@@ -12,16 +15,19 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(CONNECTOR_CASES).toHaveLength(36);
   expect(CONNECTOR_ERROR_CASES).toHaveLength(36);
   expect(CONNECTOR_EDITOR_CASES).toHaveLength(36);
+  expect(CORRECTION_ERROR_CASES).toHaveLength(36);
+  expect(CORRECTION_CHOICE_CASES).toHaveLength(36);
+  expect(CORRECTION_EDITOR_CASES).toHaveLength(36);
   expect(new Set(CONNECTOR_CASES.map(q=>q.id)).size).toBe(36);
   for(const [level,count] of [["principiante",10],["intermedio",15],["avanzado",20]] as const){
-   for(const mode of ["clasificar","quiz","construir"] as const){
-    const pool=writingPool(level,"Conectores",mode);
+   for(const subtopic of ["Conectores","Corrección"] as const)for(const mode of ["clasificar","quiz","construir"] as const){
+    const pool=writingPool(level,subtopic,mode);
     expect(pool).toHaveLength(count);
-    expect(countContent("espanol","Redacción","Conectores",mode,level)).toBe(count);
+    expect(countContent("espanol","Redacción",subtopic,mode,level)).toBe(count);
    }
    expect(CONTENT_STAGE_ONE[level]).toBe(count);
    expect(CONTENT_TARGET[level]).toBeGreaterThan(count);
-   for(const mode of ["clasificar","quiz","construir"] as const)expect(writingItems(level,"Conectores",mode)).toHaveLength(10);
+   for(const subtopic of ["Conectores","Corrección"] as const)for(const mode of ["clasificar","quiz","construir"] as const)expect(writingItems(level,subtopic,mode)).toHaveLength(10);
   }
  });
  it("valida que distractores y claves de los 36 nuevos casos sean diferentes y completos",()=>{
@@ -51,6 +57,36 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   const all=[...CONNECTOR_CASES,...CONNECTOR_ERROR_CASES,...CONNECTOR_EDITOR_CASES];
   expect(new Set(all.map(x=>x.id)).size).toBe(108);
  });
+ it("verifica 108 reactivos nuevos y exclusivos de los tres juegos de Corrección",()=>{
+  const sets=[CORRECTION_ERROR_CASES,CORRECTION_CHOICE_CASES,CORRECTION_EDITOR_CASES];
+  for(const cases of sets){
+   expect(cases).toHaveLength(36);
+   expect(new Set(cases.map(x=>x.id)).size).toBe(36);
+   expect(cases.filter(x=>x.level==="principiante")).toHaveLength(7);
+   expect(cases.filter(x=>x.level==="intermedio")).toHaveLength(12);
+   expect(cases.filter(x=>x.level==="avanzado")).toHaveLength(17);
+  }
+  for(const q of CORRECTION_ERROR_CASES){
+   expect(q.flawed).toContain("«");
+   expect(q.correctSentence).not.toContain("«");
+   expect(q.options).toHaveLength(4);
+   expect(new Set(q.options).size).toBe(4);
+   expect(q.options.filter(x=>x===q.correctConnector)).toHaveLength(1);
+   expect(q.explanation.length).toBeGreaterThan(42);
+  }
+  for(const q of CORRECTION_CHOICE_CASES){
+   expect(q.gap.split("___")).toHaveLength(2);
+   expect(new Set(q.options).size).toBe(4);
+   expect(q.options.filter(x=>x===q.connector)).toHaveLength(1);
+  }
+  for(const q of CORRECTION_EDITOR_CASES){
+   expect(q.steps).toHaveLength(3);
+   expect(new Set(q.steps).size).toBe(3);
+   expect(q.explanation.length).toBeGreaterThan(45);
+  }
+  const ids=sets.flatMap(x=>x.map(y=>y.id));
+  expect(new Set(ids).size).toBe(108);
+ });
  it("rotación consume inéditos antes de repetir y después prioriza fallos",()=>{
   const items=Array.from({length:15},(_,i)=>({id:"item-"+i}));
   const key=rotationKey("espanol","Redacción","Conectores","quiz","intermedio");
@@ -75,8 +111,8 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(rows).toHaveLength(810);
   const totals=coverageTotals();
   expect(totals.target).toBe(40500);
-  expect(totals.stageOneComplete).toBeGreaterThanOrEqual(9);
-  expect(rows.filter(x=>x.topic==="Redacción"&&x.subtopic==="Conectores").every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
+  expect(totals.stageOneComplete).toBeGreaterThanOrEqual(18);
+  expect(rows.filter(x=>x.topic==="Redacción"&&["Conectores","Corrección"].includes(x.subtopic)).every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
   expect(rows.some(x=>x.topic==="Literatura"&&x.available===0)).toBe(true);
  });
 });
