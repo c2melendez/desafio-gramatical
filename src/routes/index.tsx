@@ -30,7 +30,7 @@ function Home() {
  const active=availableModule(areaId,topic,subtopic);
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
- const names=gameNames(topic);
+ const names={...gameNames(topic),...(topic==="Redacción"&&subtopic==="Corrección"?{quiz:"Corrección precisa"}:{})};
  const availableCount=countContent(areaId,topic,subtopic,mode,level);
  const targetCount=CONTENT_TARGET[level];
  const nucleus=CONTENT_STAGE_ONE[level];
