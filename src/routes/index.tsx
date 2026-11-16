@@ -1,61 +1,126 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { LEVELS, LEVEL_LABEL, MODE_LABEL, type Level, type Mode } from "@/lib/grammar";
+import { LEVELS, LEVEL_LABEL, type Level, type Mode } from "@/lib/grammar";
+import {
+ AREAS, CATALOG_COUNTS, FIRST_MODULE, GAME_IDS, GAME_ICONS,
+ GAME_FOCUS, gameNames, availableModule, type AreaId
+} from "@/lib/phuma-catalog";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Desafío Gramatical — Juega con las categorías gramaticales" },
-      { name: "description", content: "Clasifica palabras, responde quizzes y construye oraciones en español. Tres niveles, rachas e historial." },
-      { property: "og:title", content: "Desafío Gramatical" },
-      { property: "og:description", content: "Tres juegos para dominar sustantivos, verbos, adverbios y más." },
-    ],
-  }),
-  component: Home,
+ head: () => ({
+  meta: [
+   { title: "Academia PHUMA Play — Aprende jugando" },
+   { name: "description", content: "Cinco áreas de preparación PHUMA: selecciona un subtema y practica con tres desafíos de reconocimiento, aplicación y construcción." },
+   { property: "og:title", content: "Academia PHUMA Play" },
+   { property: "og:description", content: "Aprende jugando. Cinco áreas, diecinueve temas y tres retos por tema." },
+  ],
+ }),
+ component: Home,
 });
 
-const MODES: { id: Mode; icon: string; desc: string }[] = [
-  { id: "clasificar", icon: "🏷️", desc: "Etiqueta cada palabra de una oración." },
-  { id: "quiz", icon: "❓", desc: "Preguntas de clasificación y conceptos." },
-  { id: "construir", icon: "🧩", desc: "Arma oraciones que cumplan un patrón." },
-];
-
 function Home() {
-  const [mode, setMode] = useState<Mode>("clasificar");
-  const [level, setLevel] = useState<Level>("principiante");
-  return (
-    <main className="mx-auto max-w-xl px-4 py-8 space-y-8">
-      <header className="space-y-2">
-        <p className="inline-block rounded-full border-2 border-foreground bg-accent px-3 py-1 text-sm font-bold">Ñ · Gramática en juego</p>
-        <h1 className="text-5xl font-black leading-none">Desafío <span className="text-primary">Gramatical</span></h1>
-        <p className="text-lg text-muted-foreground">Aprende a distinguir las categorías de las palabras con explicaciones en cada respuesta.</p>
-      </header>
+ const [areaId,setAreaId]=useState<AreaId>(FIRST_MODULE.area);
+ const [topic,setTopic]=useState(FIRST_MODULE.topic);
+ const [subtopic,setSubtopic]=useState(FIRST_MODULE.subtopic);
+ const [mode,setMode]=useState<Mode>("clasificar");
+ const [level,setLevel]=useState<Level>("principiante");
+ const selectedArea=AREAS.find(a=>a.id===areaId)!;
+ const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
+ const active=availableModule(areaId,topic,subtopic);
+ const names=gameNames(topic);
+ const onArea=(id:AreaId)=>{
+  const target=AREAS.find(a=>a.id===id)!;
+  setAreaId(id);setTopic(target.topics[0].name);setSubtopic(target.topics[0].subtopics[0]);setMode("clasificar");
+ };
+ const onTopic=(name:string)=>{
+  const target=selectedArea.topics.find(t=>t.name===name)!;
+  setTopic(name);setSubtopic(target.subtopics[0]);setMode("clasificar");
+ };
+ return (
+  <main className="mx-auto max-w-4xl px-4 py-7 md:py-10 space-y-7">
+   <header className="space-y-3">
+    <p className="inline-block rounded-full border-2 border-foreground bg-accent px-3 py-1 text-sm font-bold">🎓 Preparación universitaria · Honduras</p>
+    <h1 className="text-4xl sm:text-5xl font-black leading-tight">Academia <span className="text-primary">PHUMA Play</span></h1>
+    <p className="text-lg text-muted-foreground max-w-2xl">Aprende jugando. Selecciona una materia, elige qué deseas practicar y supera tres desafíos con dificultad progresiva.</p>
+    <p className="text-sm text-muted-foreground">{CATALOG_COUNTS.areas} áreas · {CATALOG_COUNTS.topics} temas · {CATALOG_COUNTS.subtopics} subtemas</p>
+   </header>
 
-      <section aria-labelledby="m" className="space-y-3">
-        <h2 id="m" className="text-2xl font-bold">1. Elige un juego</h2>
-        <div className="grid gap-3" role="radiogroup">
-          {MODES.map((m) => (
-            <button key={m.id} role="radio" aria-checked={mode === m.id} onClick={() => setMode(m.id)}
-              className={`card-ink flex items-center gap-4 p-4 text-left transition ${mode === m.id ? "bg-primary text-primary-foreground" : ""}`}>
-              <span className="text-3xl" aria-hidden>{m.icon}</span>
-              <span><span className="block text-lg font-bold">{MODE_LABEL[m.id]}</span><span className="text-sm opacity-90">{m.desc}</span></span>
-            </button>
-          ))}
-        </div>
-      </section>
+   <section aria-labelledby="select-area" className="space-y-3">
+    <h2 id="select-area" className="text-2xl font-black">1. Selecciona un área</h2>
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3" role="group" aria-label="Área académica">
+     {AREAS.map(a=>(
+      <button key={a.id} onClick={()=>onArea(a.id)} aria-pressed={areaId===a.id}
+       className={`card-ink flex flex-col items-start gap-1 p-4 text-left transition-colors ${areaId===a.id?"bg-primary text-primary-foreground":"bg-card"}`}>
+       <span className="text-3xl" aria-hidden>{a.icon}</span>
+       <span className="font-bold text-base">{a.label}</span>
+       <span className="text-xs opacity-85">{a.topics.length} temas</span>
+      </button>
+     ))}
+    </div>
+   </section>
 
-      <section aria-labelledby="l" className="space-y-3">
-        <h2 id="l" className="text-2xl font-bold">2. Elige el nivel</h2>
-        <div className="grid grid-cols-3 gap-2" role="radiogroup">
-          {LEVELS.map((l) => (
-            <button key={l} role="radio" aria-checked={level === l} onClick={() => setLevel(l)}
-              className={`tile text-sm ${level === l ? "bg-secondary text-secondary-foreground" : "bg-card"}`}>{LEVEL_LABEL[l]}</button>
-          ))}
-        </div>
-      </section>
+   <section aria-labelledby="select-topic" className="card-ink bg-card p-5 space-y-4">
+    <h2 id="select-topic" className="text-2xl font-black">2. Elige un tema y subtema</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+     <label className="block space-y-2 font-bold text-sm">Tema
+      <select aria-label="Tema de estudio" value={topic} onChange={e=>onTopic(e.target.value)} className="w-full border-2 border-foreground rounded-lg bg-background p-3 font-normal">
+       {selectedArea.topics.map(t=><option key={t.name} value={t.name}>{t.name}</option>)}
+      </select>
+     </label>
+     <label className="block space-y-2 font-bold text-sm">Subtema
+      <select aria-label="Subtema de estudio" value={subtopic} onChange={e=>setSubtopic(e.target.value)} className="w-full border-2 border-foreground rounded-lg bg-background p-3 font-normal">
+       {selectedTopic.subtopics.map(s=><option key={s} value={s}>{s}</option>)}
+      </select>
+     </label>
+    </div>
+    <p aria-live="polite" className={`rounded-lg px-3 py-2 text-sm font-bold ${active?"bg-success-soft":"bg-muted"}`}>
+      {active?"✓ Módulo disponible: los tres juegos existentes se conservan.":
+      "🛠️ Módulo planificado: puedes explorar los juegos, pero aún no está desarrollado."}
+    </p>
+   </section>
 
-      <Link to="/jugar" search={{ modo: mode, nivel: level }} className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">¡Jugar!</Link>
-      <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial</Link>
-    </main>
-  );
+   <section aria-labelledby="select-game" className="space-y-3">
+    <h2 id="select-game" className="text-2xl font-black">3. Elige un juego</h2>
+    <div className="grid gap-3" role="group" aria-label="Tipo de desafío">
+     {GAME_IDS.map(id=>(
+      <button key={id} onClick={()=>setMode(id)} aria-pressed={mode===id}
+       className={`card-ink flex items-center gap-4 p-4 text-left transition ${mode===id?"bg-primary text-primary-foreground":"bg-card"}`}>
+       <span className="text-3xl" aria-hidden>{GAME_ICONS[id]}</span>
+       <span className="flex-1"><span className="block text-lg font-bold">{names[id]}</span><span className="block text-sm opacity-90">{GAME_FOCUS[id]}</span></span>
+       <span className="text-xs font-bold">{active?"Disponible":"Próximamente"}</span>
+      </button>
+     ))}
+    </div>
+   </section>
+
+   <section aria-labelledby="select-level" className="space-y-3">
+    <h2 id="select-level" className="text-2xl font-black">4. Selecciona el nivel</h2>
+    <div className="grid grid-cols-3 gap-2" role="group" aria-label="Dificultad">
+     {LEVELS.map(l=>(
+      <button key={l} aria-pressed={level===l} onClick={()=>setLevel(l)}
+       className={`tile text-sm ${level===l?"bg-secondary text-secondary-foreground":"bg-card"}`}>
+       {l==="principiante"?"Básico":LEVEL_LABEL[l]}
+      </button>
+     ))}
+    </div>
+    <p className="text-sm text-muted-foreground">Básico: fundamentos · Intermedio: aplicación tipo PHUMA · Avanzado: razonamiento complejo. Estos niveles son orientativos, no una clasificación oficial.</p>
+   </section>
+
+   <section className="space-y-3">
+    <div aria-live="polite" className="rounded-xl border-2 border-foreground bg-accent/40 p-4 text-sm">
+      <strong>Tu ruta:</strong> {selectedArea.label} → {topic} → {subtopic} → {names[mode]} → {level==="principiante"?"Básico":LEVEL_LABEL[level]}
+    </div>
+    {active?
+     <Link to="/jugar" search={{modo:mode,nivel:level}} className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
+     <div className="tile w-full cursor-not-allowed bg-muted py-4 text-center font-bold" role="status">🔒 Juego en desarrollo · selecciona Categorías gramaticales para jugar</div>
+    }
+    <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
+   </section>
+   <aside className="rounded-xl border-2 border-foreground bg-card p-4 text-sm space-y-2">
+    <h2 className="text-lg font-black">Sobre la evolución de Desafío Gramatical</h2>
+    <p>La aplicación inicia esta etapa manteniendo intactos los juegos de clasificación, cuestionarios y construcción de oraciones. El resto del catálogo se desarrollará progresivamente, sin mostrar temas sin preguntas como si estuvieran listos.</p>
+    <p className="text-muted-foreground">Recurso educativo independiente. No afiliado ni avalado por la UNAH. Los puntos del juego no equivalen al puntaje de la prueba PHUMA.</p>
+   </aside>
+  </main>
+ );
 }
