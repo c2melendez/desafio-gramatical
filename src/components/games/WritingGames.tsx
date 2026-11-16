@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {NextButton} from "./Feedback";
 import type {GameProps} from "./types";
-import {ERROR_TYPES,checkWritingSequence,type WritingChallenge,type WritingItem} from "@/lib/writing";
+import {ERROR_TYPES,checkWritingSequence,type WritingChallenge} from "@/lib/writing";
 import type {ConnectorErrorCase} from "@/lib/connector-error-cases";
 import type {ConnectorEditorCase} from "@/lib/connector-editor-cases";
 
