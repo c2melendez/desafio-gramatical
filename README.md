@@ -12,7 +12,7 @@ Plataforma independiente para practicar mediante juegos las competencias que se 
 
 La meta por cada **juego y subtema** es **30 ejercicios básicos, 50 intermedios y 70 avanzados**. La primera etapa se mide en **10/15/20**.
 
-El núcleo inicial ya se alcanzó en los **tres juegos de Redacción → Conectores**: 10/15/20 por nivel para *Cazador de errores*, *Conector correcto* y *Editor experto*. Son 135 registros en total, incluidos 108 casos originales nuevos, y cada juego tiene su propio banco, estructura de actividad y rotación local. Los otros cuatro subtemas de Redacción conservan su contenido inicial. La cobertura de cantidad todavía no representa aprobación editorial.
+El núcleo inicial ya se alcanzó en los **tres juegos de Redacción → Conectores y de Redacción → Corrección**: cada subtema dispone de 10/15/20 por nivel y juego. Son **270 registros de estos dos subtemas**, incluidos **216 casos nuevos** desarrollados para tres mecánicas diferenciadas. Los otros tres subtemas de Redacción conservan su contenido inicial. La cobertura de cantidad todavía no representa aprobación editorial. Consulta [el informe de Corrección](docs/fase-a-correccion-2026.md).
 
 La portada indica la cobertura cuantitativa para la combinación de subtema, juego y nivel elegida. No confunde escenarios compartidos con ejercicios cognitivos independientes ni presenta la cantidad como certificación pedagógica.
 
