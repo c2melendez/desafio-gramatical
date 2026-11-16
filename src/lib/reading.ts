@@ -1,4 +1,6 @@
 import type {Level,Mode} from "./grammar";
+import {MAIN_IDEA_CHOICE_CASES,type MainIdeaChoiceCase} from "./main-idea-choice-cases";
+import {readRotation,rotationKey,selectRotation} from "./rotation";
 export const READING_SUBTOPICS = ["Idea principal","Inferencias","Lectura crítica","Vocabulario en contexto","Análisis de textos","Lectura comparada","Lenguaje figurado"] as const;
 export type ReadingSubtopic = typeof READING_SUBTOPICS[number];
 export type EvidenceTag="explicit"|"inference"|"unsupported";
@@ -210,12 +212,17 @@ export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>REA
  order:{parts:seed.steps,hint:"Organiza un razonamiento: observa, contrasta y concluye.",explanation:"Un análisis sólido comienza localizando los datos, examina sus limitaciones y termina con una conclusión justificada."}
  };
 }));
-export function readingItems(level:Level,subtopic:ReadingSubtopic,mode:Mode):ReadingChallenge[]{
+export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase;
+export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):ReadingItem[]{
  if(!READING_SUBTOPICS.includes(subtopic))return [];
- // Cada subtema cuenta con tres lecturas por nivel, una sesión completa de tres rondas.
- const items=READING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
- // Aleatorizar ronda sin persistir colas ni tocar el historial anterior.
- const result=[...items];for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;
+ const items:ReadingItem[]=READING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
+ if(subtopic==="Idea principal"&&mode==="quiz")items.push(...MAIN_IDEA_CHOICE_CASES.filter(q=>q.level===level));
+ return items;
+}
+export function readingItems(level:Level,subtopic:ReadingSubtopic,mode:Mode):ReadingItem[]{
+ const items=readingPool(level,subtopic,mode);
+ const key=rotationKey("espanol","Comprensión lectora",subtopic,mode,level);
+ return selectRotation(items,readRotation(key,items.map(q=>q.id)),Math.min(10,items.length));
 }
 export function checkReadingOrder(parts:readonly string[],chosen:readonly number[]):boolean{
  return chosen.length===parts.length&&new Set(chosen).size===parts.length&&chosen.every((n,i)=>n===i&&n>=0&&n<parts.length);
