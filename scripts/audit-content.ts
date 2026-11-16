@@ -11,6 +11,9 @@ import {ORGANIZATION_EDITOR_CASES} from "../src/lib/organization-editor-cases";
 import {ELISION_ERROR_CASES} from "../src/lib/elision-error-cases";
 import {ELISION_CHOICE_CASES} from "../src/lib/elision-choice-cases";
 import {ELISION_EDITOR_CASES} from "../src/lib/elision-editor-cases";
+import {GENERALIZATION_ERROR_CASES} from "../src/lib/generalization-error-cases";
+import {GENERALIZATION_CHOICE_CASES} from "../src/lib/generalization-choice-cases";
+import {GENERALIZATION_EDITOR_CASES} from "../src/lib/generalization-editor-cases";
 import {WRITING_BANK,writingPool} from "../src/lib/writing";
 import {READING_BANK} from "../src/lib/reading";
 const levels=["principiante","intermedio","avanzado"] as const;
@@ -18,7 +21,7 @@ const target={principiante:10,intermedio:15,avanzado:20};
 const rows=coverageRows(),totals=coverageTotals();
 const failures:string[]=[];
 for(const level of levels){
- for(const subtopic of ["Conectores","Corrección","Organización textual","Elisión y adición"] as const)for(const mode of ["clasificar","quiz","construir"] as const){
+ for(const subtopic of ["Conectores","Corrección","Organización textual","Elisión y adición","Generalización e integración"] as const)for(const mode of ["clasificar","quiz","construir"] as const){
   const pool=writingPool(level,subtopic,mode);
   if(pool.length!==target[level])failures.push(`${subtopic}/${mode}/${level}: ${pool.length} en vez de ${target[level]}`);
   if(new Set(pool.map(x=>x.id)).size!==pool.length)failures.push("IDs repetidos: "+subtopic+"/"+level+"/"+mode);
@@ -75,6 +78,17 @@ for(const q of ELISION_CHOICE_CASES){
 for(const q of ELISION_EDITOR_CASES){
  if(q.steps.length!==3||new Set(q.steps).size!==3||q.steps.some(x=>x.length<35)||q.explanation.length<40)failures.push("Secuencia de elisión incompleta: "+q.id);
 }
+for(const q of GENERALIZATION_ERROR_CASES){
+ if(q.options.length!==4||new Set(q.options).size!==4||q.options.filter(x=>x===q.correctConnector).length!==1)failures.push("Revisión generalización sin clave única: "+q.id);
+ if(q.flawed.length<44||q.explanation.length<40||q.correctSentence.length<30)failures.push("Revisión generalización superficial: "+q.id);
+}
+for(const q of GENERALIZATION_CHOICE_CASES){
+ if(q.gap.split("___").length!==2||q.options.length!==4||new Set(q.options).size!==4||q.options.filter(x=>x===q.connector).length!==1)failures.push("Elección de síntesis inválida: "+q.id);
+ if(q.explanation.length<40)failures.push("Explicación de síntesis insuficiente: "+q.id);
+}
+for(const q of GENERALIZATION_EDITOR_CASES){
+ if(q.steps.length!==3||new Set(q.steps).size!==3||q.steps.some(x=>x.length<35)||q.explanation.length<40)failures.push("Secuencia de integración incompleta: "+q.id);
+}
 console.log("ACADEMIA PHUMA PLAY · AUDITORÍA DE COBERTURA (contenidos, no validación psicométrica)");
 console.log("Meta por juego/subtema:",JSON.stringify(CONTENT_TARGET));
 console.log("Primer lote por juego/subtema:",JSON.stringify(CONTENT_STAGE_ONE));
@@ -83,10 +97,10 @@ console.log("Registros por modalidad:",totals.available,"/",totals.target);
 console.log("Casillas que alcanzan el núcleo:",totals.stageOneComplete,"/",totals.slots);
 console.log("Casillas que alcanzan la meta final:",totals.complete,"/",totals.slots);
 console.table(levels.map(level=>({
- nivel:level,cazador:writingPool(level,"Conectores","clasificar").length,conectoresQuiz:writingPool(level,"Conectores","quiz").length,editor:writingPool(level,"Conectores","construir").length,correccionCazador:writingPool(level,"Corrección","clasificar").length,correccionQuiz:writingPool(level,"Corrección","quiz").length,correccionEditor:writingPool(level,"Corrección","construir").length,organizacionCazador:writingPool(level,"Organización textual","clasificar").length,organizacionQuiz:writingPool(level,"Organización textual","quiz").length,organizacionEditor:writingPool(level,"Organización textual","construir").length,elisionCazador:writingPool(level,"Elisión y adición","clasificar").length,elisionQuiz:writingPool(level,"Elisión y adición","quiz").length,elisionEditor:writingPool(level,"Elisión y adición","construir").length,
+ nivel:level,cazador:writingPool(level,"Conectores","clasificar").length,conectoresQuiz:writingPool(level,"Conectores","quiz").length,editor:writingPool(level,"Conectores","construir").length,correccionCazador:writingPool(level,"Corrección","clasificar").length,correccionQuiz:writingPool(level,"Corrección","quiz").length,correccionEditor:writingPool(level,"Corrección","construir").length,organizacionCazador:writingPool(level,"Organización textual","clasificar").length,organizacionQuiz:writingPool(level,"Organización textual","quiz").length,organizacionEditor:writingPool(level,"Organización textual","construir").length,elisionCazador:writingPool(level,"Elisión y adición","clasificar").length,elisionQuiz:writingPool(level,"Elisión y adición","quiz").length,elisionEditor:writingPool(level,"Elisión y adición","construir").length,generalizacionCazador:writingPool(level,"Generalización e integración","clasificar").length,generalizacionQuiz:writingPool(level,"Generalización e integración","quiz").length,generalizacionEditor:writingPool(level,"Generalización e integración","construir").length,
  primerObjetivo:target[level],objetivoFinal:CONTENT_TARGET[level]
 })));
-console.log("Registros base Redacción:",WRITING_BANK.length,"Conector correcto:",CONNECTOR_CASES.length,"Cazador de errores:",CONNECTOR_ERROR_CASES.length,"Editor experto:",CONNECTOR_EDITOR_CASES.length,"Corrección Cazador:",CORRECTION_ERROR_CASES.length,"Corrección Quiz:",CORRECTION_CHOICE_CASES.length,"Corrección Editor:",CORRECTION_EDITOR_CASES.length,"Organización Cazador:",ORGANIZATION_ERROR_CASES.length,"Organización Quiz:",ORGANIZATION_CHOICE_CASES.length,"Organización Editor:",ORGANIZATION_EDITOR_CASES.length,"Elisión Cazador:",ELISION_ERROR_CASES.length,"Elisión Quiz:",ELISION_CHOICE_CASES.length,"Elisión Editor:",ELISION_EDITOR_CASES.length,"Lectura:",READING_BANK.length);
+console.log("Registros base Redacción:",WRITING_BANK.length,"Conector correcto:",CONNECTOR_CASES.length,"Cazador de errores:",CONNECTOR_ERROR_CASES.length,"Editor experto:",CONNECTOR_EDITOR_CASES.length,"Corrección Cazador:",CORRECTION_ERROR_CASES.length,"Corrección Quiz:",CORRECTION_CHOICE_CASES.length,"Corrección Editor:",CORRECTION_EDITOR_CASES.length,"Organización Cazador:",ORGANIZATION_ERROR_CASES.length,"Organización Quiz:",ORGANIZATION_CHOICE_CASES.length,"Organización Editor:",ORGANIZATION_EDITOR_CASES.length,"Elisión Cazador:",ELISION_ERROR_CASES.length,"Elisión Quiz:",ELISION_CHOICE_CASES.length,"Elisión Editor:",ELISION_EDITOR_CASES.length,"Generalización Cazador:",GENERALIZATION_ERROR_CASES.length,"Generalización Quiz:",GENERALIZATION_CHOICE_CASES.length,"Generalización Editor:",GENERALIZATION_EDITOR_CASES.length,"Lectura:",READING_BANK.length);
 console.log("Advertencia: los juegos anteriores reutilizan contextos, y los contenidos nuevos siguen sujetos a revisión editorial.");
 console.log("Los módulos no implementados se mantienen en cero; los registros no representan dificultad oficial PHUMA.");
 if(failures.length){console.error(failures.join("\n"));process.exitCode=1}
