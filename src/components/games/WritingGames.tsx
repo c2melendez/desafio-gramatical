@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {NextButton} from "./Feedback";
 import type {GameProps} from "./types";
-import {ERROR_TYPES,checkWritingSequence,type WritingChallenge} from "@/lib/writing";
+import {ERROR_TYPES,checkWritingSequence,type WritingChallenge,type WritingItem} from "@/lib/writing";
 
 export function ErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge>){
  const [choice,setChoice]=useState<string|null>(null);
@@ -45,13 +45,13 @@ export function ErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
-export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallenge>){
+export function ConnectorGame({item,report,next,isLast}:GameProps<WritingItem>){
  const [choice,setChoice]=useState<string|null>(null);
  const send=(option:string)=>{
   if(choice!==null)return;
   setChoice(option);
   const ok=option===item.connector;
-  report(ok,ok?undefined:{prompt:item.gap,given:option,correct:item.connector,exp:"El conector «"+item.connector+"» expresa la relación lógica adecuada para el contexto."});
+  report(ok,ok?undefined:{prompt:item.gap,given:option,correct:item.connector,exp:"explanation" in item ? item.explanation : "El conector «"+item.connector+"» expresa la relación lógica adecuada para el contexto."});
  };
  return <section className="space-y-4" aria-label="Conector correcto">
   <h2 className="text-xl font-black">Conector correcto</h2>
@@ -64,7 +64,7 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
   {choice!==null&&<div aria-live="polite" className="space-y-3">
    <p className={`rounded-lg border-2 border-foreground p-4 ${choice===item.connector?"bg-success-soft":"bg-destructive-soft"}`}>
     <strong>{choice===item.connector?"¡Excelente conexión! ":"Revisa la relación lógica. "}</strong>
-    En este caso, «{item.connector}» permite enlazar las ideas sin cambiar su sentido.
+    {"explanation" in item ? item.explanation : `En este caso, «${item.connector}» permite enlazar las ideas sin cambiar su sentido.`}
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
