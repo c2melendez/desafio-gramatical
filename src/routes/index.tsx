@@ -30,7 +30,7 @@ function Home() {
  const active=availableModule(areaId,topic,subtopic);
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
- const names={...gameNames(topic),...(topic==="Redacción"&&subtopic==="Corrección"?{quiz:"Corrección precisa"}:{}),...(topic==="Redacción"&&subtopic==="Organización textual"?{quiz:"Continúa el texto"}:{})};
+ const names={...gameNames(topic),...(topic==="Redacción"&&subtopic==="Corrección"?{quiz:"Corrección precisa"}:{}),...(topic==="Redacción"&&subtopic==="Organización textual"?{quiz:"Continúa el texto"}:{}),...(topic==="Redacción"&&subtopic==="Elisión y adición"?{quiz:"Revisión precisa"}:{})};
  const availableCount=countContent(areaId,topic,subtopic,mode,level);
  const targetCount=CONTENT_TARGET[level];
  const nucleus=CONTENT_STAGE_ONE[level];
