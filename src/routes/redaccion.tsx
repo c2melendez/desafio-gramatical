@@ -11,6 +11,9 @@ import type {ConnectorCase} from "@/lib/connector-cases";
 import type {CorrectionErrorCase} from "@/lib/correction-error-cases";
 import type {CorrectionChoiceCase} from "@/lib/correction-choice-cases";
 import type {CorrectionEditorCase} from "@/lib/correction-editor-cases";
+import type {OrganizationErrorCase} from "@/lib/organization-error-cases";
+import type {OrganizationChoiceCase} from "@/lib/organization-choice-cases";
+import type {OrganizationEditorCase} from "@/lib/organization-editor-cases";
 
 const modes:Mode[]=["clasificar","quiz","construir"];
 export const Route=createFileRoute("/redaccion")({
@@ -61,7 +64,7 @@ function WritingPlay(){
   }else setIdx(i=>i+1);
  };
  if(!items)return <main className="p-8 text-center">Preparando retos de redacción…</main>;
- const title=subtema==="Corrección"&&modo==="quiz"?"Corrección precisa":gameNames("Redacción")[modo];
+ const title=subtema==="Corrección"&&modo==="quiz"?"Corrección precisa":subtema==="Organización textual"&&modo==="quiz"?"Continúa el texto":gameNames("Redacción")[modo];
  const levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(items.length===0)return <main className="mx-auto max-w-xl p-6"><p>Este contenido aún no tiene ejercicios.</p><Link to="/" className="underline">← Inicio</Link></main>;
  if(finished){
@@ -106,8 +109,8 @@ function WritingPlay(){
   <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={items.length} aria-valuenow={idx+1}>
    <div className="h-full bg-primary" style={{width:`${100*(idx+1)/items.length}%`}}/>
   </div>
-  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props} item={item as WritingChallenge|ConnectorErrorCase|CorrectionErrorCase}/>}
-  {modo==="quiz"&&<ConnectorGame key={item.id} {...props} item={item as WritingChallenge|ConnectorCase|CorrectionChoiceCase}/>}
-  {modo==="construir"&&<ExpertEditor key={item.id} {...props} item={item as WritingChallenge|ConnectorEditorCase|CorrectionEditorCase}/>}
+  {modo==="clasificar"&&<ErrorHunter key={item.id} {...props} item={item as WritingChallenge|ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase}/>}
+  {modo==="quiz"&&<ConnectorGame key={item.id} {...props} item={item as WritingChallenge|ConnectorCase|CorrectionChoiceCase|OrganizationChoiceCase}/>}
+  {modo==="construir"&&<ExpertEditor key={item.id} {...props} item={item as WritingChallenge|ConnectorEditorCase|CorrectionEditorCase|OrganizationEditorCase}/>}
  </main>;
 }
