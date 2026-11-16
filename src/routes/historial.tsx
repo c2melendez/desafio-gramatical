@@ -30,7 +30,7 @@ function History() {
         <ul className="space-y-2">
           {h.map((e, i) => (
             <li key={i} className="card-ink p-3 flex justify-between gap-2">
-              <div><p className="font-bold">{e.topic === "Comprensión lectora" ? ({clasificar:"Detective de ideas",quiz:"Verdad o inferencia",construir:"Reconstruye el texto"}[e.mode]) : e.topic === "Redacción" ? (e.subtopic==="Corrección"&&e.mode==="quiz"?"Corrección precisa":e.subtopic==="Organización textual"&&e.mode==="quiz"?"Continúa el texto":({clasificar:"Cazador de errores",quiz:"Conector correcto",construir:"Editor experto"}[e.mode])) : MODE_LABEL[e.mode]} · {LEVEL_LABEL[e.level]}</p>
+              <div><p className="font-bold">{e.topic === "Comprensión lectora" ? ({clasificar:"Detective de ideas",quiz:"Verdad o inferencia",construir:"Reconstruye el texto"}[e.mode]) : e.topic === "Redacción" ? (e.subtopic==="Corrección"&&e.mode==="quiz"?"Corrección precisa":e.subtopic==="Organización textual"&&e.mode==="quiz"?"Continúa el texto":e.subtopic==="Elisión y adición"&&e.mode==="quiz"?"Revisión precisa":({clasificar:"Cazador de errores",quiz:"Conector correcto",construir:"Editor experto"}[e.mode])) : MODE_LABEL[e.mode]} · {LEVEL_LABEL[e.level]}</p>
                 <p className="text-sm text-muted-foreground">{e.topic ? `${e.topic} / ${e.subtopic} · ` : "Gramática · "}{new Date(e.date).toLocaleString("es")} · racha {e.bestStreak}</p></div>
               <div className="text-right"><p className="text-xl font-black">{e.score}</p><p className="text-sm">{e.correct}/{e.total}</p></div>
             </li>
