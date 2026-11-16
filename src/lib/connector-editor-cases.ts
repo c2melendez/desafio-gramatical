@@ -78,7 +78,7 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "subtopic": "Conectores",
     "steps": [
       "Antes de escribir, Ana hizo una lista de ideas.",
-      "Luego, redactó un primer párrafo.",
+      "A continuación, redactó un primer párrafo con esas ideas.",
       "Finalmente, revisó la ortografía del texto."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
