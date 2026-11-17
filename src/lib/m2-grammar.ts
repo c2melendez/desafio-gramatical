@@ -1,4 +1,4 @@
-import type {Level,Mode,QuizQ,BuildQ,Sentence} from "./grammar";
+import type {Level,Mode,QuizQ,BuildQ,Sentence,Cat} from "./grammar";
 import {QUIZ,BUILD,SENTENCES} from "./grammar";
 import {EXTRA_QUIZ} from "./extra-quiz";
 import {EXTRA_BUILD} from "./extra-build";
@@ -105,6 +105,9 @@ export const M2_CATEGORY_BUILD:Record<Level,BuildQ[]>=Object.fromEntries(levels.
  Array.from({length:needed(l,"construir")},(_,i)=>{
   const a=category.construir(l)[i%category.construir(l).length];
   const id=key("Categorías gramaticales",l,"build",i);
-  return {id,pattern:[...a.pattern],hint:"Examina la concordancia y el patrón: "+a.hint,tiles:a.tiles.map(t=>({...t})),
-   solutions:[...a.solutions],exp:a.exp+" La validez depende del patrón y de la concordancia."};
+  const extra:{w:string,c:Cat}[]=[{w:"aunque",c:"conjuncion"},{w:"rápidamente",c:"adverbio"},{w:"de",c:"preposicion"},{w:"también",c:"adverbio"},{w:"aquellas",c:"determinante"},{w:"investigaciones",c:"sustantivo"},{w:"fácilmente",c:"adverbio"},{w:"siempre",c:"adverbio"},{w:"observa",c:"verbo"},{w:"clara",c:"adjetivo"}];
+  const distractor=extra.find((x,k)=>k>=i%extra.length&&!a.tiles.some(t=>t.w.toLocaleLowerCase("es")===x.w.toLocaleLowerCase("es")))??extra.find(x=>!a.tiles.some(t=>t.w===x.w))!;
+  return {id,pattern:[...a.pattern],hint:"Examina la concordancia y el patrón: "+a.hint,
+   tiles:[...a.tiles.map(t=>({...t})),distractor],solutions:[...a.solutions],
+   exp:a.exp+" Identifica la forma adecuada y descarta una ficha adicional de categoría distractora."};
  })])) as Record<Level,BuildQ[]>;
