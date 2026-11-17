@@ -35,6 +35,12 @@ describe("M1: corrida de 180 actividades de gramática",()=>{
    }
   }
  });
+ it("impide descubrir todas las claves de clasificación mediante posición",()=>{
+  for(const item of MORPH_CLASSIFICATION){
+   expect(item.items.map(x=>x.label)).not.toEqual(item.labels);
+   expect(item.items.map(x=>x.id).sort()).toEqual(item.labels.map((_,i)=>"f"+i));
+  }
+ });
  it("registra exactamente 10/15/20 por modalidad y subtema abierto",()=>{
   const modes={
    "Sinónimos y antónimos":["construir"],
