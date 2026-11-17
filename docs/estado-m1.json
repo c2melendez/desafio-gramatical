@@ -96,26 +96,36 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "Revisar reporte final de QA de 855 registros nuevos y 225 familias compartidas en PR #6, corregir fallos semánticos y equivalencias, aplicar verificador independiente, conservar historia, promover solo contenido aceptado y desplegar con CI SUCCESS + Render LIVE del SHA publicado. No confundir núcleo técnico con M1 completo.",
+  "siguiente_accion": "Ejecutar CI de SHA final tras cambios de clasificación; revisar 855 ítems conceptualmente y 240 familias compartidas, resolver ambigüedades, ejecutar mutaciones restantes y accesibilidad, verificar Render Live del mismo SHA tras una promoción autorizada por QA. No avanzar a M2 sin cerrar M1.",
   "dependencia_estado": "COMPLETADA",
-  "fase_actual": "M1_NUCLEO_ESPANOL_TECNICO_CUBIERTO_AUDITORIA_Y_PUBLICACION_PENDIENTES",
+  "fase_actual": "M1_NUCLEO_TECNICO_CUBIERTO_ORACULOS_RECONCILIADOS_REVISION_SEMANTICA_PENDIENTE",
   "pr": 6,
   "rama_trabajo": "work/m1-grammar-nucleus-20261117",
   "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json",
   "validacion_rama": {
     "estado": "PENDIENTE_CI_FINAL",
     "ultima_evidencia_previa": {
-      "sha": "c819ea467640a40ec2553d7b84a010f17f3670f8",
-      "ci_run_id": 44098052028,
+      "sha": "5e44d8a484620584666f8ce6583c0c4d0ad803ca",
+      "ci_run_id": 44108453030,
       "ci": "success",
-      "registros_nuevos": 180
+      "registros_nuevos": 855
     },
     "auditoria_180": "incorporada a CI",
     "auditoria_405": "incorporada a CI",
     "auditoria_270": "incorporada a CI",
     "revision_docente": "PENDIENTE",
     "render_sha": "NO_VERIFICADO",
-    "merge": "PENDIENTE"
+    "merge": "PENDIENTE",
+    "oraculos_m1": {
+      "run_id": 44108453030,
+      "estado": "success",
+      "ronda": "225 claves y 675 mutaciones",
+      "artifacts": [
+        "m1-oraculos-225",
+        "m1-familias-240"
+      ],
+      "semantica_humana": "PENDIENTE"
+    }
   },
   "manifiestos": [
     "docs/m1-corrida-nucleo-405-20261117.json",
@@ -134,7 +144,7 @@
       "segundo_bloque_405": 405,
       "tercer_bloque_270": 270
     },
-    "familias_nuevas_segundo_y_tercer_bloque": 225,
+    "familias_nuevas_segundo_y_tercer_bloque": 240,
     "independientes_aceptados": "NO_VERIFICADOS",
     "revisados_docente": 0,
     "certificados_psicometricamente": 0,
@@ -145,6 +155,16 @@
       "CI final SHA",
       "Render Live del mismo SHA",
       "prueba funcional publicada"
-    ]
+    ],
+    "familias_compartidas": {
+      "tres_juegos": 210,
+      "dos_juegos": 15,
+      "un_juego": 15
+    },
+    "oraculos_contextuales_verificados": 225,
+    "mutaciones_negativas_ejecutadas": 675,
+    "mutaciones_negativas_detectadas": 675,
+    "independencia_conceptual": "INCONCLUSA",
+    "revision_docente": "PENDIENTE"
   }
 }
