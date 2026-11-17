@@ -53,7 +53,7 @@ describe("Comprensión lectora: cobertura y tres juegos",()=>{
   expect(availableModule("espanol",grammar.name,"Categorías gramaticales")).toBe(true);
   expect(availableModule("espanol",grammar.name,"Morfosintaxis")).toBe(false);
   for(const mode of ["clasificar","quiz","construir"] as Mode[]){
-   expect(readingItems("avanzado","Lectura crítica",mode)).toHaveLength(3);
+   expect(readingItems("avanzado","Lectura crítica",mode)).toHaveLength(10);
   }
  });
 });
