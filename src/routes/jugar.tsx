@@ -1,3 +1,4 @@
+import {M2_CATEGORY_SENTENCES,M2_CATEGORY_QUIZ,M2_CATEGORY_BUILD} from "@/lib/m2-grammar";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BUILD, LEVELS, LEVEL_LABEL, MODE_LABEL, QUIZ, SENTENCES, pointsFor, saveHistory, shuffle, type Level, type Mistake, type Mode } from "@/lib/grammar";
@@ -38,7 +39,7 @@ export const Route = createFileRoute("/jugar")({
 // Solo se vuelve a barajar cuando se ha agotado todo el banco.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function buildItems(modo: Mode, nivel: Level): any[] {
-  const source = modo === "clasificar" ? [...SENTENCES[nivel], ...EXTRA_SENTENCES[nivel], ...(nivel === "avanzado" ? GRAMMAR_ADVANCED_SENTENCES : [])] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel]] : [...BUILD[nivel], ...EXTRA_BUILD[nivel], ...GRAMMAR_NUCLEUS_BUILD[nivel]];
+  const source = modo === "clasificar" ? [...SENTENCES[nivel], ...EXTRA_SENTENCES[nivel], ...(nivel === "avanzado" ? GRAMMAR_ADVANCED_SENTENCES : []),...M2_CATEGORY_SENTENCES[nivel]] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel],...M2_CATEGORY_QUIZ[nivel]] : [...BUILD[nivel], ...EXTRA_BUILD[nivel], ...GRAMMAR_NUCLEUS_BUILD[nivel],...M2_CATEGORY_BUILD[nivel]];
   const key = `desafio-gramatical:cola:${modo}:${nivel}`;
   const ids = new Set(source.map((x) => x.id));
   let queue: string[] = [];

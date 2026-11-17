@@ -37,7 +37,7 @@ for(const [subtopic,kind] of groups){
   const mode=kind==='construction'?'construir':'clasificar';
   const available=countContent('espanol','Gramática y semántica',subtopic,mode,level);
   perCell.push({subtema:subtopic,juego:mode,nivel:level,nuevos:items.length,meta:target,disponibles_en_codigo:available});
-  if(items.length!==target||available!==target)issues.push({cell:key({subtopic,kind,level}),reason:'cuota y ruta incoherentes'});
+  if(items.length!==target||available<target)issues.push({cell:key({subtopic,kind,level}),reason:'cuota y ruta incoherentes'});
  }
 }
 if(GRAMMAR_M1_ACTIVITIES.length!==180)issues.push({reason:'cantidad total distinta de 180'});

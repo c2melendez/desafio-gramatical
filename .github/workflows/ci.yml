@@ -10,6 +10,8 @@ on:
 
 jobs:
   verificar:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Obtener código
@@ -99,6 +101,16 @@ jobs:
         with:
           name: m1-operaciones-cognitivas
           path: m1-operation-audit.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Auditar aceptación M2 de 3440 casos y 189 celdas
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m2-area.mjs > m2-auditoria-integral.json
+      - name: Guardar auditoría reproducible M2
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-auditoria-integral
+          path: m2-auditoria-integral.json
           if-no-files-found: error
           retention-days: 30
       - name: Verificar aceptación técnica M1 y déficit en 189 celdas

@@ -1,3 +1,4 @@
+import {m2WritingPool} from "./m2-writing";
 import type {Level,Mode} from "./grammar";
 import {CONNECTOR_CASES,type ConnectorCase} from "./connector-cases";
 import {CONNECTOR_ERROR_CASES,type ConnectorErrorCase} from "./connector-error-cases";
@@ -623,6 +624,7 @@ export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):Writ
   if(mode==="clasificar")initial.push(...GENERALIZATION_ERROR_CASES.filter(q=>q.level===level));
   if(mode==="construir")initial.push(...GENERALIZATION_EDITOR_CASES.filter(q=>q.level===level));
  }
+ initial.push(...m2WritingPool(level,subtopic,mode,initial));
  return initial;
 }
 /** Convierte identificadores compartidos de los casos semilla sin perder rotaciones guardadas. */

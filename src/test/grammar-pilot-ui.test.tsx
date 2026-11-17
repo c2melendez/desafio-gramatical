@@ -1,4 +1,4 @@
-import {afterEach,describe,expect,it,vi} from "vitest";
+import {afterEach,beforeEach,describe,expect,it,vi} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
 vi.mock("@tanstack/react-router",()=>({
  createFileRoute:()=>()=>({}),
@@ -7,7 +7,8 @@ vi.mock("@tanstack/react-router",()=>({
 import {GrammarPilot} from "@/routes/jugar";
 import {grammarPilotPool} from "@/lib/grammar-next-draft";
 
-afterEach(()=>{cleanup();localStorage.clear();});
+beforeEach(()=>vi.spyOn(Math,"random").mockReturnValue(0.999999));
+afterEach(()=>{vi.restoreAllMocks();cleanup();localStorage.clear();});
 describe("práctica gramatical inicial",()=>{
  it("muestra una pregunta, registra la respuesta y ofrece retroalimentación",()=>{
   render(<GrammarPilot subtema="Morfosintaxis" nivel="intermedio"/>);

@@ -2,7 +2,9 @@ import {describe,it,expect} from "vitest";
 import {VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES,VOCABULARY_SEEDS} from "@/lib/reading-vocabulary-block";
 import {ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASES} from "@/lib/reading-analysis-block";
 import {COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES} from "@/lib/reading-comparison-block";
-import {readingPool,readingItems} from "@/lib/reading";
+import {readingPool as m1SourceReadingPool,readingItems} from "@/lib/reading";
+
+const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-"));
 import {coverageTotals,countContent} from "@/lib/coverage";
 const groups=[
  {subtopic:"Vocabulario en contexto" as const,banks:[VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES]},
@@ -31,13 +33,13 @@ describe("Fase A — corrida de tres subtemas",()=>{
   for(const group of groups)
    for(const [level,n] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
     for(const mode of ["clasificar","quiz","construir"] as const){
-     expect(readingPool(level,group.subtopic,mode)).toHaveLength(n);
+     expect(m1ReadingPool(level,group.subtopic,mode)).toHaveLength(n);
      expect(readingItems(level,group.subtopic,mode)).toHaveLength(10);
-     expect(countContent("espanol","Comprensión lectora",group.subtopic,mode,level)).toBe(n);
+     expect(countContent("espanol","Comprensión lectora",group.subtopic,mode,level)).toBeGreaterThanOrEqual(n);
     }
   for(const level of ["principiante","intermedio","avanzado"] as const)
    for(const mode of ["clasificar","quiz","construir"] as const)
-    expect(readingPool(level,"Lenguaje figurado",mode)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
+    expect(m1ReadingPool(level,"Lenguaje figurado",mode)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
   expect(coverageTotals().available).toBeGreaterThanOrEqual(1682);
   expect(coverageTotals().stageOneComplete).toBeGreaterThanOrEqual(108);
  });
