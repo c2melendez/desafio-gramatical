@@ -46,7 +46,7 @@
     "seguridad_privacidad",
     "verificacion_independiente_completa"
   ],
-  "siguiente_accion": "Resolver o mitigar el aviso moderado de minimatch; comprobar secretos y privacidad; completar pruebas globales, oráculos e integración de contenido y controles obligatorios M0.",
+  "siguiente_accion": "Completar seis controles NOT_RUN del runner M0 con verificaciones ejecutables: contratos/estado, inventario por item, regresion funcional, mutaciones criticas, privacidad dinamica y verificador independiente; revalidar CI y Render del SHA de integracion.",
   "ultima_publicacion": {
     "sha": "838a5ab79900881e4b080fd098be799f69cb81a0",
     "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44077018305",
@@ -54,5 +54,19 @@
     "render_deploy": "dep-dbu3t4lg1s2s73es9av0",
     "pr": 3,
     "prueba": "Partida de clasificación: respuesta correcta, puntaje y retroalimentación observados."
+  },
+  "ultima_ejecucion_m0": {
+    "fecha_utc": "2026-11-17",
+    "rama": "trabajo/m0-reconciliacion-20261117",
+    "sha_rama": "b19ada14adfa15d3018961cf1a4310a0562842f0",
+    "sha_checkout_ci": "0241a167b52ceab2088752a0dc3df92a61e573cf",
+    "run_id": 44083272489,
+    "artefacto_id": 14328311356,
+    "runner_estado": "FAIL",
+    "etapas_ejecutadas_pass": 18,
+    "etapas_obligatorias_not_run": 6,
+    "resultado_ci": "success",
+    "nota": "CI general aprobado y auditoria M0 bloqueada son resultados diferentes; GitHub Actions ejecuta un checkout sintetico del PR.",
+    "render_mismo_sha": "NO_VERIFICADO"
   }
 }
