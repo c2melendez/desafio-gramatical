@@ -39,6 +39,7 @@ jobs:
           python3 -m unittest discover -s scripts -p 'test_validate_modules.py'
           python3 -m unittest discover -s scripts -p 'test_qa_m0.py'
           python3 -m unittest discover -s scripts -p 'test_verify_state.py'
+          python3 -m unittest discover -s scripts -p 'test_verify_m0_report.py'
           node scripts/test-review-draft.mjs
           python3 scripts/validate_editorial_review.py
           python3 -m unittest discover -s scripts -p 'test_editorial_review.py'
@@ -79,12 +80,18 @@ jobs:
           echo "Runner de M0: salida $code; cero significa cierre de todas las etapas, uno significa bloqueo documentado." >> "$GITHUB_STEP_SUMMARY"
           test -f m0-evidence.json
           echo "$code" > m0-exit-code.txt
+      - name: Verificar integridad independiente del resultado M0
+        if: always()
+        run: |
+          python3 scripts/verify_m0_report.py --report m0-evidence.json > m0-verification.json
       - name: Guardar evidencia M0
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: m0-auditoria
-          path: m0-evidence.json
+          path: |
+            m0-evidence.json
+            m0-verification.json
           if-no-files-found: warn
           retention-days: 14
       - name: Comprobar código
@@ -103,4 +110,5 @@ jobs:
             echo "::error::M0 BLOQUEADO: reporte m0-auditoria adjunto; controles obligatorios sin PASS"
             exit "$code"
           fi
+          python3 scripts/verify_m0_report.py --report m0-evidence.json --require-closure
           echo "M0: todos los controles obligatorios PASS" >> "$GITHUB_STEP_SUMMARY"
