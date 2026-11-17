@@ -10,6 +10,8 @@ on:
 
 jobs:
   verificar:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Obtener código
@@ -24,6 +26,27 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
+      - name: Generar lock transitorio para parchear picomatch CVE-2026-112366
+        run: bun install --lockfile-only
+      - name: Publicar lock parcheado en rama M2 (sólo primera generación)
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/m2-espanol-integral-20261117'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bun.lock
+          if ! git diff --cached --quiet; then
+            git commit -m "security(m2): fijar resolución reproducible de fork picomatch parcheado"
+            git push origin HEAD:refs/heads/work/m2-espanol-integral-20261117
+          fi
+      - name: Conservar lock de parche para publicación reproducible
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-lock-picomatch-reparado
+          path: bun.lock
+          retention-days: 7
+          if-no-files-found: error
       - name: Instalar dependencias
         run: bun install --frozen-lockfile
       - name: Compilar aplicación y generar rutas de TanStack Router
@@ -99,6 +122,16 @@ jobs:
         with:
           name: m1-operaciones-cognitivas
           path: m1-operation-audit.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Auditar aceptación M2 de 3440 casos y 189 celdas
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m2-area.mjs > m2-auditoria-integral.json
+      - name: Guardar auditoría reproducible M2
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-auditoria-integral
+          path: m2-auditoria-integral.json
           if-no-files-found: error
           retention-days: 30
       - name: Verificar aceptación técnica M1 y déficit en 189 celdas

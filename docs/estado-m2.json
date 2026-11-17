@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "module": "espanol-M2",
   "estado": "EN_CURSO",
   "dependencias": [
@@ -31,5 +31,16 @@
   "regla": "No equiparar nuevos registros técnicos a ejercicios independientes verificados; reconstruir matriz por SHA y reparar casos equivalentes.",
   "docente": "PENDIENTE_AUTORIZADA",
   "estado_evidencia": "PUNTO_DE_INICIO_M2",
-  "siguiente_accion": "Priorizar niveles y juegos deficitarios dentro de Español; lotes amplios e idempotentes con oráculos por ítem, verificador y CI. Cerrar M2 únicamente con 20/35/45 aceptados por celda."
+  "siguiente_accion": "Corregir CI y todas las incidencias de auditoría M2; comprobar 189 celdas, 3440 IDs, 6301 totales, negativas/mutaciones; fusionar solo con CI SUCCESS y verificar Render Live del mismo SHA.",
+  "estadio": "INTEGRADO_EN_PR_7_PENDIENTE_AUDITORIA",
+  "rama": "work/m2-espanol-integral-20261117",
+  "pr": "https://github.com/c2melendez/desafio-gramatical/pull/7",
+  "registros_candidatos": 3440,
+  "incorporacion_prevista_por_nivel": {
+    "principiante": 614,
+    "intermedio": 1253,
+    "avanzado": 1573
+  },
+  "conteo_tecnico_previsto": 6301,
+  "independencia_conceptual": "INCONCLUSA — combinaciones de pares contextuales; hay que comprobar independencia sustancial por ejercicio"
 }

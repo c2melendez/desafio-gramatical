@@ -2,7 +2,9 @@ import {describe,expect,it} from "vitest";
 import {INFERENCE_DETECTIVE_CASES} from "@/lib/inference-detective-cases";
 import {INFERENCE_CHOICE_CASES} from "@/lib/inference-choice-cases";
 import {INFERENCE_RECONSTRUCT_CASES} from "@/lib/inference-reconstruct-cases";
-import {READING_SUBTOPICS,readingItems,readingPool} from "@/lib/reading";
+import {READING_SUBTOPICS,readingItems,readingPool as m1SourceReadingPool} from "@/lib/reading";
+
+const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-"));
 import {countContent,coverageTotals} from "@/lib/coverage";
 import {emptyRotation,recordRotation,rotationKey,selectRotation} from "@/lib/rotation";
 
@@ -22,14 +24,14 @@ describe("Fase A — Inferencias: contenido y progresión",()=>{
  it("suma los nueve ejercicios anteriores sin adjudicar contenido a otros subtemas",()=>{
   for(const [level,count] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
    for(const mode of ["clasificar","quiz","construir"] as const){
-    expect(readingPool(level,"Inferencias",mode)).toHaveLength(count);
+    expect(m1ReadingPool(level,"Inferencias",mode)).toHaveLength(count);
     expect(readingItems(level,"Inferencias",mode)).toHaveLength(10);
-    expect(countContent("espanol","Comprensión lectora","Inferencias",mode,level)).toBe(count);
+    expect(countContent("espanol","Comprensión lectora","Inferencias",mode,level)).toBeGreaterThanOrEqual(count);
    }
   for(const subtopic of READING_SUBTOPICS)
    for(const level of ["principiante","intermedio","avanzado"] as const)
     for(const mode of ["clasificar","quiz","construir"] as const)
-     expect(readingPool(level,subtopic,mode)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
+     expect(m1ReadingPool(level,subtopic,mode)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
   expect(coverageTotals().stageOneComplete).toBeGreaterThanOrEqual(63);
  });
  it("valida las tres categorías, las opciones y las secuencias",()=>{
@@ -50,7 +52,7 @@ describe("Fase A — Inferencias: contenido y progresión",()=>{
   }
  });
  it("rota sin repetir en dos sesiones avanzadas sucesivas",()=>{
-  const pool=readingPool("avanzado","Inferencias","quiz");
+  const pool=m1ReadingPool("avanzado","Inferencias","quiz");
   const first=selectRotation(pool,emptyRotation(),10,()=>0.2);
   let rotation=emptyRotation();
   for(const q of first)rotation=recordRotation(rotation,q.id,true);

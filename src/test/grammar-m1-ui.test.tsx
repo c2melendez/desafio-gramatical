@@ -1,4 +1,4 @@
-import {afterEach,describe,expect,it,vi} from "vitest";
+import {afterEach,beforeEach,describe,expect,it,vi} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
 import {GrammarM1Play} from "@/components/games/GrammarM1Play";
 import {MORPH_CONSTRUCTION} from "@/lib/grammar-m1-activities";
@@ -6,7 +6,8 @@ import {rotationKey,readRotation} from "@/lib/rotation";
 vi.mock("@tanstack/react-router",()=>({
  Link:({children}:{children:React.ReactNode})=><span>{children}</span>
 }));
-afterEach(()=>{cleanup();localStorage.clear()});
+beforeEach(()=>vi.spyOn(Math,"random").mockReturnValue(0.999999));
+afterEach(()=>{vi.restoreAllMocks();cleanup();localStorage.clear()});
 describe("M1: integración funcional de construcción",()=>{
  it("carga el juego, valida una respuesta, registra rotación y avanza",()=>{
   render(<GrammarM1Play subtema="Morfosintaxis" modo="construir" nivel="principiante"/>);

@@ -86,7 +86,7 @@ function Home() {
      </label>
     </div>
     <p aria-live="polite" className={`rounded-lg px-3 py-2 text-sm font-bold ${active?"bg-success-soft":"bg-muted"}`}>
-      {pilot?"🧪 Núcleo técnico 10/15/20 disponible en los tres juegos; revisión docente pendiente.":active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
+      {pilot?"🧪 Ampliación M2 20/35/45 en tres juegos (validación técnica en curso); revisión docente pendiente.":active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
       "🛠️ Módulo planificado: puedes explorar los juegos, pero aún no está desarrollado."}
     </p>
    </section>
