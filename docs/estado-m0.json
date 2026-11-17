@@ -1,7 +1,7 @@
 {
   "version": 1,
   "modulo": "M0",
-  "estado": "EN_CURSO",
+  "estado": "COMPLETADA",
   "area_activa": "espanol",
   "base": "14398e47a8644d694041f62cf800a956e0b5c2bf",
   "referencias": [
@@ -38,18 +38,16 @@
     "docs/m0-contratos-pasada-20261117.md",
     "docs/m0-auditoria-dependencias-20261117.md"
   ],
-  "controles_obligatorios_pendientes": [
-    "render_live_mismo_sha"
-  ],
-  "siguiente_accion": "Confirmar el espacio de trabajo de Render para inspeccionar servicio desafio-gramatical, verificar Live y SHA de main junto con prueba funcional publicada; volver a comprobar CI del SHA final y cerrar formalmente M0, luego iniciar espanol-M1 sobre los 180 registros tecnicos faltantes del bloque abierto. No duplicar registros de PR #1.",
+  "controles_obligatorios_pendientes": [],
+  "siguiente_accion": "Ejecutar espanol-M1: primero 180 ejercicios técnicos faltantes en construcción Sinónimos/Cohesión y clasificación-construcción Morfosintaxis; revisión por ítem y juego, CI y Render Live antes de entregar M1. No importar PR #1 sin reconciliar.",
   "ultima_publicacion": {
-    "sha": "ff9da13ea3d0ec3681409264985f742003d69f59",
-    "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44090473925",
+    "sha": "ed0c764471cc942b996f83b400d1c396cf2a01b6",
+    "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44091275017",
     "ci_estado": "success",
-    "render": "NO_VERIFICADO",
-    "render_deploy": null,
+    "render": "LIVE",
+    "render_deploy": "dep-dbu57s142hec73e41nk0",
     "pr": 4,
-    "nota": "Integrados 31 PASS y seguridad sin avisos según CI. Render Live mismo SHA pendiente."
+    "nota": "Estado M0 completo; commits posteriores de cierre requieren reevaluación de la publicación final."
   },
   "ultima_ejecucion_m0": {
     "fecha_utc": "2026-11-17",
@@ -84,7 +82,7 @@
     "ci_inventario": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44086576759",
     "artefacto_inventario_individual_id": 14328529746
   },
-  "fase_actual": "M0_CIERRE_TECNICO_VALIDADO_RENDER_PENDIENTE",
+  "fase_actual": "M0_COMPLETADA_ENTREGA_M1",
   "cierre_tecnico_m0": {
     "estado": "PASS",
     "sha": "ff9da13ea3d0ec3681409264985f742003d69f59",
@@ -97,6 +95,24 @@
     "verificador_independiente": "PASS",
     "aceptados_pedagogicamente": 0,
     "revision_docente": "PENDIENTE",
-    "nota": "Los 2006 registros fueron inspeccionados técnicamente, no aprobados pedagógicamente."
-  }
+    "nota": "Los 2006 registros fueron inspeccionados técnicamente, no aprobados pedagógicamente.",
+    "matriz_celdas": 810,
+    "registros_tecnicos": 2006,
+    "pruebas_criticas": "PASS",
+    "contratos_lock": "PASS",
+    "integridad_independiente": "PASS"
+  },
+  "cierre_render": {
+    "estado": "LIVE",
+    "service_id": "srv-dbt0rilg1s2s738eku8g",
+    "service_url": "https://desafio-gramatical.onrender.com",
+    "sha": "ed0c764471cc942b996f83b400d1c396cf2a01b6",
+    "deploy_id": "dep-dbu57s142hec73e41nk0",
+    "finished_at": "2026-11-17T13:23:13.086036Z",
+    "ci_run_id": 44091275017,
+    "ci_conclusion": "success",
+    "source": "Render y GitHub Actions mediante conectores autenticados",
+    "note": "M0 validado para el SHA ed0c764; los commits posteriores de formalización también requerirán verificar CI y Render LIVE del mismo SHA."
+  },
+  "module_handoff": "docs/estado-m1.json"
 }
