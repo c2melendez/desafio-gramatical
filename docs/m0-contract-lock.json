@@ -1,22 +1,22 @@
 {
-  "version": 3,
+  "version": 4,
   "scope": "Contrato versionado tras incorporación M1: conserva historial M0 y verifica actualización consciente de rutas, conteos y estructura. No implica aprobación editorial del banco.",
   "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "31467f450ca992425ced300a7dde2e26ca352973",
-    "src/lib/coverage.ts": "5aa04fce504c2761994545ebc28f77c8f8ca85e7",
+    "src/lib/coverage.ts": "9514ee9f4b9de067805044fea0107aab3f0b8483",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "c67ea6e7bcb705a1b311670da5dfef96818b1cfd",
     "src/lib/writing.ts": "f6f2be27fedb6b6a9642a63a63bf54d2a5f3785e",
-    "src/routes/index.tsx": "ed13969a903332efe341f34641ec96a82b898e67",
-    "src/routes/jugar.tsx": "c57877fedb4697cbc037aca98e5304c76765a069",
+    "src/routes/index.tsx": "4b7aaed86590f4e1ef641f0a4db9e65ec82be7f6",
+    "src/routes/jugar.tsx": "247db1d29f69c9b00247221c3d524d03b3bd5218",
     "src/routes/lectura.tsx": "20ba8f3708e1db6a3de2aa3c5cac07ba09bf5f3f",
     "src/routes/redaccion.tsx": "0a1f9d7eb6838b97044260d4b4b82d0f19b274fd",
     "src/routes/historial.tsx": "eb49b09c484ab62b36f42cd4249f72e33223d909"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "M1: grafo de cobertura extendido a clasificación de tres subtemas adicionales; preserva mecanismos M0. CI y evaluación editorial por SHA vigentes obligatorios.",
+  "change_note": "M1 incorporó banco técnico de 855 actividades en 8 subtemas con 2.861 registros acumulados; rutas y conteos actualizados conscientemente. Conserva QA M0; juicio pedagógico pendiente.",
   "previous_baseline": "bb4d9704f9581065f1bddd99e50326d84e9008d7"
 }
