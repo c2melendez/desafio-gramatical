@@ -13,7 +13,8 @@ describe("M1 clasificación: orden de etiquetas independiente de la clave",()=>{
    fireEvent.click(within(field!).getByRole("button",{name:part.label}));
   }
   fireEvent.click(screen.getByRole("button",{name:"Comprobar"}));
-  expect(onResult).toHaveBeenCalledExactlyOnceWith(true);
+  expect(onResult).toHaveBeenCalledTimes(1);
+  expect(onResult).toHaveBeenCalledWith(true);
   fireEvent.click(screen.getByRole("button",{name:"Continuar"}));
   expect(onNext).toHaveBeenCalledTimes(1);
   view.unmount();cleanup();
