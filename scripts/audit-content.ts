@@ -32,7 +32,7 @@ import {ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASE
 import {COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES} from "../src/lib/reading-comparison-block";
 import {FIGURATIVE_DETECTIVE_CASES,FIGURATIVE_CHOICE_CASES,FIGURATIVE_RECONSTRUCT_CASES} from "../src/lib/reading-figurative-block";
 const levels=["principiante","intermedio","avanzado"] as const;
-const target={principiante:10,intermedio:15,avanzado:20};
+const target={principiante:20,intermedio:35,avanzado:45};
 const rows=coverageRows(),totals=coverageTotals();
 const failures:string[]=[];
 const grammarNew=[...GRAMMAR_ADVANCED_SENTENCES,...GRAMMAR_NUCLEUS_BUILD.intermedio,...GRAMMAR_NUCLEUS_BUILD.avanzado];
@@ -111,7 +111,7 @@ for(const q of GENERALIZATION_CHOICE_CASES){
 for(const q of GENERALIZATION_EDITOR_CASES){
  if(q.steps.length!==3||new Set(q.steps).size!==3||q.steps.some(x=>x.length<35)||q.explanation.length<40)failures.push("Secuencia de integración incompleta: "+q.id);
 }
-for(const [level,need] of [["principiante",10],["intermedio",15],["avanzado",20]] as const){
+for(const [level,need] of [["principiante",20],["intermedio",35],["avanzado",45]] as const){
  for(const mode of ["clasificar","quiz","construir"] as const){
   const pool=readingPool(level,"Idea principal",mode);
   if(pool.length!==need)failures.push("Idea principal/"+mode+"/"+level+": "+pool.length+" en vez de "+need);
@@ -131,7 +131,7 @@ for(const q of MAIN_IDEA_RECONSTRUCT_CASES){
  if(q.passage.length<150||q.order.parts.length!==3||new Set(q.order.parts).size!==3)failures.push("Reconstrucción inválida: "+q.id);
  if(q.order.explanation.length<45)failures.push("Reconstrucción sin justificación: "+q.id);
 }
-for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+for(const [level,expected] of [["principiante",20],["intermedio",35],["avanzado",45]] as const)
  for(const mode of ["clasificar","quiz","construir"] as const){
   const pool=readingPool(level,"Inferencias",mode);
   if(pool.length!==expected)failures.push("Inferencias/"+mode+"/"+level+": "+pool.length+" en vez de "+expected);
@@ -147,7 +147,7 @@ for(const q of INFERENCE_CHOICE_CASES){
 for(const q of INFERENCE_RECONSTRUCT_CASES){
  if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<45)failures.push("Inferencia secuencia incompleta: "+q.id);
 }
-for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+for(const [level,expected] of [["principiante",20],["intermedio",35],["avanzado",45]] as const)
  for(const mode of ["clasificar","quiz","construir"] as const){
   const pool=readingPool(level,"Lectura crítica",mode);
   if(pool.length!==expected)failures.push("Lectura crítica/"+mode+"/"+level+": "+pool.length+" en vez de "+expected);
@@ -179,7 +179,7 @@ for(const [subtopic,detectives,choices,reconstructions] of newBlocks){
  if(all.length!==108)failures.push("Corrida de bloques: "+subtopic+" tiene "+all.length+" registros nuevos, no 108");
  if(new Set(all.map(x=>x.passage)).size!==108)failures.push("Corrida de bloques: pasajes repetidos en "+subtopic);
  if(new Set(all.map(x=>x.id)).size!==108)failures.push("Corrida de bloques: IDs repetidos en "+subtopic);
- for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+ for(const [level,expected] of [["principiante",20],["intermedio",35],["avanzado",45]] as const)
   for(const mode of ["clasificar","quiz","construir"] as const){
    const pool=readingPool(level,subtopic,mode);
    if(pool.length!==expected)failures.push(subtopic+"/"+mode+"/"+level+": esperado "+expected+", real "+pool.length);
@@ -189,7 +189,7 @@ for(const [subtopic,detectives,choices,reconstructions] of newBlocks){
  for(const q of reconstructions)if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<45)failures.push("Reconstrucción inválida: "+q.id);
 }
 if(newBlocks.flatMap(([,a,b,c])=>[...a,...b,...c]).length!==324)failures.push("Corrida actual: cantidad distinta de 324");
-for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+for(const [level,expected] of [["principiante",20],["intermedio",35],["avanzado",45]] as const)
  for(const mode of ["clasificar","quiz","construir"] as const){
   const pool=readingPool(level,"Lenguaje figurado",mode);
   if(pool.length!==expected)failures.push("Lenguaje figurado/"+mode+"/"+level+": esperado "+expected+", real "+pool.length);
@@ -211,8 +211,8 @@ const figurativePassages=[...FIGURATIVE_DETECTIVE_CASES,...FIGURATIVE_CHOICE_CAS
 if(figurativePassages.length!==108||new Set(figurativePassages).size!==108)
  failures.push("Lenguaje figurado: deben existir 108 pasajes distintos entre modalidades");
 for(const level of levels)for(const mode of ["clasificar","quiz","construir"] as const)
- if(readingPool(level,"Lenguaje figurado",mode).length!==CONTENT_STAGE_ONE[level])
-  failures.push("Lenguaje figurado: primer núcleo incompleto");
+ if(readingPool(level,"Lenguaje figurado",mode).length!==target[level])
+  failures.push("Lenguaje figurado: ampliación M2 incompleta");
 console.log("ACADEMIA PHUMA PLAY · AUDITORÍA DE COBERTURA (contenidos, no validación psicométrica)");
 console.log("Meta por juego/subtema:",JSON.stringify(CONTENT_TARGET));
 console.log("Primer lote por juego/subtema:",JSON.stringify(CONTENT_STAGE_ONE));
