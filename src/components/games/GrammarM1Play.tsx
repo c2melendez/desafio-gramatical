@@ -1,6 +1,7 @@
 import {SYNONYM_CLASSIFICATION} from "@/lib/grammar-classify-synonyms";
 import {COHESION_CLASSIFICATION} from "@/lib/grammar-classify-cohesion";
 import {M2_GRAMMAR_ACTIVITIES} from "@/lib/m2-grammar";
+import {M3_GRAMMAR_ACTIVITIES} from "@/lib/m3-grammar";
 import {Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
 import {saveHistory,type Level,type Mode} from "@/lib/grammar";
@@ -21,7 +22,7 @@ export function grammarM1Pool(subtopic:string,modo:Mode,nivel:Level):M1Item[]{
  subtopic==="Morfosintaxis"&&modo==="clasificar"?MORPH_CLASSIFICATION:
  subtopic==="Morfosintaxis"&&modo==="construir"?MORPH_CONSTRUCTION:
  [...M1_NEXT_ACTIVITIES,...M1_LITERATURE_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
- const expanded=M2_GRAMMAR_ACTIVITIES.filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
+ const expanded=[...M2_GRAMMAR_ACTIVITIES,...M3_GRAMMAR_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
  return [...base,...expanded].filter(x=>x.level===nivel);
 }
 /** La ruta mantiene independientes IDs, exposición, errores e historial por juego/nivel. */
