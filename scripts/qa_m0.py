@@ -55,14 +55,14 @@ def main():
         run_stage('contratos_lock_negativos', ['python3','-m','unittest','discover','-s','scripts','-p','test_check_m0_contract_lock.py']),
         run_stage('estado_y_contratos', ['python3','scripts/check_m0_contract_lock.py']),
         run_stage('inventario_por_item_y_calidad', None),
-        run_stage('regresion_y_funcional', None),
+        run_stage('regresion_y_funcional', ['bun','run','test']),
         run_stage('mutacion_critica', ['node','--import','./scripts/ts-resolve.mjs','scripts/test-m0-critical-mutations.mjs']),
         run_stage('seguridad_estatica_cliente', ['node','scripts/security-client-audit.mjs']),
         run_stage('dependencias_produccion', ['bun','audit','--production']),
         run_stage('dependencias_completas', ['bun','audit']),
         run_stage('seguridad_mutaciones_fixture', ['node','scripts/security-client-audit.mjs','--test']),
         run_stage('seguridad_y_privacidad', None),
-        run_stage('verificador_independiente_de_estado', None),
+        run_stage('verificador_independiente_de_estado', ['python3','scripts/verify_state.py','--baseline']),
     ]
     try:
         revision = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
