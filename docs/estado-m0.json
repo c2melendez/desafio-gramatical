@@ -39,36 +39,31 @@
     "docs/m0-auditoria-dependencias-20261117.md"
   ],
   "controles_obligatorios_pendientes": [
-    "contratos_y_estado",
-    "calidad_por_item",
-    "regresion",
-    "mutaciones_criticas",
-    "seguridad_privacidad",
-    "verificacion_independiente_completa"
+    "render_live_mismo_sha"
   ],
-  "siguiente_accion": "Cerrar controles obligatorios de calidad funcional, oráculos, mutación real, privacidad dinámica y verificador integral; comprobar Render Live del SHA principal. Inventario por ID ya ejecutado: 810 celdas y 2006 registros sin discrepancias, 108 IDs compartidos entre 3 juegos. Reanudar contenido M1 sólo tras cierre M0.",
+  "siguiente_accion": "Confirmar el espacio de trabajo de Render para inspeccionar servicio desafio-gramatical, verificar Live y SHA de main junto con prueba funcional publicada; volver a comprobar CI del SHA final y cerrar formalmente M0, luego iniciar espanol-M1 sobre los 180 registros tecnicos faltantes del bloque abierto. No duplicar registros de PR #1.",
   "ultima_publicacion": {
-    "sha": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
-    "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44086175652",
+    "sha": "ff9da13ea3d0ec3681409264985f742003d69f59",
+    "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44090473925",
     "ci_estado": "success",
     "render": "NO_VERIFICADO",
     "render_deploy": null,
-    "pr": 2,
-    "nota": "PR #2 fusionado; M0 aún no cerrado: auditoría integral 19 PASS, 6 NOT_RUN. No confundir CI success con certificación M0."
+    "pr": 4,
+    "nota": "Integrados 31 PASS y seguridad sin avisos según CI. Render Live mismo SHA pendiente."
   },
   "ultima_ejecucion_m0": {
     "fecha_utc": "2026-11-17",
     "rama": "main",
-    "sha_rama": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
-    "run_id": 44086175652,
-    "artefacto_id": 14330030640,
-    "artefacto_inventario_id": 14329213007,
-    "runner_estado": "FAIL",
-    "etapas_ejecutadas_pass": 19,
-    "etapas_obligatorias_not_run": 6,
+    "sha_rama": "ff9da13ea3d0ec3681409264985f742003d69f59",
+    "run_id": 44090473925,
+    "artefacto_id": 14330654190,
+    "artefacto_inventario_id": 14331886303,
+    "runner_estado": "PASS",
+    "etapas_ejecutadas_pass": 31,
+    "etapas_obligatorias_not_run": 0,
     "resultado_ci": "success",
     "render_mismo_sha": "NO_VERIFICADO",
-    "nota": "M0 integró su matriz real y auditorías en main. Las seis etapas de certificación técnica no se ejecutaron, por lo que M0 permanece EN_CURSO."
+    "nota": "M0 validado técnicamente en main; no declarar COMPLETADA sin Render Live y prueba publicada del mismo SHA."
   },
   "base_main_reconciliada": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
   "alcance_reconciliado": {
@@ -88,5 +83,20 @@
     "interpretacion": "108 IDs se usan cada uno en tres mecánicas; no contabilizar como 324 ejercicios independientes. La unicidad de otros IDs tampoco prueba independencia conceptual.",
     "ci_inventario": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44086576759",
     "artefacto_inventario_individual_id": 14328529746
+  },
+  "fase_actual": "M0_CIERRE_TECNICO_VALIDADO_RENDER_PENDIENTE",
+  "cierre_tecnico_m0": {
+    "estado": "PASS",
+    "sha": "ff9da13ea3d0ec3681409264985f742003d69f59",
+    "ci_run_id": 44090473925,
+    "artefacto_id": 14330654190,
+    "artefacto_triaje_id": 14330743993,
+    "controles_pass": 31,
+    "controles_fail": 0,
+    "controles_not_run": 0,
+    "verificador_independiente": "PASS",
+    "aceptados_pedagogicamente": 0,
+    "revision_docente": "PENDIENTE",
+    "nota": "Los 2006 registros fueron inspeccionados técnicamente, no aprobados pedagógicamente."
   }
 }
