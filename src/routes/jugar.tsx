@@ -4,6 +4,9 @@ import { BUILD, LEVELS, LEVEL_LABEL, MODE_LABEL, QUIZ, SENTENCES, pointsFor, sav
 import { EXTRA_BUILD } from "@/lib/extra-build";
 import { EXTRA_SENTENCES } from "@/lib/extra-sentences";
 import { GRAMMAR_ADVANCED_SENTENCES, GRAMMAR_NUCLEUS_BUILD } from "@/lib/grammar-nucleus";
+import {GrammarClassificationGame,GrammarConstructionGame} from "@/components/games/GrammarBlockGames";
+import {grammarClassificationPool,grammarConstructionPool} from "@/lib/grammar-game-pool";
+import type {NewGrammarGame} from "@/lib/grammar-new-games";
 import {GRAMMAR_PILOT_SUBTOPICS,grammarPilotPool,type GrammarDraft} from "@/lib/grammar-next-draft";
 import {rotationKey,readRotation,recordRotation,writeRotation,selectRotation} from "@/lib/rotation";
 import { EXTRA_QUIZ } from "@/lib/extra-quiz";
@@ -71,7 +74,7 @@ function buildItems(modo: Mode, nivel: Level): any[] {
 
 function PlayRouter() {
  const {subtema,nivel,modo}=Route.useSearch();
- return subtema ? modo === "quiz" ? <GrammarPilot key={`${subtema}-${nivel}`} subtema={subtema} nivel={nivel}/> : <main className="p-6">Esta modalidad está en desarrollo. <Link to="/">Volver al menú</Link></main> : <Play/>;
+ return subtema ? modo === "quiz" ? <GrammarPilot key={`${subtema}-${nivel}`} subtema={subtema} nivel={nivel}/> : <GrammarActivity key={`${subtema}-${nivel}-${modo}`} subtema={subtema} nivel={nivel} modo={modo}/> : <Play/>;
 }
 
 function Play() {
@@ -190,4 +193,29 @@ export function GrammarPilot({subtema,nivel}:{subtema:string;nivel:Level}) {
  const choose=(i:number)=>{if(picked!==null)return;setPicked(i);const ok=i===q.answer;if(ok){setCorrect(n=>n+1);setPilotStreak(n=>{const next=n+1;setPilotBest(best=>Math.max(best,next));return next;});}else setPilotStreak(0);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
  const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score:correct*10,correct,total:items.length,bestStreak:pilotBest,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
  return <main className="mx-auto max-w-2xl p-6 space-y-5"><Link to="/" className="underline">← Menú</Link><h1 className="text-2xl font-black">{subtema}</h1><p>Pregunta {index+1} de {items.length} · {nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}</p><div className="card-ink p-5 space-y-4"><p>{q.passage}</p><h2 className="font-bold">{q.question}</h2></div><div className="grid gap-3">{order.map(i=><button key={i} disabled={picked!==null} onClick={()=>choose(i)} className={`tile text-left ${picked===null?"bg-card":i===q.answer?"bg-success-soft":i===picked?"bg-destructive-soft":"bg-muted"}`}>{q.options[i]}</button>)}</div>{picked!==null&&<div aria-live="polite" className="space-y-3"><p className="card-ink p-4"><strong>{picked===q.answer?"Correcto. ":"Revisa tu respuesta. "}</strong>{q.explanation}</p><button onClick={next} className="tile w-full bg-primary text-primary-foreground">{index+1===items.length?"Ver resultado":"Siguiente"}</button></div>}</main>;
+}
+
+
+export function GrammarActivity({subtema,nivel,modo}:{subtema:string;nivel:Level;modo:"clasificar"|"construir"}) {
+ const [run,setRun]=useState(0);
+ const [items,setItems]=useState<NewGrammarGame[]|null>(null);
+ const [index,setIndex]=useState(0);
+ const [correct,setCorrect]=useState(0);
+ const [streak,setStreak]=useState(0);
+ const [best,setBest]=useState(0);
+ const [finished,setFinished]=useState(false);
+ const key=rotationKey("espanol","Gramática y semántica",subtema,modo,nivel);
+ useEffect(()=>{
+  const pool:NewGrammarGame[]=modo==="clasificar"?grammarClassificationPool(subtema,nivel):grammarConstructionPool(subtema,nivel);
+  setItems(selectRotation(pool,readRotation(key,pool.map(x=>x.id)),10));
+  setIndex(0);setCorrect(0);setStreak(0);setBest(0);setFinished(false);
+ },[subtema,nivel,modo,run,key]);
+ if(!items)return <main className="p-6">Preparando ejercicios…</main>;
+ if(!items.length)return <main className="p-6">Este juego aún no tiene ejercicios. <Link to="/">Volver al menú</Link></main>;
+ if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/">Volver al menú</Link></main>;
+ const item=items[index];
+ const report=(ok:boolean)=>{if(ok){setCorrect(n=>n+1);setStreak(n=>{const v=n+1;setBest(b=>Math.max(b,v));return v;});}else setStreak(0);const pool=modo==="clasificar"?grammarClassificationPool(subtema,nivel):grammarConstructionPool(subtema,nivel);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),item.id,ok));};
+ const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:correct*10,correct,total:items.length,bestStreak:best,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else setIndex(n=>n+1);};
+ const props={item,report,next,isLast:index===items.length-1};
+ return <main className="mx-auto max-w-2xl p-6 space-y-5"><Link to="/" className="underline">← Menú</Link><h1 className="text-2xl font-black">{subtema}</h1><p>Ejercicio {index+1} de {items.length} · {nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}</p>{item.kind==="clasificar"?<GrammarClassificationGame key={item.id} {...props} item={item}/>:<GrammarConstructionGame key={item.id} {...props} item={item}/>}</main>;
 }

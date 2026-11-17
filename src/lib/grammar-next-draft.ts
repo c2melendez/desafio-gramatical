@@ -1,3 +1,4 @@
+import {GRAMMAR_SELECCION_FINAL} from "./grammar-seleccion-final";
 import {GRAMMAR_NUCLEO_EXTRA} from "./grammar-extra-nucleo";
 import {GRAMMAR_EXTRA_405} from "./grammar-extra-405";
 import {GRAMMAR_EXTRA_BLOCK} from "./grammar-extra-block";
@@ -35,7 +36,7 @@ const morph:Seed[]=[
  ["ms-a2","avanzado","La propuesta que presentaron las estudiantes recibió apoyo.","En la subordinada «que presentaron las estudiantes», ¿qué función cumple «que»?",["Sujeto de «presentaron»","Complemento directo de «presentaron»","Verbo principal","Complemento de «recibió»"],1,"«Que» retoma «la propuesta» y representa lo presentado; el sujeto de «presentaron» es «las estudiantes»."],
 ];
 function create(subtopic:GrammarDraft["subtopic"],seeds:Seed[]):GrammarDraft[]{return seeds.map(([id,level,passage,question,options,answer,explanation])=>({id,subtopic,level,passage,question,options,answer,explanation,reviewStatus:"editorial-draft"}));}
-export const GRAMMAR_NEXT_DRAFT:GrammarDraft[]=[...create("Sinónimos y antónimos",synonym),...create("Cohesión y coherencia",cohesion),...create("Morfosintaxis",morph),...GRAMMAR_EXTRA_BLOCK,...GRAMMAR_EXTRA_405,...GRAMMAR_NUCLEO_EXTRA];
+export const GRAMMAR_NEXT_DRAFT:GrammarDraft[]=[...create("Sinónimos y antónimos",synonym),...create("Cohesión y coherencia",cohesion),...create("Morfosintaxis",morph),...GRAMMAR_EXTRA_BLOCK,...GRAMMAR_EXTRA_405,...GRAMMAR_NUCLEO_EXTRA,...GRAMMAR_SELECCION_FINAL];
 
 export const GRAMMAR_PILOT_SUBTOPICS = ["Sinónimos y antónimos", "Cohesión y coherencia", "Morfosintaxis"] as const;
 export function grammarPilotPool(subtopic:string, level:Level):GrammarDraft[]{return GRAMMAR_NEXT_DRAFT.filter(q=>q.subtopic===subtopic&&q.level===level);}
