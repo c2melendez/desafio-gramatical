@@ -15,3 +15,7 @@ El grupo permanece abierto. Aunque el commit que contiene este borrador apruebe 
 ## Ampliación parcial de selección única
 
 Se agregan 36 preguntas originales (4 intermedias y 8 avanzadas por subtema) en `grammar-completion-quiz.ts`. Los tres subtemas alcanzan 10/15/20 en selección única: 135 en total, incluidos los 99 existentes. Las preguntas son borradores editoriales pendientes de revisión docente y no equivalen a una calibración PHUMA. Faltan 270 ejercicios originales: 45 de clasificación y 45 de construcción en cada uno de los tres subtemas, además de integrar ambas mecánicas. El bloque sigue abierto; esta ampliación no constituye la corrida de 450 desde cero.
+
+## Preparación de modalidades pendientes
+
+Se añadieron componentes reutilizables de clasificación y construcción y validadores de datos y respuestas, con casos de prueba. No están conectados al menú ni incluyen bancos de producción: **siguen pendientes los 270 ejercicios** y la integración, auditoría editorial y prueba de las partidas. Los ejemplos de prueba no cuentan como contenido.
