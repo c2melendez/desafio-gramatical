@@ -34,8 +34,8 @@ const meta=(id:string,ids:string[],goal:string)=>({
  competence:'Competencias comunicativas — Español',cognitiveGoal:goal,
  reviewStatus:'editorial-draft' as const
 });
-const originals=[...GRAMMAR_NEXT_DRAFT,...M1_NEXT_QUIZ,...M1_LITERATURE_QUIZ];
 export function m3GrammarQuiz(topic:string,level:Level):GrammarDraft[]{
+ const originals=[...GRAMMAR_NEXT_DRAFT,...M1_NEXT_QUIZ,...M1_LITERATURE_QUIZ];
  if(!M2_TOPICS.some(x=>x===topic))return [];
  const sources=originals.filter(q=>q.level===level&&q.subtopic===topic);
  return Array.from({length:need(level)},(_,i)=>{
