@@ -71,9 +71,9 @@ describe("Fase A: núcleo Idea principal con textos originales",()=>{
   expect(new Set([...first,...second].map(q=>q.id)).size).toBe(20);
  });
  it("la lista de subtemas pendientes de lectura está vacía",()=>{
-  for(const subtopic of READING_SUBTOPICS.filter(s=>!["Idea principal","Inferencias","Lectura crítica","Vocabulario en contexto","Análisis de textos","Lectura comparada","Lenguaje figurado"].includes(s)))
+  for(const subtopic of READING_SUBTOPICS)
    for(const level of ["principiante","intermedio","avanzado"] as const)
     for(const mode of ["clasificar","quiz","construir"] as const)
-     expect(readingPool(level,subtopic,mode)).toHaveLength(3);
+     expect(readingPool(level,subtopic,mode)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
  });
 });
