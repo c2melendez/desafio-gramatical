@@ -34,6 +34,7 @@ function ReadingPlay(){
  const [finished,setFinished]=useState(false);
  const classification=useRef<{id:string;count:number;allCorrect:boolean}>({id:"",count:0,allCorrect:true});
  useEffect(()=>{
+  classification.current={id:"",count:0,allCorrect:true};
   setItems(readingItems(nivel,subtema,modo));setIdx(0);setCorrect(0);setTotal(0);
   setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[nivel,subtema,modo,run]);
