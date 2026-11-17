@@ -12,7 +12,7 @@ import {VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES,type Ne
 import {ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASES,type AnalysisDetective,type AnalysisChoice,type AnalysisReconstruct} from "./reading-analysis-block";
 import {COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES,type CompareDetective,type CompareChoice,type CompareReconstruct} from "./reading-comparison-block";
 import {FIGURATIVE_DETECTIVE_CASES,FIGURATIVE_CHOICE_CASES,FIGURATIVE_RECONSTRUCT_CASES,type FigurativeDetectiveCase,type FigurativeChoiceCase,type FigurativeReconstructCase} from "./reading-figurative-block";
-import {readRotation,rotationKey,selectRotation} from "./rotation";
+import {readRotation,rotationKey,selectRotation,writeRotation,type RotationState} from "./rotation";
 export const READING_SUBTOPICS = ["Idea principal","Inferencias","Lectura crítica","Vocabulario en contexto","Análisis de textos","Lectura comparada","Lenguaje figurado"] as const;
 export type ReadingSubtopic = typeof READING_SUBTOPICS[number];
 export type EvidenceTag="explicit"|"inference"|"unsupported";
@@ -227,7 +227,7 @@ export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>REA
 export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct|FigurativeDetectiveCase|FigurativeChoiceCase|FigurativeReconstructCase;
 export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):ReadingItem[]{
  if(!READING_SUBTOPICS.includes(subtopic))return [];
- const items:ReadingItem[]=READING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
+ const items:ReadingItem[]=READING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic).map(q=>({...q,id:q.id+"--"+mode}));
  if(subtopic==="Idea principal"){
   if(mode==="quiz")items.push(...MAIN_IDEA_CHOICE_CASES.filter(q=>q.level===level));
   if(mode==="clasificar")items.push(...MAIN_IDEA_DETECTIVE_CASES.filter(q=>q.level===level));
@@ -266,10 +266,25 @@ export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):Read
 
  return items;
 }
+/** Migración no destructiva: los 63 reactivos semilla antes compartían el mismo ID en 3 juegos.
+ * Se conserva su historial por la clave de rotación específica del modo.
+ */
+export function migrateReadingState(state:RotationState,ids:readonly string[],mode:Mode):RotationState {
+ const valid=new Set(ids);
+ const convert=(old:string)=>valid.has(old)?old:
+  valid.has(old+"--"+mode)?old+"--"+mode:null;
+ const mapIds=(xs:string[])=>[...new Set(xs.map(convert).filter((x):x is string=>x!==null))];
+ return {version:1,seen:mapIds(state.seen),incorrect:mapIds(state.incorrect),last:mapIds(state.last)};
+}
 export function readingItems(level:Level,subtopic:ReadingSubtopic,mode:Mode):ReadingItem[]{
  const items=readingPool(level,subtopic,mode);
  const key=rotationKey("espanol","Comprensión lectora",subtopic,mode,level);
- return selectRotation(items,readRotation(key,items.map(q=>q.id)),Math.min(10,items.length));
+ const ids=items.map(q=>q.id);
+ const legacyIds=items.filter(q=>q.id.endsWith("--"+mode)).map(q=>q.id.slice(0,-(mode.length+2)));
+ const raw=readRotation(key,[...ids,...legacyIds]);
+ const migrated=migrateReadingState(raw,ids,mode);
+ if(JSON.stringify(migrated)!==JSON.stringify(raw))writeRotation(key,migrated);
+ return selectRotation(items,migrated,Math.min(10,items.length));
 }
 export function checkReadingOrder(parts:readonly string[],chosen:readonly number[]):boolean{
  return chosen.length===parts.length&&new Set(chosen).size===parts.length&&chosen.every((n,i)=>n===i&&n>=0&&n<parts.length);
