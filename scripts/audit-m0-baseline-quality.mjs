@@ -45,7 +45,7 @@ export function auditBaseline(rows=coverageRows()){
   limitation:'Inspección estructural del inventario M0. Candidatos similares y todas las respuestas pendientes de oráculo/editorial; NO acredita calidad pedagógica o independencia.'};
  return result;
 }
-if(process.argv[1]?.endsWith('audit-m0-baseline-quality.mjs')){
+if(process.argv[1]?.split('/').at(-1)==='audit-m0-baseline-quality.mjs'){
  const out=auditBaseline();
  console.log(JSON.stringify(out,null,2));
  if(out.status==='FAIL')process.exitCode=1;
