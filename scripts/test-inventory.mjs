@@ -20,7 +20,7 @@ assert.equal(inventory.resumen.registros_con_ruta_de_menu,inventory.rows.reduce(
 for (const subtema of ['Sinónimos y antónimos','Cohesión y coherencia','Morfosintaxis']) {
   const selected=inventory.rows.filter(r=>r.tema==='Gramática y semántica' && r.subtema===subtema);
   assert.equal(selected.length,9);
-  assert.ok(selected.filter(r=>r.juego==='construir').every(r=>!r.habilitado_en_menu));
+  assert.ok(selected.filter(r=>r.juego==='construir').every(r=>r.habilitado_en_menu && r.registros_tecnicos===r.objetivo_nucleo));
 }
-assert.ok(inventory.rows.filter(r=>r.subtema==='Morfosintaxis' && r.juego==='clasificar').every(r=>!r.habilitado_en_menu));
+assert.ok(inventory.rows.filter(r=>r.subtema==='Morfosintaxis' && r.juego==='clasificar').every(r=>r.habilitado_en_menu && r.registros_tecnicos===r.objetivo_nucleo));
 console.log(`Inventario: ${keys.length} celdas únicas; valores desconocidos conservados.`);
