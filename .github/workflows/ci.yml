@@ -120,7 +120,7 @@ jobs:
           assert report.get("module") == "espanol-M2" and report.get("status") == "PASS", "Auditoría M2 no aprobada"
           assert report.get("summary", {}).get("m2_new") == 3440
           assert report["summary"]["missing"] == 0
-          pathlib.Path("m2-auditoria-integral.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\\n")
+          pathlib.Path("m2-auditoria-integral.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n")
           print("Reporte M2 JSON único verificado")
           PY
       - name: Guardar auditoría reproducible M2
