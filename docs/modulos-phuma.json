@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "areas": ["espanol", "matematicas", "naturales", "sociales", "blandas"],
+  "modules": [
+    {"id": "M0", "area": null, "stage": "M0", "required": [], "optional": [], "state": "EN_CURSO", "evidence": "docs/checkpoint-m0-20261117.md"},
+    {"id": "espanol-M1", "area": "espanol", "stage": "M1", "required": ["M0"], "optional": [], "state": "PENDIENTE", "targets": [10, 15, 20]},
+    {"id": "espanol-M2", "area": "espanol", "stage": "M2", "required": ["espanol-M1"], "optional": [], "state": "PENDIENTE", "targets": [20, 35, 45]},
+    {"id": "espanol-M3", "area": "espanol", "stage": "M3", "required": ["espanol-M2"], "optional": [], "state": "PENDIENTE", "targets": [30, 50, 70]},
+    {"id": "espanol-CORTE", "area": "espanol", "stage": "CORTE", "required": ["espanol-M3"], "optional": [], "state": "PENDIENTE"}
+  ]
+}
