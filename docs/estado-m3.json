@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "module": "espanol-M3",
+  "area": "espanol",
+  "stage": "M3",
+  "estado": "EN_CURSO",
+  "dependencias": [
+    "M0",
+    "espanol-M1",
+    "espanol-M2"
+  ],
+  "base_sha": "c16e376292e66d7bb3655a213bdd162e629ffe34",
+  "alcance": {
+    "subtemas": 21,
+    "combinaciones": 63,
+    "celdas": 189,
+    "meta": {
+      "principiante": 30,
+      "intermedio": 50,
+      "avanzado": 70
+    },
+    "meta_total": 9450
+  },
+  "avance_candidato": {
+    "antes": 6301,
+    "nuevos": 3149,
+    "despues_previsto": 9450,
+    "por_nivel": {
+      "principiante": 629,
+      "intermedio": 945,
+      "avanzado": 1575
+    }
+  },
+  "independencia_conceptual": "PENDIENTE_REVISION",
+  "revision_docente": "PENDIENTE_AUTORIZADA",
+  "calibracion_psicometrica": "NO_CERTIFICADA",
+  "estado_evidencia": "PENDIENTE_CI_PR_AUDITORIA_AREA_Y_RENDER_SHA",
+  "siguiente_accion": "Reconciliar auditoría M3 189 celdas y fuentes triples; corregir fallos CI; fusionar tras éxito; certificar CI main y Render Live del mismo SHA; publicar corte Español sin simular revisión académica."
+}
