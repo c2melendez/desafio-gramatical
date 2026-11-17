@@ -24,8 +24,8 @@ describe("borrador del siguiente bloque gramatical",()=>{
    for(const level of ["principiante","intermedio","avanzado"] as const){
     expect(grammarPilotPool(topic,level)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level as "principiante"|"intermedio"|"avanzado"]);
     expect(countContent("espanol","Gramática y semántica",topic,"quiz",level)).toBe(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
-    expect(countContent("espanol","Gramática y semántica",topic,"clasificar",level)).toBe(0);
-    expect(countContent("espanol","Gramática y semántica",topic,"construir",level)).toBe(0);
+    expect(countContent("espanol","Gramática y semántica",topic,"clasificar",level)).toBe(2);
+    expect(countContent("espanol","Gramática y semántica",topic,"construir",level)).toBe(2);
    }
   }
  });
