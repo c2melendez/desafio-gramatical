@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "modulo": "M0",
+  "estado": "EN_CURSO",
+  "area_activa": "espanol",
+  "base": "14398e47a8644d694041f62cf800a956e0b5c2bf",
+  "referencias": [
+    {"revision":"14398e47a8644d694041f62cf800a956e0b5c2bf","ruta":"src/lib/coverage.ts","blob":"5f161f8c8f686c7b46710a628f244163bcf90da3"},
+    {"revision":"14398e47a8644d694041f62cf800a956e0b5c2bf","ruta":"src/lib/phuma-catalog.ts","blob":"31467f450ca992425ced300a7dde2e26ca352973"},
+    {"revision":"e1b22cddc81e49e3c68d9103cd547abf851d99a1","ruta":"src/lib/grammar-games-draft.ts","blob":"659cba088f93a9bf26bdabefadcf487e651615d9"}
+  ],
+  "evidencia": ["docs/reconciliacion-m0-20261117.md","docs/reconciliacion-items-20261117.md","docs/evidencia/reconciliacion-items-20261117.json","docs/evidencia/revision-borradores-20261117.json"],
+  "controles_obligatorios_pendientes": ["contratos_y_estado", "calidad_por_item", "regresion", "mutaciones_criticas", "seguridad_privacidad", "verificacion_independiente_completa"],
+  "siguiente_accion": "Revisar alternativas y familias de los 36 borradores y contrastar los 72 candidatos de selección; conservar decisiones por ID y hash antes de integrar."
+}
