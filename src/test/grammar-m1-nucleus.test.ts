@@ -28,6 +28,10 @@ describe("M1: corrida de 180 actividades de gramática",()=>{
     expect(gradeClassification(item,{...answers,[item.items[0].id]:"respuesta errónea"}),item.id).toBe(false);
    }else{
     const correct=item.solutions[0];
+    expect(item.tiles).toHaveLength(4);
+    expect(correct).toHaveLength(3);
+    expect(item.tiles.find(x=>x.id==="d")?.text).toBeTruthy();
+    expect(gradeConstruction(item,[...correct.slice(0,2),"d"]),item.id).toBe(false);
     expect(gradeConstruction(item,correct),item.id).toBe(true);
     expect(gradeConstruction(item,correct.slice(0,1)),item.id).toBe(false);
     expect(gradeConstruction(item,[...correct].reverse()),item.id).toBe(false);
