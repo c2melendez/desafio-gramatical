@@ -103,6 +103,16 @@ jobs:
           path: m1-operation-audit.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar integralmente M3 y corte completo de Español
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m3-area.mjs > m3-area-audit.json
+      - name: Conservar reporte completo M3 por SHA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m3-espanol-corte-integral
+          path: m3-area-audit.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar aceptación M2 de 3440 casos y 189 celdas
         run: |
           node --import ./scripts/ts-resolve.mjs scripts/audit-m2-area.mjs > m2-auditoria-integral.raw
@@ -234,7 +244,7 @@ jobs:
         run: |
           set -euo pipefail
           base="https://desafio-gramatical.onrender.com"
-          for route in "/" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante" "/jugar?modo=clasificar&nivel=intermedio&subtema=Morfosintaxis" "/lectura?subtema=Inferencias&modo=construir&nivel=avanzado" "/redaccion?subtema=Correcci%C3%B3n&modo=quiz&nivel=intermedio"; do
+          for route in "/" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante" "/jugar?modo=clasificar&nivel=intermedio&subtema=Morfosintaxis" "/lectura?subtema=Inferencias&modo=construir&nivel=avanzado" "/redaccion?subtema=Correcci%C3%B3n&modo=quiz&nivel=intermedio" "/jugar?modo=clasificar&nivel=avanzado&subtema=Hiperonimia" "/lectura?subtema=Lectura%20comparada&modo=quiz&nivel=avanzado" "/redaccion?subtema=Generalizaci%C3%B3n%20e%20integraci%C3%B3n&modo=construir&nivel=avanzado"; do
             file="$(mktemp)"
             code=$(curl --fail --location --silent --show-error --retry 4 --retry-delay 7 --retry-all-errors --max-time 50 --output "$file" --write-out '%{http_code}' "$base$route")
             if ! grep -Eiq '<html|<!doctype html' "$file"; then

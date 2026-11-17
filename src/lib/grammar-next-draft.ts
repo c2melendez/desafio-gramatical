@@ -1,4 +1,5 @@
 import {m2GrammarQuiz} from "./m2-grammar";
+import {m3GrammarQuiz} from "./m3-grammar";
 import {M1_LITERATURE_QUIZ} from "./grammar-m1-literature";
 import {M1_NEXT_QUIZ} from "./grammar-m1-next-activities";
 import {GRAMMAR_COMPLETION_QUIZ} from "./grammar-completion-quiz";
@@ -42,4 +43,4 @@ function create(subtopic:GrammarDraft["subtopic"],seeds:Seed[]):GrammarDraft[]{r
 export const GRAMMAR_NEXT_DRAFT:GrammarDraft[]=[...create("Sinónimos y antónimos",synonym),...create("Cohesión y coherencia",cohesion),...create("Morfosintaxis",morph),...GRAMMAR_EXTRA_BLOCK,...GRAMMAR_EXTRA_405,...GRAMMAR_NUCLEO_EXTRA,...GRAMMAR_COMPLETION_QUIZ];
 
 export const GRAMMAR_PILOT_SUBTOPICS = ["Sinónimos y antónimos", "Cohesión y coherencia", "Morfosintaxis", "Homonimia y polisemia", "Hiperonimia", "Adecuación y referente", "Figuras retóricas", "Géneros literarios"] as const;
-export function grammarPilotPool(subtopic:string, level:Level):GrammarDraft[]{const original=[...GRAMMAR_NEXT_DRAFT,...M1_NEXT_QUIZ,...M1_LITERATURE_QUIZ];return [...original.filter(q=>q.subtopic===subtopic&&q.level===level),...m2GrammarQuiz(subtopic,level,original)];}
+export function grammarPilotPool(subtopic:string, level:Level):GrammarDraft[]{const original=[...GRAMMAR_NEXT_DRAFT,...M1_NEXT_QUIZ,...M1_LITERATURE_QUIZ];return [...original.filter(q=>q.subtopic===subtopic&&q.level===level),...m2GrammarQuiz(subtopic,level,original),...m3GrammarQuiz(subtopic,level)];}

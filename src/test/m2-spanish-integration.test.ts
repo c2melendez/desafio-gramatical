@@ -17,7 +17,7 @@ describe("M2 Español: cobertura, oráculos de doble contexto y trazabilidad",()
   const rows=coverageRows().filter(r=>r.area==="espanol");
   expect(rows).toHaveLength(189);
   const all=rows.map(r=>r.available);
-  expect(all.reduce((a,b)=>a+b,0)).toBe(6301);
+  expect(all.reduce((a,b)=>a+b,0)).toBe(9450);
   for(const r of rows)expect(r.available,r.subtopic+"/"+r.mode+"/"+r.level).toBeGreaterThanOrEqual(desired[r.level]);
  });
  it("en Gramática las dos respuestas de cada selección coinciden con las fuentes originales, no con answer",()=>{
@@ -65,7 +65,7 @@ describe("M2 Español: cobertura, oráculos de doble contexto y trazabilidad",()
    for(const level of ["principiante","intermedio","avanzado"] as const){
     expect(grammarM1Pool(topic,"quiz",level)).toEqual([]);
     for(const kind of ["clasificar","construir"] as const)
-     expect(grammarM1Pool(topic,kind,level)).toHaveLength(desired[level]);
+     expect(grammarM1Pool(topic,kind,level).filter(q=>!q.id.startsWith("m3-"))).toHaveLength(desired[level]);
    }
  });
  it("los nuevos pasajes y ediciones conservan dos fuentes distintas y tres modalidades",()=>{

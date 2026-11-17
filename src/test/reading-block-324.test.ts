@@ -4,7 +4,7 @@ import {ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASE
 import {COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES} from "@/lib/reading-comparison-block";
 import {readingPool as m1SourceReadingPool,readingItems} from "@/lib/reading";
 
-const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-"));
+const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-")&&!q.id.startsWith("m3-"));
 import {coverageTotals,countContent} from "@/lib/coverage";
 const groups=[
  {subtopic:"Vocabulario en contexto" as const,banks:[VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES]},

@@ -16,7 +16,7 @@ import {GENERALIZATION_CHOICE_CASES} from "@/lib/generalization-choice-cases";
 import {GENERALIZATION_EDITOR_CASES} from "@/lib/generalization-editor-cases";
 import {writingPool as m1SourceWritingPool,writingItems} from "@/lib/writing";
 
-const m1WritingPool=(...args:Parameters<typeof m1SourceWritingPool>)=>m1SourceWritingPool(...args).filter(q=>!q.id.startsWith("m2-"));
+const m1WritingPool=(...args:Parameters<typeof m1SourceWritingPool>)=>m1SourceWritingPool(...args).filter(q=>!q.id.startsWith("m2-")&&!q.id.startsWith("m3-"));
 import {coverageRows,coverageTotals,CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 import {emptyRotation,rotationKey,parseRotation,selectRotation,recordRotation} from "@/lib/rotation";
 import type {Level} from "@/lib/grammar";
@@ -212,7 +212,7 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   const totals=coverageTotals();
   expect(totals.target).toBe(40500);
   expect(totals.stageOneComplete).toBeGreaterThanOrEqual(45);
-  expect(rows.filter(x=>x.topic==="Redacción"&&["Conectores","Corrección","Organización textual","Elisión y adición","Generalización e integración"].includes(x.subtopic)).every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
+  expect(rows.filter(x=>x.topic==="Redacción"&&["Conectores","Corrección","Organización textual","Elisión y adición","Generalización e integración"].includes(x.subtopic)).every(x=>x.stageOneComplete&&x.complete)).toBe(true);
   expect(rows.filter(x=>x.topic==="Literatura").every(x=>x.available>=x.stageOne)).toBe(true);
   expect(rows.some(x=>x.area==="matematicas"&&x.available===0)).toBe(true);
  });

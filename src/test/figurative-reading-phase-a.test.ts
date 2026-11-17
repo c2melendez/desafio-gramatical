@@ -2,7 +2,7 @@ import {describe,expect,it} from "vitest";
 import {FIGURATIVE_DETECTIVE_CASES,FIGURATIVE_CHOICE_CASES,FIGURATIVE_RECONSTRUCT_CASES} from "@/lib/reading-figurative-block";
 import {READING_SUBTOPICS,readingItems,readingPool as m1SourceReadingPool} from "@/lib/reading";
 
-const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-"));
+const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-")&&!q.id.startsWith("m3-"));
 import {coverageTotals,countContent} from "@/lib/coverage";
 import {emptyRotation,recordRotation,rotationKey,selectRotation} from "@/lib/rotation";
 

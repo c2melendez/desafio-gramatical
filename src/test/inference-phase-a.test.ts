@@ -4,7 +4,7 @@ import {INFERENCE_CHOICE_CASES} from "@/lib/inference-choice-cases";
 import {INFERENCE_RECONSTRUCT_CASES} from "@/lib/inference-reconstruct-cases";
 import {READING_SUBTOPICS,readingItems,readingPool as m1SourceReadingPool} from "@/lib/reading";
 
-const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-"));
+const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-")&&!q.id.startsWith("m3-"));
 import {countContent,coverageTotals} from "@/lib/coverage";
 import {emptyRotation,recordRotation,rotationKey,selectRotation} from "@/lib/rotation";
 

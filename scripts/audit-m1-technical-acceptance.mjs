@@ -68,4 +68,4 @@ export function auditM1(){
   human_editorial_review:'PENDIENTE_AUTORIZADA',counts_are:'registros técnicos por juego y nivel, no certificación de originalidad cognitiva',
   cells,errors};
 }
-const r=auditM1();console.log(JSON.stringify(r,null,2));if(r.state!=='PASS')process.exitCode=1;
+if(process.argv[1]?.endsWith('audit-m1-technical-acceptance.mjs')){const r=auditM1();console.log(JSON.stringify(r,null,2));if(r.state!=='PASS')process.exitCode=1;}
