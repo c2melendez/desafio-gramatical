@@ -37,6 +37,7 @@ def main():
         run_stage('oraculos_seleccion', ['node','scripts/check-selection-oracles.mjs']),
         run_stage('negativos_runner', ['python3','-m','unittest','discover','-s','scripts','-p','test_qa_m0.py']),
         run_stage('negativos_verificador_estado', ['python3','-m','unittest','discover','-s','scripts','-p','test_verify_state.py']),
+        run_stage('evidencia_baseline_estado', ['python3','scripts/verify_state.py','--baseline']),
         run_stage('contratos_y_mutaciones_fixtures', ['node','scripts/test-content-contracts.mjs']),
         run_stage('trazabilidad_editorial', ['python3','scripts/validate_editorial_review.py']),
         run_stage('negativos_editoriales', ['python3','-m','unittest','discover','-s','scripts','-p','test_editorial_review.py']),
