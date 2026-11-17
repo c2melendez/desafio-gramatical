@@ -77,6 +77,7 @@ jobs:
           code=$?
           echo "Runner de M0: salida $code; cero significa cierre de todas las etapas, uno significa bloqueo documentado." >> "$GITHUB_STEP_SUMMARY"
           test -f m0-evidence.json
+          echo "$code" > m0-exit-code.txt
       - name: Guardar evidencia M0
         if: always()
         uses: actions/upload-artifact@v4
@@ -88,3 +89,17 @@ jobs:
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"
+      - name: Aplicar puerta de cierre M0
+        if: always()
+        shell: bash
+        run: |
+          if [ ! -f m0-exit-code.txt ]; then
+            echo "::error::M0 no produjo resultado ejecutable"
+            exit 2
+          fi
+          code=$(cat m0-exit-code.txt)
+          if [ "$code" -ne 0 ]; then
+            echo "::error::M0 BLOQUEADO: reporte m0-auditoria adjunto; controles obligatorios sin PASS"
+            exit "$code"
+          fi
+          echo "M0: todos los controles obligatorios PASS" >> "$GITHUB_STEP_SUMMARY"
