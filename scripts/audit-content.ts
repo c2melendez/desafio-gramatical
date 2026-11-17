@@ -19,6 +19,9 @@ import {READING_BANK,readingPool} from "../src/lib/reading";
 import {MAIN_IDEA_CHOICE_CASES} from "../src/lib/main-idea-choice-cases";
 import {MAIN_IDEA_DETECTIVE_CASES} from "../src/lib/main-idea-detective-cases";
 import {MAIN_IDEA_RECONSTRUCT_CASES} from "../src/lib/main-idea-reconstruct-cases";
+import {INFERENCE_DETECTIVE_CASES} from "../src/lib/inference-detective-cases";
+import {INFERENCE_CHOICE_CASES} from "../src/lib/inference-choice-cases";
+import {INFERENCE_RECONSTRUCT_CASES} from "../src/lib/inference-reconstruct-cases";
 const levels=["principiante","intermedio","avanzado"] as const;
 const target={principiante:10,intermedio:15,avanzado:20};
 const rows=coverageRows(),totals=coverageTotals();
@@ -112,6 +115,24 @@ for(const q of MAIN_IDEA_RECONSTRUCT_CASES){
  if(q.passage.length<150||q.order.parts.length!==3||new Set(q.order.parts).size!==3)failures.push("Reconstrucción inválida: "+q.id);
  if(q.order.explanation.length<45)failures.push("Reconstrucción sin justificación: "+q.id);
 }
+for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+ for(const mode of ["clasificar","quiz","construir"] as const){
+  const pool=readingPool(level,"Inferencias",mode);
+  if(pool.length!==expected)failures.push("Inferencias/"+mode+"/"+level+": "+pool.length+" en vez de "+expected);
+  if(new Set(pool.map(x=>x.id)).size!==pool.length)failures.push("IDs repetidos en Inferencias/"+mode+"/"+level);
+ }
+for(const q of INFERENCE_DETECTIVE_CASES){
+ if(q.passage.length<145||q.claims.length!==3)failures.push("Inferencia detective incompleta: "+q.id);
+ if(new Set(q.claims.map(c=>c.tag)).size!==3||new Set(q.claims.map(c=>c.text)).size!==3)failures.push("Afirmaciones inferenciales repetidas: "+q.id);
+}
+for(const q of INFERENCE_CHOICE_CASES){
+ if(q.passage.length<145||q.explanation.length<45||q.options.length!==4||new Set(q.options).size!==4||q.answer<0||q.answer>3)failures.push("Inferencia elección inválida: "+q.id);
+}
+for(const q of INFERENCE_RECONSTRUCT_CASES){
+ if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<45)failures.push("Inferencia secuencia incompleta: "+q.id);
+}
+const allInferencePassages=[...INFERENCE_DETECTIVE_CASES,...INFERENCE_CHOICE_CASES,...INFERENCE_RECONSTRUCT_CASES].map(q=>q.passage);
+if(new Set(allInferencePassages).size!==108)failures.push("Lecturas de Inferencias repetidas entre modalidades");
 const readingTexts=[...MAIN_IDEA_CHOICE_CASES,...MAIN_IDEA_DETECTIVE_CASES,...MAIN_IDEA_RECONSTRUCT_CASES].map(q=>q.passage);
 if(new Set(readingTexts).size!==108)failures.push("Hay textos repetidos entre los juegos de Idea principal");
 console.log("ACADEMIA PHUMA PLAY · AUDITORÍA DE COBERTURA (contenidos, no validación psicométrica)");
