@@ -51,6 +51,7 @@ def lookup_git(sha,path):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--closure',action='store_true',help='Bloquear cierre por SKIP obligatorio')
+    parser.add_argument('--baseline',action='store_true',help='Verificar solo integridad del inventario y estado inicial M0; no acredita controles de contenido')
     args=parser.parse_args()
     try:
         state=json.loads((ROOT/'docs/estado-m0.json').read_text(encoding='utf-8'))
@@ -58,6 +59,12 @@ def main():
         checks=verify(state,catalog,ROOT,lookup_git)
     except (OSError,ValueError,TypeError,KeyError) as exc:
         print(json.dumps({'status':'ERROR','error':str(exc)},ensure_ascii=False)); return 2
+    if args.baseline:
+        required = {'grafo','modulo','estado','area','referencia','evidencia'}
+        checks = [c for c in checks if c['control'] in required]
+        if not checks or not {'referencia','evidencia','estado'}.issubset({c['control'] for c in checks}):
+            print(json.dumps({'status':'ERROR','error':'Evidencia base M0 incompleta'},ensure_ascii=False))
+            return 2
     status='ERROR' if any(x['status']=='ERROR' for x in checks) else 'SKIP' if any(x['status']=='SKIP' for x in checks) else 'OK'
     print(json.dumps({'status':status,'checks':checks},ensure_ascii=False,indent=2))
     return 1 if status=='ERROR' or (args.closure and status=='SKIP') else 0
