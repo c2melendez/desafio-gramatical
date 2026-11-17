@@ -30,7 +30,9 @@
     "docs/evidencia/propuestas-cuarentena-20261117.json",
     "docs/revision-respuestas-36-20261117.md",
     "docs/evidencia/familias-permutaciones-20261117.json",
-    "docs/familias-y-ordenes-20261117.md"
+    "docs/familias-y-ordenes-20261117.md",
+    "docs/evidencia/seleccion-distinta-20261117.json",
+    "docs/seleccion-72-cotejo-20261117.md"
   ],
   "controles_obligatorios_pendientes": [
     "contratos_y_estado",
@@ -40,5 +42,5 @@
     "seguridad_privacidad",
     "verificacion_independiente_completa"
   ],
-  "siguiente_accion": "Evaluar semánticamente las familias y los órdenes no aceptados; contrastar los 72 candidatos distintos de selección y completar controles obligatorios de M0."
+  "siguiente_accion": "Revisar claves y distractores de 72 candidatos, resolver independencia de 18 familias y equivalencia de 90 órdenes, y completar controles de M0."
 }
