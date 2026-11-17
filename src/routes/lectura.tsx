@@ -6,6 +6,8 @@ import {READING_SUBTOPICS,readingItems,readingPool,type ReadingChallenge,type Re
 import {ReadingDetective,ReadingInference,ReadingReconstruct} from "@/components/games/ReadingGames";
 import {rotationKey,readRotation,recordRotation,writeRotation} from "@/lib/rotation";
 import type {MainIdeaChoiceCase} from "@/lib/main-idea-choice-cases";
+import type {MainIdeaDetectiveCase} from "@/lib/main-idea-detective-cases";
+import type {MainIdeaReconstructCase} from "@/lib/main-idea-reconstruct-cases";
 
 const modes:Mode[]=["clasificar","quiz","construir"];
 export const Route=createFileRoute("/lectura")({
@@ -113,8 +115,8 @@ function ReadingPlay(){
   <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={items.length} aria-valuenow={idx+1}>
    <div className="h-full bg-primary" style={{width:`${100*(idx+1)/items.length}%`}}/>
   </div>
-  {modo==="clasificar"&&<ReadingDetective key={item.id} {...props} item={item as ReadingChallenge}/>}
+  {modo==="clasificar"&&<ReadingDetective key={item.id} {...props} item={item as ReadingChallenge|MainIdeaDetectiveCase}/>}
   {modo==="quiz"&&<ReadingInference key={item.id} {...props} item={item as ReadingChallenge|MainIdeaChoiceCase}/>}
-  {modo==="construir"&&<ReadingReconstruct key={item.id} {...props} item={item as ReadingChallenge}/>}
+  {modo==="construir"&&<ReadingReconstruct key={item.id} {...props} item={item as ReadingChallenge|MainIdeaReconstructCase}/>}
  </main>;
 }
