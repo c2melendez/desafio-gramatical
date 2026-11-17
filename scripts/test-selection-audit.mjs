@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import { inspect } from './audit-selection-branches.mjs';
+const good={id:'x',subtopic:'s',level:'intermedio',passage:'texto',question:'pregunta',options:['a','b','c','d'],answer:2,explanation:'razón'};
+assert.deepEqual(inspect(good),[]);
+assert.ok(inspect({...good,options:['a',' a ','c','d']}).length);
+assert.ok(inspect({...good,options:['a','b','c']}).length);
+assert.ok(inspect({...good,answer:4}).length);
+assert.ok(inspect({...good,explanation:''}).length);
+assert.ok(inspect({...good,level:'imposible'}).length);
+console.log('Validador de selección: caso válido y cinco negativos aprobados.');
