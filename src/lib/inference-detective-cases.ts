@@ -877,5 +877,30 @@ export const INFERENCE_DETECTIVE_CASES:InferenceDetectiveCase[]=[
       }
     ],
     "reviewStatus": "editorial-draft"
+  },
+  {
+    "id": "reading-inference-detective-v1-avanzado-35",
+    "level": "avanzado",
+    "subtopic": "Inferencias",
+    "title": "Revisión de rutas escolares",
+    "passage": "Un equipo comparó retrasos en rutas escolares de varios barrios y observó tiempos mayores cerca de obras viales. También registró cambios de horarios y lluvia durante parte de la semana. La comisión pidió analizar períodos comparables antes de atribuir todos los retrasos a las obras.",
+    "claims": [
+      {
+        "text": "Se observaron tiempos mayores cerca de obras viales.",
+        "tag": "explicit",
+        "explanation": "El informe menciona expresamente esa observación territorial."
+      },
+      {
+        "text": "Las obras pudieron contribuir a algunos retrasos, junto con otras condiciones.",
+        "tag": "inference",
+        "explanation": "La cercanía de las obras permite esa hipótesis, sin probar una única causa."
+      },
+      {
+        "text": "Las obras explicaron por sí solas todos los retrasos de cada barrio.",
+        "tag": "unsupported",
+        "explanation": "El informe también señala lluvia y cambios de horario; no demuestra causalidad exclusiva."
+      }
+    ],
+    "reviewStatus": "editorial-draft"
   }
 ];
