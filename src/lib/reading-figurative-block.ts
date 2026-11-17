@@ -555,7 +555,7 @@ export const FIGURATIVE_DETECTIVE_CASES:FigurativeDetectiveCase[]=FIGURES.map((f
  const passage=f.passages[0]+" La docente invitó a examinar si el lenguaje describe hechos comprobables o crea una imagen poética. El grupo discutió cómo una expresión puede comunicar emociones sin afirmar que las palabras deban entenderse literalmente.";
  const claims=[
   {text:"El pasaje contiene esta expresión: «"+f.passages[0]+"»",tag:"explicit" as const,explanation:"La expresión aparece textualmente en la lectura."},
-  {text:"El recurso figurativo permite sugerir que "+f.reconstructMeaning+".",tag:"inference" as const,explanation:"El contexto hace plausible esta interpretación sin exigir una lectura literal de la imagen."},
+  {text:"El recurso figurativo permite sugerir que "+f.meaning+".",tag:"inference" as const,explanation:"El contexto hace plausible esta interpretación sin exigir una lectura literal de la imagen."},
   {text:"La lectura confirma que "+f.wrong1+".",tag:"unsupported" as const,explanation:"Ese sentido literal o exagerado no está respaldado por el texto."}
  ],k=i%3;
  return {id:"figurative-det-"+i,level:levelFor(i),subtopic:"Lenguaje figurado",title:f.title+" — identificación",passage,claims:[...claims.slice(k),...claims.slice(0,k)],reviewStatus:"editorial-draft"};
@@ -571,7 +571,7 @@ export const FIGURATIVE_RECONSTRUCT_CASES:FigurativeReconstructCase[]=FIGURES.ma
  const parts:[string,string,string]=[
   "Reconocer en el fragmento la imagen: «"+f.passages[2]+"»",
   "Examinar cómo funciona el recurso denominado "+f.figure+" en el contexto.",
-  "Concluir que la imagen expresa: "+f.meaning+"."
+  "Concluir que la imagen expresa: "+f.reconstructMeaning+"."
  ];
  return {id:"figurative-recon-"+i,level:levelFor(i),subtopic:"Lenguaje figurado",title:f.title+" — reconstrucción",passage,order:{parts,hint:"Ordena imagen textual, recurso figurativo e interpretación contextual.",explanation:"El recurso de "+f.figure+" se entiende considerando la imagen «"+f.passages[2]+"» y su sentido figurado: "+f.meaning+"."},reviewStatus:"editorial-draft"};
 });
