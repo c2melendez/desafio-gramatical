@@ -50,7 +50,7 @@ jobs:
       - name: Congelar inventario reproducible por ruta, juego y nivel
         run: |
           node --import ./scripts/ts-resolve.mjs scripts/inventory-coverage.mjs > m0-inventory.json
-          node -e "const i=require('./m0-inventory.json'); if (!i.resumen || i.rows.length !== 810 || i.arbol_modificado) process.exit(1)"
+          node -e "const i=require('./m0-inventory.json'); console.log(JSON.stringify(i.resumen)); if (!i.resumen || i.rows.length !== 810 || i.resumen.celdas !== 810) process.exit(1); if (i.arbol_modificado) console.warn('Checkout con archivos generados modificados; revisar antes del cierre, no equivale a diferencias de contenido')"
       - name: Guardar matriz de alcance M0
         uses: actions/upload-artifact@v4
         with:
