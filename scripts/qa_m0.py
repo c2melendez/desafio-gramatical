@@ -54,7 +54,7 @@ def main():
         run_stage('auditoria_contenido_existente', ['bun','run','audit:content']),
         run_stage('contratos_lock_negativos', ['python3','-m','unittest','discover','-s','scripts','-p','test_check_m0_contract_lock.py']),
         run_stage('estado_y_contratos', ['python3','scripts/check_m0_contract_lock.py']),
-        run_stage('inventario_por_item_y_calidad', None),
+        run_stage('inventario_por_item_y_calidad', ['node','--import','./scripts/ts-resolve.mjs','scripts/test-audit-m0-baseline-quality.mjs']),
         run_stage('regresion_y_funcional', ['bun','run','test']),
         run_stage('mutacion_critica', ['node','--import','./scripts/ts-resolve.mjs','scripts/test-m0-critical-mutations.mjs']),
         run_stage('seguridad_estatica_cliente', ['node','scripts/security-client-audit.mjs']),
