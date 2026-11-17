@@ -14,6 +14,12 @@ jobs:
     steps:
       - name: Obtener código
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Preparar Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - name: Preparar Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -24,8 +30,52 @@ jobs:
         run: bun run build
       - name: Ejecutar pruebas
         run: bun run test
+      - name: Validar inventario y grafo de módulos
+        run: |
+          node scripts/test-inventory.mjs
+          python3 scripts/validate_modules.py
+          python3 -m unittest discover -s scripts -p 'test_validate_modules.py'
+          python3 -m unittest discover -s scripts -p 'test_qa_m0.py'
+          python3 -m unittest discover -s scripts -p 'test_verify_state.py'
+          node scripts/test-review-draft.mjs
+          python3 scripts/validate_editorial_review.py
+          python3 -m unittest discover -s scripts -p 'test_editorial_review.py'
+          node scripts/test-quarantine.mjs
+          node scripts/check-family-evidence.mjs
+          node scripts/test-selection-audit.mjs
+          node scripts/test-content-contracts.mjs
+          node scripts/check-selection-oracles.mjs
+          node scripts/security-client-audit.mjs --test
+          node scripts/security-client-audit.mjs
+      - name: Congelar inventario reproducible por ruta, juego y nivel
+        run: |
+          node --import ./scripts/ts-resolve.mjs scripts/inventory-coverage.mjs > m0-inventory.json
+          node -e "const i=require('./m0-inventory.json'); console.log(JSON.stringify(i.resumen)); if (!i.resumen || i.rows.length !== 810 || i.resumen.celdas !== 810) process.exit(1); if (i.arbol_modificado) console.warn('Checkout con archivos generados modificados; revisar antes del cierre, no equivale a diferencias de contenido')"
+      - name: Guardar matriz de alcance M0
+        uses: actions/upload-artifact@v4
+        with:
+          name: m0-inventario
+          path: m0-inventory.json
+          retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
+      - name: Evidencia ejecutable de M0 (cierre independiente)
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          python3 scripts/qa_m0.py --output m0-evidence.json
+          code=$?
+          echo "Runner de M0: salida $code; cero significa cierre de todas las etapas, uno significa bloqueo documentado." >> "$GITHUB_STEP_SUMMARY"
+          test -f m0-evidence.json
+      - name: Guardar evidencia M0
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m0-auditoria
+          path: m0-evidence.json
+          if-no-files-found: warn
+          retention-days: 14
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"

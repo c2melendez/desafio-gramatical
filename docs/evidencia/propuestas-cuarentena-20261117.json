@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "sha_fuente": "e1b22cddc81e49e3c68d9103cd547abf851d99a1",
+  "advertencia": "Propuestas sin integración ni aceptación pedagógica.",
+  "proposals": [
+    {
+      "id": "cl-sa-p2",
+      "hash_original": "8a4d4c00c576bbb427495c9b8b2aac9be2c001d3034717b3ec8fbc50f1525120",
+      "hash_propuesta": "cf82df8c7a35e1608482a26e281f9b2616af89ce2f19da13bee38269ed137793",
+      "estado": "CUARENTENA",
+      "pendientes": [
+        "revisión de respuesta y alternativas",
+        "independencia y familia",
+        "integración",
+        "revisión docente"
+      ],
+      "item": {
+        "id": "cl-sa-p2",
+        "kind": "clasificar",
+        "subtopic": "Sinónimos y antónimos",
+        "level": "principiante",
+        "reviewStatus": "editorial-draft",
+        "context": "Un grupo de lectura compara palabras que aparecen en una descripción de una casa.",
+        "prompt": "Identifica el tipo de relación de cada pareja.",
+        "labels": [
+          "Significado parecido",
+          "Significado contrario",
+          "Relación distinta"
+        ],
+        "items": [
+          {
+            "text": "bonito / hermoso",
+            "answer": 0
+          },
+          {
+            "text": "abierto / cerrado",
+            "answer": 1
+          },
+          {
+            "text": "techo / jardín",
+            "answer": 2
+          }
+        ],
+        "explanation": "Bonito y hermoso son próximos; abierto y cerrado son contrarios; techo y jardín no son sinónimos ni antónimos."
+      }
+    },
+    {
+      "id": "cl-cc-a1",
+      "hash_original": "9fdd728554cf2af75daa270c0347ee9f020293188943887022b30ad9e6b51b0b",
+      "hash_propuesta": "48e0b0c3491000da45702b94a586e03d2120df5aa2b8cbf64ce4ea0a59d64ea8",
+      "estado": "CUARENTENA",
+      "pendientes": [
+        "revisión de respuesta y alternativas",
+        "independencia y familia",
+        "integración",
+        "revisión docente"
+      ],
+      "item": {
+        "id": "cl-cc-a1",
+        "kind": "clasificar",
+        "subtopic": "Cohesión y coherencia",
+        "level": "avanzado",
+        "reviewStatus": "editorial-draft",
+        "context": "El informe explica que se encuestó a personas de una sola escuela y que la mayoría de ellas solicitó más libros.",
+        "prompt": "Clasifica cada afirmación según la información del informe.",
+        "labels": [
+          "Información indicada directamente",
+          "Deducción a partir de la información",
+          "No se puede concluir"
+        ],
+        "items": [
+          {
+            "text": "Se encuestó a personas de una escuela.",
+            "answer": 0
+          },
+          {
+            "text": "La solicitud de más libros recibió apoyo de más de la mitad de las personas encuestadas.",
+            "answer": 1
+          },
+          {
+            "text": "Todas las escuelas del país realizaron la misma encuesta.",
+            "answer": 2
+          }
+        ],
+        "explanation": "La escuela y la mayoría se indican; mayoría implica más de la mitad; el alcance nacional no aparece."
+      }
+    },
+    {
+      "id": "cl-cc-a2",
+      "hash_original": "c40fd3c5e2607852505005664dbc4f079a5d4840ea74040e7560b1f0b3c87a0b",
+      "hash_propuesta": "a69644033cdf6f1d576eacb3d0140e2961b7882275228381138f25bae2cb8993",
+      "estado": "CUARENTENA",
+      "pendientes": [
+        "revisión de respuesta y alternativas",
+        "independencia y familia",
+        "integración",
+        "revisión docente"
+      ],
+      "item": {
+        "id": "cl-cc-a2",
+        "kind": "clasificar",
+        "subtopic": "Cohesión y coherencia",
+        "level": "avanzado",
+        "reviewStatus": "editorial-draft",
+        "context": "Un informe afirma que ocho de diez estudiantes encuestados prefirieron clases presenciales y que solo se consultó a un grupo.",
+        "prompt": "Clasifica cada afirmación según la información del informe.",
+        "labels": [
+          "Información indicada directamente",
+          "Deducción a partir de la información",
+          "No se puede concluir"
+        ],
+        "items": [
+          {
+            "text": "Se consultó a un solo grupo.",
+            "answer": 0
+          },
+          {
+            "text": "Más de la mitad de los encuestados prefirió clases presenciales.",
+            "answer": 1
+          },
+          {
+            "text": "Todos los estudiantes del país prefieren clases presenciales.",
+            "answer": 2
+          }
+        ],
+        "explanation": "El alcance está expresado; ocho de diez supera la mitad; el país completo no fue consultado según el informe."
+      }
+    },
+    {
+      "id": "co-sa-p2",
+      "hash_original": "3517f54d7cd9fa6e389d7c5cdf6a16d1cb5c4cf64e61d446b11f70506d4b14fb",
+      "hash_propuesta": "a25fa1bd4236d689c7d8ce5df4718a7f01be35d3fc49bca93c2afd15407f6bd1",
+      "estado": "CUARENTENA",
+      "pendientes": [
+        "revisión de respuesta y alternativas",
+        "independencia y familia",
+        "integración",
+        "revisión docente"
+      ],
+      "item": {
+        "id": "co-sa-p2",
+        "kind": "construir",
+        "subtopic": "Sinónimos y antónimos",
+        "level": "principiante",
+        "reviewStatus": "editorial-draft",
+        "context": "Una niña busca una palabra que signifique lo contrario de «lleno».",
+        "prompt": "Ordena los pasos para encontrar y verificar el antónimo.",
+        "pieces": [
+          "Reconoce que «lleno» indica que no queda espacio libre en el recipiente.",
+          "Propone «vacío» como palabra de sentido contrario.",
+          "Comprueba que el objeto sin contenido puede describirse como vacío."
+        ],
+        "explanation": "Lleno indica que la capacidad está ocupada; vacío indica ausencia de contenido."
+      }
+    },
+    {
+      "id": "co-ms-i2",
+      "hash_original": "7f0f630645678225c9d03de2dab5ee87b5cb62817589a440d88a81712a14912d",
+      "hash_propuesta": "51638eaaa2f49cc9c29922f582060e8bd7239e1998e48d19beb9290224df4db7",
+      "estado": "CUARENTENA",
+      "pendientes": [
+        "revisión de respuesta y alternativas",
+        "independencia y familia",
+        "integración",
+        "revisión docente"
+      ],
+      "item": {
+        "id": "co-ms-i2",
+        "kind": "construir",
+        "subtopic": "Morfosintaxis",
+        "level": "intermedio",
+        "reviewStatus": "editorial-draft",
+        "context": "Una guía muestra un sendero a las visitantes durante un recorrido.",
+        "prompt": "Ordena sujeto, verbo con complemento directo y destinatarias.",
+        "pieces": [
+          "La guía",
+          "muestra el sendero",
+          "a las visitantes."
+        ],
+        "explanation": "La guía es sujeto; el sendero es lo mostrado; a las visitantes identifica destinatarias."
+      }
+    }
+  ]
+}

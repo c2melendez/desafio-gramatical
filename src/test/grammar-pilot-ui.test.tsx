@@ -11,7 +11,10 @@ afterEach(()=>{cleanup();localStorage.clear();});
 describe("práctica gramatical inicial",()=>{
  it("muestra una pregunta, registra la respuesta y ofrece retroalimentación",()=>{
   render(<GrammarPilot subtema="Morfosintaxis" nivel="intermedio"/>);
-  const q=grammarPilotPool("Morfosintaxis","intermedio").find(x=>screen.queryByText(x.question));
+  // Varias preguntas comparten enunciado; el pasaje identifica el estímulo mostrado.
+  const matches=grammarPilotPool("Morfosintaxis","intermedio").filter(x=>screen.queryByText(x.passage)&&screen.queryByText(x.question));
+  expect(matches).toHaveLength(1);
+  const q=matches[0];
   expect(q).toBeDefined();
   fireEvent.click(screen.getByRole("button",{name:q!.options[q!.answer]}));
   expect(screen.getByText(q!.explanation)).toBeTruthy();

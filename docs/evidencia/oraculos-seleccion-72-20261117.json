@@ -1,0 +1,586 @@
+{
+  "version": 1,
+  "fuentes": {
+    "main": "14398e47a8644d694041f62cf800a956e0b5c2bf",
+    "pr1": "e1b22cddc81e49e3c68d9103cd547abf851d99a1"
+  },
+  "metodo": "Selección editorial automática: respuesta elegida por lectura del estímulo y opciones; no certifica unicidad ni revisión docente.",
+  "respuestas": [
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-1",
+      "respuesta_textual": "breve",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-2",
+      "respuesta_textual": "dificulta",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-3",
+      "respuesta_textual": "posponer",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-4",
+      "respuesta_textual": "intensa",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-5",
+      "respuesta_textual": "Parece razonable, sin estar demostrada.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-6",
+      "respuesta_textual": "figurada",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-7",
+      "respuesta_textual": "sobrio en el gasto",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-8",
+      "respuesta_textual": "unívoco",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-9",
+      "respuesta_textual": "permanente",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-10",
+      "respuesta_textual": "débil",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-11",
+      "respuesta_textual": "Propone mejoras fundamentadas.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-12",
+      "respuesta_textual": "Introduce una precisión que limita su alcance.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-13",
+      "respuesta_textual": "Además",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-14",
+      "respuesta_textual": "por eso",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-15",
+      "respuesta_textual": "A la autora",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-16",
+      "respuesta_textual": "En cambio",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-17",
+      "respuesta_textual": "La muestra no permite generalizar por sí sola a toda la ciudad.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-18",
+      "respuesta_textual": "Al nivel del río",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-19",
+      "respuesta_textual": "Luego comparó los resultados obtenidos por ambos grupos.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-20",
+      "respuesta_textual": "Sin embargo",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-21",
+      "respuesta_textual": "Mejorar las aceras",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-22",
+      "respuesta_textual": "No puede atribuirse toda la caída a una sola causa con esos datos.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-23",
+      "respuesta_textual": "Ordenar las etapas del procedimiento.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-24",
+      "respuesta_textual": "Se ubicaron",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-25",
+      "respuesta_textual": "lista",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-26",
+      "respuesta_textual": "las muestras",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-27",
+      "respuesta_textual": "los ingenieros",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-28",
+      "respuesta_textual": "tiene",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-29",
+      "respuesta_textual": "Complemento directo de «solicitó»",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-30",
+      "respuesta_textual": "al comité",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-31",
+      "respuesta_textual": "Ni la directora ni los docentes",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-32",
+      "respuesta_textual": "Atributo del sujeto",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-33",
+      "respuesta_textual": "Tiempo",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-34",
+      "respuesta_textual": "la exposición",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-35",
+      "respuesta_textual": "Complemento directo de «explicó»",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "main",
+      "id": "grammar-completion-quiz-36",
+      "respuesta_textual": "los resultados del concurso",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-1",
+      "respuesta_textual": "reducido",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-2",
+      "respuesta_textual": "insuficiente",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-3",
+      "respuesta_textual": "resguardar",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-4",
+      "respuesta_textual": "aceptó",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-5",
+      "respuesta_textual": "Extenderse a situaciones no estudiadas",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-6",
+      "respuesta_textual": "Débilmente sustentado",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-7",
+      "respuesta_textual": "Que se aparta de lo habitual",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-8",
+      "respuesta_textual": "La confirmó con información adicional",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-9",
+      "respuesta_textual": "No relacionada con esa necesidad",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-10",
+      "respuesta_textual": "Que duda de la afirmación",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-11",
+      "respuesta_textual": "incluye",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-12",
+      "respuesta_textual": "rechazada",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-13",
+      "respuesta_textual": "A lo respondido en las entrevistas",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-14",
+      "respuesta_textual": "por ello",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-15",
+      "respuesta_textual": "Una acción complementaria de capacitación",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-16",
+      "respuesta_textual": "pero",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-17",
+      "respuesta_textual": "Refleja las opiniones recogidas entre asistentes",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-18",
+      "respuesta_textual": "Depende de una evaluación posterior",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-19",
+      "respuesta_textual": "Se comprobará el procedimiento antes de concluir por qué variaron.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-20",
+      "respuesta_textual": "A la reparación del puente",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-21",
+      "respuesta_textual": "La ampliación se propone reconociendo sus necesidades de personal.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-22",
+      "respuesta_textual": "Las lluvias también fueron inferiores al promedio en mayo.",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-23",
+      "respuesta_textual": "El otro método de estudio",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-24",
+      "respuesta_textual": "Una concesión sobre el tamaño de las diferencias",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-25",
+      "respuesta_textual": "aparece",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-26",
+      "respuesta_textual": "los trabajos",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-27",
+      "respuesta_textual": "ocuparon",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-28",
+      "respuesta_textual": "vecindario",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-29",
+      "respuesta_textual": "las representantes del equipo",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-30",
+      "respuesta_textual": "Complemento directo de entregó",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-31",
+      "respuesta_textual": "Complemento directo de preguntó",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-32",
+      "respuesta_textual": "las actas",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-33",
+      "respuesta_textual": "requiere",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-34",
+      "respuesta_textual": "Complemento directo",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-35",
+      "respuesta_textual": "a las familias",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    },
+    {
+      "rama": "pr1",
+      "id": "seleccion-final-36",
+      "respuesta_textual": "Complemento directo de desea",
+      "decision": "PROPUESTA_AUTOMATICA",
+      "unicidad": "INCONCLUSA",
+      "docente": "PENDIENTE"
+    }
+  ]
+}
