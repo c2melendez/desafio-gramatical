@@ -6,7 +6,7 @@ from pathlib import Path
 
 STAGES = {"M0": 0, "M1": 1, "M2": 2, "M3": 3, "CORTE": 4, "M4": 5}
 
-def validate(data):
+def validate(data, require_complete=False):
     errors = []
     areas = data.get("areas", [])
     if len(areas) != len(set(areas)):
@@ -59,6 +59,17 @@ def validate(data):
                 matches = [p.get("id") for p in cuts if p.get("area") == declared_area]
                 if len(matches) != 1 or matches[0] not in required:
                     errors.append(f"{mid}: falta corte obligatorio de {declared_area}")
+    if require_complete:
+        if len([m for m in modules if m.get("stage") == "M4"]) != 1:
+            errors.append("se requiere exactamente un M4")
+        expected = {"M1", "M2", "M3", "CORTE"}
+        for declared_area in areas:
+            actual = {m.get("stage") for m in modules if m.get("area") == declared_area}
+            for missing in sorted(expected - actual):
+                errors.append(f"{declared_area}: falta etapa {missing}")
+        for m in modules:
+            if m.get("stage") in {"M0", "M4"} and m.get("area") is not None:
+                errors.append(f"{m.get('id')}: módulo global con área")
     visiting, done = set(), set()
     def visit(mid):
         if mid in visiting:
@@ -78,7 +89,7 @@ def validate(data):
 if __name__ == "__main__":
     try:
         data = json.loads(Path(sys.argv[1] if len(sys.argv) > 1 else "docs/modulos-phuma.json").read_text(encoding="utf-8"))
-        errors = validate(data)
+        errors = validate(data, require_complete=True)
     except (OSError, ValueError, TypeError, KeyError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         sys.exit(2)
