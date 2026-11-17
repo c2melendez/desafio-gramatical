@@ -32,7 +32,7 @@ for(const item of all){
       issues.push({id:item.id,rule:"construcción/distractor inválido"});
   }
  }
- const question=normalize(item.question||item.prompt);
+ const question=normalize([item.passage,item.question||item.prompt,item.options?.join("|"),item.items?.map(x=>x.text).join("|"),item.tiles?.map(x=>x.text).join("|")].filter(Boolean).join("|"));
  const key=item.subtopic+'|'+(item.options?'quiz':item.kind)+'|'+question;
  if(footprints.has(key))issues.push({id:item.id,rule:"consigna normalizada duplicada",similar_to:footprints.get(key)});
  else footprints.set(key,item.id);
