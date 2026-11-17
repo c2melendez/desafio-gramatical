@@ -1,3 +1,4 @@
+import {distributeAnswer} from "./answer-position";
 import type {Level} from "./grammar";
 import type {ClassificationActivity,ConstructionActivity} from "./grammar-activities";
 import {FIGURE_CONTEXTS} from "./m1-figuras-contexts";
@@ -25,7 +26,8 @@ const genres=["Narrativo","Lírico","Dramático","Ensayístico"];
 function quiz(id:string,subtopic:LiteratureTopic,lev:Level,passage:string,question:string,choices:string[],explanation:string,goal:string,family:string):LiteratureQuiz{
  const options=uniq(choices);
  if(options.length!==4)throw new Error("Opciones duplicadas para "+id);
- return {id,subtopic,level:lev,passage,question,options:options as [string,string,string,string],answer:0,
+ const ordered=distributeAnswer(id,options,0);
+ return {id,subtopic,level:lev,passage,question,options:ordered.options as [string,string,string,string],answer:ordered.answer as 0|1|2|3,
  explanation,...meta(family,goal)};
 }
 function cls(id:string,subtopic:LiteratureTopic,lev:Level,prompt:string,labelA:string,labelB:string,textA:string,textB:string,expA:string,expB:string,goal:string,family:string):ClassificationActivity{
