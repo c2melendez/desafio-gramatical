@@ -14,7 +14,7 @@ import {ELISION_EDITOR_CASES,type ElisionEditorCase} from "./elision-editor-case
 import {GENERALIZATION_ERROR_CASES,type GeneralizationErrorCase} from "./generalization-error-cases";
 import {GENERALIZATION_CHOICE_CASES,type GeneralizationChoiceCase} from "./generalization-choice-cases";
 import {GENERALIZATION_EDITOR_CASES,type GeneralizationEditorCase} from "./generalization-editor-cases";
-import {readRotation,rotationKey,selectRotation} from "./rotation";
+import {readRotation,rotationKey,selectRotation,writeRotation,type RotationState} from "./rotation";
 export const WRITING_SUBTOPICS = ["Corrección","Conectores","Organización textual","Elisión y adición","Generalización e integración"] as const;
 export type WritingSubtopic = typeof WRITING_SUBTOPICS[number];
 export const ERROR_TYPES=["Concordancia","Redundancia","Acentuación","Precisión","Ortografía","Ambigüedad","Generalización injustificada","Puntuación","Conector inadecuado","Relación lógica inválida","Inferencia injustificada","Orden temporal","Coherencia temática","Estructura argumentativa","Organización de la comparación","Contradicción argumentativa","Jerarquización de evidencias","Referencia ambigua","Información omitida","Sesgo de selección","Integración imprecisa"] as const;
@@ -597,7 +597,7 @@ export const WRITING_BANK:WritingChallenge[]=SEEDS.flatMap((seed,s)=>{
 });
 export type WritingItem=WritingChallenge|ConnectorCase|ConnectorErrorCase|ConnectorEditorCase|CorrectionErrorCase|CorrectionChoiceCase|CorrectionEditorCase|OrganizationErrorCase|OrganizationChoiceCase|OrganizationEditorCase|ElisionErrorCase|ElisionChoiceCase|ElisionEditorCase|GeneralizationErrorCase|GeneralizationChoiceCase|GeneralizationEditorCase;
 export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
- const initial:WritingItem[]=WRITING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
+ const initial:WritingItem[]=WRITING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic).map(q=>({...q,id:q.id+"--"+mode}));
  if(subtopic==="Conectores"){
   if(mode==="quiz")initial.push(...CONNECTOR_CASES.filter(q=>q.level===level));
   if(mode==="clasificar")initial.push(...CONNECTOR_ERROR_CASES.filter(q=>q.level===level));
@@ -625,10 +625,22 @@ export function writingPool(level:Level,subtopic:WritingSubtopic,mode:Mode):Writ
  }
  return initial;
 }
+/** Convierte identificadores compartidos de los casos semilla sin perder rotaciones guardadas. */
+export function migrateWritingState(state:RotationState,ids:readonly string[],mode:Mode):RotationState{
+ const valid=new Set(ids);
+ const convert=(old:string)=>valid.has(old)?old:valid.has(old+"--"+mode)?old+"--"+mode:null;
+ const clean=(items:string[])=>[...new Set(items.map(convert).filter((x):x is string=>x!==null))];
+ return {version:1,seen:clean(state.seen),incorrect:clean(state.incorrect),last:clean(state.last)};
+}
 export function writingItems(level:Level,subtopic:WritingSubtopic,mode:Mode):WritingItem[]{
  const pool=writingPool(level,subtopic,mode);
  const key=rotationKey("espanol","Redacción",subtopic,mode,level);
- return selectRotation(pool,readRotation(key,pool.map(q=>q.id)),Math.min(10,pool.length));
+ const ids=pool.map(q=>q.id);
+ const legacyIds=pool.filter(q=>q.id.endsWith("--"+mode)).map(q=>q.id.slice(0,-(mode.length+2)));
+ const raw=readRotation(key,[...ids,...legacyIds]);
+ const migrated=migrateWritingState(raw,ids,mode);
+ if(JSON.stringify(raw)!==JSON.stringify(migrated))writeRotation(key,migrated);
+ return selectRotation(pool,migrated,Math.min(10,pool.length));
 }
 export function checkWritingSequence(parts:readonly string[],sequence:readonly number[]){
  return sequence.length===parts.length&&new Set(sequence).size===parts.length&&sequence.every((id,i)=>id===i);
