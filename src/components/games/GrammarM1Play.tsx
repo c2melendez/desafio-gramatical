@@ -57,6 +57,7 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
   <Link to="/" className="underline">← Menú</Link>
   <h1 className="text-2xl font-black">{subtema}</h1>
   <p>{modo==="construir"?"Construcción":"Clasificación"} · Pregunta {index+1} de {items.length} · {nivel}</p>
+  <p role="note" className="text-sm text-muted-foreground">Material de práctica original con comprobación técnica; revisión académica pendiente. No es un examen PHUMA oficial.</p>
   {item.kind==="construction"?<GrammarConstruction key={item.id} item={item} onResult={onResult} onNext={onNext}/>:
   <GrammarClassification key={item.id} item={item} onResult={onResult} onNext={onNext}/>}
  </main>;
