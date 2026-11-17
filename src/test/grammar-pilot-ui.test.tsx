@@ -16,6 +16,6 @@ describe("práctica gramatical inicial",()=>{
   fireEvent.click(screen.getByRole("button",{name:q!.options[q!.answer]}));
   expect(screen.getByText(q!.explanation)).toBeTruthy();
   fireEvent.click(screen.getByRole("button",{name:"Siguiente"}));
-  expect(screen.getByText("Pregunta 2 de 5 · Intermedio")).toBeTruthy();
+  expect(screen.getByText("Pregunta 2 de 8 · Intermedio")).toBeTruthy();
  });
 });

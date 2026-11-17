@@ -4,9 +4,9 @@ Acordada el 16 de noviembre de 2026. El propósito es preparar para PHUMA; el ni
 
 ## Reglas de ejecución
 
-Mantener el tema hasta completar sus subtemas y trabajar grupos de hasta tres. La meta es aproximadamente 324 ejercicios nuevos por corrida, con identificadores estables, retroalimentación, contextos propios por mecánica y estado de borrador editorial. Antes de declarar una corrida terminada se exige auditoría aprobada, CI success y Render Live del mismo commit. Registrar discrepancias, cobertura inicial y final; cantidad no equivale a validación pedagógica.
+Mantener el tema hasta completar sus subtemas y trabajar grupos de hasta tres. Para tres subtemas desde cero, la meta es **405 ejercicios nuevos en una sola corrida**, 135 por subtema: 10 básicos, 15 intermedios y 20 avanzados en cada uno de los tres juegos. Si hay contenido previo verificable, añadir solo lo necesario para completar el núcleo. Si faltan menos de tres subtemas, ajustar el alcance sin mezclar temas.
 
-En subtemas sin contenido, el primer núcleo 10/15/20 exige 135 ejercicios por subtema (45 por juego). Tres subtemas necesitan 405, no 324: la primera corrida puede aportar 324 (7/12/17 por juego y subtema) y una corrida de cierre aporta 81 (3/3/3). Si el grupo o la línea base es distinto, ajustar las cifras sin rellenar artificialmente la cuota. Completar cada grupo antes de cambiar de subtemas.
+Exigir identificadores estables, retroalimentación contextual, contenidos diferenciados por mecánica y estado de borrador editorial. Una corrida solo se declara terminada con auditoría aprobada, CI success y Render Live del mismo commit. Registrar línea base y cobertura final. Cantidad no equivale a validación pedagógica.
 
 ## Fase A — secuencia hasta el primer núcleo
 

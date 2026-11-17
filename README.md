@@ -10,7 +10,7 @@ Plataforma independiente para practicar mediante juegos las competencias que se 
 
 ## Política de corridas ampliadas
 
-Se adopta una meta aproximada de **tres subtemas pendientes por corrida, equivalentes a 324 ejercicios nuevos**. La prioridad es **terminar los subtemas del tema actual antes de cambiar de tema**. Una corrida solo se declara completa después de **GitHub Actions success y despliegue Render Live en el mismo commit**, con auditoría aprobada. Si quedan menos de tres subtemas en el tema, se informa un bloque menor, sin trasladar trabajo de otra área para simular la cuota. Véanse [política operativa](docs/politica-corridas-bloques.md), [hoja de ruta por subtema](docs/hoja-ruta-expansion-phuma.md) e [informe del primer bloque](docs/corrida-bloque-lectura-324.md).
+Se adopta una meta aproximada de **tres subtemas pendientes por corrida: 405 ejercicios nuevos si parten de cero**, para completar 10/15/20 en cada juego. La prioridad es **terminar los subtemas del tema actual antes de cambiar de tema**. Una corrida solo se declara completa después de **GitHub Actions success y despliegue Render Live en el mismo commit**, con auditoría aprobada. Si quedan menos de tres subtemas en el tema, se informa un bloque menor, sin trasladar trabajo de otra área para simular la cuota. Véanse [política operativa](docs/politica-corridas-bloques.md), [hoja de ruta por subtema](docs/hoja-ruta-expansion-phuma.md) e [informe del primer bloque](docs/corrida-bloque-lectura-324.md).
 
 ## Fase A — ampliación verificable
 

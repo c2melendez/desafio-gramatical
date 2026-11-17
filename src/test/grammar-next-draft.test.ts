@@ -4,11 +4,11 @@ import { GRAMMAR_NEXT_DRAFT, grammarPilotPool } from "@/lib/grammar-next-draft";
 
 describe("borrador del siguiente bloque gramatical",()=>{
  it("conserva identificadores, niveles, opciones y explicaciones verificables",()=>{
-  expect(GRAMMAR_NEXT_DRAFT).toHaveLength(45);
-  expect(new Set(GRAMMAR_NEXT_DRAFT.map(q=>q.id)).size).toBe(45);
+  expect(GRAMMAR_NEXT_DRAFT).toHaveLength(72);
+  expect(new Set(GRAMMAR_NEXT_DRAFT.map(q=>q.id)).size).toBe(72);
   for(const subtopic of ["Sinónimos y antónimos","Cohesión y coherencia","Morfosintaxis"]){
    for(const level of ["principiante","intermedio","avanzado"]){
-    expect(GRAMMAR_NEXT_DRAFT.filter(q=>q.subtopic===subtopic&&q.level===level)).toHaveLength(5);
+    expect(GRAMMAR_NEXT_DRAFT.filter(q=>q.subtopic===subtopic&&q.level===level)).toHaveLength(8);
    }
   }
   for(const q of GRAMMAR_NEXT_DRAFT){
@@ -22,8 +22,8 @@ describe("borrador del siguiente bloque gramatical",()=>{
  it("contabiliza solo la modalidad jugable y mantiene los bancos separados",()=>{
   for(const topic of ["Sinónimos y antónimos","Cohesión y coherencia","Morfosintaxis"]){
    for(const level of ["principiante","intermedio","avanzado"] as const){
-    expect(grammarPilotPool(topic,level)).toHaveLength(5);
-    expect(countContent("espanol","Gramática y semántica",topic,"quiz",level)).toBe(5);
+    expect(grammarPilotPool(topic,level)).toHaveLength(8);
+    expect(countContent("espanol","Gramática y semántica",topic,"quiz",level)).toBe(8);
     expect(countContent("espanol","Gramática y semántica",topic,"clasificar",level)).toBe(0);
     expect(countContent("espanol","Gramática y semántica",topic,"construir",level)).toBe(0);
    }
