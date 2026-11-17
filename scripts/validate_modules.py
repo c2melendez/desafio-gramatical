@@ -12,16 +12,26 @@ def validate(data):
     if len(areas) != len(set(areas)):
         errors.append("áreas duplicadas")
     modules = data.get("modules", [])
+    if not modules:
+        errors.append("catálogo sin módulos")
     ids = [m.get("id") for m in modules]
     if any(not isinstance(i, str) or not i for i in ids) or len(ids) != len(set(ids)):
         errors.append("ID vacío o duplicado")
     by_id = {m.get("id"): m for m in modules}
+    m0s = [m for m in modules if m.get("stage") == "M0"]
+    if len(m0s) != 1 or m0s[0].get("area") is not None:
+        errors.append("se requiere un único M0 sin área")
+    pairs = [(m.get("area"), m.get("stage")) for m in modules if m.get("stage") in ("M1", "M2", "M3", "CORTE")]
+    if len(pairs) != len(set(pairs)):
+        errors.append("etapa duplicada en la misma área")
     for m in modules:
         mid, stage, area = m.get("id"), m.get("stage"), m.get("area")
         if stage not in STAGES:
             errors.append(f"{mid}: etapa inválida")
         if area is not None and area not in areas:
             errors.append(f"{mid}: área no declarada")
+        if stage in ("M1", "M2", "M3", "CORTE") and area is None:
+            errors.append(f"{mid}: etapa sin área")
         required = m.get("required", [])
         optional = m.get("optional", [])
         if len(set(required)) != len(required) or len(set(optional)) != len(optional) or set(required) & set(optional):
@@ -29,12 +39,24 @@ def validate(data):
         for dep in required + optional:
             if dep == mid or dep not in by_id:
                 errors.append(f"{mid}: dependencia inválida {dep}")
-            elif dep in required:
+            else:
                 parent = by_id[dep]
                 if stage in STAGES and parent.get("stage") in STAGES and STAGES[parent["stage"]] >= STAGES[stage]:
                     errors.append(f"{mid}: etapas fuera de orden")
                 if parent.get("area") not in (None, area) and parent.get("stage") != "CORTE":
                     errors.append(f"{mid}: dependencia de otra área sin corte")
+        predecessor = {"M1": "M0", "M2": "M1", "M3": "M2", "CORTE": "M3"}.get(stage)
+        if predecessor:
+            candidates = [p.get("id") for p in modules if p.get("stage") == predecessor and
+                          (predecessor == "M0" or p.get("area") == area)]
+            if len(candidates) != 1 or candidates[0] not in required:
+                errors.append(f"{mid}: falta dependencia obligatoria {predecessor}")
+        if stage == "M4":
+            cuts = [p for p in modules if p.get("stage") == "CORTE"]
+            for declared_area in areas:
+                matches = [p.get("id") for p in cuts if p.get("area") == declared_area]
+                if len(matches) != 1 or matches[0] not in required:
+                    errors.append(f"{mid}: falta corte obligatorio de {declared_area}")
     visiting, done = set(), set()
     def visit(mid):
         if mid in visiting:
