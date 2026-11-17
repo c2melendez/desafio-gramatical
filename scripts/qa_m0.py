@@ -63,7 +63,7 @@ def main():
         run_stage('dependencias_completas', ['bun','audit']),
         run_stage('seguridad_mutaciones_fixture', ['node','scripts/security-client-audit.mjs','--test']),
         run_stage('seguridad_y_privacidad', ['node','scripts/privacy-m0-static.mjs']),
-        run_stage('verificador_independiente_de_estado', ['python3','scripts/verify_state.py','--baseline']),
+        run_stage('verificador_independiente_de_estado', ['python3','scripts/verify_state.py','--closure']),
     ]
     try:
         revision = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
