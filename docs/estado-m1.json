@@ -7,7 +7,7 @@
   "required": [
     "M0"
   ],
-  "prev_main": "ed0c764471cc942b996f83b400d1c396cf2a01b6",
+  "prev_main": "2c2f6e8170089a45ba76b905fb76e6e50c4f6ccd",
   "source": "docs/modulos-phuma.json",
   "objetivo_por_celda": {
     "principiante": 10,
@@ -22,8 +22,8 @@
       "Morfosintaxis"
     ],
     "meta_registros_tecnicos": 405,
-    "presentes_tecnicos": 225,
-    "deficit_tecnico_nucleo": 180,
+    "presentes_tecnicos": 405,
+    "deficit_tecnico_nucleo": 0,
     "por_subtema": {
       "Sinónimos y antónimos": {
         "quiz": {
@@ -37,9 +37,9 @@
           "avanzado": 20
         },
         "construir": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         }
       },
       "Cohesión y coherencia": {
@@ -54,9 +54,9 @@
           "avanzado": 20
         },
         "construir": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         }
       },
       "Morfosintaxis": {
@@ -66,18 +66,24 @@
           "avanzado": 20
         },
         "clasificar": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         },
         "construir": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         }
       }
     },
-    "advertencia": "No confundir 225 registros técnicos con ítems pedagógicamente aceptados ni aceptar automáticamente los 36 borradores del PR #1."
+    "advertencia": "405 registros técnicos en rama y con ruta; aceptación de independencia, revisión docente, CI del SHA final y Render todavía pendientes. No declarar módulo M1 COMPLETADA.",
+    "nuevos_en_rama": 180,
+    "incremento_niveles": {
+      "principiante": 40,
+      "intermedio": 60,
+      "avanzado": 80
+    }
   },
   "validaciones_obligatorias": [
     "contratos_datos_y_oraculos",
@@ -90,7 +96,10 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "Reconciliar 36 ítems PR #1 contra main por ID/estímulo/clave; completar 180 registros faltantes del primer bloque con familias cognitivas diferenciadas y doble oráculo, conectar UI, ejecutar QA y CI/Render Live del mismo SHA antes de entregar M1.",
+  "siguiente_accion": "Auditar 180 ejercicios en PR #6 con oráculos, semántica y duplicaciones; ejecutar regresión y CI final; luego publicar solo si están aprobados controles y Render Live mismo SHA. M1 de Español abarca otros subtemas y continúa abierto.",
   "dependencia_estado": "COMPLETADA",
-  "fase_actual": "M1_LINEA_BASE_Y_COTEJO_EDITORIAL"
+  "fase_actual": "M1_RAMA_INTEGRADA_VALIDACION_CI",
+  "pr": 6,
+  "rama_trabajo": "work/m1-grammar-nucleus-20261117",
+  "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json"
 }
