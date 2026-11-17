@@ -3,7 +3,7 @@
   "modulo": "espanol-M1",
   "area": "espanol",
   "etapa": "M1",
-  "estado": "BLOQUEADO_DEPENDENCIA",
+  "estado": "EN_CURSO",
   "required": [
     "M0"
   ],
@@ -90,5 +90,7 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "Activar M1 tras cierre verificable de M0, reconciliar PR #1 por IDs y similitud, generar 180 ítems cognitivos realmente diferenciados y validar cada juego en tres niveles."
+  "siguiente_accion": "Reconciliar 36 ítems PR #1 contra main por ID/estímulo/clave; completar 180 registros faltantes del primer bloque con familias cognitivas diferenciadas y doble oráculo, conectar UI, ejecutar QA y CI/Render Live del mismo SHA antes de entregar M1.",
+  "dependencia_estado": "COMPLETADA",
+  "fase_actual": "M1_LINEA_BASE_Y_COTEJO_EDITORIAL"
 }
