@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import { check } from './review-draft-grammar.mjs';
+const base={id:'a',context:'texto',prompt:'clasifica',explanation:'razón',subtopic:'tema',level:'intermedio',kind:'clasificar',labels:['A','B'],items:[{text:'x',answer:0}]};
+assert.deepEqual(check(base),[]);
+assert.ok(check({...base,items:[{text:'x',answer:2}]}).length);
+assert.ok(check({...base,labels:['A',' a ']}).length);
+assert.ok(check({...base,items:[{text:'x',answer:0},{text:' X ',answer:1}]}).length);
+assert.ok(check({...base,kind:'construir',pieces:['uno',' UNO ']}).length);
+assert.ok(check({...base,level:'experto'}).length);
+assert.ok(check({...base,kind:'otro'}).length);
+console.log('Validación estructural y seis casos negativos: PASS');
