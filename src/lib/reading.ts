@@ -2,6 +2,9 @@ import type {Level,Mode} from "./grammar";
 import {MAIN_IDEA_CHOICE_CASES,type MainIdeaChoiceCase} from "./main-idea-choice-cases";
 import {MAIN_IDEA_DETECTIVE_CASES,type MainIdeaDetectiveCase} from "./main-idea-detective-cases";
 import {MAIN_IDEA_RECONSTRUCT_CASES,type MainIdeaReconstructCase} from "./main-idea-reconstruct-cases";
+import {INFERENCE_DETECTIVE_CASES,type InferenceDetectiveCase} from "./inference-detective-cases";
+import {INFERENCE_CHOICE_CASES,type InferenceChoiceCase} from "./inference-choice-cases";
+import {INFERENCE_RECONSTRUCT_CASES,type InferenceReconstructCase} from "./inference-reconstruct-cases";
 import {readRotation,rotationKey,selectRotation} from "./rotation";
 export const READING_SUBTOPICS = ["Idea principal","Inferencias","Lectura crítica","Vocabulario en contexto","Análisis de textos","Lectura comparada","Lenguaje figurado"] as const;
 export type ReadingSubtopic = typeof READING_SUBTOPICS[number];
@@ -214,7 +217,7 @@ export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>REA
  order:{parts:seed.steps,hint:"Organiza un razonamiento: observa, contrasta y concluye.",explanation:"Un análisis sólido comienza localizando los datos, examina sus limitaciones y termina con una conclusión justificada."}
  };
 }));
-export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase;
+export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase;
 export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):ReadingItem[]{
  if(!READING_SUBTOPICS.includes(subtopic))return [];
  const items:ReadingItem[]=READING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
@@ -222,6 +225,11 @@ export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):Read
   if(mode==="quiz")items.push(...MAIN_IDEA_CHOICE_CASES.filter(q=>q.level===level));
   if(mode==="clasificar")items.push(...MAIN_IDEA_DETECTIVE_CASES.filter(q=>q.level===level));
   if(mode==="construir")items.push(...MAIN_IDEA_RECONSTRUCT_CASES.filter(q=>q.level===level));
+ }
+ if(subtopic==="Inferencias"){
+  if(mode==="clasificar")items.push(...INFERENCE_DETECTIVE_CASES.filter(q=>q.level===level));
+  if(mode==="quiz")items.push(...INFERENCE_CHOICE_CASES.filter(q=>q.level===level));
+  if(mode==="construir")items.push(...INFERENCE_RECONSTRUCT_CASES.filter(q=>q.level===level));
  }
  return items;
 }
