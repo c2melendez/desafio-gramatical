@@ -4,7 +4,7 @@ import {MAIN_IDEA_DETECTIVE_CASES} from "@/lib/main-idea-detective-cases";
 import {MAIN_IDEA_RECONSTRUCT_CASES} from "@/lib/main-idea-reconstruct-cases";
 import {READING_BANK,READING_SUBTOPICS,readingPool as m1SourceReadingPool,readingItems} from "@/lib/reading";
 
-const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-"));
+const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-")&&!q.id.startsWith("m3-"));
 import {countContent,coverageTotals,CONTENT_STAGE_ONE} from "@/lib/coverage";
 import {recordRotation,emptyRotation,selectRotation,rotationKey} from "@/lib/rotation";
 
