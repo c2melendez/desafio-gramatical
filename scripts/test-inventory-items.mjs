@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import { auditIds,inventoryItems } from './inventory-items.mjs';
+assert.equal(auditIds([{id:'a'},{id:'b'}],2).matches,true);
+assert.equal(auditIds([{id:'a'},{id:'a'}],2).matches,false);
+assert.deepEqual(auditIds([{id:'a'},{id:'a'}],2).duplicated_ids,['a']);
+assert.equal(auditIds([{id:'a'}],2).matches,false);
+assert.deepEqual(auditIds([{id:''}],1).invalid_indices,[0]);
+const data=inventoryItems();
+assert.equal(data.summary.cells,810);
+assert.equal(data.summary.declared,2006);
+assert.equal(data.summary.observed,2006);
+assert.equal(data.summary.failed_cells,0);
+console.log('PASS inventario de 810 celdas y 2006 ítems, con casos negativos');
