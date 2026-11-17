@@ -5,7 +5,7 @@
 ## Objetivo vinculante de cada corrida de ampliación
 
 1. Trabajar en **tres subtemas pendientes del mismo tema** por corrida, completándolos antes de comenzar otro tema. El objetivo aproximado es **324 ejercicios nuevos**: 108 por subtema, 36 originales y propios por juego.
-2. Por cada juego/subtema/nivel, aportar **7 básicos, 12 intermedios y 17 avanzados nuevos**, además de los tres previos, hasta el núcleo **10/15/20**, sin contar varias modalidades de un mismo pasaje como textos independientes.
+2. Para subtemas con tres ejercicios previos por nivel y juego, aportar **7/12/17** hasta el núcleo **10/15/20**. Si parten de cero, aportar **7/12/17** en el primer bloque y **3/3/3** en uno de cierre. Consultar la [hoja de ruta aprobada](hoja-ruta-expansion-phuma.md). No contar varias modalidades de un mismo pasaje como textos independientes.
 3. La cifra de ejercicios y el alcance varían si un subtema ya tiene contenido superior al punto de partida, si faltan subtemas en el tema o si una auditoría editorial obliga a rehacer material. Registrar de forma explícita la desviación respecto a 324 y la causa.
 4. Cada ejercicio debe tener **ID estable, competencia explícita en la mecánica, respuesta validable, retroalimentación contextual, nivel y borrador editorial**, además de textos/distractores diferentes entre juegos. Validar unicidad real de textos y alternativas, no solo IDs.
 5. Integrar los bancos en rutas, rotación, cobertura y UI; no atribuir preguntas de un juego a otro. Mantener historial local y compatibilidad de partidas previas.

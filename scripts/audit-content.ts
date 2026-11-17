@@ -1,3 +1,5 @@
+import {GRAMMAR_ADVANCED_SENTENCES,GRAMMAR_NUCLEUS_BUILD} from "../src/lib/grammar-nucleus";
+import {checkBuild} from "../src/lib/grammar";
 import {coverageRows,coverageTotals,CONTENT_TARGET,CONTENT_STAGE_ONE} from "../src/lib/coverage";
 import {CONNECTOR_CASES} from "../src/lib/connector-cases";
 import {CONNECTOR_ERROR_CASES} from "../src/lib/connector-error-cases";
@@ -33,6 +35,13 @@ const levels=["principiante","intermedio","avanzado"] as const;
 const target={principiante:10,intermedio:15,avanzado:20};
 const rows=coverageRows(),totals=coverageTotals();
 const failures:string[]=[];
+const grammarNew=[...GRAMMAR_ADVANCED_SENTENCES,...GRAMMAR_NUCLEUS_BUILD.intermedio,...GRAMMAR_NUCLEUS_BUILD.avanzado];
+if(grammarNew.length!==18||new Set(grammarNew.map(x=>x.id)).size!==18||grammarNew.some(x=>x.reviewStatus!=="editorial-draft")) failures.push("Banco gramatical nuevo inválido");
+for(const item of [...GRAMMAR_NUCLEUS_BUILD.intermedio,...GRAMMAR_NUCLEUS_BUILD.avanzado]){
+ const chosen=item.solutions[0].split(" ").map(w=>item.tiles.find(t=>t.w===w));
+ if(chosen.some(x=>!x)||!checkBuild(item,chosen as typeof item.tiles).ok)failures.push("Construcción gramatical inválida: "+item.id);
+}
+
 for(const level of levels){
  for(const subtopic of ["Conectores","Corrección","Organización textual","Elisión y adición","Generalización e integración"] as const)for(const mode of ["clasificar","quiz","construir"] as const){
   const pool=writingPool(level,subtopic,mode);
