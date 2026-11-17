@@ -27,7 +27,7 @@ describe("Fase A — corrida de tres subtemas",()=>{
   }
   expect(new Set(groups.flatMap(g=>g.banks.flatMap(b=>b.map(q=>q.id)))).size).toBe(324);
  });
- it("alcanza 10/15/20 por juego, sin atribuir el nuevo contenido a Lenguaje figurado",()=>{
+ it("alcanza 10/15/20 por juego, sin inflar los bancos de otros subtemas",()=>{
   for(const group of groups)
    for(const [level,n] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
     for(const mode of ["clasificar","quiz","construir"] as const){
@@ -37,9 +37,9 @@ describe("Fase A — corrida de tres subtemas",()=>{
     }
   for(const level of ["principiante","intermedio","avanzado"] as const)
    for(const mode of ["clasificar","quiz","construir"] as const)
-    expect(readingPool(level,"Lenguaje figurado",mode)).toHaveLength(3);
-  expect(coverageTotals().available).toBe(1574);
-  expect(coverageTotals().stageOneComplete).toBe(99);
+    expect(readingPool(level,"Lenguaje figurado",mode)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
+  expect(coverageTotals().available).toBe(1682);
+  expect(coverageTotals().stageOneComplete).toBe(108);
  });
  it("valida explícitas, inferencias, distractores y secuencias correctas",()=>{
   const detectives=[VOCAB_DETECTIVE_CASES,ANALYSIS_DETECTIVE_CASES,COMPARISON_DETECTIVE_CASES];
