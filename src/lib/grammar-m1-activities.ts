@@ -50,3 +50,6 @@ export const MORPH_CONSTRUCTION:ConstructionActivity[]=MORPH_CONSTR.map(([subjec
  "Construye una oración declarativa con concordancia y sentido, utilizando el sujeto «"+subject+"» y concordancia adecuada.",
  [subject,verb,object],"La forma «"+verb+"» concuerda con el núcleo del sujeto «"+subject+"», a diferencia de «"+MORPH_DECOYS[i]+"». El complemento completa la predicación.",MORPH_DECOYS[i]));
 export const GRAMMAR_M1_ACTIVITIES=[...SYNONYM_CONSTRUCTION,...COHESION_CONSTRUCTION,...MORPH_CLASSIFICATION,...MORPH_CONSTRUCTION];
+
+/** Fuente declarativa para oráculos externos al evaluador de fichas y categorías. */
+export const M1_FIRST_SOURCE={SYN,COH,MORPH_B,MORPH_I,MORPH_A,MORPH_CONSTR,SYN_DECOYS,COH_DECOYS,MORPH_DECOYS,BASIC_LABELS,INTER_LABELS,ADV_LABELS};
