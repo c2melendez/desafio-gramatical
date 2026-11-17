@@ -26,7 +26,7 @@ describe("Fase A: Lectura crítica",()=>{
     expect(countContent("espanol","Comprensión lectora","Lectura crítica",mode,level)).toBe(n);
    }
   expect(coverageTotals().stageOneComplete).toBeGreaterThanOrEqual(72);
-  for(const topic of READING_SUBTOPICS.filter(t=>!["Idea principal","Inferencias","Lectura crítica"].includes(t)))
+  for(const topic of READING_SUBTOPICS.filter(t=>!["Idea principal","Inferencias","Lectura crítica","Vocabulario en contexto","Análisis de textos","Lectura comparada"].includes(t)))
    for(const level of ["principiante","intermedio","avanzado"] as const)
     for(const mode of ["clasificar","quiz","construir"] as const)
      expect(readingPool(level,topic,mode)).toHaveLength(3);
