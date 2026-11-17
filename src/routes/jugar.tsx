@@ -1,4 +1,6 @@
 import {M2_CATEGORY_SENTENCES,M2_CATEGORY_QUIZ,M2_CATEGORY_BUILD} from "@/lib/m2-grammar";
+import {M3_CATEGORY_SENTENCES,M3_CATEGORY_QUIZ,M3_CATEGORY_BUILD} from "@/lib/m3-grammar";
+import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BUILD, LEVELS, LEVEL_LABEL, MODE_LABEL, QUIZ, SENTENCES, pointsFor, saveHistory, shuffle, type Level, type Mistake, type Mode } from "@/lib/grammar";
@@ -39,7 +41,7 @@ export const Route = createFileRoute("/jugar")({
 // Solo se vuelve a barajar cuando se ha agotado todo el banco.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function buildItems(modo: Mode, nivel: Level): any[] {
-  const source = modo === "clasificar" ? [...SENTENCES[nivel], ...EXTRA_SENTENCES[nivel], ...(nivel === "avanzado" ? GRAMMAR_ADVANCED_SENTENCES : []),...M2_CATEGORY_SENTENCES[nivel]] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel],...M2_CATEGORY_QUIZ[nivel]] : [...BUILD[nivel], ...EXTRA_BUILD[nivel], ...GRAMMAR_NUCLEUS_BUILD[nivel],...M2_CATEGORY_BUILD[nivel]];
+  const source = modo === "clasificar" ? [...SENTENCES[nivel], ...EXTRA_SENTENCES[nivel], ...(nivel === "avanzado" ? GRAMMAR_ADVANCED_SENTENCES : []),...M2_CATEGORY_SENTENCES[nivel],...M3_CATEGORY_SENTENCES[nivel]] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel],...M2_CATEGORY_QUIZ[nivel],...M3_CATEGORY_QUIZ[nivel]] : [...BUILD[nivel], ...EXTRA_BUILD[nivel], ...GRAMMAR_NUCLEUS_BUILD[nivel],...M2_CATEGORY_BUILD[nivel],...M3_CATEGORY_BUILD[nivel]];
   const key = `desafio-gramatical:cola:${modo}:${nivel}`;
   const ids = new Set(source.map((x) => x.id));
   let queue: string[] = [];
@@ -47,7 +49,7 @@ function buildItems(modo: Mode, nivel: Level): any[] {
     const stored = JSON.parse(localStorage.getItem(key) || "[]");
     if (Array.isArray(stored)) queue = stored.filter((id): id is string => typeof id === "string" && ids.has(id));
   } catch { /* Sin almacenamiento disponible: se crea una cola nueva. */ }
-  const batchSize = modo === "quiz" ? 8 : 5;
+  const batchSize = ROUNDS_PER_GAME;
   const selected: string[] = [];
   while (selected.length < Math.min(batchSize, source.length)) {
     if (!queue.length) {
@@ -160,19 +162,9 @@ function Play() {
   const props = { item, report, next, isLast: idx === items.length - 1 };
   return (
     <main className="mx-auto max-w-xl px-4 py-5 space-y-5">
-      <div className="flex items-center justify-between gap-2">
-        <Link to="/" className="font-bold underline" aria-label="Salir al inicio">← Salir</Link>
-        <p className="text-sm font-bold">{MODE_LABEL[modo]} · {LEVEL_LABEL[nivel]}</p>
-        <button onClick={() => { if (confirm("¿Reiniciar la partida?")) setRun((r) => r + 1); }} className="font-bold underline">Reiniciar</button>
-      </div>
-      <div className="grid grid-cols-3 gap-2 text-center" aria-live="polite">
-        <div className="card-ink p-2"><p className="text-xs">Ronda</p><p className="text-xl font-black">{idx + 1}/{items.length}</p></div>
-        <div className="card-ink p-2"><p className="text-xs">Puntaje</p><p className="text-xl font-black text-primary">{score}</p></div>
-        <div className="card-ink p-2"><p className="text-xs">Racha</p><p className="text-xl font-black">🔥{streak}</p></div>
-      </div>
-      <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuenow={idx + 1} aria-valuemax={items.length} aria-valuemin={1}>
-        <div className="h-full bg-primary transition-all" style={{ width: `${((idx + 1) / items.length) * 100}%` }} />
-      </div>
+      <GameSessionHeader context={`${MODE_LABEL[modo]} · ${LEVEL_LABEL[nivel]}`}
+       title={MODE_LABEL[modo]} round={idx+1} score={score} streak={streak}
+       onRestart={()=>setRun(n=>n+1)}/>
       {modo === "clasificar" && <ClassifyGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
       {modo === "quiz" && <QuizGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
       {modo === "construir" && <BuildGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
