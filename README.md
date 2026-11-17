@@ -14,7 +14,7 @@ La meta por cada **juego y subtema** es **30 ejercicios básicos, 50 intermedios
 
 **Los cinco subtemas de Redacción alcanzaron la primera meta cuantitativa de 10/15/20 por juego y nivel.** Son **675 registros por modalidad**, con **540 casos nuevos diferenciados por juego** y **135 registros de situaciones anteriores compartidas entre mecánicas**. La cantidad no significa revisión editorial aprobada ni haber alcanzado aún los 30/50/70 definitivos. Véanse [Generalización e integración](docs/fase-a-generalizacion-integracion-2026.md) y los informes de los demás subtemas.
 
-**Comprensión lectora — primer lote:** «Idea principal → Verdad o inferencia» suma 36 lecturas originales nuevas (7/12/17), alcanzando 10/15/20 por nivel. Los otros dos juegos de Idea principal y los seis subtemas restantes aún mantienen sus bancos anteriores. La rotación de lecturas registra las vistas y los errores sin perder el historial. [Informe de la ampliación](docs/fase-a-lectura-idea-principal.md).
+**Comprensión lectora — Idea principal:** los **tres juegos** han alcanzado el primer núcleo de 10/15/20 por nivel, con **108 lecturas originales nuevas** (36 por juego, diferentes entre sí) y 27 registros anteriores compartidos entre modalidades; total: **135 registros por modalidad**. Los otros seis subtemas de lectura mantienen sus bancos iniciales. La rotación conserva las lecturas vistas y los errores por juego y nivel. [Informe de la ampliación](docs/fase-a-lectura-idea-principal.md).
 
 La portada indica la cobertura cuantitativa para la combinación de subtema, juego y nivel elegida. No confunde escenarios compartidos con ejercicios cognitivos independientes ni presenta la cantidad como certificación pedagógica.
 
