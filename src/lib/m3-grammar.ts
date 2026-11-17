@@ -1,4 +1,4 @@
-import type {Level,Mode,Sentence,QuizQ,BuildQ} from './grammar';
+import type {Level,Sentence,QuizQ,BuildQ} from './grammar';
 import {SENTENCES,QUIZ,BUILD} from './grammar';
 import {EXTRA_SENTENCES} from './extra-sentences';
 import {EXTRA_QUIZ} from './extra-quiz';
