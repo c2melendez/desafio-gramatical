@@ -14,8 +14,8 @@
       "stage": "M0",
       "required": [],
       "optional": [],
-      "state": "EN_CURSO",
-      "evidence": "docs/checkpoint-m0-20261117.md"
+      "state": "COMPLETADA",
+      "evidence": "docs/evidencia/m0-release-verification-20261117.json"
     },
     {
       "id": "espanol-M1",
@@ -25,12 +25,13 @@
         "M0"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         10,
         15,
         20
-      ]
+      ],
+      "evidence": "docs/estado-m1.json"
     },
     {
       "id": "espanol-M2",
