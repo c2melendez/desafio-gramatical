@@ -1,3 +1,5 @@
+import {SYNONYM_CLASSIFICATION} from "@/lib/grammar-classify-synonyms";
+import {COHESION_CLASSIFICATION} from "@/lib/grammar-classify-cohesion";
 import {M2_GRAMMAR_ACTIVITIES} from "@/lib/m2-grammar";
 import {Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
@@ -11,12 +13,16 @@ import {M1_LITERATURE_ACTIVITIES} from "@/lib/grammar-m1-literature";
 
 type M1Item=ClassificationActivity|ConstructionActivity;
 export function grammarM1Pool(subtopic:string,modo:Mode,nivel:Level):M1Item[]{
- const items=subtopic==="Sinónimos y antónimos"&&modo==="construir"?SYNONYM_CONSTRUCTION:
+ if(modo==="quiz")return []; // la selección siempre se atiende en GrammarPilot
+ const base: M1Item[]=subtopic==="Sinónimos y antónimos"&&modo==="clasificar"?SYNONYM_CLASSIFICATION:
+ subtopic==="Cohesión y coherencia"&&modo==="clasificar"?COHESION_CLASSIFICATION:
+ subtopic==="Sinónimos y antónimos"&&modo==="construir"?SYNONYM_CONSTRUCTION:
  subtopic==="Cohesión y coherencia"&&modo==="construir"?COHESION_CONSTRUCTION:
  subtopic==="Morfosintaxis"&&modo==="clasificar"?MORPH_CLASSIFICATION:
  subtopic==="Morfosintaxis"&&modo==="construir"?MORPH_CONSTRUCTION:
- [...M1_NEXT_ACTIVITIES,...M1_LITERATURE_ACTIVITIES,...M2_GRAMMAR_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
- return [...items.filter(item=>item.level===nivel),...((subtopic==="Sinónimos y antónimos"&&modo==="construir")||(subtopic==="Cohesión y coherencia"&&modo==="construir")||(subtopic==="Morfosintaxis"&&modo!=="quiz")?M2_GRAMMAR_ACTIVITIES.filter(x=>x.subtopic===subtopic&&x.level===nivel&&x.kind===(modo==="construir"?"construction":"classification")):[])];
+ [...M1_NEXT_ACTIVITIES,...M1_LITERATURE_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
+ const expanded=M2_GRAMMAR_ACTIVITIES.filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
+ return [...base,...expanded].filter(x=>x.level===nivel);
 }
 /** La ruta mantiene independientes IDs, exposición, errores e historial por juego/nivel. */
 export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;nivel:Level}){
