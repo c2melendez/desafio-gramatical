@@ -22,6 +22,9 @@ import {MAIN_IDEA_RECONSTRUCT_CASES} from "../src/lib/main-idea-reconstruct-case
 import {INFERENCE_DETECTIVE_CASES} from "../src/lib/inference-detective-cases";
 import {INFERENCE_CHOICE_CASES} from "../src/lib/inference-choice-cases";
 import {INFERENCE_RECONSTRUCT_CASES} from "../src/lib/inference-reconstruct-cases";
+import {CRITICAL_DETECTIVE_CASES} from "../src/lib/critical-detective-cases";
+import {CRITICAL_CHOICE_CASES} from "../src/lib/critical-choice-cases";
+import {CRITICAL_RECONSTRUCT_CASES} from "../src/lib/critical-reconstruct-cases";
 const levels=["principiante","intermedio","avanzado"] as const;
 const target={principiante:10,intermedio:15,avanzado:20};
 const rows=coverageRows(),totals=coverageTotals();
@@ -131,6 +134,23 @@ for(const q of INFERENCE_CHOICE_CASES){
 for(const q of INFERENCE_RECONSTRUCT_CASES){
  if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<45)failures.push("Inferencia secuencia incompleta: "+q.id);
 }
+for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+ for(const mode of ["clasificar","quiz","construir"] as const){
+  const pool=readingPool(level,"Lectura crítica",mode);
+  if(pool.length!==expected)failures.push("Lectura crítica/"+mode+"/"+level+": "+pool.length+" en vez de "+expected);
+  if(new Set(pool.map(x=>x.id)).size!==pool.length)failures.push("IDs repetidos en Lectura crítica/"+mode+"/"+level);
+ }
+for(const q of CRITICAL_DETECTIVE_CASES){
+ if(q.passage.length<145||q.claims.length!==3||new Set(q.claims.map(x=>x.tag)).size!==3||new Set(q.claims.map(x=>x.text)).size!==3)failures.push("Lectura crítica detective incompleta: "+q.id);
+}
+for(const q of CRITICAL_CHOICE_CASES){
+ if(q.passage.length<145||q.options.length!==4||new Set(q.options).size!==4||q.answer<0||q.answer>3||q.explanation.length<50)failures.push("Lectura crítica elección inválida: "+q.id);
+}
+for(const q of CRITICAL_RECONSTRUCT_CASES){
+ if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<50)failures.push("Lectura crítica reconstrucción incompleta: "+q.id);
+}
+const criticalPassages=[...CRITICAL_DETECTIVE_CASES,...CRITICAL_CHOICE_CASES,...CRITICAL_RECONSTRUCT_CASES].map(q=>q.passage);
+if(new Set(criticalPassages).size!==108)failures.push("Pasajes repetidos entre juegos de Lectura crítica");
 const allInferencePassages=[...INFERENCE_DETECTIVE_CASES,...INFERENCE_CHOICE_CASES,...INFERENCE_RECONSTRUCT_CASES].map(q=>q.passage);
 if(new Set(allInferencePassages).size!==108)failures.push("Lecturas de Inferencias repetidas entre modalidades");
 const readingTexts=[...MAIN_IDEA_CHOICE_CASES,...MAIN_IDEA_DETECTIVE_CASES,...MAIN_IDEA_RECONSTRUCT_CASES].map(q=>q.passage);
