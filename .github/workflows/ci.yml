@@ -24,6 +24,11 @@ jobs:
         run: bun run build
       - name: Ejecutar pruebas
         run: bun run test
+      - name: Validar inventario y grafo de módulos
+        run: |
+          node scripts/test-inventory.mjs
+          python3 scripts/validate_modules.py
+          python3 -m unittest discover -s scripts -p 'test_validate_modules.py'
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
       - name: Comprobar código
