@@ -91,6 +91,16 @@ jobs:
           name: m1-espanol-avance
           path: m1-area-progress.json
           retention-days: 30
+      - name: Auditar 405 registros nuevos de M1
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-next.mjs > m1-next-405.json
+      - name: Archivar auditoría por ID de 405 registros
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-bloque-405-auditoria
+          path: m1-next-405.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar núcleo M1 — contenido y claves estructurales
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-nucleus.mjs > m1-nucleus-audit.json
       - name: Archivar auditoría de 180 ejercicios M1
