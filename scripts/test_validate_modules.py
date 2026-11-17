@@ -21,6 +21,12 @@ class ValidatorTests(unittest.TestCase):
         d = copy.deepcopy(BASE); d["modules"][1]["area"] = "desconocida"; cases.append(d)
         d = copy.deepcopy(BASE); d["modules"][1]["stage"] = "M3"; cases.append(d)
         d = copy.deepcopy(BASE); d["modules"][1]["optional"] = ["M0"]; cases.append(d)
+        d = copy.deepcopy(BASE); d["modules"][2]["required"] = ["M0"]; cases.append(d)
+        d = copy.deepcopy(BASE); d["modules"][1]["optional"] = ["e2"]; cases.append(d)
+        d = copy.deepcopy(BASE); d["modules"][1]["area"] = None; cases.append(d)
+        d = copy.deepcopy(BASE); d["modules"].append({"id":"e1b","area":"espanol","stage":"M1","required":["M0"],"optional":[]}); cases.append(d)
+        d = copy.deepcopy(BASE); d["modules"].append({"id":"M4","area":None,"stage":"M4","required":["M0"],"optional":[]}); cases.append(d)
+        cases.append({"areas":[],"modules":[]})
         for case in cases:
             with self.subTest(case=case): self.assertTrue(validate(case))
 
