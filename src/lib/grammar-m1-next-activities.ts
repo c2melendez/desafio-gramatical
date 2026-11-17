@@ -35,7 +35,7 @@ function classify(id:string,subtopic:NewTopic,level:Level,prompt:string,
  labels:string[],entries:{text:string;label:string;explanation:string}[],explanation:string,goal:string,index:number):ClassificationActivity{
  const items=entries.map((x,j)=>({id:"f"+j,...x}));
  // Evita filtrar respuestas por la posición de los fragmentos frente a las etiquetas.
- items.reverse();
+ if(index>=0)items.reverse();
  return {id,subtopic,level,kind:"classification",prompt,labels,items,explanation,
  ...shared(id.split("-").slice(0,-1).join("-"),goal)};
 }
