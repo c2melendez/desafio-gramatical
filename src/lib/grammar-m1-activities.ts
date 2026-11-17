@@ -15,6 +15,7 @@ const tier=(i:number):Level=>i<10?"principiante":i<25?"intermedio":"avanzado";
 const tiles=(parts:string[])=>parts.map((text,i)=>({id:"t"+i,text}));
 function construct(id:string,subtopic:string,level:Level,prompt:string,parts:string[],explanation:string):ConstructionActivity{
  return {id,subtopic,level,kind:"construction",reviewStatus:"editorial-draft",prompt,explanation,
+ competence:"Competencias comunicativas — Español",cognitiveGoal:subtopic==="Sinónimos y antónimos"?"Reformulación semántica contextualizada":subtopic==="Cohesión y coherencia"?"Organización causal y cohesión de ideas":"Concordancia y composición sintáctica",sourceLocator:"Guía pre-U PHUMA UNAH 2026, sección Competencias comunicativas",origin:"original-M1-20261117",family:id,
  tiles:tiles(parts),solutions:[parts.map((_,i)=>"t"+i)]};
 }
 export const SYNONYM_CONSTRUCTION:ConstructionActivity[]=SYN.map(([original,a,b,c],i)=>construct(
@@ -34,7 +35,7 @@ export const MORPH_CLASSIFICATION:ClassificationActivity[]=MORPH.map(([sentence,
  const items=fragments.map((text,j)=>({id:"f"+j,text,label:labels[j],
  explanation: i<10?labels[j]==="Sustantivo"?"Nombra una entidad en el contexto.":labels[j]==="Verbo"?"Es la forma verbal conjugada.":"Aporta una cualidad o estado.":labels[j]==="Sujeto"?"Es el grupo nominal que concuerda con el verbo.":labels[j]==="Núcleo verbal"?"Es la forma conjugada de la predicación.":labels[j]==="Complemento directo"?"Designa lo entregado, explicado o comunicado.":"Identifica al destinatario de la acción."}));
  return {id:"morph-class-"+tier(i)+"-"+(i+1),subtopic:"Morfosintaxis",level:tier(i),kind:"classification",
- reviewStatus:"editorial-draft",prompt:"Clasifica la función de cada fragmento en esta oración: «"+sentence+"»",
+ reviewStatus:"editorial-draft",competence:"Competencias comunicativas — Español",cognitiveGoal:"Identificación morfosintáctica según contexto",sourceLocator:"Guía pre-U PHUMA UNAH 2026, sección Competencias comunicativas",origin:"original-M1-20261117",family:"morph-"+(i+1),prompt:"Clasifica la función de cada fragmento en esta oración: «"+sentence+"»",
  labels,items,explanation:"El análisis atiende a las funciones dentro de la oración completa y no solo a la posición de cada grupo."};
 });
 export const MORPH_CONSTRUCTION:ConstructionActivity[]=MORPH_CONSTR.map(([subject,verb,object],i)=>construct(
