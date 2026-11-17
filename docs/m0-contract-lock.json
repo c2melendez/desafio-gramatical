@@ -1,15 +1,15 @@
 {
-  "version": 10,
-  "scope": "Contrato M2: mantiene regresión M0/M1 al ampliar Español 20/35/45. Revisión académica diferida.",
+  "version": 11,
+  "scope": "Contrato de rutas y datos tras M3 completo Español: conservar historia, rotación y regresión M0/M1/M2.",
   "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "31467f450ca992425ced300a7dde2e26ca352973",
-    "src/lib/coverage.ts": "51915a2e4e9e192cf298e7d634bbd463ebb63451",
+    "src/lib/coverage.ts": "c0556bca144e7f38a406c4e96fe48dce4f1d9209",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
-    "src/lib/reading.ts": "bca97a7e703ea70c417ddc738eb21a3688f4d910",
-    "src/lib/writing.ts": "40de2cc04de89b7576ca65f5b07a97a73ed2f036",
+    "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449",
+    "src/lib/writing.ts": "5c0a04ca853742d8e71498c81488a80eb101c806",
     "src/routes/index.tsx": "f74acbeea5230d7c4083ad28ac4416d1a4e4a53c",
     "src/routes/jugar.tsx": "0a5ccb58ceea7cfa2de39b17e831328547c2b46f",
     "src/routes/lectura.tsx": "20ba8f3708e1db6a3de2aa3c5cac07ba09bf5f3f",
@@ -17,6 +17,6 @@
     "src/routes/historial.tsx": "eb49b09c484ab62b36f42cd4249f72e33223d909"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "M2: bloqueo de contratos verificado para todas las rutas y cobertura actualizadas; auditorías de 3440 candidatos en PR #7.",
+  "change_note": "M3 integra lectura, redacción y gramática hasta 30/50/70 con auditoría por SHA. Actualización autorizada, no aval docente.",
   "previous_baseline": "bb4d9704f9581065f1bddd99e50326d84e9008d7"
 }
