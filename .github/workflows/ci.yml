@@ -228,13 +228,13 @@ jobs:
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"
-      - name: Prueba HTTP publicada de Inicio y rutas M1
+      - name: Prueba HTTP publicada de Inicio, M1 y M2
         if: github.ref == 'refs/heads/main'
         shell: bash
         run: |
           set -euo pipefail
           base="https://desafio-gramatical.onrender.com"
-          for route in "/" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante"; do
+          for route in "/" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante" "/jugar?modo=clasificar&nivel=intermedio&subtema=Morfosintaxis" "/lectura?subtema=Inferencias&modo=construir&nivel=avanzado" "/redaccion?subtema=Correcci%C3%B3n&modo=quiz&nivel=intermedio"; do
             file="$(mktemp)"
             code=$(curl --fail --location --silent --show-error --retry 4 --retry-delay 7 --retry-all-errors --max-time 50 --output "$file" --write-out '%{http_code}' "$base$route")
             if ! grep -Eiq '<html|<!doctype html' "$file"; then
