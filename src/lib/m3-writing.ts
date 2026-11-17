@@ -24,11 +24,22 @@ export function m3WritingPool(level:Level,subtopic:WritingSubtopic,mode:Mode,exi
     explanation:'B y C se contrastan, pero la corrección A debe justificarse por su propia evidencia. '+a.explanation} as WritingItem;
   }
   if(mode==='construir'&&'steps' in a&&'steps' in b&&'steps' in c){
+   // Distintos énfasis de análisis para casos con indicios parcialmente similares.
+   // No representan una certificación de independencia pedagógica.
+   const focus=[
+    'localizar las premisas de cada caso',
+    'comprobar la secuencia temporal de los tres casos',
+    'contrastar las relaciones expresadas por conectores',
+    'separar observaciones e interpretaciones',
+    'evitar generalizaciones más allá de las evidencias',
+    'justificar las correcciones de cada fuente',
+    'reconocer los límites de las conclusiones'
+   ][i%7];
    return {...a,...meta,steps:[
-     'Examinar A y su evidencia: '+a.steps[0],
-     'Contrastar B sin trasladar sus supuestos: '+b.steps[1],
-     'Integrar C y concluir dentro de los límites: '+c.steps[2]
-    ],hint:'Analiza A, contrasta B, delimita C.',
+     'Primero, '+focus+' en A: '+a.steps[0],
+     'Después, '+focus+' en B, sin trasladar supuestos: '+b.steps[1],
+     'Por último, '+focus+' en C, delimitando la conclusión: '+c.steps[2]
+    ],hint:'Analiza A, contrasta B, delimita C. Énfasis: '+focus+'.',
     explanation:'Razonamiento escalonado en tres fuentes. '+a.explanation} as WritingItem;
   }
   throw Error('M3: modalidad incompatible '+mode+' '+id);
