@@ -1,0 +1,37 @@
+name: M0 reparar dependencias en rama aislada
+on:
+  push:
+    branches:
+      - fix/m0-gates-and-mutation-20261117
+permissions:
+  contents: write
+jobs:
+  reparar:
+    if: "!contains(github.event.head_commit.message, 'fix(m0-deps)')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+      - name: Resolver avisos con Bun
+        run: |
+          bun install --frozen-lockfile
+          bun audit fix --latest
+          bun audit
+      - name: Probar compilación, regresión y lint
+        run: |
+          bun run build
+          bun run test
+          bunx eslint . --rule "prettier/prettier: off"
+      - name: Publicar únicamente bloqueo de dependencias validado
+        run: |
+          if ! git diff --quiet -- package.json bun.lock; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add package.json bun.lock
+            git commit -m "fix(m0-deps): resolver vulnerabilidades auditadas"
+            git push origin HEAD:fix/m0-gates-and-mutation-20261117
+          fi
