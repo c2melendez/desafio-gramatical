@@ -39,6 +39,6 @@ export const MORPH_CLASSIFICATION:ClassificationActivity[]=MORPH.map(([sentence,
 });
 export const MORPH_CONSTRUCTION:ConstructionActivity[]=MORPH_CONSTR.map(([subject,verb,object],i)=>construct(
  "morph-build-"+tier(i)+"-"+(i+1),"Morfosintaxis",tier(i),
- "Construye una oración declarativa con estructura sujeto → núcleo verbal → complemento, respetando concordancia y sentido.",
+ "Construye una oración declarativa en orden sujeto → núcleo verbal → complemento, con el sujeto «"+subject+"» y concordancia adecuada.",
  [subject,verb,object],"La forma verbal concuerda con el sujeto explícito; el complemento completa la predicación."));
 export const GRAMMAR_M1_ACTIVITIES=[...SYNONYM_CONSTRUCTION,...COHESION_CONSTRUCTION,...MORPH_CLASSIFICATION,...MORPH_CONSTRUCTION];
