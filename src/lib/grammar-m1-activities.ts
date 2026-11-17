@@ -32,8 +32,11 @@ const ADV_LABELS=["Sujeto","Núcleo verbal","Complemento directo","Complemento i
 const MORPH=[...MORPH_B,...MORPH_I,...MORPH_A];
 export const MORPH_CLASSIFICATION:ClassificationActivity[]=MORPH.map(([sentence,...fragments],i)=>{
  const labels=i<10?BASIC_LABELS:i<25?INTER_LABELS:ADV_LABELS;
+ // No presentar los fragmentos en el mismo orden que las categorías de respuesta.
+ // Rotación estable por ejercicio: mantiene los IDs sin revelar la clave por posición.
  const items=fragments.map((text,j)=>({id:"f"+j,text,label:labels[j],
  explanation: i<10?labels[j]==="Sustantivo"?"Nombra una entidad en el contexto.":labels[j]==="Verbo"?"Es la forma verbal conjugada.":"Aporta una cualidad o estado.":labels[j]==="Sujeto"?"Es el grupo nominal que concuerda con el verbo.":labels[j]==="Núcleo verbal"?"Es la forma conjugada de la predicación.":labels[j]==="Complemento directo"?"Designa lo entregado, explicado o comunicado.":"Identifica al destinatario de la acción."}));
+ items.unshift(...items.splice(1+(i%Math.max(1,items.length-1))));
  return {id:"morph-class-"+tier(i)+"-"+(i+1),subtopic:"Morfosintaxis",level:tier(i),kind:"classification",
  reviewStatus:"editorial-draft",competence:"Competencias comunicativas — Español",cognitiveGoal:"Identificación morfosintáctica según contexto",sourceLocator:"Guía pre-U PHUMA UNAH 2026, sección Competencias comunicativas",origin:"original-M1-20261117",family:"morph-"+(i+1),prompt:"Clasifica la función de cada fragmento en esta oración: «"+sentence+"»",
  labels,items,explanation:"El análisis atiende a las funciones dentro de la oración completa y no solo a la posición de cada grupo."};
