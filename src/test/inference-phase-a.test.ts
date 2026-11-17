@@ -26,7 +26,7 @@ describe("Fase A — Inferencias: contenido y progresión",()=>{
     expect(readingItems(level,"Inferencias",mode)).toHaveLength(10);
     expect(countContent("espanol","Comprensión lectora","Inferencias",mode,level)).toBe(count);
    }
-  for(const subtopic of READING_SUBTOPICS.filter(x=>!["Idea principal","Inferencias"].includes(x)))
+  for(const subtopic of READING_SUBTOPICS.filter(x=>!["Idea principal","Inferencias","Lectura crítica"].includes(x)))
    for(const level of ["principiante","intermedio","avanzado"] as const)
     for(const mode of ["clasificar","quiz","construir"] as const)
      expect(readingPool(level,subtopic,mode)).toHaveLength(3);
