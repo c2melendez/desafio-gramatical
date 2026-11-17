@@ -12,6 +12,8 @@ Plataforma independiente para practicar mediante juegos las competencias que se 
 
 Se adopta una meta aproximada de **tres subtemas pendientes por corrida: 405 ejercicios nuevos si parten de cero**, para completar 10/15/20 en cada juego. La prioridad es **terminar los subtemas del tema actual antes de cambiar de tema**. Una corrida solo se declara completa después de **GitHub Actions success y despliegue Render Live en el mismo commit**, con auditoría aprobada. Si quedan menos de tres subtemas en el tema, se informa un bloque menor, sin trasladar trabajo de otra área para simular la cuota. Véanse [política operativa](docs/politica-corridas-bloques.md), [hoja de ruta por subtema](docs/hoja-ruta-expansion-phuma.md) e [informe del primer bloque](docs/corrida-bloque-lectura-324.md).
 
+> **Política vigente de ejecución (17-11-2026):** las antiguas metas de 324 y 405 registros por corrida describen entregas históricas. El nuevo sistema modular prioriza terminar el bloque abierto, después finalizar **una sola área** en Núcleo 10/15/20, Ampliación 20/35/45 y Completo 30/50/70 por combinación elegible. Los paquetes orientativos de 450 y 900 no sustituyen el cierre ni la auditoría. M0 sigue EN_CURSO hasta que su runner tenga todas las etapas obligatorias PASS y CI/Render correspondan al mismo SHA. [Evidencia de esta ejecución](docs/m0-evidencia-sesion-20261117.md).
+
 ## Fase A — ampliación verificable
 
 La meta por cada **juego y subtema** es **30 ejercicios básicos, 50 intermedios y 70 avanzados**. La primera etapa se mide en **10/15/20**.
