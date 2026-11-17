@@ -30,6 +30,13 @@ describe("M1 gramática: 405 actividades adicionales para tres subtemas",()=>{
    expect(q.sourceLocator).toContain("PHUMA");
   }
  });
+ it("evalúa 15 referentes en selección y 15 en construcción, sin perder adecuación",()=>{
+  const refQuiz=M1_NEXT_QUIZ.filter(q=>q.subtopic==="Adecuación y referente"&&q.question.includes("antecedente"));
+  const refBuild=M1_NEXT_ACTIVITIES.filter(q=>q.subtopic==="Adecuación y referente"&&q.kind==="construction"&&q.cognitiveGoal?.includes("antecedente"));
+  expect(refQuiz).toHaveLength(15);
+  expect(refBuild).toHaveLength(15);
+  for(const q of refQuiz)expect(q.passage).toMatch(/[.!?]/);
+ });
  it("revisa estructura, alternativas, clasificación y distractores de los 270 juegos",()=>{
   for(const q of M1_NEXT_ACTIVITIES){
    expect(validateActivity(q),q.id).toEqual([]);
