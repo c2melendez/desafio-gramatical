@@ -104,7 +104,25 @@ jobs:
           if-no-files-found: error
           retention-days: 30
       - name: Auditar aceptación M2 de 3440 casos y 189 celdas
-        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m2-area.mjs > m2-auditoria-integral.json
+        run: |
+          node --import ./scripts/ts-resolve.mjs scripts/audit-m2-area.mjs > m2-auditoria-integral.raw
+          python3 - <<'PY'
+          import json, pathlib
+          source = pathlib.Path("m2-auditoria-integral.raw").read_text()
+          decoder = json.JSONDecoder()
+          reports = []
+          while source.strip():
+              report, offset = decoder.raw_decode(source.lstrip())
+              reports.append(report)
+              source = source.lstrip()[offset:]
+          assert reports, "Auditoría M2 sin resultados"
+          report = reports[-1]
+          assert report.get("module") == "espanol-M2" and report.get("status") == "PASS", "Auditoría M2 no aprobada"
+          assert report.get("summary", {}).get("m2_new") == 3440
+          assert report["summary"]["missing"] == 0
+          pathlib.Path("m2-auditoria-integral.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\\n")
+          print("Reporte M2 JSON único verificado")
+          PY
       - name: Guardar auditoría reproducible M2
         if: always()
         uses: actions/upload-artifact@v4
