@@ -1,4 +1,5 @@
 import {m2ReadingPool} from "./m2-reading";
+import {m3ReadingPool} from "./m3-reading";
 import type {Level,Mode} from "./grammar";
 import {MAIN_IDEA_CHOICE_CASES,type MainIdeaChoiceCase} from "./main-idea-choice-cases";
 import {MAIN_IDEA_DETECTIVE_CASES,type MainIdeaDetectiveCase} from "./main-idea-detective-cases";
@@ -266,6 +267,7 @@ export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):Read
  }
 
  items.push(...m2ReadingPool(level,subtopic,mode,items));
+ items.push(...m3ReadingPool(level,subtopic,mode,items));
  return items;
 }
 /** Migración no destructiva: los 63 reactivos semilla antes compartían el mismo ID en 3 juegos.
