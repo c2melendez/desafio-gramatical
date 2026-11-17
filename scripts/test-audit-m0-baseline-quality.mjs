@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {auditItem,auditBaseline} from './audit-m0-baseline-quality.mjs';
+const row={area:'espanol',topic:'Gramática y semántica',subtopic:'Sinónimos y antónimos',mode:'quiz',level:'principiante',available:1};
+const good={id:'x',level:'principiante',subtopic:row.subtopic,passage:'Pasaje.',question:'Pregunta',options:['A','B','C','D'],answer:2};
+assert.deepEqual(auditItem(good,row),[]);
+assert.ok(auditItem({...good,id:''},row).length);
+assert.ok(auditItem({...good,options:['A',' a ','C','D']},row).length);
+assert.ok(auditItem({...good,answer:4},row).length);
+assert.ok(auditItem({...good,level:'avanzado'},row).length);
+assert.ok(auditItem({...good,subtopic:'Otro'},row).length);
+const result=auditBaseline();
+assert.equal(result.cells,810);
+assert.equal(result.items_checked,2006);
+assert.equal(result.accepted_independent,0);
+assert.equal(result.editorial_pending,2006);
+assert.equal(result.status,'PASS',JSON.stringify(result.errors.slice(0,8)));
+console.log('PASS M0: 2006 registros inspeccionados, 0 aceptados sin oráculo; 5 mutaciones negativas.');
