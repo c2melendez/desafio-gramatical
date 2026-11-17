@@ -46,7 +46,7 @@
     "seguridad_privacidad",
     "verificacion_independiente_completa"
   ],
-  "siguiente_accion": "Completar seis controles obligatorios NOT_RUN registrados en el artefacto 14330030640; confirmar Render LIVE del SHA main y después cerrar formalmente M0 y abrir espanol-M1. Conservar PR #1 sin fusionar hasta cotejo por ID y contenido.",
+  "siguiente_accion": "Cerrar controles obligatorios de calidad funcional, oráculos, mutación real, privacidad dinámica y verificador integral; comprobar Render Live del SHA principal. Inventario por ID ya ejecutado: 810 celdas y 2006 registros sin discrepancias, 108 IDs compartidos entre 3 juegos. Reanudar contenido M1 sólo tras cierre M0.",
   "ultima_publicacion": {
     "sha": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
     "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44086175652",
@@ -72,7 +72,7 @@
   },
   "base_main_reconciliada": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
   "alcance_reconciliado": {
-    "sha_base": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
+    "sha_base": "e268601640284cee599488d462f3025ce28d806b",
     "celdas": 810,
     "subtemas": 90,
     "celdas_habilitadas_menu": 132,
@@ -80,6 +80,13 @@
     "registros_con_ruta_menu": 2006,
     "bloque_prioritario": "Gramática y semántica: Sinónimos y antónimos, Cohesión y coherencia, Morfosintaxis",
     "deficit_tecnico_bloque_nucleo": 180,
-    "advertencia": "Conteos técnicos, no ejercicios independientes ni aprobados."
+    "advertencia": "Conteos técnicos, no ejercicios independientes ni aprobados.",
+    "ids_distintos_sintacticos": 1790,
+    "ids_reutilizados_entre_celdas": 108,
+    "ocurrencias_extra_por_id_compartido": 216,
+    "celdas_con_error_conteo_o_id": 0,
+    "interpretacion": "108 IDs se usan cada uno en tres mecánicas; no contabilizar como 324 ejercicios independientes. La unicidad de otros IDs tampoco prueba independencia conceptual.",
+    "ci_inventario": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44086576759",
+    "artefacto_inventario_individual_id": 14328529746
   }
 }
