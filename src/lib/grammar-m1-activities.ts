@@ -20,11 +20,11 @@ function construct(id:string,subtopic:string,level:Level,prompt:string,parts:str
 }
 export const SYNONYM_CONSTRUCTION:ConstructionActivity[]=SYN.map(([original,a,b,c],i)=>construct(
  "syn-build-"+tier(i)+"-"+String(i+1), "Sinónimos y antónimos",tier(i),
- "Reformula sin cambiar el significado. Organiza los fragmentos en orden sujeto → verbo → complemento: «"+original+"»",
- [a,b,c],"La reformulación conserva el sentido del enunciado y utiliza el orden sujeto, verbo y complemento: "+[a,b,c].join(" ")));
+ "Ordena una paráfrasis que conserve la idea central utilizando vocabulario equivalente: «"+original+"»",
+ [a,b,c],"La reformulación conserva la idea principal mediante expresiones de significado relacionado: "+[a,b,c].join(" ")));
 export const COHESION_CONSTRUCTION:ConstructionActivity[]=COH.map(([cause,step,result],i)=>construct(
  "cohesion-build-"+tier(i)+"-"+String(i+1),"Cohesión y coherencia",tier(i),
- "Ordena las ideas en tres etapas: causa o antecedente → actuación o comprobación → resultado. Contexto: "+cause,
+ "Reconstruye una secuencia lógica entre los hechos sin alterar su relación principal. Situación inicial: "+cause,
  [cause,step,result],"La primera proposición establece el antecedente, la segunda presenta la actuación y la tercera expresa el resultado."));
 const BASIC_LABELS=["Sustantivo","Verbo","Adjetivo"];
 const INTER_LABELS=["Sujeto","Núcleo verbal","Complemento directo"];
@@ -43,6 +43,6 @@ export const MORPH_CLASSIFICATION:ClassificationActivity[]=MORPH.map(([sentence,
 });
 export const MORPH_CONSTRUCTION:ConstructionActivity[]=MORPH_CONSTR.map(([subject,verb,object],i)=>construct(
  "morph-build-"+tier(i)+"-"+(i+1),"Morfosintaxis",tier(i),
- "Construye una oración declarativa en orden sujeto → núcleo verbal → complemento, con el sujeto «"+subject+"» y concordancia adecuada.",
+ "Construye una oración declarativa con concordancia y sentido, utilizando el sujeto «"+subject+"» y concordancia adecuada.",
  [subject,verb,object],"La forma verbal concuerda con el sujeto explícito; el complemento completa la predicación."));
 export const GRAMMAR_M1_ACTIVITIES=[...SYNONYM_CONSTRUCTION,...COHESION_CONSTRUCTION,...MORPH_CLASSIFICATION,...MORPH_CONSTRUCTION];
