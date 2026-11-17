@@ -38,21 +38,57 @@ def verify(state, catalog, root, lookup):
     if not state.get('evidencia'): add('evidencia','ERROR','Falta evidencia')
     pending=state.get('controles_obligatorios_pendientes',[])
     technical=state.get('cierre_tecnico_m0',{})
-    has_external_evidence=(technical.get('estado')=='PASS' and
-        isinstance(technical.get('ci_run_id'),int) and
-        isinstance(technical.get('artefacto_id'),int) and
-        bool(HEX.fullmatch(technical.get('sha',''))))
+    proof_path=root/'docs/evidencia/m0-release-verification-20261117.json'
+    try:
+        proof=json.loads(proof_path.read_text(encoding='utf-8')) if proof_path.is_file() else {}
+    except (OSError,ValueError):
+        proof={}
+        add('atestacion','ERROR','Atestación M0 ausente o ilegible')
+    release=proof.get('technical_release',{})
+    summary=release.get('verified_report',{})
+    verified_technical=(
+        technical.get('estado')=='PASS'
+        and technical.get('verificador_independiente')=='PASS'
+        and technical.get('controles_pass')==31
+        and technical.get('controles_fail')==0
+        and technical.get('controles_not_run')==0
+        and technical.get('sha')==release.get('code_sha')
+        and technical.get('ci_run_id')==release.get('github_run_id')
+        and technical.get('artefacto_id')==release.get('github_artifact_auditoria_id')
+        and release.get('github_conclusion')=='success'
+        and summary.get('integrity')=='PASS'
+        and summary.get('closure_ready') is True
+        and summary.get('stages_pass')==31
+        and summary.get('stages_fail')==0
+        and summary.get('stages_not_run')==0
+    )
     for name in UNIMPLEMENTED:
         if name in pending:
             add(name,'SKIP','Etapa declarada pendiente en estado')
-        elif has_external_evidence:
-            add(name,'WARNING','Evidencia CI identificada; el reporte externo debe verificarse de manera independiente')
+        elif verified_technical:
+            add(name,'OK','Control respaldado por informe de 31 PASS y atestación verificable; confirmar fuente GitHub externa')
         else:
-            add(name,'ERROR','Control omitido del estado sin evidencia verificable')
+            add(name,'ERROR','No hay reporte técnico independiente y coherente para acreditar el control')
     if 'render_live_mismo_sha' in pending or state.get('estado') != 'COMPLETADA':
-        add('render_live_mismo_sha','SKIP','Pendiente acreditar Render Live del mismo commit y prueba publicada')
-    elif not state.get('cierre_render'):
-        add('render_live_mismo_sha','ERROR','No hay atestación de despliegue')
+        add('render_live_mismo_sha','SKIP','No hay cierre definitivo de Render en el estado')
+    else:
+        render=state.get('cierre_render',{})
+        latest=proof.get('subsequent_reference',{})
+        render_ok=(
+            render.get('estado')=='LIVE'
+            and latest.get('render_status')=='live'
+            and render.get('sha')==latest.get('main_sha')
+            and render.get('deploy_id')==latest.get('render_deploy_id')
+            and render.get('ci_run_id')==latest.get('github_run_id')
+            and render.get('ci_conclusion')==latest.get('github_conclusion')=='success'
+            and render.get('service_id')==latest.get('render_service_id')
+            and render.get('finished_at')==latest.get('render_finishedAt_utc')
+            and render.get('sha')!=None
+            and HEX.fullmatch(render.get('sha','')) is not None
+        )
+        add('render_live_mismo_sha','OK' if render_ok else 'ERROR',
+            'CI y Render LIVE concordantes en atestación registrada; contrastar proveedor para HEAD final' if render_ok
+            else 'CI/Render no coinciden o atestación incompleta')
     if state.get('estado') in ('COMPLETADA','COMPLETADO') and any(c['status'] in ('ERROR','SKIP','WARNING') for c in checks):
         add('cierre','ERROR','No puede cerrarse con errores, advertencias o controles sin evidencia')
     return checks
