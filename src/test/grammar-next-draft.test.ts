@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { countContent } from "@/lib/coverage";
 import { GRAMMAR_NEXT_DRAFT, grammarPilotPool as m1SourcePilotPool } from "@/lib/grammar-next-draft";
 
-const m1PilotPool=(...args:Parameters<typeof m1SourcePilotPool>)=>m1SourcePilotPool(...args).filter(q=>!q.id.startsWith("m2-"));
+const m1PilotPool=(...args:Parameters<typeof m1SourcePilotPool>)=>m1SourcePilotPool(...args).filter(q=>!q.id.startsWith("m2-")&&!q.id.startsWith("m3-"));
 
 describe("borrador del siguiente bloque gramatical",()=>{
  it("conserva identificadores, niveles, opciones y explicaciones verificables",()=>{
