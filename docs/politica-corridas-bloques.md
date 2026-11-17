@@ -2,7 +2,15 @@
 
 **Vigencia:** 16 de noviembre de 2026. **Aprobación:** autorización explícita del responsable del proyecto.
 
-## Objetivo vinculante de cada corrida de ampliación
+## Prioridad y siguiente corrida — actualización del 17 de noviembre de 2026
+
+Primero completar los núcleos de los bloques abiertos antes de iniciar una nueva corrida desde cero. En Gramática y semántica, Sinónimos y antónimos, Cohesión y coherencia y Morfosintaxis suman 99 preguntas de selección única disponibles como borradores; con la línea base documentada faltan 306 ejercicios: 36 de selección única y 270 de clasificación y construcción. Verificar la cobertura vigente antes de sumar, integrar y auditar el contenido. No contar borradores existentes como nuevos ni declarar cerrado el bloque sin cumplir los controles de cierre.
+
+Una vez cerrados los bloques abiertos, la siguiente corrida tendrá como objetivo **450 ejercicios nuevos simultáneamente**, equivalentes a diez núcleos de juego y subtema desde cero, cada uno con 10 básicos, 15 intermedios y 20 avanzados. Son diez combinaciones de juego y subtema, no diez subtemas completos. Mantener la prioridad de completar los subtemas y el tema pendientes; seleccionar diez combinaciones de la hoja de ruta según la cobertura real. La meta no autoriza reutilizar ejercicios entre juegos ni omitir la revisión. Registrar cualquier bloqueo sin presentar una corrida parcial como terminada.
+
+## Reglas anteriores de ejecución y cierre
+
+La instrucción anterior sobre 405 ejercicios y tres subtemas queda sustituida por la prioridad y la meta de 450 indicadas arriba. Los criterios de calidad, trazabilidad, CI y despliegue siguientes permanecen vigentes.
 
 1. Trabajar en **tres subtemas pendientes del mismo tema** por corrida, completándolos antes de comenzar otro tema. La meta para tres subtemas que parten de cero es **405 ejercicios nuevos**: 135 por subtema, 45 originales por juego, distribuidos 10/15/20 por nivel.
 2. Completar en la misma corrida el núcleo **10/15/20** por juego y subtema; descontar los ejercicios ya existentes y verificables de la cantidad nueva necesaria. Consultar la [hoja de ruta aprobada](hoja-ruta-expansion-phuma.md). No contar varias modalidades de un mismo pasaje como textos independientes.
