@@ -3,7 +3,7 @@
   "module": "espanol-M3",
   "area": "espanol",
   "stage": "M3",
-  "estado": "EN_CURSO",
+  "estado": "COMPLETADA",
   "dependencias": [
     "M0",
     "espanol-M1",
@@ -31,9 +31,64 @@
       "avanzado": 1575
     }
   },
-  "independencia_conceptual": "PENDIENTE_REVISION",
+  "independencia_conceptual": "NO_DEMOSTRADA_ACADÉMICAMENTE",
   "revision_docente": "PENDIENTE_AUTORIZADA",
   "calibracion_psicometrica": "NO_CERTIFICADA",
-  "estado_evidencia": "PENDIENTE_CI_PR_AUDITORIA_AREA_Y_RENDER_SHA",
-  "siguiente_accion": "Reconciliar auditoría M3 189 celdas y fuentes triples; corregir fallos CI; fusionar tras éxito; certificar CI main y Render Live del mismo SHA; publicar corte Español sin simular revisión académica."
+  "estado_evidencia": "CI_MAIN_RENDER_LIVE_MISMO_SHA_VERIFICADOS",
+  "siguiente_accion": "Continuar con matematicas-M1 tras corte técnico de Español. Conservar revisión docente, independencia conceptual y calibración psicométrica pendientes, sin reutilizar composiciones como ejercicios conceptualmente independientes.",
+  "cierre_tipo": "TÉCNICO_OPERATIVO_REVISION_ACADEMICA_DIFERIDA",
+  "avance_tecnico": {
+    "base_m2": 6301,
+    "incorporados_m3": 3149,
+    "acumulados": 9450,
+    "ids_unicos": 9450,
+    "celdas": 189,
+    "subtemas": 21,
+    "combinaciones": 63,
+    "deficit": 0,
+    "mutantes_ejecutados": 3749,
+    "mutantes_detectados": 3749,
+    "mutantes_sobrevivientes": 0,
+    "controles_incidencias": 0,
+    "nota": "Registros técnicos y casos compuestos; no acreditar automáticamente independencia semántica"
+  },
+  "cierre_validado_sobre_sha": "a04c54db32f2502a6c55468e5365e82574393a33",
+  "evidencias": {
+    "ci_pr": {
+      "run_id": 44149334690,
+      "sha": "acbf2d0c6c5d6c719b0fc720c8a8a385952c59f2",
+      "conclusion": "success"
+    },
+    "merge": {
+      "pr": 8,
+      "sha": "e64dfc2d3540d7322b9f0cb4629c9c69583b15af"
+    },
+    "ci_main": {
+      "run_id": 44149806912,
+      "sha": "a04c54db32f2502a6c55468e5365e82574393a33",
+      "conclusion": "success",
+      "http_smoke": "PASS"
+    },
+    "render": {
+      "workspace_id": "tea-da4esd7qj5pc73d1fss0",
+      "service_id": "srv-dbt0rilg1s2s738eku8g",
+      "deploy_id": "dep-dbu9tlpbbnfs73fnuvf0",
+      "sha": "a04c54db32f2502a6c55468e5365e82574393a33",
+      "status": "live",
+      "url": "https://desafio-gramatical.onrender.com"
+    },
+    "audit_report": {
+      "run_id": 44149334690,
+      "artifact_id": 14358321616,
+      "estado": "PASS"
+    },
+    "perf": {
+      "run_id": 44149806912,
+      "artifact_id": 14357209134,
+      "elapsed_ms": 40,
+      "rss_peak_mb": 115,
+      "scope": "Node runner; no browser/mobile"
+    }
+  },
+  "siguiente_modulo": "matematicas-M1"
 }

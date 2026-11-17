@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "areas": [
     "espanol",
     "matematicas",
@@ -43,14 +43,15 @@
         "espanol-M1"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         20,
         35,
         45
       ],
       "evidence": "docs/estado-m2.json",
-      "scope": "Ampliación acumulada 20/35/45 por juego y subtema"
+      "scope": "Ampliación acumulada 20/35/45 por juego y subtema",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_EXPRESAMENTE_AUTORIZADA"
     },
     {
       "id": "espanol-M3",
@@ -60,12 +61,15 @@
         "espanol-M2"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "COMPLETADA",
       "targets": [
         30,
         50,
         70
-      ]
+      ],
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_EXPRESAMENTE_AUTORIZADA",
+      "scope": "Corte técnico 30/50/70 por juego y subtema; equivalencia académica y psicométrica no acreditada",
+      "evidence": "docs/m3-corte-espanol-20261117.md"
     },
     {
       "id": "espanol-CORTE",
@@ -75,7 +79,10 @@
         "espanol-M3"
       ],
       "optional": [],
-      "state": "PENDIENTE"
+      "state": "COMPLETADA",
+      "review": "PENDIENTE_REVISIÓN_DOCENTE",
+      "scope": "Corte técnico-operativo Español completado; continuidad matematicas-M1",
+      "evidence": "docs/m3-corte-espanol-20261117.md"
     },
     {
       "id": "matematicas-M1",
