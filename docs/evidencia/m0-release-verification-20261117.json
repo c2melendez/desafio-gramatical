@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "source": "GitHub Actions + Render connected APIs; esta atestación debe contrastarse con los proveedores al cerrar",
+  "technical_release": {
+    "code_sha": "ff9da13ea3d0ec3681409264985f742003d69f59",
+    "github_run_id": 44090473925,
+    "github_conclusion": "success",
+    "github_artifact_auditoria_id": 14330654190,
+    "github_artifact_triaje_id": 14330743993,
+    "verified_report": {
+      "integrity": "PASS",
+      "closure_ready": true,
+      "stages_pass": 31,
+      "stages_fail": 0,
+      "stages_not_run": 0
+    },
+    "render_service_id": "srv-dbt0rilg1s2s738eku8g",
+    "render_deploy_id": "dep-dbu55kjbc2fs73frrbcg",
+    "render_status_at_deploy_end": "succeeded",
+    "render_deploy_end_utc": "2026-11-17T13:13:44.371178Z",
+    "note": "El deploy fue LIVE al completarse y luego desactivado por deploys posteriores. Revalidar HEAD final antes de declarar cierre."
+  },
+  "subsequent_reference": {
+    "main_sha": "ed0c764471cc942b996f83b400d1c396cf2a01b6",
+    "github_run_id": 44091275017,
+    "github_conclusion": "success",
+    "render_deploy_id": "dep-dbu57s142hec73e41nk0",
+    "render_status": "update_in_progress",
+    "note": "No marcar release final LIVE hasta consultar Render."
+  },
+  "editorial": {
+    "accepted_pedagogically": 0,
+    "teacher_review": "PENDIENTE",
+    "reason": "Auditoría estructural no equivale a aprobación académica"
+  }
+}
