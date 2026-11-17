@@ -26,10 +26,10 @@ describe("Fase A: Lectura crítica",()=>{
     expect(countContent("espanol","Comprensión lectora","Lectura crítica",mode,level)).toBe(n);
    }
   expect(coverageTotals().stageOneComplete).toBeGreaterThanOrEqual(72);
-  for(const topic of READING_SUBTOPICS.filter(t=>!["Idea principal","Inferencias","Lectura crítica","Vocabulario en contexto","Análisis de textos","Lectura comparada","Lenguaje figurado"].includes(t)))
+  for(const topic of READING_SUBTOPICS)
    for(const level of ["principiante","intermedio","avanzado"] as const)
     for(const mode of ["clasificar","quiz","construir"] as const)
-     expect(readingPool(level,topic,mode)).toHaveLength(3);
+     expect(readingPool(level,topic,mode)).toHaveLength(({principiante:10,intermedio:15,avanzado:20} as const)[level]);
  });
  it("confirma claves, afirmaciones y secuencias justificadas",()=>{
   for(const item of CRITICAL_DETECTIVE_CASES){
