@@ -58,10 +58,11 @@ def main():
         run_stage('regresion_y_funcional', ['bun','run','test']),
         run_stage('mutacion_critica', ['node','--import','./scripts/ts-resolve.mjs','scripts/test-m0-critical-mutations.mjs']),
         run_stage('seguridad_estatica_cliente', ['node','scripts/security-client-audit.mjs']),
+        run_stage('privacidad_estatica_negativos', ['node','scripts/privacy-m0-static.mjs','--test']),
         run_stage('dependencias_produccion', ['bun','audit','--production']),
         run_stage('dependencias_completas', ['bun','audit']),
         run_stage('seguridad_mutaciones_fixture', ['node','scripts/security-client-audit.mjs','--test']),
-        run_stage('seguridad_y_privacidad', None),
+        run_stage('seguridad_y_privacidad', ['node','scripts/privacy-m0-static.mjs']),
         run_stage('verificador_independiente_de_estado', ['python3','scripts/verify_state.py','--baseline']),
     ]
     try:
