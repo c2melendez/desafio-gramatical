@@ -91,6 +91,16 @@ jobs:
           name: m1-espanol-avance
           path: m1-area-progress.json
           retention-days: 30
+      - name: Auditar independencia operativa de tareas por juego
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-operations.mjs > m1-operation-audit.json
+      - name: Conservar evidencia de independencia operativa
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-operaciones-cognitivas
+          path: m1-operation-audit.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Verificar aceptación técnica M1 y déficit en 189 celdas
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-technical-acceptance.mjs > m1-technical-acceptance.json
       - name: Archivar validación de celdas de M1
