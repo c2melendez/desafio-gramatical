@@ -58,15 +58,15 @@
   "ultima_ejecucion_m0": {
     "fecha_utc": "2026-11-17",
     "rama": "trabajo/m0-reconciliacion-20261117",
-    "sha_rama": "b19ada14adfa15d3018961cf1a4310a0562842f0",
-    "sha_checkout_ci": "0241a167b52ceab2088752a0dc3df92a61e573cf",
-    "run_id": 44083272489,
-    "artefacto_id": 14328311356,
+    "sha_rama": "8c731636a1ac565a87a0c99983942b777c8fa835",
+    "sha_checkout_ci": "e0ccdb7af20bc167a8a413bfdecf7bf242d44352",
+    "run_id": 44083787008,
+    "artefacto_id": 14327648083,
     "runner_estado": "FAIL",
-    "etapas_ejecutadas_pass": 18,
+    "etapas_ejecutadas_pass": 19,
     "etapas_obligatorias_not_run": 6,
     "resultado_ci": "success",
-    "nota": "CI general aprobado y auditoria M0 bloqueada son resultados diferentes; GitHub Actions ejecuta un checkout sintetico del PR.",
-    "render_mismo_sha": "NO_VERIFICADO"
+    "render_mismo_sha": "NO_VERIFICADO",
+    "nota": "CI general PASS; runner independiente M0 FAIL por seis verificaciones obligatorias sin ejecutar. SHA del checkout es merge sintético del PR."
   }
 }
