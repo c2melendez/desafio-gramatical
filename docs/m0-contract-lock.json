@@ -1,11 +1,11 @@
 {
-  "version": 9,
+  "version": 10,
   "scope": "Contrato M2: mantiene regresión M0/M1 al ampliar Español 20/35/45. Revisión académica diferida.",
   "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "31467f450ca992425ced300a7dde2e26ca352973",
-    "src/lib/coverage.ts": "9d66723a961ea96aad5d72428ae14b20227adb9f",
+    "src/lib/coverage.ts": "51915a2e4e9e192cf298e7d634bbd463ebb63451",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "bca97a7e703ea70c417ddc738eb21a3688f4d910",
