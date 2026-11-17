@@ -5,6 +5,7 @@ import { availableModule } from '../src/lib/phuma-catalog.ts';
 import { GRAMMAR_PILOT_SUBTOPICS } from '../src/lib/grammar-next-draft.ts';
 import {GRAMMAR_M1_ACTIVITIES} from '../src/lib/grammar-m1-activities.ts';
 import {M1_NEXT_ACTIVITIES} from '../src/lib/grammar-m1-next-activities.ts';
+import {M1_LITERATURE_ACTIVITIES} from '../src/lib/grammar-m1-literature.ts';
 
 const sha = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
 const dirty = execFileSync('git', ['status', '--porcelain', '--untracked-files=no'], { encoding: 'utf8' }).trim() !== '';
@@ -18,6 +19,8 @@ function menuEnabled(row) {
       (row.mode === 'clasificar' && ['Sinónimos y antónimos','Cohesión y coherencia'].includes(row.subtopic)) ||
       [...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES].some(x=>x.subtopic===row.subtopic&&x.level===row.level&&x.kind===(row.mode==='construir'?'construction':'classification'));
   }
+  if(row.area==='espanol'&&row.topic==='Literatura'&&GRAMMAR_PILOT_SUBTOPICS.includes(row.subtopic))
+   return row.mode==='quiz'||M1_LITERATURE_ACTIVITIES.some(x=>x.subtopic===row.subtopic&&x.level===row.level&&x.kind===(row.mode==='construir'?'construction':'classification'));
   return availableModule(row.area,row.topic,row.subtopic);
 }
 const rows = coverageRows().map(row => ({
