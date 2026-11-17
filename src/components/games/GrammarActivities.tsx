@@ -26,7 +26,8 @@ export function GrammarConstruction({ item, onResult, onNext }: Props<Constructi
   const [chosen, setChosen] = useState<string[]>([]);
   const [checked, setChecked] = useState(false);
   const lookup = (id: string) => item.tiles.find(x => x.id === id)!.text;
-  const check = () => { if (!chosen.length || checked) return; setChecked(true); onResult(gradeConstruction(item, chosen)); };
+  const complete = item.solutions.some(solution=>solution.length===chosen.length);
+  const check = () => { if (!complete || checked) return; setChecked(true); onResult(gradeConstruction(item, chosen)); };
   return <section className="space-y-4">
     <h2 className="card-ink p-4 font-bold">{item.prompt}</h2>
     <div aria-label="Tu construcción" aria-live="polite" className="rounded-xl border-2 border-dashed p-4 flex flex-wrap gap-2">
@@ -34,6 +35,6 @@ export function GrammarConstruction({ item, onResult, onNext }: Props<Constructi
       {!chosen.length && <span>Selecciona fichas en orden.</span>}
     </div>
     <div className="flex flex-wrap gap-2" aria-label="Fichas disponibles">{tiles.map(x => <button key={x.id} disabled={checked || chosen.includes(x.id)} className="tile bg-card disabled:opacity-40" onClick={() => setChosen(c => [...c, x.id])}>{x.text}</button>)}</div>
-    {!checked ? <button disabled={!chosen.length} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40" onClick={check}>Comprobar</button> : <div aria-live="polite" className="space-y-2"><p>{gradeConstruction(item, chosen) ? 'Correcto.' : `Una solución: ${item.solutions[0].map(lookup).join(' ')}`}</p><p>{item.explanation}</p><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
+    {!checked ? <button disabled={!complete} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40" onClick={check}>Comprobar</button> : <div aria-live="polite" className="space-y-2"><p>{gradeConstruction(item, chosen) ? 'Correcto.' : `Una solución: ${item.solutions[0].map(lookup).join(' ')}`}</p><p>{item.explanation}</p><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
   </section>;
 }
