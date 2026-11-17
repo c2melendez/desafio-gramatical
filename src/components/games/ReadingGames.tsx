@@ -3,8 +3,10 @@ import {NextButton} from "./Feedback";
 import type {GameProps} from "./types";
 import {EVIDENCE_LABEL,checkReadingOrder,type EvidenceTag,type ReadingChallenge} from "@/lib/reading";
 import type {MainIdeaChoiceCase} from "@/lib/main-idea-choice-cases";
+import type {MainIdeaDetectiveCase} from "@/lib/main-idea-detective-cases";
+import type {MainIdeaReconstructCase} from "@/lib/main-idea-reconstruct-cases";
 
-function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase}){
+function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase}){
  return <section className="card-ink bg-card p-5 space-y-3" aria-label="Texto para analizar">
   <p className="text-xs font-bold uppercase tracking-wider text-primary">Lectura · {item.subtopic}</p>
   <h2 className="text-xl font-black">{item.title}</h2>
@@ -12,7 +14,7 @@ function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase}){
  </section>;
 }
 const TYPES:EvidenceTag[]=["explicit","inference","unsupported"];
-export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChallenge>){
+export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaDetectiveCase>){
  const [picks,setPicks]=useState<Record<number,EvidenceTag>>({});
  const [checked,setChecked]=useState(false);
  const done=item.claims.every((_,i)=>Boolean(picks[i]));
@@ -63,7 +65,7 @@ export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChal
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </div>;
 }
-export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge>){
+export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaReconstructCase>){
  const [sequence,setSequence]=useState<number[]>([]);
  const [checked,setChecked]=useState(false);
  const pieces=item.order.parts;
