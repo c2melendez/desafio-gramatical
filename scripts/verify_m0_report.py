@@ -15,7 +15,7 @@ REQUIRED = {
     'contratos_lock_negativos','estado_y_contratos','inventario_por_item_y_calidad','regresion_y_funcional',
     'mutacion_critica','seguridad_estatica_cliente','seguridad_mutaciones_fixture',
     'dependencias_produccion','dependencias_completas',
-    'seguridad_y_privacidad','verificador_independiente_de_estado',
+    'seguridad_y_privacidad','privacidad_estatica_negativos','verificador_independiente_de_estado',
 }
 VALID = {'PASS','FAIL','SKIP','NOT_RUN','NOT_APPLICABLE'}
 
