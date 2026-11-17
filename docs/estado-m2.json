@@ -1,7 +1,7 @@
 {
   "version": 2,
   "module": "espanol-M2",
-  "estado": "EN_CURSO",
+  "estado": "PUBLICADA_PENDIENTE_VERIFICACION_FINAL",
   "dependencias": [
     "M0",
     "espanol-M1"
@@ -31,8 +31,8 @@
   "regla": "No equiparar nuevos registros técnicos a ejercicios independientes verificados; reconstruir matriz por SHA y reparar casos equivalentes.",
   "docente": "PENDIENTE_AUTORIZADA",
   "estado_evidencia": "PUNTO_DE_INICIO_M2",
-  "siguiente_accion": "Corregir CI y todas las incidencias de auditoría M2; comprobar 189 celdas, 3440 IDs, 6301 totales, negativas/mutaciones; fusionar solo con CI SUCCESS y verificar Render Live del mismo SHA.",
-  "estadio": "INTEGRADO_EN_PR_7_PENDIENTE_AUDITORIA",
+  "siguiente_accion": "Validar CI main del SHA final incluyendo este registro, seleccionar workspace Render mediante confirmación explícita, comprobar servicio vinculado y deploy LIVE del mismo SHA. No declarar M2 COMPLETADA sin paridad y smoke funcional.",
+  "estadio": "FUSIONADO_MAIN_CI_PR_PASS",
   "rama": "work/m2-espanol-integral-20261117",
   "pr": "https://github.com/c2melendez/desafio-gramatical/pull/7",
   "registros_candidatos": 3440,
@@ -42,5 +42,39 @@
     "avanzado": 1573
   },
   "conteo_tecnico_previsto": 6301,
-  "independencia_conceptual": "INCONCLUSA — combinaciones de pares contextuales; hay que comprobar independencia sustancial por ejercicio"
+  "independencia_conceptual": "INCONCLUSA — combinaciones de pares contextuales; hay que comprobar independencia sustancial por ejercicio",
+  "merge_sha": "48e51dc73fb545763ed1185b606b230ec3d93951",
+  "validacion_m2": {
+    "nivel": "N1",
+    "run_pr": 44143096158,
+    "sha_pr": "3ebd36b1ab34298298e02f68c049d5d9146bfcdc",
+    "ci_pr": "success",
+    "auditoria": {
+      "resultado": "PASS",
+      "celdas": 189,
+      "combinaciones": 63,
+      "subtemas": 21,
+      "candidatos_nuevos": 3440,
+      "registros_acumulados": 6301,
+      "cuotas": {
+        "principiante": 614,
+        "intermedio": 1253,
+        "avanzado": 1573
+      },
+      "claves_y_pruebas_negativas": 4107,
+      "pares_fuente_controlados": 3300,
+      "pares_duplicados": 0,
+      "deficit_tecnico": 0
+    },
+    "ci_main": {
+      "run_id": 44143429554,
+      "estado": "EN_EJECUCION_EN_REGISTRO"
+    },
+    "render": {
+      "estado": "NO_VERIFICADO",
+      "motivo": "La conexión Render requiere que el usuario confirme explícitamente el workspace; no seleccionar sin autorización específica de espacio."
+    },
+    "independencia_conceptual": "INCONCLUSA",
+    "revision_docente": "PENDIENTE_AUTORIZADA"
+  }
 }
