@@ -4,13 +4,18 @@ import {pool} from './inventory-items.mjs';
 
 const norm=x=>String(x??'').normalize('NFKC').toLocaleLowerCase('es').replace(/\s+/g,' ').trim();
 export function auditItem(item,row){
+ // En corrección ortográfica, las mayúsculas pueden ser la habilidad evaluada:
+ // no normalizar la caja y convertir un distractor en supuesto duplicado.
+ const optNorm=x=>row.topic==='Redacción'&&row.subtopic==='Corrección'
+   ?String(x??'').normalize('NFKC').replace(/\\s+/g,' ').trim()
+   :norm(x);
  const problems=[];
  if(!item||typeof item!=='object'||!norm(item.id))return ['ID vacío'];
  if(item.level!==undefined&&item.level!==row.level)problems.push('nivel incoherente');
  if(item.subtopic!==undefined&&item.subtopic!==row.subtopic)problems.push('subtema incoherente');
  if(Array.isArray(item.options)){
-  if(item.options.length<2||item.options.some(x=>!norm(x))||
-      new Set(item.options.map(norm)).size!==item.options.length)problems.push('opciones duplicadas o inválidas');
+  if(item.options.length<2||item.options.some(x=>!optNorm(x))||
+      new Set(item.options.map(optNorm)).size!==item.options.length)problems.push('opciones duplicadas o inválidas');
   if(typeof item.answer==='number'&&(!Number.isInteger(item.answer)||item.answer<0||item.answer>=item.options.length))
     problems.push('respuesta fuera de opciones');
  }
