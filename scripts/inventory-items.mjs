@@ -28,11 +28,11 @@ export function pool(row) {
   if(topic==='Gramática y semántica'&&subtopic==='Sinónimos y antónimos'&&mode==='clasificar')
     return [...SYNONYM_CLASSIFICATION.filter(x=>x.level===level),...[...M2_GRAMMAR_ACTIVITIES,...M3_GRAMMAR_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind==="classification")];
   if(topic==='Gramática y semántica'&&subtopic==='Cohesión y coherencia'&&mode==='clasificar')
-    return [...COHESION_CLASSIFICATION.filter(x=>x.level===level),...M2_GRAMMAR_ACTIVITIES.filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind==="classification")];
+    return [...COHESION_CLASSIFICATION.filter(x=>x.level===level),...[...M2_GRAMMAR_ACTIVITIES,...M3_GRAMMAR_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind==="classification")];
   if(topic==='Gramática y semántica'&&mode==='quiz')return grammarPilotPool(subtopic,level);
   if(topic==='Gramática y semántica')return [...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES,...M2_GRAMMAR_ACTIVITIES,...M3_GRAMMAR_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==='construir'?'construction':'classification'));
 
-  if(topic==='Literatura')return mode==='quiz'?grammarPilotPool(subtopic,level):[...M1_LITERATURE_ACTIVITIES,...M2_GRAMMAR_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==='construir'?'construction':'classification'));
+  if(topic==='Literatura')return mode==='quiz'?grammarPilotPool(subtopic,level):[...M1_LITERATURE_ACTIVITIES,...M2_GRAMMAR_ACTIVITIES,...M3_GRAMMAR_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==='construir'?'construction':'classification'));
   if(topic==='Comprensión lectora')return readingPool(level,subtopic,mode);
   if(topic==='Redacción')return writingPool(level,subtopic,mode);
   return [];
