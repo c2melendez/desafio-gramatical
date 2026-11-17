@@ -1,5 +1,5 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
-import {useEffect,useState} from "react";
+import {useEffect,useRef,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
 import {READING_SUBTOPICS,readingItems,readingPool,type ReadingChallenge,type ReadingItem,type ReadingSubtopic} from "@/lib/reading";
@@ -32,16 +32,27 @@ function ReadingPlay(){
  const [best,setBest]=useState(0);
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
+ const classification=useRef<{id:string;count:number;allCorrect:boolean}>({id:"",count:0,allCorrect:true});
  useEffect(()=>{
   setItems(readingItems(nivel,subtema,modo));setIdx(0);setCorrect(0);setTotal(0);
   setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[nivel,subtema,modo,run]);
  const report=(ok:boolean,m?:Mistake)=>{
   if(items?.[idx]){
-   const key=rotationKey("espanol","Comprensión lectora",subtema,modo,nivel);
-   const ids=readingPool(nivel,subtema,modo).map(q=>q.id);
-   const state=readRotation(key,ids);
-   writeRotation(key,recordRotation(state,items[idx].id,ok));
+   const itemId=items[idx].id;
+   let persist=true,allCorrect=ok;
+   if(modo==="clasificar"){
+    if(classification.current.id!==itemId)classification.current={id:itemId,count:0,allCorrect:true};
+    classification.current.count++;
+    classification.current.allCorrect=classification.current.allCorrect&&ok;
+    persist=classification.current.count===3;
+    allCorrect=classification.current.allCorrect;
+   }
+   if(persist){
+    const key=rotationKey("espanol","Comprensión lectora",subtema,modo,nivel);
+    const ids=readingPool(nivel,subtema,modo).map(q=>q.id);
+    writeRotation(key,recordRotation(readRotation(key,ids),itemId,allCorrect));
+   }
   }
   setTotal(t=>t+1);
   if(ok){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
