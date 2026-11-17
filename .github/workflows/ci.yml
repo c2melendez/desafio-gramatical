@@ -83,6 +83,16 @@ jobs:
           retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
+      - name: Auditar núcleo M1 — contenido y claves estructurales
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-nucleus.mjs > m1-nucleus-audit.json
+      - name: Archivar auditoría de 180 ejercicios M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-nucleo-180-auditoria
+          path: m1-nucleus-audit.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Evidencia ejecutable de M0 (cierre independiente)
         if: always()
         shell: bash
