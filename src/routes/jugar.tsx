@@ -11,6 +11,7 @@ import type {ClassificationActivity} from "@/lib/grammar-activities";
 import {GRAMMAR_PILOT_SUBTOPICS,grammarPilotPool,type GrammarDraft} from "@/lib/grammar-next-draft";
 import {rotationKey,readRotation,recordRotation,writeRotation,selectRotation} from "@/lib/rotation";
 import { EXTRA_QUIZ } from "@/lib/extra-quiz";
+import {GrammarM1Play,grammarM1Pool} from "@/components/games/GrammarM1Play";
 import { ClassifyGame } from "@/components/games/ClassifyGame";
 import { QuizGame } from "@/components/games/QuizGame";
 import { BuildGame } from "@/components/games/BuildGame";
@@ -75,7 +76,14 @@ function buildItems(modo: Mode, nivel: Level): any[] {
 
 function PlayRouter() {
  const {subtema,nivel,modo}=Route.useSearch();
- return subtema ? modo === "quiz" ? <GrammarPilot key={`${subtema}-${nivel}`} subtema={subtema} nivel={nivel}/> : modo === "clasificar" && (subtema === "Sinónimos y antónimos" || subtema === "Cohesión y coherencia") ? <SynonymClassification key={`${subtema}-${nivel}`} nivel={nivel} subtema={subtema}/> : <main className="p-6">Esta modalidad está en desarrollo. <Link to="/">Volver al menú</Link></main> : <Play/>;
+ if(subtema){
+  if(grammarM1Pool(subtema,modo,nivel).length)return <GrammarM1Play key={`${subtema}-${nivel}-${modo}`} subtema={subtema} nivel={nivel} modo={modo}/>;
+  if(modo==="quiz")return <GrammarPilot key={`${subtema}-${nivel}`} subtema={subtema} nivel={nivel}/>;
+  if(modo==="clasificar"&&(subtema==="Sinónimos y antónimos"||subtema==="Cohesión y coherencia"))
+   return <SynonymClassification key={`${subtema}-${nivel}`} nivel={nivel} subtema={subtema}/>;
+  return <main className="p-6">Esta modalidad está en desarrollo. <Link to="/">Volver al menú</Link></main>;
+ }
+ return <Play/>;
 }
 
 function Play() {
