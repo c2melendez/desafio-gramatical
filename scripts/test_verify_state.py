@@ -1,4 +1,6 @@
 import tempfile
+import subprocess
+import sys
 import unittest
 from pathlib import Path
 from verify_state import UNIMPLEMENTED, verify
@@ -18,6 +20,16 @@ class StateTests(unittest.TestCase):
             self.assertTrue(any(c['status']=='ERROR' and c['control']=='referencia' for c in checks))
             checks=verify(sample(),C,p,lambda *_:None)
             self.assertTrue(any(c['status']=='SKIP' and c['control']=='referencia' for c in checks))
+
+    def test_baseline_requires_available_hashes(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d); (p/'e.txt').write_text('x')
+            checks=verify(sample(),C,p,lambda *_:None)
+            scoped=[x for x in checks if x['control'] in {'grafo','modulo','estado','area','referencia','evidencia'}]
+            self.assertTrue(any(x['status']=='SKIP' for x in scoped))
+            checks=verify(sample(),C,p,lambda *_:S)
+            scoped=[x for x in checks if x['control'] in {'grafo','modulo','estado','area','referencia','evidencia'}]
+            self.assertTrue(all(x['status']=='OK' for x in scoped))
 
     def test_missing_evidence_and_false_completion(self):
         with tempfile.TemporaryDirectory() as d:
