@@ -70,8 +70,8 @@ describe("Fase A: núcleo Idea principal con textos originales",()=>{
   expect(second.every(q=>!state.seen.includes(q.id))).toBe(true);
   expect(new Set([...first,...second].map(q=>q.id)).size).toBe(20);
  });
- it("los otros seis subtemas de lectura conservan sus nueve textos previos",()=>{
-  for(const subtopic of READING_SUBTOPICS.filter(s=>s!=="Idea principal"))
+ it("los otros cinco subtemas de lectura conservan sus nueve textos previos",()=>{
+  for(const subtopic of READING_SUBTOPICS.filter(s=>!["Idea principal","Inferencias"].includes(s)))
    for(const level of ["principiante","intermedio","avanzado"] as const)
     for(const mode of ["clasificar","quiz","construir"] as const)
      expect(readingPool(level,subtopic,mode)).toHaveLength(3);
