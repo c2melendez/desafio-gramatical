@@ -10,8 +10,8 @@ describe("Comprensión lectora: cobertura y tres juegos",()=>{
   expect(new Set(READING_BANK.map(q=>q.title)).size).toBe(9);
   expect(READING_SUBTOPICS).toHaveLength(7);
   for(const level of LEVELS)for(const subtopic of READING_SUBTOPICS){
-   expect(readingItems(level,subtopic,"clasificar").length).toBe(["Idea principal","Inferencias"].includes(subtopic)?10:3);
-   expect(new Set(readingItems(level,subtopic,"quiz").map(x=>x.id)).size).toBe(["Idea principal","Inferencias"].includes(subtopic)?10:3);
+   expect(readingItems(level,subtopic,"clasificar").length).toBe(["Idea principal","Inferencias","Lectura crítica"].includes(subtopic)?10:3);
+   expect(new Set(readingItems(level,subtopic,"quiz").map(x=>x.id)).size).toBe(["Idea principal","Inferencias","Lectura crítica"].includes(subtopic)?10:3);
    expect(readingItems(level,subtopic,"construir").every(x=>x.subtopic===subtopic)).toBe(true);
    expect(availableModule("espanol","Comprensión lectora",subtopic)).toBe(true);
   }
