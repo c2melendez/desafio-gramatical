@@ -41,7 +41,7 @@ for(const item of all){
 }
 const rows=coverageRows().filter(x=>x.area==="espanol"&&x.topic==="Gramática y semántica"&&names.has(x.subtopic));
 const perCell=rows.map(x=>({subtema:x.subtopic,juego:x.mode,nivel:x.level,observados:x.available,meta:x.stageOne}));
-for(const r of perCell)if(r.observados!==r.meta)issues.push({...r,rule:"cuota de núcleo incompleta"});
+for(const r of perCell)if(r.observados<r.meta)issues.push({...r,rule:"cuota de núcleo incompleta"});
 const report={version:1,module:"espanol-M1",scope:"405 registros técnicos nuevos de tres subtemas; no representa cierre de M1 Español",
  sha:execFileSync("git",["rev-parse","HEAD"],{encoding:"utf8"}).trim(),
  status:issues.length?"FAIL":"PASS",

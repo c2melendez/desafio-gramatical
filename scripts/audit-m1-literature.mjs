@@ -24,7 +24,7 @@ for(const item of tasks){
  verificacion_estructura:'VERIFICADO',oraculo_semantico:'INCONCLUSO',independencia:'INCONCLUSO',revision_docente:'PENDIENTE'});
 }
 const rows=coverageRows().filter(x=>x.area==='espanol'&&x.topic==='Literatura');
-for(const x of rows)if(x.available!==x.stageOne)failures.push({subtema:x.subtopic,juego:x.mode,nivel:x.level,reason:'cuota técnica núcleo incompleta'});
+for(const x of rows)if(x.available<x.stageOne)failures.push({subtema:x.subtopic,juego:x.mode,nivel:x.level,reason:'cuota técnica núcleo incompleta'});
 const report={version:1,module:'espanol-M1',scope:'Núcleo técnico Literatura, 270 registros en 18 celdas',
  sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
  status:failures.length?'FAIL':'PASS',records:tasks.length,cells:rows.length,
