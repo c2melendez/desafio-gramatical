@@ -1,7 +1,7 @@
 {
   "version": 2,
   "module": "espanol-M2",
-  "estado": "PUBLICADA_PENDIENTE_VERIFICACION_FINAL",
+  "estado": "COMPLETADA",
   "dependencias": [
     "M0",
     "espanol-M1"
@@ -30,9 +30,9 @@
   "nota": "El déficit es la suma de max(0, meta por celda − disponibles): un excedente de una unidad en Categorías gramaticales/quiz/básico no compensa otras celdas.",
   "regla": "No equiparar nuevos registros técnicos a ejercicios independientes verificados; reconstruir matriz por SHA y reparar casos equivalentes.",
   "docente": "PENDIENTE_AUTORIZADA",
-  "estado_evidencia": "PUNTO_DE_INICIO_M2",
-  "siguiente_accion": "Validar CI main del SHA final incluyendo este registro, seleccionar workspace Render mediante confirmación explícita, comprobar servicio vinculado y deploy LIVE del mismo SHA. No declarar M2 COMPLETADA sin paridad y smoke funcional.",
-  "estadio": "FUSIONADO_MAIN_CI_PR_PASS",
+  "estado_evidencia": "CI_MAIN_RENDER_LIVE_SHA_VERIFICADOS",
+  "siguiente_accion": "Iniciar M3 Español con progresión 30/50/70 por combinación, evitando reutilización de familias; mantener revisión docente diferida, auditoría técnica obligatoria, CI SUCCESS y Render Live mismo SHA al cierre.",
+  "estadio": "CI_RENDER_LIVE_MISMO_SHA_CIERRE_TECNICO",
   "rama": "work/m2-espanol-integral-20261117",
   "pr": "https://github.com/c2melendez/desafio-gramatical/pull/7",
   "registros_candidatos": 3440,
@@ -42,7 +42,7 @@
     "avanzado": 1573
   },
   "conteo_tecnico_previsto": 6301,
-  "independencia_conceptual": "INCONCLUSA — combinaciones de pares contextuales; hay que comprobar independencia sustancial por ejercicio",
+  "independencia_conceptual": "INCONCLUSA_ACADEMICA",
   "merge_sha": "48e51dc73fb545763ed1185b606b230ec3d93951",
   "validacion_m2": {
     "nivel": "N1",
@@ -64,17 +64,32 @@
       "claves_y_pruebas_negativas": 4107,
       "pares_fuente_controlados": 3300,
       "pares_duplicados": 0,
-      "deficit_tecnico": 0
+      "deficit_tecnico": 0,
+      "resumen": "6,301 registros técnicos; 3,440 candidatos M2; 189 celdas; 0 incidencias; 0 déficit",
+      "id_globales_unicos": 6301,
+      "mutaciones_negativas": 4107,
+      "artifact_id": 14357465244
     },
     "ci_main": {
-      "run_id": 44143429554,
-      "estado": "EN_EJECUCION_EN_REGISTRO"
+      "run_id": 44145885472,
+      "sha": "7d9d144c09a42a52b024a17265652dcc7ff0b74b",
+      "estado": "success",
+      "smoke_http": "PASS; rutas gramatica, lectura, redaccion M1/M2; verificacion HTTP HTML, no prueba interactiva completa"
     },
     "render": {
-      "estado": "NO_VERIFICADO",
-      "motivo": "La conexión Render requiere que el usuario confirme explícitamente el workspace; no seleccionar sin autorización específica de espacio."
+      "workspace_id": "tea-da4esd7qj5pc73d1fss0",
+      "service_id": "srv-dbt0rilg1s2s738eku8g",
+      "deploy_id": "dep-dbu9jdjr759s738sbleg",
+      "sha": "7d9d144c09a42a52b024a17265652dcc7ff0b74b",
+      "estado": "live",
+      "url": "https://desafio-gramatical.onrender.com",
+      "auto_deploy": true
     },
     "independencia_conceptual": "INCONCLUSA",
-    "revision_docente": "PENDIENTE_AUTORIZADA"
-  }
+    "revision_docente": "PENDIENTE_AUTORIZADA",
+    "cierre_baseline_sha": "7d9d144c09a42a52b024a17265652dcc7ff0b74b",
+    "limites": "La revisión docente y la independencia conceptual de ejercicios no se consideran acreditadas; cierre estrictamente técnico operativo."
+  },
+  "cierre_tipo": "TECNICO_OPERATIVO_REVISION_ACADEMICA_DIFERIDA",
+  "siguiente_modulo": "espanol-M3"
 }
