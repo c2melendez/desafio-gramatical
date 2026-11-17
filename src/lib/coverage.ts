@@ -27,7 +27,7 @@ export function countContent(area:AreaId,topic:string,subtopic:string,mode:GameI
  if(topic==="Gramática y semántica"&&subtopic==="Sinónimos y antónimos"&&mode==="clasificar")return SYNONYM_CLASSIFICATION.filter(q=>q.level===level).length;
  if(topic==="Gramática y semántica"&&subtopic==="Cohesión y coherencia"&&mode==="clasificar")return COHESION_CLASSIFICATION.filter(q=>q.level===level).length;
  if(topic==="Gramática y semántica"&&mode==="quiz")return grammarPilotPool(subtopic,level).length;
- if(topic==="Gramática y semántica"&&(mode==="construir"||subtopic==="Morfosintaxis"&&mode==="clasificar"))
+ if(topic==="Gramática y semántica"&&(mode==="construir"||mode==="clasificar"))
   return [...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==="construir"?"construction":"classification")).length;
  if(topic==="Comprensión lectora")return readingPool(level,subtopic as Parameters<typeof readingPool>[1],mode).length;
  if(topic==="Redacción")return writingPool(level,subtopic as Parameters<typeof writingPool>[1],mode).length;
