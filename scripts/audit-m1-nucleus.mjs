@@ -19,6 +19,7 @@ for(const item of GRAMMAR_M1_ACTIVITIES){
  if(!item.competence||!item.cognitiveGoal||!item.origin||!item.sourceLocator||!item.family)issues.push({id:item.id,reason:'trazabilidad incompleta'});
  if(item.kind==='classification'){
   const answers=Object.fromEntries(item.items.map(x=>[x.id,x.label]));
+  if(item.items.map(x=>x.label).every((x,i)=>x===item.labels[i]))issues.push({id:item.id,reason:'clave inferible por posición de presentación'});
   if(!gradeClassification(item,answers)||gradeClassification(item,{}))issues.push({id:item.id,reason:'oráculo estructural clasificación'});
  }else{
   const candidate=item.solutions[0];
