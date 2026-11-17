@@ -96,9 +96,9 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "Ejecutar CI de SHA final tras cambios de clasificación; revisar 855 ítems conceptualmente y 240 familias compartidas, resolver ambigüedades, ejecutar mutaciones restantes y accesibilidad, verificar Render Live del mismo SHA tras una promoción autorizada por QA. No avanzar a M2 sin cerrar M1.",
+  "siguiente_accion": "CI de SHA candidato con auditoría de operaciones cognitivas PASS; fusionar PR #6, verificar CI y Render del mismo SHA, probar UI publicada, actualizar bloque A/B y estado. Conservar revisión docente pendiente, no atribuir certificación PHUMA.",
   "dependencia_estado": "COMPLETADA",
-  "fase_actual": "M1_NUCLEO_TECNICO_CUBIERTO_ORACULOS_RECONCILIADOS_REVISION_SEMANTICA_PENDIENTE",
+  "fase_actual": "M1_NUCLEO_AUTOMATICO_VERIFICADO_CANDIDATA_PUBLICACION",
   "pr": 6,
   "rama_trabajo": "work/m1-grammar-nucleus-20261117",
   "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json",
@@ -125,6 +125,24 @@
         "m1-familias-240"
       ],
       "semantica_humana": "PENDIENTE"
+    },
+    "auditoria_fuentes": {
+      "state": "PASS",
+      "count": 855,
+      "run_id": 44112229559,
+      "artifact": "m1-oraculos-855"
+    },
+    "auditoria_189": {
+      "state": "PASS",
+      "count": 2861,
+      "ids_unique": 2861,
+      "missing": 0,
+      "run_id": 44113530438,
+      "artifact": "m1-aceptacion-tecnica-189"
+    },
+    "candidata_publicacion": {
+      "requires": "CI SHA candidato, fusión, CI main, Render Live mismo SHA, prueba funcional publicada",
+      "ready": "PENDIENTE"
     }
   },
   "manifiestos": [
@@ -164,7 +182,9 @@
     "oraculos_contextuales_verificados": 225,
     "mutaciones_negativas_ejecutadas": 675,
     "mutaciones_negativas_detectadas": 675,
-    "independencia_conceptual": "INCONCLUSA",
-    "revision_docente": "PENDIENTE"
+    "independencia_conceptual": "INCONCLUSO — verificación operativa automática por modalidad; no es dictamen académico",
+    "revision_docente": "PENDIENTE_AUTORIZADA",
+    "ids_globales_unicos": 2861,
+    "aceptados_en_auditoria_tecnica": 2861
   }
 }
