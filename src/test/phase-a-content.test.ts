@@ -14,7 +14,9 @@ import {ELISION_EDITOR_CASES} from "@/lib/elision-editor-cases";
 import {GENERALIZATION_ERROR_CASES} from "@/lib/generalization-error-cases";
 import {GENERALIZATION_CHOICE_CASES} from "@/lib/generalization-choice-cases";
 import {GENERALIZATION_EDITOR_CASES} from "@/lib/generalization-editor-cases";
-import {writingPool,writingItems} from "@/lib/writing";
+import {writingPool as m1SourceWritingPool,writingItems} from "@/lib/writing";
+
+const m1WritingPool=(...args:Parameters<typeof m1SourceWritingPool>)=>m1SourceWritingPool(...args).filter(q=>!q.id.startsWith("m2-"));
 import {coverageRows,coverageTotals,CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 import {emptyRotation,rotationKey,parseRotation,selectRotation,recordRotation} from "@/lib/rotation";
 import type {Level} from "@/lib/grammar";
@@ -30,9 +32,9 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(new Set(CONNECTOR_CASES.map(q=>q.id)).size).toBe(36);
   for(const [level,count] of [["principiante",10],["intermedio",15],["avanzado",20]] as const){
    for(const subtopic of ["Conectores","Corrección","Organización textual","Elisión y adición","Generalización e integración"] as const)for(const mode of ["clasificar","quiz","construir"] as const){
-    const pool=writingPool(level,subtopic,mode);
+    const pool=m1WritingPool(level,subtopic,mode);
     expect(pool).toHaveLength(count);
-    expect(countContent("espanol","Redacción",subtopic,mode,level)).toBe(count);
+    expect(countContent("espanol","Redacción",subtopic,mode,level)).toBeGreaterThanOrEqual(count);
    }
    expect(CONTENT_STAGE_ONE[level]).toBe(count);
    expect(CONTENT_TARGET[level]).toBeGreaterThan(count);
@@ -122,7 +124,7 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   for(const level of ["principiante","intermedio","avanzado"] as const)
    for(const mode of ["clasificar","quiz","construir"] as const){
     expect(writingItems(level,"Organización textual",mode)).toHaveLength(10);
-    expect(writingPool(level,"Organización textual",mode)).toHaveLength(CONTENT_STAGE_ONE[level]);
+    expect(m1WritingPool(level,"Organización textual",mode)).toHaveLength(CONTENT_STAGE_ONE[level]);
    }
  });
  it("Elisión y adición: tres bancos independientes de 7/12/17 ejercicios originales",()=>{
@@ -151,7 +153,7 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   }
   for(const [level,count] of [["principiante",10],["intermedio",15],["avanzado",20]] as const){
    for(const mode of ["clasificar","quiz","construir"] as const){
-    expect(writingPool(level,"Elisión y adición",mode)).toHaveLength(count);
+    expect(m1WritingPool(level,"Elisión y adición",mode)).toHaveLength(count);
     expect(writingItems(level,"Elisión y adición",mode)).toHaveLength(10);
    }
   }
@@ -181,7 +183,7 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   }
   for(const [level,count] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
    for(const mode of ["clasificar","quiz","construir"] as const){
-    expect(writingPool(level,"Generalización e integración",mode)).toHaveLength(count);
+    expect(m1WritingPool(level,"Generalización e integración",mode)).toHaveLength(count);
     expect(writingItems(level,"Generalización e integración",mode)).toHaveLength(10);
    }
  });

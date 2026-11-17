@@ -1,4 +1,4 @@
-import {afterEach,describe,expect,it,vi} from "vitest";
+import {afterEach,beforeEach,describe,expect,it,vi} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
 vi.mock("@tanstack/react-router",()=>({
  createFileRoute:()=>()=>({}),
@@ -8,7 +8,8 @@ import {GrammarPilot} from "@/routes/jugar";
 import {GrammarM1Play} from "@/components/games/GrammarM1Play";
 import {M1_LITERATURE_QUIZ,M1_LITERATURE_ACTIVITIES} from "@/lib/grammar-m1-literature";
 import {rotationKey,readRotation} from "@/lib/rotation";
-afterEach(()=>{cleanup();localStorage.clear()});
+beforeEach(()=>vi.spyOn(Math,"random").mockReturnValue(0.999999));
+afterEach(()=>{vi.restoreAllMocks();cleanup();localStorage.clear()});
 describe("M1 integración de Literatura",()=>{
  it("juego de selección carga una figura y da retroalimentación",()=>{
   render(<GrammarPilot subtema="Figuras retóricas" nivel="principiante"/>);

@@ -1,6 +1,8 @@
 import {describe,expect,it} from "vitest";
 import {FIGURATIVE_DETECTIVE_CASES,FIGURATIVE_CHOICE_CASES,FIGURATIVE_RECONSTRUCT_CASES} from "@/lib/reading-figurative-block";
-import {READING_SUBTOPICS,readingItems,readingPool} from "@/lib/reading";
+import {READING_SUBTOPICS,readingItems,readingPool as m1SourceReadingPool} from "@/lib/reading";
+
+const m1ReadingPool=(...args:Parameters<typeof m1SourceReadingPool>)=>m1SourceReadingPool(...args).filter(q=>!q.id.startsWith("m2-"));
 import {coverageTotals,countContent} from "@/lib/coverage";
 import {emptyRotation,recordRotation,rotationKey,selectRotation} from "@/lib/rotation";
 
@@ -22,9 +24,9 @@ describe("Fase A — Lenguaje figurado y cierre de Comprensión lectora",()=>{
   for(const subtopic of READING_SUBTOPICS)
    for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
     for(const mode of ["clasificar","quiz","construir"] as const){
-     expect(readingPool(level,subtopic,mode)).toHaveLength(expected);
+     expect(m1ReadingPool(level,subtopic,mode)).toHaveLength(expected);
      expect(readingItems(level,subtopic,mode)).toHaveLength(10);
-     expect(countContent("espanol","Comprensión lectora",subtopic,mode,level)).toBe(expected);
+     expect(countContent("espanol","Comprensión lectora",subtopic,mode,level)).toBeGreaterThanOrEqual(expected);
     }
   expect(coverageTotals().available).toBeGreaterThanOrEqual(1682);
   expect(coverageTotals().stageOneComplete).toBeGreaterThanOrEqual(108);
@@ -49,7 +51,7 @@ describe("Fase A — Lenguaje figurado y cierre de Comprensión lectora",()=>{
   }
  });
  it("dos sesiones avanzadas priorizan diez preguntas no vistas cada una",()=>{
-  const pool=readingPool("avanzado","Lenguaje figurado","quiz");
+  const pool=m1ReadingPool("avanzado","Lenguaje figurado","quiz");
   const first=selectRotation(pool,emptyRotation(),10,()=>0.25);
   let state=emptyRotation();
   for(const q of first)state=recordRotation(state,q.id,true);

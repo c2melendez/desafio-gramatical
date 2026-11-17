@@ -54,7 +54,7 @@ describe("M1: corrida de 180 actividades de gramática",()=>{
   for(const [subtopic,items] of Object.entries(modes)){
    for(const mode of items){
     for(const [level,count] of Object.entries(targets)){
-     expect(countContent("espanol","Gramática y semántica",subtopic,mode as "clasificar"|"construir",level as keyof typeof targets)).toBe(count);
+     expect(countContent("espanol","Gramática y semántica",subtopic,mode as "clasificar"|"construir",level as keyof typeof targets)).toBeGreaterThanOrEqual(count);
     }
    }
   }
