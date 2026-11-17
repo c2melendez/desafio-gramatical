@@ -1,0 +1,9 @@
+# M0 — auditoría de dependencias
+
+Ejecutada el 17 de noviembre de 2026 sobre `bun.lock` con Bun 1.4.4 y `bun audit --json`; alcance: avisos reportados por el registro de auditoría, no prueba de explotabilidad. La línea base indicó 28 avisos en total: 14 altos, 12 moderados, uno crítico y uno bajo; la consulta `bun audit --production --json` informó 12 avisos para dependencias de producción. Las clasificaciones de producción son las del proveedor de auditoría, no un análisis de alcance de cada ruta.
+
+Se aplicaron actualizaciones compatibles del árbol, se actualizó Vitest a 4.1.12 y Vite a 8.1.6, y se sustituyó la dependencia directa Zod 3 por Zod 4.6.6. En `src` no se encontraron importaciones directas de Zod; la actualización mayor requiere revisión de integraciones externas no cubiertas por las pruebas. Se actualizó `bun.lock` y se validó la instalación congelada.
+
+Tras los cambios, `bun audit --production --json` devolvió `{}` y código 0. El análisis completo dejó un aviso moderado de `minimatch` ([GHSA-g3hv-75wg-m249](https://github.com/advisories/GHSA-g3hv-75wg-m249)), dependiente de la cadena de herramientas `@typescript-eslint/typescript-estree`, cuyo rango no admite la versión corregida que propone el auditor. `bun audit --json` sigue devolviendo 1. No se fuerza una versión mayor transitiva sin verificar compatibilidad. Debe revisarse una actualización compatible y repetirse la auditoría; no se considera aprobada la etapa completa de seguridad por el resultado de producción.
+
+Validación local: `bun install --frozen-lockfile`, `bun run build`, `bun run test` (29 archivos, 167 pruebas), `bun run audit:content` y `bun x eslint . --rule 'prettier/prettier: off'` terminaron correctamente; lint emitió seis advertencias existentes. La exploración de secretos y la revisión completa de privacidad quedan pendientes. M0 permanece EN_CURSO; estos cambios no añaden ejercicios.
