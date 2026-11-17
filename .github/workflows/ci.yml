@@ -43,6 +43,8 @@ jobs:
           node scripts/test-selection-audit.mjs
           node scripts/test-content-contracts.mjs
           node scripts/check-selection-oracles.mjs
+          node scripts/security-client-audit.mjs --test
+          node scripts/security-client-audit.mjs
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
       - name: Comprobar código
