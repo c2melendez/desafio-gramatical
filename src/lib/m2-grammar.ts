@@ -29,7 +29,7 @@ const meta=(id:string,goal:string)=>({family:id,origin:"composicion-contextual-M
 function pair<T>(items:readonly T[],i:number):[T,T]{
  if(items.length<2)throw new Error("Faltan dos ejemplos independientes");
  const a=i%items.length;
- let b=(i*7+3)%items.length;
+ let b=(a+1+Math.floor(i/items.length))%items.length;
  if(b===a)b=(a+1)%items.length;
  return [items[a],items[b]];
 }
