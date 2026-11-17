@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "scope": "Contrato M2: mantiene regresión M0/M1 al ampliar Español 20/35/45. Revisión académica diferida.",
   "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
   "hash_algorithm": "git-blob-sha1",
@@ -10,13 +10,13 @@
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "bca97a7e703ea70c417ddc738eb21a3688f4d910",
     "src/lib/writing.ts": "40de2cc04de89b7576ca65f5b07a97a73ed2f036",
-    "src/routes/index.tsx": "4b7aaed86590f4e1ef641f0a4db9e65ec82be7f6",
+    "src/routes/index.tsx": "f74acbeea5230d7c4083ad28ac4416d1a4e4a53c",
     "src/routes/jugar.tsx": "0a5ccb58ceea7cfa2de39b17e831328547c2b46f",
     "src/routes/lectura.tsx": "20ba8f3708e1db6a3de2aa3c5cac07ba09bf5f3f",
     "src/routes/redaccion.tsx": "0a1f9d7eb6838b97044260d4b4b82d0f19b274fd",
     "src/routes/historial.tsx": "eb49b09c484ab62b36f42cd4249f72e33223d909"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "M2 añade banco contrastivo por modalidades, oráculos y registro de pares fuente; 3440 variantes técnicas en auditoría, sin acreditar independencia conceptual.",
+  "change_note": "M2: bloqueo de contratos verificado para todas las rutas y cobertura actualizadas; auditorías de 3440 candidatos en PR #7.",
   "previous_baseline": "bb4d9704f9581065f1bddd99e50326d84e9008d7"
 }
