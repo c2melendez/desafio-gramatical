@@ -133,6 +133,16 @@ jobs:
           pathlib.Path("m2-auditoria-integral.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n")
           print("Reporte M2 JSON único verificado")
           PY
+      - name: Medir rendimiento y memoria de catálogo M3 completo
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m3-performance.mjs > m3-performance.json
+      - name: Archivar métricas M3 con contexto de ejecución
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m3-performance
+          path: m3-performance.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Guardar auditoría reproducible M2
         if: always()
         uses: actions/upload-artifact@v4
