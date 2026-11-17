@@ -23,16 +23,23 @@ const shared=(family:string,cognitiveGoal:string)=>({
  competence:"Competencias comunicativas — Español",cognitiveGoal,
  sourceLocator:source,origin:"original-M1-20261117",family,reviewStatus:"editorial-draft" as const
 });
+function canonicalFamily(id:string):string{
+ const family=id.replace(/-(quiz|class|build)-/,"-").replace(/-(principiante|intermedio|avanzado)-/,"-");
+ const index=Number(family.split("-").at(-1));
+ // Los referentes no usan el estímulo de adecuación de la clasificación.
+ return family.startsWith("m1-adeq-")&&index>=31&&!id.includes("-class-")
+  ?family.replace("m1-adeq-","m1-referent-"):family;
+}
 const cards=(parts:string[],wrong:string)=>[...parts.map((text,i)=>({id:"t"+i,text})),{id:"d",text:wrong}];
 function makeBuild(id:string,subtopic:NewTopic,level:Level,prompt:string,parts:string[],wrong:string,explanation:string,goal:string):ConstructionActivity{
  return {id,subtopic,level,kind:"construction",prompt,explanation,
- ...shared(id.replace(/-(quiz|class|build)-/,"-").replace(/-(principiante|intermedio|avanzado)-/,"-"),goal),
+ ...shared(canonicalFamily(id),goal),
  tiles:cards(parts,wrong),solutions:[["t0","t1","t2"]]};
 }
 function quiz(id:string,subtopic:NewTopic,level:Level,passage:string,question:string,options:[string,string,string,string],explanation:string,goal:string):NextQuiz{
  const ordered=distributeAnswer(id,options,0);
  return {id,subtopic,level,passage,question,options:ordered.options as [string,string,string,string],answer:ordered.answer as 0|1|2|3,explanation,
- ...shared(id.split("-").slice(0,-1).join("-"),goal)};
+ ...shared(canonicalFamily(id),goal)};
 }
 function classify(id:string,subtopic:NewTopic,level:Level,prompt:string,
  labels:string[],entries:{text:string;label:string;explanation:string}[],explanation:string,goal:string,index:number):ClassificationActivity{
@@ -40,7 +47,7 @@ function classify(id:string,subtopic:NewTopic,level:Level,prompt:string,
  // Evita filtrar respuestas por la posición de los fragmentos frente a las etiquetas.
  if(index>=0)items.reverse();
  return {id,subtopic,level,kind:"classification",prompt,labels,items,explanation,
- ...shared(id.split("-").slice(0,-1).join("-"),goal)};
+ ...shared(canonicalFamily(id),goal)};
 }
 const count=45;
 function otherOptions(correct:string,wrong:string,alternates:string[]):[string,string,string,string]{
