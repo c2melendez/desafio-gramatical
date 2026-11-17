@@ -83,6 +83,14 @@ jobs:
           retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
+      - name: Medir alcance real y déficit de M1 Español
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-area.mjs > m1-area-progress.json
+      - name: Archivar avance y déficit de M1 Español
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-espanol-avance
+          path: m1-area-progress.json
+          retention-days: 30
       - name: Auditar núcleo M1 — contenido y claves estructurales
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-nucleus.mjs > m1-nucleus-audit.json
       - name: Archivar auditoría de 180 ejercicios M1
