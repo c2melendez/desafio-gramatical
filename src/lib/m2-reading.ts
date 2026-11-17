@@ -11,7 +11,7 @@ const pair=<T,>(items:T[],i:number):[T,T]=>{
  if(a===b)b=(a+1)%items.length;
  return [items[a],items[b]];
 };
-const tagged=(id:string,objective:string)=>({
+const tagged=(id:string,objective:string,sourceIds:string[])=>({sourceIds,
  reviewStatus:"editorial-draft" as const,origin:"composicion-comparativa-M2-20261117",
  family:id,sourceLocator:"Guía pre-U UNAH 2026; pasajes originales del banco de Español",
  competence:"Competencias comunicativas — Comprensión lectora",cognitiveGoal:objective
@@ -26,7 +26,7 @@ export function m2ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,bas
   const id="m2-reading-"+slug(subtopic)+"-"+mode+"-"+level+"-"+(i+1);
   const title="Contraste de fuentes: "+a.title+" / "+b.title;
   const passage="LECTURA A — "+a.passage+"\n\nLECTURA B — "+b.passage;
-  const metadata=tagged(id,"Comparar pruebas y razonamientos en dos pasajes");
+  const metadata=tagged(id,"Comparar pruebas y razonamientos en dos pasajes",[a.id,b.id]);
   if(mode==="quiz"){
    const qa=a as ReadingChallenge,qb=b as ReadingChallenge;
    const x0=qa.options[qa.answer],y0=qb.options[qb.answer];

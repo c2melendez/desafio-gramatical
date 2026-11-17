@@ -10,7 +10,7 @@ const sample=<T,>(items:T[],i:number):[T,T]=>{
  let b=(a+1+Math.floor(i/items.length))%items.length;if(a===b)b=(a+1)%items.length;
  return [items[a],items[b]];
 };
-const meta=(id:string,goal:string)=>({family:id,origin:"contraste-fuentes-M2-20261117",
+const meta=(id:string,goal:string,sourceIds:string[])=>({family:id,sourceIds,origin:"contraste-fuentes-M2-20261117",
  reviewStatus:"editorial-draft" as const,sourceLocator:"Guía pre-U UNAH 2026, competencia comunicativa; materiales originales del banco",
  cognitiveGoal:goal,competence:"Competencias comunicativas — Redacción"});
 /** M2 combina deliberadamente dos fuentes y mantiene la clave del primer caso
@@ -23,7 +23,7 @@ export function m2WritingPool(level:Level,subtopic:WritingSubtopic,mode:Mode,bas
  return Array.from({length:count},(_,i)=>{
   const [a,b]=sample(source,i+17*["principiante","intermedio","avanzado"].indexOf(level));
   const id="m2-writing-"+slug(subtopic)+"-"+mode+"-"+level+"-"+(i+1);
-  const data=meta(id,"Resolver el primer caso después de interpretar un contexto contrastante");
+  const data=meta(id,"Resolver el primer caso después de interpretar un contexto contrastante",[a.id,b.id]);
   if(mode==="quiz"){
    const qa=a as Extract<WritingItem,{gap:string;connector:string}>;
    const qb=b as Extract<WritingItem,{gap:string;connector:string}>;

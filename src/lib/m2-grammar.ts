@@ -22,7 +22,7 @@ const quota=(level:Level)=>M2_TARGET[level]-NUC[level];
 export const M2_TOPICS=["Sinónimos y antónimos","Cohesión y coherencia","Morfosintaxis","Homonimia y polisemia","Hiperonimia","Adecuación y referente","Figuras retóricas","Géneros literarios"] as const;
 const slug=(x:string)=>x.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-");
 const key=(topic:string,l:Level,kind:string,n:number)=>"m2-"+slug(topic)+"-"+kind+"-"+l+"-"+(n+1);
-const meta=(id:string,goal:string)=>({family:id,origin:"composicion-contextual-M2-20261117",
+const meta=(id:string,goal:string,sourceIds:string[])=>({family:id,sourceIds,origin:"composicion-contextual-M2-20261117",
  competence:"Competencias comunicativas — Español",cognitiveGoal:goal,
  sourceLocator:"Guía pre-U UNAH 2026, competencias comunicativas; composición de estímulos originales de M1",
  reviewStatus:"editorial-draft" as const});
@@ -46,7 +46,7 @@ export function m2GrammarQuiz(topic:string,level:Level,base:readonly GrammarDraf
    question:"Evalúa simultáneamente los dos contextos. Caso A: "+a.question+" Caso B: "+b.question+" ¿Qué alternativa resuelve ambos?",
    options:opts.options as [string,string,string,string],answer:opts.answer as 0|1|2|3,
    explanation:"Para A, "+a.explanation+" Para B, "+b.explanation+" Una respuesta es válida solo si ambas afirmaciones son correctas.",
-   ...meta(id,"Resolver conjuntamente dos interpretaciones a partir de textos diferentes")};
+   ...meta(id,"Resolver conjuntamente dos interpretaciones a partir de textos diferentes",[a.id,b.id])};
  });
 }
 const cases=[...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES,...M1_LITERATURE_ACTIVITIES,...SYNONYM_CLASSIFICATION,...COHESION_CLASSIFICATION];
@@ -58,7 +58,7 @@ function makeClass(topic:string,l:Level,i:number):ClassificationActivity{
  return {id,subtopic:topic,level:l,kind:"classification",labels:[...new Set(items.map(x=>x.label))],items,
   prompt:"Estudia dos situaciones diferentes de "+topic+". Primer caso: "+a.prompt+" Segundo caso: "+b.prompt+" Clasifica cada evidencia en su propio contexto.",
   explanation:"Las etiquetas dependen de cada caso. En A: "+a.explanation+" En B: "+b.explanation,
-  ...meta(id,"Discriminar cuatro evidencias entre dos situaciones diferentes")};
+  ...meta(id,"Discriminar cuatro evidencias entre dos situaciones diferentes",[a.id,b.id])};
 }
 function makeBuild(topic:string,l:Level,i:number):ConstructionActivity{
  const [a,b]=pair(from(topic,l,"construction") as ConstructionActivity[],i+levels.indexOf(l)*17);
@@ -72,7 +72,7 @@ function makeBuild(topic:string,l:Level,i:number):ConstructionActivity{
    {id:"d",text:"Todas las soluciones son válidas sin comprobar el contexto ni el propósito."}],
   solutions:[["t0","t1","t2"]],
   explanation:"Primero se justifica A, después B y finalmente se distinguen las fuentes. La afirmación distractora carece de fundamento.",
-  ...meta(id,"Jerarquizar dos justificaciones y distinguir sus fuentes")};
+  ...meta(id,"Jerarquizar dos justificaciones y distinguir sus fuentes",[a.id,b.id])};
 }
 export const M2_GRAMMAR_ACTIVITIES:(ClassificationActivity|ConstructionActivity)[]=
  M2_TOPICS.flatMap(topic=>levels.flatMap(l=>Array.from({length:quota(l)},(_,i)=>[makeClass(topic,l,i),makeBuild(topic,l,i)]).flat()));
