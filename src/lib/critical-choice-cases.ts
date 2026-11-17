@@ -596,5 +596,22 @@ export const CRITICAL_CHOICE_CASES:CriticalChoiceCase[]=[
     "answer": 2,
     "explanation": "«Menor gasto no demuestra menor consumo si cambian tarifas y actividad.» es la evaluación respaldada por el pasaje. «Las tarifas y los días cambiaron.» describe un dato, pero no valora la solidez de la conclusión; las otras alternativas exceden la evidencia.",
     "reviewStatus": "editorial-draft"
+  },
+  {
+    "id": "reading-critical-choice-v1-avanzado-35",
+    "level": "avanzado",
+    "subtopic": "Lectura crítica",
+    "title": "Indicadores redefinidos",
+    "passage": "Un observatorio publica una serie de participación juvenil. A mitad del período cambió el criterio de participante, pasando de asistentes efectivos a personas inscritas. La noticia habla de crecimiento constante sin mencionar ese cambio metodológico. Un auditor pide explicar la ruptura antes de interpretar la tendencia.",
+    "question": "¿Cuál es la evaluación crítica mejor sustentada por la lectura?",
+    "options": [
+      "La serie demuestra crecimiento real ininterrumpido.",
+      "Las cifras miden exactamente el mismo hecho.",
+      "Las diferencias de definición impiden interpretar la variación sin armonizar las series.",
+      "La noticia prueba que ningún joven asistió."
+    ],
+    "answer": 2,
+    "explanation": "«Las diferencias de definición impiden interpretar la variación sin armonizar las series.» señala la ruptura metodológica que el titular oculta; las demás alternativas no se desprenden de los datos.",
+    "reviewStatus": "editorial-draft"
   }
 ];
