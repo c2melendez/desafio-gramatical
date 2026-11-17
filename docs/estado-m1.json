@@ -96,10 +96,25 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "Auditar 180 ejercicios en PR #6 con oráculos, semántica y duplicaciones; ejecutar regresión y CI final; luego publicar solo si están aprobados controles y Render Live mismo SHA. M1 de Español abarca otros subtemas y continúa abierto.",
+  "siguiente_accion": "Completar revisión semántica y oráculos independientes de los 180 registros, comprobar equivalencias de construcción, auditoría de accesibilidad y regresión publicada, verificar Render LIVE del SHA final. No fusionar PR #6 ni declarar M1 COMPLETADA hasta satisfacer controles. M0 sigue COMPLETADA en main.",
   "dependencia_estado": "COMPLETADA",
-  "fase_actual": "M1_RAMA_INTEGRADA_VALIDACION_CI",
+  "fase_actual": "M1_NUCLEO_TECNICO_VALIDADO_REVISION_EDITORIAL_PENDIENTE",
   "pr": 6,
   "rama_trabajo": "work/m1-grammar-nucleus-20261117",
-  "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json"
+  "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json",
+  "validacion_rama": {
+    "sha_rama": "47b414128c02403571ab3d40bef075c0522e1823",
+    "ci_run_id": 44097753280,
+    "ci_estado": "success",
+    "auditoria_m1_artefacto_id": 14334567596,
+    "sha_checkout_pr": "843cdb7710c847fbb37b0e691b7246a5fb647dbc",
+    "auditoria_180": "PASS",
+    "celulas": 12,
+    "errores": 0,
+    "concisiones_exactas": 0,
+    "clasificacion_semantica": "INCONCLUSO",
+    "revision_docente": "PENDIENTE",
+    "render_sha": "NO_VERIFICADO",
+    "merge": "PENDIENTE"
+  }
 }
