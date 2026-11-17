@@ -11,3 +11,7 @@ Se prepararon 99 preguntas originales de selección única, treinta y tres por s
 **Estos 99 borradores están disponibles en la modalidad de selección única**, con 10/11/12 por subtema y nivel, retroalimentación, rotación y registro de resultados. Se cuentan únicamente en esa modalidad. Clasificación y construcción permanecen en desarrollo. Los 99 siguen sujetos a revisión docente; no representan 99 ejercicios por cada juego. Pendiente: elaborar el resto de contenido original de las tres mecánicas, verificar opciones y posibles respuestas alternativas, completar las otras dos mecánicas y ampliar sus bancos, revisar las interacciones y ampliar las pruebas de contenido.
 
 El grupo permanece abierto. Aunque el commit que contiene este borrador apruebe CI y Render llegue a Live, eso no completa la corrida de 405 ejercicios. Se deberá verificar auditoría, CI y despliegue Live del mismo commit una vez que el bloque completo esté integrado.
+
+## Ampliación parcial de selección única
+
+Se agregan 36 preguntas originales (4 intermedias y 8 avanzadas por subtema) en `grammar-completion-quiz.ts`. Los tres subtemas alcanzan 10/15/20 en selección única: 135 en total, incluidos los 99 existentes. Las preguntas son borradores editoriales pendientes de revisión docente y no equivalen a una calibración PHUMA. Faltan 270 ejercicios originales: 45 de clasificación y 45 de construcción en cada uno de los tres subtemas, además de integrar ambas mecánicas. El bloque sigue abierto; esta ampliación no constituye la corrida de 450 desde cero.
