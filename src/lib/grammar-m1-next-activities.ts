@@ -24,7 +24,7 @@ const shared=(family:string,cognitiveGoal:string)=>({
 const cards=(parts:string[],wrong:string)=>[...parts.map((text,i)=>({id:"t"+i,text})),{id:"d",text:wrong}];
 function makeBuild(id:string,subtopic:NewTopic,level:Level,prompt:string,parts:string[],wrong:string,explanation:string,goal:string):ConstructionActivity{
  return {id,subtopic,level,kind:"construction",prompt,explanation,
- ...shared(id.split("-").slice(0,-1).join("-"),goal),
+ ...shared(id.replace(/-(quiz|class|build)-/,"-").replace(/-(principiante|intermedio|avanzado)-/,"-"),goal),
  tiles:cards(parts,wrong),solutions:[["t0","t1","t2"]]};
 }
 function quiz(id:string,subtopic:NewTopic,level:Level,passage:string,question:string,options:[string,string,string,string],explanation:string,goal:string):NextQuiz{
@@ -34,7 +34,8 @@ function quiz(id:string,subtopic:NewTopic,level:Level,passage:string,question:st
 function classify(id:string,subtopic:NewTopic,level:Level,prompt:string,
  labels:string[],entries:{text:string;label:string;explanation:string}[],explanation:string,goal:string,index:number):ClassificationActivity{
  const items=entries.map((x,j)=>({id:"f"+j,...x}));
- if(index%2===0)items.reverse();
+ // Evita filtrar respuestas por la posición de los fragmentos frente a las etiquetas.
+ items.reverse();
  return {id,subtopic,level,kind:"classification",prompt,labels,items,explanation,
  ...shared(id.split("-").slice(0,-1).join("-"),goal)};
 }
