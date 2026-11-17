@@ -34,10 +34,15 @@ jobs:
         run: |
           node scripts/test-inventory.mjs
           node --import ./scripts/ts-resolve.mjs scripts/test-inventory-items.mjs
+          node --import ./scripts/ts-resolve.mjs scripts/test-audit-m0-baseline-quality.mjs
+          node --import ./scripts/ts-resolve.mjs scripts/test-m0-critical-mutations.mjs
+          python3 scripts/check_m0_contract_lock.py
+          python3 -m unittest discover -s scripts -p 'test_check_m0_contract_lock.py'
           python3 scripts/validate_modules.py
           python3 -m unittest discover -s scripts -p 'test_validate_modules.py'
           python3 -m unittest discover -s scripts -p 'test_qa_m0.py'
           python3 -m unittest discover -s scripts -p 'test_verify_state.py'
+          python3 -m unittest discover -s scripts -p 'test_verify_m0_report.py'
           node scripts/test-review-draft.mjs
           python3 scripts/validate_editorial_review.py
           python3 -m unittest discover -s scripts -p 'test_editorial_review.py'
@@ -46,6 +51,8 @@ jobs:
           node scripts/test-selection-audit.mjs
           node scripts/test-content-contracts.mjs
           node scripts/check-selection-oracles.mjs
+          node scripts/privacy-m0-static.mjs --test
+          node scripts/privacy-m0-static.mjs
           node scripts/security-client-audit.mjs --test
           node scripts/security-client-audit.mjs
       - name: Congelar inventario reproducible por ruta, juego y nivel
@@ -54,6 +61,14 @@ jobs:
           node -e "const i=require('./m0-inventory.json'); console.log(JSON.stringify(i.resumen)); if (!i.resumen || i.rows.length !== 810 || i.resumen.celdas !== 810) process.exit(1); if (i.arbol_modificado) console.warn('Checkout con archivos generados modificados; revisar antes del cierre, no equivale a diferencias de contenido')"
       - name: Congelar inventario individual y detectar colisiones de ID
         run: node --import ./scripts/ts-resolve.mjs scripts/inventory-items.mjs > m0-inventory-items.json
+      - name: Congelar triaje estructural y estado editorial M0
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m0-baseline-quality.mjs > m0-triaje-calidad.json
+      - name: Guardar triaje M0
+        uses: actions/upload-artifact@v4
+        with:
+          name: m0-triaje-calidad
+          path: m0-triaje-calidad.json
+          retention-days: 30
       - name: Guardar inventario por ID y nivel
         uses: actions/upload-artifact@v4
         with:
@@ -77,14 +92,36 @@ jobs:
           code=$?
           echo "Runner de M0: salida $code; cero significa cierre de todas las etapas, uno significa bloqueo documentado." >> "$GITHUB_STEP_SUMMARY"
           test -f m0-evidence.json
+          echo "$code" > m0-exit-code.txt
+      - name: Verificar integridad independiente del resultado M0
+        if: always()
+        run: |
+          python3 scripts/verify_m0_report.py --report m0-evidence.json > m0-verification.json
       - name: Guardar evidencia M0
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: m0-auditoria
-          path: m0-evidence.json
+          path: |
+            m0-evidence.json
+            m0-verification.json
           if-no-files-found: warn
           retention-days: 14
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"
+      - name: Aplicar puerta de cierre M0
+        if: always()
+        shell: bash
+        run: |
+          if [ ! -f m0-exit-code.txt ]; then
+            echo "::error::M0 no produjo resultado ejecutable"
+            exit 2
+          fi
+          code=$(cat m0-exit-code.txt)
+          if [ "$code" -ne 0 ]; then
+            echo "::error::M0 BLOQUEADO: reporte m0-auditoria adjunto; controles obligatorios sin PASS"
+            exit "$code"
+          fi
+          python3 scripts/verify_m0_report.py --report m0-evidence.json --require-closure
+          echo "M0: todos los controles obligatorios PASS" >> "$GITHUB_STEP_SUMMARY"

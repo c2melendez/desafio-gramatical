@@ -12,7 +12,7 @@ import { grammarPilotPool } from '../src/lib/grammar-next-draft.ts';
 import { readingPool } from '../src/lib/reading.ts';
 import { writingPool } from '../src/lib/writing.ts';
 
-function pool(row) {
+export function pool(row) {
   const {area,topic,subtopic,mode,level}=row;
   if(area!=='espanol')return [];
   if(topic==='Gramática y semántica'&&subtopic==='Categorías gramaticales'){

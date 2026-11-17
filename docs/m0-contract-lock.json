@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "scope": "M0: contrato observable de catálogo, carga, respuestas, rotación, rutas y progreso. Revisar y actualizar deliberadamente al alterar cualquiera de estos archivos.",
+  "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
+  "hash_algorithm": "git-blob-sha1",
+  "files": {
+    "src/lib/phuma-catalog.ts": "31467f450ca992425ced300a7dde2e26ca352973",
+    "src/lib/coverage.ts": "5f161f8c8f686c7b46710a628f244163bcf90da3",
+    "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
+    "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
+    "src/lib/reading.ts": "c67ea6e7bcb705a1b311670da5dfef96818b1cfd",
+    "src/lib/writing.ts": "f6f2be27fedb6b6a9642a63a63bf54d2a5f3785e",
+    "src/routes/index.tsx": "8ac64092aca429892f78493070607c4ff2362ead",
+    "src/routes/jugar.tsx": "87036be0c0b57a9a3aebf6f6f78339c2aca6c29d",
+    "src/routes/lectura.tsx": "20ba8f3708e1db6a3de2aa3c5cac07ba09bf5f3f",
+    "src/routes/redaccion.tsx": "0a1f9d7eb6838b97044260d4b4b82d0f19b274fd",
+    "src/routes/historial.tsx": "eb49b09c484ab62b36f42cd4249f72e33223d909"
+  },
+  "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
+  "change_note": "Actualización compatible: lectura validada, escritura y borrado seguros cuando localStorage está bloqueado; regresión en src/test/history-resilience.test.ts."
+}
