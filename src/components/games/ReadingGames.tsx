@@ -14,8 +14,9 @@ import type {CriticalReconstructCase} from "@/lib/critical-reconstruct-cases";
 import type {NewReadingDetective,NewReadingChoice,NewReadingReconstruct} from "@/lib/reading-vocabulary-block";
 import type {AnalysisDetective,AnalysisChoice,AnalysisReconstruct} from "@/lib/reading-analysis-block";
 import type {CompareDetective,CompareChoice,CompareReconstruct} from "@/lib/reading-comparison-block";
+import type {FigurativeDetectiveCase,FigurativeChoiceCase,FigurativeReconstructCase} from "@/lib/reading-figurative-block";
 
-function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct}){
+function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct|FigurativeDetectiveCase|FigurativeChoiceCase|FigurativeReconstructCase}){
  return <section className="card-ink bg-card p-5 space-y-3" aria-label="Texto para analizar">
   <p className="text-xs font-bold uppercase tracking-wider text-primary">Lectura · {item.subtopic}</p>
   <h2 className="text-xl font-black">{item.title}</h2>
@@ -23,7 +24,7 @@ function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetect
  </section>;
 }
 const TYPES:EvidenceTag[]=["explicit","inference","unsupported"];
-export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaDetectiveCase|InferenceDetectiveCase|CriticalDetectiveCase|NewReadingDetective|AnalysisDetective|CompareDetective>){
+export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaDetectiveCase|InferenceDetectiveCase|CriticalDetectiveCase|NewReadingDetective|AnalysisDetective|CompareDetective|FigurativeDetectiveCase>){
  const [picks,setPicks]=useState<Record<number,EvidenceTag>>({});
  const [checked,setChecked]=useState(false);
  const done=item.claims.every((_,i)=>Boolean(picks[i]));
@@ -52,7 +53,7 @@ export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChal
   {!checked?<button onClick={check} disabled={!done} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">{done?"Comprobar las tres afirmaciones":"Clasifica las tres afirmaciones"}</button>:<NextButton onClick={next} isLast={isLast}/>}
  </div>;
 }
-export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaChoiceCase|InferenceChoiceCase|CriticalChoiceCase|NewReadingChoice|AnalysisChoice|CompareChoice>){
+export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaChoiceCase|InferenceChoiceCase|CriticalChoiceCase|NewReadingChoice|AnalysisChoice|CompareChoice|FigurativeChoiceCase>){
  const [pick,setPick]=useState<number|null>(null);
  const choose=(i:number)=>{
   if(pick!==null)return;
@@ -74,7 +75,7 @@ export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChal
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </div>;
 }
-export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaReconstructCase|InferenceReconstructCase|CriticalReconstructCase|NewReadingReconstruct|AnalysisReconstruct|CompareReconstruct>){
+export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaReconstructCase|InferenceReconstructCase|CriticalReconstructCase|NewReadingReconstruct|AnalysisReconstruct|CompareReconstruct|FigurativeReconstructCase>){
  const [sequence,setSequence]=useState<number[]>([]);
  const [checked,setChecked]=useState(false);
  const pieces=item.order.parts;
