@@ -8,6 +8,12 @@ export type ActivityBase = {
   prompt: string;
   explanation: string;
   reviewStatus: 'editorial-draft';
+  /** La procedencia, competencia y propósito deben acompañar a cada nuevo ejercicio. */
+  competence?: string;
+  cognitiveGoal?: string;
+  sourceLocator?: string;
+  origin?: string;
+  family?: string;
 };
 export type ClassificationActivity = ActivityBase & {
   kind: 'classification';

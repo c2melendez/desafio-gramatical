@@ -7,7 +7,7 @@
   "required": [
     "M0"
   ],
-  "prev_main": "ed0c764471cc942b996f83b400d1c396cf2a01b6",
+  "prev_main": "2c2f6e8170089a45ba76b905fb76e6e50c4f6ccd",
   "source": "docs/modulos-phuma.json",
   "objetivo_por_celda": {
     "principiante": 10,
@@ -22,8 +22,8 @@
       "Morfosintaxis"
     ],
     "meta_registros_tecnicos": 405,
-    "presentes_tecnicos": 225,
-    "deficit_tecnico_nucleo": 180,
+    "presentes_tecnicos": 405,
+    "deficit_tecnico_nucleo": 0,
     "por_subtema": {
       "Sinónimos y antónimos": {
         "quiz": {
@@ -37,9 +37,9 @@
           "avanzado": 20
         },
         "construir": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         }
       },
       "Cohesión y coherencia": {
@@ -54,9 +54,9 @@
           "avanzado": 20
         },
         "construir": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         }
       },
       "Morfosintaxis": {
@@ -66,18 +66,24 @@
           "avanzado": 20
         },
         "clasificar": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         },
         "construir": {
-          "principiante": 0,
-          "intermedio": 0,
-          "avanzado": 0
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
         }
       }
     },
-    "advertencia": "No confundir 225 registros técnicos con ítems pedagógicamente aceptados ni aceptar automáticamente los 36 borradores del PR #1."
+    "advertencia": "405 registros técnicos del primer bloque cubiertos; revisión semántica, independencia y docente pendientes. M1 no se declara COMPLETADA.",
+    "nuevos_en_rama": 180,
+    "incremento_niveles": {
+      "principiante": 40,
+      "intermedio": 60,
+      "avanzado": 80
+    }
   },
   "validaciones_obligatorias": [
     "contratos_datos_y_oraculos",
@@ -90,7 +96,95 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "Reconciliar 36 ítems PR #1 contra main por ID/estímulo/clave; completar 180 registros faltantes del primer bloque con familias cognitivas diferenciadas y doble oráculo, conectar UI, ejecutar QA y CI/Render Live del mismo SHA antes de entregar M1.",
+  "siguiente_accion": "CI de SHA candidato con auditoría de operaciones cognitivas PASS; fusionar PR #6, verificar CI y Render del mismo SHA, probar UI publicada, actualizar bloque A/B y estado. Conservar revisión docente pendiente, no atribuir certificación PHUMA.",
   "dependencia_estado": "COMPLETADA",
-  "fase_actual": "M1_LINEA_BASE_Y_COTEJO_EDITORIAL"
+  "fase_actual": "M1_NUCLEO_AUTOMATICO_VERIFICADO_CANDIDATA_PUBLICACION",
+  "pr": 6,
+  "rama_trabajo": "work/m1-grammar-nucleus-20261117",
+  "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json",
+  "validacion_rama": {
+    "estado": "PENDIENTE_CI_FINAL",
+    "ultima_evidencia_previa": {
+      "sha": "5e44d8a484620584666f8ce6583c0c4d0ad803ca",
+      "ci_run_id": 44108453030,
+      "ci": "success",
+      "registros_nuevos": 855
+    },
+    "auditoria_180": "incorporada a CI",
+    "auditoria_405": "incorporada a CI",
+    "auditoria_270": "incorporada a CI",
+    "revision_docente": "PENDIENTE",
+    "render_sha": "NO_VERIFICADO",
+    "merge": "PENDIENTE",
+    "oraculos_m1": {
+      "run_id": 44108453030,
+      "estado": "success",
+      "ronda": "225 claves y 675 mutaciones",
+      "artifacts": [
+        "m1-oraculos-225",
+        "m1-familias-240"
+      ],
+      "semantica_humana": "PENDIENTE"
+    },
+    "auditoria_fuentes": {
+      "state": "PASS",
+      "count": 855,
+      "run_id": 44112229559,
+      "artifact": "m1-oraculos-855"
+    },
+    "auditoria_189": {
+      "state": "PASS",
+      "count": 2861,
+      "ids_unique": 2861,
+      "missing": 0,
+      "run_id": 44113530438,
+      "artifact": "m1-aceptacion-tecnica-189"
+    },
+    "candidata_publicacion": {
+      "requires": "CI SHA candidato, fusión, CI main, Render Live mismo SHA, prueba funcional publicada",
+      "ready": "PENDIENTE"
+    }
+  },
+  "manifiestos": [
+    "docs/m1-corrida-nucleo-405-20261117.json",
+    "docs/m1-corrida-nucleo-675-20261117.json"
+  ],
+  "nucleo_espanol": {
+    "celdas": 189,
+    "subtemas": 21,
+    "objetivo_tecnico": 2835,
+    "antes_main": 2006,
+    "nuevos_en_rama": 855,
+    "registros_tecnicos_en_rama": 2861,
+    "deficit_tecnico": 0,
+    "desglose_nuevos": {
+      "primera_corrida_180": 180,
+      "segundo_bloque_405": 405,
+      "tercer_bloque_270": 270
+    },
+    "familias_nuevas_segundo_y_tercer_bloque": 240,
+    "independientes_aceptados": "NO_VERIFICADOS",
+    "revisados_docente": 0,
+    "certificados_psicometricamente": 0,
+    "requisitos_pendientes": [
+      "oráculos semánticos y revisión por caso",
+      "auditoría de independencia",
+      "calibración de dificultad",
+      "CI final SHA",
+      "Render Live del mismo SHA",
+      "prueba funcional publicada"
+    ],
+    "familias_compartidas": {
+      "tres_juegos": 210,
+      "dos_juegos": 15,
+      "un_juego": 15
+    },
+    "oraculos_contextuales_verificados": 225,
+    "mutaciones_negativas_ejecutadas": 675,
+    "mutaciones_negativas_detectadas": 675,
+    "independencia_conceptual": "INCONCLUSO — verificación operativa automática por modalidad; no es dictamen académico",
+    "revision_docente": "PENDIENTE_AUTORIZADA",
+    "ids_globales_unicos": 2861,
+    "aceptados_en_auditoria_tecnica": 2861
+  }
 }

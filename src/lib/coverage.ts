@@ -8,6 +8,9 @@ import {readingPool} from "./reading";
 import {COHESION_CLASSIFICATION} from "./grammar-classify-cohesion";
 import {SYNONYM_CLASSIFICATION} from "./grammar-classify-synonyms";
 import {grammarPilotPool} from "./grammar-next-draft";
+import {GRAMMAR_M1_ACTIVITIES} from "./grammar-m1-activities";
+import {M1_NEXT_ACTIVITIES} from "./grammar-m1-next-activities";
+import {M1_LITERATURE_ACTIVITIES} from "./grammar-m1-literature";
 import {writingPool} from "./writing";
 
 export const CONTENT_TARGET:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
@@ -25,6 +28,9 @@ export function countContent(area:AreaId,topic:string,subtopic:string,mode:GameI
  if(topic==="Gramática y semántica"&&subtopic==="Sinónimos y antónimos"&&mode==="clasificar")return SYNONYM_CLASSIFICATION.filter(q=>q.level===level).length;
  if(topic==="Gramática y semántica"&&subtopic==="Cohesión y coherencia"&&mode==="clasificar")return COHESION_CLASSIFICATION.filter(q=>q.level===level).length;
  if(topic==="Gramática y semántica"&&mode==="quiz")return grammarPilotPool(subtopic,level).length;
+ if(topic==="Gramática y semántica"&&(mode==="construir"||mode==="clasificar"))
+  return [...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==="construir"?"construction":"classification")).length;
+ if(topic==="Literatura")return mode==="quiz"?grammarPilotPool(subtopic,level).length:[...M1_LITERATURE_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==="construir"?"construction":"classification")).length;
  if(topic==="Comprensión lectora")return readingPool(level,subtopic as Parameters<typeof readingPool>[1],mode).length;
  if(topic==="Redacción")return writingPool(level,subtopic as Parameters<typeof writingPool>[1],mode).length;
  return 0;

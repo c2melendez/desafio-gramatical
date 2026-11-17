@@ -83,6 +83,94 @@ jobs:
           retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
+      - name: Medir alcance real y déficit de M1 Español
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-area.mjs > m1-area-progress.json
+      - name: Archivar avance y déficit de M1 Español
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-espanol-avance
+          path: m1-area-progress.json
+          retention-days: 30
+      - name: Auditar independencia operativa de tareas por juego
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-operations.mjs > m1-operation-audit.json
+      - name: Conservar evidencia de independencia operativa
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-operaciones-cognitivas
+          path: m1-operation-audit.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Verificar aceptación técnica M1 y déficit en 189 celdas
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-technical-acceptance.mjs > m1-technical-acceptance.json
+      - name: Archivar validación de celdas de M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-aceptacion-tecnica-189
+          path: m1-technical-acceptance.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Auditar 855 registros M1 contra estímulos fuente
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-source-consistency.mjs > m1-oraculos-855.json
+      - name: Archivar oráculos de 855 registros
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-oraculos-855
+          path: m1-oraculos-855.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Reconciliar independencia y 240 familias de M1
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-families.mjs > m1-family-review.json
+      - name: Guardar matriz de familias compartidas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-familias-240
+          path: m1-family-review.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Auditar 225 claves M1 con oráculos por fuente y 675 mutantes
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-quiz-oracles.mjs > m1-oraculos-225.json
+      - name: Guardar oráculos y prueba negativa M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-oraculos-225
+          path: m1-oraculos-225.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Auditar 270 registros nuevos de Literatura M1
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-literature.mjs > m1-literature-270.json
+      - name: Archivar auditoría M1 Literatura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-literatura-270
+          path: m1-literature-270.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Auditar 405 registros nuevos de M1
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-next.mjs > m1-next-405.json
+      - name: Archivar auditoría por ID de 405 registros
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-bloque-405-auditoria
+          path: m1-next-405.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Auditar núcleo M1 — contenido y claves estructurales
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-nucleus.mjs > m1-nucleus-audit.json
+      - name: Archivar auditoría de 180 ejercicios M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-nucleo-180-auditoria
+          path: m1-nucleus-audit.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Evidencia ejecutable de M0 (cierre independiente)
         if: always()
         shell: bash

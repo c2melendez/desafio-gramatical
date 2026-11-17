@@ -211,6 +211,7 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(totals.target).toBe(40500);
   expect(totals.stageOneComplete).toBeGreaterThanOrEqual(45);
   expect(rows.filter(x=>x.topic==="Redacción"&&["Conectores","Corrección","Organización textual","Elisión y adición","Generalización e integración"].includes(x.subtopic)).every(x=>x.stageOneComplete&&!x.complete)).toBe(true);
-  expect(rows.some(x=>x.topic==="Literatura"&&x.available===0)).toBe(true);
+  expect(rows.filter(x=>x.topic==="Literatura").every(x=>x.available>=x.stageOne)).toBe(true);
+  expect(rows.some(x=>x.area==="matematicas"&&x.available===0)).toBe(true);
  });
 });
