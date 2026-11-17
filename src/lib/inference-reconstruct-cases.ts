@@ -596,5 +596,22 @@ export const INFERENCE_RECONSTRUCT_CASES:InferenceReconstructCase[]=[
       "explanation": "En «Citas de segunda mano», el razonamiento parte del hecho observado, examina los indicios o las limitaciones y termina con una inferencia prudente."
     },
     "reviewStatus": "editorial-draft"
+  },
+  {
+    "id": "reading-inference-reconstruct-v1-avanzado-35",
+    "level": "avanzado",
+    "subtopic": "Inferencias",
+    "title": "Monitoreo de asistencia digital",
+    "passage": "Una plataforma de educación virtual cambió la regla para contabilizar estudiantes activos y luego registró un aumento importante de conexiones. Los administradores también habían enviado recordatorios por correo. El equipo analítico pidió comparar ambas definiciones y examinar el impacto de los avisos antes de atribuir el cambio solo a mayor participación.",
+    "order": {
+      "parts": [
+        "Identificar el aumento de conexiones y el cambio de criterio.",
+        "Examinar tanto la nueva definición como los recordatorios enviados.",
+        "Inferir que la variación registrada no demuestra por sí sola mayor participación real."
+      ],
+      "hint": "Ordena los datos, sus factores posibles y la conclusión cauta.",
+      "explanation": "El aumento observado puede reflejar cambios en la medición y en los avisos recibidos; no prueba una causa exclusiva."
+    },
+    "reviewStatus": "editorial-draft"
   }
 ];
