@@ -7,7 +7,7 @@ const slug=(x:string)=>x.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLower
 const sample=<T,>(items:T[],i:number):[T,T]=>{
  if(items.length<2)throw new Error("Dos estímulos de redacción requeridos");
  const a=i%items.length;
- let b=(i*7+3)%items.length;if(a===b)b=(a+1)%items.length;
+ let b=(a+1+Math.floor(i/items.length))%items.length;if(a===b)b=(a+1)%items.length;
  return [items[a],items[b]];
 };
 const meta=(id:string,goal:string)=>({family:id,origin:"contraste-fuentes-M2-20261117",
