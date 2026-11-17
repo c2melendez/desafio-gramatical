@@ -28,6 +28,7 @@ import {CRITICAL_RECONSTRUCT_CASES} from "../src/lib/critical-reconstruct-cases"
 import {VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES} from "../src/lib/reading-vocabulary-block";
 import {ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASES} from "../src/lib/reading-analysis-block";
 import {COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES} from "../src/lib/reading-comparison-block";
+import {FIGURATIVE_DETECTIVE_CASES,FIGURATIVE_CHOICE_CASES,FIGURATIVE_RECONSTRUCT_CASES} from "../src/lib/reading-figurative-block";
 const levels=["principiante","intermedio","avanzado"] as const;
 const target={principiante:10,intermedio:15,avanzado:20};
 const rows=coverageRows(),totals=coverageTotals();
@@ -179,6 +180,30 @@ for(const [subtopic,detectives,choices,reconstructions] of newBlocks){
  for(const q of reconstructions)if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<45)failures.push("Reconstrucción inválida: "+q.id);
 }
 if(newBlocks.flatMap(([,a,b,c])=>[...a,...b,...c]).length!==324)failures.push("Corrida actual: cantidad distinta de 324");
+for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+ for(const mode of ["clasificar","quiz","construir"] as const){
+  const pool=readingPool(level,"Lenguaje figurado",mode);
+  if(pool.length!==expected)failures.push("Lenguaje figurado/"+mode+"/"+level+": esperado "+expected+", real "+pool.length);
+  if(new Set(pool.map(x=>x.id)).size!==pool.length)failures.push("IDs repetidos en Lenguaje figurado/"+mode+"/"+level);
+ }
+for(const q of FIGURATIVE_DETECTIVE_CASES){
+ if(q.passage.length<145||q.claims.length!==3||new Set(q.claims.map(x=>x.tag)).size!==3||new Set(q.claims.map(x=>x.text)).size!==3)
+  failures.push("Lenguaje figurado detective inválido: "+q.id);
+}
+for(const q of FIGURATIVE_CHOICE_CASES){
+ if(q.passage.length<145||q.options.length!==4||new Set(q.options).size!==4||q.answer<0||q.answer>3||q.explanation.length<45)
+  failures.push("Lenguaje figurado selección inválida: "+q.id);
+}
+for(const q of FIGURATIVE_RECONSTRUCT_CASES){
+ if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<45)
+  failures.push("Lenguaje figurado secuencia inválida: "+q.id);
+}
+const figurativePassages=[...FIGURATIVE_DETECTIVE_CASES,...FIGURATIVE_CHOICE_CASES,...FIGURATIVE_RECONSTRUCT_CASES].map(q=>q.passage);
+if(figurativePassages.length!==108||new Set(figurativePassages).size!==108)
+ failures.push("Lenguaje figurado: deben existir 108 pasajes distintos entre modalidades");
+for(const level of levels)for(const mode of ["clasificar","quiz","construir"] as const)
+ if(readingPool(level,"Lenguaje figurado",mode).length!==CONTENT_STAGE_ONE[level])
+  failures.push("Lenguaje figurado: primer núcleo incompleto");
 console.log("ACADEMIA PHUMA PLAY · AUDITORÍA DE COBERTURA (contenidos, no validación psicométrica)");
 console.log("Meta por juego/subtema:",JSON.stringify(CONTENT_TARGET));
 console.log("Primer lote por juego/subtema:",JSON.stringify(CONTENT_STAGE_ONE));
