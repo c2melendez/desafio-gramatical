@@ -44,3 +44,18 @@ No reclasificar estas condiciones como PASS por haber aprobado las comprobacione
 ## Tarea posterior de renombrado, no ejecutada
 
 Cuando el usuario determine la identidad definitiva: levantar inventario de URLs, repositorio, `render.yaml`, Actions, dominios, credenciales y referencias internas, historial y almacenamiento local; definir migración con redirecciones y reversión; cambiar nombre y URL de forma coordinada; comprobar CI, Render y preservación de partidas. No cambiar repo ni servicio antes de la definición definitiva.
+
+
+## Reconciliación nueva de rutas (CI 44085721809)
+
+El inventario `scripts/inventory-coverage.mjs` (versión 2) compara `coverageRows()` con las condiciones de habilitación del menú para **las 810 celdas**. La salida se preservó como artefacto `m0-inventario` del run [44085721809](https://github.com/c2melendez/desafio-gramatical/actions/runs/44085721809), con resultado **success**, SHA de PR `9a22c355dfa5fb08e3cb0a01c6d7069f5530860c` y auditoría estática diferenciada de validación funcional.
+
+- Catálogo: 90 subtemas; Español 21, Matemáticas 22, Ciencias Naturales 19, Ciencias Sociales 20 y Habilidades Blandas 8.
+- Capacidad nominal: 270 combinaciones × 150 = 40.500 **solo como objetivo condicional**, no como ejercicios disponibles.
+- Celdas teóricas 810; con ruta habilitada en menú 132. Otras 678 todavía no presentan ruta habilitada. Un menú habilitado no certifica que una sesión haya sido probada.
+- Registros técnicos declarados: 2.006 en Español; 0 en las otras cuatro áreas. La suma de registros con ruta de menú declarada también es 2.006. No se han convertido a ítems independientes aceptados.
+- Déficit técnico hacia núcleo en todas las celdas: 10.170 frente a 12.150 celdas-nivel objetivo; se suman por celda y **no** se confunden con las necesidades del siguiente bloque de tres subtemas.
+- Bloque abierto de tres subtemas, selección: 10/15/20 por subtema; clasificación: Sinónimos y Cohesión 10/15/20, Morfosintaxis 0/0/0; construcción: 0/0/0 para los tres subtemas. Déficit técnico del núcleo del bloque: **180** (B 40, I 60, A 80), sujeto a auditoría editorial y comprobación de independencia.
+- Los registros del PR #1 se mantienen separados: no se suman sin verificar coincidencia de IDs, equivalencia y rutas.
+
+**Decisión M0:** esta reconciliación de alcance es N1, corroborada por CI y artefacto completo. Los 6 controles integrales de calidad, mutaciones en producción y privacidad dinámica siguen sin evidencias suficientes; el estado M0 no se convierte en COMPLETADA por el simple resultado SUCCESS del CI. La revisión docente y la calibración psicométrica siguen pendientes. El despliegue Render debe verificarse para el mismo SHA después de integrar la rama.
