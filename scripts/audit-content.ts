@@ -15,7 +15,8 @@ import {GENERALIZATION_ERROR_CASES} from "../src/lib/generalization-error-cases"
 import {GENERALIZATION_CHOICE_CASES} from "../src/lib/generalization-choice-cases";
 import {GENERALIZATION_EDITOR_CASES} from "../src/lib/generalization-editor-cases";
 import {WRITING_BANK,writingPool} from "../src/lib/writing";
-import {READING_BANK} from "../src/lib/reading";
+import {READING_BANK,readingPool} from "../src/lib/reading";
+import {MAIN_IDEA_CHOICE_CASES} from "../src/lib/main-idea-choice-cases";
 const levels=["principiante","intermedio","avanzado"] as const;
 const target={principiante:10,intermedio:15,avanzado:20};
 const rows=coverageRows(),totals=coverageTotals();
@@ -88,6 +89,16 @@ for(const q of GENERALIZATION_CHOICE_CASES){
 }
 for(const q of GENERALIZATION_EDITOR_CASES){
  if(q.steps.length!==3||new Set(q.steps).size!==3||q.steps.some(x=>x.length<35)||q.explanation.length<40)failures.push("Secuencia de integración incompleta: "+q.id);
+}
+for(const [level,need] of [["principiante",10],["intermedio",15],["avanzado",20]] as const){
+ const pool=readingPool(level,"Idea principal","quiz");
+ if(pool.length!==need)failures.push("Idea principal/quiz/"+level+": "+pool.length+" en vez de "+need);
+ if(new Set(pool.map(x=>x.id)).size!==pool.length)failures.push("IDs repetidos en Idea principal/quiz/"+level);
+}
+for(const q of MAIN_IDEA_CHOICE_CASES){
+ if(q.passage.length<240||q.explanation.length<45)failures.push("Lectura o explicación demasiado corta: "+q.id);
+ if(q.options.length!==4||new Set(q.options).size!==4||q.answer<0||q.answer>3)failures.push("Alternativas inválidas: "+q.id);
+ if(q.options[q.answer].includes("sin excepciones")||q.options[q.answer].includes("causal exclusiva"))failures.push("Clave incongruente: "+q.id);
 }
 console.log("ACADEMIA PHUMA PLAY · AUDITORÍA DE COBERTURA (contenidos, no validación psicométrica)");
 console.log("Meta por juego/subtema:",JSON.stringify(CONTENT_TARGET));
