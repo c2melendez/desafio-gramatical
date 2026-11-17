@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "modulo": "espanol-M1",
+  "area": "espanol",
+  "etapa": "M1",
+  "estado": "BLOQUEADO_DEPENDENCIA",
+  "required": [
+    "M0"
+  ],
+  "prev_main": "ed0c764471cc942b996f83b400d1c396cf2a01b6",
+  "source": "docs/modulos-phuma.json",
+  "objetivo_por_celda": {
+    "principiante": 10,
+    "intermedio": 15,
+    "avanzado": 20
+  },
+  "primer_bloque": {
+    "tema": "Gramática y semántica",
+    "subtemas": [
+      "Sinónimos y antónimos",
+      "Cohesión y coherencia",
+      "Morfosintaxis"
+    ],
+    "meta_registros_tecnicos": 405,
+    "presentes_tecnicos": 225,
+    "deficit_tecnico_nucleo": 180,
+    "por_subtema": {
+      "Sinónimos y antónimos": {
+        "quiz": {
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
+        },
+        "clasificar": {
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
+        },
+        "construir": {
+          "principiante": 0,
+          "intermedio": 0,
+          "avanzado": 0
+        }
+      },
+      "Cohesión y coherencia": {
+        "quiz": {
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
+        },
+        "clasificar": {
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
+        },
+        "construir": {
+          "principiante": 0,
+          "intermedio": 0,
+          "avanzado": 0
+        }
+      },
+      "Morfosintaxis": {
+        "quiz": {
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
+        },
+        "clasificar": {
+          "principiante": 0,
+          "intermedio": 0,
+          "avanzado": 0
+        },
+        "construir": {
+          "principiante": 0,
+          "intermedio": 0,
+          "avanzado": 0
+        }
+      }
+    },
+    "advertencia": "No confundir 225 registros técnicos con ítems pedagógicamente aceptados ni aceptar automáticamente los 36 borradores del PR #1."
+  },
+  "validaciones_obligatorias": [
+    "contratos_datos_y_oraculos",
+    "integracion_y_rutas",
+    "pruebas_funcionales",
+    "regresion_rotacion_historial",
+    "mutaciones_criticas",
+    "auditoria_items_independientes",
+    "CI_success",
+    "Render_live_mismo_SHA"
+  ],
+  "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
+  "siguiente_accion": "Activar M1 tras cierre verificable de M0, reconciliar PR #1 por IDs y similitud, generar 180 ítems cognitivos realmente diferenciados y validar cada juego en tres niveles."
+}
