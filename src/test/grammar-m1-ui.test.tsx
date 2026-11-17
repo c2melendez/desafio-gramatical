@@ -13,7 +13,10 @@ describe("M1: integración funcional de construcción",()=>{
   const matches=MORPH_CONSTRUCTION.filter(x=>x.level==="principiante"&&screen.queryByText(x.prompt));
   expect(matches).toHaveLength(1);
   const item=matches[0];
-  for(const tile of item.tiles)fireEvent.click(screen.getByRole("button",{name:tile.text}));
+  for(const id of item.solutions[0]){
+   const tile=item.tiles.find(x=>x.id===id)!;
+   fireEvent.click(screen.getByRole("button",{name:tile.text}));
+  }
   fireEvent.click(screen.getByRole("button",{name:"Comprobar"}));
   expect(screen.getByText("Correcto.")).toBeTruthy();
   const key=rotationKey("espanol","Gramática y semántica","Morfosintaxis","construir","principiante");
