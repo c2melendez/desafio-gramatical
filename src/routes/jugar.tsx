@@ -189,7 +189,8 @@ export function GrammarPilot({subtema,nivel}:{subtema:string;nivel:Level}) {
  const [finished,setFinished]=useState(false);
  const [order,setOrder]=useState<number[]>([]);
  const pool=grammarPilotPool(subtema,nivel);
- const key=rotationKey("espanol","Gramática y semántica",subtema,"quiz",nivel);
+ const topic=subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica";
+ const key=rotationKey("espanol",topic,subtema,"quiz",nivel);
  useEffect(()=>{
   const list=grammarPilotPool(subtema,nivel);
   setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));
@@ -200,7 +201,7 @@ export function GrammarPilot({subtema,nivel}:{subtema:string;nivel:Level}) {
  if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/">Volver al menú</Link></main>;
  const q=items[index];
  const choose=(i:number)=>{if(picked!==null)return;setPicked(i);const ok=i===q.answer;if(ok){setCorrect(n=>n+1);setPilotStreak(n=>{const next=n+1;setPilotBest(best=>Math.max(best,next));return next;});}else setPilotStreak(0);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
- const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score:correct*10,correct,total:items.length,bestStreak:pilotBest,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
+ const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score:correct*10,correct,total:items.length,bestStreak:pilotBest,area:"espanol",topic,subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
  return <main className="mx-auto max-w-2xl p-6 space-y-5"><Link to="/" className="underline">← Menú</Link><h1 className="text-2xl font-black">{subtema}</h1><p>Pregunta {index+1} de {items.length} · {nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}</p><div className="card-ink p-5 space-y-4"><p>{q.passage}</p><h2 className="font-bold">{q.question}</h2></div><div className="grid gap-3">{order.map(i=><button key={i} disabled={picked!==null} onClick={()=>choose(i)} className={`tile text-left ${picked===null?"bg-card":i===q.answer?"bg-success-soft":i===picked?"bg-destructive-soft":"bg-muted"}`}>{q.options[i]}</button>)}</div>{picked!==null&&<div aria-live="polite" className="space-y-3"><p className="card-ink p-4"><strong>{picked===q.answer?"Correcto. ":"Revisa tu respuesta. "}</strong>{q.explanation}</p><button onClick={next} className="tile w-full bg-primary text-primary-foreground">{index+1===items.length?"Ver resultado":"Siguiente"}</button></div>}</main>;
 }
 
