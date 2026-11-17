@@ -1,0 +1,37 @@
+name: Reparación controlada de minimatch M0
+on:
+  push:
+    branches:
+      - fix/m0-gates-and-mutation-20261117
+permissions:
+  contents: write
+jobs:
+  reparar-lock:
+    if: "startsWith(github.event.head_commit.message, 'fix(m0): probar override minimatch')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+      - name: Recalcular lockfile y exigir auditoría limpia
+        run: |
+          bun install
+          bun audit
+      - name: Validar toda la aplicación
+        run: |
+          bun run build
+          bun run test
+          bun run audit:content
+          bunx eslint . --rule "prettier/prettier: off"
+      - name: Publicar lock solamente si se validó todo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bun.lock
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(m0-deps): regenerar lockfile auditado"
+            git push origin HEAD:fix/m0-gates-and-mutation-20261117
+          fi
