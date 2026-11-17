@@ -7,14 +7,17 @@ type Props<T> = { item: T; onResult: (correct: boolean) => void; onNext: () => v
 /** Renderizar con key igual al ID del ejercicio para reiniciar el estado entre rondas. */
 export function GrammarClassification({ item, onResult, onNext }: Props<ClassificationActivity>) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  // Orden independiente por partida: las categorías no anticipan el resultado.
+  const [presentedItems] = useState(() => shuffle([...item.items]));
+  const [presentedLabels] = useState(() => shuffle([...item.labels]));
   const [checked, setChecked] = useState(false);
   const complete = item.items.every(x => answers[x.id] !== undefined);
   const check = () => { if (!complete || checked) return; setChecked(true); onResult(gradeClassification(item, answers)); };
   return <section className="space-y-4">
     <h2 className="card-ink p-4 font-bold">{item.prompt}</h2>
-    {item.items.map(x => <fieldset key={x.id} className="card-ink p-4 space-y-2" disabled={checked}>
+    {presentedItems.map(x => <fieldset key={x.id} className="card-ink p-4 space-y-2" disabled={checked}>
       <legend className="font-bold">{x.text}</legend>
-      <div className="flex flex-wrap gap-2">{item.labels.map(label => <button type="button" key={label} aria-pressed={answers[x.id] === label} onClick={() => setAnswers(a => ({ ...a, [x.id]: label }))} className={`tile ${answers[x.id] === label ? 'bg-primary text-primary-foreground' : 'bg-card'}`}>{label}</button>)}</div>
+      <div className="flex flex-wrap gap-2">{presentedLabels.map(label => <button type="button" key={label} aria-pressed={answers[x.id] === label} onClick={() => setAnswers(a => ({ ...a, [x.id]: label }))} className={`tile ${answers[x.id] === label ? 'bg-primary text-primary-foreground' : 'bg-card'}`}>{label}</button>)}</div>
       {checked && <p>{answers[x.id] === x.label ? '✓' : '✗'} {x.label}: {x.explanation}</p>}
     </fieldset>)}
     {!checked ? <button disabled={!complete} onClick={check} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">Comprobar</button> : <div aria-live="polite"><p>{item.explanation}</p><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
