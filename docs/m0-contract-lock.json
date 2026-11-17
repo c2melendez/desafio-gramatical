@@ -5,7 +5,7 @@
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "31467f450ca992425ced300a7dde2e26ca352973",
-    "src/lib/coverage.ts": "d2e9e99cda5ca83bc0af46ef5a36010a68df8285",
+    "src/lib/coverage.ts": "5aa04fce504c2761994545ebc28f77c8f8ca85e7",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "c67ea6e7bcb705a1b311670da5dfef96818b1cfd",
@@ -17,6 +17,6 @@
     "src/routes/historial.tsx": "eb49b09c484ab62b36f42cd4249f72e33223d909"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "M1 incorpora 405 actividades adicionales en los tres juegos, conservando progresión y contrato de M0. Cobertura, menú y carga auditados; 405 permanecen borradores hasta verificación independiente de contenido.",
+  "change_note": "M1: grafo de cobertura extendido a clasificación de tres subtemas adicionales; preserva mecanismos M0. CI y evaluación editorial por SHA vigentes obligatorios.",
   "previous_baseline": "bb4d9704f9581065f1bddd99e50326d84e9008d7"
 }
