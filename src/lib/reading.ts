@@ -11,6 +11,7 @@ import {CRITICAL_RECONSTRUCT_CASES,type CriticalReconstructCase} from "./critica
 import {VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES,type NewReadingDetective,type NewReadingChoice,type NewReadingReconstruct} from "./reading-vocabulary-block";
 import {ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASES,type AnalysisDetective,type AnalysisChoice,type AnalysisReconstruct} from "./reading-analysis-block";
 import {COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES,type CompareDetective,type CompareChoice,type CompareReconstruct} from "./reading-comparison-block";
+import {FIGURATIVE_DETECTIVE_CASES,FIGURATIVE_CHOICE_CASES,FIGURATIVE_RECONSTRUCT_CASES,type FigurativeDetectiveCase,type FigurativeChoiceCase,type FigurativeReconstructCase} from "./reading-figurative-block";
 import {readRotation,rotationKey,selectRotation} from "./rotation";
 export const READING_SUBTOPICS = ["Idea principal","Inferencias","Lectura crítica","Vocabulario en contexto","Análisis de textos","Lectura comparada","Lenguaje figurado"] as const;
 export type ReadingSubtopic = typeof READING_SUBTOPICS[number];
@@ -223,7 +224,7 @@ export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>REA
  order:{parts:seed.steps,hint:"Organiza un razonamiento: observa, contrasta y concluye.",explanation:"Un análisis sólido comienza localizando los datos, examina sus limitaciones y termina con una conclusión justificada."}
  };
 }));
-export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct;
+export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct|FigurativeDetectiveCase|FigurativeChoiceCase|FigurativeReconstructCase;
 export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):ReadingItem[]{
  if(!READING_SUBTOPICS.includes(subtopic))return [];
  const items:ReadingItem[]=READING_BANK.filter(q=>q.level===level&&q.subtopic===subtopic);
@@ -256,6 +257,11 @@ export function readingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode):Read
   if(mode==="clasificar")items.push(...COMPARISON_DETECTIVE_CASES.filter(q=>q.level===level));
   if(mode==="quiz")items.push(...COMPARISON_CHOICE_CASES.filter(q=>q.level===level));
   if(mode==="construir")items.push(...COMPARISON_RECONSTRUCT_CASES.filter(q=>q.level===level));
+ }
+ if(subtopic==="Lenguaje figurado"){
+  if(mode==="clasificar")items.push(...FIGURATIVE_DETECTIVE_CASES.filter(q=>q.level===level));
+  if(mode==="quiz")items.push(...FIGURATIVE_CHOICE_CASES.filter(q=>q.level===level));
+  if(mode==="construir")items.push(...FIGURATIVE_RECONSTRUCT_CASES.filter(q=>q.level===level));
  }
 
  return items;
