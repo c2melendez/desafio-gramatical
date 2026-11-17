@@ -77,7 +77,7 @@
         }
       }
     },
-    "advertencia": "405 registros técnicos en rama y con ruta; aceptación de independencia, revisión docente, CI del SHA final y Render todavía pendientes. No declarar módulo M1 COMPLETADA.",
+    "advertencia": "405 registros técnicos del primer bloque cubiertos; revisión semántica, independencia y docente pendientes. M1 no se declara COMPLETADA.",
     "nuevos_en_rama": 180,
     "incremento_niveles": {
       "principiante": 40,
@@ -96,25 +96,55 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "Completar revisión semántica y oráculos independientes de los 180 registros, comprobar equivalencias de construcción, auditoría de accesibilidad y regresión publicada, verificar Render LIVE del SHA final. No fusionar PR #6 ni declarar M1 COMPLETADA hasta satisfacer controles. M0 sigue COMPLETADA en main.",
+  "siguiente_accion": "Revisar reporte final de QA de 855 registros nuevos y 225 familias compartidas en PR #6, corregir fallos semánticos y equivalencias, aplicar verificador independiente, conservar historia, promover solo contenido aceptado y desplegar con CI SUCCESS + Render LIVE del SHA publicado. No confundir núcleo técnico con M1 completo.",
   "dependencia_estado": "COMPLETADA",
-  "fase_actual": "M1_NUCLEO_TECNICO_VALIDADO_REVISION_EDITORIAL_PENDIENTE",
+  "fase_actual": "M1_NUCLEO_ESPANOL_TECNICO_CUBIERTO_AUDITORIA_Y_PUBLICACION_PENDIENTES",
   "pr": 6,
   "rama_trabajo": "work/m1-grammar-nucleus-20261117",
   "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json",
   "validacion_rama": {
-    "sha_rama": "47b414128c02403571ab3d40bef075c0522e1823",
-    "ci_run_id": 44097753280,
-    "ci_estado": "success",
-    "auditoria_m1_artefacto_id": 14334567596,
-    "sha_checkout_pr": "843cdb7710c847fbb37b0e691b7246a5fb647dbc",
-    "auditoria_180": "PASS",
-    "celulas": 12,
-    "errores": 0,
-    "concisiones_exactas": 0,
-    "clasificacion_semantica": "INCONCLUSO",
+    "estado": "PENDIENTE_CI_FINAL",
+    "ultima_evidencia_previa": {
+      "sha": "c819ea467640a40ec2553d7b84a010f17f3670f8",
+      "ci_run_id": 44098052028,
+      "ci": "success",
+      "registros_nuevos": 180
+    },
+    "auditoria_180": "incorporada a CI",
+    "auditoria_405": "incorporada a CI",
+    "auditoria_270": "incorporada a CI",
     "revision_docente": "PENDIENTE",
     "render_sha": "NO_VERIFICADO",
     "merge": "PENDIENTE"
+  },
+  "manifiestos": [
+    "docs/m1-corrida-nucleo-405-20261117.json",
+    "docs/m1-corrida-nucleo-675-20261117.json"
+  ],
+  "nucleo_espanol": {
+    "celdas": 189,
+    "subtemas": 21,
+    "objetivo_tecnico": 2835,
+    "antes_main": 2006,
+    "nuevos_en_rama": 855,
+    "registros_tecnicos_en_rama": 2861,
+    "deficit_tecnico": 0,
+    "desglose_nuevos": {
+      "primera_corrida_180": 180,
+      "segundo_bloque_405": 405,
+      "tercer_bloque_270": 270
+    },
+    "familias_nuevas_segundo_y_tercer_bloque": 225,
+    "independientes_aceptados": "NO_VERIFICADOS",
+    "revisados_docente": 0,
+    "certificados_psicometricamente": 0,
+    "requisitos_pendientes": [
+      "oráculos semánticos y revisión por caso",
+      "auditoría de independencia",
+      "calibración de dificultad",
+      "CI final SHA",
+      "Render Live del mismo SHA",
+      "prueba funcional publicada"
+    ]
   }
 }
