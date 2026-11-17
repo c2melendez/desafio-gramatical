@@ -11,6 +11,7 @@ import { COHESION_CLASSIFICATION } from '../src/lib/grammar-classify-cohesion.ts
 import { grammarPilotPool } from '../src/lib/grammar-next-draft.ts';
 import {GRAMMAR_M1_ACTIVITIES} from '../src/lib/grammar-m1-activities.ts';
 import {M1_NEXT_ACTIVITIES} from '../src/lib/grammar-m1-next-activities.ts';
+import {M1_LITERATURE_ACTIVITIES} from '../src/lib/grammar-m1-literature.ts';
 import { readingPool } from '../src/lib/reading.ts';
 import { writingPool } from '../src/lib/writing.ts';
 
@@ -29,6 +30,7 @@ export function pool(row) {
   if(topic==='Gramática y semántica'&&mode==='quiz')return grammarPilotPool(subtopic,level);
   if(topic==='Gramática y semántica')return [...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==='construir'?'construction':'classification'));
 
+  if(topic==='Literatura')return mode==='quiz'?grammarPilotPool(subtopic,level):M1_LITERATURE_ACTIVITIES.filter(x=>x.subtopic===subtopic&&x.level===level&&x.kind===(mode==='construir'?'construction':'classification'));
   if(topic==='Comprensión lectora')return readingPool(level,subtopic,mode);
   if(topic==='Redacción')return writingPool(level,subtopic,mode);
   return [];
