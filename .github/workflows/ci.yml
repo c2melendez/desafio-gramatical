@@ -47,6 +47,16 @@ jobs:
           node scripts/check-selection-oracles.mjs
           node scripts/security-client-audit.mjs --test
           node scripts/security-client-audit.mjs
+      - name: Congelar inventario reproducible por ruta, juego y nivel
+        run: |
+          node --import ./scripts/ts-resolve.mjs scripts/inventory-coverage.mjs > m0-inventory.json
+          node -e "const i=require('./m0-inventory.json'); if (!i.resumen || i.rows.length !== 810 || i.arbol_modificado) process.exit(1)"
+      - name: Guardar matriz de alcance M0
+        uses: actions/upload-artifact@v4
+        with:
+          name: m0-inventario
+          path: m0-inventory.json
+          retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
       - name: Evidencia ejecutable de M0 (cierre independiente)
