@@ -7,6 +7,7 @@ import {
 } from "@/lib/phuma-catalog";
 import {GRAMMAR_PILOT_SUBTOPICS} from "@/lib/grammar-next-draft";
 import {GRAMMAR_M1_ACTIVITIES} from "@/lib/grammar-m1-activities";
+import {M1_NEXT_ACTIVITIES} from "@/lib/grammar-m1-next-activities";
 import {CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 
 export const Route = createFileRoute("/")({
@@ -30,7 +31,7 @@ function Home() {
  const selectedArea=AREAS.find(a=>a.id===areaId)!;
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
  const pilot=areaId==="espanol"&&topic==="Gramática y semántica"&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
- const pilotMode=(id:Mode)=>id==="quiz"||((subtopic==="Sinónimos y antónimos"||subtopic==="Cohesión y coherencia")&&id==="clasificar")||GRAMMAR_M1_ACTIVITIES.some(x=>x.subtopic===subtopic&&x.kind===(id==="construir"?"construction":"classification"));
+ const pilotMode=(id:Mode)=>id==="quiz"||((subtopic==="Sinónimos y antónimos"||subtopic==="Cohesión y coherencia")&&id==="clasificar")||[...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES].some(x=>x.subtopic===subtopic&&x.kind===(id==="construir"?"construction":"classification"));
  const active=pilot?pilotMode(mode):availableModule(areaId,topic,subtopic);
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
