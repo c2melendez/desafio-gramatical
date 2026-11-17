@@ -573,5 +573,5 @@ export const FIGURATIVE_RECONSTRUCT_CASES:FigurativeReconstructCase[]=FIGURES.ma
   "Examinar cómo funciona el recurso denominado "+f.figure+" en el contexto.",
   "Concluir que la imagen expresa: "+f.reconstructMeaning+"."
  ];
- return {id:"figurative-recon-"+i,level:levelFor(i),subtopic:"Lenguaje figurado",title:f.title+" — reconstrucción",passage,order:{parts,hint:"Ordena imagen textual, recurso figurativo e interpretación contextual.",explanation:"El recurso de "+f.figure+" se entiende considerando la imagen «"+f.passages[2]+"» y su sentido figurado: "+f.meaning+"."},reviewStatus:"editorial-draft"};
+ return {id:"figurative-recon-"+i,level:levelFor(i),subtopic:"Lenguaje figurado",title:f.title+" — reconstrucción",passage,order:{parts,hint:"Ordena imagen textual, recurso figurativo e interpretación contextual.",explanation:"El recurso de "+f.figure+" se entiende considerando la imagen «"+f.passages[2]+"» y su sentido figurado: "+f.reconstructMeaning+"."},reviewStatus:"editorial-draft"};
 });
