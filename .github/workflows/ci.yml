@@ -36,6 +36,9 @@ jobs:
           python3 -m unittest discover -s scripts -p 'test_qa_m0.py'
           python3 -m unittest discover -s scripts -p 'test_verify_state.py'
           node scripts/test-review-draft.mjs
+          python3 scripts/validate_editorial_review.py
+          python3 -m unittest discover -s scripts -p 'test_editorial_review.py'
+          node scripts/test-quarantine.mjs
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
       - name: Comprobar código
