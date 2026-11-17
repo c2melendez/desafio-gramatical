@@ -46,5 +46,13 @@
     "seguridad_privacidad",
     "verificacion_independiente_completa"
   ],
-  "siguiente_accion": "Resolver o documentar mitigación de minimatch, ejecutar revisión de secretos y privacidad, completar unicidad e independencia de contenido y controles funcionales y de mutación de M0."
+  "siguiente_accion": "Resolver o mitigar el aviso moderado de minimatch; comprobar secretos y privacidad; completar pruebas globales, oráculos e integración de contenido y controles obligatorios M0.",
+  "ultima_publicacion": {
+    "sha": "838a5ab79900881e4b080fd098be799f69cb81a0",
+    "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44077018305",
+    "render": "LIVE",
+    "render_deploy": "dep-dbu3t4lg1s2s73es9av0",
+    "pr": 3,
+    "prueba": "Partida de clasificación: respuesta correcta, puntaje y retroalimentación observados."
+  }
 }
