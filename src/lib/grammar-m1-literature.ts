@@ -14,7 +14,6 @@ export type LiteratureQuiz={
  competence:string;cognitiveGoal:string;
 };
 const level=(i:number):Level=>i<10?"principiante":i<25?"intermedio":"avanzado";
-const topics=["Figuras retóricas","Géneros literarios"] as const;
 const source="Guía pre-U PHUMA UNAH 2026, Competencias comunicativas — Español; estímulos propios";
 const meta=(family:string,goal:string)=>({
  competence:"Competencias comunicativas — Español",cognitiveGoal:goal,
