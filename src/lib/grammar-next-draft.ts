@@ -1,3 +1,4 @@
+import {M1_LITERATURE_QUIZ} from "./grammar-m1-literature";
 import {M1_NEXT_QUIZ} from "./grammar-m1-next-activities";
 import {GRAMMAR_COMPLETION_QUIZ} from "./grammar-completion-quiz";
 import {GRAMMAR_NUCLEO_EXTRA} from "./grammar-extra-nucleo";
@@ -7,7 +8,7 @@ import type {Level} from "./grammar";
 
 /** Borrador editorial; no se cuenta como contenido jugable antes de integrar la mecánica. */
 export type GrammarDraft = {
- id:string; subtopic:"Sinónimos y antónimos"|"Cohesión y coherencia"|"Morfosintaxis"|"Homonimia y polisemia"|"Hiperonimia"|"Adecuación y referente";
+ id:string; subtopic:"Sinónimos y antónimos"|"Cohesión y coherencia"|"Morfosintaxis"|"Homonimia y polisemia"|"Hiperonimia"|"Adecuación y referente"|"Figuras retóricas"|"Géneros literarios";
  level:Level; passage:string; question:string; options:[string,string,string,string];
  answer:0|1|2|3; explanation:string; reviewStatus:"editorial-draft";
 };
@@ -39,5 +40,5 @@ const morph:Seed[]=[
 function create(subtopic:GrammarDraft["subtopic"],seeds:Seed[]):GrammarDraft[]{return seeds.map(([id,level,passage,question,options,answer,explanation])=>({id,subtopic,level,passage,question,options,answer,explanation,reviewStatus:"editorial-draft"}));}
 export const GRAMMAR_NEXT_DRAFT:GrammarDraft[]=[...create("Sinónimos y antónimos",synonym),...create("Cohesión y coherencia",cohesion),...create("Morfosintaxis",morph),...GRAMMAR_EXTRA_BLOCK,...GRAMMAR_EXTRA_405,...GRAMMAR_NUCLEO_EXTRA,...GRAMMAR_COMPLETION_QUIZ];
 
-export const GRAMMAR_PILOT_SUBTOPICS = ["Sinónimos y antónimos", "Cohesión y coherencia", "Morfosintaxis", "Homonimia y polisemia", "Hiperonimia", "Adecuación y referente"] as const;
-export function grammarPilotPool(subtopic:string, level:Level):GrammarDraft[]{return [...GRAMMAR_NEXT_DRAFT,...M1_NEXT_QUIZ].filter(q=>q.subtopic===subtopic&&q.level===level);}
+export const GRAMMAR_PILOT_SUBTOPICS = ["Sinónimos y antónimos", "Cohesión y coherencia", "Morfosintaxis", "Homonimia y polisemia", "Hiperonimia", "Adecuación y referente", "Figuras retóricas", "Géneros literarios"] as const;
+export function grammarPilotPool(subtopic:string, level:Level):GrammarDraft[]{return [...GRAMMAR_NEXT_DRAFT,...M1_NEXT_QUIZ,...M1_LITERATURE_QUIZ].filter(q=>q.subtopic===subtopic&&q.level===level);}
