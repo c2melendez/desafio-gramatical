@@ -19,7 +19,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La cantidad de préstamos se duplicó exactamente."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Una ampliación de horarios que será evaluada mediante el registro de visitas.». El dato «La biblioteca abrirá tres tardes adicionales.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -36,7 +36,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Un huerto escolar utilizado para observar plantas y comparar sus condiciones de cultivo."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Un huerto escolar utilizado para observar plantas y comparar sus condiciones de cultivo.». El dato «Dos macetas estaban cerca de la ventana.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -53,7 +53,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Se colocaron recipientes de separación."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Una jornada de limpieza comunitaria y la posibilidad de darle continuidad.». El dato «La alcaldía aprobó limpieza semanal permanente.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -70,7 +70,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Todos los libros del intercambio eran nuevos."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Un intercambio escolar de libros que promovió compartir lecturas entre cursos.». El dato «Se canceló toda la biblioteca escolar.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -87,7 +87,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Las canchas quedaron cerradas definitivamente."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La mejora del acceso al agua en el recreo acompañada de cuidados de mantenimiento.». El dato «Las fuentes quedaron cerca de las canchas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -104,7 +104,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La recopilación de recuerdos diversos para conservar la memoria de juegos tradicionales."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La recopilación de recuerdos diversos para conservar la memoria de juegos tradicionales.». El dato «El museo recibió fotografías y relatos.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -121,7 +121,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Las familias tomaron fotografías de la calle."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La documentación de problemas de acceso escolar para solicitar una solución.». El dato «Las autoridades repararon la vía al día siguiente.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -138,7 +138,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Todas las visitas adicionales fueron por publicidad."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La necesidad de interpretar el aumento de visitantes considerando cambios en la medición.». El dato «El nuevo sistema excluyó excursiones escolares.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -155,7 +155,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "No hubo crecimiento residencial en veinte años."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Una comparación histórica de mapas que reconoce límites de escala y cobertura.». El dato «Los mapas utilizaban escalas distintas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -172,7 +172,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El aprendizaje de una comunicación responsable mediante verificación de fuentes."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «El aprendizaje de una comunicación responsable mediante verificación de fuentes.». El dato «Los jóvenes corrigieron un guion.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -189,7 +189,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El barrio central registró más viajes."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La interpretación de los préstamos de bicicletas mediante indicadores comparables.». El dato «Se cerraron las estaciones de otros barrios.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -206,7 +206,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Una fotografía representaba a todas las familias."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La integración crítica de fuentes distintas para comprender costumbres históricas.». El dato «Los anuncios fueron descartados por completo.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -223,7 +223,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "No hubo días de vacaciones en ese período."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La evaluación cautelosa de una reducción energética ocurrida durante varios cambios.». El dato «Se realizaron charlas de ahorro eléctrico.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -240,7 +240,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La necesidad de comparar rutas por el tiempo total y no solo por el trayecto."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La necesidad de comparar rutas por el tiempo total y no solo por el trayecto.». El dato «Una ruta tenía esperas más largas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -257,7 +257,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El riego no había sido uniforme."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La importancia de controlar variables antes de atribuir diferencias de crecimiento.». El dato «La luz quedó probada como causa única.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -274,7 +274,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Toda la ciudad respondió la encuesta."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Una encuesta con resultados útiles pero limitados por la selección de participantes.». El dato «Nadie sin internet quedó fuera de la muestra.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -291,7 +291,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El río nunca presentó turbidez."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Una observación ambiental acompañada de cautela al determinar sus causas.». El dato «La turbidez creció después de días lluviosos.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -308,7 +308,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La verificación y corrección de datos como parte de una noticia responsable."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La verificación y corrección de datos como parte de una noticia responsable.». El dato «La redacción consultó actas del torneo.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -325,7 +325,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Algunas narraciones discreparon sobre fechas."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La preservación de memorias comunitarias sin ocultar discrepancias entre relatos.». El dato «Todas las fechas de los relatos fueron idénticas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -342,7 +342,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La tasa más alta demostró el peor programa."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La necesidad de definir de forma equivalente un indicador antes de comparar tasas.». El dato «Ambos programas contaban el abandono igual.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -359,7 +359,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "No se perdió ningún participante del seguimiento."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La dificultad de interpretar resultados de tutorías cuando se pierde parte de la muestra.». El dato «Cuarenta alumnos no completaron el seguimiento.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -376,7 +376,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La importancia de verificar equivalencia conceptual antes de combinar medidas de bienestar."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La importancia de verificar equivalencia conceptual antes de combinar medidas de bienestar.». El dato «Los cuestionarios tenían diseños distintos.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -393,7 +393,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Se ampliaron becas y cambiaron horarios."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La cautela necesaria para atribuir resultados cuando existen cambios simultáneos.». El dato «Las becas fueron la causa exclusiva de la mejora.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -410,7 +410,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Las tasas brutas demostraron mejor atención sin ajustes."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La comparación de tasas sanitarias condicionada por diferencias demográficas y metodológicas.». El dato «Las regiones tenían edades idénticas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -427,7 +427,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Todos los testigos recordaban la misma fecha."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La evaluación contextual de testimonios tardíos mediante comparación documental.». El dato «Hubo discrepancias en las fechas recordadas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -444,7 +444,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La interpretación de una mejora media junto con la heterogeneidad entre grupos."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La interpretación de una mejora media junto con la heterogeneidad entre grupos.». El dato «Algunas escuelas no registraron progreso.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -461,7 +461,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Los sensores nuevos eran más sensibles."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La necesidad de separar cambios reales de cambios en la capacidad de detección.». El dato «Cada aviso fue causado por una fábrica nueva.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -478,7 +478,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El gasto menor demostró menos consumo físico."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La diferencia entre una reducción monetaria y una mejora energética demostrada.». El dato «Las tarifas nunca cambiaron.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -495,7 +495,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Todas las fuentes probaban causas con el mismo diseño."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «Una síntesis crítica que compara resultados y diseños antes de extraer conclusiones.». El dato «Se analizaron trabajos favorables y desfavorables.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -512,7 +512,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El efecto de las definiciones y preguntas sobre la comparación de encuestas."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «El efecto de las definiciones y preguntas sobre la comparación de encuestas.». El dato «Las encuestas preguntaron sobre lecturas diferentes.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -529,7 +529,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Se había eliminado parte de la muestra."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La necesidad de justificar la eliminación de datos y revisar su efecto en los resultados.». El dato «Quitar datos extremos siempre mejora la precisión.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -546,7 +546,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Las proyecciones eran un censo futuro exacto."
     ],
     "answer": 1,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La naturaleza condicional de las proyecciones de población y su incertidumbre.». El dato «Los tres escenarios garantizaban un único resultado.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -563,7 +563,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La línea de emergencia no cambió el registro."
     ],
     "answer": 0,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La interpretación de avisos de riesgo considerando la detección y las condiciones.». El dato «Se habilitó una línea de emergencias.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -580,7 +580,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La necesidad de integrar beneficios, costos y límites antes de ampliar un programa."
     ],
     "answer": 3,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La necesidad de integrar beneficios, costos y límites antes de ampliar un programa.». El dato «Se registraron costos de transporte.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -597,7 +597,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Las fuentes coincidían en el lugar."
     ],
     "answer": 2,
-    "explanation": "La respuesta correcta integra el propósito y las limitaciones que desarrolla el texto, sin convertir un detalle en la idea central ni añadir conclusiones no demostradas.",
+    "explanation": "El tema central es: «La integración cuidadosa de fuentes históricas que contienen coincidencias y desacuerdos.». El dato «Todos los relatos coincidían en participantes.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -614,7 +614,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Todos los distritos mejoraron idénticamente."
     ],
     "answer": 1,
-    "explanation": "La respuesta central considera distintos distritos y límites de las encuestas, en vez de confundir un detalle del método con la conclusión principal.",
+    "explanation": "El tema central es: «Los resultados de asistencia a bibliotecas deben interpretarse considerando diferencias entre distritos y selección de participantes.». El dato «Las encuestas voluntarias probaron una causa exclusiva.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
     "reviewStatus": "editorial-draft"
   }
 ];
