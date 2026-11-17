@@ -14,6 +14,8 @@ La meta por cada **juego y subtema** es **30 ejercicios básicos, 50 intermedios
 
 **Los cinco subtemas de Redacción alcanzaron la primera meta cuantitativa de 10/15/20 por juego y nivel.** Son **675 registros por modalidad**, con **540 casos nuevos diferenciados por juego** y **135 registros de situaciones anteriores compartidas entre mecánicas**. La cantidad no significa revisión editorial aprobada ni haber alcanzado aún los 30/50/70 definitivos. Véanse [Generalización e integración](docs/fase-a-generalizacion-integracion-2026.md) y los informes de los demás subtemas.
 
+**Comprensión lectora — primer lote:** «Idea principal → Verdad o inferencia» suma 36 lecturas originales nuevas (7/12/17), alcanzando 10/15/20 por nivel. Los otros dos juegos de Idea principal y los seis subtemas restantes aún mantienen sus bancos anteriores. La rotación de lecturas registra las vistas y los errores sin perder el historial. [Informe de la ampliación](docs/fase-a-lectura-idea-principal.md).
+
 La portada indica la cobertura cuantitativa para la combinación de subtema, juego y nivel elegida. No confunde escenarios compartidos con ejercicios cognitivos independientes ni presenta la cantidad como certificación pedagógica.
 
 ## Desarrollo y pruebas
@@ -31,6 +33,7 @@ El CI realiza compilación, pruebas, auditoría de cobertura y ESLint antes de q
 
 - [Plan de expansión del proyecto](docs/academia-phuma-play-plan.md)
 - [Juegos de comprensión lectora](docs/comprension-lectora-juegos.md)
+- [Fase A: primera ampliación independiente de Idea principal](docs/fase-a-lectura-idea-principal.md)
 - [Juegos de Redacción](docs/redaccion-juegos.md)
 - [Fase A: núcleo, rotación, validación y próximos lotes](docs/fase-a-nucleo-rotacion.md)
 - [Fase A: Organización textual, juegos y auditoría](docs/fase-a-organizacion-textual-2026.md)
