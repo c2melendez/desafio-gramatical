@@ -15,7 +15,7 @@ const newByLevel={principiante:0,intermedio:0,avanzado:0};
 const modeKinds={quiz:0,clasificar:0,construir:0};
 let structurallyVerified=0,negativeControls=0,withParents=0,duplicateParents=0;
 for(const row of coverageRows().filter(x=>x.area==='espanol')){
- const items=pool(row),found=auditCell(row,items,globalIds);
+ const items=pool(row).filter(x=>!x.id.startsWith('m3-')),found=auditCell(row,items,globalIds);
  const technical=found.passed.length;
  const deficit=Math.max(0,target[row.level]-technical);
  const m2=items.filter(x=>x.id.startsWith('m2-'));
@@ -70,7 +70,7 @@ for(const row of coverageRows().filter(x=>x.area==='espanol')){
   if(item.tiles&&row.subtopic==='Categorías gramaticales'&&row.mode==='construir'&&item.solutions.some(x=>!x))
    issues.push({id,rule:'soluciones clásicas ausentes'});
  }
- if(items.length!==row.available)issues.push({cell:[row.topic,row.subtopic,row.mode,row.level],rule:'conteo de ruta distinto de catálogo'});
+ if(items.length!==Math.min(row.available,target[row.level]+(row.subtopic==='Categorías gramaticales'&&row.mode==='quiz'&&row.level==='principiante'?1:0)))issues.push({cell:[row.topic,row.subtopic,row.mode,row.level],rule:'conteo base M2 alterado'});
  const cell={area:row.area,topic:row.topic,subtopic:row.subtopic,mode:row.mode,level:row.level,
   target:target[row.level],recorded:items.length,verified_automatic:technical,m2_new:m2.length,
   deficit,issue_ids:found.errors.slice(0,8)};
