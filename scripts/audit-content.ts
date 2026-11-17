@@ -25,6 +25,9 @@ import {INFERENCE_RECONSTRUCT_CASES} from "../src/lib/inference-reconstruct-case
 import {CRITICAL_DETECTIVE_CASES} from "../src/lib/critical-detective-cases";
 import {CRITICAL_CHOICE_CASES} from "../src/lib/critical-choice-cases";
 import {CRITICAL_RECONSTRUCT_CASES} from "../src/lib/critical-reconstruct-cases";
+import {VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES} from "../src/lib/reading-vocabulary-block";
+import {ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASES} from "../src/lib/reading-analysis-block";
+import {COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES} from "../src/lib/reading-comparison-block";
 const levels=["principiante","intermedio","avanzado"] as const;
 const target={principiante:10,intermedio:15,avanzado:20};
 const rows=coverageRows(),totals=coverageTotals();
@@ -155,6 +158,27 @@ const allInferencePassages=[...INFERENCE_DETECTIVE_CASES,...INFERENCE_CHOICE_CAS
 if(new Set(allInferencePassages).size!==108)failures.push("Lecturas de Inferencias repetidas entre modalidades");
 const readingTexts=[...MAIN_IDEA_CHOICE_CASES,...MAIN_IDEA_DETECTIVE_CASES,...MAIN_IDEA_RECONSTRUCT_CASES].map(q=>q.passage);
 if(new Set(readingTexts).size!==108)failures.push("Hay textos repetidos entre los juegos de Idea principal");
+const newBlocks=[
+ ["Vocabulario en contexto",VOCAB_DETECTIVE_CASES,VOCAB_CHOICE_CASES,VOCAB_RECONSTRUCT_CASES],
+ ["Análisis de textos",ANALYSIS_DETECTIVE_CASES,ANALYSIS_CHOICE_CASES,ANALYSIS_RECONSTRUCT_CASES],
+ ["Lectura comparada",COMPARISON_DETECTIVE_CASES,COMPARISON_CHOICE_CASES,COMPARISON_RECONSTRUCT_CASES]
+] as const;
+for(const [subtopic,detectives,choices,reconstructions] of newBlocks){
+ const pools=[detectives,choices,reconstructions];
+ const all=pools.flatMap(p=>p);
+ if(all.length!==108)failures.push("Corrida de bloques: "+subtopic+" tiene "+all.length+" registros nuevos, no 108");
+ if(new Set(all.map(x=>x.passage)).size!==108)failures.push("Corrida de bloques: pasajes repetidos en "+subtopic);
+ if(new Set(all.map(x=>x.id)).size!==108)failures.push("Corrida de bloques: IDs repetidos en "+subtopic);
+ for(const [level,expected] of [["principiante",10],["intermedio",15],["avanzado",20]] as const)
+  for(const mode of ["clasificar","quiz","construir"] as const){
+   const pool=readingPool(level,subtopic,mode);
+   if(pool.length!==expected)failures.push(subtopic+"/"+mode+"/"+level+": esperado "+expected+", real "+pool.length);
+  }
+ for(const q of detectives)if(q.passage.length<145||q.claims.length!==3||new Set(q.claims.map(c=>c.tag)).size!==3||new Set(q.claims.map(c=>c.text)).size!==3)failures.push("Clasificación inválida: "+q.id);
+ for(const q of choices)if(q.passage.length<145||q.options.length!==4||new Set(q.options).size!==4||q.answer<0||q.answer>3||q.explanation.length<45)failures.push("Selección inválida: "+q.id);
+ for(const q of reconstructions)if(q.passage.length<145||q.order.parts.length!==3||new Set(q.order.parts).size!==3||q.order.explanation.length<45)failures.push("Reconstrucción inválida: "+q.id);
+}
+if(newBlocks.flatMap(([,a,b,c])=>[...a,...b,...c]).length!==324)failures.push("Corrida actual: cantidad distinta de 324");
 console.log("ACADEMIA PHUMA PLAY · AUDITORÍA DE COBERTURA (contenidos, no validación psicométrica)");
 console.log("Meta por juego/subtema:",JSON.stringify(CONTENT_TARGET));
 console.log("Primer lote por juego/subtema:",JSON.stringify(CONTENT_STAGE_ONE));
