@@ -23,3 +23,7 @@ Se añadieron componentes reutilizables de clasificación y construcción y vali
 ## Clasificación de sinónimos y antónimos
 
 Se agregaron 45 actividades de clasificación de relaciones léxicas contextualizadas, con 10 básicas, 15 intermedias y 20 avanzadas. Están conectadas al menú, a la rotación por nivel y al historial. Cada actividad plantea una relación entre expresiones y explica la clasificación; permanecen en borrador editorial y requieren revisión docente. Tras esta aportación faltan **225 ejercicios** para el bloque: 45 de construcción en Sinónimos y antónimos y 90 en cada uno de Cohesión y coherencia y Morfosintaxis. Este avance parcial no completa el bloque ni inicia la corrida de 450.
+
+## Clasificación de cohesión y coherencia
+
+Se añaden 45 actividades que clasifican relaciones de causa, consecuencia, contraste y adición en contextos distintos (10/15/20). Están conectadas al menú, rotación e historial. Se trata de borradores editoriales: necesitan revisión docente de independencia conceptual y calibración de dificultad. Su cobertura se registra separadamente del juego de selección. Tras esta aportación hay 180 registros pendientes del primer núcleo del bloque: construcción en Sinónimos y antónimos y Cohesión y coherencia (45 cada uno), y clasificación y construcción en Morfosintaxis (90). No se considera cerrado el bloque ni se inicia la corrida de 450.

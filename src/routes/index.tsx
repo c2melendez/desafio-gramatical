@@ -29,7 +29,7 @@ function Home() {
  const selectedArea=AREAS.find(a=>a.id===areaId)!;
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
  const pilot=areaId==="espanol"&&topic==="Gramática y semántica"&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
- const pilotMode=(id:Mode)=>id==="quiz"||(subtopic==="Sinónimos y antónimos"&&id==="clasificar");
+ const pilotMode=(id:Mode)=>id==="quiz"||((subtopic==="Sinónimos y antónimos"||subtopic==="Cohesión y coherencia")&&id==="clasificar");
  const active=pilot?pilotMode(mode):availableModule(areaId,topic,subtopic);
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
@@ -83,7 +83,7 @@ function Home() {
      </label>
     </div>
     <p aria-live="polite" className={`rounded-lg px-3 py-2 text-sm font-bold ${active?"bg-success-soft":"bg-muted"}`}>
-      {pilot?(subtopic==="Sinónimos y antónimos"?"🧪 Práctica inicial: disponibles clasificación y selección; construcción está en desarrollo.":"🧪 Práctica inicial: disponible el juego de selección; clasificación y construcción están en desarrollo."):active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
+      {pilot?((subtopic==="Sinónimos y antónimos"||subtopic==="Cohesión y coherencia")?"🧪 Práctica inicial: disponibles clasificación y selección; construcción está en desarrollo.":"🧪 Práctica inicial: disponible el juego de selección; clasificación y construcción están en desarrollo."):active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
       "🛠️ Módulo planificado: puedes explorar los juegos, pero aún no está desarrollado."}
     </p>
    </section>
