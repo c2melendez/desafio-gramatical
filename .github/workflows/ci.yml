@@ -34,6 +34,7 @@ jobs:
         run: |
           node scripts/test-inventory.mjs
           node --import ./scripts/ts-resolve.mjs scripts/test-inventory-items.mjs
+          node --import ./scripts/ts-resolve.mjs scripts/test-m0-critical-mutations.mjs
           python3 scripts/validate_modules.py
           python3 -m unittest discover -s scripts -p 'test_validate_modules.py'
           python3 -m unittest discover -s scripts -p 'test_qa_m0.py'
