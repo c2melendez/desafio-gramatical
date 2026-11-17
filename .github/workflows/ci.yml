@@ -24,6 +24,15 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
+      - name: Generar lock transitorio para parchear picomatch CVE-2026-112366
+        run: bun install --lockfile-only
+      - name: Conservar lock de parche para publicación reproducible
+        uses: actions/upload-artifact@v4
+        with:
+          name: m2-lock-picomatch-reparado
+          path: bun.lock
+          retention-days: 7
+          if-no-files-found: error
       - name: Instalar dependencias
         run: bun install --frozen-lockfile
       - name: Compilar aplicación y generar rutas de TanStack Router
