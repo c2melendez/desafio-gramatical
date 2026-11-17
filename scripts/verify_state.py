@@ -37,11 +37,24 @@ def verify(state, catalog, root, lookup):
         else: add('evidencia','OK',f'Archivo presente: {path}')
     if not state.get('evidencia'): add('evidencia','ERROR','Falta evidencia')
     pending=state.get('controles_obligatorios_pendientes',[])
+    technical=state.get('cierre_tecnico_m0',{})
+    has_external_evidence=(technical.get('estado')=='PASS' and
+        isinstance(technical.get('ci_run_id'),int) and
+        isinstance(technical.get('artefacto_id'),int) and
+        bool(HEX.fullmatch(technical.get('sha',''))))
     for name in UNIMPLEMENTED:
-        if name not in pending: add(name,'ERROR','Control omitido del estado; su verificación aún no está implementada')
-        add(name,'SKIP','Sin evidencia validada de ejecución')
-    if state.get('estado') in ('COMPLETADA','COMPLETADO') and any(c['status'] in ('ERROR','SKIP') for c in checks):
-        add('cierre','ERROR','No puede cerrarse con errores o controles sin evidencia')
+        if name in pending:
+            add(name,'SKIP','Etapa declarada pendiente en estado')
+        elif has_external_evidence:
+            add(name,'WARNING','Evidencia CI identificada; el reporte externo debe verificarse de manera independiente')
+        else:
+            add(name,'ERROR','Control omitido del estado sin evidencia verificable')
+    if 'render_live_mismo_sha' in pending or state.get('estado') != 'COMPLETADA':
+        add('render_live_mismo_sha','SKIP','Pendiente acreditar Render Live del mismo commit y prueba publicada')
+    elif not state.get('cierre_render'):
+        add('render_live_mismo_sha','ERROR','No hay atestación de despliegue')
+    if state.get('estado') in ('COMPLETADA','COMPLETADO') and any(c['status'] in ('ERROR','SKIP','WARNING') for c in checks):
+        add('cierre','ERROR','No puede cerrarse con errores, advertencias o controles sin evidencia')
     return checks
 
 def lookup_git(sha,path):
