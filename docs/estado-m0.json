@@ -32,7 +32,10 @@
     "docs/evidencia/familias-permutaciones-20261117.json",
     "docs/familias-y-ordenes-20261117.md",
     "docs/evidencia/seleccion-distinta-20261117.json",
-    "docs/seleccion-72-cotejo-20261117.md"
+    "docs/seleccion-72-cotejo-20261117.md",
+    "docs/evidencia/contratos-gramatica-20261117.json",
+    "docs/evidencia/oraculos-seleccion-72-20261117.json",
+    "docs/m0-contratos-pasada-20261117.md"
   ],
   "controles_obligatorios_pendientes": [
     "contratos_y_estado",
@@ -42,5 +45,5 @@
     "seguridad_privacidad",
     "verificacion_independiente_completa"
   ],
-  "siguiente_accion": "Revisar claves y distractores de 72 candidatos, resolver independencia de 18 familias y equivalencia de 90 órdenes, y completar controles de M0."
+  "siguiente_accion": "Completar contratos de construcción y alineación, oráculos y unicidad por ítem, pruebas funcionales y mutaciones globales, seguridad y verificador de estado; ejecutar de nuevo la suite M0."
 }

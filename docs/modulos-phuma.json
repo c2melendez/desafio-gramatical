@@ -1,11 +1,314 @@
 {
   "version": 1,
-  "areas": ["espanol", "matematicas", "naturales", "sociales", "blandas"],
+  "areas": [
+    "espanol",
+    "matematicas",
+    "naturales",
+    "sociales",
+    "blandas"
+  ],
   "modules": [
-    {"id": "M0", "area": null, "stage": "M0", "required": [], "optional": [], "state": "EN_CURSO", "evidence": "docs/checkpoint-m0-20261117.md"},
-    {"id": "espanol-M1", "area": "espanol", "stage": "M1", "required": ["M0"], "optional": [], "state": "PENDIENTE", "targets": [10, 15, 20]},
-    {"id": "espanol-M2", "area": "espanol", "stage": "M2", "required": ["espanol-M1"], "optional": [], "state": "PENDIENTE", "targets": [20, 35, 45]},
-    {"id": "espanol-M3", "area": "espanol", "stage": "M3", "required": ["espanol-M2"], "optional": [], "state": "PENDIENTE", "targets": [30, 50, 70]},
-    {"id": "espanol-CORTE", "area": "espanol", "stage": "CORTE", "required": ["espanol-M3"], "optional": [], "state": "PENDIENTE"}
+    {
+      "id": "M0",
+      "area": null,
+      "stage": "M0",
+      "required": [],
+      "optional": [],
+      "state": "EN_CURSO",
+      "evidence": "docs/checkpoint-m0-20261117.md"
+    },
+    {
+      "id": "espanol-M1",
+      "area": "espanol",
+      "stage": "M1",
+      "required": [
+        "M0"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        10,
+        15,
+        20
+      ]
+    },
+    {
+      "id": "espanol-M2",
+      "area": "espanol",
+      "stage": "M2",
+      "required": [
+        "espanol-M1"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        20,
+        35,
+        45
+      ]
+    },
+    {
+      "id": "espanol-M3",
+      "area": "espanol",
+      "stage": "M3",
+      "required": [
+        "espanol-M2"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        30,
+        50,
+        70
+      ]
+    },
+    {
+      "id": "espanol-CORTE",
+      "area": "espanol",
+      "stage": "CORTE",
+      "required": [
+        "espanol-M3"
+      ],
+      "optional": [],
+      "state": "PENDIENTE"
+    },
+    {
+      "id": "matematicas-M1",
+      "area": "matematicas",
+      "stage": "M1",
+      "required": [
+        "M0",
+        "espanol-CORTE"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        10,
+        15,
+        20
+      ]
+    },
+    {
+      "id": "matematicas-M2",
+      "area": "matematicas",
+      "stage": "M2",
+      "required": [
+        "matematicas-M1"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        20,
+        35,
+        45
+      ]
+    },
+    {
+      "id": "matematicas-M3",
+      "area": "matematicas",
+      "stage": "M3",
+      "required": [
+        "matematicas-M2"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        30,
+        50,
+        70
+      ]
+    },
+    {
+      "id": "matematicas-CORTE",
+      "area": "matematicas",
+      "stage": "CORTE",
+      "required": [
+        "matematicas-M3"
+      ],
+      "optional": [],
+      "state": "PENDIENTE"
+    },
+    {
+      "id": "naturales-M1",
+      "area": "naturales",
+      "stage": "M1",
+      "required": [
+        "M0",
+        "espanol-CORTE"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        10,
+        15,
+        20
+      ]
+    },
+    {
+      "id": "naturales-M2",
+      "area": "naturales",
+      "stage": "M2",
+      "required": [
+        "naturales-M1"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        20,
+        35,
+        45
+      ]
+    },
+    {
+      "id": "naturales-M3",
+      "area": "naturales",
+      "stage": "M3",
+      "required": [
+        "naturales-M2"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        30,
+        50,
+        70
+      ]
+    },
+    {
+      "id": "naturales-CORTE",
+      "area": "naturales",
+      "stage": "CORTE",
+      "required": [
+        "naturales-M3"
+      ],
+      "optional": [],
+      "state": "PENDIENTE"
+    },
+    {
+      "id": "sociales-M1",
+      "area": "sociales",
+      "stage": "M1",
+      "required": [
+        "M0",
+        "espanol-CORTE"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        10,
+        15,
+        20
+      ]
+    },
+    {
+      "id": "sociales-M2",
+      "area": "sociales",
+      "stage": "M2",
+      "required": [
+        "sociales-M1"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        20,
+        35,
+        45
+      ]
+    },
+    {
+      "id": "sociales-M3",
+      "area": "sociales",
+      "stage": "M3",
+      "required": [
+        "sociales-M2"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        30,
+        50,
+        70
+      ]
+    },
+    {
+      "id": "sociales-CORTE",
+      "area": "sociales",
+      "stage": "CORTE",
+      "required": [
+        "sociales-M3"
+      ],
+      "optional": [],
+      "state": "PENDIENTE"
+    },
+    {
+      "id": "blandas-M1",
+      "area": "blandas",
+      "stage": "M1",
+      "required": [
+        "M0",
+        "espanol-CORTE"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        10,
+        15,
+        20
+      ]
+    },
+    {
+      "id": "blandas-M2",
+      "area": "blandas",
+      "stage": "M2",
+      "required": [
+        "blandas-M1"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        20,
+        35,
+        45
+      ]
+    },
+    {
+      "id": "blandas-M3",
+      "area": "blandas",
+      "stage": "M3",
+      "required": [
+        "blandas-M2"
+      ],
+      "optional": [],
+      "state": "PENDIENTE",
+      "targets": [
+        30,
+        50,
+        70
+      ]
+    },
+    {
+      "id": "blandas-CORTE",
+      "area": "blandas",
+      "stage": "CORTE",
+      "required": [
+        "blandas-M3"
+      ],
+      "optional": [],
+      "state": "PENDIENTE"
+    },
+    {
+      "id": "M4",
+      "area": null,
+      "stage": "M4",
+      "required": [
+        "espanol-CORTE",
+        "matematicas-CORTE",
+        "naturales-CORTE",
+        "sociales-CORTE",
+        "blandas-CORTE"
+      ],
+      "optional": [],
+      "state": "PENDIENTE"
+    }
   ]
 }

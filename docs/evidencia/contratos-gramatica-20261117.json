@@ -1,0 +1,5633 @@
+{
+  "version": 1,
+  "fuente": "14398e47a8644d694041f62cf800a956e0b5c2bf",
+  "alcance": "225 registros declarados en bloque abierto; índice exclusivo de este bloque, no de todo el banco",
+  "advertencia": "Sin oráculo editorial independiente ni observación funcional por ítem; no se acredita respuesta o integración.",
+  "rows": [
+    {
+      "id": "sa-p1",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "5d6966277de917fc2c380fb68fb337815c0382fa3dcfdf73c3b9fa817127d01d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "sa-p2",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "3c8f96b7404f753961d8ec7917748f2fdbfd9ad769f840fc5cf0f698b5e38640",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "sa-i1",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "cb93080af818cdd57ee12743aff714c5afc72c83602a99b1da8e3633590facf9",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "sa-i2",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "a3b431b024e58160746212c7205b2ff3aff084c0af8835f0507c576e56b2c946",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "sa-a1",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "fbad8c5995cd07d5859511203260fd86e438571002afd3360c5a91b9f3d020ee",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "sa-a2",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "21f7a3253da84d15fb2c5114b1d1c70d8e51bbf57c84dab0da1e23ce48901ce6",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cc-p1",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "713697e5f4c4f8fd6e0f1246920ef6c6dfe032d8d488a887029ab8f9d1749153",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cc-p2",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "6b0900e58462719e9a6f9e1d22b6899c3d7540c6b381a2d1429fcc49aeb10ce0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cc-i1",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "6b43c99428a7e25ed0dad62b15bc93210a1b4c1beef9d5fb753f27dc762a26bb",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cc-i2",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "b4cf530af6f1d9f817f5aa60f44b2706865666803aada9332dd7a464dae95064",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cc-a1",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "a03431145b939336b90daaa9ea21ea8dcacc006510c55d51d3391768bdadf13d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cc-a2",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "887252480ea0c815cbb969339749195fc21c6c881c124b65b4f2beb55c1fbe28",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "ms-p1",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "5f8e4cc8897f52e2ef3a6541c217d39e02c27f736558899d34562d195288e73a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "ms-p2",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "ad78817be6c2764d40c479aac8169a110a039b1c7f946157321e497159a7195e",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "ms-i1",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "6ad612e53fdd6d1ebb9b7c2002e007c03aa68986d3798c6985ccf32c617f135e",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "ms-i2",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "8d4c69fc4e9df31c16bc3bc83e33da10aad786f52b8f22537b2d03f9cd75abe2",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "ms-a1",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "0c1c7bfe619ca4d9d3132236f8f523ad514b1214309f87df3d0e74771eb569ec",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "ms-a2",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "1046099c59d20c3b539e6410a95e697df79d2b14f92e02318656a1903116c78e",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-1",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "ca2388593f3e06ba0a126a1186b03bc1e2267d4a92014917415bf8dd9aa52426",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-2",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "02dac4b3cf7f73e0fe47ada6006e42386f78230baa22a287f1119b1727c23264",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-3",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "ca5df590c3f52b007d724715f2f958751151d23d0355ca28a0cc26b5d77577a8",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-4",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "96ce30ccea63d5266f3bd77f8b11e8913cb6e09c670cef45d2d6a3e43b09c40f",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-5",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "5dc12625f31adfd844cf39f3fb5f5cbb8e92be26139a6aaa2e1a7e6caf098b12",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-6",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "9a354109cbabf8d0ab65635822902b5bff5b2126d4a31bddec7b26789df186fa",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-7",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "aab2db74a51e1744a3bc2ac5894d1d4b366ae968e1800b10c6ee87ef8daae757",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-8",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "dce52b885576c9f645c39893f2f9b2c6c8bdd54555bb1fc2c0d33c13c56688fb",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-9",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "9ba1a02ec4a270be38a9bd29079dddd571ae40425ebefc26aae186719ce946ac",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-10",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "811966b592a02f4e9dfcfb36ba84012b85a31486897d1c03e1991caa8913d28f",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-11",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "ec7245c194a8297aa4140508bc4a69cd0582a98efa3692defb3aa7436d3593c0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-12",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "72d0a0b39ef2d5c508a415ee436b1a59c1ee6bf124b3665d680b19f8e5847ced",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-13",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "951cdd962c3625dc44f66285a5cfad511c669bf8afc6c0eda82f03a6fa40516d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-14",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "5f40d872d3234b3821f57768636d2409a36eee884550075fabf753ef4de59135",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-15",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "ecc6bef13b136603e5a7dc8a24136d6f04d02ccc4e39d767121b7843da55a087",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-16",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "e380f8b552870678925da4dbacd8d15c68ea0598effb4001a655a3279bd50ea9",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-17",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "12ab30c71b2736b802c457108031cd4db9f20b9469dc78b2e0a1b87a1ed90c86",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-18",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "4d1f59f07660efa17be24d5cd6e747a95c827688d2ccece89c094d917bd0c0b0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-19",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "3e309854ce9d21dfab7f2a771a609c77184c60e4b417825fb81664d931a49210",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-20",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "3bf113fb3a575ea3ac4049a13478098fe7ea1303f963b786fac792907fa9eb29",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-21",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "ec694bf1eba883c7d493c7a6ac092fccf8d56640d8c65699b66762f8fa5a59ae",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-22",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "b9351136458d7043c3128860d7beb229845086fd51ba318905b90587e66d4c50",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-23",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "84294ce3c16cf9f581834b9b46134aa2f263b326642095c50b620d1a3a654950",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-24",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "e1a2da99a6442700afcdd3f8451305b7c9cdc77ba1c5e789a1b7bf437a5c22a4",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-25",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "a856f177766e496066fc272716322643efb6073a7b39b84973e1f33115968839",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-26",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "9ed06ebd9483e882a6e4a0adf41197677225c909dc837187cfb32f30713714dc",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "gram-extra-27",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "e6b73577f6fbbbcd1f40bc47476c99cc470dc52a7d112c12d2b32e9b7a11fe82",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-1",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "3bf1640d4c172afed53b24d952c886a7ddd10189a09350d134203ef65143b4c8",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-2",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "4abd382accc962ea1490ca1c0c819aaa20c1735ddfa7fbb018e400d182b4cb1b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-3",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "2e0b1c1f331763639a6c87dea803ffbfff8d3e814ad808809c63d0bd132a63fd",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-4",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "9f895dcb0e6243999bed874911f52c9e2317cdd4331a9d34a92ff95fe3ec03b1",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-5",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "714e9e95bf1068ed14c703d9e619a116da25eae0ec4527b1623ece8e1f08b75b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-6",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "3bcd82c22d09467ce2d5f833230278fd6b991ad3489de46973fbe06d5af093dd",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-7",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "053f2060ca95decc060231b798979ab869d874979469da702b9430ee7332d5a1",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-8",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "49beaddb4714651c823fe88b86c6e0786895d6ef441906515d0a5d848694ee33",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-9",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "51a808021311fae04b13025076b67709d40af13b9d5430b344d81126f20b74b1",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-10",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "0d31e52c65fce98e67fdb722d80711e6c80c68639f80b6677c42dcabdbfc7836",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-11",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "4615b806531dfa29b82835b01c51c35ff008a5b548ab37808684fca3f83716de",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-12",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "003b6580e3cb4f77e66524e99876d470cc9f4c1df5c7a2237c3649ee55f3dea7",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-13",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "32c2665d8ac03b23feada009e8a9c17e5c4c6eefacd5d4883572a5a0d8dddee3",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-14",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "34778a7893d14ca62d4795cb30bae94d6794590cc054538f800b6b17cdf165c4",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-15",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "c3664a2f4eff1563c3dddf70205045a9baaef203e0beedca5ad3bd27ace09caa",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-16",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "15248fa8a177cb6765cd0b5e43d3bbffbb0273cc4570bdf3a5a52e5d95554b96",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-17",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "ca5664a03bc6172185825e4ad212fdb91e3bf82298046be7dbc7d9e4be739fee",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-18",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "1fa774d965499ccc54ec795688a44a057bc96396792ba57d918a560996c89c16",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-19",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "01a942954b74ebe479dee6110b3112c614da76ce10967440fb3fb7ac99a36dab",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-20",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "43536760791db0e4e42f0c9a53f94ea66567cfd7a90d6b0a6d81c2c6bbdd7420",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-21",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "1929a9c6c3c400388f1cc18fb9e8f977cb44adeb0004f0979217f16bbfb189d6",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-22",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "ebaa5d128acdbad87646b5fd734567e10e83165c804444b065284e8f1d181009",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-23",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "905102a9477901418bdfbc59364200fbb28713ff2912779b9ea3c1c259b51c4b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-24",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "2a3b361285d9a55a7109867a834d575a85ce60b0cc3a6ba81f3ba054f9b96034",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-25",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "b117b703cc0333de1d54a8cc555486ad45be7f2647ff8ab97952e352563d8f2b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-26",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "5c2add106a286e2d8caead438de3bc8e66e5a673f47feaa225003d3db0f6b62a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-405-27",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "e8c0a09ae6901416c0ea65a168c89c9c4d0c375f43b76c20886f05da1581f826",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-1",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "603403dcec48c85227afcda48fe66914732324bbae24f02097ad97e3b265c46b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-2",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "45a5c9a351a43cd8e03252725f160c9ef09aa09348f73db53cf747d9d57bbf08",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-3",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "50ad52c5a28932f4a77245f096956a91aae84e9672e06fac4546e4bcf0916552",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-4",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "51a121daed9ea235550dca1c3f05496da5a8d734f8a0aadc67802b8b3c08665a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-5",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "2bdb87856795cf0d0d0947f5088fb74b27be93388a0eed70df7df13d13c3cf81",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-6",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "b069eae224f81f34f3e789aa88acbda68d0abd2d28487f308ca186b282ebdf12",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-7",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "5dd7dd378980f97f23237214ebab3fc287c8df46c7590face5528a749069f8a5",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-8",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "b6f8248800edb205032de0bbfe6e1131bd974de753208fdf47fa161897c9a714",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-9",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "6ea6c5357c1dca1a9dc61c757472c37533fad6f0b12c5f90ff78c0ca3efa4832",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-10",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "b53c00ed555a7e3bbe52989737259672f6e188efb5a0b7b7ea0cb3f7fd733c50",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-11",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "e102c8ce9b61b75bc3485491d06b9f3a7b2ca2d0cf7adc96647b63e4014cb3a2",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-12",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "31e8a69cc6d995c7ee3aa181564414598a5dead86f39dc4f82a5c8a52c521691",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-13",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "aeb930559f6bd147f52d4afab0d89fa61836827e19b400eac04a309e111b8724",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-14",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "61d0605d9dc270e8859a0b628cff631245a1188df0be50c9a84ffdd5690d4814",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-15",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "0565fed0b11604823de1019a80580faf3b3f03d39f233d814d5af49c1e6b02df",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-16",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "cab605c8fadadb6a81c53b48130f38a7ee18e392f6be861a3ac220e35ca5aa0b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-17",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "3ca628f5ad2a24ead2240e6703c0e185547dcf78146575758fbd5c103079f6e8",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-18",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "0db1a7315e5efda63b7491a3405d9ce7bcab36cfc7fb5c49f3a2bb25129a2921",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-19",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "976ba339d7234c509d7f45f4d9e4c9302a2b2f40c8719573eee00d42df5e3670",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-20",
+      "nivel": "principiante",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "334dcac35dbcacfeaf6c2776f921d4cc891501bb69fa776cd87d19eec5854ccb",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-21",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "4b8bec381a57640d78b01bd3338f9ec54de364ade03a30036d1bffae4de1cad9",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-22",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "bbc8ad2c747cda5ff92b2048d7ae6312db7d177caf6f628b3bd78ca27b9f348c",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-23",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "b388b3e140ee3ae6ab8086356ac86a6b58572de687f36a8a6cf98f2347eb5a59",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-24",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "cbe8e19e8a1c53ca3d712c9fab4c3c11e34791fb50cd34202149726ee8b35e73",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-25",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "f5508a0992c2c3ee48211903bf8ca4b8aed07a915302ddf72fae3d3d9f107680",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-26",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "279b6b53f08e42541f3683ad3128a8f2e4d2bbd1c3c842a4282822a8eded6b0a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "nucleo-extra-27",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "c1de9cb72bfe915077c8123bf7dd1cb1e01bb97955b002582c803b418a8a90e2",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-1",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "72b30ecd4218d64d8fe414b3d49e8bb048d6e2859838183586fba2b506f0ef66",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-2",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "0b4db5d94a8ee99381cb8f5f3c2267c3091df67860e1d3fc7409b6d0a2597b02",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-3",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "f1bf457fa1d3868d9c80b42d3e52bbc4c3671c8d8b69736b142b6439f4d292a0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-4",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "11021a5b1df663c36bce385b11bb9a7a2c7d297700805f1267a5a9dda35b144c",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-5",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "6e451adc934be2fba1fdf3e4609daf33af1bac0148b927d86373f0bc6bb4e69a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-6",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "3f8769705e957e464d7a2ec10a602a0434e9d091b840e8c374ec2a28b26cb35b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-7",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "53827a315882a73266419f7dcbe0c703d57ce7f3dd0429a843c127a7e87d3909",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-8",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "7e309cb598092e8dcd4b6cab45000a59c71522fff537fbe3d6fce994ff5c0523",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-9",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "a970fc5ef74c68d6d0421895d1c407f153f1cc9b3805f225fac199a1e7723916",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-10",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "1a4bb4a7a1f936f44fb3c90363477f8e249ad1ff5ad54e5d5ca5f7647dc63852",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-11",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "7206466fb4d1181e1465bb0e17966063426ddb88172b2d540a591124220e4d32",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-12",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "quiz",
+      "hash": "993a71dca87bd3ae28d6351c1103c80285ac2ed3f5dbcc284f1675ea68d369d5",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-13",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "95b1159cb1f6ca771b9eaee4042bcb0d4f9e427606328fb73213eb3413f8014d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-14",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "08da4e3275ebcc16ed719ca94ceeb649181aca9941302caaecaad74b5019f984",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-15",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "90974f77f5334d9df3c2854ff0da0232301e9b37ba7cfefb0dd9dfdceeec847f",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-16",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "3dfe8a38f0c2334311fea2fbab2599de5b39041da349d0248c51fccd1ae84250",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-17",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "4fdb8665bde7ab67a56719b5aea73886c4eda3a9ad4af5b549d5285aac33055e",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-18",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "d31c94a46983b88ef90723d39e8c10e20bec229687ef68e38ef28a7af3e547f0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-19",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "167fcb28822d44ff7058d3b8e2e691f58ffd6f9afe92252c4edd5d7d4a7cff98",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-20",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "07a7a486d30742626be04f66f9c23548473cf26728cc06f87ce219386a2669d1",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-21",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "5329deea72d1822e6f2c9acfbe3b17e8f7d6a01cfa6fc3a8aca4a971bcb0fa8f",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-22",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "8230d619e1ef2d09111eceddc912035c0c2dd0c5be6c2f6c465fa3bb103a4bdf",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-23",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "dd90ba74c48c6f6652582c4a4e1456d0caded566d60501cd4a85dd1ed729c5c4",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-24",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "quiz",
+      "hash": "ffec74b0f69c44e9d3a5814e1c84c9d218186b9dc063f5d44e83687d16981728",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-25",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "21c47a4ad46729082032b80689b4fc0903b47ccbd75a59f0974289a7f1e6e226",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-26",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "bca2cf3b5081bd31a2c196926599d171e736eff0dd41256522005e519d6584bc",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-27",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "111ddeacb2c943b45936c27a334fa9948cfcd4cc66e3f88c7be63a44a7d3c897",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-28",
+      "nivel": "intermedio",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "a5e40352d100b5b73e83d78d68e3b5c93a79033827567ba0958564a48c1d2023",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-29",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "48bb34db19fb126ad9c8948586fffce6dfa4a5cdfd0559ffdfbb4cbef6edc562",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-30",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "1d56042387a6c281f91854285a84fe6550e4e52633959c02afb6659d55e40bf3",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-31",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "7b290ad6d00add692e7b6af896f2f16af28951cc8f976434e676903aa3205370",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-32",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "c4edb1eccab60eddee28e15188950c00be71100e2cf943a738548f825f3b7a95",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-33",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "e2967008460af49bea7d2ac6e2b25247637ca12f3628cb5128389804f24bb998",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-34",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "77b0ea2e94768ac74e5f71cbb7956bc74c1dac942606c54089a39c615bc5fe80",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-35",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "ea5589f01f8301453c6d0cc443c0a1d83924677cf73943f292be8bec6b67ad54",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "grammar-completion-quiz-36",
+      "nivel": "avanzado",
+      "subtema": "Morfosintaxis",
+      "juego": "quiz",
+      "hash": "d912720f47ce8bb0596fab38baafc9e11ebbc7535615286c3a940611153bae34",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-1",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "22aee938e2f3173ed844957c5e0891c3b5192b93ed8bf5cb6d7e452b81ef0d67",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-2",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "9bb49310e7d68dcd231c087bf9bf23360f5ae3c6c8dbee7e1fe65bc52f688662",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-3",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "1475bd1bf33dddc9deb979eca0a6edd57aa9cc7cb038670d574e2fd16b194d46",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-4",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "c43d24ef393f8d578b23afd8b66f84e5a641aea45aee6ace15bfa739ec825245",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-5",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "ac15839bfaa7882c2b7958e95c474f24b26810022444318f2d89789050982efb",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-6",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "42e80eb23137eb71019fe69166920f2da960e13f6a1589020bad2c88bf773054",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-7",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "5c49ce72ad7de31d4ef83d31c23a60bf0c9be7d39be53b4bb92c65038c7aad01",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-8",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "d155066076a4e0c572a96dba10444eb63b58c14f37bc35935c754cdb977fb4a2",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-9",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "6d305612f78908a632fcad306cdaf81ba289cb10165f0e8dc21535883b769570",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-principiante-10",
+      "nivel": "principiante",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "6b511dd293fdbfb6ccabd3bd4d48675f96c8ffe03f59bb51f283c3490e511bbc",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-1",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "993b931734a62af1a5dddf58db02b334e236db35d6c1e7a48acad9f577b584aa",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-2",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "f101e15d7ccdc60d087293c2ccbc1a04ff4a057a5d0cd7ba5e417d0816039eb9",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-3",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "88c9cdb28346f288ec67a7c566cd2c4ec94a2dca0f83cc4ec7decaff7c325202",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-4",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "0b6d1f79eebeb63f5d986115122c69670476be700df273bf05c33c2f1fc373c0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-5",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "ddd7cb4211834fcfad169789e6693d7b39c524a507a8f2521818eb690f97fe8a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-6",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "52662b5a093f134d3f6a8f12034de382bae6d13abe4f0ac5593ba465fdce7923",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-7",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "fc57ab0b5e51e1ca927d1588d58d8dc419710d03fd1edb94066b643a22c5f61f",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-8",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "cebfc14824fb5e1caa718a31dd245749891837fe8cd06b31f6d2017ee3839a73",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-9",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "775c45b2e5aafe27f31db07cdbe0e58a5e56868a746ba0027ee61c0710c88b89",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-10",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "7eca97685a1ca02e6cd1b878d0a91be910399ec75a2b0d0a207382f634345251",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-11",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "7e1807536b8fccde4f10b514fb80a6c742dc11fb48c771d953c6f15924d43294",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-12",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "42cb027ae7bbcd9a947e26cfc8cf87d64322b8c610d9ec8bdbb935a231859377",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-13",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "4ae6dbb5c427fcb3d78d636b37881be49c0faf5e6b7efd40c085509fda84a22b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-14",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "63ca24eeadb17e395e39f52d7bdc1ef3374b09f0b745f72b8ccd07cac60165f0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-intermedio-15",
+      "nivel": "intermedio",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "bd7c89a6b1b3d8bf43c133ee006ea586037264b8698c7de3bba1e9ebb118a99d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-1",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "6027995b1b95e2e3781cdbc5a8c555d67dbf9afd3eaf4c220fc19dfcc9c69db8",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-2",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "08f4fd72825767024cbf8cafd01de7cdbcbfd62e4e04b98812a637c258fc171d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-3",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "bb5e3072deb23d9d7db503b0ac3bf7d3bb8b26e8cb9c503818ceda050f4aba28",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-4",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "30ab7b2ea8eaaa9069302241cbd539434b3b63a920c4667cf2e07c1096e02573",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-5",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "a9b3ba6da90818f6cc08fa9514f42272b7398aa8bcb7a1e065823bbe20740198",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-6",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "5cd1d5ce7418d0c8b5ad2f0e0cde10ce445098958275a7284ccff80e5be2e861",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-7",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "ce17ecc963eb2a78f4f0bc2b13405d34161e79d7307eed6ee6f0c25c89db8a57",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-8",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "73e724fb509a876882874df6fe53f9846e7420f009aa5717af8dc3a51c2df21a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-9",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "abfa4172ccbd0325c3c3dcbbb8e8c067d74d6c978e00bcdf528e9d58c867aa9a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-10",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "9d2e5985820b3a93736d47c56fbf4768dde034a9bf8ed405396c7f56db3b4a95",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-11",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "b24254a38b4886dd095e0c21a5e395a45f59ba0e5f201c3fa87641d1ad7ea968",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-12",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "caea2fa954161bccc96622357a0f3207d499f656edc83a97c44bc8d854e17359",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-13",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "1388783d38944486afef3769bfb7eca689883dde787ba9a1a6a2a71246421cd0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-14",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "247fc354e8b1fc4b4f54e83be5e9d234954a5e74422c90045a8c4ad8f41c341c",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-15",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "c61b0f9aba760d56b195eed455806d80684a30decea00ab5ed1a05c92f3dd86c",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-16",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "a37187470a9740a06e4c79032805efcad99303a1ea958e07d0bc034ba9010f8a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-17",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "6cc4ac70f985b6bec2ae3a94b578d2b86b96f40c904b06fac36add64ff6bd4de",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-18",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "b7b7d7d4918315dce2ede155f5cb66dd13f18c1436a47d5b7be87840be39d718",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-19",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "76ea976c9d2cc8cce40ea4598cb83254daf93b75e0ca01fcf6c5d39ea69b25f7",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "syn-class-avanzado-20",
+      "nivel": "avanzado",
+      "subtema": "Sinónimos y antónimos",
+      "juego": "classification",
+      "hash": "38cbf6c28de500aa3661aaeb2c37bea0a5af35a99311cfc19707e4f65cbb9edf",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-1",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "1de2ff39058bdcef1d649a1c7e94c2a7d1143ca8c2c5c875e00f5359daae59ea",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-2",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "bd6dd78266193767bab5a8a13b7f25daeb02547bfe73b0682d19708908c433ef",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-3",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "1637673a907a88fdeefae9fe3d93d1b5d117440dfa1782efb44b41a1cf58e5e4",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-4",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "86d2fcc674bdf2df9b839292fb637c11da3f702321fb6c80c11038b34ac57966",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-5",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "2856eec9ec597a6b68eafa5a33f9d82f694e72abe89cdff51275f3eda3b6488e",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-6",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "fff004f6b49a0dd1ac0f6a51190b66c9ca20c34a985fe439c92b68f19caddd93",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-7",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "f0d7b6a5be3b8beb724b53c6d8f41c94281b1c023b279750e3cc2f1ff4cc99e0",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-8",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "aa6f1f2010fad06744ff40c0131d1c40d3799ef004c8311c9b8588d5f0bdf7e9",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-9",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "392d9e3ca50a64c36ec250ab2bd4a635810fe1babc0f30a15fe656af73ca296a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-principiante-10",
+      "nivel": "principiante",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "8dc5fa411bd55f7ccdf552f82cc059ab6273fb72985b072d040e5b44993bd46b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-1",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "155a73419db10f47ebe10bc2ac057c55aafa1e68d83b0d785fd141fd0f9ebcd6",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-2",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "92cd37cb92ee4b09adc5c915e5b002af80c313b69df045dc4551c53a17e2b02d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-3",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "93fd0099cad42dbbf137bbd10736d650eff7e7268eeca8a96d24c37e8bf5e785",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-4",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "76ea9ffd6f5a08b3b57b8b990b4ce501d22f0134849b5c22fd5414e24868261e",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-5",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "a7ffe815c475a0338d161a20765418efb54f6b46416cbbcce91c19ea242d70fd",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-6",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "62b8a4f02b3d3bd9a9a04b141bd2efff78a06b5e4e0174034d58b07d6fa80994",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-7",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "2e52b7a668b139614eea4754113d7aeb15a870140bbab775c67cdd5c3ede2833",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-8",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "d33dc314ab114a09a9f0cce22a6256c235b4462b7c11b6bbbb6496f5443c24f5",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-9",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "c7040c6e64efa80fa68aebc7f5c8a6449553639cc33823b0968af9d7978237a5",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-10",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "669770d12e3ad0f95753f680e6edd204eb87a7b32b773c258be207fea8bcee0b",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-11",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "7cb3cb72e77bd1b0bbc6cd0762bd75b11584e9e67e02884c7a5ea9d37fd49e51",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-12",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "1a9a382114b06fe357d41fac72430ede6636d6c8f2efde8549e3e7df852d712f",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-13",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "afd33843e036ccd667bbdfa96e9872db4c462272eeaea72b901967429b49ea65",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-14",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "af3b7ee041777f74481d1e70cd4b5fe5bf02faefb8ba93aedb2e786c828c8149",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-intermedio-15",
+      "nivel": "intermedio",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "a0fa443f7d2118928b427c3abd8231988ed5818136a714e5a41d17927f5ce3e6",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-1",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "749de0383fadcb1e2677e416ba1ac0533b67a685c062588ceec57467cd2bf924",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-2",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "d55aa18a75f64c08598691cbfbf5b12b27e4ebcb15272b18994c3125a67addbc",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-3",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "e49524cab4e8a083322ff1179c4f56e4c9769f63bb5dc9e80120fdb77732abf7",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-4",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "2d3024a0c205d3d89e211a5494a9059e3b5e2289f863133dc9b28238cbc663ab",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-5",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "9ea2760e5f34a4f9df8223b5225180c32828524f551855cdba55eff1d5b14333",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-6",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "fb886efd44fd55c1afff52e24a418a2e6050c8b2f8ce2e72f9594bed30cb6991",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-7",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "e7d11f2a8e878d1cd387e08d2c09f05549bde41e6cdc4e5ce91164e9e100ddb5",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-8",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "a36048f9cd822fc81aa61c9c9bffc1d887e0131a79dc3f92c890d3df23412173",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-9",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "9d251fa5c46810c6fe447e6add9350537833073312e26fb3f9e2239d4bfa0347",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-10",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "34f314a19582be3aee580e7946618690ceaf66aace4bcd8dddcbb5f8222c3764",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-11",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "3d8734548cebb59563ed5657aa7812c795a382afda6e5a3b4fd32761ee6ccfd8",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-12",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "8dc3aa09ae69f5d53057a5b08ac455b1369d79a94e1eec8ec8cce1f7b11f1419",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-13",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "e12c9f1a48fbdfdd714e6028cbcaeaaa5eab6957181036149629c9a02bcad986",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-14",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "f98de39c293300b65c48dc872d014395f6bdf79f8875f6ff438bae7e9ce7a8ec",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-15",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "854a4be96b5fb8b9b5445c2543df5b896e32862289ce7e0db74b822e8fb9f2cb",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-16",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "d73e7a8be436c4591c748b3d86d33b06026423b2d9411d7128f702a342b58b94",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-17",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "6eb0e903fa5fd6e118a8feae5978ff02f7a5a6fb0fb52eb723f9b77e99ad491a",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-18",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "ca5849faf8a072956024203107e1bebeb15c540f1a9eb2cb7d40fde9c73b3adf",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-19",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "62e9d3c1aa2b64ee992059d38c5068664d25d9cb909c24bc4e4eeddce498929d",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    },
+    {
+      "id": "cohesion-class-avanzado-20",
+      "nivel": "avanzado",
+      "subtema": "Cohesión y coherencia",
+      "juego": "classification",
+      "hash": "3c5654fd040c906122dd0a475ffd96d5cb85f7f0d57eb972aa8b359b493458d2",
+      "estructura": {
+        "status": "VERIFICADO",
+        "details": []
+      },
+      "respuesta": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Falta oráculo independiente"
+        ]
+      },
+      "integracion": {
+        "status": "INCONCLUSO",
+        "details": [
+          "Sin observación de ruta y juego"
+        ]
+      },
+      "resultado": "INCONCLUSO",
+      "revision_docente": "PENDIENTE"
+    }
+  ]
+}

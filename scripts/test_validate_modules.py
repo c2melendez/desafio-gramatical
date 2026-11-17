@@ -12,6 +12,15 @@ class ValidatorTests(unittest.TestCase):
     def test_valid(self):
         self.assertEqual(validate(BASE), [])
 
+    def test_cross_area_cut_precedes_next_area(self):
+        d=copy.deepcopy(BASE); d['areas'].append('naturales')
+        d['modules'].extend([
+            {'id':'e3','area':'espanol','stage':'M3','required':['e2'],'optional':[]},
+            {'id':'ec','area':'espanol','stage':'CORTE','required':['e3'],'optional':[]},
+            {'id':'n1','area':'naturales','stage':'M1','required':['M0','ec'],'optional':[]},
+        ])
+        self.assertEqual(validate(d),[])
+
     def test_negative_cases(self):
         cases = []
         d = copy.deepcopy(BASE); d["modules"].append(copy.deepcopy(d["modules"][0])); cases.append(d)

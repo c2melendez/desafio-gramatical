@@ -41,7 +41,9 @@ def validate(data):
                 errors.append(f"{mid}: dependencia inválida {dep}")
             else:
                 parent = by_id[dep]
-                if stage in STAGES and parent.get("stage") in STAGES and STAGES[parent["stage"]] >= STAGES[stage]:
+                cross_area_cut = (stage == "M1" and parent.get("stage") == "CORTE" and
+                                  parent.get("area") not in (None, area))
+                if stage in STAGES and parent.get("stage") in STAGES and STAGES[parent["stage"]] >= STAGES[stage] and not cross_area_cut:
                     errors.append(f"{mid}: etapas fuera de orden")
                 if parent.get("area") not in (None, area) and parent.get("stage") != "CORTE":
                     errors.append(f"{mid}: dependencia de otra área sin corte")
