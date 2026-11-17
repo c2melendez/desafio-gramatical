@@ -1,4 +1,5 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
+import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {useEffect,useRef,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
@@ -67,9 +68,13 @@ function ReadingPlay(){
     writeRotation(key,recordRotation(readRotation(key,ids),itemId,allCorrect));
    }
   }
+  if(m)setMistakes(ms=>[...ms,m]);
+  // Tres decisiones internas, UNA ronda evaluada. No sumar tres puntos/rachas.
+  if(modo==="clasificar"&&classification.current.count<3)return;
+  const roundCorrect=modo==="clasificar"?classification.current.allCorrect:ok;
   setTotal(t=>t+1);
-  if(ok){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
-  else {setStreak(0);if(m)setMistakes(ms=>[...ms,m])}
+  if(roundCorrect){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
+  else setStreak(0);
  };
  const next=()=>{
   if(!items)return;
@@ -82,6 +87,7 @@ function ReadingPlay(){
  if(!items)return <main className="p-8 text-center">Preparando lecturas…</main>;
  const title=gameNames("Comprensión lectora")[modo];
  const levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
+ if(items.length!==ROUNDS_PER_GAME)throw new Error("Paridad de rondas: se esperaban 10 en lectura");
  if(items.length===0)return <main className="mx-auto max-w-xl p-6"><p>Este contenido aún no tiene ejercicios.</p><Link to="/" className="underline">← Inicio</Link></main>;
  if(finished){
   const pct=total?Math.round(100*correct/total):0;
@@ -111,20 +117,8 @@ function ReadingPlay(){
  const item=items[idx];
  const props={item,report,next,isLast:idx===items.length-1};
  return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5">
-  <div className="flex flex-wrap items-center justify-between gap-2">
-   <Link to="/" className="font-bold underline">← Menú</Link>
-   <p className="text-sm font-bold">{subtema} · {levelName}</p>
-   <button onClick={()=>{if(confirm("¿Reiniciar la partida?"))setRun(n=>n+1)}} className="font-bold underline">Reiniciar</button>
-  </div>
-  <h1 className="text-2xl font-black">{title}</h1>
-  <div className="grid grid-cols-3 gap-2 text-center" aria-live="polite">
-   <div className="card-ink p-2"><span className="text-xs block">Lectura</span><strong className="text-xl">{idx+1}/{items.length}</strong></div>
-   <div className="card-ink p-2"><span className="text-xs block">Puntaje</span><strong className="text-xl text-primary">{score}</strong></div>
-   <div className="card-ink p-2"><span className="text-xs block">Racha</span><strong className="text-xl">🔥{streak}</strong></div>
-  </div>
-  <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuemin={1} aria-valuemax={items.length} aria-valuenow={idx+1}>
-   <div className="h-full bg-primary" style={{width:`${100*(idx+1)/items.length}%`}}/>
-  </div>
+  <GameSessionHeader context={`${subtema} · ${levelName}`} title={title} round={idx+1}
+   score={score} streak={streak} onRestart={()=>setRun(n=>n+1)}/>
   {modo==="clasificar"&&<ReadingDetective key={item.id} {...props} item={item as ReadingChallenge|MainIdeaDetectiveCase|InferenceDetectiveCase|CriticalDetectiveCase|NewReadingDetective|AnalysisDetective|CompareDetective|FigurativeDetectiveCase}/>}
   {modo==="quiz"&&<ReadingInference key={item.id} {...props} item={item as ReadingChallenge|MainIdeaChoiceCase|InferenceChoiceCase|CriticalChoiceCase|NewReadingChoice|AnalysisChoice|CompareChoice|FigurativeChoiceCase}/>}
   {modo==="construir"&&<ReadingReconstruct key={item.id} {...props} item={item as ReadingChallenge|MainIdeaReconstructCase|InferenceReconstructCase|CriticalReconstructCase|NewReadingReconstruct|AnalysisReconstruct|CompareReconstruct|FigurativeReconstructCase}/>}
