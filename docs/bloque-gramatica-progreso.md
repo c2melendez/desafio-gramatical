@@ -19,3 +19,7 @@ Se agregan 36 preguntas originales (4 intermedias y 8 avanzadas por subtema) en 
 ## Preparación de modalidades pendientes
 
 Se añadieron componentes reutilizables de clasificación y construcción y validadores de datos y respuestas, con casos de prueba. No están conectados al menú ni incluyen bancos de producción: **siguen pendientes los 270 ejercicios** y la integración, auditoría editorial y prueba de las partidas. Los ejemplos de prueba no cuentan como contenido.
+
+## Clasificación de sinónimos y antónimos
+
+Se agregaron 45 actividades de clasificación de relaciones léxicas contextualizadas, con 10 básicas, 15 intermedias y 20 avanzadas. Están conectadas al menú, a la rotación por nivel y al historial. Cada actividad plantea una relación entre expresiones y explica la clasificación; permanecen en borrador editorial y requieren revisión docente. Tras esta aportación faltan **225 ejercicios** para el bloque: 45 de construcción en Sinónimos y antónimos y 90 en cada uno de Cohesión y coherencia y Morfosintaxis. Este avance parcial no completa el bloque ni inicia la corrida de 450.

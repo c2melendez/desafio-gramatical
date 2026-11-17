@@ -29,7 +29,8 @@ function Home() {
  const selectedArea=AREAS.find(a=>a.id===areaId)!;
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
  const pilot=areaId==="espanol"&&topic==="Gramática y semántica"&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
- const active=pilot?mode==="quiz":availableModule(areaId,topic,subtopic);
+ const pilotMode=(id:Mode)=>id==="quiz"||(subtopic==="Sinónimos y antónimos"&&id==="clasificar");
+ const active=pilot?pilotMode(mode):availableModule(areaId,topic,subtopic);
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
  const names={...gameNames(topic),...(topic==="Redacción"&&subtopic==="Corrección"?{quiz:"Corrección precisa"}:{}),...(topic==="Redacción"&&subtopic==="Organización textual"?{quiz:"Continúa el texto"}:{}),...(topic==="Redacción"&&subtopic==="Elisión y adición"?{quiz:"Revisión precisa"}:{}),...(topic==="Redacción"&&subtopic==="Generalización e integración"?{quiz:"Conclusión sustentada"}:{})};
@@ -82,7 +83,7 @@ function Home() {
      </label>
     </div>
     <p aria-live="polite" className={`rounded-lg px-3 py-2 text-sm font-bold ${active?"bg-success-soft":"bg-muted"}`}>
-      {pilot?"🧪 Práctica inicial: disponible el juego de selección; clasificación y construcción están en desarrollo.":active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
+      {pilot?(subtopic==="Sinónimos y antónimos"?"🧪 Práctica inicial: disponibles clasificación y selección; construcción está en desarrollo.":"🧪 Práctica inicial: disponible el juego de selección; clasificación y construcción están en desarrollo."):active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
       "🛠️ Módulo planificado: puedes explorar los juegos, pero aún no está desarrollado."}
     </p>
    </section>
@@ -95,7 +96,7 @@ function Home() {
        className={`card-ink flex items-center gap-4 p-4 text-left transition ${mode===id?"bg-primary text-primary-foreground":"bg-card"}`}>
        <span className="text-3xl" aria-hidden>{GAME_ICONS[id]}</span>
        <span className="flex-1"><span className="block text-lg font-bold">{names[id]}</span><span className="block text-sm opacity-90">{GAME_FOCUS[id]}</span></span>
-       <span className="text-xs font-bold">{(pilot?id==="quiz":active)?"Disponible":"Próximamente"}</span>
+       <span className="text-xs font-bold">{(pilot?pilotMode(id):active)?"Disponible":"Próximamente"}</span>
       </button>
      ))}
     </div>
