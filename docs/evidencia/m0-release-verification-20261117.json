@@ -25,8 +25,10 @@
     "github_run_id": 44091275017,
     "github_conclusion": "success",
     "render_deploy_id": "dep-dbu57s142hec73e41nk0",
-    "render_status": "update_in_progress",
-    "note": "No marcar release final LIVE hasta consultar Render."
+    "render_status": "live",
+    "note": "GitHub Actions run 44091275017 success y Render dep-dbu57s142hec73e41nk0 LIVE del mismo SHA ed0c764; verificado por herramientas conectadas. El SHA final de cierre necesitará nueva verificación.",
+    "render_finishedAt_utc": "2026-11-17T13:23:13.086036Z",
+    "render_service_id": "srv-dbt0rilg1s2s738eku8g"
   },
   "editorial": {
     "accepted_pedagogically": 0,
