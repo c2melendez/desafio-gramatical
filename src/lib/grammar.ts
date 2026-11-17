@@ -160,10 +160,23 @@ export type Mistake = { prompt: string; given: string; correct: string; exp: str
 export type HistoryEntry = { date: string; mode: Mode; level: Level; score: number; correct: number; total: number; bestStreak: number; area?: string; topic?: string; subtopic?: string };
 const KEY = "desafio-gramatical:historial";
 export function loadHistory(): HistoryEntry[] {
-  try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { return []; }
+  try {
+    const parsed: unknown = JSON.parse(localStorage.getItem(KEY) || "[]");
+    return Array.isArray(parsed) ? parsed.filter((e): e is HistoryEntry =>
+      e !== null && typeof e === "object" &&
+      typeof e.date === "string" &&
+      typeof e.mode === "string" && typeof e.level === "string" &&
+      Number.isFinite(e.score) && Number.isFinite(e.correct) &&
+      Number.isFinite(e.total) && Number.isFinite(e.bestStreak)
+    ).slice(0, 100) : [];
+  } catch { return []; }
 }
 export function saveHistory(e: HistoryEntry) {
-  const h = [e, ...loadHistory()].slice(0, 100);
-  localStorage.setItem(KEY, JSON.stringify(h));
+  try {
+    const h = [e, ...loadHistory()].slice(0, 100);
+    localStorage.setItem(KEY, JSON.stringify(h));
+  } catch { /* Almacenamiento bloqueado: se conserva la partida sin interrumpir la UI. */ }
 }
-export function clearHistory() { localStorage.removeItem(KEY); }
+export function clearHistory() {
+  try { localStorage.removeItem(KEY); } catch { /* Sin almacenamiento disponible. */ }
+}
