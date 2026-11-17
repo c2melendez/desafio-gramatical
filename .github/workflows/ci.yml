@@ -198,6 +198,22 @@ jobs:
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"
+      - name: Prueba HTTP publicada de Inicio y rutas M1
+        if: github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://desafio-gramatical.onrender.com"
+          for route in "/" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante"; do
+            file="$(mktemp)"
+            code=$(curl --fail --location --silent --show-error --retry 4 --retry-delay 7 --retry-all-errors --max-time 50 --output "$file" --write-out '%{http_code}' "$base$route")
+            if ! grep -Eiq '<html|<!doctype html' "$file"; then
+              echo "::error::La ruta $route no devolvió HTML"
+              exit 1
+            fi
+            echo "$route -> HTTP $code, HTML válido" | tee -a "$GITHUB_STEP_SUMMARY"
+            rm -f "$file"
+          done
       - name: Aplicar puerta de cierre M0
         if: always()
         shell: bash

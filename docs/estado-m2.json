@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "module": "espanol-M2",
+  "estado": "EN_CURSO",
+  "dependencias": [
+    "M0",
+    "espanol-M1"
+  ],
+  "origin_main_release_sha": "5da596b1e5f1214b5b717e6b79326ecd0a97cdcd",
+  "base_tecnica": 2861,
+  "alcance": {
+    "area": "espanol",
+    "subtemas": 21,
+    "juegos_por_subtema": 3,
+    "combinaciones": 63,
+    "celdas": 189
+  },
+  "objetivos_acumulados": {
+    "principiante": 20,
+    "intermedio": 35,
+    "avanzado": 45,
+    "total": 6300
+  },
+  "deficit_por_nivel": {
+    "principiante": 614,
+    "intermedio": 1253,
+    "avanzado": 1573,
+    "total": 3440
+  },
+  "nota": "El déficit es la suma de max(0, meta por celda − disponibles): un excedente de una unidad en Categorías gramaticales/quiz/básico no compensa otras celdas.",
+  "regla": "No equiparar nuevos registros técnicos a ejercicios independientes verificados; reconstruir matriz por SHA y reparar casos equivalentes.",
+  "docente": "PENDIENTE_AUTORIZADA",
+  "estado_evidencia": "PUNTO_DE_INICIO_M2",
+  "siguiente_accion": "Priorizar niveles y juegos deficitarios dentro de Español; lotes amplios e idempotentes con oráculos por ítem, verificador y CI. Cerrar M2 únicamente con 20/35/45 aceptados por celda."
+}

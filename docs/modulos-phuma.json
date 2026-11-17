@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "areas": [
     "espanol",
     "matematicas",
@@ -25,13 +25,15 @@
         "M0"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         10,
         15,
         20
       ],
-      "evidence": "docs/estado-m1.json"
+      "evidence": "docs/m1-cierre-tecnico-20261117.md",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_EXPRESAMENTE_AUTORIZADA",
+      "scope": "Núcleo técnico y operativo 10/15/20 en Español, no validación psicométrica"
     },
     {
       "id": "espanol-M2",
@@ -41,12 +43,14 @@
         "espanol-M1"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         20,
         35,
         45
-      ]
+      ],
+      "evidence": "docs/estado-m2.json",
+      "scope": "Ampliación acumulada 20/35/45 por juego y subtema"
     },
     {
       "id": "espanol-M3",

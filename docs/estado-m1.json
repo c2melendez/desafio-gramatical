@@ -3,7 +3,7 @@
   "modulo": "espanol-M1",
   "area": "espanol",
   "etapa": "M1",
-  "estado": "EN_CURSO",
+  "estado": "COMPLETADA",
   "required": [
     "M0"
   ],
@@ -96,9 +96,9 @@
     "Render_live_mismo_SHA"
   ],
   "prioridad": "Completar construcción de Sinónimos/Cohesión y clasificación+construcción de Morfosintaxis; revisar independencia y respuestas contra fuente curricular.",
-  "siguiente_accion": "CI de SHA candidato con auditoría de operaciones cognitivas PASS; fusionar PR #6, verificar CI y Render del mismo SHA, probar UI publicada, actualizar bloque A/B y estado. Conservar revisión docente pendiente, no atribuir certificación PHUMA.",
+  "siguiente_accion": "Ejecutar M2 en el área Español: 3440 registros técnicos adicionales para 63 combinaciones con metas 20/35/45 y revisión de independencia operativa, manteniendo examen oficial separado y revisión docente diferida.",
   "dependencia_estado": "COMPLETADA",
-  "fase_actual": "M1_NUCLEO_AUTOMATICO_VERIFICADO_CANDIDATA_PUBLICACION",
+  "fase_actual": "CI_MAIN_Y_RENDER_LIVE_SHA_BASE_VERIFICADOS_CIERRE_TECNICO",
   "pr": 6,
   "rama_trabajo": "work/m1-grammar-nucleus-20261117",
   "manifiesto": "docs/m1-corrida-nucleo-405-20261117.json",
@@ -115,7 +115,11 @@
     "auditoria_270": "incorporada a CI",
     "revision_docente": "PENDIENTE",
     "render_sha": "NO_VERIFICADO",
-    "merge": "PENDIENTE",
+    "merge": {
+      "sha": "5da596b1e5f1214b5b717e6b79326ecd0a97cdcd",
+      "pr": 6,
+      "merged": true
+    },
     "oraculos_m1": {
       "run_id": 44108453030,
       "estado": "success",
@@ -143,7 +147,21 @@
     "candidata_publicacion": {
       "requires": "CI SHA candidato, fusión, CI main, Render Live mismo SHA, prueba funcional publicada",
       "ready": "PENDIENTE"
-    }
+    },
+    "ci_main": {
+      "run_id": 44114466703,
+      "sha": "5da596b1e5f1214b5b717e6b79326ecd0a97cdcd",
+      "conclusion": "success"
+    },
+    "render": {
+      "service_id": "srv-dbt0rilg1s2s738eku8g",
+      "deploy_id": "dep-dbu74hrbc2fs73fvdrt0",
+      "sha": "5da596b1e5f1214b5b717e6b79326ecd0a97cdcd",
+      "status": "live",
+      "url": "https://desafio-gramatical.onrender.com/"
+    },
+    "smoke_publico": "PENDIENTE_CI_SIGUIENTE_SHA_CON_LOG_REPRODUCIBLE",
+    "academia": "PENDIENTE — no bloquea cierre técnico por decisión explícita"
   },
   "manifiestos": [
     "docs/m1-corrida-nucleo-405-20261117.json",
@@ -182,9 +200,11 @@
     "oraculos_contextuales_verificados": 225,
     "mutaciones_negativas_ejecutadas": 675,
     "mutaciones_negativas_detectadas": 675,
-    "independencia_conceptual": "INCONCLUSO — verificación operativa automática por modalidad; no es dictamen académico",
+    "independencia_conceptual": "INCONCLUSO_ACADEMICO; verificada distinción operativa automática",
     "revision_docente": "PENDIENTE_AUTORIZADA",
     "ids_globales_unicos": 2861,
     "aceptados_en_auditoria_tecnica": 2861
-  }
+  },
+  "cierre_tipo": "TÉCNICO_OPERATIVO — revisión académica/docente diferida por autorización expresa del usuario",
+  "siguiente_modulo": "espanol-M2"
 }
