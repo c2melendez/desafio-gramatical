@@ -55,7 +55,7 @@ function makeClass(topic:string,l:Level,i:number):ClassificationActivity{
  const [a,b]=pair(from(topic,l,"classification") as ClassificationActivity[],i+levels.indexOf(l)*17);
  const id=key(topic,l,"class",i);
  const items=[...a.items.map((x,j)=>({...x,id:"a"+j})),...b.items.map((x,j)=>({...x,id:"b"+j}))];
- return {id,subtopic:topic,level:l,kind:"classification",labels:[...new Set(items.map(x=>x.label))],items,
+ return {id,subtopic:topic,level:l,kind:"classification",labels:[...new Set([...a.labels,...b.labels])],items,
   prompt:"Estudia dos situaciones diferentes de "+topic+". Primer caso: "+a.prompt+" Segundo caso: "+b.prompt+" Clasifica cada evidencia en su propio contexto.",
   explanation:"Las etiquetas dependen de cada caso. En A: "+a.explanation+" En B: "+b.explanation,
   ...meta(id,"Discriminar cuatro evidencias entre dos situaciones diferentes",[a.id,b.id])};
@@ -104,10 +104,11 @@ export const M2_CATEGORY_QUIZ:Record<Level,QuizQ[]>=Object.fromEntries(levels.ma
 export const M2_CATEGORY_BUILD:Record<Level,BuildQ[]>=Object.fromEntries(levels.map(l=>[l,
  Array.from({length:needed(l,"construir")},(_,i)=>{
   const a=category.construir(l)[i%category.construir(l).length];
+  const b=category.construir(l)[(i+1+Math.floor(i/category.construir(l).length))%category.construir(l).length];
   const id=key("Categorías gramaticales",l,"build",i);
   const extra:{w:string,c:Cat}[]=[{w:"aunque",c:"conjuncion"},{w:"rápidamente",c:"adverbio"},{w:"de",c:"preposicion"},{w:"también",c:"adverbio"},{w:"aquellas",c:"determinante"},{w:"investigaciones",c:"sustantivo"},{w:"fácilmente",c:"adverbio"},{w:"siempre",c:"adverbio"},{w:"observa",c:"verbo"},{w:"clara",c:"adjetivo"}];
   const distractor=extra.find((x,k)=>k>=i%extra.length&&!a.tiles.some(t=>t.w.toLocaleLowerCase("es")===x.w.toLocaleLowerCase("es")))??extra.find(x=>!a.tiles.some(t=>t.w===x.w))!;
-  return {id,pattern:[...a.pattern],hint:"Examina la concordancia y el patrón: "+a.hint,
+  return {id,pattern:[...a.pattern],hint:"Examina el patrón y compáralo con un segundo caso: "+a.hint+" Contraste de dificultad: "+b.hint,
    tiles:[...a.tiles.map(t=>({...t})),distractor],solutions:[...a.solutions],
-   exp:a.exp+" Identifica la forma adecuada y descarta una ficha adicional de categoría distractora."};
+   exp:a.exp+" La comparación adicional distingue el patrón de otro ejercicio: "+b.exp+" Descarta una ficha adicional."};
  })])) as Record<Level,BuildQ[]>;

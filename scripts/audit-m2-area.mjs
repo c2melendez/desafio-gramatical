@@ -33,13 +33,14 @@ for(const row of coverageRows().filter(x=>x.area==='espanol')){
    parentPairs.add(fingerprint);
   }else if(row.subtopic!=='Categorías gramaticales')issues.push({id,rule:'falta el par de fuentes originales'});
   if(item.options){
-   const options=item.options.map(norm);
+   const optNorm=row.subtopic==="Corrección"?(x=>String(x??"").normalize("NFKC").trim()):norm;
+   const options=item.options.map(optNorm);
    if(options.length!==4||new Set(options).size!==4)issues.push({id,rule:'selección no tiene cuatro alternativas distintas'});
    if(item.answer!==undefined&&(item.answer<0||item.answer>3||!Number.isInteger(item.answer)))
     issues.push({id,rule:'índice de clave inválido'});
-   if(item.connector&&options.filter(x=>x===norm(item.connector)).length!==1)
+   if(item.connector&&options.filter(x=>x===optNorm(item.connector)).length!==1)
     issues.push({id,rule:'conector correcto ausente o repetido'});
-   if(item.correctConnector&&options.filter(x=>x===norm(item.correctConnector)).length!==1)
+   if(item.correctConnector&&options.filter(x=>x===optNorm(item.correctConnector)).length!==1)
     issues.push({id,rule:'corrección correcta ausente o repetida'});
    negativeControls++;
   }
