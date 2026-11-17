@@ -91,6 +91,16 @@ jobs:
           name: m1-espanol-avance
           path: m1-area-progress.json
           retention-days: 30
+      - name: Verificar aceptación técnica M1 y déficit en 189 celdas
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-technical-acceptance.mjs > m1-technical-acceptance.json
+      - name: Archivar validación de celdas de M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-aceptacion-tecnica-189
+          path: m1-technical-acceptance.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar 855 registros M1 contra estímulos fuente
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-source-consistency.mjs > m1-oraculos-855.json
       - name: Archivar oráculos de 855 registros
