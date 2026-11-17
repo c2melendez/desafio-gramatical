@@ -479,32 +479,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-intermedio-19",
-    "level": "intermedio",
-    "subtopic": "Idea principal",
-    "title": "Festival de idiomas",
-    "passage": "Un festival reunió canciones y cuentos de distintas regiones. Los organizadores identificaron de dónde procedía cada versión y explicaron que las tradiciones pueden cambiar entre comunidades.",
-    "claims": [
-      {
-        "text": "El origen podría explicar diferencias entre versiones.",
-        "tag": "inference",
-        "explanation": "La conclusión es plausible a partir de los indicios, aunque no figura como hecho confirmado en el texto."
-      },
-      {
-        "text": "Todas las regiones conservan versiones idénticas.",
-        "tag": "unsupported",
-        "explanation": "La lectura no aporta evidencia que justifique esa afirmación categórica."
-      },
-      {
-        "text": "Se registró la procedencia de las piezas.",
-        "tag": "explicit",
-        "explanation": "El pasaje declara expresamente este dato sobre festival de idiomas."
-      }
-    ],
-    "reviewStatus": "editorial-draft"
-  },
-  {
-    "id": "reading-main-detective-v1-avanzado-20",
+    "id": "reading-main-detective-v1-avanzado-19",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Deserción de participantes",
@@ -529,7 +504,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-21",
+    "id": "reading-main-detective-v1-avanzado-20",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Becas y calendario",
@@ -554,7 +529,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-22",
+    "id": "reading-main-detective-v1-avanzado-21",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Dos escalas",
@@ -579,7 +554,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-23",
+    "id": "reading-main-detective-v1-avanzado-22",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Sensores urbanos",
@@ -604,7 +579,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-24",
+    "id": "reading-main-detective-v1-avanzado-23",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Tasas por edad",
@@ -629,7 +604,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-25",
+    "id": "reading-main-detective-v1-avanzado-24",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Datos extremos",
@@ -654,7 +629,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-26",
+    "id": "reading-main-detective-v1-avanzado-25",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Ahorro energético",
@@ -679,7 +654,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-27",
+    "id": "reading-main-detective-v1-avanzado-26",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Decreto y entrevista",
@@ -704,7 +679,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-28",
+    "id": "reading-main-detective-v1-avanzado-27",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Resultados por escuela",
@@ -729,7 +704,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-29",
+    "id": "reading-main-detective-v1-avanzado-28",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Indicadores digitales",
@@ -754,7 +729,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-30",
+    "id": "reading-main-detective-v1-avanzado-29",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Encuestas de lectura",
@@ -779,7 +754,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-31",
+    "id": "reading-main-detective-v1-avanzado-30",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Escenarios climáticos",
@@ -804,7 +779,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-32",
+    "id": "reading-main-detective-v1-avanzado-31",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Fuentes anónimas",
@@ -829,7 +804,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-33",
+    "id": "reading-main-detective-v1-avanzado-32",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Variaciones personales",
@@ -854,7 +829,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-34",
+    "id": "reading-main-detective-v1-avanzado-33",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Entrevistas y registros",
@@ -879,7 +854,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-35",
+    "id": "reading-main-detective-v1-avanzado-34",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Costo por alumno",
@@ -904,7 +879,7 @@ export const MAIN_IDEA_DETECTIVE_CASES:MainIdeaDetectiveCase[]=[
     "reviewStatus": "editorial-draft"
   },
   {
-    "id": "reading-main-detective-v1-avanzado-36",
+    "id": "reading-main-detective-v1-avanzado-35",
     "level": "avanzado",
     "subtopic": "Idea principal",
     "title": "Avisos de inundación",
