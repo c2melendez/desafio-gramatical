@@ -16,6 +16,11 @@ describe("M1: corrida de 180 actividades de gramática",()=>{
   for(const item of GRAMMAR_M1_ACTIVITIES){
    expect(validateActivity(item),item.id).toEqual([]);
    expect(item.explanation.length).toBeGreaterThan(25);
+   expect(item.competence).toContain("Español");
+   expect(item.cognitiveGoal?.length).toBeGreaterThan(12);
+   expect(item.sourceLocator).toContain("PHUMA");
+   expect(item.origin).toBe("original-M1-20261117");
+   expect(item.family).toBeTruthy();
    if(item.kind==="classification"){
     const answers=Object.fromEntries(item.items.map(x=>[x.id,x.label]));
     expect(gradeClassification(item,answers),item.id).toBe(true);
