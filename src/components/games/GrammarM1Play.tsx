@@ -5,13 +5,15 @@ import {readRotation,recordRotation,rotationKey,selectRotation,writeRotation} fr
 import {GrammarClassification,GrammarConstruction} from "@/components/games/GrammarActivities";
 import type {ClassificationActivity,ConstructionActivity} from "@/lib/grammar-activities";
 import {COHESION_CONSTRUCTION,MORPH_CLASSIFICATION,MORPH_CONSTRUCTION,SYNONYM_CONSTRUCTION} from "@/lib/grammar-m1-activities";
+import {M1_NEXT_ACTIVITIES} from "@/lib/grammar-m1-next-activities";
 
 type M1Item=ClassificationActivity|ConstructionActivity;
 export function grammarM1Pool(subtopic:string,modo:Mode,nivel:Level):M1Item[]{
  const items=subtopic==="Sinónimos y antónimos"&&modo==="construir"?SYNONYM_CONSTRUCTION:
  subtopic==="Cohesión y coherencia"&&modo==="construir"?COHESION_CONSTRUCTION:
  subtopic==="Morfosintaxis"&&modo==="clasificar"?MORPH_CLASSIFICATION:
- subtopic==="Morfosintaxis"&&modo==="construir"?MORPH_CONSTRUCTION:[];
+ subtopic==="Morfosintaxis"&&modo==="construir"?MORPH_CONSTRUCTION:
+ M1_NEXT_ACTIVITIES.filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
  return items.filter(item=>item.level===nivel);
 }
 /** La ruta mantiene independientes IDs, exposición, errores e historial por juego/nivel. */
