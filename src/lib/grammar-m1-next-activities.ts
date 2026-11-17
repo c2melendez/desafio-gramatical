@@ -1,3 +1,4 @@
+import {distributeAnswer} from "./answer-position";
 import type {Level} from "./grammar";
 import type {ClassificationActivity,ConstructionActivity} from "./grammar-activities";
 import {HOMO_CONTEXTS} from "./m1-homonimia-contexts";
@@ -29,7 +30,8 @@ function makeBuild(id:string,subtopic:NewTopic,level:Level,prompt:string,parts:s
  tiles:cards(parts,wrong),solutions:[["t0","t1","t2"]]};
 }
 function quiz(id:string,subtopic:NewTopic,level:Level,passage:string,question:string,options:[string,string,string,string],explanation:string,goal:string):NextQuiz{
- return {id,subtopic,level,passage,question,options,answer:0,explanation,
+ const ordered=distributeAnswer(id,options,0);
+ return {id,subtopic,level,passage,question,options:ordered.options as [string,string,string,string],answer:ordered.answer as 0|1|2|3,explanation,
  ...shared(id.split("-").slice(0,-1).join("-"),goal)};
 }
 function classify(id:string,subtopic:NewTopic,level:Level,prompt:string,
