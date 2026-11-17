@@ -91,6 +91,16 @@ jobs:
           name: m1-espanol-avance
           path: m1-area-progress.json
           retention-days: 30
+      - name: Auditar 270 registros nuevos de Literatura M1
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-literature.mjs > m1-literature-270.json
+      - name: Archivar auditoría M1 Literatura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-literatura-270
+          path: m1-literature-270.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar 405 registros nuevos de M1
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m1-next.mjs > m1-next-405.json
       - name: Archivar auditoría por ID de 405 registros
