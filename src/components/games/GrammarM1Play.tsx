@@ -6,6 +6,7 @@ import {GrammarClassification,GrammarConstruction} from "@/components/games/Gram
 import type {ClassificationActivity,ConstructionActivity} from "@/lib/grammar-activities";
 import {COHESION_CONSTRUCTION,MORPH_CLASSIFICATION,MORPH_CONSTRUCTION,SYNONYM_CONSTRUCTION} from "@/lib/grammar-m1-activities";
 import {M1_NEXT_ACTIVITIES} from "@/lib/grammar-m1-next-activities";
+import {M1_LITERATURE_ACTIVITIES} from "@/lib/grammar-m1-literature";
 
 type M1Item=ClassificationActivity|ConstructionActivity;
 export function grammarM1Pool(subtopic:string,modo:Mode,nivel:Level):M1Item[]{
@@ -13,7 +14,7 @@ export function grammarM1Pool(subtopic:string,modo:Mode,nivel:Level):M1Item[]{
  subtopic==="Cohesión y coherencia"&&modo==="construir"?COHESION_CONSTRUCTION:
  subtopic==="Morfosintaxis"&&modo==="clasificar"?MORPH_CLASSIFICATION:
  subtopic==="Morfosintaxis"&&modo==="construir"?MORPH_CONSTRUCTION:
- M1_NEXT_ACTIVITIES.filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
+ [...M1_NEXT_ACTIVITIES,...M1_LITERATURE_ACTIVITIES].filter(x=>x.subtopic===subtopic&&x.kind===(modo==="construir"?"construction":"classification"));
  return items.filter(item=>item.level===nivel);
 }
 /** La ruta mantiene independientes IDs, exposición, errores e historial por juego/nivel. */
@@ -25,7 +26,8 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  const [streak,setStreak]=useState(0);
  const [best,setBest]=useState(0);
  const [finished,setFinished]=useState(false);
- const key=rotationKey("espanol","Gramática y semántica",subtema,modo,nivel);
+ const topic=subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica";
+ const key=rotationKey("espanol",topic,subtema,modo,nivel);
  const source=grammarM1Pool(subtema,modo,nivel);
  useEffect(()=>{
   const bank=grammarM1Pool(subtema,modo,nivel);
@@ -43,7 +45,7 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  const onNext=()=>{
   if(index+1===items.length){
    saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:correct*10,correct,total:items.length,
-    bestStreak:best,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});
+    bestStreak:best,area:"espanol",topic,subtopic:subtema});
    setFinished(true);
   }else setIndex(i=>i+1);
  };
