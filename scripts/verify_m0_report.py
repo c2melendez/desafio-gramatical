@@ -12,7 +12,7 @@ REQUIRED = {
     'contratos_y_mutaciones_fixtures','mutaciones_m0_integracion_y_progreso',
     'trazabilidad_editorial','negativos_editoriales','familias','cuarentena',
     'build','regresion_suite_existente','lint','auditoria_contenido_existente',
-    'estado_y_contratos','inventario_por_item_y_calidad','regresion_y_funcional',
+    'contratos_lock_negativos','estado_y_contratos','inventario_por_item_y_calidad','regresion_y_funcional',
     'mutacion_critica','seguridad_estatica_cliente','seguridad_mutaciones_fixture',
     'dependencias_produccion','dependencias_completas',
     'seguridad_y_privacidad','verificador_independiente_de_estado',
