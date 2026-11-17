@@ -108,7 +108,9 @@ export const M2_CATEGORY_BUILD:Record<Level,BuildQ[]>=Object.fromEntries(levels.
   const id=key("Categorías gramaticales",l,"build",i);
   const extra:{w:string,c:Cat}[]=[{w:"aunque",c:"conjuncion"},{w:"rápidamente",c:"adverbio"},{w:"de",c:"preposicion"},{w:"también",c:"adverbio"},{w:"aquellas",c:"determinante"},{w:"investigaciones",c:"sustantivo"},{w:"fácilmente",c:"adverbio"},{w:"siempre",c:"adverbio"},{w:"observa",c:"verbo"},{w:"clara",c:"adjetivo"}];
   const distractor=extra.find((x,k)=>k>=i%extra.length&&!a.tiles.some(t=>t.w.toLocaleLowerCase("es")===x.w.toLocaleLowerCase("es")))??extra.find(x=>!a.tiles.some(t=>t.w===x.w))!;
+  const next=extra.find(x=>x.w!==distractor.w&&!a.tiles.some(t=>t.w.toLocaleLowerCase("es")===x.w.toLocaleLowerCase("es")))!;
+  const variants=i>=category.construir(l).length?[distractor,next]:[distractor];
   return {id,pattern:[...a.pattern],hint:"Examina el patrón y compáralo con un segundo caso: "+a.hint+" Contraste de dificultad: "+b.hint,
-   tiles:[...a.tiles.map(t=>({...t})),distractor],solutions:[...a.solutions],
+   tiles:[...a.tiles.map(t=>({...t})),...variants],solutions:[...a.solutions],
    exp:a.exp+" La comparación adicional distingue el patrón de otro ejercicio: "+b.exp+" Descarta una ficha adicional."};
  })])) as Record<Level,BuildQ[]>;
