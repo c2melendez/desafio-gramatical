@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { GRAMMAR_NEXT_DRAFT } from "@/lib/grammar-next-draft";
+import { countContent } from "@/lib/coverage";
+import { GRAMMAR_NEXT_DRAFT, grammarPilotPool } from "@/lib/grammar-next-draft";
 
 describe("borrador del siguiente bloque gramatical",()=>{
  it("conserva identificadores, niveles, opciones y explicaciones verificables",()=>{
@@ -16,6 +17,16 @@ describe("borrador del siguiente bloque gramatical",()=>{
    expect(q.options[q.answer]).toBeTruthy();
    expect(q.passage.length).toBeGreaterThan(35);
    expect(q.explanation.length).toBeGreaterThan(40);
+  }
+ });
+ it("contabiliza solo la modalidad jugable y mantiene los bancos separados",()=>{
+  for(const topic of ["Sinónimos y antónimos","Cohesión y coherencia","Morfosintaxis"]){
+   for(const level of ["principiante","intermedio","avanzado"] as const){
+    expect(grammarPilotPool(topic,level)).toHaveLength(2);
+    expect(countContent("espanol","Gramática y semántica",topic,"quiz",level)).toBe(2);
+    expect(countContent("espanol","Gramática y semántica",topic,"clasificar",level)).toBe(0);
+    expect(countContent("espanol","Gramática y semántica",topic,"construir",level)).toBe(0);
+   }
   }
  });
 });

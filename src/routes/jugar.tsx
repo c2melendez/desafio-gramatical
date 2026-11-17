@@ -4,6 +4,8 @@ import { BUILD, LEVELS, LEVEL_LABEL, MODE_LABEL, QUIZ, SENTENCES, pointsFor, sav
 import { EXTRA_BUILD } from "@/lib/extra-build";
 import { EXTRA_SENTENCES } from "@/lib/extra-sentences";
 import { GRAMMAR_ADVANCED_SENTENCES, GRAMMAR_NUCLEUS_BUILD } from "@/lib/grammar-nucleus";
+import {GRAMMAR_PILOT_SUBTOPICS,grammarPilotPool,type GrammarDraft} from "@/lib/grammar-next-draft";
+import {rotationKey,readRotation,recordRotation,writeRotation,selectRotation} from "@/lib/rotation";
 import { EXTRA_QUIZ } from "@/lib/extra-quiz";
 import { ClassifyGame } from "@/components/games/ClassifyGame";
 import { QuizGame } from "@/components/games/QuizGame";
@@ -11,9 +13,10 @@ import { BuildGame } from "@/components/games/BuildGame";
 
 const MODES: Mode[] = ["clasificar", "quiz", "construir"];
 export const Route = createFileRoute("/jugar")({
-  validateSearch: (s: Record<string, unknown>): { modo: Mode; nivel: Level } => ({
+  validateSearch: (s: Record<string, unknown>): { modo: Mode; nivel: Level; subtema?: string } => ({
     modo: MODES.includes(s.modo as Mode) ? (s.modo as Mode) : "clasificar",
     nivel: LEVELS.includes(s.nivel as Level) ? (s.nivel as Level) : "principiante",
+    subtema: typeof s.subtema === "string" && GRAMMAR_PILOT_SUBTOPICS.some(x=>x===s.subtema) ? s.subtema : undefined,
   }),
   head: () => ({
     meta: [
@@ -23,7 +26,7 @@ export const Route = createFileRoute("/jugar")({
       { property: "og:description", content: "Práctica lúdica de gramática: primer módulo de Academia PHUMA Play." },
     ],
   }),
-  component: Play,
+  component: PlayRouter,
 });
 
 // Se guarda una cola por modalidad y nivel para evitar repeticiones entre partidas.
@@ -64,6 +67,11 @@ function buildItems(modo: Mode, nivel: Level): any[] {
     }
     return item;
   });
+}
+
+function PlayRouter() {
+ const {subtema,nivel,modo}=Route.useSearch();
+ return subtema ? modo === "quiz" ? <GrammarPilot key={`${subtema}-${nivel}`} subtema={subtema} nivel={nivel}/> : <main className="p-6">Esta modalidad está en desarrollo. <Link to="/">Volver al menú</Link></main> : <Play/>;
 }
 
 function Play() {
@@ -157,4 +165,29 @@ function Play() {
       {modo === "construir" && <BuildGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
     </main>
   );
+}
+export function GrammarPilot({subtema,nivel}:{subtema:string;nivel:Level}) {
+ const [run,setRun]=useState(0);
+ const [items,setItems]=useState<GrammarDraft[]|null>(null);
+ const [index,setIndex]=useState(0);
+ const [picked,setPicked]=useState<number|null>(null);
+ const [correct,setCorrect]=useState(0);
+ const [pilotStreak,setPilotStreak]=useState(0);
+ const [pilotBest,setPilotBest]=useState(0);
+ const [finished,setFinished]=useState(false);
+ const [order,setOrder]=useState<number[]>([]);
+ const pool=grammarPilotPool(subtema,nivel);
+ const key=rotationKey("espanol","Gramática y semántica",subtema,"quiz",nivel);
+ useEffect(()=>{
+  const list=grammarPilotPool(subtema,nivel);
+  setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));
+  setIndex(0);setPicked(null);setCorrect(0);setPilotStreak(0);setPilotBest(0);setFinished(false);setOrder(shuffle([0,1,2,3]));
+ },[subtema,nivel,run,key]);
+ if(!items)return <main className="p-6">Preparando ejercicios…</main>;
+ if(!items.length)return <main className="p-6">No hay ejercicios para esta selección. <Link to="/">Volver al menú</Link></main>;
+ if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/">Volver al menú</Link></main>;
+ const q=items[index];
+ const choose=(i:number)=>{if(picked!==null)return;setPicked(i);const ok=i===q.answer;if(ok){setCorrect(n=>n+1);setPilotStreak(n=>{const next=n+1;setPilotBest(best=>Math.max(best,next));return next;});}else setPilotStreak(0);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
+ const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score:correct*10,correct,total:items.length,bestStreak:pilotBest,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
+ return <main className="mx-auto max-w-2xl p-6 space-y-5"><Link to="/" className="underline">← Menú</Link><h1 className="text-2xl font-black">{subtema}</h1><p>Pregunta {index+1} de {items.length} · {nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}</p><div className="card-ink p-5 space-y-4"><p>{q.passage}</p><h2 className="font-bold">{q.question}</h2></div><div className="grid gap-3">{order.map(i=><button key={i} disabled={picked!==null} onClick={()=>choose(i)} className={`tile text-left ${picked===null?"bg-card":i===q.answer?"bg-success-soft":i===picked?"bg-destructive-soft":"bg-muted"}`}>{q.options[i]}</button>)}</div>{picked!==null&&<div aria-live="polite" className="space-y-3"><p className="card-ink p-4"><strong>{picked===q.answer?"Correcto. ":"Revisa tu respuesta. "}</strong>{q.explanation}</p><button onClick={next} className="tile w-full bg-primary text-primary-foreground">{index+1===items.length?"Ver resultado":"Siguiente"}</button></div>}</main>;
 }

@@ -33,3 +33,6 @@ const morph:Seed[]=[
 ];
 function create(subtopic:GrammarDraft["subtopic"],seeds:Seed[]):GrammarDraft[]{return seeds.map(([id,level,passage,question,options,answer,explanation])=>({id,subtopic,level,passage,question,options,answer,explanation,reviewStatus:"editorial-draft"}));}
 export const GRAMMAR_NEXT_DRAFT:GrammarDraft[]=[...create("Sinónimos y antónimos",synonym),...create("Cohesión y coherencia",cohesion),...create("Morfosintaxis",morph)];
+
+export const GRAMMAR_PILOT_SUBTOPICS = ["Sinónimos y antónimos", "Cohesión y coherencia", "Morfosintaxis"] as const;
+export function grammarPilotPool(subtopic:string, level:Level):GrammarDraft[]{return GRAMMAR_NEXT_DRAFT.filter(q=>q.subtopic===subtopic&&q.level===level);}

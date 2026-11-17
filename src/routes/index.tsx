@@ -5,6 +5,7 @@ import {
  AREAS, CATALOG_COUNTS, FIRST_MODULE, GAME_IDS, GAME_ICONS,
  GAME_FOCUS, gameNames, availableModule, type AreaId
 } from "@/lib/phuma-catalog";
+import {GRAMMAR_PILOT_SUBTOPICS} from "@/lib/grammar-next-draft";
 import {CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
 
 export const Route = createFileRoute("/")({
@@ -27,7 +28,8 @@ function Home() {
  const [level,setLevel]=useState<Level>("principiante");
  const selectedArea=AREAS.find(a=>a.id===areaId)!;
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
- const active=availableModule(areaId,topic,subtopic);
+ const pilot=areaId==="espanol"&&topic==="Gramática y semántica"&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
+ const active=pilot?mode==="quiz":availableModule(areaId,topic,subtopic);
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
  const names={...gameNames(topic),...(topic==="Redacción"&&subtopic==="Corrección"?{quiz:"Corrección precisa"}:{}),...(topic==="Redacción"&&subtopic==="Organización textual"?{quiz:"Continúa el texto"}:{}),...(topic==="Redacción"&&subtopic==="Elisión y adición"?{quiz:"Revisión precisa"}:{}),...(topic==="Redacción"&&subtopic==="Generalización e integración"?{quiz:"Conclusión sustentada"}:{})};
@@ -80,7 +82,7 @@ function Home() {
      </label>
     </div>
     <p aria-live="polite" className={`rounded-lg px-3 py-2 text-sm font-bold ${active?"bg-success-soft":"bg-muted"}`}>
-      {active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
+      {pilot?"🧪 Práctica inicial: disponible el juego de selección; clasificación y construcción están en desarrollo.":active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
       "🛠️ Módulo planificado: puedes explorar los juegos, pero aún no está desarrollado."}
     </p>
    </section>
@@ -93,7 +95,7 @@ function Home() {
        className={`card-ink flex items-center gap-4 p-4 text-left transition ${mode===id?"bg-primary text-primary-foreground":"bg-card"}`}>
        <span className="text-3xl" aria-hidden>{GAME_ICONS[id]}</span>
        <span className="flex-1"><span className="block text-lg font-bold">{names[id]}</span><span className="block text-sm opacity-90">{GAME_FOCUS[id]}</span></span>
-       <span className="text-xs font-bold">{active?"Disponible":"Próximamente"}</span>
+       <span className="text-xs font-bold">{(pilot?id==="quiz":active)?"Disponible":"Próximamente"}</span>
       </button>
      ))}
     </div>
@@ -138,9 +140,9 @@ function Home() {
      reading?
      <Link to="/lectura" search={{subtema:subtopic as import("@/lib/reading").ReadingSubtopic,modo:mode,nivel:level}}
       className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
-     <Link to="/jugar" search={{modo:mode,nivel:level}}
+     <Link to="/jugar" search={{modo:mode,nivel:level,subtema:pilot?subtopic:undefined}}
       className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>):
-     <div className="tile w-full cursor-not-allowed bg-muted py-4 text-center font-bold" role="status">🔒 Juego en desarrollo · prueba Comprensión lectora o Categorías gramaticales</div>
+     <div className="tile w-full cursor-not-allowed bg-muted py-4 text-center font-bold" role="status">🔒 Juego en desarrollo · selecciona otra modalidad disponible</div>
     }
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
    </section>

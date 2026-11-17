@@ -5,6 +5,7 @@ import {EXTRA_QUIZ} from "./extra-quiz";
 import {GRAMMAR_ADVANCED_SENTENCES,GRAMMAR_NUCLEUS_BUILD} from "./grammar-nucleus";
 import {EXTRA_BUILD} from "./extra-build";
 import {readingPool} from "./reading";
+import {grammarPilotPool} from "./grammar-next-draft";
 import {writingPool} from "./writing";
 
 export const CONTENT_TARGET:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
@@ -19,6 +20,7 @@ export function countContent(area:AreaId,topic:string,subtopic:string,mode:GameI
  if(area!=="espanol")return 0;
  if(topic==="Gramática y semántica"&&subtopic==="Categorías gramaticales")
   return mode==="clasificar"?SENTENCES[level].length+EXTRA_SENTENCES[level].length+(level==="avanzado"?GRAMMAR_ADVANCED_SENTENCES.length:0):mode==="quiz"?QUIZ[level].length+EXTRA_QUIZ[level].length:BUILD[level].length+EXTRA_BUILD[level].length+GRAMMAR_NUCLEUS_BUILD[level].length;
+ if(topic==="Gramática y semántica"&&mode==="quiz")return grammarPilotPool(subtopic,level).length;
  if(topic==="Comprensión lectora")return readingPool(level,subtopic as Parameters<typeof readingPool>[1],mode).length;
  if(topic==="Redacción")return writingPool(level,subtopic as Parameters<typeof writingPool>[1],mode).length;
  return 0;
@@ -32,7 +34,7 @@ export function coverageRows():ContentCoverage[]{
     rows.push({area:area.id,topic:topic.name,subtopic,mode,level,
       available,target:CONTENT_TARGET[level],stageOne:CONTENT_STAGE_ONE[level],
       stageOneComplete:available>=CONTENT_STAGE_ONE[level],complete:available>=CONTENT_TARGET[level],
-      source:available===0?"not-developed":topic.name==="Redacción"&&subtopic==="Conectores"&&mode==="quiz"?"original-context":"legacy"});
+      source:available===0?"not-developed":topic.name==="Gramática y semántica"&&subtopic!=="Categorías gramaticales"?"original-context":topic.name==="Redacción"&&subtopic==="Conectores"&&mode==="quiz"?"original-context":"legacy"});
    }
  return rows;
 }
