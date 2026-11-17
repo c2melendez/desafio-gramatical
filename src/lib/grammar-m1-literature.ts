@@ -63,9 +63,9 @@ export const FIGURE_CLASS:ClassificationActivity[]=FIGURE_CONTEXTS.map(([line,ki
 export const FIGURE_BUILD:ConstructionActivity[]=FIGURE_CONTEXTS.map(([line,kind,reason],i)=>{
  const other=figureKinds[(figureKinds.indexOf(kind)+1)%5];
  return build("m1-figure-build-"+level(i)+"-"+(i+1),"Figuras retóricas",level(i),
- "Construye una explicación breve de la figura utilizada en «"+line+"».",
- ["En «"+line+"»","predomina el recurso","«"+kind+"»."],"«"+other+"».",
- "Es «"+kind+"» porque "+reason+". El distractor designa otra figura.",
+ "Construye una justificación de la figura utilizada en «"+line+"».",
+ ["En «"+line+"»","aparece «"+kind+"»","porque "+reason+"."],"porque corresponde a «"+other+"».",
+ "La justificación exige identificar «"+kind+"» y fundamentarla en el rasgo observable: "+reason+".",
  "Justificar un recurso literario con su ejemplo","m1-figure-"+(i+1));
 });
 export const GENRE_QUIZ:LiteratureQuiz[]=GENRE_CONTEXTS.map(([line,kind,reason],i)=>{
@@ -87,9 +87,9 @@ export const GENRE_CLASS:ClassificationActivity[]=GENRE_CONTEXTS.map(([line,kind
 export const GENRE_BUILD:ConstructionActivity[]=GENRE_CONTEXTS.map(([line,kind,reason],i)=>{
  const other=genres[(genres.indexOf(kind)+1)%genres.length];
  return build("m1-genre-build-"+level(i)+"-"+(i+1),"Géneros literarios",level(i),
- "Organiza una descripción que identifique el género del siguiente microtexto: «"+line+"».",
- ["El microtexto","corresponde al género","«"+kind+"»."],"«"+other+"».",
- "La clasificación es «"+kind+"» porque "+reason+". La alternativa no describe la forma dominante.",
+ "Construye una justificación del género del siguiente microtexto: «"+line+"».",
+ ["El microtexto","pertenece al género «"+kind+"»","porque "+reason+"."],"porque pertenece al género «"+other+"».",
+ "La evidencia del género «"+kind+"» está en el rasgo formal: "+reason+".",
  "Construir una caracterización literaria justificada","m1-genre-"+(i+1));
 });
 export const M1_LITERATURE_QUIZ:LiteratureQuiz[]=[...FIGURE_QUIZ,...GENRE_QUIZ];
