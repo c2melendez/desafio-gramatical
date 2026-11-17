@@ -8,8 +8,11 @@ import type {MainIdeaReconstructCase} from "@/lib/main-idea-reconstruct-cases";
 import type {InferenceDetectiveCase} from "@/lib/inference-detective-cases";
 import type {InferenceChoiceCase} from "@/lib/inference-choice-cases";
 import type {InferenceReconstructCase} from "@/lib/inference-reconstruct-cases";
+import type {CriticalDetectiveCase} from "@/lib/critical-detective-cases";
+import type {CriticalChoiceCase} from "@/lib/critical-choice-cases";
+import type {CriticalReconstructCase} from "@/lib/critical-reconstruct-cases";
 
-function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase}){
+function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase}){
  return <section className="card-ink bg-card p-5 space-y-3" aria-label="Texto para analizar">
   <p className="text-xs font-bold uppercase tracking-wider text-primary">Lectura · {item.subtopic}</p>
   <h2 className="text-xl font-black">{item.title}</h2>
@@ -17,7 +20,7 @@ function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetect
  </section>;
 }
 const TYPES:EvidenceTag[]=["explicit","inference","unsupported"];
-export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaDetectiveCase|InferenceDetectiveCase>){
+export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaDetectiveCase|InferenceDetectiveCase|CriticalDetectiveCase>){
  const [picks,setPicks]=useState<Record<number,EvidenceTag>>({});
  const [checked,setChecked]=useState(false);
  const done=item.claims.every((_,i)=>Boolean(picks[i]));
@@ -46,7 +49,7 @@ export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChal
   {!checked?<button onClick={check} disabled={!done} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">{done?"Comprobar las tres afirmaciones":"Clasifica las tres afirmaciones"}</button>:<NextButton onClick={next} isLast={isLast}/>}
  </div>;
 }
-export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaChoiceCase|InferenceChoiceCase>){
+export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaChoiceCase|InferenceChoiceCase|CriticalChoiceCase>){
  const [pick,setPick]=useState<number|null>(null);
  const choose=(i:number)=>{
   if(pick!==null)return;
@@ -68,7 +71,7 @@ export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChal
    </p><NextButton onClick={next} isLast={isLast}/></div>}
  </div>;
 }
-export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaReconstructCase|InferenceReconstructCase>){
+export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaReconstructCase|InferenceReconstructCase|CriticalReconstructCase>){
  const [sequence,setSequence]=useState<number[]>([]);
  const [checked,setChecked]=useState(false);
  const pieces=item.order.parts;
