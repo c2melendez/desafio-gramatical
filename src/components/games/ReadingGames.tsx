@@ -19,7 +19,7 @@ import type {FigurativeDetectiveCase,FigurativeChoiceCase,FigurativeReconstructC
 function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct|FigurativeDetectiveCase|FigurativeChoiceCase|FigurativeReconstructCase}){
  return <section className="card-ink bg-card p-5 space-y-3" aria-label="Texto para analizar">
   <p className="text-xs font-bold uppercase tracking-wider text-primary">Lectura · {item.subtopic}</p>
-  <h2 className="text-xl font-black">{item.title}</h2>
+  <h2 className="text-xl font-black">{item.id.startsWith("m3-reading-")?`Integración de tres fuentes · ${item.subtopic}`:item.title}</h2>
   <p className="leading-relaxed whitespace-pre-line text-base">{item.passage}</p>
  </section>;
 }
