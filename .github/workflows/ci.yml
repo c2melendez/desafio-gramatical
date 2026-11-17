@@ -34,6 +34,7 @@ jobs:
         run: |
           node scripts/test-inventory.mjs
           node --import ./scripts/ts-resolve.mjs scripts/test-inventory-items.mjs
+          node --import ./scripts/ts-resolve.mjs scripts/test-audit-m0-baseline-quality.mjs
           node --import ./scripts/ts-resolve.mjs scripts/test-m0-critical-mutations.mjs
           python3 scripts/check_m0_contract_lock.py
           python3 -m unittest discover -s scripts -p 'test_check_m0_contract_lock.py'
@@ -50,6 +51,8 @@ jobs:
           node scripts/test-selection-audit.mjs
           node scripts/test-content-contracts.mjs
           node scripts/check-selection-oracles.mjs
+          node scripts/privacy-m0-static.mjs --test
+          node scripts/privacy-m0-static.mjs
           node scripts/security-client-audit.mjs --test
           node scripts/security-client-audit.mjs
       - name: Congelar inventario reproducible por ruta, juego y nivel
