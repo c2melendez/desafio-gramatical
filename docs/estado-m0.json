@@ -46,27 +46,40 @@
     "seguridad_privacidad",
     "verificacion_independiente_completa"
   ],
-  "siguiente_accion": "Completar seis controles NOT_RUN del runner M0 con verificaciones ejecutables: contratos/estado, inventario por item, regresion funcional, mutaciones criticas, privacidad dinamica y verificador independiente; revalidar CI y Render del SHA de integracion.",
+  "siguiente_accion": "Completar seis controles obligatorios NOT_RUN registrados en el artefacto 14330030640; confirmar Render LIVE del SHA main y después cerrar formalmente M0 y abrir espanol-M1. Conservar PR #1 sin fusionar hasta cotejo por ID y contenido.",
   "ultima_publicacion": {
-    "sha": "838a5ab79900881e4b080fd098be799f69cb81a0",
-    "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44077018305",
-    "render": "LIVE",
-    "render_deploy": "dep-dbu3t4lg1s2s73es9av0",
-    "pr": 3,
-    "prueba": "Partida de clasificación: respuesta correcta, puntaje y retroalimentación observados."
+    "sha": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
+    "ci": "https://github.com/c2melendez/desafio-gramatical/actions/runs/44086175652",
+    "ci_estado": "success",
+    "render": "NO_VERIFICADO",
+    "render_deploy": null,
+    "pr": 2,
+    "nota": "PR #2 fusionado; M0 aún no cerrado: auditoría integral 19 PASS, 6 NOT_RUN. No confundir CI success con certificación M0."
   },
   "ultima_ejecucion_m0": {
     "fecha_utc": "2026-11-17",
-    "rama": "trabajo/m0-reconciliacion-20261117",
-    "sha_rama": "8c731636a1ac565a87a0c99983942b777c8fa835",
-    "sha_checkout_ci": "e0ccdb7af20bc167a8a413bfdecf7bf242d44352",
-    "run_id": 44083787008,
-    "artefacto_id": 14327648083,
+    "rama": "main",
+    "sha_rama": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
+    "run_id": 44086175652,
+    "artefacto_id": 14330030640,
+    "artefacto_inventario_id": 14329213007,
     "runner_estado": "FAIL",
     "etapas_ejecutadas_pass": 19,
     "etapas_obligatorias_not_run": 6,
     "resultado_ci": "success",
     "render_mismo_sha": "NO_VERIFICADO",
-    "nota": "CI general PASS; runner independiente M0 FAIL por seis verificaciones obligatorias sin ejecutar. SHA del checkout es merge sintético del PR."
+    "nota": "M0 integró su matriz real y auditorías en main. Las seis etapas de certificación técnica no se ejecutaron, por lo que M0 permanece EN_CURSO."
+  },
+  "base_main_reconciliada": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
+  "alcance_reconciliado": {
+    "sha_base": "73d76e8d3f4ffa9b8337cf470fdd672f36917313",
+    "celdas": 810,
+    "subtemas": 90,
+    "celdas_habilitadas_menu": 132,
+    "registros_tecnicos": 2006,
+    "registros_con_ruta_menu": 2006,
+    "bloque_prioritario": "Gramática y semántica: Sinónimos y antónimos, Cohesión y coherencia, Morfosintaxis",
+    "deficit_tecnico_bloque_nucleo": 180,
+    "advertencia": "Conteos técnicos, no ejercicios independientes ni aprobados."
   }
 }
