@@ -5,7 +5,7 @@ import {gradeClassification,gradeConstruction,validateActivity} from "@/lib/gram
 import {countContent} from "@/lib/coverage";
 import {grammarPilotPool as m1SourcePilotPool} from "@/lib/grammar-next-draft";
 
-const m1PilotPool=(...args:Parameters<typeof m1SourcePilotPool>)=>m1SourcePilotPool(...args).filter(q=>!q.id.startsWith("m2-"));
+const m1PilotPool=(...args:Parameters<typeof m1SourcePilotPool>)=>m1SourcePilotPool(...args).filter(q=>!q.id.startsWith("m2-")&&!q.id.startsWith("m3-"));
 
 const TOPICS=["Homonimia y polisemia","Hiperonimia","Adecuación y referente"] as const;
 const LEVELS={principiante:10,intermedio:15,avanzado:20} as const;
