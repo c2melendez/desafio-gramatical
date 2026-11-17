@@ -3,6 +3,7 @@ import type {ClassificationActivity,ConstructionActivity} from "./grammar-activi
 import {HOMO_CONTEXTS} from "./m1-homonimia-contexts";
 import {HYPER_CONTEXTS} from "./m1-hiperonimia-contexts";
 import {ADEQ_CONTEXTS} from "./m1-adecuacion-contexts";
+import {REFERENT_CONTEXTS} from "./m1-referentes-contexts";
 
 /** Banco M1 adicional: 405 registros técnicos basados en 135 escenarios originales.
  * Un escenario compartido entre juegos NO demuestra independencia conceptual.
@@ -98,6 +99,13 @@ const formal=(parts:string[])=>parts.join(" ");
 export const ADEQ_QUIZ:NextQuiz[]=ADEQ_CONTEXTS.map(([scenario,p1,p2,p3,informal],i)=>{
  const message=formal([p1,p2,p3]);
  const other=ADEQ_CONTEXTS[(i+1)%count];
+ if(i>=30){
+  const [passage,pronoun,answer,wrong1,wrong2,reason]=REFERENT_CONTEXTS[i-30];
+  return quiz("m1-adeq-quiz-"+tier(i)+"-"+(i+1),"Adecuación y referente",tier(i),passage,
+   "¿A qué antecedente se refiere «"+pronoun+"» en el contexto?",
+   otherOptions(answer,wrong1,[wrong2,"Un elemento que no aparece en el pasaje"]),
+   reason,"Identificar el referente de una expresión anafórica");
+ }
  return quiz("m1-adeq-quiz-"+tier(i)+"-"+(i+1),"Adecuación y referente",tier(i),
  "Situación: "+scenario+". El mensaje se dirigirá a una institución.",
  "¿Qué redacción es apropiada para el destinatario formal y el propósito indicado?",
@@ -115,12 +123,20 @@ export const ADEQ_CLASS:ClassificationActivity[]=ADEQ_CONTEXTS.map(([scenario,p1
  "La adecuación depende del destinatario, el canal y el propósito del mensaje; los dos enunciados no tienen el mismo registro.",
  "Clasificar el registro según destinatario",i);
 });
-export const ADEQ_BUILD:ConstructionActivity[]=ADEQ_CONTEXTS.map(([scenario,p1,p2,p3,informal],i)=>makeBuild(
- "m1-adeq-build-"+tier(i)+"-"+(i+1),"Adecuación y referente",tier(i),
- "Organiza una comunicación con registro formal para «"+scenario+"».",
- [p1,p2,p3],informal,
- "La construcción formal «"+formal([p1,p2,p3])+"» mantiene un tratamiento adecuado y solicita o comunica un asunto definido.",
- "Redactar mensajes coherentes para un destinatario formal"));
+export const ADEQ_BUILD:ConstructionActivity[]=ADEQ_CONTEXTS.map(([scenario,p1,p2,p3,informal],i)=>{
+ if(i>=30){
+  const [passage,pronoun,answer,wrong1,,reason]=REFERENT_CONTEXTS[i-30];
+  return makeBuild("m1-adeq-build-"+tier(i)+"-"+(i+1),"Adecuación y referente",tier(i),
+  "Construye una explicación de la referencia anafórica en «"+passage+"».",
+  ["En «"+passage+"»","el pronombre «"+pronoun+"» retoma a","«"+answer+"»."],
+  "«"+wrong1+"».",reason,"Justificar el antecedente de un pronombre según el contexto");
+ }
+ return makeBuild("m1-adeq-build-"+tier(i)+"-"+(i+1),"Adecuación y referente",tier(i),
+  "Organiza una comunicación con registro formal para «"+scenario+"».",
+  [p1,p2,p3],informal,
+  "La construcción formal «"+formal([p1,p2,p3])+"» mantiene un tratamiento adecuado y solicita o comunica un asunto definido.",
+  "Redactar mensajes coherentes para un destinatario formal");
+});
 
 export const M1_NEXT_QUIZ:NextQuiz[]=[...HOMO_QUIZ,...HYPER_QUIZ,...ADEQ_QUIZ];
 export const M1_NEXT_ACTIVITIES:(ClassificationActivity|ConstructionActivity)[]=[
