@@ -46,6 +46,7 @@ function Home() {
  const active=pilot?pilotMode(mode):availableModule(areaId,topic,subtopic);
  const reading=areaId==="espanol"&&topic==="Comprensión lectora";
  const writing=areaId==="espanol"&&topic==="Redacción";
+ const math=areaId==="matematicas";
  const names={...gameNames(topic),...(topic==="Redacción"&&subtopic==="Corrección"?{quiz:"Corrección precisa"}:{}),...(topic==="Redacción"&&subtopic==="Organización textual"?{quiz:"Continúa el texto"}:{}),...(topic==="Redacción"&&subtopic==="Elisión y adición"?{quiz:"Revisión precisa"}:{}),...(topic==="Redacción"&&subtopic==="Generalización e integración"?{quiz:"Conclusión sustentada"}:{})};
  const availableCount=countContent(areaId,topic,subtopic,mode,level);
  const targetCount=CONTENT_TARGET[level];
@@ -150,7 +151,10 @@ function Home() {
     <div aria-live="polite" className="rounded-xl border-2 border-foreground bg-accent/40 p-4 text-sm">
       <strong>Tu ruta:</strong> {selectedArea.label} → {topic} → {subtopic} → {names[mode]} → {level==="principiante"?"Básico":LEVEL_LABEL[level]}
     </div>
-    {active?(writing?
+    {active?(math?
+     <Link to="/matematicas" search={{subtema,modo:mode,nivel:level}}
+      className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
+     writing?
      <Link to="/redaccion" search={{subtema:subtopic as import("@/lib/writing").WritingSubtopic,modo:mode,nivel:level}}
       className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
      reading?
