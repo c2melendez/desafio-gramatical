@@ -14,6 +14,7 @@ import {GRAMMAR_M1_ACTIVITIES} from "./grammar-m1-activities";
 import {M1_NEXT_ACTIVITIES} from "./grammar-m1-next-activities";
 import {M1_LITERATURE_ACTIVITIES} from "./grammar-m1-literature";
 import {writingPool} from "./writing";
+import {mathPool} from "./math-m1";
 
 export const CONTENT_TARGET:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
 export const CONTENT_STAGE_ONE:Record<Level,number>={principiante:10,intermedio:15,avanzado:20};
@@ -24,6 +25,7 @@ export type ContentCoverage={
  source:"legacy"|"original-context"|"not-developed";
 };
 export function countContent(area:AreaId,topic:string,subtopic:string,mode:GameId,level:Level):number{
+ if(area==="matematicas")return mathPool(topic,subtopic,level,mode).length;
  if(area!=="espanol")return 0;
  if(topic==="Gramática y semántica"&&subtopic==="Categorías gramaticales")
   return mode==="clasificar"?SENTENCES[level].length+EXTRA_SENTENCES[level].length+(level==="avanzado"?GRAMMAR_ADVANCED_SENTENCES.length:0)+M2_CATEGORY_SENTENCES[level].length+M3_CATEGORY_SENTENCES[level].length:mode==="quiz"?QUIZ[level].length+EXTRA_QUIZ[level].length+M2_CATEGORY_QUIZ[level].length+M3_CATEGORY_QUIZ[level].length:BUILD[level].length+EXTRA_BUILD[level].length+GRAMMAR_NUCLEUS_BUILD[level].length+M2_CATEGORY_BUILD[level].length+M3_CATEGORY_BUILD[level].length;
