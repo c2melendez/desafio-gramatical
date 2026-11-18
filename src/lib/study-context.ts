@@ -51,9 +51,34 @@ const topicDescriptions:Record<string,string>={
  "Autogestión":"Aplicar estrategias de responsabilidad y regulación personal a situaciones cotidianas."
 };
 export function learningDescription(area:AreaId,topic:string,subtopic:string):string{
- return descriptions[subtopic]??`${topicDescriptions[topic]??"Aplicar conceptos y procedimientos propios de esta área."} En «${subtopic}» se evaluará la capacidad de usar esos criterios en situaciones concretas.`;
+ const areaLabel=area==="espanol"?"Comunicación y Español":area;
+ return descriptions[subtopic]??`${topicDescriptions[topic]??`Aplicar conceptos y procedimientos de ${areaLabel}.`} En «${subtopic}» se evaluará la capacidad de usar esos criterios en situaciones concretas.`;
 }
 /** Breve criterio general; no sustituye la justificación específica del ítem. */
+const diagnosticRules:Record<string,string>={
+ "Idea principal":"Una idea principal cubre el asunto global y su propósito; una anécdota, dato aislado o ejemplo no puede reemplazar la tesis del texto.",
+ "Inferencias":"Una inferencia válida debe deducirse de indicios observables del pasaje. Si añade hechos que no se desprenden de esos indicios, resulta una suposición.",
+ "Lectura crítica":"Distingue lo afirmado de lo demostrado: identifica la fuente, su método, limitaciones y posibles sesgos antes de aceptar una generalización.",
+ "Vocabulario en contexto":"Comprueba cuál acepción permite mantener el sentido de la oración completa. Una definición posible fuera de contexto puede ser incorrecta aquí.",
+ "Análisis de textos":"La función de cada idea depende de su relación con las demás: tesis, argumento, evidencia, ejemplo o conclusión.",
+ "Lectura comparada":"Comprueba cada afirmación en la fuente que le corresponde; una coincidencia parcial no justifica trasladar conclusiones entre textos distintos.",
+ "Lenguaje figurado":"Interpreta la imagen según la intención y el contexto; una lectura literal puede perder la comparación o sustitución expresiva.",
+ "Categorías gramaticales":"La categoría se justifica por la función de la palabra en la oración, no solo por su forma. Examina qué acompaña, sustituye, modifica o expresa.",
+ "Sinónimos y antónimos":"Dos términos pueden ser semejantes u opuestos en un sentido específico, pero sus matices cambian al incorporarlos a la oración.",
+ "Cohesión y coherencia":"La cohesión usa conectores, referencias y repetición controlada; la coherencia exige que las ideas sean compatibles y mantengan un mismo hilo.",
+ "Morfosintaxis":"Comprueba concordancia de género y número, función sintáctica y relación entre el núcleo y sus modificadores antes de elegir una estructura.",
+ "Homonimia y polisemia":"La homonimia reúne palabras de forma coincidente y origen/sentido distinto; la polisemia contiene varios sentidos relacionados de una palabra.",
+ "Hiperonimia":"El hiperónimo abarca una clase general y el hipónimo nombra uno de sus miembros; la relación no es intercambiable en ambos sentidos.",
+ "Adecuación y referente":"Determina primero el antecedente al que remite un pronombre o expresión y verifica que el registro se adecue al destinatario.",
+ "Corrección":"Localiza la regla concreta que se vulnera (acentuación, concordancia, ortografía, puntuación o precisión) y verifica la frase corregida.",
+ "Conectores":"No todos los enlaces son intercambiables: contraste, consecuencia, causa, adición y orden señalan relaciones lógicas diferentes.",
+ "Organización textual":"La secuencia debe presentar una idea reconocible, desarrollarla con evidencias y cerrar sin introducir conclusiones desconectadas.",
+ "Elisión y adición":"Elimina repeticiones que no aportan significado y añade datos necesarios para evitar lagunas o referencias ambiguas.",
+ "Generalización e integración":"La conclusión solo puede abarcar lo que los datos sostienen: evita convertir una muestra limitada en una regla universal.",
+ "Figuras retóricas":"Reconoce el procedimiento expresivo en la frase: compara, sustituye, exagera o humaniza según las palabras concretas.",
+ "Géneros literarios":"Atiende a la voz, el propósito y la forma: narrador y acontecimientos, expresión lírica, diálogo dramático y estructura de la obra."
+};
 export function conceptRule(subtopic:string):string{
- return descriptions[subtopic]??topicDescriptions[subtopic]??"La respuesta debe justificarse utilizando los datos del enunciado y el concepto evaluado.";
+ return diagnosticRules[subtopic]??descriptions[subtopic]??"Comprueba la definición, procedimiento o norma aplicable y contrástala con los datos concretos del ejercicio.";
 }
+
