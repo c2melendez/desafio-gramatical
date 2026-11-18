@@ -13,6 +13,7 @@ export function LearningFeedback({correct,subtopic,explanation,selected,expected
   {expected&&<p><strong>{correct?"Respuesta comprobada:":"Respuesta correcta:"}</strong> {expected}</p>}
   {!correct&&<p><strong>¿Por qué no es correcta?</strong> La opción seleccionada no satisface el criterio evaluado en este contexto. Contrasta tu elección con la respuesta correcta y la evidencia descrita abajo.</p>}
   <p><strong>Concepto o regla:</strong> {criterion}</p>
-  <p><strong>Justificación de este ejercicio:</strong> {source||"Aplica el criterio a los datos del enunciado y contrástalos con la solución indicada. Este ejercicio requiere revisión editorial de la justificación específica."}</p>
+  <p className="font-semibold">Justificación de este ejercicio:</p>
+  <p>{source||"Aplica el criterio a los datos del enunciado y contrástalos con la solución indicada. Este ejercicio requiere revisión editorial de la justificación específica."}</p>
  </section>;
 }
