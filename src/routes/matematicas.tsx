@@ -52,7 +52,7 @@ function MathPlay(){
  };
  if(!items)return <main className="mx-auto max-w-xl p-6">Preparando ejercicios matemáticos…</main>;
  if(items.length!==ROUNDS_PER_GAME)throw Error("El núcleo debe permitir exactamente 10 rondas sin repetición");
- const names=gameNames(topic),title=names[modo],levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
+ const names=gameNames(topic),title=modo==="quiz"&&subtema==="Funciones"?"Interpreta la función":modo==="quiz"&&subtema==="Inecuaciones"?"Lee la recta numérica":names[modo],levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished){
   return <main className="mx-auto max-w-xl px-4 py-8 space-y-5">
    <h1 className="text-3xl font-black">¡Reto matemático completado!</h1>
