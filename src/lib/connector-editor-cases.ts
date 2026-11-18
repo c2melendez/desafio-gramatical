@@ -195,7 +195,7 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "subtopic": "Conectores",
     "steps": [
     "El informe presentó el objetivo y las preguntas iniciales.",
-    "Describió el método empleado.",
+    "Describió el método empleado para responder las preguntas planteadas.",
     "En el cierre, delimitó los resultados según sus restricciones."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
