@@ -46,7 +46,8 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
   stems.add(key);
   const independent=independentOracle(item.oracle.kind,item.oracle.inputs);
   if(!eq(item.oracle.answer,independent))problemsInCell.push(item.id+": resultado no coincide con oráculo independiente");
-  if(!item.explanation.includes(item.expected)||item.explanation.length<65)problemsInCell.push(item.id+": justificación incompleta");
+  const visibleFeedback=item.explanation+" Procedimiento comprobable: "+item.formula;
+  if(!visibleFeedback.includes(item.expected)||visibleFeedback.length<85||item.explanation.length<35)problemsInCell.push(item.id+": justificación visible incompleta");
   if(item.source!=="catalogo-practica-complementaria"&&item.source!=="GUIA-PRE-U-UNAH-2026:p6")problemsInCell.push(item.id+": origen incorrecto");
   if(new Set(item.options).size!==4||item.options[item.answerIndex]!==item.expected)problemsInCell.push(item.id+": alternativas o clave inválida");
   if(item.assertions.length!==3||item.assertions.filter(x=>x.truth).length!==1||new Set(item.assertions.map(x=>x.text)).size!==3)problemsInCell.push(item.id+": clasificación incompleta");
