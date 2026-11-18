@@ -5,10 +5,11 @@
 import {coverageRows} from '../src/lib/coverage.ts';
 import {pool} from './inventory-items.mjs';
 import {execFileSync} from 'node:child_process';
+import {reviewedOrthographicOptions} from './editorial-decisions.mjs';
 
 const norm=s=>String(s??'').normalize('NFKC').toLocaleLowerCase('es').replace(/\s+/g,' ').trim();
 const rowKey=r=>[r.area,r.topic,r.subtopic,r.mode,r.level].join(' / ');
-const issues=[],matrix=[],idSet=new Set();
+const issues=[],matrix=[],idSet=new Set(),reviewedDecisions=[];
 const modes=new Set(),topics=new Set(),subtopics=new Set();
 const riskCounts={unclear_stem:0,excessive_density:0,order_hint:0,unclear_source_scope:0,concept_alignment_review:0,generic_explanation:0,option_similarity:0};
 const flagsByPrefix={base:0,m1:0,m2:0,m3:0};
@@ -51,7 +52,11 @@ for(const row of rows){
    if(item.connector&&!options.includes(item.connector))add(row,item,'invalid_connector','BLOCKER',item.connector);
    if(item.correctConnector&&!options.includes(item.correctConnector))add(row,item,'invalid_correct_connector','BLOCKER',item.correctConnector);
    const pieces=options.map(x=>norm(x).replace(/[.,;:¡!¿?\s]/g,''));
-   if(new Set(pieces).size!==pieces.length)add(row,item,'option_similarity','REVIEW',options.join(' | '));
+   if(new Set(pieces).size!==pieces.length){
+    const approved=reviewedOrthographicOptions(row,item);
+    if(approved)reviewedDecisions.push({cell:rowKey(row),id:item.id,rule:approved.rule,answer:approved.answer,rationale:approved.justification});
+    else add(row,item,'option_similarity','REVIEW',options.join(' | '));
+   }
   }
   if(item.kind==='classification'){
    if(!item.items?.length)add(row,item,'empty_classification','BLOCKER','No hay casos que clasificar');
@@ -66,7 +71,7 @@ for(const row of rows){
   if(allText.length>2200)add(row,item,'excessive_density','REVIEW','estímulo '+allText.length+' caracteres; verificar legibilidad y carga cognitiva');
   const constructionText=(item.steps??item.order?.parts??item.tiles?.filter(t=>item.solutions?.[0]?.includes(t.id)).map(t=>t.text)??[]).map(String);
   if(row.mode==='construir'&&constructionText.length>1&&
-     constructionText.some(t=>/^(primero|después|finalmente|por último|en primer lugar|en segundo lugar|en tercer lugar)[,: ]/i.test(t.trim())))
+     constructionText.some(t=>/^(primero|después|finalmente|por último|en primer lugar|en segundo lugar|en tercer lugar|luego|a continuación|al final|al comienzo|al inicio|al cerrar|más tarde|solo después)[,: ]/i.test(t.trim())))
     add(row,item,'order_hint','REVIEW',constructionText.map(x=>x.slice(0,60)).join(' | '));
   if(item.sourceIds?.length>=3&&/LECTURA A|LECTURA B/.test(item.passage??'')&&!/BLOQUE A/.test(item.passage??''))
     add(row,item,'unclear_source_scope','REVIEW','Niveles de fuentes A/B anidados sin distinguir bloques');
@@ -87,10 +92,10 @@ const report={
  module:'espanol-claridad-competencia',version:1,
  sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
  status:hard?'BLOCKED':risks?'PASS_WITH_EDITORIAL_REVIEW':'PASS',
- summary:{cells:rows.length,topics:topics.size,subtopics:subtopics.size,modes:[...modes],records_audited:audited,distinct_ids:idSet.size,blockers:hard,review_flags:risks,risk_by_rule:riskCounts,records_by_generation:flagsByPrefix},
+ summary:{cells:rows.length,topics:topics.size,subtopics:subtopics.size,modes:[...modes],records_audited:audited,distinct_ids:idSet.size,blockers:hard,review_flags:risks,risk_by_rule:riskCounts,records_by_generation:flagsByPrefix,reviewed_orthography_decisions:reviewedDecisions.length},
  methodology:{automated:'Verificación de consigna, unicidad, clave, etiquetas, explicaciones, indicios de respuesta, densidad textual y correspondencia probable con subtema',human_pending:'Discernir múltiples respuestas defensibles, veracidad conceptual, pertinencia y dificultad; las heurísticas no pueden certificar lo anterior'},
  action_policy:'Cada bandera REVIEW se conserva con ID y celda. Ningún caso se considera académicamente aprobado por un resultado automático.',
- matrix,findings:issues
+ matrix,findings:issues,reviewed_orthographic_options:reviewedDecisions
 };
 console.log(JSON.stringify(report,null,2));
 if(hard)process.exitCode=1;
