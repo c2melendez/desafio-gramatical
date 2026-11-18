@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { LEVELS, LEVEL_LABEL, type Level, type Mode } from "@/lib/grammar";
 import {
- AREAS, CATALOG_COUNTS, FIRST_MODULE, GAME_IDS, GAME_ICONS,
+ AREAS, CATALOG_COUNTS, GAME_IDS, GAME_ICONS,
  GAME_FOCUS, gameNames, availableModule, type AreaId
 } from "@/lib/phuma-catalog";
 import {GRAMMAR_PILOT_SUBTOPICS} from "@/lib/grammar-next-draft";
@@ -10,8 +10,17 @@ import {GRAMMAR_M1_ACTIVITIES} from "@/lib/grammar-m1-activities";
 import {M1_NEXT_ACTIVITIES} from "@/lib/grammar-m1-next-activities";
 import {M1_LITERATURE_ACTIVITIES} from "@/lib/grammar-m1-literature";
 import {CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
+import {learningDescription,DEFAULT_SELECTION} from "@/lib/study-context";
 
 export const Route = createFileRoute("/")({
+ validateSearch:(search:Record<string,unknown>)=>{
+  const area=AREAS.find(a=>a.id===search.area)??AREAS.find(a=>a.id===DEFAULT_SELECTION.area)!;
+  const selectedTopic=area.topics.find(t=>t.name===search.tema)??area.topics[0];
+  return {area:area.id,tema:selectedTopic.name,
+   subtema:selectedTopic.subtopics.includes(search.subtema as string)?search.subtema as string:selectedTopic.subtopics[0],
+   modo:GAME_IDS.includes(search.modo as Mode)?search.modo as Mode:DEFAULT_SELECTION.modo,
+   nivel:LEVELS.includes(search.nivel as Level)?search.nivel as Level:DEFAULT_SELECTION.nivel};
+ },
  head: () => ({
   meta: [
    { title: "Academia PHUMA Play — Aprende jugando" },
@@ -24,11 +33,12 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
- const [areaId,setAreaId]=useState<AreaId>(FIRST_MODULE.area);
- const [topic,setTopic]=useState(FIRST_MODULE.topic);
- const [subtopic,setSubtopic]=useState(FIRST_MODULE.subtopic);
- const [mode,setMode]=useState<Mode>("clasificar");
- const [level,setLevel]=useState<Level>("principiante");
+ const selected=Route.useSearch();
+ const [areaId,setAreaId]=useState<AreaId>(selected.area as AreaId);
+ const [topic,setTopic]=useState(selected.tema);
+ const [subtopic,setSubtopic]=useState(selected.subtema);
+ const [mode,setMode]=useState<Mode>(selected.modo);
+ const [level,setLevel]=useState<Level>(selected.nivel);
  const selectedArea=AREAS.find(a=>a.id===areaId)!;
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
  const pilot=areaId==="espanol"&&(topic==="Gramática y semántica"||topic==="Literatura")&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
@@ -85,9 +95,11 @@ function Home() {
       </select>
      </label>
     </div>
-    <p aria-live="polite" className={`rounded-lg px-3 py-2 text-sm font-bold ${active?"bg-success-soft":"bg-muted"}`}>
-      {pilot?"🧪 Ampliación M2 20/35/45 en tres juegos (validación técnica en curso); revisión docente pendiente.":active?(reading?"✓ Lectura disponible: los tres juegos se han desarrollado para este subtema.":writing?"✓ Redacción disponible: tres juegos por subtema y nivel.":"✓ Módulo disponible: los tres juegos originales se conservan.") :
-      "🛠️ Módulo planificado: puedes explorar los juegos, pero aún no está desarrollado."}
+    <p aria-live="polite" role="note" className="rounded-lg border border-foreground/20 bg-success-soft px-4 py-3 text-sm leading-relaxed">
+     <strong>¿Qué aprenderás en {subtopic}?</strong> {learningDescription(areaId,topic,subtopic)}
+    </p>
+    <p role="status" className="text-xs text-muted-foreground">
+     {active?"Contenido disponible para practicar. Revisión académica pendiente.":"Contenido planificado: esta combinación todavía no está disponible."}
     </p>
    </section>
 
