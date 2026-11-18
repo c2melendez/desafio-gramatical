@@ -58,7 +58,35 @@ export function MathVisualStimulus({visual:v}:{visual:MathVisual}){
    </svg><figcaption className="text-xs text-muted-foreground">Círculo abierto: extremo excluido. Flecha hacia valores mayores. Marcas igualmente espaciadas.</figcaption>
   </figure>;
  }
- const {slope,intercept,targetX}=v;
+ if(v.kind==="rectangle")return <figure className="space-y-2">
+  <svg viewBox="0 0 390 240" {...common}>
+   <rect x="78" y="49" width="228" height="137" fill="none" stroke="currentColor" strokeWidth="3"/>
+   <line x1="78" y1="195" x2="306" y2="195" stroke="#0f766e" strokeWidth="2"/>
+   <text x="192" y="220" textAnchor="middle" fontSize="18" fill="currentColor">{v.length} cm</text>
+   <text x="13" y="124" fontSize="18" fill="currentColor">{v.width} cm</text>
+   <path d="M78 166 h20 v20" fill="none" stroke="currentColor" strokeWidth="2"/>
+  </svg><figcaption className="text-xs text-muted-foreground">Rectángulo esquemático, no a escala; utiliza únicamente las medidas rotuladas.</figcaption>
+ </figure>;
+ if(v.kind==="prism")return <figure className="space-y-2">
+  <svg viewBox="0 0 390 260" {...common}>
+   <path d="M72 97 L271 97 L318 57 L119 57 Z M271 97 V218 L318 178 V57 M72 97 V218 H271 V97 M72 218 L119 178 V57" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round"/>
+   <path d="M72 218 L271 218 L318 178" fill="none" stroke="#0f766e" strokeWidth="3"/>
+   <text x="158" y="240" fontSize="17" fill="currentColor">{v.length} cm</text>
+   <text x="291" y="216" fontSize="16" fill="currentColor">{v.width} cm</text>
+   <text x="12" y="155" fontSize="17" fill="currentColor">{v.height} cm</text>
+  </svg><figcaption className="text-xs text-muted-foreground">Prisma rectangular no a escala; los rótulos identifican tres aristas perpendiculares.</figcaption>
+ </figure>;
+ if(v.kind==="similar-triangles")return <figure className="space-y-2">
+  <svg viewBox="0 0 390 240" {...common}>
+   <path d="M26 201 L158 201 L70 102 Z M207 201 L372 201 L262 40 Z" fill="none" stroke="currentColor" strokeWidth="3"/>
+   <text x="76" y="224" fontSize="15" fill="currentColor">{v.small} cm</text>
+   <text x="286" y="224" fontSize="15" fill="currentColor">{v.large} cm</text>
+   <text x="19" y="139" fontSize="15" fill="currentColor">{v.other} cm</text>
+   <text x="209" y="111" fontSize="17" fill="currentColor">? cm</text>
+   <path d="M26 185 h16 v16 M207 185 h16 v16" fill="none" stroke="#0f766e" strokeWidth="2"/>
+  </svg><figcaption className="text-xs text-muted-foreground">Triángulos semejantes no a escala: bases correspondientes y lados izquierdos correspondientes.</figcaption>
+ </figure>;
+  const {slope,intercept,targetX}=v;
  const x0=90,y0=170,x1=165,y1=95;
  return <figure className="space-y-2">
   <svg viewBox="0 0 390 240" {...common}>
