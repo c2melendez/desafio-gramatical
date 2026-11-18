@@ -39,8 +39,8 @@ const SEEDS:Seed[]=[
         "La clase leyó el texto, ___ respondió las preguntas.",
         "y",
         "La clase leyó el texto.",
-        "Después respondió las preguntas.",
-        "Al final revisó las soluciones."
+        "Respondió las preguntas.",
+        "Revisó las soluciones."
       ],
       [
         "Ayer compramos un cuaderno y lo escribimos en el cuaderno.",
