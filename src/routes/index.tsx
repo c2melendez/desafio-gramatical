@@ -149,7 +149,7 @@ function Home() {
       <strong>Tu ruta:</strong> {selectedArea.label} → {topic} → {subtopic} → {names[mode]} → {level==="principiante"?"Básico":LEVEL_LABEL[level]}
     </div>
     {active?(math?
-     <Link to="/matematicas" search={{subtema,modo:mode,nivel:level}}
+     <Link to="/matematicas" search={{subtema:subtopic,modo:mode,nivel:level}}
       className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
      writing?
      <Link to="/redaccion" search={{subtema:subtopic as import("@/lib/writing").WritingSubtopic,modo:mode,nivel:level}}
