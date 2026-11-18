@@ -1,6 +1,7 @@
 import {useState} from "react";
 import type {MathModel} from "@/lib/math-m1";
 import {LearningFeedback} from "./LearningFeedback";
+import {MathVisualStimulus} from "./MathVisualStimulus";
 
 export function MathExerciseCard({item,onResult,onNext,isLast}:{
  item:MathModel;onResult:(correct:boolean,given:string)=>void;onNext:()=>void;isLast:boolean;
@@ -35,6 +36,7 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
  return <section className="card-ink bg-card p-5 space-y-4" aria-label="Ejercicio matemático">
   <p className="text-xs font-bold uppercase tracking-wide text-primary">{item.subtopic} · {item.mode==="quiz"?"Selección":item.mode==="clasificar"?"Clasificación":"Construcción"}</p>
   <h2 className="text-xl font-black leading-relaxed">{item.prompt}</h2>
+  {item.visual&&<MathVisualStimulus visual={item.visual}/> }
   {item.mode==="clasificar"&&!complete&&<div className="space-y-4">
    <p className="text-sm text-muted-foreground">Evalúa cada afirmación con los datos del ejercicio. Las tres decisiones forman una sola ronda.</p>
    <div className="card-ink bg-background p-4"><p className="text-sm font-bold">Afirmación {choices.length+1} de 3</p>
