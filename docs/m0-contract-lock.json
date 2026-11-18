@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "scope": "Contrato de rutas y datos tras M3 completo Español: conservar historia, rotación y regresión M0/M1/M2.",
   "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
   "hash_algorithm": "git-blob-sha1",
@@ -14,9 +14,9 @@
     "src/routes/jugar.tsx": "f38794f676f80e64ab76e368b77bdc6a4e0427cc",
     "src/routes/lectura.tsx": "2586e077fa1fe5169f878adc195f79c93b1d7f52",
     "src/routes/redaccion.tsx": "359637749ef4289c6c153699f087dd9ad7556d24",
-    "src/routes/historial.tsx": "eb49b09c484ab62b36f42cd4249f72e33223d909"
+    "src/routes/historial.tsx": "d720f22412daf48c6b0fc5d73a2ce3ca322cbd9d"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Habilitación autorizada de Matemáticas M1: 198 celdas, núcleo 10/15/20, menú y rutas compatibles, sin alterar ID de Español.",
+  "change_note": "Matemáticas M1 añade nombre contextual de juego al historial, sin alterar el formato ni borrar progreso previo.",
   "previous_baseline": "bb4d9704f9581065f1bddd99e50326d84e9008d7"
 }
