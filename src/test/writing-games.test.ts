@@ -40,6 +40,7 @@ describe("Redacción: tres juegos, cinco subtemas y tres dificultades",()=>{
   expect(availableModule("espanol","Literatura","Figuras retóricas")).toBe(false);
   const available=AREAS.flatMap(a=>a.topics.flatMap(t=>t.subtopics.map(s=>({a:a.id,t:t.name,s}))))
    .filter(x=>availableModule(x.a as "espanol",x.t,x.s));
-  expect(available).toHaveLength(13);
+  expect(available).toHaveLength(35);
+  expect(available.filter(x=>x.a==="matematicas")).toHaveLength(22);
  });
 });
