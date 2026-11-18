@@ -1,0 +1,1925 @@
+{
+  "version": 1,
+  "id": "math-M1-20261117-integral",
+  "area": "matematicas",
+  "stage": "M1",
+  "state": "EN_CURSO",
+  "base_sha": "dc560eca171d1dede7df56e3bab903284be1dd94",
+  "source": "GUIA-PRE-U-UNAH-2026.pdf p.6 + catálogo phuma-catalog.ts",
+  "rounds_per_game": 10,
+  "target_per_cell": {
+    "principiante": 10,
+    "intermedio": 15,
+    "avanzado": 20
+  },
+  "scope": {
+    "topics": 4,
+    "subtopics": 22,
+    "modes": 3,
+    "cells": 198,
+    "registered_before": 0,
+    "technical_new": 2970,
+    "technical_after": 2970,
+    "conceptually_independent": "PENDIENTE_REVISION",
+    "pedagogical_review": "PENDIENTE_AUTORIZADA"
+  },
+  "topic_breakdown": [
+    {
+      "topic": "Aritmética",
+      "subtopics": 6,
+      "combinations": 18,
+      "cells": 54,
+      "new_records": 810
+    },
+    {
+      "topic": "Álgebra",
+      "subtopics": 7,
+      "combinations": 21,
+      "cells": 63,
+      "new_records": 945
+    },
+    {
+      "topic": "Geometría",
+      "subtopics": 5,
+      "combinations": 15,
+      "cells": 45,
+      "new_records": 675
+    },
+    {
+      "topic": "Estadística y probabilidad",
+      "subtopics": 4,
+      "combinations": 12,
+      "cells": 36,
+      "new_records": 540
+    }
+  ],
+  "matrix": [
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Operaciones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Operaciones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Operaciones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Fracciones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Fracciones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Fracciones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Porcentajes",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Porcentajes",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Porcentajes",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Proporciones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Proporciones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Proporciones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Potencias",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Potencias",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Potencias",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "MCD y MCM",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "MCD y MCM",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "MCD y MCM",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Ecuaciones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Ecuaciones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Ecuaciones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Sistemas de ecuaciones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Sistemas de ecuaciones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Sistemas de ecuaciones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Sucesiones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Sucesiones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Sucesiones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Funciones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Funciones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Funciones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Ecuaciones cuadráticas",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Ecuaciones cuadráticas",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Ecuaciones cuadráticas",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Inecuaciones",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Inecuaciones",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Inecuaciones",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Patrones algebraicos",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Patrones algebraicos",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Álgebra",
+      "subtopic": "Patrones algebraicos",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Áreas y perímetros",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Áreas y perímetros",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Áreas y perímetros",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Ángulos",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Ángulos",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Ángulos",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Pitágoras",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Pitágoras",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Pitágoras",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Sólidos: área y volumen",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Sólidos: área y volumen",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Sólidos: área y volumen",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Semejanza",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Semejanza",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Geometría",
+      "subtopic": "Semejanza",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Promedios",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Promedios",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Promedios",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Probabilidad",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Probabilidad",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Probabilidad",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Dispersión de datos",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Dispersión de datos",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Dispersión de datos",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Tablas y gráficas",
+      "mode": "clasificar",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Tablas y gráficas",
+      "mode": "quiz",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    },
+    {
+      "area": "matematicas",
+      "topic": "Estadística y probabilidad",
+      "subtopic": "Tablas y gráficas",
+      "mode": "construir",
+      "before": {
+        "principiante": 0,
+        "intermedio": 0,
+        "avanzado": 0
+      },
+      "added": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "after": {
+        "principiante": 10,
+        "intermedio": 15,
+        "avanzado": 20
+      },
+      "goal": {
+        "principiante": 30,
+        "intermedio": 50,
+        "avanzado": 70
+      },
+      "review": "AUTOMATICA_PENDIENTE_DOCENTE",
+      "independence": "NO_CERTIFICADA"
+    }
+  ],
+  "controls": [
+    "oraculo_aritmetico_independiente",
+    "unicidad_ids",
+    "alternativas_sin_duplicados",
+    "retroalimentacion",
+    "clasificacion_tres_decisiones_una_ronda",
+    "construccion_dos_decisiones_una_ronda",
+    "seleccion_diez_ids_sin_repeticion",
+    "navegacion_contextual",
+    "historial",
+    "CI_success_mismo_SHA",
+    "Render_live_mismo_SHA"
+  ],
+  "risks": [
+    "Los registros proceden de 22 modelos parametrizados y pueden compartir familia conceptual; no declarar 2970 competencias independientes.",
+    "La guía oficial referencia bloques generales, no cada subtema extendido del catálogo; etiquetar la práctica complementaria.",
+    "Falta revisión docente y calibración de dificultad; no equivale a PHUMA oficial."
+  ],
+  "next_action": "Ejecutar CI en la rama, corregir todas las incidencias, fusionar, comprobar CI main y Render Live del mismo SHA, registrar cierre M1."
+}
