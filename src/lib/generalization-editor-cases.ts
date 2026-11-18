@@ -163,9 +163,9 @@ export const GENERALIZATION_EDITOR_CASES:GeneralizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Generalización e integración",
     "steps": [
-      "Un curso comparó las calificaciones de dos grupos de estudiantes.",
-      "Primero se verificó si ambos habían respondido evaluaciones equivalentes.",
-      "Solo después se describieron diferencias bajo los criterios comunes."
+    "Un curso comparó las calificaciones de dos grupos de estudiantes.",
+    "Se verificó si ambos habían respondido evaluaciones equivalentes.",
+    "Se describieron diferencias bajo los criterios comunes."
     ],
     "explanation": "Las comparaciones requieren bases equivalentes antes de concluir.",
     "hint": "Ordena datos, contraste y conclusión proporcional a la evidencia.",
@@ -215,9 +215,9 @@ export const GENERALIZATION_EDITOR_CASES:GeneralizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Generalización e integración",
     "steps": [
-      "Un boletín recogió opiniones de padres sobre una actividad extraescolar.",
-      "Primero se separaron comentarios favorables, desfavorables y neutros.",
-      "El resumen reflejó las tres perspectivas presentes en las respuestas."
+    "Un boletín recogió opiniones de padres sobre una actividad extraescolar.",
+    "Se separaron comentarios favorables, desfavorables y neutros.",
+    "El resumen reflejó las tres perspectivas presentes en las respuestas."
     ],
     "explanation": "Una síntesis equilibrada no selecciona solamente testimonios positivos.",
     "hint": "Ordena datos, contraste y conclusión proporcional a la evidencia.",
@@ -449,9 +449,9 @@ export const GENERALIZATION_EDITOR_CASES:GeneralizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Generalización e integración",
     "steps": [
-      "Un metaanálisis recibió estudios publicados con resultados contradictorios.",
-      "Primero se verificaron criterios de inclusión y posibles sesgos de publicación.",
-      "La síntesis comunicó efectos heterogéneos sin declarar consenso inexistente."
+    "Un metaanálisis recibió estudios publicados con resultados contradictorios.",
+    "Se verificaron criterios de inclusión y posibles sesgos de publicación.",
+    "La síntesis comunicó efectos heterogéneos sin declarar consenso inexistente."
     ],
     "explanation": "La heterogeneidad observada impide atribuir unanimidad a la literatura.",
     "hint": "Ordena datos, contraste y conclusión proporcional a la evidencia.",
