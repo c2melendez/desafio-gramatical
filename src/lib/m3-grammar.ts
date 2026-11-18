@@ -72,11 +72,11 @@ function m3Build(topic:string,l:Level,i:number):ConstructionActivity{
  const [a,b,c]=triple(src,i+13*LEVELS.indexOf(l));
  const id='m3-'+slug(topic)+'-build-'+l+'-'+(i+1);
  return {id,kind:'construction',level:l,subtopic:topic,
-  prompt:'Ordena un análisis justificable de tres casos: '+[a,b,c].map((q,k)=>'Caso '+('ABC'[k])+': '+q.prompt).join(' '),
+  prompt:'Ordena las operaciones de comprobación de evidencias, contraste y conclusión razonada en estos tres casos: '+[a,b,c].map((q,k)=>'Caso '+('ABC'[k])+': '+q.prompt).join(' '),
   tiles:[
-   {id:'a',text:'Primero, resolver A: '+a.explanation},
-   {id:'b',text:'Después, comprobar B por sus propias evidencias: '+b.explanation},
-   {id:'c',text:'Por último, contrastar C y limitar la conclusión: '+c.explanation},
+   {id:'a',text:'Sustentar el análisis del caso A: '+a.explanation},
+   {id:'b',text:'Contrastar el caso B con pruebas propias: '+b.explanation},
+   {id:'c',text:'Delimitar las conclusiones válidas para C: '+c.explanation},
    {id:'d',text:'La respuesta del caso A demuestra automáticamente los resultados de B y C.'}
   ],solutions:[['a','b','c']],explanation:'Se comienza por A porque '+a.explanation+' Después se contrasta B, donde '+b.explanation+' Finalmente se delimita C: '+c.explanation+' La ficha distractora es inválida porque resolver un caso no demuestra automáticamente los otros dos.',
   ...meta(id,[a.id,b.id,c.id],'Reconstruir un argumento compuesto por tres justificaciones')};
