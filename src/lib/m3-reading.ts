@@ -21,7 +21,7 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
   const meta={origin:'integracion-triple-M3-20261117',sourceIds,reviewStatus:'editorial-draft' as const,family:id,
    sourceLocator:'Guía pre-U UNAH 2026; textos originales de M2',
    competence:'Competencias comunicativas — Comprensión lectora',cognitiveGoal:'Integrar y evaluar tres fuentes contextualizadas'};
-  const passage='FUENTE A\\n'+a.passage+'\\n\\nFUENTE B\\n'+b.passage+'\\n\\nFUENTE C\\n'+c.passage;
+  const passage='FUENTE A\n'+a.passage+'\n\nFUENTE B\n'+b.passage+'\n\nFUENTE C\n'+c.passage;
   const common={id,level,subtopic,title:'Análisis comparativo de tres textos',passage,...meta};
   if(mode==='quiz'){
    const right=[a,b,c].map(q=>q.options[q.answer]),wrong=[a,b,c].map(q=>q.options[(q.answer+1)%4]);
