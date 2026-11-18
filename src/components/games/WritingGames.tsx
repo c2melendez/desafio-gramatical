@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {NextButton} from "./Feedback";
+import {LearningFeedback} from "./LearningFeedback";
 import type {GameProps} from "./types";
 import {ERROR_TYPES,checkWritingSequence,type WritingChallenge} from "@/lib/writing";
 import type {ConnectorErrorCase} from "@/lib/connector-error-cases";
@@ -58,9 +59,7 @@ function LegacyErrorHunter({item,report,next,isLast}:GameProps<WritingChallenge>
    className={`tile text-left ${choice===null?"bg-card":option===item.errorType?"bg-success-soft":option===choice?"bg-destructive-soft":"bg-muted opacity-60"}`}
    onClick={()=>submit(option)}>{option}</button>)}</div>
   {choice!==null&&<div aria-live="polite" className="space-y-3">
-   <p className={`rounded-lg border-2 border-foreground p-4 ${choice===item.errorType?"bg-success-soft":"bg-destructive-soft"}`}>
-    <strong>{choice===item.errorType?"¡Identificado! ":"La categoría adecuada es «"+item.errorType+"». "}</strong>{item.correction}
-   </p><NextButton onClick={next} isLast={isLast}/></div>}
+   <LearningFeedback correct={choice===item.errorType} subtopic={item.subtopic} selected={choice} expected={item.errorType} explanation={item.correction} title={choice===item.errorType?"¡Identificado!":"Revisa la categoría de error."}/><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
 function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorCase|CorrectionErrorCase|OrganizationErrorCase|ElisionErrorCase|GeneralizationErrorCase>){
@@ -82,10 +81,7 @@ function ConnectorCorrection({item,report,next,isLast}:GameProps<ConnectorErrorC
    disabled={choice!==null} onClick={()=>submit(option)}
    className={`tile text-left text-sm ${choice===null?"bg-card":option===item.correctConnector?"bg-success-soft":option===choice?"bg-destructive-soft":"bg-muted opacity-60"}`}>{option}</button>)}</div>
   {choice!==null&&<div className="space-y-3" aria-live="polite">
-   <p className={`rounded-xl border-2 border-foreground p-4 ${choice===item.correctConnector?"bg-success-soft":"bg-destructive-soft"}`}>
-    <strong>{choice===item.correctConnector?"¡Corrección acertada! ":"La corrección adecuada es «"+item.correctConnector+"». "}</strong>
-    {item.explanation}
-   </p>
+   <LearningFeedback correct={choice===item.correctConnector} subtopic={item.subtopic} selected={choice} expected={item.correctConnector} explanation={item.explanation} title={choice===item.correctConnector?"¡Corrección acertada!":"Revisa la corrección."}/>
    <div className="card-ink bg-card p-4"><strong>{organization||elision||generalization?"Revisión recomendada:":"Versión corregida:"}</strong><p>{item.correctSentence}</p></div>
    <NextButton onClick={next} isLast={isLast}/>
   </div>}
@@ -108,10 +104,7 @@ export function ConnectorGame({item,report,next,isLast}:GameProps<WritingChallen
   <div className={["Organización textual","Elisión y adición","Generalización e integración"].includes(item.subtopic)?"grid grid-cols-1 gap-3":"grid grid-cols-2 gap-3"}>{item.options.map(o=><button key={o} disabled={choice!==null} onClick={()=>send(o)}
    className={`tile text-sm ${choice===null?"bg-card":o===item.connector?"bg-success-soft":o===choice?"bg-destructive-soft":"bg-muted opacity-60"}`}>{o}</button>)}</div>
   {choice!==null&&<div aria-live="polite" className="space-y-3">
-   <p className={`rounded-lg border-2 border-foreground p-4 ${choice===item.connector?"bg-success-soft":"bg-destructive-soft"}`}>
-    <strong>{choice===item.connector?"¡Excelente conexión! ":"Revisa la relación lógica. "}</strong>
-    {"explanation" in item ? item.explanation : `En este caso, «${item.connector}» permite enlazar las ideas sin cambiar su sentido.`}
-   </p><NextButton onClick={next} isLast={isLast}/></div>}
+   <LearningFeedback correct={choice===item.connector} subtopic={item.subtopic} selected={choice} expected={item.connector} explanation={"explanation" in item?item.explanation:`El conector «${item.connector}» expresa la relación lógica solicitada en el enunciado.`} title={choice===item.connector?"¡Excelente conexión!":"Revisa la relación lógica."}/><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
 export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChallenge|ConnectorEditorCase|CorrectionEditorCase|OrganizationEditorCase|ElisionEditorCase|GeneralizationEditorCase>){
@@ -147,10 +140,6 @@ export function ExpertEditor({item,report,next,isLast}:GameProps<WritingChalleng
    <button disabled={!sequence.length} onClick={()=>setSequence([])} className="tile bg-card disabled:opacity-40">Vaciar</button>
    <button disabled={sequence.length!==3} onClick={check} className="tile bg-primary col-span-2 text-primary-foreground disabled:opacity-40">Revisar párrafo</button>
   </div>:<div className="space-y-3" aria-live="polite">
-   <p className={`rounded-lg border-2 border-foreground p-4 ${correct?"bg-success-soft":"bg-destructive-soft"}`}>
-    <strong>{correct?"¡Párrafo coherente! ":"Revisa el orden de las ideas. "}</strong>
-    {"explanation" in item?item.explanation:"El orden propuesto primero presenta el tema, luego aporta información y finalmente permite cerrar el argumento."}
-    {!correct&&<span className="block mt-2"><strong>Orden esperado:</strong> {item.steps.join(" → ")}</span>}
-   </p><NextButton onClick={next} isLast={isLast}/></div>}
+   <LearningFeedback correct={correct} subtopic={item.subtopic} selected={sequence.map(i=>item.steps[i]).join(" → ")} expected={item.steps.join(" → ")} explanation={"explanation" in item?item.explanation:"La estructura coherente presenta el tema, desarrolla relaciones y concluye con base en las ideas aportadas."} title={correct?"¡Párrafo coherente!":"Revisa el orden de las ideas."}/><NextButton onClick={next} isLast={isLast}/></div>}
  </section>;
 }
