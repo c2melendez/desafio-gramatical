@@ -13,8 +13,8 @@ assert.deepEqual(auditItem(writing,correction),[],'capitalización es contenido 
 assert.ok(auditItem({...good,subtopic:'Otro'},row).length);
 const result=auditBaseline();
 assert.equal(result.cells,810);
-assert.equal(result.items_checked,9450);
+assert.equal(result.items_checked,12420);
 assert.equal(result.accepted_independent,0);
-assert.equal(result.editorial_pending,9450);
+assert.equal(result.editorial_pending,12420);
 assert.equal(result.status,'PASS',JSON.stringify(result.errors.slice(0,8)));
-console.log('PASS M0: 9450 registros inspeccionados, 0 aceptados sin oráculo; 5 mutaciones negativas y distractores ortográficos preservados.');
+console.log('PASS M0: 12420 registros inspeccionados, 0 aceptados sin oráculo; mutaciones negativas y distractores preservados.');
