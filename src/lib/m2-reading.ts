@@ -47,11 +47,15 @@ export function m2ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,bas
   if(mode==="clasificar"){
    const ca=a as ReadingChallenge,cb=b as ReadingChallenge;
    const find=(q:ReadingChallenge,tag:EvidenceTag)=>q.claims.find(c=>c.tag===tag)!;
-   const claims=[
-    {...find(ca,"explicit"),text:"Según la lectura A: "+find(ca,"explicit").text},
-    {...find(cb,"inference"),text:"Según la lectura B: "+find(cb,"inference").text},
-    {...find(ca,"unsupported"),text:"Se afirma sobre A: "+find(ca,"unsupported").text}
+   const tags:EvidenceTag[]=["explicit","inference","unsupported"];
+   const ta=tags[i%3],tb=tags[(i+1)%3],tc=tags[(i+2)%3];
+   const items=[
+    {...find(ca,ta),text:"Según la lectura A: "+find(ca,ta).text},
+    {...find(cb,tb),text:"Según la lectura B: "+find(cb,tb).text},
+    {...find(ca,tc),text:"Se afirma sobre A: "+find(ca,tc).text}
    ] as ReadingChallenge["claims"];
+   const permutations=[[0,1,2],[1,2,0],[2,0,1],[0,2,1],[2,1,0],[1,0,2]];
+   const claims=permutations[i%6].map(index=>items[index]);
    return {id,level,subtopic,title,passage,claims,
     question:"¿Qué afirmaciones son explícitas, inferencias o no sustentadas al comparar los dos textos?",
     options:["Dato explícito","Inferencia","No sustentado","No aplica"],
