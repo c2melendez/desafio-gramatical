@@ -336,6 +336,7 @@ export const TOPIC_GAMES: Record<string,[string,string,string]> = {
 };
 export const FIRST_MODULE = {area:"espanol" as AreaId,topic:"Gramática y semántica",subtopic:"Categorías gramaticales"};
 export function availableModule(area:AreaId,topic:string,subtopic:string){
+ if(area==="matematicas")return AREAS.find(a=>a.id===area)!.topics.some(t=>t.name===topic&&t.subtopics.includes(subtopic));
  return (area===FIRST_MODULE.area&&topic===FIRST_MODULE.topic&&subtopic===FIRST_MODULE.subtopic)
  || (area==="espanol"&&topic==="Comprensión lectora"&&AREAS[0].topics[0].subtopics.includes(subtopic))
  || (area==="espanol"&&topic==="Redacción"&&AREAS[0].topics[2].subtopics.includes(subtopic));

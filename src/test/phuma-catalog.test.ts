@@ -19,10 +19,12 @@ describe("Academia PHUMA Play: curriculum and staged rollout", () => {
    expect(Object.values(games).every(g=>g.length>=5)).toBe(true);
   }
  });
- it("enables grammar, reading and writing while keeping other modules locked",()=>{
+ it("habilita Matemáticas M1 y conserva bloqueadas las tres áreas aún no implementadas",()=>{
   const modules=AREAS.flatMap(a=>a.topics.flatMap(t=>t.subtopics.map(s=>({area:a.id,topic:t.name,subtopic:s}))));
   const playable=modules.filter(m=>availableModule(m.area as typeof FIRST_MODULE.area,m.topic,m.subtopic));
-  expect(playable).toHaveLength(13);
+  expect(playable).toHaveLength(35);
+  expect(playable.filter(x=>x.area==="matematicas")).toHaveLength(22);
+  expect(playable.filter(x=>["naturales","sociales","blandas"].includes(x.area))).toHaveLength(0);
   expect(playable).toContainEqual(FIRST_MODULE);
   expect(playable.filter(x=>x.topic==="Comprensión lectora")).toHaveLength(7);
   expect(playable.filter(x=>x.topic==="Redacción")).toHaveLength(5);

@@ -103,6 +103,16 @@ jobs:
           path: m1-operation-audit.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar Matemáticas M1 — 2970 respuestas con oráculos independientes
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-math-m1.mjs > matematicas-m1-audit.json
+      - name: Archivar evidencia integral Matemáticas M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: matematicas-m1-integral
+          path: matematicas-m1-audit.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema
