@@ -4,6 +4,7 @@ import {M2_GRAMMAR_ACTIVITIES} from "@/lib/m2-grammar";
 import {M3_GRAMMAR_ACTIVITIES} from "@/lib/m3-grammar";
 import {Link} from "@tanstack/react-router";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
+import {studyReturn} from "@/lib/study-context";
 import {useEffect,useState} from "react";
 import {pointsFor,saveHistory,type Level,type Mode} from "@/lib/grammar";
 import {readRotation,recordRotation,rotationKey,selectRotation,writeRotation} from "@/lib/rotation";
@@ -38,6 +39,7 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  const [finished,setFinished]=useState(false);
  const topic=subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica";
  const key=rotationKey("espanol",topic,subtema,modo,nivel);
+ const returnTo=studyReturn(topic,subtema,modo,nivel);
  const source=grammarM1Pool(subtema,modo,nivel);
  useEffect(()=>{
   const bank=grammarM1Pool(subtema,modo,nivel);
@@ -62,10 +64,10 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema}: {correct}/{items.length} respuestas correctas</p>
  <p className="text-sm">Este resultado corresponde al juego y no equivale a una puntuación PHUMA oficial.</p>
  <button className="tile bg-primary text-primary-foreground" onClick={()=>setRound(n=>n+1)}>Practicar de nuevo</button>
- <Link className="block underline" to="/">Volver al menú</Link></main>;
+ <Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;
  return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5">
   <GameSessionHeader context={`${subtema} · ${nivel}`} title={modo==="construir"?"Construcción":"Clasificación"}
-   round={index+1} total={ROUNDS_PER_GAME} score={score} streak={streak} onRestart={()=>setRound(n=>n+1)}/>
+   round={index+1} total={ROUNDS_PER_GAME} score={score} streak={streak} onRestart={()=>setRound(n=>n+1)} returnTo={returnTo}/>
   <p role="note" className="text-sm text-muted-foreground">Material original de práctica; revisión académica pendiente. No equivale a un examen PHUMA oficial.</p>
   {item.kind==="construction"?<GrammarConstruction key={item.id} item={item} onResult={onResult} onNext={onNext}/>:
   <GrammarClassification key={item.id} item={item} onResult={onResult} onNext={onNext}/>}
