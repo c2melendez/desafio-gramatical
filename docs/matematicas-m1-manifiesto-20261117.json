@@ -3,7 +3,7 @@
   "id": "math-M1-20261117-integral",
   "area": "matematicas",
   "stage": "M1",
-  "state": "EN_CURSO",
+  "state": "VERIFICADA_LOCAL_PENDIENTE_PUBLICACION",
   "base_sha": "dc560eca171d1dede7df56e3bab903284be1dd94",
   "source": "GUIA-PRE-U-UNAH-2026.pdf p.6 + catálogo phuma-catalog.ts",
   "rounds_per_game": 10,
@@ -1921,5 +1921,28 @@
     "La guía oficial referencia bloques generales, no cada subtema extendido del catálogo; etiquetar la práctica complementaria.",
     "Falta revisión docente y calibración de dificultad; no equivale a PHUMA oficial."
   ],
-  "next_action": "Ejecutar CI en la rama, corregir todas las incidencias, fusionar, comprobar CI main y Render Live del mismo SHA, registrar cierre M1."
+  "next_action": "Fusionar PR después de CI, verificar CI main y Render mismo SHA; conservar revisión docente diferida.",
+  "ci_candidate": {
+    "run_id": 44247179634,
+    "sha": "cf02b4dabd4c56aa0a2599c3b5a4dc94463c4e07",
+    "conclusion": "success",
+    "artifact_id": 14401973764,
+    "oracle_records": 2970,
+    "oracle_failures": 0
+  },
+  "audit": {
+    "records": 2970,
+    "ids_unique": 2970,
+    "cells": 198,
+    "subtopics": 22,
+    "modes": 3,
+    "mode_counts": {
+      "clasificar": 990,
+      "quiz": 990,
+      "construir": 990
+    },
+    "same_prompt_strings_across_modes": 1659,
+    "meaning": "La cifra de 1659 es cantidad de textos de enunciado distintos en todo el banco técnico. Compartir familias y parámetros no acredita independencia conceptual."
+  },
+  "publication": "PENDIENTE_PR_MAIN_RENDER_SAME_SHA"
 }
