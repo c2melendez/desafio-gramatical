@@ -88,10 +88,13 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  }
  if(visual&&visualAnswer(visual)!==r.result.n/r.result.d)throw Error("El estímulo visual no coincide con el oráculo matemático");
  const choices=choose(seed,base);
- const visualIntermediate=visual?.kind==="number-line"?r.result:r.intermediate;
+ const visualIntermediate=visual?.kind==="number-line"?r.result:visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate;
  const step=choose(seed+1,variants(visualIntermediate));
- const correctClaim={text:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
- const falseClaims=[1,3].map(n=>({text:visual?`La representación permite concluir que el resultado es ${base[n]}.`:`La solución obtenida es ${base[n]}.`,truth:false}));
+ const correctClaim={text:visual?.kind==="number-line"?`La solución representada es x > ${solution}.`:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
+ const falseClaims=visual?.kind==="number-line"
+  ?[{text:`La solución representada incluye el extremo: x ≥ ${solution}.`,truth:false},
+    {text:`La solución representada contiene valores menores: x < ${solution}.`,truth:false}]
+  :[1,3].map(n=>({text:visual?`La representación permite concluir que el resultado es ${base[n]}.`:`La solución obtenida es ${base[n]}.`,truth:false}));
  const ordered=[correctClaim,...falseClaims],shift=seed%3;
  const assertions=[...ordered.slice(shift),...ordered.slice(0,shift)];
  const id="math-m1-"+[topic,subtopic,mode,level,index].map(v=>String(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")).join("-");
@@ -116,8 +119,10 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
   formula:r.formula,source:guideSubtopics.has(subtopic)?"GUIA-PRE-U-UNAH-2026:p6":"catalogo-practica-complementaria",
   oracle:{kind:r.kind,inputs:r.inputs,answer:r.result,intermediate:r.intermediate},
   options:choices.choices,answerIndex:choices.answerIndex,assertions,
-  steps:[{label:visual?.kind==="number-line"?"Identifica el valor del extremo abierto":visual?"Calcula o deduce el valor intermedio a partir de la figura":r.interLabel,choices:step.choices,answerIndex:step.answerIndex},
-   {label:"Resultado final",choices:choices.choices,answerIndex:choices.answerIndex}],
+  steps:[{label:visual?.kind==="number-line"?"Identifica el valor del extremo abierto":visual?.kind==="rectangle"&&visual.measure==="area"?"Lee la medida horizontal de la figura":visual?"Calcula o deduce el valor intermedio a partir de la figura":r.interLabel,choices:step.choices,answerIndex:step.answerIndex},
+   {label:visual?.kind==="number-line"?"Selecciona la desigualdad representada":"Resultado final",choices:visual?.kind==="number-line"?
+    [`x > ${solution}`,`x ≥ ${solution}`,`x < ${solution}`,`x ≤ ${solution}`]:choices.choices,
+    answerIndex:visual?.kind==="number-line"?0:choices.answerIndex}],
   family:"math-m1-"+subtopic,reviewStatus:"editorial-draft"};
 }
 export function mathPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
