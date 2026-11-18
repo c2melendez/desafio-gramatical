@@ -62,8 +62,8 @@ export function m2ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,bas
   const ra=a as ReadingChallenge,rb=b as ReadingChallenge;
   return {id,level,subtopic,title,passage,
    order:{parts:[
-     "Identificar primero la evidencia de A: "+ra.order.parts[0],
-     "Contrastar el proceso de B: "+rb.order.parts[1],
+     "Ubicar evidencias en la lectura A: "+ra.order.parts[0],
+     "Examinar las relaciones del texto B: "+rb.order.parts[1],
      "Formular una conclusión prudente sobre B: "+rb.order.parts[2]
     ],hint:"Primero analiza la evidencia A, después compara con B y finalmente sintetiza los alcances.",
     explanation:"Caso A: "+ra.order.explanation+" Caso B: "+rb.order.explanation},
