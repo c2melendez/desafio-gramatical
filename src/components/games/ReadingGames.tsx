@@ -21,7 +21,13 @@ function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetect
  return <section className="card-ink bg-card p-5 space-y-3" aria-label="Texto para analizar">
   <p className="text-xs font-bold uppercase tracking-wider text-primary">Lectura · {item.subtopic}</p>
   <h2 className="text-xl font-black">{item.id.startsWith("m3-reading-")?`Integración de tres fuentes · ${item.subtopic}`:item.title}</h2>
-  <p className="leading-relaxed whitespace-pre-line text-base">{item.passage}</p>
+  {item.id.startsWith("m3-reading-")
+   ?<div className="space-y-3">
+     {item.passage.split(/(?=FUENTE [ABC]\\n)/).filter(Boolean).map((block,i)=>
+      <section key={i} className="rounded-lg border-2 border-foreground/40 bg-background p-3 whitespace-pre-line leading-relaxed text-base"
+       aria-label={`Fuente de lectura ${"ABC"[i]}`}>{block.trim()}</section>)}
+    </div>
+   :<p className="leading-relaxed whitespace-pre-line text-base">{item.passage}</p>}
  </section>;
 }
 const TYPES:EvidenceTag[]=["explicit","inference","unsupported"];

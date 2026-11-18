@@ -103,6 +103,16 @@ jobs:
           path: m1-operation-audit.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar claridad, ambigüedad y competencia por ejercicio
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
+      - name: Archivar matriz editorial por ID, tema y subtema
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: claridad-competencia-espanol
+          path: claridad-competencia-espanol.json
+          retention-days: 30
+          if-no-files-found: error
       - name: Auditar calidad de retroalimentación de Español
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-feedback-quality.mjs > paridad-retroalimentacion.json
       - name: Archivar auditoría pedagógica de 189 celdas

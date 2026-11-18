@@ -47,11 +47,11 @@ export function m2WritingPool(level:Level,subtopic:WritingSubtopic,mode:Mode,bas
   const sa=a as Extract<WritingItem,{steps:[string,string,string]}>;
   const sb=b as Extract<WritingItem,{steps:[string,string,string]}>;
   return {id,level,subtopic,steps:[
-   "Primero, examinar el caso A: "+sa.steps[0],
-   "Después, estudiar la evidencia del caso B: "+sb.steps[1],
-   "Por último, concluir sobre el caso B: "+sb.steps[2]
+   "Examinar la evidencia pertinente al caso A: "+sa.steps[0],
+   "Contrastar los argumentos del caso B: "+sb.steps[1],
+   "Formular una conclusión limitada a los datos del caso B: "+sb.steps[2]
   ],hint:"Ordena el proceso: examinar A, contrastar B y cerrar con un argumento sustentado.",
-   explanation:"El razonamiento organiza pruebas de dos fuentes sin invertir los pasos: "+("explanation" in sa?sa.explanation:"")+("explanation" in sb?" "+sb.explanation:""),
+   explanation:"En el caso A debe examinarse esta evidencia: «"+sa.steps[0]+"». En el caso B se contrasta el dato «"+sb.steps[1]+"» antes de concluir con «"+sb.steps[2]+"». Si se invierte el proceso, se formula una conclusión sin comprobar sus fundamentos. "+("explanation" in sa?sa.explanation:"")+("explanation" in sb?" "+sb.explanation:""),
    ...data} as unknown as WritingItem;
  });
 }

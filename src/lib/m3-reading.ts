@@ -10,7 +10,10 @@ const tri=<T,>(xs:T[],i:number):[T,T,T]=>{
  return [xs[a],xs[b],xs[c]];
 };
 export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,existing:ReadingItem[]):ReadingChallenge[]{
- const sources=existing.filter(x=>x.id.startsWith('m2-reading-')) as ReadingChallenge[];
+ // Usar tres textos base individuales, no tres composites M2 de dos textos:
+ // evita exigir seis lecturas para resolver una sola ronda y reduce ambigüedad.
+ const sources=existing.filter(x=>!x.id.startsWith('m2-reading-') &&
+  (mode==='quiz'?'options' in x:mode==='clasificar'?'claims' in x:'order' in x)) as ReadingChallenge[];
  return Array.from({length:count[level]},(_,i)=>{
   const [a,b,c]=tri(sources,i+19*['principiante','intermedio','avanzado'].indexOf(level));
   const id='m3-reading-'+slug(subtopic)+'-'+mode+'-'+level+'-'+(i+1);
@@ -18,8 +21,8 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
   const meta={origin:'integracion-triple-M3-20261117',sourceIds,reviewStatus:'editorial-draft' as const,family:id,
    sourceLocator:'Guía pre-U UNAH 2026; textos originales de M2',
    competence:'Competencias comunicativas — Comprensión lectora',cognitiveGoal:'Integrar y evaluar tres fuentes contextualizadas'};
-  const passage='FUENTE A: '+a.passage+'\n\nFUENTE B: '+b.passage+'\n\nFUENTE C: '+c.passage;
-  const common={id,level,subtopic,title:'Integración crítica: '+a.title+' / '+b.title+' / '+c.title,passage,...meta};
+  const passage='FUENTE A\n'+a.passage+'\n\nFUENTE B\n'+b.passage+'\n\nFUENTE C\n'+c.passage;
+  const common={id,level,subtopic,title:'Análisis comparativo de tres textos',passage,...meta};
   if(mode==='quiz'){
    const right=[a,b,c].map(q=>q.options[q.answer]),wrong=[a,b,c].map(q=>q.options[(q.answer+1)%4]);
    const show=(arr:string[])=>arr.map((v,k)=>'Fuente '+('ABC'[k])+': '+v).join('; ');
@@ -31,22 +34,27 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
   }
   if(mode==='clasificar'){
    const pick=(q:ReadingChallenge,tag:'explicit'|'inference'|'unsupported')=>q.claims.find(x=>x.tag===tag)!;
-   return {...common,question:'Clasifica las evidencias en las tres fuentes sin intercambiar sus alcances.',
-    claims:[
-     {...pick(a,'explicit'),text:'Fuente A: '+pick(a,'explicit').text},
-     {...pick(b,'inference'),text:'Fuente B: '+pick(b,'inference').text},
-     {...pick(c,'unsupported'),text:'Fuente C: '+pick(c,'unsupported').text}
-    ],options:['Dato explícito','Inferencia','No sustentado','No aplica'],answer:0,
-    explanation:'Clasificar exige contrastar cada juicio con su fuente: A (dato explícito): '+pick(a,'explicit').explanation+' B (inferencia): '+pick(b,'inference').explanation+' C (no sustentado): '+pick(c,'unsupported').explanation,
+   const tags=['explicit','inference','unsupported'] as const;
+   const ta=tags[i%3],tb=tags[(i+1)%3],tc=tags[(i+2)%3];
+   const candidates=[
+    {...pick(a,ta),text:'Fuente A: '+pick(a,ta).text},
+    {...pick(b,tb),text:'Fuente B: '+pick(b,tb).text},
+    {...pick(c,tc),text:'Fuente C: '+pick(c,tc).text}
+   ];
+   const permutations=[[0,1,2],[1,2,0],[2,0,1],[0,2,1],[2,1,0],[1,0,2]];
+   const claims=permutations[i%6].map(index=>candidates[index]);
+   return {...common,question:'Clasifica cada afirmación según su fuente A, B o C. No traslades datos de un texto a otro.',
+    claims,options:['Dato explícito','Inferencia','No sustentado','No aplica'],answer:0,
+    explanation:'Cada fuente se evalúa según su evidencia: '+candidates.map(x=>x.text+' → '+x.explanation).join(' '),
     order:a.order};
   }
   return {...common,
    question:'Ordena un análisis de tres fuentes con evidencia, contraste y conclusión.',
    order:{parts:[
-    'Primero localizar la evidencia en A: '+a.order.parts[0],
-    'Después contrastar B con A: '+b.order.parts[1],
-    'Finalmente delimitar conclusiones sobre C: '+c.order.parts[2]
-   ],hint:'Distingue dato de conclusión y evita extrapolaciones.',explanation:'A: '+a.order.explanation+' B: '+b.order.explanation+' C: '+c.order.explanation},
+    'Identificar las pruebas del texto A: '+a.order.parts[0],
+    'Contrastar las pruebas del texto B: '+b.order.parts[1],
+    'Delimitar la conclusión pertinente al texto C: '+c.order.parts[2]
+   ],hint:'Ordena las acciones por su función: identificar pruebas, comparar su alcance y delimitar conclusiones en tres textos diferentes.',explanation:'A: '+a.order.explanation+' B: '+b.order.explanation+' C: '+c.order.explanation},
    claims:a.claims,options:['Analizar A','Contrastar B','Delimitar C','Ignorar datos'],answer:0,
    explanation:'La secuencia correcta empieza por identificar evidencia en A ('+a.order.explanation+'), contrasta lo que B permite concluir ('+b.order.explanation+') y delimita C ('+c.order.explanation+'). Una conclusión prematura puede confundir un hecho explícito con una inferencia.'};
  });
