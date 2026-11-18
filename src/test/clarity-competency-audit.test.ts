@@ -35,6 +35,17 @@ describe('Auditoría editorial: claridad y competencia',()=>{
     for(const text of item.steps)expect(text,item.id).not.toMatch(orderingCue);
   }
  });
+ it('impide resolver la clasificación por patrón fijo de posición o fuente',()=>{
+  for(const subtopic of READING_SUBTOPICS)for(const level of LEVELS){
+   const pool=readingPool(level,subtopic,'clasificar');
+   for(const generation of ['m2-reading-','m3-reading-']){
+    const generated=pool.filter(x=>x.id.startsWith(generation));
+    const firstTags=new Set(generated.map(x=>x.claims[0].tag));
+    expect(firstTags.size,generation+subtopic+level).toBe(3);
+    for(const item of generated)expect(new Set(item.claims.map(x=>x.tag)).size,item.id).toBe(3);
+   }
+  }
+ });
  it('conserva las soluciones comprobables e independencia de IDs tras editar las consignas',()=>{
   const ids=new Set();
   for(const item of [...M2_GRAMMAR_ACTIVITIES,...M3_GRAMMAR_ACTIVITIES]){
