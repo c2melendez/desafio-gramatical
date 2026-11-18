@@ -41,7 +41,7 @@ describe("Paridad pedagógica y navegación contextual universal",()=>{
   vi.spyOn(window,"confirm").mockReturnValue(true);
   render(<GameSessionHeader context="Inferencias · Avanzado" title="Reconstruye el texto" round={3} score={20} streak={2}
    onRestart={restart} returnTo={selection}/>);
-  const link=screen.getByRole("link",{name:"Volver a la selección del juego"});
+  const link=screen.getByRole("link",{name:/Salir/});
   expect(JSON.parse(link.getAttribute("data-selection")!)).toEqual(selection);
   expect(link).toHaveTextContent("Salir");
   fireEvent.click(screen.getByRole("button",{name:"Reiniciar"}));
