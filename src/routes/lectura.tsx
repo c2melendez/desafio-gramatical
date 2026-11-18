@@ -1,5 +1,6 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
+import {studyReturn} from "@/lib/study-context";
 import {useEffect,useRef,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
@@ -35,6 +36,7 @@ export const Route=createFileRoute("/lectura")({
 });
 function ReadingPlay(){
  const {subtema,modo,nivel}=Route.useSearch();
+ const returnTo=studyReturn("Comprensión lectora",subtema,modo,nivel);
  const [run,setRun]=useState(0);
  const [items,setItems]=useState<ReadingItem[]|null>(null);
  const [idx,setIdx]=useState(0);
@@ -88,7 +90,7 @@ function ReadingPlay(){
  const title=gameNames("Comprensión lectora")[modo];
  const levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(items.length!==ROUNDS_PER_GAME)throw new Error("Paridad de rondas: se esperaban 10 en lectura");
- if(items.length===0)return <main className="mx-auto max-w-xl p-6"><p>Este contenido aún no tiene ejercicios.</p><Link to="/" className="underline">← Inicio</Link></main>;
+ if(items.length===0)return <main className="mx-auto max-w-xl p-6"><p>Este contenido aún no tiene ejercicios.</p><Link to="/" search={returnTo} className="underline">← Inicio</Link></main>;
  if(finished){
   const pct=total?Math.round(100*correct/total):0;
   return <main className="mx-auto max-w-xl px-4 py-8 space-y-5">
@@ -110,7 +112,7 @@ function ReadingPlay(){
    {LEVELS.indexOf(nivel)<LEVELS.length-1&&
     <Link to="/lectura" search={{subtema,modo,nivel:LEVELS[LEVELS.indexOf(nivel)+1]}}
      className="tile block w-full bg-secondary text-center text-secondary-foreground">Siguiente nivel →</Link>}
-   <Link to="/" className="tile block w-full bg-card text-center">Volver al menú</Link>
+   <Link to="/" search={returnTo} className="tile block w-full bg-card text-center">Volver a la selección</Link>
    <p className="text-xs text-muted-foreground">Los puntos de juego no representan el resultado oficial PHUMA.</p>
   </main>;
  }
@@ -118,7 +120,7 @@ function ReadingPlay(){
  const props={item,report,next,isLast:idx===items.length-1};
  return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5">
   <GameSessionHeader context={`${subtema} · ${levelName}`} title={title} round={idx+1}
-   score={score} streak={streak} onRestart={()=>setRun(n=>n+1)}/>
+   score={score} streak={streak} onRestart={()=>setRun(n=>n+1)} returnTo={returnTo}/>
   {modo==="clasificar"&&<ReadingDetective key={item.id} {...props} item={item as ReadingChallenge|MainIdeaDetectiveCase|InferenceDetectiveCase|CriticalDetectiveCase|NewReadingDetective|AnalysisDetective|CompareDetective|FigurativeDetectiveCase}/>}
   {modo==="quiz"&&<ReadingInference key={item.id} {...props} item={item as ReadingChallenge|MainIdeaChoiceCase|InferenceChoiceCase|CriticalChoiceCase|NewReadingChoice|AnalysisChoice|CompareChoice|FigurativeChoiceCase}/>}
   {modo==="construir"&&<ReadingReconstruct key={item.id} {...props} item={item as ReadingChallenge|MainIdeaReconstructCase|InferenceReconstructCase|CriticalReconstructCase|NewReadingReconstruct|AnalysisReconstruct|CompareReconstruct|FigurativeReconstructCase}/>}
