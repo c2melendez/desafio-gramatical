@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {NextButton} from "./Feedback";
+import {LearningFeedback} from "./LearningFeedback";
 import type {GameProps} from "./types";
 import {EVIDENCE_LABEL,checkReadingOrder,type EvidenceTag,type ReadingChallenge} from "@/lib/reading";
 import type {MainIdeaChoiceCase} from "@/lib/main-idea-choice-cases";
@@ -46,9 +47,8 @@ export function ReadingDetective({item,report,next,isLast}:GameProps<ReadingChal
      onClick={()=>setPicks(x=>({...x,[i]:type}))}
      className={`rounded-lg border-2 border-foreground px-3 py-2 text-sm font-bold ${picks[i]===type?"bg-primary text-primary-foreground":"bg-muted"} disabled:cursor-default`}>{EVIDENCE_LABEL[type]}</button>)}
    </div>
-   {checked&&<div className={`rounded-lg p-3 text-sm ${picks[i]===claim.tag?"bg-success-soft":"bg-destructive-soft"}`} aria-live="polite">
-    <strong>{picks[i]===claim.tag?"✓ Correcto":"✗ "+EVIDENCE_LABEL[claim.tag]+": "}</strong> {claim.explanation}
-   </div>}
+   {checked&&<LearningFeedback correct={picks[i]===claim.tag} subtopic={item.subtopic}
+     selected={EVIDENCE_LABEL[picks[i]]} expected={EVIDENCE_LABEL[claim.tag]} explanation={claim.explanation}/>}
   </div>)}
   {!checked?<button onClick={check} disabled={!done} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">{done?"Comprobar las tres afirmaciones":"Clasifica las tres afirmaciones"}</button>:<NextButton onClick={next} isLast={isLast}/>}
  </div>;
@@ -70,9 +70,8 @@ export function ReadingInference({item,report,next,isLast}:GameProps<ReadingChal
    {pick!==null&&i===item.answer?"✓ ":pick===i?"✗ ":""}{choice}
   </button>)}</div>
   {pick!==null&&<div className="space-y-3" aria-live="polite">
-   <p className={`rounded-lg border-2 border-foreground p-4 ${pick===item.answer?"bg-success-soft":"bg-destructive-soft"}`}>
-    <strong>{pick===item.answer?"¡Correcto! ":"Revisa la evidencia. "}</strong>{item.explanation}
-   </p><NextButton onClick={next} isLast={isLast}/></div>}
+   <LearningFeedback correct={pick===item.answer} subtopic={item.subtopic}
+    selected={item.options[pick]} expected={item.options[item.answer]} explanation={item.explanation}/><NextButton onClick={next} isLast={isLast}/></div>}
  </div>;
 }
 export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingChallenge|MainIdeaReconstructCase|InferenceReconstructCase|CriticalReconstructCase|NewReadingReconstruct|AnalysisReconstruct|CompareReconstruct|FigurativeReconstructCase>){
@@ -103,9 +102,7 @@ export function ReadingReconstruct({item,report,next,isLast}:GameProps<ReadingCh
    <button disabled={!sequence.length} onClick={()=>setSequence([])} className="tile bg-card disabled:opacity-40">Vaciar</button>
    <button disabled={sequence.length!==3} onClick={check} className="tile col-span-2 bg-primary text-primary-foreground disabled:opacity-40">Comprobar secuencia</button>
   </div>:<div aria-live="polite" className="space-y-3">
-   <p className={`rounded-lg border-2 border-foreground p-4 ${ok?"bg-success-soft":"bg-destructive-soft"}`}>
-    <strong>{ok?"¡Orden correcto! ":"Este no es el orden lógico. "}</strong>{item.order.explanation}
-    {!ok&&<span className="block mt-2"><strong>Secuencia orientativa:</strong> {pieces.join(" → ")}</span>}
-   </p><NextButton onClick={next} isLast={isLast}/></div>}
+   <LearningFeedback correct={ok} subtopic={item.subtopic} title={ok?"¡Orden correcto!":"Este no es el orden lógico."}
+     selected={sequence.map(i=>pieces[i]).join(" → ")} expected={pieces.join(" → ")} explanation={item.order.explanation}/><NextButton onClick={next} isLast={isLast}/></div>}
  </div>;
 }
