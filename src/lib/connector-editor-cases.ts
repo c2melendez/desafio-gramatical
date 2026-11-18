@@ -14,7 +14,7 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "steps": [
     "La clase eligió un cuento para leer.",
     "Los estudiantes identificaron a sus personajes.",
-    "Comentaron el mensaje del cuento."
+    "Comentaron el mensaje del cuento leído en clase."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La secuencia sitúa la elección, la lectura analítica y el comentario final.",
@@ -39,8 +39,8 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "subtopic": "Conectores",
     "steps": [
     "El equipo escogió un tema para investigar.",
-    "Buscó información en la biblioteca.",
-    "Elaboró una breve presentación."
+    "Buscó información relevante sobre el tema en la biblioteca.",
+    "Elaboró una breve presentación con los datos investigados."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Se ordenan las etapas básicas de investigación y presentación.",
@@ -52,7 +52,7 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "subtopic": "Conectores",
     "steps": [
     "La maestra explicó las instrucciones del juego.",
-    "Los participantes formaron equipos.",
+    "Los participantes formaron equipos para realizar el juego.",
     "Al terminar, compartieron los resultados."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
@@ -65,7 +65,7 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "subtopic": "Conectores",
     "steps": [
     "Por la mañana, el grupo preparó los materiales.",
-    "Visitó el centro comunitario.",
+    "Visitó el centro comunitario para realizar la actividad prevista.",
     "Al regresar, redactó un informe de la actividad."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
@@ -79,7 +79,7 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "steps": [
     "Antes de escribir, Ana hizo una lista de ideas.",
     "Redactó un primer párrafo con esas ideas.",
-    "Revisó la ortografía del texto."
+    "Revisó la ortografía del texto que había redactado."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La redacción se organiza como planificación, borrador y revisión.",
