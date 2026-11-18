@@ -93,7 +93,7 @@
         "espanol-CORTE"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         10,
         15,
@@ -101,13 +101,29 @@
       ],
       "evidence": "docs/matematicas-m1-cierre.md",
       "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
-      "scope": "Núcleo técnico 10/15/20, 198 celdas, 2970 registros; requiere publicar CI y Render Live mismo SHA",
+      "scope": "Núcleo técnico-operativo completo 10/15/20 por juego/subtema; 2970 registros en 198 celdas; revisión docente diferida",
       "technical": {
         "cells": 198,
         "records": 2970,
         "ids_unique": 2970,
         "oracle_failures": 0,
         "academic_independence": "NO_CERTIFICADA"
+      },
+      "release": {
+        "technical_baseline_sha": "b1fbe5faa00391010f2df8372a2e54765913dea1",
+        "ci_main": {
+          "run_id": 44247740638,
+          "sha": "b1fbe5faa00391010f2df8372a2e54765913dea1",
+          "conclusion": "success"
+        },
+        "render": {
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "deploy_id": "dep-dbujs7m0tbcc73d197kg",
+          "sha": "b1fbe5faa00391010f2df8372a2e54765913dea1",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com"
+        },
+        "doc_release_note": "Tras registrar este cierre, verificar de nuevo CI y Render del SHA documental final"
       }
     },
     {

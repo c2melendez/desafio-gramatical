@@ -3,7 +3,7 @@
   "id": "math-M1-20261117-integral",
   "area": "matematicas",
   "stage": "M1",
-  "state": "VERIFICADA_LOCAL_PENDIENTE_PUBLICACION",
+  "state": "COMPLETADA",
   "base_sha": "dc560eca171d1dede7df56e3bab903284be1dd94",
   "source": "GUIA-PRE-U-UNAH-2026.pdf p.6 + catálogo phuma-catalog.ts",
   "rounds_per_game": 10,
@@ -1944,5 +1944,25 @@
     "same_prompt_strings_across_modes": 1659,
     "meaning": "La cifra de 1659 es cantidad de textos de enunciado distintos en todo el banco técnico. Compartir familias y parámetros no acredita independencia conceptual."
   },
-  "publication": "PENDIENTE_PR_MAIN_RENDER_SAME_SHA"
+  "publication": "CI_MAIN_SUCCESS_RENDER_LIVE_SHA_VERIFICADOS_PRE_CIERRE_DOCUMENTAL",
+  "release": {
+    "merge": {
+      "pr": 13,
+      "sha": "b1fbe5faa00391010f2df8372a2e54765913dea1"
+    },
+    "ci_main": {
+      "run_id": 44247740638,
+      "sha": "b1fbe5faa00391010f2df8372a2e54765913dea1",
+      "conclusion": "success"
+    },
+    "render": {
+      "deploy_id": "dep-dbujs7m0tbcc73d197kg",
+      "service_id": "srv-dbt0rilg1s2s738eku8g",
+      "sha": "b1fbe5faa00391010f2df8372a2e54765913dea1",
+      "status": "live"
+    },
+    "last_step": "Validar CI y Render en SHA final después de grabar este manifiesto"
+  },
+  "next_module": "matematicas-M2",
+  "review_academico": "PENDIENTE_AUTORIZADO"
 }

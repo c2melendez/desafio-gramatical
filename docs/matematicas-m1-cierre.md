@@ -31,3 +31,11 @@ Fecha de trabajo: 17 de noviembre de 2026. Documento de aceptación **candidata*
 La revisión docente permanece **PENDIENTE**, autorizada expresamente por el usuario. No se emite acreditación de independencia semántica, nivel de dificultad ni calibración psicométrica. No se presentan preguntas como oficiales ni se estima puntuación PHUMA a partir del juego.
 
 Siguiente etapa tras cerrar la publicación: **Matemáticas M2**, expansión acumulada 20/35/45 por juego y subtema, preservando todos los IDs y usando la misma política de paridad y auditoría por ejercicio.
+
+## Registro de publicación e integración del núcleo
+
+- PR #13 fusionado en `main`: commit `b1fbe5faa00391010f2df8372a2e54765913dea1`.
+- CI oficial del commit fusionado: [Actions #44247740638](https://github.com/c2melendez/desafio-gramatical/actions/runs/44247740638), **SUCCESS**.
+- Render del mismo commit: despliegue `dep-dbujs7m0tbcc73d197kg` **Live** en https://desafio-gramatical.onrender.com/.
+- El commit que incluye este registro documental deberá superar nuevamente CI y Render Live en su propio SHA antes del cierre de evidencia final. El estado de revisión académica sigue expresamente pendiente.
+- **Siguiente módulo:** `matematicas-M2` (acumulado 20/35/45), sin alterar el núcleo ni sus IDs.
