@@ -99,7 +99,7 @@ export const M2_CATEGORY_QUIZ:Record<Level,QuizQ[]>=Object.fromEntries(levels.ma
     "A: "+a.options[a.answer]+"; B: "+b.options[(b.answer+1)%b.options.length],
     "A: "+a.options[(a.answer+1)%a.options.length]+"; B: "+b.options[(b.answer+1)%b.options.length]
   ],0);
-  return {id,q:"Resuelve los dos casos. Caso A: "+a.q+" Caso B: "+b.q,options:options.options,answer:options.answer,exp:"A: "+a.exp+" B: "+b.exp};
+  return {id,q:"Resuelve los dos casos. Caso A: "+a.q+" Caso B: "+b.q,options:options.options,answer:options.answer,exp:"En A: "+a.exp+" La categoría se justifica por su función en el contexto A. En B: "+b.exp+" Comprueba también su función en B: una combinación es correcta únicamente cuando ambas clasificaciones se sostienen en sus respectivas oraciones."};
  })])) as Record<Level,QuizQ[]>;
 export const M2_CATEGORY_BUILD:Record<Level,BuildQ[]>=Object.fromEntries(levels.map(l=>[l,
  Array.from({length:needed(l,"construir")},(_,i)=>{
