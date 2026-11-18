@@ -18,8 +18,9 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
   const meta={origin:'integracion-triple-M3-20261117',sourceIds,reviewStatus:'editorial-draft' as const,family:id,
    sourceLocator:'Guía pre-U UNAH 2026; textos originales de M2',
    competence:'Competencias comunicativas — Comprensión lectora',cognitiveGoal:'Integrar y evaluar tres fuentes contextualizadas'};
-  const passage='FUENTE A: '+a.passage+'\n\nFUENTE B: '+b.passage+'\n\nFUENTE C: '+c.passage;
-  const common={id,level,subtopic,title:'Integración crítica: '+a.title+' / '+b.title+' / '+c.title,passage,...meta};
+  const relabel=(passage:string,label:string)=>passage.replace(/LECTURA A —/g,'Texto '+label+'1 —').replace(/LECTURA B —/g,'Texto '+label+'2 —');
+  const passage='BLOQUE A · textos A1 y A2\n'+relabel(a.passage,'A')+'\n\nBLOQUE B · textos B1 y B2\n'+relabel(b.passage,'B')+'\n\nBLOQUE C · textos C1 y C2\n'+relabel(c.passage,'C');
+  const common={id,level,subtopic,title:'Análisis comparativo de tres bloques de lectura',passage,...meta};
   if(mode==='quiz'){
    const right=[a,b,c].map(q=>q.options[q.answer]),wrong=[a,b,c].map(q=>q.options[(q.answer+1)%4]);
    const show=(arr:string[])=>arr.map((v,k)=>'Fuente '+('ABC'[k])+': '+v).join('; ');
@@ -31,7 +32,7 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
   }
   if(mode==='clasificar'){
    const pick=(q:ReadingChallenge,tag:'explicit'|'inference'|'unsupported')=>q.claims.find(x=>x.tag===tag)!;
-   return {...common,question:'Clasifica las evidencias en las tres fuentes sin intercambiar sus alcances.',
+   return {...common,question:'Clasifica cada afirmación según el bloque A, B o C al que se refiere. Cada bloque contiene dos lecturas; no traslades datos de un bloque al otro.',
     claims:[
      {...pick(a,'explicit'),text:'Fuente A: '+pick(a,'explicit').text},
      {...pick(b,'inference'),text:'Fuente B: '+pick(b,'inference').text},
@@ -43,10 +44,10 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
   return {...common,
    question:'Ordena un análisis de tres fuentes con evidencia, contraste y conclusión.',
    order:{parts:[
-    'Primero localizar la evidencia en A: '+a.order.parts[0],
-    'Después contrastar B con A: '+b.order.parts[1],
-    'Finalmente delimitar conclusiones sobre C: '+c.order.parts[2]
-   ],hint:'Distingue dato de conclusión y evita extrapolaciones.',explanation:'A: '+a.order.explanation+' B: '+b.order.explanation+' C: '+c.order.explanation},
+    'Identificar la evidencia sustentada en el bloque A: '+a.order.parts[0],
+    'Contrastar la evidencia correspondiente al bloque B: '+b.order.parts[1],
+    'Delimitar la conclusión pertinente al bloque C: '+c.order.parts[2]
+   ],hint:'Ordena las acciones por su función: identificar pruebas, comparar su alcance y delimitar conclusiones. Cada bloque contiene dos textos distintos.',explanation:'A: '+a.order.explanation+' B: '+b.order.explanation+' C: '+c.order.explanation},
    claims:a.claims,options:['Analizar A','Contrastar B','Delimitar C','Ignorar datos'],answer:0,
    explanation:'La secuencia correcta empieza por identificar evidencia en A ('+a.order.explanation+'), contrasta lo que B permite concluir ('+b.order.explanation+') y delimita C ('+c.order.explanation+'). Una conclusión prematura puede confundir un hecho explícito con una inferencia.'};
  });
