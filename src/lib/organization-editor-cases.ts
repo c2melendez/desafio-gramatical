@@ -8,9 +8,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "principiante",
     "subtopic": "Organización textual",
     "steps": [
-      "La escuela anunció que organizaría un torneo de ajedrez.",
-      "Después, cada grado inscribió a sus participantes interesados.",
-      "Finalmente, se realizó el torneo y se entregaron reconocimientos."
+    "La escuela anunció que organizaría un torneo de ajedrez.",
+    "Cada grado inscribió a sus participantes interesados.",
+    "Se realizó el torneo y se entregaron reconocimientos."
     ],
     "explanation": "La convocatoria precede a la inscripción y a la celebración del torneo.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -21,9 +21,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "principiante",
     "subtopic": "Organización textual",
     "steps": [
-      "Una familia decidió reparar una bicicleta vieja.",
-      "Primero, examinó las piezas que necesitaban mantenimiento.",
-      "Al terminar la reparación, probó la bicicleta en un lugar seguro."
+    "Una familia decidió reparar una bicicleta vieja.",
+    "Examinó las piezas que necesitaban mantenimiento.",
+    "Al terminar la reparación, probó la bicicleta en un lugar seguro."
     ],
     "explanation": "El diagnóstico de la bicicleta sucede antes de la reparación y su comprobación.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -34,9 +34,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "principiante",
     "subtopic": "Organización textual",
     "steps": [
-      "La clase recibió una invitación para visitar el jardín botánico.",
-      "A continuación, preparó preguntas sobre las plantas de la zona.",
-      "Después de la visita, compartió lo que había aprendido."
+    "La clase recibió una invitación para visitar el jardín botánico.",
+    "Preparó preguntas sobre las plantas de la zona.",
+    "Tras la visita, compartió lo que había aprendido."
     ],
     "explanation": "La preparación y la visita preceden a la síntesis del aprendizaje.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -60,9 +60,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "principiante",
     "subtopic": "Organización textual",
     "steps": [
-      "La biblioteca anunció la llegada de nuevos cuentos infantiles.",
-      "Después, organizó los títulos por autor y género.",
-      "Por último, los lectores pudieron consultarlos en el catálogo actualizado."
+    "La biblioteca anunció la llegada de nuevos cuentos infantiles.",
+    "Organizó los títulos por autor y género.",
+    "Los lectores pudieron consultarlos en el catálogo actualizado."
     ],
     "explanation": "Un catálogo se actualiza después de recibir y clasificar los libros.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -73,9 +73,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "principiante",
     "subtopic": "Organización textual",
     "steps": [
-      "Los vecinos solicitaron pintar las bancas del parque.",
-      "Primero, se acordó un día para realizar el trabajo comunitario.",
-      "Finalmente, las bancas pintadas quedaron disponibles para el público."
+    "Los vecinos solicitaron pintar las bancas del parque.",
+    "Se acordó un día para realizar el trabajo comunitario.",
+    "Las bancas pintadas quedaron disponibles para el público."
     ],
     "explanation": "La solicitud y la organización preceden al resultado del trabajo.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -86,9 +86,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "principiante",
     "subtopic": "Organización textual",
     "steps": [
-      "La profesora presentó un documental sobre los volcanes.",
-      "Luego, los estudiantes anotaron tres ideas importantes del video.",
-      "En el cierre, compararon sus notas y formularon preguntas."
+    "La profesora presentó un documental sobre los volcanes.",
+    "Los estudiantes anotaron tres ideas importantes del video.",
+    "En el cierre, compararon sus notas y formularon preguntas."
     ],
     "explanation": "La secuencia integra presentación, registro y discusión de ideas.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -112,9 +112,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "Una asociación evaluó la asistencia a sus talleres de formación.",
-      "Primero, definió qué contaría como participante presente.",
-      "A continuación, comparó las cifras de cada taller usando el mismo criterio."
+    "Una asociación evaluó la asistencia a sus talleres de formación.",
+    "Definió qué contaría como participante presente.",
+    "Comparó las cifras de cada taller usando el mismo criterio."
     ],
     "explanation": "Un indicador común debe definirse antes de comparar observaciones.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -125,9 +125,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "Un ensayo propuso ampliar los espacios de lectura de la escuela.",
-      "El desarrollo presentó datos sobre la ocupación actual de las salas.",
-      "Finalmente, recomendó estudiar horarios y necesidades antes de invertir."
+    "Un ensayo propuso ampliar los espacios de lectura de la escuela.",
+    "El desarrollo presentó datos sobre la ocupación actual de las salas.",
+    "Recomendó estudiar horarios y necesidades antes de invertir."
     ],
     "explanation": "La tesis requiere evidencia pertinente y una recomendación derivada de ella.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -138,9 +138,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "Los alumnos observaron diferencias de crecimiento entre plantas.",
-      "Después, advirtieron que los recipientes no recibían igual cantidad de luz.",
-      "El informe concluyó que no podía atribuir las diferencias únicamente al riego."
+    "Los alumnos observaron diferencias de crecimiento entre plantas.",
+    "Advirtieron que los recipientes no recibían igual cantidad de luz.",
+    "El informe concluyó que no podía atribuir las diferencias únicamente al riego."
     ],
     "explanation": "La presencia de una variable alternativa condiciona la conclusión del experimento.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -164,9 +164,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "Un boletín anunció una disminución del consumo de papel.",
-      "Luego, precisó el período y la cantidad de hojas utilizadas.",
-      "Finalmente, señaló que los registros aún no explicaban por sí solos todas las causas."
+    "Un boletín anunció una disminución del consumo de papel.",
+    "Precisó el período y la cantidad de hojas utilizadas.",
+    "Señaló que los registros aún no explicaban por sí solos todas las causas."
     ],
     "explanation": "El dato observado se contextualiza antes de discutir posibles explicaciones.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -177,9 +177,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "La comisión escolar detectó desacuerdos sobre el uso del laboratorio.",
-      "Primero, escuchó las necesidades de los diferentes grupos.",
-      "Después, redactó reglas comunes y estableció una revisión de su aplicación."
+    "La comisión escolar detectó desacuerdos sobre el uso del laboratorio.",
+    "Escuchó las necesidades de los diferentes grupos.",
+    "Redactó reglas comunes y estableció una revisión de su aplicación."
     ],
     "explanation": "Una solución colectiva exige recoger perspectivas antes de acordar reglas.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -190,9 +190,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "Un texto divulgativo presentó los principales tipos de nubes.",
-      "A continuación, explicó sus características con ejemplos cotidianos.",
-      "Por último, resumió sus diferencias sin agregar otra clasificación nueva."
+    "Un texto divulgativo presentó los principales tipos de nubes.",
+    "Explicó sus características con ejemplos cotidianos.",
+    "Resumió sus diferencias sin agregar otra clasificación nueva."
     ],
     "explanation": "La síntesis debe integrar lo desarrollado en lugar de introducir contenido ajeno.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -203,9 +203,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "Un municipio publicó mapas de crecimiento urbano de dos décadas.",
-      "El informe aclaró la escala de ambos mapas y sus fuentes.",
-      "Después, describió cambios visibles en las zonas comparables."
+    "Un municipio publicó mapas de crecimiento urbano de dos décadas.",
+    "El informe aclaró la escala de ambos mapas y sus fuentes.",
+    "Describió cambios visibles en las zonas comparables."
     ],
     "explanation": "Los mapas requieren referencias equivalentes antes de la comparación.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -216,9 +216,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "Una profesora pidió preparar un resumen crítico de dos artículos.",
-      "El grupo identificó primero la tesis y las evidencias de cada uno.",
-      "Finalmente, comparó sus enfoques y señaló lo que ambos omitían."
+    "Una profesora pidió preparar un resumen crítico de dos artículos.",
+    "El grupo identificó primero la tesis y las evidencias de cada uno.",
+    "Comparó sus enfoques y señaló lo que ambos omitían."
     ],
     "explanation": "Un contraste riguroso comienza examinando cada fuente antes de integrarlas.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -242,9 +242,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Organización textual",
     "steps": [
-      "El artículo afirmaba que una campaña había aumentado la participación.",
-      "Después, reconoció que también cambió la forma de registrar asistentes.",
-      "La conclusión distinguió el crecimiento real del posible efecto de mejor registro."
+    "El artículo afirmaba que una campaña había aumentado la participación.",
+    "Reconoció que también cambió la forma de registrar asistentes.",
+    "La conclusión distinguió el crecimiento real del posible efecto de mejor registro."
     ],
     "explanation": "La interpretación debe considerar si un cambio de medición explica parte de los datos.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -255,9 +255,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "Un informe comparó efectos de dos programas aplicados en centros diferentes.",
-      "Primero, describió las características y diferencias iniciales de cada grupo.",
-      "Finalmente, evitó atribuir toda la diferencia final a un solo programa."
+    "Un informe comparó efectos de dos programas aplicados en centros diferentes.",
+    "Describió las características y diferencias iniciales de cada grupo.",
+    "Evitó atribuir toda la diferencia final a un solo programa."
     ],
     "explanation": "La comparación debe reconocer condiciones basales antes de sostener efectos causales.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -281,9 +281,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "Una revisión encontró resultados favorables y desfavorables de una intervención.",
-      "Después, examinó si los estudios utilizaban indicadores comparables.",
-      "Solo entonces sintetizó los hallazgos e indicó sus diferencias de alcance."
+    "Una revisión encontró resultados favorables y desfavorables de una intervención.",
+    "Examinó si los estudios utilizaban indicadores comparables.",
+    "Solo entonces sintetizó los hallazgos e indicó sus diferencias de alcance."
     ],
     "explanation": "La integración debe valorar compatibilidad metodológica y heterogeneidad.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -294,9 +294,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "El equipo detectó que las tasas de dos regiones usaban bases poblacionales distintas.",
-      "Primero, documentó las definiciones y los denominadores empleados.",
-      "Después, presentó tasas comparables o explicó por qué no podían equipararse."
+    "El equipo detectó que las tasas de dos regiones usaban bases poblacionales distintas.",
+    "Documentó las definiciones y los denominadores empleados.",
+    "Presentó tasas comparables o explicó por qué no podían equipararse."
     ],
     "explanation": "La comparación exige examinar definiciones y denominadores antes del resultado.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -346,9 +346,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "Una síntesis reunió textos de filosofía y sociología sobre la desigualdad.",
-      "Primero, definió los conceptos centrales usados por cada disciplina.",
-      "A continuación, distinguió coincidencias y tensiones sin borrar sus diferencias."
+    "Una síntesis reunió textos de filosofía y sociología sobre la desigualdad.",
+    "Definió los conceptos centrales usados por cada disciplina.",
+    "Distinguió coincidencias y tensiones sin borrar sus diferencias."
     ],
     "explanation": "Un análisis interdisciplinario necesita precisar definiciones antes de integrar enfoques.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -359,9 +359,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "Un reporte escolar mostró que la nota promedio había aumentado.",
-      "Después, describió la dispersión y los resultados de subgrupos previamente definidos.",
-      "Finalmente, explicó por qué la mejora media no representaba a todos por igual."
+    "Un reporte escolar mostró que la nota promedio había aumentado.",
+    "Describió la dispersión y los resultados de subgrupos previamente definidos.",
+    "Explicó por qué la mejora media no representaba a todos por igual."
     ],
     "explanation": "La media necesita interpretarse con la distribución y sus excepciones.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -385,9 +385,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "Un análisis de costos estimó un ahorro tras modernizar instalaciones públicas.",
-      "Luego, desagregó cambios de tarifas y de cantidad consumida.",
-      "Finalmente, distinguió los factores observados de los efectos todavía no demostrados."
+    "Un análisis de costos estimó un ahorro tras modernizar instalaciones públicas.",
+    "Desagregó cambios de tarifas y de cantidad consumida.",
+    "Distinguió los factores observados de los efectos todavía no demostrados."
     ],
     "explanation": "Un cambio en el gasto puede mezclar variaciones de precio y consumo.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -398,9 +398,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "Un texto científico propuso un modelo para predecir las lluvias futuras.",
-      "Después, explicó los supuestos, los datos de entrenamiento y la incertidumbre.",
-      "En la discusión, señaló escenarios en los que el modelo podría fallar."
+    "Un texto científico propuso un modelo para predecir las lluvias futuras.",
+    "Explicó los supuestos, los datos de entrenamiento y la incertidumbre.",
+    "En la discusión, señaló escenarios en los que el modelo podría fallar."
     ],
     "explanation": "La presentación de predicciones exige documentar supuestos y límites.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -411,9 +411,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "El informe sobre desplazamientos mencionó múltiples razones para dejar una región.",
-      "La sección analítica separó factores económicos, climáticos y familiares.",
-      "Finalmente, evitó atribuir todos los casos a una causa única."
+    "El informe sobre desplazamientos mencionó múltiples razones para dejar una región.",
+    "La sección analítica separó factores económicos, climáticos y familiares.",
+    "Evitó atribuir todos los casos a una causa única."
     ],
     "explanation": "La explicación de fenómenos multicausales debe reconocer diversidad de factores.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
@@ -463,9 +463,9 @@ export const ORGANIZATION_EDITOR_CASES:OrganizationEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Organización textual",
     "steps": [
-      "Una investigación evaluó la evolución de un indicador redefinido durante el período.",
-      "Primero, identificó las fechas y el alcance de los cambios conceptuales.",
-      "Por último, presentó segmentos comparables sin esconder las interrupciones de la serie."
+    "Una investigación evaluó la evolución de un indicador redefinido durante el período.",
+    "Identificó las fechas y el alcance de los cambios conceptuales.",
+    "Presentó segmentos comparables sin esconder las interrupciones de la serie."
     ],
     "explanation": "La reorganización temporal de indicadores requiere transparentar cambios de definición.",
     "hint": "Ordena un texto con estructura lógica y conclusiones respaldadas.",
