@@ -16,12 +16,12 @@ export function m3WritingPool(level:Level,subtopic:WritingSubtopic,mode:Mode,exi
    competence:'Competencias comunicativas — Redacción',cognitiveGoal:'Distinguir tres casos y resolver una tarea contextual'};
   if(mode==='quiz'&&'gap' in a&&'gap' in b&&'gap' in c){
    return {...a,...meta,gap:'CASO B RESUELTO: '+b.gap.replace('___',b.connector)+'\nCASO C RESUELTO: '+c.gap.replace('___',c.connector)+'\nCASO A POR RESOLVER: '+a.gap,
-    explanation:'Los casos B y C ofrecen relaciones de contraste; en A: '+a.explanation} as WritingItem;
+    explanation:'B demuestra: '+b.explanation+' C demuestra: '+c.explanation+' En A debe aplicarse su propia relación lógica, no copiar B o C: '+a.explanation} as WritingItem;
   }
   if(mode==='clasificar'&&'flawed' in a&&'flawed' in b&&'flawed' in c){
    return {...a,...meta,
     flawed:'CASO B CORREGIDO: '+b.correctSentence+'\nCASO C CORREGIDO: '+c.correctSentence+'\nCASO A POR CORREGIR: '+a.flawed,
-    explanation:'B y C se contrastan, pero la corrección A debe justificarse por su propia evidencia. '+a.explanation} as WritingItem;
+    explanation:'El caso B se justifica así: '+b.explanation+' El caso C: '+c.explanation+' En el caso A se aplica esta corrección: '+a.explanation} as WritingItem;
   }
   if(mode==='construir'&&'steps' in a&&'steps' in b&&'steps' in c){
    // Distintos énfasis de análisis para casos con indicios parcialmente similares.
@@ -40,7 +40,7 @@ export function m3WritingPool(level:Level,subtopic:WritingSubtopic,mode:Mode,exi
      'Después, '+focus+' en B, sin trasladar supuestos: '+b.steps[1],
      'Por último, '+focus+' en C, delimitando la conclusión: '+c.steps[2]
     ],hint:'Analiza A, contrasta B, delimita C. Énfasis: '+focus+'.',
-    explanation:'Razonamiento escalonado en tres fuentes. '+a.explanation} as WritingItem;
+    explanation:'La primera decisión se funda en A: '+a.explanation+' La segunda contrasta B: '+b.explanation+' El cierre respeta lo que C permite afirmar: '+c.explanation} as WritingItem;
   }
   throw Error('M3: modalidad incompatible '+mode+' '+id);
  });
