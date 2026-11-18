@@ -1,10 +1,10 @@
-import {MATH_LEVEL_COUNT,MATH_LEVELS,MATH_MODES,MATH_TOPICS,mathPool,MATH_M1_TOTAL,type Rational} from "../src/lib/math-m1.ts";
+import {MATH_LEVEL_COUNT,MATH_LEVELS,MATH_MODES,MATH_TOPICS,mathPool,MATH_M1_TOTAL,} from "../src/lib/math-m1.ts";
 import {selectRotation,emptyRotation,recordRotation} from "../src/lib/rotation.ts";
 import {execFileSync} from "node:child_process";
-const eq=(a:Rational,b:Rational)=>a.n*b.d===b.n*a.d;
-const ratio=(n:number,d=1):Rational=>({n,d});
-function gcd(a:number,b:number){while(b){const k=a%b;a=b;b=k;}return Math.abs(a)}
-function independentOracle(kind:string,values:number[]):Rational{
+const eq=(a,b)=>a.n*b.d===b.n*a.d;
+const ratio=(n,d=1)=>({n,d});
+function gcd(a,b){while(b){const k=a%b;a=b;b=k;}return Math.abs(a)}
+function independentOracle(kind,values){
  const x=values;
  switch(kind){
  case "Operaciones":return ratio((x[0]+x[1])*x[2]);
