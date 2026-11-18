@@ -6,15 +6,16 @@ import {M2_GRAMMAR_ACTIVITIES} from '@/lib/m2-grammar';
 const LEVELS=['principiante','intermedio','avanzado'] as const;
 const orderingCue=/^(primero|después|finalmente|por último|en primer lugar|en segundo lugar|en tercer lugar)[,: ]/i;
 describe('Auditoría editorial: claridad y competencia',()=>{
- it('identifica sin colisión los seis textos de cada ejercicio M3 de lectura',()=>{
+ it('presenta tres textos únicos y claramente identificados en cada ejercicio M3 de lectura',()=>{
   for(const subtopic of READING_SUBTOPICS)for(const level of LEVELS)
    for(const mode of ['quiz','clasificar','construir'] as const){
     const generated=readingPool(level,subtopic,mode).filter(x=>x.id.startsWith('m3-reading-'));
     expect(generated.length).toBeGreaterThan(0);
     for(const item of generated){
-     for(const token of ['BLOQUE A','BLOQUE B','BLOQUE C','Texto A1','Texto A2','Texto B1','Texto B2','Texto C1','Texto C2'])
+     for(const token of ['FUENTE A','FUENTE B','FUENTE C'])
       expect(item.passage,item.id+' '+token).toContain(token);
-     expect(item.title).toBe('Análisis comparativo de tres bloques de lectura');
+     expect(item.title).toBe('Análisis comparativo de tres textos');
+     expect(item.passage).not.toMatch(/BLOQUE [ABC]|Texto A1|Texto B1/);
     }
    }
  });
