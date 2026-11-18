@@ -103,6 +103,16 @@ jobs:
           path: m1-operation-audit.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar calidad de retroalimentación de Español
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-feedback-quality.mjs > paridad-retroalimentacion.json
+      - name: Archivar auditoría pedagógica de 189 celdas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paridad-explicaciones-espanol
+          path: paridad-retroalimentacion.json
+          retention-days: 30
+          if-no-files-found: warn
       - name: Auditar integralmente M3 y corte completo de Español
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m3-area.mjs > m3-area-audit.json
       - name: Conservar reporte completo M3 por SHA

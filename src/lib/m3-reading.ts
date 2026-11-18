@@ -37,7 +37,7 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
      {...pick(b,'inference'),text:'Fuente B: '+pick(b,'inference').text},
      {...pick(c,'unsupported'),text:'Fuente C: '+pick(c,'unsupported').text}
     ],options:['Dato explícito','Inferencia','No sustentado','No aplica'],answer:0,
-    explanation:'Cada afirmación se revisa contra la fuente de origen.',
+    explanation:'Clasificar exige contrastar cada juicio con su fuente: A (dato explícito): '+pick(a,'explicit').explanation+' B (inferencia): '+pick(b,'inference').explanation+' C (no sustentado): '+pick(c,'unsupported').explanation,
     order:a.order};
   }
   return {...common,
@@ -48,6 +48,6 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
     'Finalmente delimitar conclusiones sobre C: '+c.order.parts[2]
    ],hint:'Distingue dato de conclusión y evita extrapolaciones.',explanation:'A: '+a.order.explanation+' B: '+b.order.explanation+' C: '+c.order.explanation},
    claims:a.claims,options:['Analizar A','Contrastar B','Delimitar C','Ignorar datos'],answer:0,
-   explanation:'Las tres fuentes tienen alcances distintos y requieren comprobar evidencias.'};
+   explanation:'La secuencia correcta empieza por identificar evidencia en A ('+a.order.explanation+'), contrasta lo que B permite concluir ('+b.order.explanation+') y delimita C ('+c.order.explanation+'). Una conclusión prematura puede confundir un hecho explícito con una inferencia.'};
  });
 }

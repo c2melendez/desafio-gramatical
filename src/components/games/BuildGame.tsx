@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CAT_LABEL, CAT_SHORT, checkBuild, type BuildQ, type BuildResult, type Tile } from "@/lib/grammar";
 import type { GameProps } from "./types";
 import { NextButton } from "./Feedback";
+import {LearningFeedback} from "./LearningFeedback";
 
 export function BuildGame({ item, report, next, isLast }: GameProps<BuildQ & { bank: (Tile & { k: number })[] }>) {
   const [chosen, setChosen] = useState<number[]>([]);
@@ -60,11 +61,10 @@ export function BuildGame({ item, report, next, isLast }: GameProps<BuildQ & { b
         </div>
       ) : (
         <div className="space-y-4" aria-live="polite">
-          <div className={`rounded-lg border-2 border-foreground p-3 ${res.ok ? "bg-success-soft" : "bg-destructive-soft"}`}>
-            <p className="font-bold">{res.message}</p>
-            {!res.ok && <p>Solución: <strong>{item.solutions.join(" · ")}</strong></p>}
-            <p className="text-sm mt-1">{item.exp}</p>
-          </div>
+          <LearningFeedback correct={res.ok} subtopic="Categorías gramaticales"
+           selected={words.map(w=>w.w).join(" ")} expected={item.solutions.join(" / ")}
+           explanation={`${res.message} ${item.exp}`} title={res.message}/>
+
           <NextButton onClick={next} isLast={isLast} />
         </div>
       )}

@@ -78,7 +78,7 @@ function m3Build(topic:string,l:Level,i:number):ConstructionActivity{
    {id:'b',text:'Después, comprobar B por sus propias evidencias: '+b.explanation},
    {id:'c',text:'Por último, contrastar C y limitar la conclusión: '+c.explanation},
    {id:'d',text:'La respuesta del caso A demuestra automáticamente los resultados de B y C.'}
-  ],solutions:[['a','b','c']],explanation:'La secuencia verifica cada fuente antes de integrarlas, sin intercambiar sus respuestas.',
+  ],solutions:[['a','b','c']],explanation:'Se comienza por A porque '+a.explanation+' Después se contrasta B, donde '+b.explanation+' Finalmente se delimita C: '+c.explanation+' La ficha distractora es inválida porque resolver un caso no demuestra automáticamente los otros dos.',
   ...meta(id,[a.id,b.id,c.id],'Reconstruir un argumento compuesto por tres justificaciones')};
 }
 export const M3_GRAMMAR_ACTIVITIES:(ClassificationActivity|ConstructionActivity)[]=

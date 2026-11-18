@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { QuizQ } from "@/lib/grammar";
 import type { GameProps } from "./types";
 import { NextButton } from "./Feedback";
+import {LearningFeedback} from "./LearningFeedback";
 
 export function QuizGame({ item, report, next, isLast }: GameProps<QuizQ & { order: number[] }>) {
   const [pick, setPick] = useState<number | null>(null);
@@ -26,9 +27,7 @@ export function QuizGame({ item, report, next, isLast }: GameProps<QuizQ & { ord
       </div>
       {pick !== null && (
         <div aria-live="polite" className="space-y-4">
-          <p className={`rounded-lg border-2 border-foreground p-3 ${pick === item.answer ? "bg-success-soft" : "bg-destructive-soft"}`}>
-            <strong>{pick === item.answer ? "¡Correcto! " : "Incorrecto. "}</strong>{item.exp}
-          </p>
+          <LearningFeedback correct={pick===item.answer} subtopic="Categorías gramaticales" selected={item.options[pick]} expected={item.options[item.answer]} explanation={item.exp}/>
           <NextButton onClick={next} isLast={isLast} />
         </div>
       )}
