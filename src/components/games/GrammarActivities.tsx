@@ -21,7 +21,7 @@ export function GrammarClassification({ item, onResult, onNext }: Props<Classifi
       <div className="flex flex-wrap gap-2">{presentedLabels.map(label => <button type="button" key={label} aria-pressed={answers[x.id] === label} onClick={() => setAnswers(a => ({ ...a, [x.id]: label }))} className={`tile ${answers[x.id] === label ? 'bg-primary text-primary-foreground' : 'bg-card'}`}>{label}</button>)}</div>
       {checked && <LearningFeedback correct={answers[x.id]===x.label} subtopic={item.subtopic} selected={answers[x.id]} expected={x.label} explanation={x.explanation}/>}
     </fieldset>)}
-    {!checked ? <button disabled={!complete} onClick={check} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">Comprobar</button> : <div aria-live="polite" className="space-y-3"><p>{item.explanation}</p><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
+    {!checked ? <button disabled={!complete} onClick={check} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">Comprobar</button> : <div aria-live="polite" className="space-y-3">{!item.items.some(x=>x.explanation===item.explanation)&&<p className="rounded-lg border-2 border-foreground bg-success-soft p-3">{item.explanation}</p>}<button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
   </section>;
 }
 
