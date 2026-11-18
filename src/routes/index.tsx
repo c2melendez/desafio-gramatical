@@ -39,8 +39,8 @@ function Home() {
  const [subtopic,setSubtopic]=useState(selected.subtema);
  const [mode,setMode]=useState<Mode>(selected.modo);
  const [level,setLevel]=useState<Level>(selected.nivel);
- const selectedArea=AREAS.find(a=>a.id===areaId)!;
- const selectedTopic=selectedArea.topics.find(t=>t.name===topic)!;
+ const selectedArea=AREAS.find(a=>a.id===areaId)??AREAS[0];
+ const selectedTopic=selectedArea.topics.find(t=>t.name===topic)??selectedArea.topics[0];
  const pilot=areaId==="espanol"&&(topic==="Gramática y semántica"||topic==="Literatura")&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
  const pilotMode=(id:Mode)=>id==="quiz"||((subtopic==="Sinónimos y antónimos"||subtopic==="Cohesión y coherencia")&&id==="clasificar")||[...GRAMMAR_M1_ACTIVITIES,...M1_NEXT_ACTIVITIES,...M1_LITERATURE_ACTIVITIES].some(x=>x.subtopic===subtopic&&x.kind===(id==="construir"?"construction":"classification"));
  const active=pilot?pilotMode(mode):availableModule(areaId,topic,subtopic);
