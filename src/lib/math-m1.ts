@@ -1,5 +1,6 @@
 import type {Level,Mode} from "./grammar";
 import {AREAS} from "./phuma-catalog";
+import {visualAnswer,visualPrompt,type MathVisual} from "./math-visual";
 
 /** Banco técnico original M1 de Matemáticas: 10/15/20 por subtema y juego.
  * Los parámetros y los casos se calculan con aritmética exacta; las variantes
@@ -15,6 +16,7 @@ export const MATH_MODES:Mode[]=["clasificar","quiz","construir"];
 export type Rational={n:number;d:number};
 export type MathModel={id:string;topic:string;subtopic:string;level:Level;mode:Mode;seed:number;
  prompt:string;expected:string;explanation:string;formula:string;
+ visual?:MathVisual;visualRequirement?:"essential"|"supporting"|"none";
  source:"GUIA-PRE-U-UNAH-2026:p6"|"catalogo-practica-complementaria";
  oracle:{kind:string;inputs:number[];answer:Rational;intermediate:Rational};
  options:string[];answerIndex:number;
@@ -67,13 +69,26 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  const levelN=MATH_LEVELS.indexOf(level),modeN=MATH_MODES.indexOf(mode);
  const seed=1+index+levelN*43+modeN*137;
  const r=compute(subtopic,level,seed),solution=fmt(r.result),base=variants(r.result);
+ // Piloto G0–G5: en estas celdas de selección, los datos relevantes
+ // se trasladan de la frase a la representación visual original.
+ let visual:MathVisual|undefined;
+ if(mode==="quiz"){
+  switch(subtopic){
+   case "Ángulos":visual={kind:"triangle-angles",alpha:r.inputs[0],beta:r.inputs[1]};break;
+   case "Pitágoras":visual={kind:"right-triangle",legA:r.inputs[0],legB:r.inputs[1]};break;
+   case "Tablas y gráficas":visual={kind:"bar-chart",monday:r.inputs[0],tuesday:r.inputs[1],wednesday:r.inputs[2]};break;
+   case "Funciones":visual={kind:"linear-function",slope:r.inputs[0],intercept:r.inputs[1],targetX:r.inputs[2]};break;
+   case "Inecuaciones":visual={kind:"number-line",boundary:(r.inputs[2]-r.inputs[1])/r.inputs[0],open:true,direction:"right"};break;
+  }
+ }
+ if(visual&&visualAnswer(visual)!==r.result.n/r.result.d)throw Error("El estímulo visual no coincide con el oráculo matemático");
  const choices=choose(seed,base),step=choose(seed+1,variants(r.intermediate));
  const correctClaim={text:`La solución obtenida es ${solution}.`,truth:true};
  const falseClaims=[1,3].map(n=>({text:`La solución obtenida es ${base[n]}.`,truth:false}));
  const ordered=[correctClaim,...falseClaims],shift=seed%3;
  const assertions=[...ordered.slice(shift),...ordered.slice(0,shift)];
  const id="math-m1-"+[topic,subtopic,mode,level,index].map(v=>String(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")).join("-");
- return {id,topic,subtopic,level,mode,seed,prompt:r.question,expected:solution,explanation:r.reason,
+ return {id,topic,subtopic,level,mode,seed,prompt:visual?`${visualPrompt(visual)} (Ejercicio ${index+1}).`:r.question,visual,visualRequirement:visual?"essential":"none",expected:solution,explanation:r.reason,
   formula:r.formula,source:guideSubtopics.has(subtopic)?"GUIA-PRE-U-UNAH-2026:p6":"catalogo-practica-complementaria",
   oracle:{kind:r.kind,inputs:r.inputs,answer:r.result,intermediate:r.intermediate},
   options:choices.choices,answerIndex:choices.answerIndex,assertions,
