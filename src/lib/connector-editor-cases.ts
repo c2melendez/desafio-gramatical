@@ -12,9 +12,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "principiante",
     "subtopic": "Conectores",
     "steps": [
-      "Al inicio, la clase eligió un cuento para leer.",
-      "Después, los estudiantes identificaron a sus personajes.",
-      "Al final, comentaron el mensaje del cuento."
+    "La clase eligió un cuento para leer.",
+    "Los estudiantes identificaron a sus personajes.",
+    "Comentaron el mensaje del cuento leído en clase."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La secuencia sitúa la elección, la lectura analítica y el comentario final.",
@@ -25,9 +25,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "principiante",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, Luis plantó una semilla en una maceta.",
-      "Una semana después, observó un pequeño brote.",
-      "Finalmente, registró el crecimiento en su cuaderno."
+    "Luis plantó una semilla en una maceta.",
+    "Una semana después, observó un pequeño brote.",
+    "Registró el crecimiento en su cuaderno."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "El texto sigue la secuencia temporal de sembrar, observar y registrar.",
@@ -38,9 +38,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "principiante",
     "subtopic": "Conectores",
     "steps": [
-      "En primer lugar, el equipo escogió un tema para investigar.",
-      "Después, buscó información en la biblioteca.",
-      "Por último, elaboró una breve presentación."
+    "El equipo escogió un tema para investigar.",
+    "Buscó información relevante sobre el tema en la biblioteca.",
+    "Elaboró una breve presentación con los datos investigados."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Se ordenan las etapas básicas de investigación y presentación.",
@@ -51,9 +51,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "principiante",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, la maestra explicó las instrucciones del juego.",
-      "A continuación, los participantes formaron equipos.",
-      "Al terminar, compartieron los resultados."
+    "La maestra explicó las instrucciones del juego.",
+    "Los participantes formaron equipos para realizar el juego.",
+    "Al terminar, compartieron los resultados."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Las acciones siguen instrucciones, ejecución y cierre.",
@@ -64,9 +64,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "principiante",
     "subtopic": "Conectores",
     "steps": [
-      "Por la mañana, el grupo preparó los materiales.",
-      "Más tarde, visitó el centro comunitario.",
-      "Al regresar, redactó un informe de la actividad."
+    "Por la mañana, el grupo preparó los materiales.",
+    "Visitó el centro comunitario para realizar la actividad prevista.",
+    "Al regresar, redactó un informe de la actividad."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "El reporte comienza con preparación y finaliza con una síntesis posterior.",
@@ -77,9 +77,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "principiante",
     "subtopic": "Conectores",
     "steps": [
-      "Antes de escribir, Ana hizo una lista de ideas.",
-      "A continuación, redactó un primer párrafo con esas ideas.",
-      "Finalmente, revisó la ortografía del texto."
+    "Antes de escribir, Ana hizo una lista de ideas.",
+    "Redactó un primer párrafo con esas ideas.",
+    "Revisó la ortografía del texto que había redactado."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La redacción se organiza como planificación, borrador y revisión.",
@@ -90,9 +90,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "principiante",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, la biblioteca anunció una nueva actividad.",
-      "Ese mismo día, los vecinos se inscribieron.",
-      "Al finalizar el encuentro, expresaron sus opiniones."
+    "La biblioteca anunció una nueva actividad.",
+    "Ese mismo día, los vecinos se inscribieron.",
+    "Al finalizar el encuentro, expresaron sus opiniones."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La secuencia conecta anuncio, participación y evaluación.",
@@ -103,9 +103,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "El equipo formuló una pregunta sobre el consumo de agua.",
-      "A continuación, recopiló los registros de varios días.",
-      "Finalmente, explicó qué conclusiones respaldaban los datos."
+    "El equipo formuló una pregunta sobre el consumo de agua.",
+    "Recopiló los registros de varios días.",
+    "Explicó qué conclusiones respaldaban los datos."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Una investigación ordenada parte de la pregunta y termina con una conclusión proporcional.",
@@ -116,9 +116,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, se identificaron los problemas de coherencia del borrador.",
-      "Luego, se reorganizaron los argumentos en párrafos.",
-      "Por último, se comprobó que cada conclusión tuviera respaldo."
+    "Se identificaron los problemas de coherencia del borrador.",
+    "Se reorganizaron los argumentos en párrafos.",
+    "Se comprobó que cada conclusión tuviera respaldo."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La edición exige diagnosticar, reorganizar y verificar.",
@@ -129,9 +129,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Antes de comparar los informes, se definieron los indicadores comunes.",
-      "Después, se organizaron los resultados en una tabla.",
-      "Al terminar, se explicaron coincidencias y diferencias."
+    "Antes de comparar los informes, se definieron los indicadores comunes.",
+    "Se organizaron los resultados en una tabla.",
+    "Al terminar, se explicaron coincidencias y diferencias."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Comparar exige criterios previos y un análisis posterior.",
@@ -142,9 +142,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "El grupo reconoció que las instrucciones eran ambiguas.",
-      "En respuesta, las reescribió con verbos precisos.",
-      "Finalmente, aplicó una prueba para comprobar su claridad."
+    "El grupo reconoció que las instrucciones eran ambiguas.",
+    "En respuesta, las reescribió con verbos precisos.",
+    "Aplicó una prueba para comprobar su claridad."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Se expone un problema, una corrección y su verificación.",
@@ -155,9 +155,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, los estudiantes identificaron la tesis del artículo.",
-      "Después, distinguieron los datos de las opiniones.",
-      "Finalmente, evaluaron si las evidencias apoyaban la tesis."
+    "Los estudiantes identificaron la tesis del artículo.",
+    "Distinguieron los datos de las opiniones.",
+    "Evaluaron si las evidencias apoyaban la tesis."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "El orden permite analizar una afirmación a partir de sus pruebas.",
@@ -168,9 +168,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Se detectó que faltaban fuentes en varios párrafos.",
-      "A continuación, se contrastaron las afirmaciones con documentos consultables.",
-      "Por último, se incorporaron referencias verificables."
+    "Se detectó que faltaban fuentes en varios párrafos.",
+    "Se contrastaron las afirmaciones con documentos consultables.",
+    "Se incorporaron referencias verificables."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La revisión documental requiere detectar carencias y justificar las afirmaciones.",
@@ -181,9 +181,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, se revisaron los tiempos verbales de la narración.",
-      "Después, se corrigieron las rupturas injustificadas de tiempo.",
-      "Finalmente, se leyó el relato completo para comprobar su continuidad."
+    "Se revisaron los tiempos verbales de la narración.",
+    "Se corrigieron las rupturas injustificadas de tiempo.",
+    "Se leyó el relato completo para comprobar su continuidad."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La coherencia temporal exige revisión y lectura posterior.",
@@ -194,9 +194,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "El informe presentó el objetivo y las preguntas iniciales.",
-      "A continuación, describió el método empleado.",
-      "En el cierre, delimitó los resultados según sus restricciones."
+    "El informe presentó el objetivo y las preguntas iniciales.",
+    "Describió el método empleado para responder las preguntas planteadas.",
+    "En el cierre, delimitó los resultados según sus restricciones."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Un informe coherente plantea objetivo, explica el método y delimita resultados.",
@@ -207,9 +207,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Se localizó una afirmación demasiado general en el resumen.",
-      "Después, se examinaron los casos que podían sustentarla.",
-      "Por último, se sustituyó por una formulación de alcance limitado."
+    "Se localizó una afirmación demasiado general en el resumen.",
+    "Se examinaron los casos que podían sustentarla.",
+    "Se sustituyó por una formulación de alcance limitado."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La reescritura parte de reconocer una generalización y corregirla.",
@@ -220,9 +220,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Al comenzar, se definió el público destinatario del aviso.",
-      "Luego, se seleccionó un vocabulario apropiado para ese público.",
-      "Finalmente, se comprobó que el mensaje pudiera comprenderse sin ambigüedades."
+    "Al comenzar, se definió el público destinatario del aviso.",
+    "Se seleccionó un vocabulario apropiado para ese público.",
+    "Se comprobó que el mensaje pudiera comprenderse sin ambigüedades."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La adecuación se evalúa desde destinatario hasta prueba de comprensión.",
@@ -233,9 +233,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "intermedio",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, la clase organizó dos versiones de un mismo acontecimiento.",
-      "Más adelante, contrastó fechas y autores de cada fuente.",
-      "Al cerrar, señaló acuerdos y dudas que seguían abiertos."
+    "La clase organizó dos versiones de un mismo acontecimiento.",
+    "Más adelante, contrastó fechas y autores de cada fuente.",
+    "Señaló acuerdos y dudas que seguían abiertos."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La comparación de fuentes necesita identificar procedencia antes de concluir.",
@@ -259,9 +259,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "El informe definió operativamente qué mediría como «participación».",
-      "Después, comparó los registros usando esa misma definición.",
-      "Finalmente, explicó qué no podía deducirse de las diferencias encontradas."
+    "El informe definió operativamente qué mediría como «participación».",
+    "Comparó los registros usando esa misma definición.",
+    "Explicó qué no podía deducirse de las diferencias encontradas."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La comparación válida exige definición consistente y límites interpretativos.",
@@ -272,9 +272,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Los investigadores identificaron una diferencia inicial entre grupos.",
-      "Luego, analizaron cómo podía afectar la comparación final.",
-      "Por último, evitaron presentar esa diferencia como efecto demostrado del programa."
+    "Los investigadores identificaron una diferencia inicial entre grupos.",
+    "Analizaron cómo podía afectar la comparación final.",
+    "Evitaron presentar esa diferencia como efecto demostrado del programa."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Los grupos no comparables requieren ajustar el razonamiento causal.",
@@ -285,9 +285,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, el artículo distinguió correlación de causalidad.",
-      "Después, revisó los factores que podrían producir asociaciones espurias.",
-      "Finalmente, limitó su conclusión a la evidencia del diseño observacional."
+    "El artículo distinguió correlación de causalidad.",
+    "Revisó los factores que podrían producir asociaciones espurias.",
+    "Limitó su conclusión a la evidencia del diseño observacional."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Se evita atribuir causalidad al pasar de conceptos a controles y límites.",
@@ -298,9 +298,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Se detectó que dos estudios definían el éxito de manera diferente.",
-      "A continuación, se compararon sus indicadores y escalas de medida.",
-      "Solo después se decidió que sus porcentajes no podían fusionarse sin ajustes."
+    "Se detectó que dos estudios definían el éxito de manera diferente.",
+    "Se compararon sus indicadores y escalas de medida.",
+    "Se decidió que sus porcentajes no podían fusionarse sin ajustes."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Las medidas incompatibles impiden una síntesis numérica inmediata.",
@@ -311,9 +311,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "El equipo identificó que algunos participantes abandonaron el seguimiento.",
-      "Después, evaluó si las bajas alteraban la composición de la muestra.",
-      "Finalmente, presentó los resultados con una advertencia sobre ese sesgo posible."
+    "El equipo identificó que algunos participantes abandonaron el seguimiento.",
+    "Evaluó si las bajas alteraban la composición de la muestra.",
+    "Presentó los resultados con una advertencia sobre ese sesgo posible."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "El análisis de deserción precede a la generalización responsable.",
@@ -324,9 +324,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, se verificó la fecha y procedencia del decreto histórico.",
-      "Luego, se contrastaron sus afirmaciones con testimonios y archivos independientes.",
-      "Por último, se comunicaron coincidencias y discrepancias sin invalidar automáticamente ninguna fuente."
+    "Se verificó la fecha y procedencia del decreto histórico.",
+    "Se contrastaron sus afirmaciones con testimonios y archivos independientes.",
+    "Se comunicaron coincidencias y discrepancias sin invalidar automáticamente ninguna fuente."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Una lectura histórica rigurosa compara fuentes antes de concluir.",
@@ -337,9 +337,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Se identificó una afirmación sustentada solamente en un caso particular.",
-      "Después, se examinó si el caso era representativo de la población.",
-      "Finalmente, se sustituyó la afirmación universal por una conclusión contextual."
+    "Se identificó una afirmación sustentada solamente en un caso particular.",
+    "Se examinó si el caso era representativo de la población.",
+    "Se sustituyó la afirmación universal por una conclusión contextual."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La representatividad limita las generalizaciones de un caso aislado.",
@@ -350,9 +350,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Al inicio, se especificaron los criterios de inclusión en la muestra.",
-      "A continuación, se describió cómo podían producir sesgo de selección.",
-      "En el cierre, se limitó la interpretación a los participantes observados."
+    "Se especificaron los criterios de inclusión en la muestra.",
+    "Se describió cómo podían producir sesgo de selección.",
+    "En el cierre, se limitó la interpretación a los participantes observados."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "El método de selección determina el alcance de las inferencias.",
@@ -363,9 +363,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "El informe detectó que el instrumento cambió durante la medición.",
-      "Después, documentó los posibles efectos del cambio sobre la serie.",
-      "Finalmente, separó los períodos que no podían compararse directamente."
+    "El informe detectó que el instrumento cambió durante la medición.",
+    "Documentó los posibles efectos del cambio sobre la serie.",
+    "Separó los períodos que no podían compararse directamente."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Se debe examinar la comparabilidad antes de sintetizar datos temporales.",
@@ -376,9 +376,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, la revisión catalogó las fuentes por método y procedencia.",
-      "Después, separó opiniones, correlaciones y resultados experimentales.",
-      "Finalmente, elaboró una síntesis que respetaba la fuerza diferente de cada evidencia."
+    "La revisión catalogó las fuentes por método y procedencia.",
+    "Separó opiniones, correlaciones y resultados experimentales.",
+    "Elaboró una síntesis que respetaba la fuerza diferente de cada evidencia."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La integración crítica exige distinguir la naturaleza de las pruebas.",
@@ -389,9 +389,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "El autor planteó una tesis sobre los efectos de una política educativa.",
-      "Luego, presentó evidencias que respaldaban y cuestionaban esa tesis.",
-      "Por último, formuló una conclusión matizada en vez de omitir los resultados contrarios."
+    "El autor planteó una tesis sobre los efectos de una política educativa.",
+    "Presentó evidencias que respaldaban y cuestionaban esa tesis.",
+    "Formuló una conclusión matizada en vez de omitir los resultados contrarios."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La argumentación crítica considera pruebas favorables y adversas.",
@@ -402,9 +402,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "El análisis mostró una mejora en el promedio de rendimiento.",
-      "Después, examinó si la mejora ocurría en todos los grupos por igual.",
-      "Finalmente, explicó las diferencias internas en lugar de ocultarlas en una cifra global."
+    "El análisis mostró una mejora en el promedio de rendimiento.",
+    "Examinó si la mejora ocurría en todos los grupos por igual.",
+    "Explicó las diferencias internas en lugar de ocultarlas en una cifra global."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Un promedio no sustituye el estudio de heterogeneidad.",
@@ -415,9 +415,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "El equipo detectó que las categorías utilizadas se superponían.",
-      "A continuación, redefinió los criterios para que fueran mutuamente excluyentes.",
-      "Por último, volvió a clasificar los datos con reglas consistentes."
+    "El equipo detectó que las categorías utilizadas se superponían.",
+    "Redefinió los criterios para que fueran mutuamente excluyentes.",
+    "Volvió a clasificar los datos con reglas consistentes."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Una clasificación válida requiere categorías claras antes de contar registros.",
@@ -428,9 +428,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Se localizaron contradicciones entre una reseña y el documento original.",
-      "Después, se examinó el contexto de cada afirmación cuestionada.",
-      "Finalmente, se corrigió la reseña citando de forma verificable el documento."
+    "Se localizaron contradicciones entre una reseña y el documento original.",
+    "Se examinó el contexto de cada afirmación cuestionada.",
+    "Se corrigió la reseña citando de forma verificable el documento."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La fidelidad documental requiere contrastar interpretaciones con la fuente.",
@@ -441,9 +441,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, el texto distinguió el resultado observado de una predicción futura.",
-      "Después, explicitó los supuestos que necesitaba la predicción.",
-      "Finalmente, reconoció qué escenarios podían invalidar esos supuestos."
+    "El texto distinguió el resultado observado de una predicción futura.",
+    "Explicitó los supuestos que necesitaba la predicción.",
+    "Reconoció qué escenarios podían invalidar esos supuestos."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La inferencia prospectiva exige reconocer condiciones y límites.",
@@ -454,9 +454,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "El equipo identificó una mejora después de la intervención.",
-      "A continuación, analizó si otros cambios simultáneos podían explicar parte del resultado.",
-      "Por último, evitó atribuir toda la mejora a una única causa."
+    "El equipo identificó una mejora después de la intervención.",
+    "Analizó si otros cambios simultáneos podían explicar parte del resultado.",
+    "Evitó atribuir toda la mejora a una única causa."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "La secuencia examina confusores antes de establecer una atribución.",
@@ -467,9 +467,9 @@ export const CONNECTOR_EDITOR_CASES:ConnectorEditorCase[]=[
     "level": "avanzado",
     "subtopic": "Conectores",
     "steps": [
-      "Primero, se definieron las variables centrales de la comparación regional.",
-      "Después, se armonizaron las unidades y períodos de las estadísticas.",
-      "Finalmente, se señalaron las diferencias que permanecían tras hacer comparables los datos."
+    "Se definieron las variables centrales de la comparación regional.",
+    "Se armonizaron las unidades y períodos de las estadísticas.",
+    "Se señalaron las diferencias que permanecían tras hacer comparables los datos."
     ],
     "hint": "Reconstruye la progresión argumentativa y sus enlaces lógicos.",
     "explanation": "Una comparación regional exige unificar métodos de medición antes de inferir.",

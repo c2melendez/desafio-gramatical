@@ -39,8 +39,8 @@ const SEEDS:Seed[]=[
         "La clase leyó el texto, ___ respondió las preguntas.",
         "y",
         "La clase leyó el texto.",
-        "Después respondió las preguntas.",
-        "Al final revisó las soluciones."
+        "Respondió las preguntas.",
+        "Revisó las soluciones."
       ],
       [
         "Ayer compramos un cuaderno y lo escribimos en el cuaderno.",
@@ -147,8 +147,8 @@ const SEEDS:Seed[]=[
         "María trajo lápices ___ cuadernos.",
         "y",
         "El grupo eligió el texto.",
-        "Primero lo leyó en voz alta.",
-        "Luego comentó su significado."
+        "Lo leyó en voz alta.",
+        "Comentó su significado."
       ],
       [
         "El camino estaba mojado por tanto había llovido.",
@@ -168,7 +168,7 @@ const SEEDS:Seed[]=[
         "sin embargo",
         "Ana organizó un calendario de estudio.",
         "Practicó con ejercicios.",
-        "Finalmente presentó la prueba."
+        "Presentó la prueba."
       ]
     ]
   },
