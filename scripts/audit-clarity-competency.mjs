@@ -21,8 +21,8 @@ function add(row,item,rule,severity,evidence){
 function stem(item,mode){
  if(item.kind==='classification'||item.kind==='construction')return item.prompt??'';
  if(mode==='quiz')return item.question??item.q??item.gap??'';
- if(mode==='clasificar')return item.flawed??item.question??item.prompt??(item.tokens?.map(x=>x.t).join(' ')??'');
- return item.question??item.hint??item.prompt??(item.steps?.join(' ')??item.pattern?.join(' ')??'');
+ if(mode==='clasificar')return item.flawed??item.question??item.prompt??item.claims?.map(x=>x.text).join(' ')??(item.tokens?.map(x=>x.t).join(' ')??'');
+ return item.question??item.hint??item.prompt??item.order?.parts?.join(' ')??item.steps?.join(' ')??(item.pattern?.join(' ')??'');
 }
 function explanation(item){
  return [item.explanation,item.exp,item.correction,item.order?.explanation,
