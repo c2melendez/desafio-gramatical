@@ -17,7 +17,7 @@ describe("Selección de área sin excepción de ruta",()=>{
    expect(screen.queryByText("This page didn't load")).not.toBeInTheDocument();
    expect(screen.getByRole("combobox",{name:"Tema de estudio"})).toHaveValue("Aritmética");
    expect(screen.getByRole("combobox",{name:"Subtema de estudio"})).toHaveValue("Operaciones");
-   expect(screen.getByText(/Caza la incógnita|Ordena los números/)).toBeInTheDocument();
+   expect(screen.getAllByText("Ordena los números").length).toBeGreaterThan(0);
   });
   fireEvent.click(screen.getByRole("button",{name:/Comunicación y Español/}));
   expect(screen.getByRole("combobox",{name:"Tema de estudio"})).toHaveValue("Comprensión lectora");
