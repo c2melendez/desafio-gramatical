@@ -161,7 +161,7 @@ export const CORRECTION_ERROR_CASES:CorrectionErrorCase[]=[
     "correctConnector": "Aunque se registraron nuevos datos, estos",
     "correctSentence": "Aunque se registraron nuevos datos, estos requieren una revisión cuidadosa.",
     "options": [
-      "Aunque se registraron nuevos datos, Estos",
+      "Aunque se registraron nuevos datos. Estos",
       "Aunque se registraron nuevos datos estos",
       "Aunque se registraron nuevos datos; estos,",
       "Aunque se registraron nuevos datos, estos"
