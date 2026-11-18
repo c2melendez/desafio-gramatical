@@ -39,3 +39,8 @@ Siguiente etapa tras cerrar la publicación: **Matemáticas M2**, expansión acu
 - Render del mismo commit: despliegue `dep-dbujs7m0tbcc73d197kg` **Live** en https://desafio-gramatical.onrender.com/.
 - El commit que incluye este registro documental deberá superar nuevamente CI y Render Live en su propio SHA antes del cierre de evidencia final. El estado de revisión académica sigue expresamente pendiente.
 - **Siguiente módulo:** `matematicas-M2` (acumulado 20/35/45), sin alterar el núcleo ni sus IDs.
+
+
+## Addenda de pertinencia curricular (18-11-2026; pre-M2)
+
+Tras contrastar M1 con ejemplos oficiales PHUMA de paralelas/ángulos, esfera y gráficos, la aceptación técnica de 2.970 registros **no implica cumplimiento suficiente del constructo visual**. `MathModel` y `MathExerciseCard` carecen de entradas y renderizador de estímulos gráficos; las modalidades actuales pueden usarse para cálculo simbólico, pero no cubren necesariamente interpretación de figuras y gráficos. Se abre una **rehabilitación pedagógica/visual de M1** y se suspende la ampliación masiva de celdas con brecha hasta aplicar la norma `docs/norma-validez-estimulos-visuales.md` y la auditoría `docs/auditoria-matematicas-m1-validez-visual-20261118.md`. CI/Render históricos certifican funcionamiento, no equivalencia con PHUMA. La revisión docente sigue pendiente. Se preservan banco e historial actuales.
