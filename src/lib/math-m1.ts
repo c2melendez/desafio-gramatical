@@ -72,19 +72,29 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  // Piloto G0–G5: en estas celdas de selección, los datos relevantes
  // se trasladan de la frase a la representación visual original.
  let visual:MathVisual|undefined;
- if(mode==="quiz"){
+ // Las tres mecánicas requieren interpretar el estímulo en estas ocho competencias.
+ // Ninguna oración proporciona todos los datos del diagrama.
+ {
   switch(subtopic){
    case "Ángulos":visual={kind:"triangle-angles",alpha:r.inputs[0],beta:r.inputs[1]};break;
    case "Pitágoras":visual={kind:"right-triangle",legA:r.inputs[0],legB:r.inputs[1]};break;
    case "Tablas y gráficas":visual={kind:"bar-chart",monday:r.inputs[0],tuesday:r.inputs[1],wednesday:r.inputs[2]};break;
    case "Funciones":visual={kind:"linear-function",slope:r.inputs[0],intercept:r.inputs[1],targetX:r.inputs[2]};break;
    case "Inecuaciones":visual={kind:"number-line",boundary:(r.inputs[2]-r.inputs[1])/r.inputs[0],open:true,direction:"right"};break;
+   case "Áreas y perímetros":visual={kind:"rectangle",length:r.inputs[0],width:r.inputs[1],measure:r.inputs[2]?"area":"perimeter"};break;
+   case "Sólidos: área y volumen":visual={kind:"prism",length:r.inputs[0],width:r.inputs[1],height:r.inputs[2],measure:r.inputs[3]?"volume":"surface"};break;
+   case "Semejanza":visual={kind:"similar-triangles",small:r.inputs[0],large:r.inputs[1],other:r.inputs[2]};break;
   }
  }
  if(visual&&visualAnswer(visual)!==r.result.n/r.result.d)throw Error("El estímulo visual no coincide con el oráculo matemático");
- const choices=choose(seed,base),step=choose(seed+1,variants(r.intermediate));
- const correctClaim={text:`La solución obtenida es ${solution}.`,truth:true};
- const falseClaims=[1,3].map(n=>({text:`La solución obtenida es ${base[n]}.`,truth:false}));
+ const choices=choose(seed,base);
+ const visualIntermediate=visual?.kind==="number-line"?r.result:visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate;
+ const step=choose(seed+1,variants(visualIntermediate));
+ const correctClaim={text:visual?.kind==="number-line"?`La solución representada es x > ${solution}.`:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
+ const falseClaims=visual?.kind==="number-line"
+  ?[{text:`La solución representada incluye el extremo: x ≥ ${solution}.`,truth:false},
+    {text:`La solución representada contiene valores menores: x < ${solution}.`,truth:false}]
+  :[1,3].map(n=>({text:visual?`La representación permite concluir que el resultado es ${base[n]}.`:`La solución obtenida es ${base[n]}.`,truth:false}));
  const ordered=[correctClaim,...falseClaims],shift=seed%3;
  const assertions=[...ordered.slice(shift),...ordered.slice(0,shift)];
  const id="math-m1-"+[topic,subtopic,mode,level,index].map(v=>String(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")).join("-");
@@ -98,13 +108,21 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
   ? `Los puntos del plano son (0,${visual.intercept}) y (1,${visual.intercept+visual.slope}). La variación por cada incremento unitario en x es ${visual.slope}; así f(${visual.targetX})=${visual.slope}×${visual.targetX}+${visual.intercept}=${solution}.`
   :visual?.kind==="number-line"
   ? `El círculo abierto está exactamente entre las marcas ${visual.boundary-1} y ${visual.boundary+1}, por lo que corresponde a ${visual.boundary}. No se incluye el extremo, y la flecha a la derecha representa valores mayores.`
+  :visual?.kind==="rectangle"
+  ? `El rectángulo tiene largo ${visual.length} cm y ancho ${visual.width} cm. El ${visual.measure==="area"?"área exige multiplicar los lados y se mide en cm²":"perímetro exige sumar los cuatro lados y se mide en cm"}: ${solution}.`
+  :visual?.kind==="prism"
+  ? `El prisma tiene largo ${visual.length}, ancho ${visual.width} y alto ${visual.height} cm. Para ${visual.measure==="volume"?"el volumen multiplicamos las tres medidas (cm³)":"el área total sumamos dos veces cada pareja de caras (cm²)"}: ${solution}.`
+  :visual?.kind==="similar-triangles"
+  ? `Las bases correspondientes miden ${visual.small} y ${visual.large} cm, por eso el factor es ${visual.large}/${visual.small}. El otro lado pequeño mide ${visual.other} cm: el lado desconocido mide ${solution} cm.`
   :r.reason;
  return {id,topic,subtopic,level,mode,seed,prompt:visual?`${visualPrompt(visual)} (Ejercicio ${index+1}).`:r.question,visual,visualRequirement:visual?"essential":"none",expected:solution,explanation:visualExplanation,
   formula:r.formula,source:guideSubtopics.has(subtopic)?"GUIA-PRE-U-UNAH-2026:p6":"catalogo-practica-complementaria",
   oracle:{kind:r.kind,inputs:r.inputs,answer:r.result,intermediate:r.intermediate},
   options:choices.choices,answerIndex:choices.answerIndex,assertions,
-  steps:[{label:r.interLabel,choices:step.choices,answerIndex:step.answerIndex},
-   {label:"Resultado final",choices:choices.choices,answerIndex:choices.answerIndex}],
+  steps:[{label:visual?.kind==="number-line"?"Identifica el valor del extremo abierto":visual?.kind==="rectangle"&&visual.measure==="area"?"Lee la medida horizontal de la figura":visual?"Calcula o deduce el valor intermedio a partir de la figura":r.interLabel,choices:step.choices,answerIndex:step.answerIndex},
+   {label:visual?.kind==="number-line"?"Selecciona la desigualdad representada":"Resultado final",choices:visual?.kind==="number-line"?
+    [`x > ${solution}`,`x ≥ ${solution}`,`x < ${solution}`,`x ≤ ${solution}`]:choices.choices,
+    answerIndex:visual?.kind==="number-line"?0:choices.answerIndex}],
   family:"math-m1-"+subtopic,reviewStatus:"editorial-draft"};
 }
 export function mathPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{

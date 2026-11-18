@@ -30,10 +30,12 @@ describe("rehabilitación visual M1 — piloto de cinco competencias",()=>{
   }
   expect(total).toBe(225);
  });
- it("los modos que aún no se rediseñaron no se cuentan como visuales aptos",()=>{
-  for(const [topic,subtopic] of scope)for(const mode of ["clasificar","construir"] as const){
+ it("los modos de clasificación y construcción también reciben el estímulo esencial",()=>{
+  for(const [topic,subtopic,kind] of scope)for(const mode of ["clasificar","construir"] as const){
    const item=mathModel(topic,subtopic,"principiante",mode,0);
-   expect(item.visualRequirement).toBe("none");expect(item.visual).toBeUndefined();
+   expect(item.visualRequirement).toBe("essential");
+   expect(item.visual?.kind).toBe(kind);
+   expect(visualAnswer(item.visual!)).toBe(item.oracle.answer.n/item.oracle.answer.d);
   }
  });
  it("sin el objeto gráfico, el estudiante carece de datos necesarios para responder",()=>{
