@@ -36,10 +36,10 @@ export function m3WritingPool(level:Level,subtopic:WritingSubtopic,mode:Mode,exi
     'reconocer los límites de las conclusiones'
    ][i%7];
    return {...a,...meta,steps:[
-     'Primero, '+focus+' en A: '+a.steps[0],
-     'Después, '+focus+' en B, sin trasladar supuestos: '+b.steps[1],
-     'Por último, '+focus+' en C, delimitando la conclusión: '+c.steps[2]
-    ],hint:'Analiza A, contrasta B, delimita C. Énfasis: '+focus+'.',
+     'Analizar '+focus+' en el caso A: '+a.steps[0],
+     'Contrastar '+focus+' en el caso B, sin trasladar supuestos: '+b.steps[1],
+     'Delimitar '+focus+' en el caso C, con una conclusión sustentada: '+c.steps[2]
+    ],hint:'Organiza las acciones por su función: comprobar evidencia, contrastar criterios y justificar una conclusión. Énfasis: '+focus+'.',
     explanation:'La primera decisión se funda en A: '+a.explanation+' La segunda contrasta B: '+b.explanation+' El cierre respeta lo que C permite afirmar: '+c.explanation} as WritingItem;
   }
   throw Error('M3: modalidad incompatible '+mode+' '+id);
