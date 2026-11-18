@@ -1,22 +1,22 @@
 {
-  "version": 14,
+  "version": 15,
   "scope": "Contrato de rutas y datos tras M3 completo Español: conservar historia, rotación y regresión M0/M1/M2.",
   "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
   "hash_algorithm": "git-blob-sha1",
   "files": {
-    "src/lib/phuma-catalog.ts": "31467f450ca992425ced300a7dde2e26ca352973",
-    "src/lib/coverage.ts": "a097177a5e22989dcad1fdc17831a95f18794881",
+    "src/lib/phuma-catalog.ts": "59ab92a1c9c4bf03f8d4755478a11da11444c835",
+    "src/lib/coverage.ts": "9f0dc76d7ac57e43a80995efc2d3262284003e41",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449",
     "src/lib/writing.ts": "623c4d4c2429fd340a52359a80a44dcc83425094",
-    "src/routes/index.tsx": "4cce207d49ebc93d387bfd71a49f0a5289ccd3ac",
+    "src/routes/index.tsx": "5393a26d9bec76d207eb7138ee30f92331f5f0f8",
     "src/routes/jugar.tsx": "f38794f676f80e64ab76e368b77bdc6a4e0427cc",
     "src/routes/lectura.tsx": "2586e077fa1fe5169f878adc195f79c93b1d7f52",
     "src/routes/redaccion.tsx": "359637749ef4289c6c153699f087dd9ad7556d24",
     "src/routes/historial.tsx": "eb49b09c484ab62b36f42cd4249f72e33223d909"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Revisión editorial justificada de fichas de secuencia en Español: sin pistas ordinales, sin cambios de IDs ni historial.",
+  "change_note": "Habilitación autorizada de Matemáticas M1: 198 celdas, núcleo 10/15/20, menú y rutas compatibles, sin alterar ID de Español.",
   "previous_baseline": "bb4d9704f9581065f1bddd99e50326d84e9008d7"
 }
