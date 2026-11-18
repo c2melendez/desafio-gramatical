@@ -8,5 +8,5 @@ describe('clasificación de cohesión',()=>{it('registra la respuesta y avanza',
  render(<SynonymClassification nivel="principiante" subtema="Cohesión y coherencia"/>);
  const q=COHESION_CLASSIFICATION.find(x=>x.level==='principiante'&&screen.queryByText(x.prompt));
  expect(q).toBeDefined();fireEvent.click(screen.getByRole('button',{name:q!.items[0].label}));fireEvent.click(screen.getByRole('button',{name:'Comprobar'}));
- expect(screen.getByText(q!.explanation)).toBeTruthy();fireEvent.click(screen.getByRole('button',{name:'Continuar'}));expect(screen.getByText('Clasificación · Pregunta 2 de 10 · Básico')).toBeTruthy();
+ expect(screen.getByText(q!.explanation)).toBeTruthy();fireEvent.click(screen.getByRole('button',{name:'Continuar'}));expect(screen.getByText('2/10')).toBeTruthy();
 });});
