@@ -93,12 +93,22 @@
         "espanol-CORTE"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         10,
         15,
         20
-      ]
+      ],
+      "evidence": "docs/matematicas-m1-cierre.md",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "scope": "Núcleo técnico 10/15/20, 198 celdas, 2970 registros; requiere publicar CI y Render Live mismo SHA",
+      "technical": {
+        "cells": 198,
+        "records": 2970,
+        "ids_unique": 2970,
+        "oracle_failures": 0,
+        "academic_independence": "NO_CERTIFICADA"
+      }
     },
     {
       "id": "matematicas-M2",
