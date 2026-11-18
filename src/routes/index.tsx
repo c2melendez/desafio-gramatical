@@ -10,7 +10,7 @@ import {GRAMMAR_M1_ACTIVITIES} from "@/lib/grammar-m1-activities";
 import {M1_NEXT_ACTIVITIES} from "@/lib/grammar-m1-next-activities";
 import {M1_LITERATURE_ACTIVITIES} from "@/lib/grammar-m1-literature";
 import {CONTENT_TARGET,CONTENT_STAGE_ONE,countContent} from "@/lib/coverage";
-import {learningDescription,DEFAULT_SELECTION} from "@/lib/study-context";
+import {learningDescription,DEFAULT_SELECTION,type StudySelection} from "@/lib/study-context";
 
 export const Route = createFileRoute("/")({
  validateSearch:(search:Record<string,unknown>)=>{
@@ -34,11 +34,8 @@ export const Route = createFileRoute("/")({
 
 function Home() {
  const selected=Route.useSearch();
- const [areaId,setAreaId]=useState<AreaId>(selected.area as AreaId);
- const [topic,setTopic]=useState(selected.tema);
- const [subtopic,setSubtopic]=useState(selected.subtema);
- const [mode,setMode]=useState<Mode>(selected.modo);
- const [level,setLevel]=useState<Level>(selected.nivel);
+ const [selection,setSelection]=useState<StudySelection>(()=>({...selected}));
+ const {area:areaId,tema:topic,subtema:subtopic,modo:mode,nivel:level}=selection;
  const selectedArea=AREAS.find(a=>a.id===areaId)??AREAS[0];
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)??selectedArea.topics[0];
  const pilot=areaId==="espanol"&&(topic==="Gramática y semántica"||topic==="Literatura")&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
@@ -53,11 +50,11 @@ function Home() {
  const nucleus=CONTENT_STAGE_ONE[level];
  const onArea=(id:AreaId)=>{
   const target=AREAS.find(a=>a.id===id)!;
-  setAreaId(id);setTopic(target.topics[0].name);setSubtopic(target.topics[0].subtopics[0]);setMode("clasificar");
+  setSelection(previous=>({...previous,area:id,tema:target.topics[0].name,subtema:target.topics[0].subtopics[0],modo:"clasificar"}));
  };
  const onTopic=(name:string)=>{
   const target=selectedArea.topics.find(t=>t.name===name)!;
-  setTopic(name);setSubtopic(target.subtopics[0]);setMode("clasificar");
+  setSelection(previous=>({...previous,tema:name,subtema:target.subtopics[0],modo:"clasificar"}));
  };
  return (
   <main className="mx-auto max-w-4xl px-4 py-7 md:py-10 space-y-7">
@@ -91,7 +88,7 @@ function Home() {
       </select>
      </label>
      <label className="block space-y-2 font-bold text-sm">Subtema
-      <select aria-label="Subtema de estudio" value={subtopic} onChange={e=>setSubtopic(e.target.value)} className="w-full border-2 border-foreground rounded-lg bg-background p-3 font-normal">
+      <select aria-label="Subtema de estudio" value={subtopic} onChange={e=>setSelection(previous=>({...previous,subtema:e.target.value}))} className="w-full border-2 border-foreground rounded-lg bg-background p-3 font-normal">
        {selectedTopic.subtopics.map(s=><option key={s} value={s}>{s}</option>)}
       </select>
      </label>
@@ -108,7 +105,7 @@ function Home() {
     <h2 id="select-game" className="text-2xl font-black">3. Elige un juego</h2>
     <div className="grid gap-3" role="group" aria-label="Tipo de desafío">
      {GAME_IDS.map(id=>(
-      <button key={id} onClick={()=>setMode(id)} aria-pressed={mode===id}
+      <button key={id} onClick={()=>setSelection(previous=>({...previous,modo:id}))} aria-pressed={mode===id}
        className={`card-ink flex items-center gap-4 p-4 text-left transition ${mode===id?"bg-primary text-primary-foreground":"bg-card"}`}>
        <span className="text-3xl" aria-hidden>{GAME_ICONS[id]}</span>
        <span className="flex-1"><span className="block text-lg font-bold">{names[id]}</span><span className="block text-sm opacity-90">{GAME_FOCUS[id]}</span></span>
@@ -122,7 +119,7 @@ function Home() {
     <h2 id="select-level" className="text-2xl font-black">4. Selecciona el nivel</h2>
     <div className="grid grid-cols-3 gap-2" role="group" aria-label="Dificultad">
      {LEVELS.map(l=>(
-      <button key={l} aria-pressed={level===l} onClick={()=>setLevel(l)}
+      <button key={l} aria-pressed={level===l} onClick={()=>setSelection(previous=>({...previous,nivel:l}))}
        className={`tile text-sm ${level===l?"bg-secondary text-secondary-foreground":"bg-card"}`}>
        {l==="principiante"?"Básico":LEVEL_LABEL[l]}
       </button>
