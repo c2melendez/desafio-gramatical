@@ -1,4 +1,6 @@
 import {M2_CATEGORY_SENTENCES,M2_CATEGORY_QUIZ,M2_CATEGORY_BUILD} from "@/lib/m2-grammar";
+import {M3_CATEGORY_SENTENCES,M3_CATEGORY_QUIZ,M3_CATEGORY_BUILD} from "@/lib/m3-grammar";
+import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BUILD, LEVELS, LEVEL_LABEL, MODE_LABEL, QUIZ, SENTENCES, pointsFor, saveHistory, shuffle, type Level, type Mistake, type Mode } from "@/lib/grammar";
@@ -38,8 +40,8 @@ export const Route = createFileRoute("/jugar")({
 // Se guarda una cola por modalidad y nivel para evitar repeticiones entre partidas.
 // Solo se vuelve a barajar cuando se ha agotado todo el banco.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function buildItems(modo: Mode, nivel: Level): any[] {
-  const source = modo === "clasificar" ? [...SENTENCES[nivel], ...EXTRA_SENTENCES[nivel], ...(nivel === "avanzado" ? GRAMMAR_ADVANCED_SENTENCES : []),...M2_CATEGORY_SENTENCES[nivel]] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel],...M2_CATEGORY_QUIZ[nivel]] : [...BUILD[nivel], ...EXTRA_BUILD[nivel], ...GRAMMAR_NUCLEUS_BUILD[nivel],...M2_CATEGORY_BUILD[nivel]];
+export function buildItems(modo: Mode, nivel: Level): any[] {
+  const source = modo === "clasificar" ? [...SENTENCES[nivel], ...EXTRA_SENTENCES[nivel], ...(nivel === "avanzado" ? GRAMMAR_ADVANCED_SENTENCES : []),...M2_CATEGORY_SENTENCES[nivel],...M3_CATEGORY_SENTENCES[nivel]] : modo === "quiz" ? [...QUIZ[nivel], ...EXTRA_QUIZ[nivel],...M2_CATEGORY_QUIZ[nivel],...M3_CATEGORY_QUIZ[nivel]] : [...BUILD[nivel], ...EXTRA_BUILD[nivel], ...GRAMMAR_NUCLEUS_BUILD[nivel],...M2_CATEGORY_BUILD[nivel],...M3_CATEGORY_BUILD[nivel]];
   const key = `desafio-gramatical:cola:${modo}:${nivel}`;
   const ids = new Set(source.map((x) => x.id));
   let queue: string[] = [];
@@ -47,7 +49,7 @@ function buildItems(modo: Mode, nivel: Level): any[] {
     const stored = JSON.parse(localStorage.getItem(key) || "[]");
     if (Array.isArray(stored)) queue = stored.filter((id): id is string => typeof id === "string" && ids.has(id));
   } catch { /* Sin almacenamiento disponible: se crea una cola nueva. */ }
-  const batchSize = modo === "quiz" ? 8 : 5;
+  const batchSize = ROUNDS_PER_GAME;
   const selected: string[] = [];
   while (selected.length < Math.min(batchSize, source.length)) {
     if (!queue.length) {
@@ -160,19 +162,9 @@ function Play() {
   const props = { item, report, next, isLast: idx === items.length - 1 };
   return (
     <main className="mx-auto max-w-xl px-4 py-5 space-y-5">
-      <div className="flex items-center justify-between gap-2">
-        <Link to="/" className="font-bold underline" aria-label="Salir al inicio">← Salir</Link>
-        <p className="text-sm font-bold">{MODE_LABEL[modo]} · {LEVEL_LABEL[nivel]}</p>
-        <button onClick={() => { if (confirm("¿Reiniciar la partida?")) setRun((r) => r + 1); }} className="font-bold underline">Reiniciar</button>
-      </div>
-      <div className="grid grid-cols-3 gap-2 text-center" aria-live="polite">
-        <div className="card-ink p-2"><p className="text-xs">Ronda</p><p className="text-xl font-black">{idx + 1}/{items.length}</p></div>
-        <div className="card-ink p-2"><p className="text-xs">Puntaje</p><p className="text-xl font-black text-primary">{score}</p></div>
-        <div className="card-ink p-2"><p className="text-xs">Racha</p><p className="text-xl font-black">🔥{streak}</p></div>
-      </div>
-      <div className="h-3 rounded-full border-2 border-foreground bg-muted overflow-hidden" role="progressbar" aria-valuenow={idx + 1} aria-valuemax={items.length} aria-valuemin={1}>
-        <div className="h-full bg-primary transition-all" style={{ width: `${((idx + 1) / items.length) * 100}%` }} />
-      </div>
+      <GameSessionHeader context={`${MODE_LABEL[modo]} · ${LEVEL_LABEL[nivel]}`}
+       title={MODE_LABEL[modo]} round={idx+1} score={score} streak={streak}
+       onRestart={()=>setRun(n=>n+1)}/>
       {modo === "clasificar" && <ClassifyGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
       {modo === "quiz" && <QuizGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
       {modo === "construir" && <BuildGame key={`${modo}-${nivel}-${run}-${idx}-${item.id}`} {...props} />}
@@ -187,6 +179,7 @@ export function GrammarPilot({subtema,nivel}:{subtema:string;nivel:Level}) {
  const [correct,setCorrect]=useState(0);
  const [pilotStreak,setPilotStreak]=useState(0);
  const [pilotBest,setPilotBest]=useState(0);
+ const [score,setScore]=useState(0);
  const [finished,setFinished]=useState(false);
  const [order,setOrder]=useState<number[]>([]);
  const pool=grammarPilotPool(subtema,nivel);
@@ -195,15 +188,15 @@ export function GrammarPilot({subtema,nivel}:{subtema:string;nivel:Level}) {
  useEffect(()=>{
   const list=grammarPilotPool(subtema,nivel);
   setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));
-  setIndex(0);setPicked(null);setCorrect(0);setPilotStreak(0);setPilotBest(0);setFinished(false);setOrder(shuffle([0,1,2,3]));
+  setIndex(0);setPicked(null);setCorrect(0);setPilotStreak(0);setPilotBest(0);setScore(0);setFinished(false);setOrder(shuffle([0,1,2,3]));
  },[subtema,nivel,run,key]);
  if(!items)return <main className="p-6">Preparando ejercicios…</main>;
  if(!items.length)return <main className="p-6">No hay ejercicios para esta selección. <Link to="/">Volver al menú</Link></main>;
  if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/">Volver al menú</Link></main>;
  const q=items[index];
- const choose=(i:number)=>{if(picked!==null)return;setPicked(i);const ok=i===q.answer;if(ok){setCorrect(n=>n+1);setPilotStreak(n=>{const next=n+1;setPilotBest(best=>Math.max(best,next));return next;});}else setPilotStreak(0);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
- const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score:correct*10,correct,total:items.length,bestStreak:pilotBest,area:"espanol",topic,subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
- return <main className="mx-auto max-w-2xl p-6 space-y-5"><Link to="/" className="underline">← Menú</Link><h1 className="text-2xl font-black">{subtema}</h1><p role="note" className="text-sm text-muted-foreground">Ejercicios originales en revisión académica, no preguntas PHUMA oficiales.</p><p>Pregunta {index+1} de {items.length} · {nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}</p><div className="card-ink p-5 space-y-4"><p>{q.passage}</p><h2 className="font-bold">{q.question}</h2></div><div className="grid gap-3">{order.map(i=><button key={i} disabled={picked!==null} onClick={()=>choose(i)} className={`tile text-left ${picked===null?"bg-card":i===q.answer?"bg-success-soft":i===picked?"bg-destructive-soft":"bg-muted"}`}>{q.options[i]}</button>)}</div>{picked!==null&&<div aria-live="polite" className="space-y-3"><p className="card-ink p-4"><strong>{picked===q.answer?"Correcto. ":"Revisa tu respuesta. "}</strong>{q.explanation}</p><button onClick={next} className="tile w-full bg-primary text-primary-foreground">{index+1===items.length?"Ver resultado":"Siguiente"}</button></div>}</main>;
+ const choose=(i:number)=>{if(picked!==null)return;setPicked(i);const ok=i===q.answer;if(ok){setCorrect(n=>n+1);setPilotStreak(n=>{setScore(p=>p+pointsFor(n));const next=n+1;setPilotBest(best=>Math.max(best,next));return next;});}else setPilotStreak(0);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
+ const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score,correct,total:items.length,bestStreak:pilotBest,area:"espanol",topic,subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
+ return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5"><GameSessionHeader context={`${subtema} · ${nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}`} title={subtema} round={index+1} score={score} streak={pilotStreak} onRestart={()=>setRun(n=>n+1)}/><p role="note" className="text-sm text-muted-foreground">Ejercicios originales en revisión académica, no preguntas PHUMA oficiales.</p><div className="card-ink p-5 space-y-4"><p>{q.passage}</p><h2 className="font-bold">{q.question}</h2></div><div className="grid gap-3">{order.map(i=><button key={i} disabled={picked!==null} onClick={()=>choose(i)} className={`tile text-left ${picked===null?"bg-card":i===q.answer?"bg-success-soft":i===picked?"bg-destructive-soft":"bg-muted"}`}>{q.options[i]}</button>)}</div>{picked!==null&&<div aria-live="polite" className="space-y-3"><p className="card-ink p-4"><strong>{picked===q.answer?"Correcto. ":"Revisa tu respuesta. "}</strong>{q.explanation}</p><button onClick={next} className="tile w-full bg-primary text-primary-foreground">{index+1===items.length?"Ver resultado":"Siguiente"}</button></div>}</main>;
 }
 
 export function SynonymClassification({nivel,subtema="Sinónimos y antónimos"}:{nivel:Level;subtema?:string}) {
@@ -216,13 +209,14 @@ export function SynonymClassification({nivel,subtema="Sinónimos y antónimos"}:
  const [correct,setCorrect]=useState(0);
  const [streak,setStreak]=useState(0);
  const [best,setBest]=useState(0);
+ const [score,setScore]=useState(0);
  const [finished,setFinished]=useState(false);
- useEffect(()=>{const list=source.filter(q=>q.level===nivel);setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));setIndex(0);setCorrect(0);setStreak(0);setBest(0);setFinished(false);},[nivel,run,key,source]);
+ useEffect(()=>{const list=source.filter(q=>q.level===nivel);setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));setIndex(0);setCorrect(0);setStreak(0);setBest(0);setScore(0);setFinished(false);},[nivel,run,key,source]);
  if(!items)return <main className="p-6">Preparando ejercicios…</main>;
  if(!items.length)return <main className="p-6">No hay ejercicios para esta selección. <Link to="/">Volver al menú</Link></main>;
  if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/">Volver al menú</Link></main>;
  const q=items[index];
- const report=(ok:boolean)=>{if(ok){setCorrect(n=>n+1);setStreak(n=>{const next=n+1;setBest(b=>Math.max(b,next));return next;});}else setStreak(0);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
- const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"clasificar",level:nivel,score:correct*10,correct,total:items.length,bestStreak:best,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else setIndex(n=>n+1);};
- return <main className="mx-auto max-w-2xl p-6 space-y-5"><Link to="/" className="underline">← Menú</Link><h1 className="text-2xl font-black">{subtema}</h1><p>Clasificación · Pregunta {index+1} de {items.length} · {nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}</p><GrammarClassification key={q.id} item={q} onResult={report} onNext={next}/></main>;
+ const report=(ok:boolean)=>{if(ok){setCorrect(n=>n+1);setStreak(n=>{setScore(p=>p+pointsFor(n));const next=n+1;setBest(b=>Math.max(b,next));return next;});}else setStreak(0);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
+ const next=()=>{if(index+1===items.length){saveHistory({date:new Date().toISOString(),mode:"clasificar",level:nivel,score,correct,total:items.length,bestStreak:best,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else setIndex(n=>n+1);};
+ return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5"><GameSessionHeader context={`${subtema} · ${nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}`} title="Clasificación" round={index+1} score={score} streak={streak} onRestart={()=>setRun(n=>n+1)}/><GrammarClassification key={q.id} item={q} onResult={report} onNext={next}/></main>;
 }

@@ -23,7 +23,7 @@ describe("M1: integración funcional de construcción",()=>{
   const key=rotationKey("espanol","Gramática y semántica","Morfosintaxis","construir","principiante");
   expect(readRotation(key,MORPH_CONSTRUCTION.map(x=>x.id)).seen).toContain(item.id);
   fireEvent.click(screen.getByRole("button",{name:"Continuar"}));
-  expect(screen.getByText(/Pregunta 2 de 10/)).toBeTruthy();
+  expect(screen.getByText("2/10")).toBeTruthy();
  });
  it("rechaza distractor de concordancia y conserva el error en historial de rotación",()=>{
   render(<GrammarM1Play subtema="Morfosintaxis" modo="construir" nivel="principiante"/>);

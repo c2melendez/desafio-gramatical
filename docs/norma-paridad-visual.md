@@ -1,0 +1,23 @@
+# Norma transversal — paridad visual y 10 rondas por partida
+
+Versión 1.0 · 17 de noviembre de 2026. Aplica a **todas** las áreas, temas, subtemas, mecánicas y dificultades de Academia PHUMA Play. No reemplaza la validación académica ni las metas de 30/50/70 ejercicios del banco.
+
+## Contrato obligatorio de sesión
+
+1. **Una partida equivale exactamente a 10 rondas** en básico, intermedio y avanzado, en clasificación, selección y construcción y en cualquier mecánica futura. Los ejercicios del banco disponibles pueden superar 10; la partida solo selecciona 10 IDs no repetidos. Si una combinación ofrece menos de 10 reactivos aptos, no habilitar la partida ni simular repeticiones: registrar déficit y corregir contenido antes del cierre.
+2. Una ronda es **un ejercicio completo**. Puede incluir tres o más decisiones internas (por ejemplo, tres afirmaciones de Detective de ideas); todas se evalúan dentro de la misma ronda. No inflar el indicador de ronda, puntuación, racha o número de aciertos por las decisiones internas. Definir por juego una regla documentada de acierto global, con retroalimentación individual conservada. Guardar una rotación por ejercicio al completar la ronda.
+3. El componente compartido **GameSessionHeader**, y su constante `ROUNDS_PER_GAME=10`, constituyen el origen canónico de la cabecera. No replicar cabeceras con variantes por módulo.
+4. **Orden visual obligatorio**, basado en Desafío Gramatical: primera fila «← Salir», contexto `Subtema · Dificultad`, «Reiniciar»; título del juego; tarjetas alineadas «Ronda [n]/10», «Puntaje», «Racha»; barra de avance (por 10 rondas) y luego el estímulo/controles del ejercicio. Reiniciar solicita confirmación y reinicia los marcadores; salir conserva lo ya registrado según contrato. La barra emplea `role=progressbar`, `aria-valuenow`, `aria-valuemin`, `aria-valuemax` y etiqueta accesible.
+5. Mantener **tokens y componentes originales** de `src/styles.css`: fondo cálido, tarjetas claras, contornos oscuros, tipografías Fraunces/Atkinson Hyperlegible, `card-ink`, `tile`, color primario rojo, feedback éxito/error, sombras y botones de esquinas redondeadas. No cambiar paleta, tamaño de tablero, radios, bordes, elevaciones ni jerarquía por área sin solicitud explícita. La experiencia debe conservar contraste, foco visible, teclado, textos de botones, ajuste móvil y desplazamiento.
+6. Mantener exactamente las mismas reglas de navegación, estado, rotación, errores y persistencia en cualquier juego equivalente. El nombre de cada mecánica puede variar, pero los elementos del armazón visual no. La mecánica de clasificación puede tener varias opciones por reactivo, pero constituye una sola ronda.
+7. **No ocultar evidencia educativa** para forzar la paridad visual. Los pasajes largos y títulos compuestos requieren jerarquía legible, separación visible de fuentes y etiquetas abreviadas de encabezado. Se conserva íntegro el contenido y la posibilidad de leerlo en móvil; evitar títulos anidados de varios párrafos.
+
+## Puerta de auditoría y aceptación de cada módulo
+
+- Matriz exhaustiva de rutas seleccionables y combinaciones elegibles por área × tema × subtema × juego × nivel: comprobar 10 rondas desde la primera hasta la última y reinicio, agotamiento, rotación, historial y errores sin duplicados.
+- Pruebas automatizadas de unidad e integración del componente compartido; pruebas de interacción que validen incremento `1/10` a `10/10`, puntaje y racha una sola vez por ejercicio y `score` registrado en historial. Prueba negativa deliberada para detectar rondas 5/8, múltiples informes internos y ausencia de `progressbar`.
+- Inspección visual frente a capturas del Desafío Gramatical en escritorio y móvil: elementos y orden, tipografía, paleta, tarjetas, botones, barra, estados de foco, ausencia de cortes de contenido y navegación. Guardar evidencias de screenshots o declaración expresa de pruebas no realizadas.
+- CI obligatorio y despliegue Render Live del **mismo SHA** antes de cerrar un módulo; registrar artefactos y limitaciones en la documentación. La revisión académica autorizada como pendiente no elimina pruebas de interfaz ni de funcionalidad.
+- Este contrato también condiciona futuras áreas de Matemáticas, Naturaleza, Sociedad y Habilidades Blandas. No dar por finalizado un módulo que muestre una cabecera divergente o una partida de longitud diferente a 10.
+
+Referencias de paridad: capturas entregadas por el usuario el 17-11-2026 de `/jugar?modo=clasificar&nivel=principiante` y `/lectura?subtema=Idea+principal&modo=clasificar&nivel=intermedio`. Estándar definido por el usuario; prevalece sobre duraciones de 5/8/10 de implementaciones previas.

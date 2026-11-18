@@ -3,8 +3,9 @@ import {COHESION_CLASSIFICATION} from "@/lib/grammar-classify-cohesion";
 import {M2_GRAMMAR_ACTIVITIES} from "@/lib/m2-grammar";
 import {M3_GRAMMAR_ACTIVITIES} from "@/lib/m3-grammar";
 import {Link} from "@tanstack/react-router";
+import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {useEffect,useState} from "react";
-import {saveHistory,type Level,type Mode} from "@/lib/grammar";
+import {pointsFor,saveHistory,type Level,type Mode} from "@/lib/grammar";
 import {readRotation,recordRotation,rotationKey,selectRotation,writeRotation} from "@/lib/rotation";
 import {GrammarClassification,GrammarConstruction} from "@/components/games/GrammarActivities";
 import type {ClassificationActivity,ConstructionActivity} from "@/lib/grammar-activities";
@@ -33,6 +34,7 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  const [correct,setCorrect]=useState(0);
  const [streak,setStreak]=useState(0);
  const [best,setBest]=useState(0);
+ const [score,setScore]=useState(0);
  const [finished,setFinished]=useState(false);
  const topic=subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica";
  const key=rotationKey("espanol",topic,subtema,modo,nivel);
@@ -40,19 +42,19 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  useEffect(()=>{
   const bank=grammarM1Pool(subtema,modo,nivel);
   setItems(selectRotation(bank,readRotation(key,bank.map(x=>x.id)),10));
-  setIndex(0);setCorrect(0);setStreak(0);setBest(0);setFinished(false);
+  setIndex(0);setCorrect(0);setStreak(0);setBest(0);setScore(0);setFinished(false);
  },[subtema,modo,nivel,round,key]);
  if(!items)return <main className="p-6">Preparando ejercicios…</main>;
  if(!items.length)return <main className="p-6">No hay ejercicios para esta combinación. <Link to="/">Volver al menú</Link></main>;
  const item=items[index];
  const onResult=(ok:boolean)=>{
-  if(ok){setCorrect(n=>n+1);setStreak(n=>{const next=n+1;setBest(v=>Math.max(v,next));return next;});}
+  if(ok){setCorrect(n=>n+1);setStreak(n=>{setScore(p=>p+pointsFor(n));const next=n+1;setBest(v=>Math.max(v,next));return next;});}
   else setStreak(0);
   writeRotation(key,recordRotation(readRotation(key,source.map(x=>x.id)),item.id,ok));
  };
  const onNext=()=>{
   if(index+1===items.length){
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:correct*10,correct,total:items.length,
+   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score,correct,total:items.length,
     bestStreak:best,area:"espanol",topic,subtopic:subtema});
    setFinished(true);
   }else setIndex(i=>i+1);
@@ -61,11 +63,10 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  <p className="text-sm">Este resultado corresponde al juego y no equivale a una puntuación PHUMA oficial.</p>
  <button className="tile bg-primary text-primary-foreground" onClick={()=>setRound(n=>n+1)}>Practicar de nuevo</button>
  <Link className="block underline" to="/">Volver al menú</Link></main>;
- return <main className="mx-auto max-w-2xl p-6 space-y-5">
-  <Link to="/" className="underline">← Menú</Link>
-  <h1 className="text-2xl font-black">{subtema}</h1>
-  <p>{modo==="construir"?"Construcción":"Clasificación"} · Pregunta {index+1} de {items.length} · {nivel}</p>
-  <p role="note" className="text-sm text-muted-foreground">Material de práctica original con comprobación técnica; revisión académica pendiente. No es un examen PHUMA oficial.</p>
+ return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5">
+  <GameSessionHeader context={`${subtema} · ${nivel}`} title={modo==="construir"?"Construcción":"Clasificación"}
+   round={index+1} total={ROUNDS_PER_GAME} score={score} streak={streak} onRestart={()=>setRound(n=>n+1)}/>
+  <p role="note" className="text-sm text-muted-foreground">Material original de práctica; revisión académica pendiente. No equivale a un examen PHUMA oficial.</p>
   {item.kind==="construction"?<GrammarConstruction key={item.id} item={item} onResult={onResult} onNext={onNext}/>:
   <GrammarClassification key={item.id} item={item} onResult={onResult} onNext={onNext}/>}
  </main>;
