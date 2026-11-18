@@ -88,7 +88,18 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  const ordered=[correctClaim,...falseClaims],shift=seed%3;
  const assertions=[...ordered.slice(shift),...ordered.slice(0,shift)];
  const id="math-m1-"+[topic,subtopic,mode,level,index].map(v=>String(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")).join("-");
- return {id,topic,subtopic,level,mode,seed,prompt:visual?`${visualPrompt(visual)} (Ejercicio ${index+1}).`:r.question,visual,visualRequirement:visual?"essential":"none",expected:solution,explanation:r.reason,
+ const visualExplanation=visual?.kind==="triangle-angles"
+  ? `Del diagrama se leen A=${visual.alpha}° y B=${visual.beta}°. Los ángulos interiores suman 180°; C=180−${visual.alpha}−${visual.beta}=${solution}°. No se estima el valor desde la apariencia del dibujo.`
+  :visual?.kind==="right-triangle"
+  ? `La figura muestra catetos ${visual.legA} y ${visual.legB} cm. La hipotenusa se obtiene con h²=${visual.legA}²+${visual.legB}²; h=${solution} cm, no sumando los catetos.`
+  :visual?.kind==="bar-chart"
+  ? `Del gráfico se leen lunes ${visual.monday}, martes ${visual.tuesday} y miércoles ${visual.wednesday} libros. El total es ${visual.monday}+${visual.tuesday}+${visual.wednesday}=${solution}; sumar no equivale a calcular un promedio.`
+  :visual?.kind==="linear-function"
+  ? `Los puntos del plano son (0,${visual.intercept}) y (1,${visual.intercept+visual.slope}). La variación por cada incremento unitario en x es ${visual.slope}; así f(${visual.targetX})=${visual.slope}×${visual.targetX}+${visual.intercept}=${solution}.`
+  :visual?.kind==="number-line"
+  ? `El círculo abierto está exactamente entre las marcas ${visual.boundary-1} y ${visual.boundary+1}, por lo que corresponde a ${visual.boundary}. No se incluye el extremo, y la flecha a la derecha representa valores mayores.`
+  :r.reason;
+ return {id,topic,subtopic,level,mode,seed,prompt:visual?`${visualPrompt(visual)} (Ejercicio ${index+1}).`:r.question,visual,visualRequirement:visual?"essential":"none",expected:solution,explanation:visualExplanation,
   formula:r.formula,source:guideSubtopics.has(subtopic)?"GUIA-PRE-U-UNAH-2026:p6":"catalogo-practica-complementaria",
   oracle:{kind:r.kind,inputs:r.inputs,answer:r.result,intermediate:r.intermediate},
   options:choices.choices,answerIndex:choices.answerIndex,assertions,
