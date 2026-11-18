@@ -147,8 +147,8 @@ const SEEDS:Seed[]=[
         "María trajo lápices ___ cuadernos.",
         "y",
         "El grupo eligió el texto.",
-        "Primero lo leyó en voz alta.",
-        "Luego comentó su significado."
+        "Lo leyó en voz alta.",
+        "Comentó su significado."
       ],
       [
         "El camino estaba mojado por tanto había llovido.",
@@ -168,7 +168,7 @@ const SEEDS:Seed[]=[
         "sin embargo",
         "Ana organizó un calendario de estudio.",
         "Practicó con ejercicios.",
-        "Finalmente presentó la prueba."
+        "Presentó la prueba."
       ]
     ]
   },
