@@ -51,7 +51,7 @@ export function m2WritingPool(level:Level,subtopic:WritingSubtopic,mode:Mode,bas
    "Contrastar los argumentos del caso B: "+sb.steps[1],
    "Formular una conclusión limitada a los datos del caso B: "+sb.steps[2]
   ],hint:"Ordena el proceso: examinar A, contrastar B y cerrar con un argumento sustentado.",
-   explanation:"El razonamiento organiza pruebas de dos fuentes sin invertir los pasos: "+("explanation" in sa?sa.explanation:"")+("explanation" in sb?" "+sb.explanation:""),
+   explanation:"En el caso A debe examinarse esta evidencia: «"+sa.steps[0]+"». En el caso B se contrasta el dato «"+sb.steps[1]+"» antes de concluir con «"+sb.steps[2]+"». Si se invierte el proceso, se formula una conclusión sin comprobar sus fundamentos. "+("explanation" in sa?sa.explanation:"")+("explanation" in sb?" "+sb.explanation:""),
    ...data} as unknown as WritingItem;
  });
 }
