@@ -23,9 +23,9 @@ function Passage({item}:{item:ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetect
   <h2 className="text-xl font-black">{item.id.startsWith("m3-reading-")?`Integración de tres fuentes · ${item.subtopic}`:item.title}</h2>
   {item.id.startsWith("m3-reading-")
    ?<div className="space-y-3">
-     {item.passage.split(/(?=BLOQUE [ABC] · textos [ABC]1 y [ABC]2)/).filter(Boolean).map((block,i)=>
+     {item.passage.split(/(?=FUENTE [ABC]\\n)/).filter(Boolean).map((block,i)=>
       <section key={i} className="rounded-lg border-2 border-foreground/40 bg-background p-3 whitespace-pre-line leading-relaxed text-base"
-       aria-label={`Bloque de lectura ${"ABC"[i]}`}>{block.trim()}</section>)}
+       aria-label={`Fuente de lectura ${"ABC"[i]}`}>{block.trim()}</section>)}
     </div>
    :<p className="leading-relaxed whitespace-pre-line text-base">{item.passage}</p>}
  </section>;
