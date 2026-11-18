@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { gradeClassification, gradeConstruction, type ClassificationActivity, type ConstructionActivity } from '@/lib/grammar-activities';
 import { shuffle } from '@/lib/grammar';
+import {LearningFeedback} from './LearningFeedback';
 
 type Props<T> = { item: T; onResult: (correct: boolean) => void; onNext: () => void };
 
@@ -18,9 +19,9 @@ export function GrammarClassification({ item, onResult, onNext }: Props<Classifi
     {presentedItems.map(x => <fieldset key={x.id} className="card-ink p-4 space-y-2" disabled={checked}>
       <legend className="font-bold">{x.text}</legend>
       <div className="flex flex-wrap gap-2">{presentedLabels.map(label => <button type="button" key={label} aria-pressed={answers[x.id] === label} onClick={() => setAnswers(a => ({ ...a, [x.id]: label }))} className={`tile ${answers[x.id] === label ? 'bg-primary text-primary-foreground' : 'bg-card'}`}>{label}</button>)}</div>
-      {checked && <p>{answers[x.id] === x.label ? '✓' : '✗'} {x.label}: {x.explanation}</p>}
+      {checked && <LearningFeedback correct={answers[x.id]===x.label} subtopic={item.subtopic} selected={answers[x.id]} expected={x.label} explanation={x.explanation}/>}
     </fieldset>)}
-    {!checked ? <button disabled={!complete} onClick={check} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">Comprobar</button> : <div aria-live="polite"><p>{item.explanation}</p><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
+    {!checked ? <button disabled={!complete} onClick={check} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40">Comprobar</button> : <div aria-live="polite" className="space-y-3"><p>{item.explanation}</p><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
   </section>;
 }
 
@@ -38,6 +39,6 @@ export function GrammarConstruction({ item, onResult, onNext }: Props<Constructi
       {!chosen.length && <span>Selecciona fichas en orden.</span>}
     </div>
     <div className="flex flex-wrap gap-2" aria-label="Fichas disponibles">{tiles.map(x => <button key={x.id} disabled={checked || chosen.includes(x.id)} className="tile bg-card disabled:opacity-40" onClick={() => setChosen(c => [...c, x.id])}>{x.text}</button>)}</div>
-    {!checked ? <button disabled={!complete} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40" onClick={check}>Comprobar</button> : <div aria-live="polite" className="space-y-2"><p>{gradeConstruction(item, chosen) ? 'Correcto.' : `Una solución: ${item.solutions[0].map(lookup).join(' ')}`}</p><p>{item.explanation}</p><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
+    {!checked ? <button disabled={!complete} className="tile w-full bg-primary text-primary-foreground disabled:opacity-40" onClick={check}>Comprobar</button> : <div aria-live="polite" className="space-y-3"><LearningFeedback correct={gradeConstruction(item,chosen)} subtopic={item.subtopic} selected={chosen.map(lookup).join(' → ')} expected={item.solutions[0].map(lookup).join(' → ')} explanation={item.explanation} title={gradeConstruction(item,chosen)?'Correcto.':`Una solución: ${item.solutions[0].map(lookup).join(' ')}`}/><button className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>Continuar</button></div>}
   </section>;
 }
