@@ -34,13 +34,18 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
   }
   if(mode==='clasificar'){
    const pick=(q:ReadingChallenge,tag:'explicit'|'inference'|'unsupported')=>q.claims.find(x=>x.tag===tag)!;
+   const tags=['explicit','inference','unsupported'] as const;
+   const ta=tags[i%3],tb=tags[(i+1)%3],tc=tags[(i+2)%3];
+   const candidates=[
+    {...pick(a,ta),text:'Fuente A: '+pick(a,ta).text},
+    {...pick(b,tb),text:'Fuente B: '+pick(b,tb).text},
+    {...pick(c,tc),text:'Fuente C: '+pick(c,tc).text}
+   ];
+   const permutations=[[0,1,2],[1,2,0],[2,0,1],[0,2,1],[2,1,0],[1,0,2]];
+   const claims=permutations[i%6].map(index=>candidates[index]);
    return {...common,question:'Clasifica cada afirmación según su fuente A, B o C. No traslades datos de un texto a otro.',
-    claims:[
-     {...pick(a,'explicit'),text:'Fuente A: '+pick(a,'explicit').text},
-     {...pick(b,'inference'),text:'Fuente B: '+pick(b,'inference').text},
-     {...pick(c,'unsupported'),text:'Fuente C: '+pick(c,'unsupported').text}
-    ],options:['Dato explícito','Inferencia','No sustentado','No aplica'],answer:0,
-    explanation:'Clasificar exige contrastar cada juicio con su fuente: A (dato explícito): '+pick(a,'explicit').explanation+' B (inferencia): '+pick(b,'inference').explanation+' C (no sustentado): '+pick(c,'unsupported').explanation,
+    claims,options:['Dato explícito','Inferencia','No sustentado','No aplica'],answer:0,
+    explanation:'Cada fuente se evalúa según su evidencia: '+candidates.map(x=>x.text+' → '+x.explanation).join(' '),
     order:a.order};
   }
   return {...common,
