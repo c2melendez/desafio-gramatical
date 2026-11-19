@@ -1,4 +1,6 @@
 import type {Level} from "./grammar";
+import {geometryCognitiveChallenge} from "./geometry-cognitive-challenges";
+import type {CognitiveStage} from "./math-cognitive-progression";
 
 /** Figuras nuevas y originales, basadas en habilidades presentes en la guía PRE-U UNAH 2026.
  * Ninguna pregunta ni diagrama oficial es reproducido literalmente. */
@@ -12,6 +14,7 @@ export type CompositeFigure={kind:"composite";width:number;height:number;cutWidt
 export type GeometryFigure=ParallelFigure|CompositeFigure;
 export type GeometryTask={
  id:string;skill:GeometrySkill;level:Level;figure:GeometryFigure;
+ cognitiveStage:CognitiveStage;operation:string;requiredEvidence:string[];
  prompt:string;options:string[];answerIndex:number;answer:string;explanation:string;
  visualRequirement:"essential";source:"practica-original-basada-en-competencias-phuma";
 };
@@ -43,26 +46,30 @@ const prompts:Record<GeometrySkill,string>={
 export function geometryTask(index:number,level:Level):GeometryTask{
  const skill=GEOMETRY_SKILLS[index%4],figure=geometryFigure(index,level,skill);
  const numeric=geometryOracle(figure,skill),unit=figure.kind==="parallel"?"°":skill==="composite-area"?" cm²":" cm";
- const answer=`${numeric}${unit}`;
+ const challenge=geometryCognitiveChallenge(figure,skill,level);
+ const answer=challenge?.answer??`${numeric}${unit}`;
  const variants=figure.kind==="parallel"?
   [numeric,180-numeric,numeric+10,Math.abs(numeric-10)]:
   [numeric,figure.width*figure.height,
    figure.width*figure.height+figure.cutWidth*figure.cutHeight,
    numeric+(skill==="composite-area"?figure.cutWidth*figure.cutHeight:2*figure.cutHeight)];
- const candidates=[answer,...variants.map(n=>`${n}${unit}`)];
- for(let n=1;n<8;n++)candidates.push(`${numeric+3*n}${unit}`);
+ const candidates=challenge?[answer,...challenge.distractors]:[answer,...variants.map(n=>`${n}${unit}`)];
+ for(let n=1;n<12;n++)candidates.push(`${numeric+3*n}${unit}`);
  const options=[...new Set(candidates)].slice(0,4);
  if(options.length!==4)throw Error("No hay cuatro alternativas distintas");
  const offset=index%4,rotated=[...options.slice(offset),...options.slice(0,offset)];
- const explanation=figure.kind==="parallel"
+ const basicExplanation=figure.kind==="parallel"
   ?skill==="corresponding"
    ?`El ángulo indicado arriba mide ${figure.degrees}°. Por el paralelismo, los ángulos correspondientes son congruentes. El segundo mide ${answer}.`
    :`El ángulo correspondiente mide ${figure.degrees}°. El ángulo adyacente es suplementario: 180° − ${figure.degrees}° = ${answer}.`
   :skill==="composite-area"
    ?`El rectángulo exterior mide ${figure.width} × ${figure.height} cm. Se retira un rectángulo de ${figure.cutWidth} × ${figure.cutHeight} cm: área = ${figure.width*figure.height} − ${figure.cutWidth*figure.cutHeight} = ${answer}.`
    :`En la figura en L, las longitudes horizontales del contorno suman 2 × ${figure.width} y las verticales 2 × ${figure.height}. Perímetro = 2(${figure.width}+${figure.height}) = ${answer}.`;
- return {id:`math-geom-v1-${level}-${index}`,skill,level,figure,prompt:prompts[skill],
-   answer,answerIndex:rotated.indexOf(answer),options:rotated,explanation,
+ return {id:`math-geom-v1-${level}-${index}`,skill,level,figure,prompt:challenge?.prompt??prompts[skill],
+   answer,answerIndex:rotated.indexOf(answer),options:rotated,
+   explanation:challenge?challenge.explanation+` Respuesta correcta: ${answer}.`:basicExplanation,
+   cognitiveStage:challenge?.stage??1,operation:challenge?.operation??skill,
+   requiredEvidence:challenge?.requiredEvidence??["leer-diagrama","aplicar-relacion-directa"],
    visualRequirement:"essential",source:"practica-original-basada-en-competencias-phuma"};
 }
 export function geometryPool(level:Level):GeometryTask[]{return Array.from({length:72},(_,i)=>geometryTask(i,level))}
