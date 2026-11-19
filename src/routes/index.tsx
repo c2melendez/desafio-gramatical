@@ -176,6 +176,12 @@ function Home() {
      <Link to="/laboratorio-geometria" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de geometría ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
      <p className="text-xs">Ejercicios y figuras originales. Las relaciones representadas se verifican con oráculos geométricos independientes.</p>
     </section>}
+    {math&&topic==="Estadística y probabilidad"&&<section className="card-ink bg-accent/40 p-4 space-y-3" aria-label="Laboratorio de estadística visual">
+     <h3 className="font-black text-lg">📊 Laboratorio de estadística y gráficos</h3>
+     <p className="text-sm">Interpreta barras, tendencias en líneas, frecuencias, moda, mediana, rango y espacios muestrales. Diez rondas repartidas entre seis habilidades diferentes.</p>
+     <Link to="/laboratorio-estadistica" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de estadística ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
+     <p className="text-xs">La interpretación de gráficos y la dispersión corresponden al temario PHUMA. La probabilidad elemental se identifica como práctica complementaria.</p>
+    </section>}
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
    </section>
    <aside className="rounded-xl border-2 border-foreground bg-card p-4 text-sm space-y-2">
