@@ -1,4 +1,6 @@
 import type {Level} from "./grammar";
+import {functionChallenge} from "./function-cognitive-challenges";
+import type {CognitiveStage} from "./math-cognitive-progression";
 
 /** Original supplementary practice: functional analysis is not separately itemized
  * in the 2026 UNAH PHUMA topic outline (p. 6). Every answer follows from the plotted data. */
@@ -11,6 +13,7 @@ export const GRAPH_SKILL_NAMES:Record<GraphSkill,string>={
 export type GraphData={xs:[number,number,number];ys:[number,number,number];closed:true};
 export type GraphTask={
  id:string;skill:GraphSkill;level:Level;graph:GraphData;
+ cognitiveStage:CognitiveStage;operation:string;requiredEvidence:string[];
  prompt:string;options:string[];answerIndex:number;answer:string;explanation:string;
  source:"practica-complementaria-analisis-funciones";visualRequirement:"essential";
 };
@@ -88,7 +91,13 @@ const prompts:Record<GraphSkill,string>={
  "x-intercept":"¿En qué punto corta esta gráfica el eje horizontal (x)?"};
 export function graphTask(index:number,level:Level):GraphTask{
  const skill=GRAPH_SKILLS[index%GRAPH_SKILLS.length];
- const graph=makeGraph(index,level,skill),{answer,options,answerIndex}=choices(graph,skill,index+GRAPH_SKILLS.indexOf(skill));
+ const graph=makeGraph(index,level,skill);
+ const challenge=functionChallenge(graph,skill,level);
+ const basic=choices(graph,skill,index+GRAPH_SKILLS.indexOf(skill));
+ const answer=challenge?.answer??basic.answer;
+ const alternatives=challenge?[answer,...challenge.distractors]:basic.options;
+ const offset=index%4,options=challenge?[...alternatives.slice(offset),...alternatives.slice(0,offset)]:basic.options;
+ const answerIndex=options.indexOf(answer);
  const [a,b,c]=graph.xs,[u,v,w]=graph.ys;
  let reason="";
  if(skill==="domain")reason=`El trazo comienza en x=${a} y termina en x=${c}; ambos extremos están rellenos, así que se incluyen.`;
@@ -98,8 +107,10 @@ export function graphTask(index:number,level:Level):GraphTask{
  }
  if(skill==="y-intercept")reason=`El eje vertical corresponde a x=0. La función toma y=${graphY(graph,0)} en ese punto; la intersección se expresa como par ordenado.`;
  if(skill==="x-intercept")reason=`El eje horizontal corresponde a y=0. La gráfica toca el eje en x=${b}; ambos segmentos restantes tienen altura de igual signo y no ofrecen otros cortes.`;
- return {id:`math-graph-v1-${level}-${index}`,skill,level,graph,prompt:prompts[skill],answer,options,answerIndex,
-  explanation:reason+` Por tanto, la respuesta correcta es ${answer}.`,
+ return {id:`math-graph-v1-${level}-${index}`,skill,level,graph,prompt:challenge?.prompt??prompts[skill],answer,options,answerIndex,
+  cognitiveStage:challenge?.stage??1,operation:challenge?.operation??skill,
+  requiredEvidence:challenge?.requiredEvidence??["leer-grafica","reconocer-propiedad"],
+  explanation:challenge?challenge.explanation+` Por tanto, la respuesta correcta es ${answer}.`:reason+` Por tanto, la respuesta correcta es ${answer}.`,
   source:"practica-complementaria-analisis-funciones",visualRequirement:"essential"};
 }
 export function graphPool(level:Level):GraphTask[]{return Array.from({length:72},(_,i)=>graphTask(i,level))}
