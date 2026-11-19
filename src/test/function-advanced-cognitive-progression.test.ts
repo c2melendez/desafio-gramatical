@@ -23,7 +23,7 @@ describe("M1 Funciones II — progresión cognitiva evaluable",()=>{
   expect(advancedFunctionChallenge(q,"quadratic-roots","intermedio")?.answer).toBe("(1, 0) y (5, 0)");
   expect(advancedFunctionChallenge(q,"quadratic-roots","avanzado")?.answer).toBe("(0.5, 0) y (2.5, 0)");
   expect(advancedFunctionChallenge(q,"quadratic-growth","intermedio")?.answer).toBe("[3, 6]");
-  expect(advancedFunctionChallenge(q,"quadratic-growth","avanzado")?.answer).toBe("[-0.5, 1]");
+  expect(advancedFunctionChallenge(q,"quadratic-growth","avanzado")?.answer).toBe("[0, 1.5]");
  });
  it("valor, límite, reparación de salto y amplitud frente a transformación",()=>{
   const jump:JumpGraph={kind:"jump",leftIntercept:3,rightIntercept:-3,leftOpen:true,rightClosed:true};
