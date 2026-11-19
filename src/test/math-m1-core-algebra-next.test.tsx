@@ -19,8 +19,9 @@ describe("M1 — 540 actividades del segundo bloque de Álgebra",()=>{
     const [a,b,c]=t.oracle.inputs;
     const independent=subtopic==="Ecuaciones cuadráticas"?(a+Math.sqrt(a*a-4*b))/2:
       subtopic==="Inecuaciones"?(c-b)/a: a*c+b;
-    expect(independent).toBe(t.oracle.answer.n/t.oracle.answer.d);
-    expect(Number(t.expected)).toBe(independent);
+    const canonical=Object.is(independent,-0)?0:independent;
+    expect(canonical).toBe(t.oracle.answer.n/t.oracle.answer.d);
+    expect(Number(t.expected)).toBe(canonical);
     expect(new Set(t.options).size).toBe(4);
     expect(t.options[t.answerIndex]).toBe(t.expected);
     expect(t.assertions).toHaveLength(3);
