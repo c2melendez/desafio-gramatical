@@ -10,10 +10,6 @@ export type CognitiveChallenge={
  prompt:string;answer:string;distractors:string[];explanation:string;
 };
 const fmt=(n:number)=>Number.isInteger(n)?String(n):n.toFixed(1);
-function median(a:number[]):number{
- const s=[...a].sort((x,y)=>x-y);
- return (s[3]+s[4])/2;
-}
 function quartiles(a:number[]):[number,number]{
  const s=[...a].sort((x,y)=>x-y);
  return [(s[1]+s[2])/2,(s[5]+s[6])/2];
