@@ -4,6 +4,7 @@ import {afterEach} from "vitest";
 import {GRAPH_SKILLS,graphCorrectAnswer,graphPool,graphY,makeGraph,type GraphData} from "@/lib/function-graph-lab";
 import {FunctionGraph} from "@/components/games/FunctionGraph";
 import {LEVELS} from "@/lib/grammar";
+import {functionChallenge} from "@/lib/function-cognitive-challenges";
 
 afterEach(()=>cleanup());
 describe("Laboratorio gráfico — validez de seis habilidades",()=>{
@@ -17,7 +18,8 @@ describe("Laboratorio gráfico — validez de seis habilidades",()=>{
     expect(item.options).toHaveLength(4);
     expect(new Set(item.options).size).toBe(4);
     expect(item.options[item.answerIndex]).toBe(item.answer);
-    expect(item.answer).toBe(graphCorrectAnswer(item.graph,item.skill));
+    expect(item.answer).toBe(functionChallenge(item.graph,item.skill,level)?.answer??graphCorrectAnswer(item.graph,item.skill));
+    expect(item.cognitiveStage).toBe(level==="principiante"?1:level==="intermedio"?2:3);
     expect(item.visualRequirement).toBe("essential");
     expect(item.explanation).toContain(item.answer);
     expect(item.graph.xs[0]).toBeLessThan(item.graph.xs[1]);
