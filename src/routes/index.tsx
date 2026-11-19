@@ -24,9 +24,9 @@ export const Route = createFileRoute("/")({
  head: () => ({
   meta: [
    { title: "Academia PHUMA Play — Aprende jugando" },
-   { name: "description", content: "Cinco áreas de preparación PHUMA: selecciona un subtema y practica con tres desafíos de reconocimiento, aplicación y construcción." },
+   { name: "description", content: "Cinco áreas de preparación PHUMA: elige un tema y practica mediante desafíos adaptados a cada competencia, incluidos laboratorios gráficos." },
    { property: "og:title", content: "Academia PHUMA Play" },
-   { property: "og:description", content: "Aprende jugando. Cinco áreas, diecinueve temas y tres retos por tema." },
+   { property: "og:description", content: "Aprende jugando. Cinco áreas con juegos adaptados a la competencia." },
   ],
  }),
  component: Home,
@@ -61,7 +61,7 @@ function Home() {
    <header className="space-y-3">
     <p className="inline-block rounded-full border-2 border-foreground bg-accent px-3 py-1 text-sm font-bold">🎓 Preparación universitaria · Honduras</p>
     <h1 className="text-4xl sm:text-5xl font-black leading-tight">Academia <span className="text-primary">PHUMA Play</span></h1>
-    <p className="text-lg text-muted-foreground max-w-2xl">Aprende jugando. Selecciona una materia, elige qué deseas practicar y supera tres desafíos con dificultad progresiva.</p>
+    <p className="text-lg text-muted-foreground max-w-2xl">Aprende jugando. Selecciona una materia y practica con desafíos flexibles, incluyendo laboratorios gráficos y actividades adaptadas a cada competencia.</p>
     <p className="text-sm text-muted-foreground">{CATALOG_COUNTS.areas} áreas · {CATALOG_COUNTS.topics} temas · {CATALOG_COUNTS.subtopics} subtemas</p>
    </header>
 
@@ -172,7 +172,7 @@ function Home() {
    </section>
    <aside className="rounded-xl border-2 border-foreground bg-card p-4 text-sm space-y-2">
     <h2 className="text-lg font-black">Sobre la evolución de Desafío Gramatical</h2>
-    <p>La aplicación mantiene los juegos gramaticales originales e incorpora Comprensión lectora y Redacción con tres juegos por tema. El resto del catálogo se ampliará progresivamente.</p>
+    <p>La aplicación conserva las experiencias originales de Español y adopta otras mecánicas cuando son más adecuadas, como el laboratorio de interpretación gráfica de Matemáticas. Los módulos se amplían por competencia y evidencia.</p>
     <p className="text-muted-foreground">Recurso educativo independiente. No afiliado ni avalado por la UNAH. Los puntos del juego no equivalen al puntaje de la prueba PHUMA.</p>
    </aside>
   </main>
