@@ -5,7 +5,7 @@ export function StatisticsVisual({data:d}:{data:StatsStimulus}){
   const labels=["Valor","Frecuencia"];
   const alt=`Tabla de frecuencias: valor ${d.values.map((v,i)=>`${v} con frecuencia ${d.frequencies[i]}`).join("; ")}. Las frecuencias expresan repeticiones, no resultados individuales.`;
   return <figure className="space-y-2 rounded-lg bg-background p-3">
-   <div role="img" aria-label={alt} data-testid="statistics-visual" className="overflow-x-auto">
+   <div data-testid="statistics-visual" className="overflow-x-auto" aria-label={alt}>
     <table className="w-full border-collapse text-center text-sm sm:text-base">
      <caption className="font-bold mb-2">Tabla de frecuencias</caption><thead><tr>
       <th scope="col" className="border p-2">{labels[0]} (puntos)</th>
