@@ -166,6 +166,8 @@ function Home() {
      <p className="text-sm">Nuevo juego visual independiente para interpretar dominio, rango, tramos crecientes y decrecientes e intersecciones con los ejes. Cada partida incluye diez ejercicios repartidos entre seis destrezas.</p>
      <Link to="/laboratorio-funciones" search={{nivel:level}}
       className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de funciones ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
+     <Link to="/laboratorio-funciones-ii" search={{nivel:level}}
+      className="tile block w-full bg-card text-center font-bold">▶ Laboratorio II: parábolas, extremos y discontinuidades</Link>
      <p className="text-xs">Práctica complementaria: el temario oficial PHUMA 2026 no enumera separadamente todas estas habilidades.</p>
     </section>}
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
