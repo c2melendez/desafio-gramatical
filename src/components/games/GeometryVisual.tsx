@@ -1,9 +1,9 @@
 import type {GeometryFigure} from "@/lib/geometry-visual-lab";
 
-export function GeometryVisual({figure:f,question}:{figure:GeometryFigure;question:"corresponding"|"supplementary"|"composite-area"|"composite-perimeter"}){
+export function GeometryVisual({figure:f,question,stage=1}:{figure:GeometryFigure;question:"corresponding"|"supplementary"|"composite-area"|"composite-perimeter";stage?:1|2|3}){
  if(f.kind==="parallel"){
   const corresponding=question==="corresponding";
-  const description=`Dos rectas horizontales L1 y L2 paralelas atravesadas por una transversal inclinada. Arriba, el ángulo sobre L1 y a la derecha de la transversal mide ${f.degrees} grados. Abajo, el ángulo incógnita está ${corresponding?"sobre L2 y a la derecha de la transversal, en posición correspondiente":"sobre L2 y a la izquierda de la transversal, adyacente al correspondiente"}.`;
+  const description=`Dos rectas horizontales L1 y L2 paralelas atravesadas por una transversal inclinada. Arriba, el ángulo sobre L1 y a la derecha de la transversal mide ${f.degrees} grados. Abajo, el ángulo ${stage===1?"incógnita":"de referencia"} está ${corresponding?"sobre L2 y a la derecha de la transversal, en posición correspondiente":"sobre L2 y a la izquierda de la transversal, adyacente al correspondiente"}.`;
   return <figure className="space-y-2 rounded-lg bg-background p-3">
    <svg viewBox="0 0 440 280" className="w-full h-auto" role="img" aria-label={description} data-testid="geometry-figure">
     <line x1="50" y1="83" x2="390" y2="83" stroke="currentColor" strokeWidth="3"/>
@@ -12,10 +12,10 @@ export function GeometryVisual({figure:f,question}:{figure:GeometryFigure;questi
     <text x="395" y="88" fontSize="17" fill="currentColor">L₁</text>
     <text x="395" y="201" fontSize="17" fill="currentColor">L₂</text>
     <text x="282" y="64" fontSize="19" fill="#0f766e">{f.degrees}°</text>
-    <text x={corresponding?164:112} y="173" fontSize="22" fontWeight="bold" fill="#b91c1c">?</text>
+    <text x={corresponding?164:112} y="173" fontSize="22" fontWeight="bold" fill="#b91c1c">{stage===1?"?":"θ"}</text>
     <path d="M365 102 l9 0 M365 109 l9 0 M365 214 l9 0 M365 221 l9 0" stroke="#0f766e" strokeWidth="2.5"/>
    </svg>
-   <figcaption className="text-xs text-muted-foreground">L₁ ∥ L₂. Esquema no a escala. Usa la posición de los ángulos y el paralelismo, no la inclinación dibujada.</figcaption>
+   <figcaption className="text-xs text-muted-foreground">L₁ ∥ L₂. Esquema no a escala. Usa la posición de los ángulos y el paralelismo, no la inclinación dibujada. {stage>1?"La bisectriz o los cambios adicionales se describen en el enunciado; no están dibujados.":""}</figcaption>
   </figure>;
  }
  const {width:W,height:H,cutWidth:w,cutHeight:h}=f;
