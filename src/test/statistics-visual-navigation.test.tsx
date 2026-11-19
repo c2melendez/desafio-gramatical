@@ -12,7 +12,7 @@ describe("Estadística M1 — ruta y juego especializado",()=>{
   render(<RouterProvider router={router}/>);
   fireEvent.click(await screen.findByRole("link",{name:/Abrir laboratorio de estadística/i}));
   await waitFor(()=>{
-   expect(screen.getByRole("heading",{name:"Laboratorio de geometría"})).not.toBeInTheDocument();
+   expect(screen.queryByRole("heading",{name:"Laboratorio de geometría"})).not.toBeInTheDocument();
    expect(screen.getByRole("heading",{name:"Laboratorio de estadística"})).toBeInTheDocument();
    expect(screen.getByRole("img")).toHaveAttribute("data-testid","statistics-visual");
    expect(screen.getByRole("progressbar",{name:"Barra de avance"})).toHaveAttribute("aria-valuemax","10");
