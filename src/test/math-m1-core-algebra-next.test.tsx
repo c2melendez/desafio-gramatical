@@ -50,7 +50,7 @@ describe("M1 — 540 actividades del segundo bloque de Álgebra",()=>{
   expect(nextAlgebraPedagogy("Ecuaciones cuadráticas","intermedio",inputs)?.result.n).toBe(9);
   expect(nextAlgebraPedagogy("Ecuaciones cuadráticas","intermedio",inputs)?.inputs).toEqual([13,36]);
   expect(nextAlgebraPedagogy("Ecuaciones cuadráticas","avanzado",inputs)?.result.n).toBe(15);
-  expect(nextAlgebraPedagogy("Ecuaciones cuadráticas","avanzado",inputs)?.inputs).toEqual([20,85]);
+  expect(nextAlgebraPedagogy("Ecuaciones cuadráticas","avanzado",inputs)?.inputs).toEqual([20,75]);
  });
  it("inecuaciones: desplazar frontera y dividir por negativo invierte el signo",()=>{
   const inputs=[3,4,25]; // x>7
