@@ -94,7 +94,7 @@ export function statsTask(index:number,level:Level):StatsTask{
  }
  if(stimulus.kind==="sample"){
   const r=stimulus.colors.filter(x=>x==="rojo").length,n=stimulus.colors.length;
-  candidates=[answer,`${n-r}/${n}`,`${r}/${n}`,`${n}/${r}`,`${r+1}/${n}`];
+  candidates=[answer,`${n-r}/${n}`,`${n}/${r}`,`${r+1}/${n}`,`${r+2}/${n}`];
  }
  const unit=stimulus.kind==="bars"?" libros":stimulus.kind==="line"?" unidades":stimulus.kind==="frequency"?" puntos":"";
  for(let k=1;k<12;k++)candidates.push(stimulus.kind==="sample"?`${k}/${k+11}`:`${k+17}${unit}`);
