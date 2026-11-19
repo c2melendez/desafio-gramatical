@@ -95,7 +95,7 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  }
  if(visual&&visualAnswer(visual)!==r.result.n/r.result.d)throw Error("El estímulo visual no coincide con el oráculo matemático");
  const choices=choose(seed,base);
- const visualIntermediate=visual?.kind==="number-line"?r.result:visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate;
+ const visualIntermediate=visual?.kind==="number-line"?q(visual.boundary):visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate;
  const step=choose(seed+1,variants(visualIntermediate));
  const correctClaim={text:visual?.kind==="number-line"?`La solución ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?"transformada es x <":"representada es x >"} ${solution}.`:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
  const falseClaims=visual?.kind==="number-line"
@@ -126,14 +126,13 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
   formula:r.formula,source:guideSubtopics.has(subtopic)?"GUIA-PRE-U-UNAH-2026:p6":"catalogo-practica-complementaria",
   oracle:{kind:r.kind,inputs:r.inputs,answer:r.result,intermediate:r.intermediate},
   options:choices.choices,answerIndex:choices.answerIndex,assertions,
-  steps:[{label:visual?.kind==="number-line"?"Identifica el valor del extremo abierto":visual?.kind==="rectangle"&&visual.measure==="area"?"Lee la medida horizontal de la figura":visual?"Calcula o deduce el valor intermedio a partir de la figura":r.interLabel,choices:step.choices,answerIndex:step.answerIndex},
+  steps:[{label:visual?.kind==="number-line"?"Identifica el límite ORIGINAL del intervalo mostrado":core?.procedure.label??(visual?.kind==="rectangle"&&visual.measure==="area"?"Lee la medida horizontal de la figura":visual?"Calcula o deduce el valor intermedio a partir de la figura":r.interLabel),choices:step.choices,answerIndex:step.answerIndex},
    {label:visual?.kind==="number-line"?"Selecciona la desigualdad solicitada":"Resultado final",choices:visual?.kind==="number-line"?
     [`x ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?"<":">"} ${solution}`,`x ≥ ${solution}`,`x ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?">":"<"} ${solution}`,`x ≤ ${solution}`]:choices.choices,
     answerIndex:visual?.kind==="number-line"?0:choices.answerIndex}],
   family:"math-m1-"+subtopic,reviewStatus:"editorial-draft",
   cognitiveStage:core?.cognitiveStage,operation:core?.operation,requiredEvidence:core?.requiredEvidence,
-  modeOperation:core?mode==="clasificar"?"evaluar-validez-de-transformaciones":
-   mode==="quiz"?"resolver-modelo-transformado":"construir-cadena-de-eliminacion":undefined};
+  modeOperation:core?(subtopic==="Ecuaciones"||subtopic==="Sistemas de ecuaciones")?(mode==="clasificar"?"evaluar-validez-de-transformaciones":mode==="quiz"?"resolver-modelo-transformado":"construir-cadena-de-eliminacion"):(mode==="clasificar"?"evaluar-validez-de-inferencias":mode==="quiz"?"resolver-transformacion-algebraica":"construir-evidencia-y-resultado"):undefined};
 }
 export function mathPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return Array.from({length:MATH_LEVEL_COUNT[level]},(_,i)=>mathModel(topic,subtopic,level,mode,i));
