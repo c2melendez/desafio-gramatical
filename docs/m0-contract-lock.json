@@ -1,5 +1,5 @@
 {
-  "version": 23,
+  "version": 24,
   "scope": "Contrato de rutas y datos tras M3 completo Español: conservar historia, rotación y regresión M0/M1/M2.",
   "baseline_main": "bb4d9704f9581065f1bddd99e50326d84e9008d7",
   "hash_algorithm": "git-blob-sha1",
@@ -10,13 +10,13 @@
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449",
     "src/lib/writing.ts": "623c4d4c2429fd340a52359a80a44dcc83425094",
-    "src/routes/index.tsx": "46ebaa97f45e3faec774bbec8e3a7dcd536a775a",
+    "src/routes/index.tsx": "2a80d1eb65dcce0bc01ad54ccc04ab59a9c6ea06",
     "src/routes/jugar.tsx": "f38794f676f80e64ab76e368b77bdc6a4e0427cc",
     "src/routes/lectura.tsx": "2586e077fa1fe5169f878adc195f79c93b1d7f52",
     "src/routes/redaccion.tsx": "359637749ef4289c6c153699f087dd9ad7556d24",
     "src/routes/historial.tsx": "d720f22412daf48c6b0fc5d73a2ce3ca322cbd9d"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "M1 Geometría: enlace a laboratorio autónomo de ángulos entre paralelas y figuras compuestas. Conservar selector, historial y bancos, evidenciar rutas y CI aprobados antes de cierre.",
+  "change_note": "M1 Estadística: incorpora enlace al laboratorio de tablas, gráficos y espacio muestral en el selector; mantiene las rutas e IDs históricos, historial, rotación y puertas M0. Auditoría CI obligatoria.",
   "previous_baseline": "bb4d9704f9581065f1bddd99e50326d84e9008d7"
 }
