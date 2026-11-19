@@ -98,7 +98,13 @@ export function statsTask(index:number,level:Level):StatsTask{
  }
  const unit=stimulus.kind==="bars"?" libros":stimulus.kind==="line"?" unidades":stimulus.kind==="frequency"?" puntos":"";
  for(let k=1;k<12;k++)candidates.push(stimulus.kind==="sample"?`${k}/${k+11}`:`${k+17}${unit}`);
- const unique=[...new Set(candidates)].slice(0,4);
+ const equivalent=(candidate:string)=>{
+  if(stimulus.kind!=="sample")return candidate===answer;
+  const [p,q]=candidate.split("/").map(Number);
+  const [a,b]=answer.split("/").map(Number);
+  return q!==0&&p*b===a*q;
+ };
+ const unique=[answer,...new Set(candidates.filter(x=>!equivalent(x)))].slice(0,4);
  if(unique.length!==4)throw Error("Faltan distractores distintos");
  const offset=index%4,options=[...unique.slice(offset),...unique.slice(0,offset)];
  let explanation="";
