@@ -55,7 +55,10 @@ describe("Laboratorio estadístico M1 — validez del estímulo y de la clave",(
   for(const index of [0,1,2,5]){
    const item=statsTask(index,"principiante");
    render(<StatisticsVisual data={item.stimulus}/>);
-   expect(screen.getByRole("img")).toHaveAttribute("data-testid","statistics-visual");
+   if(item.stimulus.kind==="frequency"){
+    expect(screen.getByRole("table",{name:/tabla de frecuencias/i})).toBeInTheDocument();
+    expect(screen.getAllByRole("columnheader")).toHaveLength(5);
+   }else expect(screen.getByRole("img")).toHaveAttribute("data-testid","statistics-visual");
    cleanup();
   }
  });
