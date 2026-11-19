@@ -4,7 +4,7 @@ export type MathVisual =
  | {kind:"right-triangle";legA:number;legB:number}
  | {kind:"bar-chart";monday:number;tuesday:number;wednesday:number}
  | {kind:"linear-function";slope:number;intercept:number;targetX:number;operation?:"direct"|"shift"|"compose"}
- | {kind:"number-line";boundary:number;open:true;direction:"right"|"left"}
+ | {kind:"number-line";boundary:number;open:true;direction:"right"|"left";operation?:"direct"|"shift"|"reflect"}
  | {kind:"rectangle";length:number;width:number;measure:"area"|"perimeter"}
  | {kind:"prism";length:number;width:number;height:number;measure:"volume"|"surface"}
  | {kind:"similar-triangles";small:number;large:number;other:number};
@@ -15,7 +15,7 @@ export function visualAnswer(v:MathVisual):number {
  case "right-triangle":return Math.sqrt(v.legA*v.legA+v.legB*v.legB);
  case "bar-chart":return v.monday+v.tuesday+v.wednesday;
  case "linear-function":return v.slope*v.targetX+v.intercept+(v.operation==="shift"?2*v.slope:v.operation==="compose"?3*v.slope:0);
- case "number-line":return v.boundary;
+ case "number-line":return v.operation==="shift"?v.boundary+2:v.operation==="reflect"?2-v.boundary:v.boundary;
  case "rectangle":return v.measure==="area"?v.length*v.width:2*(v.length+v.width);
  case "prism":return v.measure==="volume"?v.length*v.width*v.height:2*(v.length*v.width+v.length*v.height+v.width*v.height);
  case "similar-triangles":return v.large*v.other/v.small;
@@ -27,7 +27,7 @@ export function visualPrompt(v:MathVisual):string {
  case "right-triangle":return `En el triángulo rectángulo dibujado, el cateto horizontal mide ${v.legA} cm. Calcula la hipotenusa usando la medida del otro cateto que aparece en la figura.`;
  case "bar-chart":return `El lunes se prestaron ${v.monday} libros. Consulta el gráfico para hallar el total prestado durante los tres días.`;
  case "linear-function":return v.operation==="shift"?`Usa la recta dibujada de f para determinar g(${v.targetX})=f(${v.targetX}+2). Los dos puntos señalados permiten obtener la regla original.`:v.operation==="compose"?`Usa la recta dibujada de f para determinar g(${v.targetX})=2f(${v.targetX}+1)−f(${v.targetX}−1). Determina primero la regla a partir de sus puntos.`:`Usa la recta del gráfico para determinar f(${v.targetX}). Los dos puntos señalados permiten obtener la regla lineal.`;
- case "number-line":return `Lee la recta numérica: ¿qué número corresponde al extremo abierto del intervalo sombreado hacia la ${v.direction==="left"?"izquierda":"derecha"}?`;
+ case "number-line":return v.operation==="shift"?`La recta muestra la solución de una inecuación original con coeficiente positivo. Si aumenta su lado derecho en el doble del coeficiente, ¿cuál será el NUEVO límite, sin cambiar el signo >? Interpreta primero el extremo abierto original.`:v.operation==="reflect"?`La recta muestra la solución original de ax+k>b con a positivo. Si el coeficiente pasa a −a y el término constante aumenta en 2a, conservando b, la solución transformada será x < ___. ¿Cuál es ese límite? Usa el extremo original del gráfico.`:`Lee la recta numérica: ¿qué número corresponde al extremo abierto del intervalo sombreado hacia la ${v.direction==="left"?"izquierda":"derecha"}?`;
  case "rectangle":return `En la figura rectangular, calcula el ${v.measure==="area"?"área en cm²":"perímetro en cm"} usando las cotas indicadas.`;
  case "prism":return `Interpreta el prisma rectangular de la figura y calcula su ${v.measure==="volume"?"volumen en cm³":"área superficial total en cm²"}.`;
  case "similar-triangles":return `Los triángulos son semejantes. Usando las correspondencias dibujadas, ¿cuánto mide el lado marcado con ? en centímetros?`;
