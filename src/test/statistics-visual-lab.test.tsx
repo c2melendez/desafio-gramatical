@@ -3,6 +3,7 @@ import {render,screen,cleanup} from "@testing-library/react";
 import {LEVELS} from "@/lib/grammar";
 import {STATS_SKILLS,statsPool,statsOracle,statsTask,type FrequencyStimulus,type SampleStimulus,type BarStimulus,type LineStimulus} from "@/lib/statistics-visual-lab";
 import {StatisticsVisual} from "@/components/games/StatisticsVisual";
+import {statisticsCognitiveChallenge} from "@/lib/statistics-i-cognitive-challenges";
 afterEach(()=>cleanup());
 describe("Laboratorio estadístico M1 — validez del estímulo y de la clave",()=>{
  it("216 reactivos técnicos: 72 por nivel, 12 por destreza, sin claves ambiguas",()=>{
@@ -16,7 +17,8 @@ describe("Laboratorio estadístico M1 — validez del estímulo y de la clave",(
     expect(t.options).toHaveLength(4);
     expect(new Set(t.options).size).toBe(4);
     expect(t.options[t.answerIndex]).toBe(t.answer);
-    expect(statsOracle(t.stimulus,t.skill)).toBe(t.answer);
+    expect(statisticsCognitiveChallenge(t.stimulus,t.skill,level)?.answer??statsOracle(t.stimulus,t.skill)).toBe(t.answer);
+    expect(t.cognitiveStage).toBe(level==="principiante"?1:level==="intermedio"?2:3);
     expect(t.explanation).toContain(t.answer);
     if(t.stimulus.kind==="sample"){
      const [a,b]=t.answer.split("/").map(Number);
