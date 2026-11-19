@@ -30,7 +30,7 @@ describe("M1 — 540 actividades del segundo bloque de Álgebra",()=>{
     expect(t.steps).toHaveLength(2);
     expect(t.explanation).toContain(t.expected);
     if(t.visual){
-     expect(visualAnswer(t.visual)).toBe(independent);
+     expect(visualAnswer(t.visual)).toBe(canonical);
      expect(visualDescription(t.visual)).toContain(t.visual.kind==="number-line"?"círculo abierto":"recta");
     }
    }
