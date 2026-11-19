@@ -3,6 +3,7 @@ import {cleanup,render,screen} from "@testing-library/react";
 import {LEVELS} from "@/lib/grammar";
 import {extendedGraph,extendedOracle,extendedPool,EXTENDED_SKILLS,type QuadraticGraph,type JumpGraph} from "@/lib/function-graph-advanced";
 import {AdvancedFunctionGraph} from "@/components/games/AdvancedFunctionGraph";
+import {advancedFunctionChallenge} from "@/lib/function-advanced-cognitive-challenges";
 afterEach(()=>cleanup());
 describe("Laboratorio II — ocho competencias gráficas y oráculos",()=>{
  it("genera 288 tareas verificables, 96 por nivel, 12 por destreza",()=>{
@@ -15,7 +16,8 @@ describe("Laboratorio II — ocho competencias gráficas y oráculos",()=>{
     expect(task.options).toHaveLength(4);
     expect(new Set(task.options).size).toBe(4);
     expect(task.options[task.answerIndex]).toBe(task.answer);
-    expect(extendedOracle(task.graph,task.skill)).toBe(task.answer);
+    expect(advancedFunctionChallenge(task.graph,task.skill,level)?.answer??extendedOracle(task.graph,task.skill)).toBe(task.answer);
+    expect(task.cognitiveStage).toBe(level==="principiante"?1:level==="intermedio"?2:3);
     expect(task.explanation).toContain(task.answer);
     expect(task.visualRequirement).toBe("essential");
    }
