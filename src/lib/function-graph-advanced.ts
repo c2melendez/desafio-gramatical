@@ -29,7 +29,7 @@ export type ExtendedTask={
 };
 const number=(n:number)=>Number.isInteger(n)?String(n):String(Number(n.toFixed(2)));
 const pair=(x:number,y:number)=>`(${number(x)}, ${number(y)})`;
-const interval=(a:number,b:number,end:"["|")"="]")=>`[${number(a)}, ${number(b)}${end}`;
+const interval=(a:number,b:number,end:"]"|")"="]")=>`[${number(a)}, ${number(b)}${end}`;
 
 export function extendedGraph(index:number,level:Level,skill:ExtendedSkill):ExtendedGraph {
  if(!Number.isInteger(index)||index<0||index>=96)throw Error("Índice del laboratorio II inválido");
