@@ -170,6 +170,12 @@ function Home() {
       className="tile block w-full bg-card text-center font-bold">▶ Laboratorio II: parábolas, extremos y discontinuidades</Link>
      <p className="text-xs">Práctica complementaria: el temario oficial PHUMA 2026 no enumera separadamente todas estas habilidades.</p>
     </section>}
+    {math&&topic==="Geometría"&&<section className="card-ink bg-accent/40 p-4 space-y-3" aria-label="Laboratorio de geometría visual">
+     <h3 className="font-black text-lg">📐 Laboratorio de geometría</h3>
+     <p className="text-sm">Cuarto juego especializado para interpretar paralelas y transversales, ángulos correspondientes y suplementarios, y el área o perímetro de figuras compuestas.</p>
+     <Link to="/laboratorio-geometria" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de geometría ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
+     <p className="text-xs">Ejercicios y figuras originales. Las relaciones representadas se verifican con oráculos geométricos independientes.</p>
+    </section>}
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
    </section>
    <aside className="rounded-xl border-2 border-foreground bg-card p-4 text-sm space-y-2">
