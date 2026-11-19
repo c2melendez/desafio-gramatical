@@ -180,6 +180,7 @@ function Home() {
      <h3 className="font-black text-lg">📊 Laboratorio de estadística y gráficos</h3>
      <p className="text-sm">Interpreta barras, tendencias en líneas, frecuencias, moda, mediana, rango y espacios muestrales. Diez rondas repartidas entre seis habilidades diferentes.</p>
      <Link to="/laboratorio-estadistica" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de estadística ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
+     <Link to="/laboratorio-estadistica-ii" search={{nivel:level}} className="tile block w-full bg-card text-center font-bold">▶ Laboratorio II: dispersión, sectores y tablas cruzadas</Link>
      <p className="text-xs">La interpretación de gráficos y la dispersión corresponden al temario PHUMA. La probabilidad elemental se identifica como práctica complementaria.</p>
     </section>}
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
