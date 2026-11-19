@@ -1,4 +1,6 @@
 import type {Level} from "./grammar";
+import {statisticsCognitiveChallenge} from "./statistics-i-cognitive-challenges";
+import type {CognitiveStage} from "./math-cognitive-progression";
 
 /** Datos originales y sus oráculos. La guía PHUMA 2026, pág. 6, incluye
  * dispersión e interpretación de tablas, gráficas y figuras. Probabilidad
@@ -19,6 +21,7 @@ export type SampleStimulus={kind:"sample";colors:("rojo"|"azul")[];unit:"fichas"
 export type StatsStimulus=BarStimulus|LineStimulus|FrequencyStimulus|SampleStimulus;
 export type StatsTask={
  id:string;skill:StatsSkill;level:Level;stimulus:StatsStimulus;
+ cognitiveStage:CognitiveStage;operation:string;requiredEvidence:string[];
  prompt:string;options:string[];answerIndex:number;answer:string;
  explanation:string;visualRequirement:"essential";
  source:"phuma-estadistica"|"complemento-probabilidad";
@@ -85,7 +88,8 @@ const prompts:Record<StatsSkill,string>={
  "frequency-median":"¿Cuál es la mediana de los datos representados por la tabla de frecuencias?",
  "sample-probability":"Se extrae una ficha al azar, todas igualmente probables. ¿Cuál es la probabilidad de que sea roja?"};
 export function statsTask(index:number,level:Level):StatsTask{
- const skill=STATS_SKILLS[index%STATS_SKILLS.length],stimulus=statsStimulus(index,level,skill),answer=statsOracle(stimulus,skill);
+ const skill=STATS_SKILLS[index%STATS_SKILLS.length],stimulus=statsStimulus(index,level,skill);
+ const challenge=statisticsCognitiveChallenge(stimulus,skill,level),answer=challenge?.answer??statsOracle(stimulus,skill);
  let candidates:string[]=[];
  if(stimulus.kind==="bars")candidates=[answer,`${stimulus.values[3]} libros`,`${stimulus.values[0]} libros`,`${Math.abs(stimulus.values[2]-stimulus.values[0])} libros`];
  if(stimulus.kind==="line")candidates=[answer,`${stimulus.values[2]} unidades`,`${stimulus.values[1]} unidades`,`${Math.abs(stimulus.values[3]-stimulus.values[2])} unidades`];
@@ -97,10 +101,11 @@ export function statsTask(index:number,level:Level):StatsTask{
   const r=stimulus.colors.filter(x=>x==="rojo").length,n=stimulus.colors.length;
   candidates=[answer,`${n-r}/${n}`,`${n}/${r}`,`${r+1}/${n}`,`${r+2}/${n}`];
  }
+ if(challenge)candidates=[answer,...challenge.distractors];
  const unit=stimulus.kind==="bars"?" libros":stimulus.kind==="line"?" unidades":stimulus.kind==="frequency"?" puntos":"";
  for(let k=1;k<12;k++)candidates.push(stimulus.kind==="sample"?`${k}/${k+11}`:`${k+17}${unit}`);
  const equivalent=(candidate:string)=>{
-  if(stimulus.kind!=="sample")return candidate===answer;
+  if(!answer.includes("/")||!candidate.includes("/"))return candidate===answer;
   const [p,q]=candidate.split("/").map(Number);
   const [a,b]=answer.split("/").map(Number);
   return q!==0&&p*b===a*q;
@@ -113,8 +118,10 @@ export function statsTask(index:number,level:Level):StatsTask{
  if(stimulus.kind==="line")explanation=`La gráfica señala febrero = ${stimulus.values[1]} y marzo = ${stimulus.values[2]}; la variación es marzo menos febrero.`;
  if(stimulus.kind==="frequency")explanation=`Los valores son ${stimulus.values.join(", ")} y sus frecuencias son ${stimulus.frequencies.join(", ")}. Para la moda elegimos la frecuencia máxima; para el rango restamos valores extremos; para la mediana ordenamos mentalmente las observaciones repetidas.`;
  if(stimulus.kind==="sample")explanation=`El dibujo contiene ${stimulus.colors.filter(x=>x==="rojo").length} fichas rojas de ${stimulus.colors.length}; se divide casos favorables entre posibles y se simplifica la fracción.`;
- return {id:`math-stats-v1-${level}-${index}`,skill,level,stimulus,prompt:prompts[skill],
-  options,answer,answerIndex:options.indexOf(answer),explanation:`${explanation} Respuesta: ${answer}.`,
+ return {id:`math-stats-v1-${level}-${index}`,skill,level,stimulus,prompt:challenge?.prompt??prompts[skill],
+  cognitiveStage:challenge?.stage??1,operation:challenge?.operation??skill,
+  requiredEvidence:challenge?.requiredEvidence??["leer-representacion","aplicar-operacion-directa"],
+  options,answer,answerIndex:options.indexOf(answer),explanation:challenge?`${challenge.explanation} Respuesta: ${answer}.`:`${explanation} Respuesta: ${answer}.`,
   visualRequirement:"essential",
   source:skill==="sample-probability"?"complemento-probabilidad":"phuma-estadistica"};
 }
