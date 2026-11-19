@@ -3,6 +3,7 @@ import {render,screen,cleanup} from "@testing-library/react";
 import {LEVELS} from "@/lib/grammar";
 import {GEOMETRY_SKILLS,geometryPool,geometryOracle,geometryTask,type ParallelFigure,type CompositeFigure} from "@/lib/geometry-visual-lab";
 import {GeometryVisual} from "@/components/games/GeometryVisual";
+import {geometryCognitiveChallenge} from "@/lib/geometry-cognitive-challenges";
 afterEach(()=>cleanup());
 describe("Laboratorio geométrico — geometría aplicada sin enunciados decorativos",()=>{
  it("216 reactivos técnicos (72 por nivel) con cuatro alternativas y oráculos",()=>{
@@ -16,7 +17,8 @@ describe("Laboratorio geométrico — geometría aplicada sin enunciados decorat
     expect(item.options).toHaveLength(4);
     expect(new Set(item.options).size).toBe(4);
     expect(item.options[item.answerIndex]).toBe(item.answer);
-    expect(item.answer).toBe(`${geometryOracle(item.figure,item.skill)}${item.figure.kind==="parallel"?"°":item.skill==="composite-area"?" cm²":" cm"}`);
+    expect(item.answer).toBe(geometryCognitiveChallenge(item.figure,item.skill,level)?.answer??`${geometryOracle(item.figure,item.skill)}${item.figure.kind==="parallel"?"°":item.skill==="composite-area"?" cm²":" cm"}`);
+    expect(item.cognitiveStage).toBe(level==="principiante"?1:level==="intermedio"?2:3);
     expect(item.explanation).toContain(item.answer);
    }
    for(const skill of GEOMETRY_SKILLS)expect(bank.filter(q=>q.skill===skill)).toHaveLength(18);
