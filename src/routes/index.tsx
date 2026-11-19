@@ -161,6 +161,13 @@ function Home() {
       className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>):
      <div className="tile w-full cursor-not-allowed bg-muted py-4 text-center font-bold" role="status">🔒 Juego en desarrollo · selecciona otra modalidad disponible</div>
     }
+    {math&&topic==="Álgebra"&&subtopic==="Funciones"&&<section className="card-ink bg-accent/40 p-4 space-y-3" aria-label="Laboratorio de análisis de funciones">
+     <h3 className="font-black text-lg">📈 Laboratorio de gráficas: seis habilidades</h3>
+     <p className="text-sm">Nuevo juego visual independiente para interpretar dominio, rango, tramos crecientes y decrecientes e intersecciones con los ejes. Cada partida incluye diez ejercicios repartidos entre seis destrezas.</p>
+     <Link to="/laboratorio-funciones" search={{nivel:level}}
+      className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de funciones ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
+     <p className="text-xs">Práctica complementaria: el temario oficial PHUMA 2026 no enumera separadamente todas estas habilidades.</p>
+    </section>}
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
    </section>
    <aside className="rounded-xl border-2 border-foreground bg-card p-4 text-sm space-y-2">
