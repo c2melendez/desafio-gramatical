@@ -69,10 +69,11 @@ export function statsOracle(s:StatsStimulus,skill:StatsSkill):string{
  case "frequency-median":
   if(s.kind!=="frequency")break;
   return `${median(s)} puntos`;
- case "sample-probability":
+ case "sample-probability":{
   if(s.kind!=="sample")break;
   const r=s.colors.filter(x=>x==="rojo").length,div=gcd(r,s.colors.length);
   return `${r/div}/${s.colors.length/div}`;
+ }
  }
  throw Error("Formato incompatible con competencia");
 }
