@@ -60,7 +60,7 @@ function FunctionLab(){
  const levelLabel=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished)return <main className="mx-auto max-w-2xl px-4 py-8 space-y-4">
   <h1 className="text-3xl font-black">¡Laboratorio completado!</h1>
-  <p>Funciones · {levelLabel} · {correct}/{ROUNDS_PER_GAME} respuestas correctas</p>
+  <p>Estadística · {levelLabel} · {correct}/{ROUNDS_PER_GAME} respuestas correctas</p>
   <p className="card-ink p-4 font-bold">Puntaje: {score} · Mejor racha: {best}</p>
   {mistakes.length>0&&<section className="space-y-3"><h2 className="text-xl font-bold">Repasa las respuestas</h2>
    {mistakes.map((m,i)=><article key={i} className="card-ink p-3"><strong>{m.prompt}</strong><p>Tu elección: {m.given}</p><p>Correcta: {m.correct}</p><p>{m.exp}</p></article>)}
@@ -82,7 +82,7 @@ function FunctionLab(){
      aria-pressed={selected===i} onClick={()=>choose(i)}>{option}</button>)}
    </div>
    {selected!==null&&<div className={`card-ink p-4 space-y-2 ${selected===item.answerIndex?"bg-success-soft":"bg-destructive-soft"}`} role="status">
-    <p className="font-bold">{selected===item.answerIndex?"¡Correcto!":"Revisa la interpretación de la gráfica"}</p>
+    <p className="font-bold">{selected===item.answerIndex?"¡Correcto!":"Revisa la interpretación de los datos"}</p>
     <p>Tu elección: {item.options[selected]} · Respuesta correcta: {item.answer}</p>
     <p>{item.explanation}</p>
     <button type="button" className="tile bg-primary text-primary-foreground w-full" onClick={next}>
