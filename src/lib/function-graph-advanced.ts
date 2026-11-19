@@ -1,4 +1,6 @@
 import type {Level} from "./grammar";
+import {advancedFunctionChallenge} from "./function-advanced-cognitive-challenges";
+import type {CognitiveStage} from "./math-cognitive-progression";
 
 /** Additional original practice; not a claim of official PHUMA item frequency.
  * Models are finite: a quadratic on a closed domain, or two linear pieces
@@ -23,6 +25,7 @@ export type JumpGraph={kind:"jump";leftIntercept:number;rightIntercept:number;le
 export type ExtendedGraph=QuadraticGraph|JumpGraph;
 export type ExtendedTask={
  id:string;level:Level;skill:ExtendedSkill;graph:ExtendedGraph;
+ cognitiveStage:CognitiveStage;operation:string;requiredEvidence:string[];
  prompt:string;options:string[];answer:string;answerIndex:number;explanation:string;
  source:"practica-complementaria-analisis-funciones";
  visualRequirement:"essential";
@@ -114,12 +117,19 @@ function makeOptions(graph:ExtendedGraph,skill:ExtendedSkill,index:number){
 }
 export function extendedTask(index:number,level:Level):ExtendedTask{
  const skill=EXTENDED_SKILLS[index%8],graph=extendedGraph(index,level,skill);
- const {answer,options,answerIndex}=makeOptions(graph,skill,index);
+ const baseline=makeOptions(graph,skill,index),challenge=advancedFunctionChallenge(graph,skill,level);
+ const answer=challenge?.answer??baseline.answer;
+ const alternatives=challenge?[answer,...challenge.distractors]:baseline.options;
+ const shift=index%4,options=challenge?[...alternatives.slice(shift),...alternatives.slice(0,shift)]:baseline.options;
+ const answerIndex=options.indexOf(answer);
  const explanation=graph.kind==="quadratic"
   ?`La parábola tiene vértice ${pair(graph.h,graph.k)}, extremos definidos en x=${graph.h-3} y x=${graph.h+3}, y corta el eje x en ${graph.h-2} y ${graph.h+2}. Su concavidad es ${graph.a>0?"hacia arriba":"hacia abajo"}. La respuesta es ${answer}.`
   :`En x=0 el punto izquierdo (${pair(0,graph.leftIntercept)}) está abierto y el punto derecho (${pair(0,graph.rightIntercept)}) está cerrado. Se distingue valor de función, límite lateral y rango de los dos segmentos. La respuesta es ${answer}.`;
- return {id:`math-graph-v2-${level}-${index}`,skill,level,graph,prompt:prompts[skill],
-   answer,options,answerIndex,explanation,source:"practica-complementaria-analisis-funciones",
+ return {id:`math-graph-v2-${level}-${index}`,skill,level,graph,prompt:challenge?.prompt??prompts[skill],
+   answer,options,answerIndex,explanation:challenge?challenge.explanation+` Respuesta correcta: ${answer}.`:explanation,
+   cognitiveStage:challenge?.stage??1,operation:challenge?.operation??skill,
+   requiredEvidence:challenge?.requiredEvidence??["interpretar-representacion","reconocer-propiedad"],
+   source:"practica-complementaria-analisis-funciones",
    visualRequirement:"essential"};
 }
 export function extendedPool(level:Level):ExtendedTask[]{
