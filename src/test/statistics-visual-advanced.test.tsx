@@ -2,6 +2,7 @@ import {afterEach,describe,expect,it} from "vitest";
 import {cleanup,render,screen} from "@testing-library/react";
 import {LEVELS} from "@/lib/grammar";
 import {iqr,stats2Oracle,stats2Pool,STATS2_SKILLS,type DotPlot,type PiePlot,type CrossTable} from "@/lib/statistics-visual-advanced";
+import {cognitiveChallenge} from "@/lib/math-cognitive-progression";
 import {StatisticsAdvancedVisual} from "@/components/games/StatisticsAdvancedVisual";
 afterEach(()=>cleanup());
 describe("M1 Estadística II: gráficos con datos esenciales",()=>{
@@ -15,7 +16,9 @@ describe("M1 Estadística II: gráficos con datos esenciales",()=>{
     expect(task.options).toHaveLength(4);
     expect(new Set(task.options).size).toBe(4);
     expect(task.options[task.answerIndex]).toBe(task.answer);
-    expect(task.answer).toBe(stats2Oracle(task.stimulus,task.skill));
+    expect(task.answer).toBe(cognitiveChallenge(task.stimulus,task.skill,level)?.answer??stats2Oracle(task.stimulus,task.skill));
+    expect(task.cognitiveStage).toBe(level==="principiante"?1:level==="intermedio"?2:3);
+    expect(task.requiredEvidence.length).toBeGreaterThanOrEqual(level==="principiante"?2:level==="intermedio"?3:3);
     expect(task.explanation).toContain(task.answer);
     expect(task.visualRequirement).toBe("essential");
    }

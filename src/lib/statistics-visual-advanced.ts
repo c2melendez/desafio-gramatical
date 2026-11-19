@@ -1,4 +1,5 @@
 import type {Level} from "./grammar";
+import {cognitiveChallenge,type CognitiveStage} from "./math-cognitive-progression";
 
 /** Competencia de interpretación y dispersión, guía PRE-U UNAH 2026, p.6.
  * Todos los modelos son originales y describen conjuntos de datos íntegros. */
@@ -15,6 +16,7 @@ export type CrossTable={kind:"cross";a:[number,number];b:[number,number];};
 export type Stats2Stimulus=DotPlot|PiePlot|CrossTable;
 export type Stats2Task={
  id:string;level:Level;skill:Stats2Skill;stimulus:Stats2Stimulus;
+ cognitiveStage:CognitiveStage;operation:string;requiredEvidence:string[];
  prompt:string;options:string[];answer:string;answerIndex:number;
  explanation:string;visualRequirement:"essential";
  source:"phuma-dispersion-graficos"|"ampliacion-tablas-cruzadas";
@@ -63,7 +65,8 @@ const prompt:Record<Stats2Skill,string>={
  "cross-table":"Entre los estudiantes que prefieren Lectura, ¿qué porcentaje pertenece al Grupo A? Calcula el porcentaje condicionado por la columna Lectura."};
 export function stats2Task(index:number,level:Level):Stats2Task{
  const skill=STATS2_SKILLS[index%4],stimulus=stats2Stimulus(index,level,skill);
- const answer=stats2Oracle(stimulus,skill);
+ const challenge=cognitiveChallenge(stimulus,skill,level);
+ const answer=challenge?challenge.answer:stats2Oracle(stimulus,skill);
  const candidates:string[]=[answer];
  let explanation="";
  if(stimulus.kind==="dots"){
@@ -85,13 +88,20 @@ export function stats2Task(index:number,level:Level):Stats2Task{
   candidates.push(`${fmt(100*stimulus.b[0]/column)}%`);
   candidates.push(`${fmt(100*n/(column+stimulus.a[1]+stimulus.b[1]))}%`);
  }
+ if(challenge){
+  candidates.length=1;
+  candidates.push(...challenge.distractors);
+  explanation=challenge.explanation;
+ }
  // Numeric distractors must not become duplicate correct answers through rounding.
  for(let z=1;z<=14;z++)candidates.push(skill==="compare-spread"?"No se proporcionan datos suficientes":skill==="quartile-range"?`${z+15} puntos`:`${z+70}%`);
  const unique=[...new Set(candidates)].slice(0,4);
  if(unique.length!==4)throw Error("Cuatro alternativas únicas obligatorias");
  const shift=index%4,options=[...unique.slice(shift),...unique.slice(0,shift)];
  return {id:`math-stats-v2-${level}-${index}`,level,skill,stimulus,
-  prompt:prompt[skill],options,answer,answerIndex:options.indexOf(answer),
+  prompt:challenge?.prompt??prompt[skill],options,answer,answerIndex:options.indexOf(answer),
+  cognitiveStage:challenge?.stage??1,operation:challenge?.operation??skill,
+  requiredEvidence:challenge?.requiredEvidence??["leer-representacion","aplicar-operacion-directa"],
   explanation:`${explanation} Respuesta correcta: ${answer}.`,
   visualRequirement:"essential",source:skill==="cross-table"?"ampliacion-tablas-cruzadas":"phuma-dispersion-graficos"};
 }
