@@ -60,7 +60,7 @@ function FunctionLab(){
  const levelLabel=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished)return <main className="mx-auto max-w-2xl px-4 py-8 space-y-4">
   <h1 className="text-3xl font-black">¡Laboratorio completado!</h1>
-  <p>Funciones · {levelLabel} · {correct}/{ROUNDS_PER_GAME} respuestas correctas</p>
+  <p>Geometría · {levelLabel} · {correct}/{ROUNDS_PER_GAME} respuestas correctas</p>
   <p className="card-ink p-4 font-bold">Puntaje: {score} · Mejor racha: {best}</p>
   {mistakes.length>0&&<section className="space-y-3"><h2 className="text-xl font-bold">Repasa las respuestas</h2>
    {mistakes.map((m,i)=><article key={i} className="card-ink p-3"><strong>{m.prompt}</strong><p>Tu elección: {m.given}</p><p>Correcta: {m.correct}</p><p>{m.exp}</p></article>)}
@@ -75,14 +75,14 @@ function FunctionLab(){
   <section className="card-ink bg-card p-4 sm:p-6 space-y-4" aria-label="Reto de interpretación geométrica">
    <p className="text-sm font-bold text-primary">Destreza: {GEOMETRY_SKILL_NAMES[item.skill]}</p>
    <h2 className="text-xl font-black">{item.prompt}</h2>
-   <GeometryVisual figure={item.figure} question={item.skill}/>
+   <GeometryVisual figure={item.figure} question={item.skill} stage={item.cognitiveStage}/>
    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="group" aria-label="Respuestas posibles">
     {item.options.map((option,i)=><button key={i} type="button" disabled={selected!==null}
      className={`tile min-h-14 text-center ${selected===i?(i===item.answerIndex?"bg-success-soft":"bg-destructive-soft"):"bg-background"}`}
      aria-pressed={selected===i} onClick={()=>choose(i)}>{option}</button>)}
    </div>
    {selected!==null&&<div className={`card-ink p-4 space-y-2 ${selected===item.answerIndex?"bg-success-soft":"bg-destructive-soft"}`} role="status">
-    <p className="font-bold">{selected===item.answerIndex?"¡Correcto!":"Revisa la interpretación de la gráfica"}</p>
+    <p className="font-bold">{selected===item.answerIndex?"¡Correcto!":"Revisa la interpretación geométrica"}</p>
     <p>Tu elección: {item.options[selected]} · Respuesta correcta: {item.answer}</p>
     <p>{item.explanation}</p>
     <button type="button" className="tile bg-primary text-primary-foreground w-full" onClick={next}>
