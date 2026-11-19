@@ -70,7 +70,10 @@ function distractors(g:GraphData,skill:GraphSkill):string[]{
 }
 function choices(g:GraphData,skill:GraphSkill,seed:number){
  const answer=graphCorrectAnswer(g,skill);
- const options=[...new Set([answer,...distractors(g,skill)])].slice(0,4);
+ const candidates=[answer,...distractors(g,skill)];
+ // Alternatives remain distinct even if domain and range happen to coincide.
+ for(let n=1;n<8;n++)candidates.push(skill==="domain"||skill==="range"?interval(g.xs[0]-n,g.xs[2]+n):skill==="increasing"||skill==="decreasing"?`(${g.xs[0]-n}, ${g.xs[2]+n})`:point(0,graphY(g,0)!+n));
+ const options=[...new Set(candidates)].slice(0,4);
  if(options.length!==4)throw Error("Distractores insuficientes: "+skill);
  const shift=seed%4;
  const rotated=[...options.slice(shift),...options.slice(0,shift)];
