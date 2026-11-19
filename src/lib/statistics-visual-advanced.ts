@@ -64,7 +64,7 @@ const prompt:Record<Stats2Skill,string>={
 export function stats2Task(index:number,level:Level):Stats2Task{
  const skill=STATS2_SKILLS[index%4],stimulus=stats2Stimulus(index,level,skill);
  const answer=stats2Oracle(stimulus,skill);
- let candidates:string[]=[answer];
+ const candidates:string[]=[answer];
  let explanation="";
  if(stimulus.kind==="dots"){
   const a=iqr(stimulus.groups[0]),b=iqr(stimulus.groups[1]);
