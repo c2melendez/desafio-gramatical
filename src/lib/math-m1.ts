@@ -1,6 +1,7 @@
 import type {Level,Mode} from "./grammar";
 import {AREAS} from "./phuma-catalog";
 import {visualAnswer,visualPrompt,type MathVisual} from "./math-visual";
+import {corePedagogy} from "./math-m1-core-pedagogy";
 
 /** Banco técnico original M1 de Matemáticas: 10/15/20 por subtema y juego.
  * Los parámetros y los casos se calculan con aritmética exacta; las variantes
@@ -23,6 +24,7 @@ export type MathModel={id:string;topic:string;subtopic:string;level:Level;mode:M
  assertions:{text:string;truth:boolean}[];
  steps:{label:string;choices:string[];answerIndex:number}[];
  reviewStatus:"editorial-draft";family:string;
+ cognitiveStage?:1|2|3;operation?:string;requiredEvidence?:string[];modeOperation?:string;
 };
 function gcd(a:number,b:number):number{a=Math.abs(a);b=Math.abs(b);while(b){const c=a%b;a=b;b=c}return a||1}
 const q=(n:number,d=1):Rational=>{if(!Number.isInteger(n)||!Number.isInteger(d)||!d)throw Error("Racional inválido");const f=gcd(n,d),sign=d<0?-1:1;return {n:sign*n/f,d:Math.abs(d)/f}};
@@ -68,7 +70,11 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  if(!known||!MATH_MODES.includes(mode)||!MATH_LEVELS.includes(level)||!Number.isInteger(index)||index<0||index>=MATH_LEVEL_COUNT[level])throw Error("Solicitud fuera de contrato M1");
  const levelN=MATH_LEVELS.indexOf(level),modeN=MATH_MODES.indexOf(mode);
  const seed=1+index+levelN*43+modeN*137;
- const r=compute(subtopic,level,seed),solution=fmt(r.result),base=variants(r.result);
+ const original=compute(subtopic,level,seed);
+ const core=corePedagogy(subtopic,level,original.inputs);
+ const r=core?{...original,question:core.prompt,result:core.result,intermediate:core.intermediate,
+  interLabel:core.procedure.label,reason:core.explanation,formula:core.formula,inputs:core.inputs}:original;
+ const solution=fmt(r.result),base=variants(r.result);
  // Piloto G0–G5: en estas celdas de selección, los datos relevantes
  // se trasladan de la frase a la representación visual original.
  let visual:MathVisual|undefined;
@@ -95,7 +101,7 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
   ?[{text:`La solución representada incluye el extremo: x ≥ ${solution}.`,truth:false},
     {text:`La solución representada contiene valores menores: x < ${solution}.`,truth:false}]
   :[1,3].map(n=>({text:visual?`La representación permite concluir que el resultado es ${base[n]}.`:`La solución obtenida es ${base[n]}.`,truth:false}));
- const ordered=[correctClaim,...falseClaims],shift=seed%3;
+ const ordered=core?core.claims:[correctClaim,...falseClaims],shift=seed%3;
  const assertions=[...ordered.slice(shift),...ordered.slice(0,shift)];
  const id="math-m1-"+[topic,subtopic,mode,level,index].map(v=>String(v).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")).join("-");
  const visualExplanation=visual?.kind==="triangle-angles"
@@ -123,7 +129,10 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
    {label:visual?.kind==="number-line"?"Selecciona la desigualdad representada":"Resultado final",choices:visual?.kind==="number-line"?
     [`x > ${solution}`,`x ≥ ${solution}`,`x < ${solution}`,`x ≤ ${solution}`]:choices.choices,
     answerIndex:visual?.kind==="number-line"?0:choices.answerIndex}],
-  family:"math-m1-"+subtopic,reviewStatus:"editorial-draft"};
+  family:"math-m1-"+subtopic,reviewStatus:"editorial-draft",
+  cognitiveStage:core?.cognitiveStage,operation:core?.operation,requiredEvidence:core?.requiredEvidence,
+  modeOperation:core?mode==="clasificar"?"evaluar-validez-de-transformaciones":
+   mode==="quiz"?"resolver-modelo-transformado":"construir-cadena-de-eliminacion":undefined};
 }
 export function mathPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return Array.from({length:MATH_LEVEL_COUNT[level]},(_,i)=>mathModel(topic,subtopic,level,mode,i));
