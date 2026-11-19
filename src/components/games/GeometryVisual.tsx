@@ -11,7 +11,7 @@ export function GeometryVisual({figure:f,question}:{figure:GeometryFigure;questi
     <line x1="95" y1="255" x2="315" y2="24" stroke="currentColor" strokeWidth="3"/>
     <text x="395" y="88" fontSize="17" fill="currentColor">L₁</text>
     <text x="395" y="201" fontSize="17" fill="currentColor">L₂</text>
-    <text x="240" y="64" fontSize="19" fill="#0f766e">{f.degrees}°</text>
+    <text x="282" y="64" fontSize="19" fill="#0f766e">{f.degrees}°</text>
     <text x={corresponding?164:112} y="173" fontSize="22" fontWeight="bold" fill="#b91c1c">?</text>
     <path d="M365 102 l9 0 M365 109 l9 0 M365 214 l9 0 M365 221 l9 0" stroke="#0f766e" strokeWidth="2.5"/>
    </svg>
