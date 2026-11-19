@@ -48,14 +48,14 @@ export function MathVisualStimulus({visual:v}:{visual:MathVisual}){
   return <figure className="space-y-2">
    <svg viewBox="0 0 390 145" {...common}>
     <line x1="25" y1="72" x2="365" y2="72" stroke="currentColor" strokeWidth="2"/>
-    <line x1="195" y1="72" x2="350" y2="72" stroke="#0f766e" strokeWidth="7" strokeLinecap="round"/>
-    <path d="M350 61 L370 72 L350 83" fill="none" stroke="#0f766e" strokeWidth="4"/>
+    <line x1="195" y1="72" x2={v.direction==="left"?40:350} y2="72" stroke="#0f766e" strokeWidth="7" strokeLinecap="round"/>
+    <path d={v.direction==="left"?"M40 61 L20 72 L40 83":"M350 61 L370 72 L350 83"} fill="none" stroke="#0f766e" strokeWidth="4"/>
     {labels.map((n,i)=>{const x=55+70*i;return <g key={i}>
      <line x1={x} x2={x} y1="63" y2="81" stroke="currentColor" strokeWidth="2"/>
      <text x={x} y="110" textAnchor="middle" fontSize="18" fill="currentColor">{n===null?"?":n}</text>
     </g>})}
     <circle cx="195" cy="72" r="8" fill="white" stroke="#0f766e" strokeWidth="3"/>
-   </svg><figcaption className="text-xs text-muted-foreground">Círculo abierto: extremo excluido. Flecha hacia valores mayores. Marcas igualmente espaciadas.</figcaption>
+   </svg><figcaption className="text-xs text-muted-foreground">Círculo abierto: extremo excluido. Flecha hacia valores {v.direction==="left"?"menores":"mayores"}. Marcas igualmente espaciadas.</figcaption>
   </figure>;
  }
  if(v.kind==="rectangle")return <figure className="space-y-2">
@@ -98,6 +98,6 @@ export function MathVisualStimulus({visual:v}:{visual:MathVisual}){
    <text x="175" y="88" fontSize="16" fill="currentColor">(1, {intercept+slope})</text>
    <text x="349" y="190" fontSize="16" fill="currentColor">x</text><text x="72" y="24" fontSize="16" fill="currentColor">y</text>
    <text x="107" y="226" fontSize="14" fill="currentColor">Recta definida por dos puntos</text>
-  </svg><figcaption className="text-xs text-muted-foreground">Gráfico esquemático, no a escala. Usa las coordenadas etiquetadas para obtener f({targetX}).</figcaption>
+  </svg><figcaption className="text-xs text-muted-foreground">Gráfico esquemático, no a escala. Usa las coordenadas etiquetadas para resolver la operación indicada en el enunciado (entrada {targetX}).</figcaption>
  </figure>;
 }

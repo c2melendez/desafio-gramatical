@@ -2,6 +2,7 @@ import type {Level,Mode} from "./grammar";
 import {AREAS} from "./phuma-catalog";
 import {visualAnswer,visualPrompt,type MathVisual} from "./math-visual";
 import {corePedagogy} from "./math-m1-core-pedagogy";
+import {nextAlgebraPedagogy} from "./math-m1-core-algebra-next";
 
 /** Banco técnico original M1 de Matemáticas: 10/15/20 por subtema y juego.
  * Los parámetros y los casos se calculan con aritmética exacta; las variantes
@@ -71,7 +72,7 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  const levelN=MATH_LEVELS.indexOf(level),modeN=MATH_MODES.indexOf(mode);
  const seed=1+index+levelN*43+modeN*137;
  const original=compute(subtopic,level,seed);
- const core=corePedagogy(subtopic,level,original.inputs);
+ const core=corePedagogy(subtopic,level,original.inputs)??nextAlgebraPedagogy(subtopic,level,original.inputs);
  const r=core?{...original,question:core.prompt,result:core.result,intermediate:core.intermediate,
   interLabel:core.procedure.label,reason:core.explanation,formula:core.formula,inputs:core.inputs}:original;
  const solution=fmt(r.result),base=variants(r.result);
@@ -85,8 +86,8 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
    case "Ángulos":visual={kind:"triangle-angles",alpha:r.inputs[0],beta:r.inputs[1]};break;
    case "Pitágoras":visual={kind:"right-triangle",legA:r.inputs[0],legB:r.inputs[1]};break;
    case "Tablas y gráficas":visual={kind:"bar-chart",monday:r.inputs[0],tuesday:r.inputs[1],wednesday:r.inputs[2]};break;
-   case "Funciones":visual={kind:"linear-function",slope:r.inputs[0],intercept:r.inputs[1],targetX:r.inputs[2]};break;
-   case "Inecuaciones":visual={kind:"number-line",boundary:(r.inputs[2]-r.inputs[1])/r.inputs[0],open:true,direction:"right"};break;
+   case "Funciones":visual={kind:"linear-function",slope:original.inputs[0],intercept:original.inputs[1],targetX:original.inputs[2],operation:core?(level==="principiante"?"direct":level==="intermedio"?"shift":"compose"):"direct"};break;
+   case "Inecuaciones":visual={kind:"number-line",boundary:(original.inputs[2]-original.inputs[1])/original.inputs[0],open:true,direction:"right",operation:core?(level==="principiante"?"direct":level==="intermedio"?"shift":"reflect"):"direct"};break;
    case "Áreas y perímetros":visual={kind:"rectangle",length:r.inputs[0],width:r.inputs[1],measure:r.inputs[2]?"area":"perimeter"};break;
    case "Sólidos: área y volumen":visual={kind:"prism",length:r.inputs[0],width:r.inputs[1],height:r.inputs[2],measure:r.inputs[3]?"volume":"surface"};break;
    case "Semejanza":visual={kind:"similar-triangles",small:r.inputs[0],large:r.inputs[1],other:r.inputs[2]};break;
@@ -94,9 +95,9 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  }
  if(visual&&visualAnswer(visual)!==r.result.n/r.result.d)throw Error("El estímulo visual no coincide con el oráculo matemático");
  const choices=choose(seed,base);
- const visualIntermediate=visual?.kind==="number-line"?r.result:visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate;
+ const visualIntermediate=visual?.kind==="number-line"?q(visual.boundary):visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate;
  const step=choose(seed+1,variants(visualIntermediate));
- const correctClaim={text:visual?.kind==="number-line"?`La solución representada es x > ${solution}.`:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
+ const correctClaim={text:visual?.kind==="number-line"?`La solución ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?"transformada es x <":"representada es x >"} ${solution}.`:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
  const falseClaims=visual?.kind==="number-line"
   ?[{text:`La solución representada incluye el extremo: x ≥ ${solution}.`,truth:false},
     {text:`La solución representada contiene valores menores: x < ${solution}.`,truth:false}]
@@ -111,9 +112,9 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
   :visual?.kind==="bar-chart"
   ? `Del gráfico se leen lunes ${visual.monday}, martes ${visual.tuesday} y miércoles ${visual.wednesday} libros. El total es ${visual.monday}+${visual.tuesday}+${visual.wednesday}=${solution}; sumar no equivale a calcular un promedio.`
   :visual?.kind==="linear-function"
-  ? `Los puntos del plano son (0,${visual.intercept}) y (1,${visual.intercept+visual.slope}). La variación por cada incremento unitario en x es ${visual.slope}; así f(${visual.targetX})=${visual.slope}×${visual.targetX}+${visual.intercept}=${solution}.`
+  ? core?`${r.reason} La gráfica representa la función original f, no la transformada g.`:`Los puntos del plano son (0,${visual.intercept}) y (1,${visual.intercept+visual.slope}). La variación por cada incremento unitario en x es ${visual.slope}; así f(${visual.targetX})=${visual.slope}×${visual.targetX}+${visual.intercept}=${solution}.`
   :visual?.kind==="number-line"
-  ? `El círculo abierto está exactamente entre las marcas ${visual.boundary-1} y ${visual.boundary+1}, por lo que corresponde a ${visual.boundary}. No se incluye el extremo, y la flecha a la derecha representa valores mayores.`
+  ? core?`${r.reason} La recta muestra el extremo de la inecuación ORIGINAL en ${visual.boundary}; no se debe confundir con el límite de la transformación.`:`El círculo abierto está exactamente entre las marcas ${visual.boundary-1} y ${visual.boundary+1}, por lo que corresponde a ${visual.boundary}. No se incluye el extremo, y la flecha a la derecha representa valores mayores.`
   :visual?.kind==="rectangle"
   ? `El rectángulo tiene largo ${visual.length} cm y ancho ${visual.width} cm. El ${visual.measure==="area"?"área exige multiplicar los lados y se mide en cm²":"perímetro exige sumar los cuatro lados y se mide en cm"}: ${solution}.`
   :visual?.kind==="prism"
@@ -125,14 +126,13 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
   formula:r.formula,source:guideSubtopics.has(subtopic)?"GUIA-PRE-U-UNAH-2026:p6":"catalogo-practica-complementaria",
   oracle:{kind:r.kind,inputs:r.inputs,answer:r.result,intermediate:r.intermediate},
   options:choices.choices,answerIndex:choices.answerIndex,assertions,
-  steps:[{label:visual?.kind==="number-line"?"Identifica el valor del extremo abierto":visual?.kind==="rectangle"&&visual.measure==="area"?"Lee la medida horizontal de la figura":visual?"Calcula o deduce el valor intermedio a partir de la figura":r.interLabel,choices:step.choices,answerIndex:step.answerIndex},
-   {label:visual?.kind==="number-line"?"Selecciona la desigualdad representada":"Resultado final",choices:visual?.kind==="number-line"?
-    [`x > ${solution}`,`x ≥ ${solution}`,`x < ${solution}`,`x ≤ ${solution}`]:choices.choices,
+  steps:[{label:visual?.kind==="number-line"?"Identifica el límite ORIGINAL del intervalo mostrado":core?.procedure.label??(visual?.kind==="rectangle"&&visual.measure==="area"?"Lee la medida horizontal de la figura":visual?"Calcula o deduce el valor intermedio a partir de la figura":r.interLabel),choices:step.choices,answerIndex:step.answerIndex},
+   {label:visual?.kind==="number-line"?"Selecciona la desigualdad solicitada":"Resultado final",choices:visual?.kind==="number-line"?
+    [`x ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?"<":">"} ${solution}`,`x ≥ ${solution}`,`x ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?">":"<"} ${solution}`,`x ≤ ${solution}`]:choices.choices,
     answerIndex:visual?.kind==="number-line"?0:choices.answerIndex}],
   family:"math-m1-"+subtopic,reviewStatus:"editorial-draft",
   cognitiveStage:core?.cognitiveStage,operation:core?.operation,requiredEvidence:core?.requiredEvidence,
-  modeOperation:core?mode==="clasificar"?"evaluar-validez-de-transformaciones":
-   mode==="quiz"?"resolver-modelo-transformado":"construir-cadena-de-eliminacion":undefined};
+  modeOperation:core?(subtopic==="Ecuaciones"||subtopic==="Sistemas de ecuaciones")?(mode==="clasificar"?"evaluar-validez-de-transformaciones":mode==="quiz"?"resolver-modelo-transformado":"construir-cadena-de-eliminacion"):(mode==="clasificar"?"evaluar-validez-de-inferencias":mode==="quiz"?"resolver-transformacion-algebraica":"construir-evidencia-y-resultado"):undefined};
 }
 export function mathPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return Array.from({length:MATH_LEVEL_COUNT[level]},(_,i)=>mathModel(topic,subtopic,level,mode,i));
