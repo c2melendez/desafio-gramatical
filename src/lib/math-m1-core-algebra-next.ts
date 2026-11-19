@@ -2,7 +2,7 @@ import type {Level} from "./grammar";
 import type {CorePedagogy} from "./math-m1-core-pedagogy";
 import type {Rational} from "./math-m1";
 
-const q=(n:number):Rational=>({n,d:1});
+const q=(n:number):Rational=>({n:Object.is(n,-0)?0:n,d:1});
 const baseEvidence=["identificar-datos","aplicar-regla"];
 const stageEvidence=["interpretar-modelo","aplicar-transformacion","calcular-resultado"];
 const advancedEvidence=["interpretar-modelo","combinar-transformaciones","comprobar-signo-o-relacion","evaluar-resultado"];
