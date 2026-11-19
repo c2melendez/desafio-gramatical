@@ -19,7 +19,7 @@ function slopeInterval(g:GraphData,direction:"up"|"down",transform:(x:number)=>n
 export function functionChallenge(g:GraphData,skill:GraphSkill,level:Level):CognitiveChallenge|null{
  if(level==="principiante")return null;
  const advanced=level==="avanzado";
- const stage=advanced?3:2;
+ const stage:2|3=advanced?3:2;
  const [a,,c]=g.xs,lo=Math.min(...g.ys),hi=Math.max(...g.ys);
  const evidence=advanced?["interpretar-grafica","identificar-transformaciones","componer-transformaciones","verificar-propiedad"]:["interpretar-grafica","aplicar-transformacion","inferir-propiedad"];
  let answer="",prompt="",explanation="",distractors:string[]=[];
