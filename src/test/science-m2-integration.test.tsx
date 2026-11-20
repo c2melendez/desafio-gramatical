@@ -24,7 +24,7 @@ describe("Naturales M2 — 3135 escenarios adicionales y cuota 20/35/45",()=>{
    const all=scienceM2Pool(topic.name,subtopic,level,mode);
    expect(fresh.length).toBe(SCIENCE_M2_NEW_PER_LEVEL[level]);
    expect(all.length).toBe(SCIENCE_M2_LEVEL_COUNT[level]);
-   expect(countContent("naturales",topic.name,subtopic,mode,level)).toBe(all.length);
+   expect(countContent("naturales",topic.name,subtopic,mode,level)).toBe(({principiante:30,intermedio:50,avanzado:70})[level]);
    expect(all.slice(0,old.length)).toEqual(old);
    expect(verifyScienceCell(all,level,mode,scienceFacts(subtopic))).toEqual([]);
    for(const item of all){expect(ids.has(item.id)).toBe(false);ids.add(item.id);}
