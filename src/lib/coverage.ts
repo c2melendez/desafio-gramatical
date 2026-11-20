@@ -51,7 +51,7 @@ export function coverageRows():ContentCoverage[]{
     rows.push({area:area.id,topic:topic.name,subtopic,mode,level,
       available,target:CONTENT_TARGET[level],stageOne:CONTENT_STAGE_ONE[level],
       stageOneComplete:available>=CONTENT_STAGE_ONE[level],complete:available>=CONTENT_TARGET[level],
-      source:available===0?"not-developed":topic.name==="Gramática y semántica"&&subtopic!=="Categorías gramaticales"?"original-context":topic.name==="Redacción"&&subtopic==="Conectores"&&mode==="quiz"?"original-context":"legacy"});
+      source:available===0?"not-developed":area.id==="naturales"?"original-context":topic.name==="Gramática y semántica"&&subtopic!=="Categorías gramaticales"?"original-context":topic.name==="Redacción"&&subtopic==="Conectores"&&mode==="quiz"?"original-context":"legacy"});
    }
  return rows;
 }
