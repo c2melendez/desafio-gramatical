@@ -1,6 +1,6 @@
 import {afterEach,describe,expect,it,vi} from "vitest";
 import {cleanup,render,fireEvent,screen} from "@testing-library/react";
-import {SCIENCE_TOPICS,SCIENCE_LEVELS,SCIENCE_MODES,SCIENCE_M1_TOTAL,SCIENCE_SUBTOPICS,sciencePool} from "@/lib/science-m1";
+import {SCIENCE_TOPICS,SCIENCE_LEVELS,SCIENCE_MODES,SCIENCE_M1_TOTAL,SCIENCE_SUBTOPICS,sciencePool,scienceFacts} from "@/lib/science-m1";
 import {verifyScienceCell,verifyScienceItem} from "@/lib/science-m1-verifier";
 import {ScienceExerciseCard} from "@/components/games/ScienceExerciseCard";
 import {countContent,coverageRows} from "@/lib/coverage";
@@ -18,7 +18,7 @@ describe("Ciencias Naturales M1: núcleo 10/15/20 para 19 subtemas",()=>{
     expect(bank.length).toBe(({principiante:10,intermedio:15,avanzado:20})[level]);
     expect(countContent("naturales",topic.name,subtopic,mode,level)).toBe(bank.length);
     expect(availableModule("naturales",topic.name,subtopic)).toBe(true);
-    expect(verifyScienceCell(bank,level,mode,[]).filter(x=>!x.includes("Afirmación sin anclaje")).length).toBe(0);
+    expect(verifyScienceCell(bank,level,mode,scienceFacts(subtopic)).length).toBe(0);
     for(const item of bank){expect(ids.has(item.id)).toBe(false);ids.add(item.id);expect(item.reviewStatus).toBe("editorial-draft");}
     total+=bank.length;
    }
