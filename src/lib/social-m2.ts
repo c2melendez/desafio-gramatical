@@ -20,7 +20,8 @@ export function socialM2Model(topic:string,subtopic:string,level:Level,mode:Mode
    !SOCIAL_LEVELS.includes(level)||!SOCIAL_MODES.includes(mode)||
    !Number.isInteger(index)||index<0||index>=count)throw Error("Celda Sociales M2 fuera del catálogo");
  const facts=socialFacts(subtopic),k=index%5,variant=Math.floor(index/5),f=facts[k];
- const foil=facts[(k+variant+1)%5],other=[1,2,3].map(j=>facts[(k+variant+j)%5]);
+ const other=[1,2,3].map(j=>facts[(k+1+((variant+j-1)%4))%5]);
+ const foil=other[0];
  const challenges:Challenge[]=["reconocer-evidencia","comparar-fuentes","cuestionar-generalizacion","evaluar-causa","refutar-confusion"];
  const task=challenges[variant];
  const point=variant===0?
