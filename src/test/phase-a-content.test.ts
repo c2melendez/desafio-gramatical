@@ -218,7 +218,7 @@ describe("Fase A: metas, validez y rotación de contenido",()=>{
   expect(rows.filter(x=>x.area==="matematicas").every(x=>x.stageOneComplete&&x.complete)).toBe(true);
   expect(rows.filter(x=>x.area==="naturales")).toHaveLength(171);
   expect(rows.filter(x=>x.area==="naturales").every(x=>x.stageOneComplete&&x.complete&&x.available===({principiante:30,intermedio:50,avanzado:70})[x.level])).toBe(true);
-  expect(rows.filter(x=>x.area==="sociales").every(x=>x.stageOneComplete&&!x.complete&&x.available===({principiante:20,intermedio:35,avanzado:45})[x.level])).toBe(true);
+  expect(rows.filter(x=>x.area==="sociales").every(x=>x.stageOneComplete&&x.complete&&x.available===({principiante:30,intermedio:50,avanzado:70})[x.level])).toBe(true);
    expect(rows.filter(x=>x.area==="blandas").every(x=>x.available===0)).toBe(true);
  });
 });
