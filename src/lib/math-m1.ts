@@ -3,6 +3,7 @@ import {AREAS} from "./phuma-catalog";
 import {visualAnswer,visualPrompt,type MathVisual} from "./math-visual";
 import {corePedagogy} from "./math-m1-core-pedagogy";
 import {nextAlgebraPedagogy} from "./math-m1-core-algebra-next";
+import {arithmeticPedagogy} from "./math-m1-core-arithmetic";
 
 /** Banco técnico original M1 de Matemáticas: 10/15/20 por subtema y juego.
  * Los parámetros y los casos se calculan con aritmética exacta; las variantes
@@ -72,7 +73,7 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  const levelN=MATH_LEVELS.indexOf(level),modeN=MATH_MODES.indexOf(mode);
  const seed=1+index+levelN*43+modeN*137;
  const original=compute(subtopic,level,seed);
- const core=corePedagogy(subtopic,level,original.inputs)??nextAlgebraPedagogy(subtopic,level,original.inputs);
+ const core=corePedagogy(subtopic,level,original.inputs)??nextAlgebraPedagogy(subtopic,level,original.inputs)??arithmeticPedagogy(subtopic,level,original.inputs);
  const r=core?{...original,question:core.prompt,result:core.result,intermediate:core.intermediate,
   interLabel:core.procedure.label,reason:core.explanation,formula:core.formula,inputs:core.inputs}:original;
  const solution=fmt(r.result),base=variants(r.result);
