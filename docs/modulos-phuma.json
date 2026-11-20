@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "areas": [
     "espanol",
     "matematicas",
@@ -287,12 +287,23 @@
         "naturales-M1"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         20,
         35,
         45
-      ]
+      ],
+      "scope": "19 subtemas × 3 juegos × 3 niveles; ampliación técnica a 20/35/45, 5700 acumulados, +3135 nuevos",
+      "evidence": "docs/naturales-m2-manifiesto-20261120.json",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "cells": 171,
+        "prior": 2565,
+        "added": 3135,
+        "cumulative": 5700,
+        "unique_ids_target": 5700,
+        "semantic_independence": "NO_CERTIFICADA"
+      }
     },
     {
       "id": "naturales-M3",

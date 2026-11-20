@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "id": "naturales-M2-integral-20261120",
+  "module": "naturales-M2",
+  "phase": "M2",
+  "state": "EN_CURSO",
+  "base_sha": "4953387adc09fda400827e35dd6f3e72b9692cc2",
+  "dependencies": [
+    "naturales-M1"
+  ],
+  "scope": {
+    "area": "naturales",
+    "topics": {
+      "Biología": 9,
+      "Química": 5,
+      "Física": 5
+    },
+    "subtopics": 19,
+    "modes": [
+      "clasificar",
+      "quiz",
+      "construir"
+    ],
+    "combinations": 57,
+    "cells": 171,
+    "rounds_per_game": 10
+  },
+  "per_cell": {
+    "before": {
+      "principiante": 10,
+      "intermedio": 15,
+      "avanzado": 20
+    },
+    "added": {
+      "principiante": 10,
+      "intermedio": 20,
+      "avanzado": 25
+    },
+    "after": {
+      "principiante": 20,
+      "intermedio": 35,
+      "avanzado": 45
+    }
+  },
+  "totals": {
+    "before": 2565,
+    "new": 3135,
+    "after": 5700,
+    "by_level_before": {
+      "principiante": 570,
+      "intermedio": 855,
+      "avanzado": 1140
+    },
+    "by_level_new": {
+      "principiante": 570,
+      "intermedio": 1140,
+      "avanzado": 1425
+    },
+    "by_level_after": {
+      "principiante": 1140,
+      "intermedio": 1995,
+      "avanzado": 2565
+    }
+  },
+  "paths": {
+    "new_bank": "src/lib/science-m2.ts",
+    "m1_bank": "src/lib/science-m1.ts",
+    "route": "src/routes/naturales.tsx",
+    "coverage": "src/lib/coverage.ts",
+    "inventory": "scripts/inventory-items.mjs",
+    "audit": "scripts/audit-science-m2.mjs",
+    "tests": "src/test/science-m2-integration.test.tsx",
+    "artifact": "naturales-m2-integral"
+  },
+  "source": {
+    "guide": "GUIA-PRE-U-UNAH-2026, páginas impresas 7–9",
+    "practice_extension": [
+      "Ecología",
+      "Materia",
+      "Reacciones",
+      "Tabla periódica"
+    ]
+  },
+  "quality": {
+    "automated": "PENDIENTE_CI",
+    "academic": "PENDIENTE_AUTORIZADA",
+    "independence": "NO_CERTIFICADA",
+    "psychometrics": "NO_CERTIFICADA",
+    "factual_oracle": "Hechos curriculares locales curados, revisión externa no efectuada",
+    "family_note": "190 anclajes conceptuales combinados en escenarios de observación, comparación y descarte; 3135 registros no son 3135 unidades semánticamente independientes"
+  },
+  "release": {
+    "ci": "PENDIENTE",
+    "render": "PENDIENTE",
+    "sha_match": false
+  },
+  "next": "naturales-M3"
+}

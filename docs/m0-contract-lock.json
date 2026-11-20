@@ -1,11 +1,11 @@
 {
-  "version": 28,
-  "scope": "Contrato de rutas y datos tras integración del núcleo Ciencias Naturales M1. Mantener historia, rotación y regresiones Español/Matemáticas.",
-  "baseline_main": "923762ff71d4c9a5e1f86751c0b2c1f3ad91baea",
+  "version": 29,
+  "scope": "Contrato acumulado: Ciencias Naturales M2, 5700 registros, M1 preservado, Español y Matemáticas sin cambios.",
+  "baseline_main": "4953387adc09fda400827e35dd6f3e72b9692cc2",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "176dfd7e976febaaedb16d2c0a0bbfb91feabf79",
-    "src/lib/coverage.ts": "b115f15838ba19199a4f2ea97b70018c43a3d9d7",
+    "src/lib/coverage.ts": "5e9327ee7a86289c8d31543b6bf984af2b9113ee",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449",
@@ -18,6 +18,6 @@
     "src/lib/study-context.ts": "543bf8b6b23c8f5da9a5cc49d456c322319e0fa3"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Se habilita Ciencias Naturales en menú, inventario, descripción educativa y ruta especializada con 10 rondas. Se conserva el contrato histórico de Español y Matemáticas y se valida en CI antes de fusionar.",
-  "previous_baseline": "6f0dbbf194107c9da7ab19b31f588b7cf4ad7d71"
+  "change_note": "Cobertura Naturales M2 20/35/45. Inventario y juegos consumen banco acumulado; sin modificación del esquema de historial ni persistencia.",
+  "previous_baseline": "923762ff71d4c9a5e1f86751c0b2c1f3ad91baea"
 }
