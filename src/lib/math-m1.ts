@@ -68,11 +68,12 @@ function compute(subtopic:string,level:Level,seed:number):Computed{
  }
 }
 const guideSubtopics=new Set(["Operaciones","Porcentajes","Proporciones","MCD y MCM","Ecuaciones cuadráticas","Inecuaciones","Patrones algebraicos","Áreas y perímetros","Ángulos","Pitágoras","Sólidos: área y volumen","Dispersión de datos","Tablas y gráficas"]);
-export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,index:number):MathModel{
+export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,index:number,seedOverride?:number):MathModel{
  const known=MATH_TOPICS.find(t=>t.name===topic)?.subtopics.includes(subtopic);
  if(!known||!MATH_MODES.includes(mode)||!MATH_LEVELS.includes(level)||!Number.isInteger(index)||index<0||index>=MATH_LEVEL_COUNT[level])throw Error("Solicitud fuera de contrato M1");
  const levelN=MATH_LEVELS.indexOf(level),modeN=MATH_MODES.indexOf(mode);
- const seed=1+index+levelN*43+modeN*137;
+ const seed=seedOverride===undefined?1+index+levelN*43+modeN*137:seedOverride;
+ if(!Number.isSafeInteger(seed)||seed<1)throw Error("Semilla matemática inválida");
  const original=compute(subtopic,level,seed);
  const core=corePedagogy(subtopic,level,original.inputs)??nextAlgebraPedagogy(subtopic,level,original.inputs)??arithmeticPedagogy(subtopic,level,original.inputs)??remainingMathPedagogy(subtopic,level,original.inputs);
  const r=core?{...original,question:core.prompt,result:core.result,intermediate:core.intermediate,
