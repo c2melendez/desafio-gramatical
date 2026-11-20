@@ -16,7 +16,7 @@ describe("Ciencias Naturales M1: núcleo 10/15/20 para 19 subtemas",()=>{
    for(const mode of SCIENCE_MODES)for(const level of SCIENCE_LEVELS){
     const bank=sciencePool(topic.name,subtopic,level,mode);
     expect(bank.length).toBe(({principiante:10,intermedio:15,avanzado:20})[level]);
-    expect(countContent("naturales",topic.name,subtopic,mode,level)).toBe(({principiante:20,intermedio:35,avanzado:45})[level]);
+    expect(countContent("naturales",topic.name,subtopic,mode,level)).toBe(({principiante:30,intermedio:50,avanzado:70})[level]);
     expect(availableModule("naturales",topic.name,subtopic)).toBe(true);
     expect(verifyScienceCell(bank,level,mode,scienceFacts(subtopic)).length).toBe(0);
     for(const item of bank){expect(ids.has(item.id)).toBe(false);ids.add(item.id);expect(item.reviewStatus).toBe("editorial-draft");}
