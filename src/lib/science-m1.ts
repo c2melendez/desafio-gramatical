@@ -275,7 +275,7 @@ export function scienceModel(topic:string,subtopic:string,level:Level,mode:Mode,
   "catalogo-practica-complementaria":topic==="Biología"?
   (["Cuerpo humano","Método científico"].includes(subtopic)?"GUIA-PRE-U-UNAH-2026:p8":"GUIA-PRE-U-UNAH-2026:p7"):
   "GUIA-PRE-U-UNAH-2026:p9";
- const intro=level==="principiante"?`Identifica la propiedad científica del concepto «${fact.concept}».`:
+ const intro=level==="principiante"?(variant===0?`Identifica la propiedad científica del concepto «${fact.concept}».`:`Relaciona el caso «${context}» con «${fact.concept}» e identifica su propiedad.`):
   level==="intermedio"?`Situación de estudio: ${context}. Para analizarla se considera «${fact.concept}». ¿Cuál descripción es apropiada?`:
   `Análisis y descarte de hipótesis: ${context}. Se evalúa el papel de «${fact.concept}» frente a otras explicaciones. ¿Qué conclusión es coherente con el conocimiento científico?`;
  const prompt=mode==="clasificar"?`${intro} Evalúa tres afirmaciones sin confundir las funciones de conceptos diferentes. Caso ${variant+1}.`:
