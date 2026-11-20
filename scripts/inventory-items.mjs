@@ -17,10 +17,12 @@ import {M1_LITERATURE_ACTIVITIES} from '../src/lib/grammar-m1-literature.ts';
 import { readingPool } from '../src/lib/reading.ts';
 import { writingPool } from '../src/lib/writing.ts';
 import {mathM3Pool} from '../src/lib/math-m3.ts';
+import {sciencePool} from '../src/lib/science-m1.ts';
 
 export function pool(row) {
   const {area,topic,subtopic,mode,level}=row;
   if(area==='matematicas')return mathM3Pool(topic,subtopic,level,mode);
+  if(area==='naturales')return sciencePool(topic,subtopic,level,mode);
   if(area!=='espanol')return [];
   if(topic==='Gramática y semántica'&&subtopic==='Categorías gramaticales'){
     if(mode==='clasificar')return [...SENTENCES[level],...EXTRA_SENTENCES[level],...(level==='avanzado'?GRAMMAR_ADVANCED_SENTENCES:[]),...M2_CATEGORY_SENTENCES[level],...M3_CATEGORY_SENTENCES[level]];

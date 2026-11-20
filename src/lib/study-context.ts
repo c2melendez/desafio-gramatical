@@ -11,6 +11,26 @@ export const studyReturn=(tema:string,subtema:string,modo:Mode,nivel:Level,area:
  ({area,tema,subtema,modo,nivel});
 
 const descriptions:Record<string,string>={
+ "Célula":"Distinguir orgánulos y tipos celulares a partir de sus funciones y de evidencia observable, sin confundir procesos energéticos con herencia.",
+ "Genética":"Relacionar ADN, genes, alelos, cromosomas y mecanismos de herencia; distinguir genotipo, fenotipo y variabilidad.",
+ "Ecología":"Analizar relaciones entre organismos, poblaciones, comunidades y factores ambientales y construir cadenas alimentarias coherentes.",
+ "Cuerpo humano":"Explicar funciones de órganos y sistemas corporales usando relaciones entre estructura, transporte, regulación y nutrición.",
+ "Biomoléculas":"Diferenciar carbohidratos, lípidos, proteínas, enzimas y ácidos nucleicos por sus estructuras y funciones.",
+ "División celular":"Comparar mitosis, meiosis, replicación del ADN y etapas de separación cromosómica para explicar reproducción y crecimiento.",
+ "Fotosíntesis":"Relacionar luz, cloroplastos, tilacoides, ciclo de Calvin, intercambio gaseoso y fijación de carbono.",
+ "Método científico":"Formular hipótesis comprobables, identificar variables, controles, mediciones y conclusiones sustentadas en datos.",
+ "Clasificación biológica":"Aplicar jerarquías taxonómicas y distinguir parentesco evolutivo, especie, género y nomenclatura científica.",
+ "Materia":"Distinguir sustancias, elementos, compuestos, mezclas y transformaciones físicas o químicas por evidencias concretas.",
+ "Reacciones":"Interpretar reactivos, productos, conservación de átomos y fenómenos de oxidación, reducción y precipitación.",
+ "Tabla periódica":"Reconocer número atómico, grupos, períodos, familias, iones y su relación con propiedades de los elementos.",
+ "Compuestos inorgánicos":"Clasificar óxidos, hidróxidos, ácidos, sales y peróxidos por su composición y grupos químicos.",
+ "Contaminación y agroquímicos":"Evaluar tipos de agroquímicos, rutas de contaminación, exposición, riesgo y manejo responsable.",
+ "Movimiento":"Diferenciar posición, trayectoria, desplazamiento, rapidez, velocidad y aceleración mediante sistemas de referencia.",
+ "Fuerzas y energía":"Interpretar leyes de Newton y transformaciones de energía en situaciones de fuerzas y movimiento.",
+ "Magnitudes y conversiones":"Usar unidades del SI, magnitudes derivadas y factores de conversión sin perder dimensiones.",
+ "Trabajo mecánico":"Relacionar fuerza, desplazamiento, trabajo, energía cinética, energía potencial y potencia.",
+ "Fuentes de energía":"Comparar fuentes solares, eólicas, hídricas, fósiles, químicas, geotérmicas y nucleares por sus procesos de transformación.",
+
  "Idea principal":"Identificar la afirmación que resume el sentido global de un texto, distinguiéndola de ejemplos y detalles secundarios.",
  "Inferencias":"Deducir conclusiones respaldadas por indicios del texto sin añadir datos que el autor no proporciona.",
  "Lectura crítica":"Evaluar evidencia, supuestos, sesgos y alcance de las afirmaciones antes de aceptarlas como conclusiones.",

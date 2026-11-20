@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "id": "naturales-M1-integral-20261120",
+  "module": "naturales-M1",
+  "state": "EN_CURSO",
+  "baseline_sha": "923762ff71d4c9a5e1f86751c0b2c1f3ad91baea",
+  "source": {
+    "title": "GUIA-PRE-U-UNAH-2026.pdf",
+    "printed_pages": "7–9",
+    "actual_pdf_pages": "8–10",
+    "categories": "Biología, Química y Física",
+    "supplemental_subtopics": [
+      "Ecología",
+      "Materia",
+      "Reacciones",
+      "Tabla periódica"
+    ],
+    "description": "El catálogo contiene algunos subtemas complementarios no enumerados separadamente en el temario oficial."
+  },
+  "scope": {
+    "area": "naturales",
+    "topics": {
+      "Biología": 9,
+      "Química": 5,
+      "Física": 5
+    },
+    "subtopics": 19,
+    "combinations": 57,
+    "modes": 3,
+    "cells": 171,
+    "rounds_per_game": 10
+  },
+  "before": 0,
+  "targets": {
+    "principiante": 10,
+    "intermedio": 15,
+    "avanzado": 20
+  },
+  "planned": {
+    "principiante": 570,
+    "intermedio": 855,
+    "avanzado": 1140,
+    "total": 2565
+  },
+  "technical": {
+    "generator": "src/lib/science-m1.ts",
+    "facts_curated": 190,
+    "verifier": "src/lib/science-m1-verifier.ts",
+    "audit": "scripts/audit-science-m1.mjs",
+    "tests": "src/test/science-m1-integration.test.tsx",
+    "ui": "src/routes/naturales.tsx",
+    "selector": "src/routes/index.tsx",
+    "coverage": "src/lib/coverage.ts",
+    "inventory": "scripts/inventory-items.mjs"
+  },
+  "editorial": {
+    "source_alignment": "RÚBRICA_POR_SUBTEMA_AUTOMATIZADA",
+    "semantically_independent": "NO_CERTIFICADA",
+    "scientific_factual_oracle_independent": "NO_VERIFICADO_EXTERNAMENTE",
+    "academic_review": "PENDIENTE_AUTORIZADA",
+    "examples": "190 conceptos y propiedades curados, múltiples instancias de práctica a partir de familias compartidas",
+    "psychometric": "NO_CERTIFICADA"
+  },
+  "publication": {
+    "ci": "PENDIENTE",
+    "render": "PENDIENTE",
+    "same_sha": false
+  },
+  "handoff": "naturales-M2 after technical module closure",
+  "notes": "Los registros son técnicos, no 2565 preguntas independientes. No declarar entrega sin CI y Render Live mismo SHA."
+}
