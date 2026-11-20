@@ -269,9 +269,10 @@ export function scienceModel(topic:string,subtopic:string,level:Level,mode:Mode,
  const facts=scienceFacts(subtopic),fact=facts[index%facts.length],k=index%facts.length,variant=Math.floor(index/facts.length);
  const distractors=[1,2,3].map(j=>facts[(k+j+variant)%facts.length]);
  const levelN=SCIENCE_LEVELS.indexOf(level)+1;
- const source:ScienceItem["source"]=subtopic==="Ecología"||subtopic==="Tabla periódica"?
-  "catalogo-practica-complementaria":topic==="Biología"?"GUIA-PRE-U-UNAH-2026:p7":
-  topic==="Química"?"GUIA-PRE-U-UNAH-2026:p9":"GUIA-PRE-U-UNAH-2026:p9";
+ const source:ScienceItem["source"]=["Ecología","Tabla periódica","Materia","Reacciones"].includes(subtopic)?
+  "catalogo-practica-complementaria":topic==="Biología"?
+  (["Cuerpo humano","Método científico"].includes(subtopic)?"GUIA-PRE-U-UNAH-2026:p8":"GUIA-PRE-U-UNAH-2026:p7"):
+  "GUIA-PRE-U-UNAH-2026:p9";
  const intro=level==="principiante"?`Identifica la propiedad científica del concepto «${fact.concept}».`:
   level==="intermedio"?`Situación de estudio: ${fact.scenario}. Para analizarla se considera «${fact.concept}». ¿Cuál descripción es apropiada?`:
   `Análisis y descarte de hipótesis: ${fact.scenario}. Se evalúa el papel de «${fact.concept}» frente a otras explicaciones. ¿Qué conclusión es coherente con el conocimiento científico?`;
