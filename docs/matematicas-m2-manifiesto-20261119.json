@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "id": "math-M2-20261119-integral",
+  "module": "matematicas-M2",
+  "stage": "M2",
+  "state": "EN_CURSO",
+  "base_sha": "5e1b7463162488bd49a150cc05ba09e9b67b08b8",
+  "source": [
+    "GUIA-PRE-U-UNAH-2026.pdf:p6",
+    "src/lib/phuma-catalog.ts",
+    "docs/matematicas-m1-cierre.md"
+  ],
+  "scope": {
+    "area": "matematicas",
+    "topics": 4,
+    "subtopics": 22,
+    "game_types": 3,
+    "combinations": 66,
+    "cells": 198,
+    "rounds_per_game": 10
+  },
+  "per_cell": {
+    "before": {
+      "principiante": 10,
+      "intermedio": 15,
+      "avanzado": 20
+    },
+    "added": {
+      "principiante": 10,
+      "intermedio": 20,
+      "avanzado": 25
+    },
+    "after": {
+      "principiante": 20,
+      "intermedio": 35,
+      "avanzado": 45
+    }
+  },
+  "aggregates": {
+    "before": 2970,
+    "new_technical": 3630,
+    "after_technical": 6600,
+    "added_by_level": {
+      "principiante": 660,
+      "intermedio": 1320,
+      "avanzado": 1650
+    },
+    "after_by_level": {
+      "principiante": 1320,
+      "intermedio": 2310,
+      "avanzado": 2970
+    }
+  },
+  "paths": {
+    "generator": "src/lib/math-m2.ts",
+    "review": "scripts/audit-math-m2.mjs",
+    "ui": "src/routes/matematicas.tsx",
+    "inventory": "src/lib/coverage.ts",
+    "full_matrix": "GitHub Actions artifact: matematicas-m2-integral"
+  },
+  "quality": {
+    "technical_checks": "EN_CURSO_CI",
+    "human_review": "PENDIENTE_AUTORIZADA",
+    "semantic_independence": "NO_CERTIFICADA",
+    "psychometrics": "NO_CERTIFICADA",
+    "status_of_new_models": "editorial-draft"
+  },
+  "merge": {
+    "pr": 35,
+    "state": "PENDIENTE"
+  },
+  "publish": {
+    "ci": "PENDIENTE",
+    "render": "PENDIENTE",
+    "same_sha": false
+  },
+  "notes": "Los 3630 son nuevos IDs técnicos de familias parametrizadas; su diversidad de semillas y ausencia de duplicación textual normalizada no prueban independencia conceptual. Se conserva núcleo M1 de 2970 IDs íntegros."
+}
