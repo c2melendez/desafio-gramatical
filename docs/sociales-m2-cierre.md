@@ -1,6 +1,6 @@
 # Ciencias Sociales M2 — ampliación acumulativa integral
 
-**Estado: EN_CURSO**, candidato de integración; requiere CI SUCCESS en main y Render LIVE del mismo SHA. Revisión académica e independencia conceptual pendientes por autorización.
+**Estado: COMPLETADA TÉCNICAMENTE**, CI SUCCESS en main y Render LIVE del mismo SHA; revisión académica pendiente. Revisión académica e independencia conceptual pendientes por autorización.
 
 ## Base y cuotas
 - Base M1: 2700 IDs técnicos, 20 subtemas × 3 juegos × 3 niveles = 180 celdas; 100 hechos originales curados (5 por subtema).
@@ -21,3 +21,13 @@
 - CI contiene auditoría obligatoria, matriz exportada `sociales-m2-integral`, tests, lint, build, M0 y regresiones previas. Render Live y CI deben compartir exactamente el SHA integrado.
 - Inspección visual de móvil y escritorio sin navegador de pruebas: **NO EJECUTADA**; revisión docente autorizada como pendiente, no equivale a bloqueo de publicación técnica.
 - Una vez verificadas la fusión y la publicación, siguiente módulo: `sociales-M3`, objetivo 30/50/70 por combinación.
+
+## Evidencia de publicación — 20 noviembre 2026
+
+- PR #41 fusionado: https://github.com/c2melendez/desafio-gramatical/pull/41, SHA `28d4dc775d7688e641164ac3e2c4f95035292ce1`.
+- CI de PR **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44767293491.
+- CI de main **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44767759487, mismo SHA `28d4dc775d7688e641164ac3e2c4f95035292ce1`.
+- Render **LIVE**: `dep-dc06pq8ae00c73b0m070`, mismo SHA y URL https://desafio-gramatical.onrender.com/.
+- Auditoría y regresión técnica M2 aprobadas para 6000 registros acumulados, 180 celdas y 900 mutantes negativos; M1 preservado. Las comprobaciones automatizadas y HTML no equivalen a inspección visual manual ni aval académico.
+- Siguiente módulo operativo: **sociales-M3**, meta acumulada 30/50/70 por combinación, manteniendo la revisión académica de M1/M2 pendiente.
+- El commit documental que registra esta evidencia tendrá nuevo SHA: requiere pasar de nuevo CI y Render del propio SHA para validar esta versión definitiva.

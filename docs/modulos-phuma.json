@@ -1,5 +1,5 @@
 {
-  "version": 16,
+  "version": 17,
   "areas": [
     "espanol",
     "matematicas",
@@ -444,7 +444,7 @@
         "sociales-M1"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         20,
         35,
@@ -464,8 +464,27 @@
           "avanzado": 45
         },
         "semantic_independence": "NO_CERTIFICADA",
-        "audit": "PENDIENTE_CI",
-        "render": "PENDIENTE"
+        "audit": "PASS_CI_MAIN",
+        "render": "LIVE",
+        "mutants_tested": 900,
+        "mutants_detected": 900
+      },
+      "release": {
+        "pr": 41,
+        "merge_sha": "28d4dc775d7688e641164ac3e2c4f95035292ce1",
+        "ci": {
+          "run": 44767759487,
+          "sha": "28d4dc775d7688e641164ac3e2c4f95035292ce1",
+          "status": "success"
+        },
+        "render": {
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "deploy_id": "dep-dc06pq8ae00c73b0m070",
+          "sha": "28d4dc775d7688e641164ac3e2c4f95035292ce1",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com/"
+        },
+        "documentation_sha": "PENDIENTE_VERIFICACION_PROPIA"
       }
     },
     {
