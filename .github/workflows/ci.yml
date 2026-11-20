@@ -193,6 +193,16 @@ jobs:
           path: sociales-m2-integral.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar Ciencias Sociales M3 — 9000 registros, 180 celdas y preservación M1/M2
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-social-m3.mjs > sociales-m3-corte.json
+      - name: Conservar corte completo de Ciencias Sociales M3
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sociales-m3-corte
+          path: sociales-m3-corte.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema
