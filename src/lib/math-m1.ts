@@ -97,7 +97,7 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  }
  if(visual&&visualAnswer(visual)!==r.result.n/r.result.d)throw Error("El estímulo visual no coincide con el oráculo matemático");
  const choices=choose(seed,base);
- const visualIntermediate=core?.procedure.value??(visual?.kind==="number-line"?q(visual.boundary):visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate);
+ const visualIntermediate=visual?.kind==="number-line"?q(visual.boundary):core?.procedure.value??(visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate);
  const step=choose(seed+1,variants(visualIntermediate));
  const correctClaim={text:visual?.kind==="number-line"?`La solución ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?"transformada es x <":"representada es x >"} ${solution}.`:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
  const falseClaims=visual?.kind==="number-line"
