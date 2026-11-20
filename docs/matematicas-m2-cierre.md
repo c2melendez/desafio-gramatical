@@ -1,6 +1,6 @@
 # Matemáticas M2 — Ampliación acumulada 20/35/45
 
-Fecha de corrida: 19 de noviembre de 2026 (Honduras). Estado actual del documento: **EN CURSO hasta aprobación del SHA integrado en CI y Render**.
+Fecha de corrida: 19 de noviembre de 2026 (Honduras). Estado del módulo: **COMPLETADA TÉCNICAMENTE**, con validación docente pendiente autorizada.
 
 ## Alcance congelado
 
@@ -36,3 +36,11 @@ Manifiesto reproducible: `docs/matematicas-m2-manifiesto-20261119.json`. PR de i
 El módulo se acepta técnicamente cuando **la matriz M2 informa 198 celdas y 6.600 registros, `bun run test` y el resto del workflow pasan, `main` recibe el PR, CI resulta SUCCESS y Render LIVE del mismo SHA**. Mientras eso no se documente con IDs verificables, continuar en EN_CURSO.
 
 Próximo módulo al cerrar M2: Matemáticas M3 (30/50/70 acumulados), con déficit nominal adicional de 50 por combinación (10 básicos, 15 intermedios y 25 avanzados).
+
+## Verificación de integración M2
+
+- PR #35 fusionado a `main`: https://github.com/c2melendez/desafio-gramatical/pull/35; SHA `523335d78d2da14adcf77866e2cd0c9afb25a443`.
+- GitHub Actions en el mismo SHA: ejecución `44676196295`, estado `completed`, conclusión `success`. https://github.com/c2melendez/desafio-gramatical/actions/runs/44676196295
+- Render del mismo SHA: despliegue `dep-dbvsvdec6qcc73elmbog`, estado `live`, servicio `srv-dbt0rilg1s2s738eku8g`.
+- M2 se cerró técnicamente, sin acreditar independencia conceptual, revisión docente ni pruebas visuales manuales. El commit documental posterior debe superar nuevamente sus propios controles CI/Render.
+- Próximo módulo técnico autorizado por la secuencia: `matematicas-M3`.

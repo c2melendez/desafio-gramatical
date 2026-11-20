@@ -3,7 +3,7 @@
   "id": "math-M2-20261119-integral",
   "module": "matematicas-M2",
   "stage": "M2",
-  "state": "EN_CURSO",
+  "state": "COMPLETADA",
   "base_sha": "5e1b7463162488bd49a150cc05ba09e9b67b08b8",
   "source": [
     "GUIA-PRE-U-UNAH-2026.pdf:p6",
@@ -59,7 +59,7 @@
     "full_matrix": "GitHub Actions artifact: matematicas-m2-integral"
   },
   "quality": {
-    "technical_checks": "EN_CURSO_CI",
+    "technical_checks": "PASS_CI_MAIN_ORACLES_COGNITIVE_ROTATION_REGRESSIONS",
     "human_review": "PENDIENTE_AUTORIZADA",
     "semantic_independence": "NO_CERTIFICADA",
     "psychometrics": "NO_CERTIFICADA",
@@ -67,12 +67,19 @@
   },
   "merge": {
     "pr": 35,
-    "state": "PENDIENTE"
+    "state": "MERGED",
+    "sha": "523335d78d2da14adcf77866e2cd0c9afb25a443"
   },
   "publish": {
-    "ci": "PENDIENTE",
-    "render": "PENDIENTE",
-    "same_sha": false
+    "ci": "success",
+    "ci_run": 44676196295,
+    "ci_sha": "523335d78d2da14adcf77866e2cd0c9afb25a443",
+    "render": "live",
+    "render_deploy": "dep-dbvsvdec6qcc73elmbog",
+    "render_sha": "523335d78d2da14adcf77866e2cd0c9afb25a443",
+    "same_sha": true
   },
-  "notes": "Los 3630 son nuevos IDs técnicos de familias parametrizadas; su diversidad de semillas y ausencia de duplicación textual normalizada no prueban independencia conceptual. Se conserva núcleo M1 de 2970 IDs íntegros."
+  "notes": "Los 3630 son nuevos IDs técnicos de familias parametrizadas; su diversidad de semillas y ausencia de duplicación textual normalizada no prueban independencia conceptual. Se conserva núcleo M1 de 2970 IDs íntegros.",
+  "next_module": "matematicas-M3",
+  "note_final": "Cierre técnico operativo; revisión docente e independencia conceptual no certificadas. Esta revisión del manifiesto crea un SHA documental posterior sujeto también a CI/Render."
 }
