@@ -15,7 +15,7 @@ export type ScienceFact={concept:string;property:string;scenario:string};
 export type ScienceItem={
  id:string;topic:string;subtopic:string;level:Level;mode:Mode;index:number;family:string;
  concept:string;prompt:string;expected:string;explanation:string;formula:string;
- source:"GUIA-PRE-U-UNAH-2026:p7"|"GUIA-PRE-U-UNAH-2026:p8"|"GUIA-PRE-U-UNAH-2026:p9"|"catalogo-practica-complementaria";
+ source:"GUIA-PRE-U-UNAH-2026:p7"|"GUIA-PRE-U-UNAH-2026:p8"|"GUIA-PRE-U-UNAH-2026:p9"|"catalogo-practica-complementaria"|"GUIA-PRE-U-UNAH-2026:p10";
  reviewStatus:"editorial-draft";cognitiveStage:1|2|3;operation:string;requiredEvidence:string[];
  oracle:{concept:string;property:string;scenario:string};
  options:string[];answerIndex:number;

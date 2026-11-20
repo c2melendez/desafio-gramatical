@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 14,
   "areas": [
     "espanol",
     "matematicas",
@@ -393,12 +393,29 @@
         "espanol-CORTE"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_PRODUCCION",
       "targets": [
         10,
         15,
         20
-      ]
+      ],
+      "evidence": "docs/sociales-m1-cierre.md",
+      "scope": "20 subtemas × 3 juegos × 3 niveles = 180 celdas; 2700 registros técnicos con 100 familias ancla, revisión docente diferida",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "cells": 180,
+        "subtopics": 20,
+        "anchors": 100,
+        "technical_records": 2700,
+        "targets": {
+          "principiante": 10,
+          "intermedio": 15,
+          "avanzado": 20
+        },
+        "semantic_independence": "NO_CERTIFICADA",
+        "ci": "PENDIENTE_PR",
+        "render": "PENDIENTE_MERGE"
+      }
     },
     {
       "id": "sociales-M2",

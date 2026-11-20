@@ -27,7 +27,7 @@ const cases=[
     return parseRotation(corrupt,['x']).seen.length!==s.seen.length;
  }],
  ['fusionar claves de dificultad',()=>rotationKey('espanol','Gramática','Sinónimos','quiz','principiante')!==rotationKey('espanol','Gramática','Sinónimos','quiz','avanzado')],
- ['habilitar área no desarrollada',()=>!availableModule('sociales','Geografía','Geografía física')],
+ ['habilitar área no desarrollada',()=>!availableModule('blandas','Convivencia','Colaboración')],
 ];
 for(const [label,fn] of cases){
  const ok=fn();
