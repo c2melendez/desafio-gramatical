@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "areas": [
     "espanol",
     "matematicas",
@@ -134,12 +134,22 @@
         "matematicas-M1"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         20,
         35,
         45
-      ]
+      ],
+      "evidence": "docs/matematicas-m2-manifiesto-20261119.json",
+      "scope": "Ampliación acumulada M2 de Matemáticas 22 subtemas × 3 juegos × 3 niveles; 2970 IDs M1 + 3630 técnicos nuevos; revisión docente diferida",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "cells": 198,
+        "records_before": 2970,
+        "technical_added": 3630,
+        "technical_after": 6600,
+        "conceptually_independent": "NO_CERTIFICADO"
+      }
     },
     {
       "id": "matematicas-M3",
