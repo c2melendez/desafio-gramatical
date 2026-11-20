@@ -3,7 +3,7 @@
   "id": "math-M3-20261119-integral",
   "module": "matematicas-M3",
   "stage": "M3",
-  "state": "EN_CURSO",
+  "state": "COMPLETADA",
   "base_sha": "6f0dbbf194107c9da7ab19b31f588b7cf4ad7d71",
   "scope": {
     "area": "matematicas",
@@ -60,16 +60,33 @@
     "artifact": "matematicas-m3-integral"
   },
   "quality": {
-    "automated": "PENDIENTE_CI",
+    "automated": "PASS_ALL_CI_MAIN_FULL_9900_ORACLES_COGNITIVE_ROTATION_NEGATIVES_HTTP",
     "human": "PENDIENTE_AUTORIZADA",
     "semantic_independence": "NO_CERTIFICADA",
     "psychometrics": "NO_CERTIFICADA",
     "status_of_new_models": "editorial-draft"
   },
   "publication": {
-    "ci": "PENDIENTE",
-    "render": "PENDIENTE",
-    "same_sha": false
+    "pr": 36,
+    "merge_sha": "241e107c4c240ac557361eaec862d64b6625160d",
+    "verified_sha": "c76cdaeee8cfa314e596536e6f2869d02e1810ca",
+    "ci": {
+      "id": 44682663527,
+      "sha": "c76cdaeee8cfa314e596536e6f2869d02e1810ca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "render": {
+      "deploy_id": "dep-dbvtqlod3evc73fv6j60",
+      "sha": "c76cdaeee8cfa314e596536e6f2869d02e1810ca",
+      "status": "live",
+      "service_id": "srv-dbt0rilg1s2s738eku8g"
+    },
+    "same_sha": true,
+    "public_http": "PASS_GITHUB_ACTIONS_HTML_SMOKE_5_MATH_ROUTES",
+    "note": "El SHA de este documento final también requiere CI y Render Live propios"
   },
-  "notes": "3300 IDs técnicos nuevos de familias parametrizadas. No equivalen automáticamente a 3300 preguntas cognitivamente independientes. El cierre de área requiere verificación técnica cumulativa, CI, Render y prueba funcional pública."
+  "notes": "3300 IDs técnicos nuevos de familias parametrizadas. No equivalen automáticamente a 3300 preguntas cognitivamente independientes. El cierre de área requiere verificación técnica cumulativa, CI, Render y prueba funcional pública.",
+  "next_module": "naturales-M1",
+  "area_cut": "CIERRE_TECNICO_OPERATIVO_REVISION_DOCENTE_DIFERIDA"
 }

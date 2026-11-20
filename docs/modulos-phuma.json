@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "areas": [
     "espanol",
     "matematicas",
@@ -177,21 +177,35 @@
         "matematicas-M2"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         30,
         50,
         70
       ],
-      "scope": "22 subtemas × 3 juegos × 3 niveles, 9900 registros técnicos acumulados; revisión docente pendiente",
-      "evidence": "docs/matematicas-m3-manifiesto-20261119.json",
+      "scope": "M3 matemático completo 30/50/70; 9900 registros técnicos en 198 celdas; 3300 nuevos",
+      "evidence": "docs/matematicas-m3-cierre.md",
       "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
       "technical": {
         "cells": 198,
         "prior": 6600,
         "added": 3300,
         "cumulative": 9900,
-        "independence": "NO_CERTIFICADA"
+        "unique_ids": 9900,
+        "oracle": "PASS",
+        "negative_mutations": "PASS",
+        "semantic_independence": "NO_CERTIFICADA"
+      },
+      "release": {
+        "pr": 36,
+        "main_sha": "c76cdaeee8cfa314e596536e6f2869d02e1810ca",
+        "ci_run": 44682663527,
+        "ci": "success",
+        "render_deploy": "dep-dbvtqlod3evc73fv6j60",
+        "render_sha": "c76cdaeee8cfa314e596536e6f2869d02e1810ca",
+        "render_status": "live",
+        "http": "pass_5_math_routes",
+        "documentation_commit": "VALIDACION_PROPIA_PENDIENTE"
       }
     },
     {
@@ -202,8 +216,17 @@
         "matematicas-M3"
       ],
       "optional": [],
-      "state": "PENDIENTE",
-      "evidence": "docs/matematicas-m3-manifiesto-20261119.json"
+      "state": "COMPLETADA",
+      "evidence": "docs/matematicas-m3-cierre.md",
+      "scope": "Corte técnico de Matemáticas, 22 subtemas y 66 combinaciones, 30/50/70; independiente semánticamente NO certificada",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "release": {
+        "main_sha": "c76cdaeee8cfa314e596536e6f2869d02e1810ca",
+        "ci_run": 44682663527,
+        "render_deploy": "dep-dbvtqlod3evc73fv6j60",
+        "http": "pass_5_math_routes",
+        "academic": "PENDIENTE_AUTORIZADA"
+      }
     },
     {
       "id": "naturales-M1",
