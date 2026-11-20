@@ -11,7 +11,7 @@ export const MATH_M2_NEW_PER_LEVEL:Record<Level,number>={principiante:10,interme
 const slug=(s:string)=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 
 const stimulusSignature=(item:MathModel)=>item.prompt.normalize("NFKC").toLocaleLowerCase("es")
- .replace(/\\(ejercicio [0-9]+\\)\\.?/gi,"").replace(/\\s+/g," ").trim()+"|"+
+ .replace(/\(ejercicio \d+\)\.?/gi,"").replace(/\s+/g," ").trim()+"|"+
  (item.visual?JSON.stringify(item.visual):"");
 
 export function mathM2NewPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
