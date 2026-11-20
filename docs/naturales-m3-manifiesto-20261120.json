@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "naturales-M3-corte-integral-20261120",
+  "module": "naturales-M3",
+  "area_cut": "naturales-CORTE",
+  "state": "EN_CURSO",
+  "base_sha": "9491afa0c938eb69a02dfd583448b82f556b3843",
+  "dependencies": [
+    "naturales-M1",
+    "naturales-M2"
+  ],
+  "scope": {
+    "area": "naturales",
+    "topics": {
+      "Biología": 9,
+      "Química": 5,
+      "Física": 5
+    },
+    "subtopics": 19,
+    "modes": 3,
+    "combinations": 57,
+    "cells": 171,
+    "rounds_per_game": 10
+  },
+  "per_cell": {
+    "before": {
+      "principiante": 20,
+      "intermedio": 35,
+      "avanzado": 45
+    },
+    "added": {
+      "principiante": 10,
+      "intermedio": 15,
+      "avanzado": 25
+    },
+    "after": {
+      "principiante": 30,
+      "intermedio": 50,
+      "avanzado": 70
+    }
+  },
+  "totals": {
+    "before": 5700,
+    "new": 2850,
+    "after": 8550,
+    "by_level_before": {
+      "principiante": 1140,
+      "intermedio": 1995,
+      "avanzado": 2565
+    },
+    "by_level_new": {
+      "principiante": 570,
+      "intermedio": 855,
+      "avanzado": 1425
+    },
+    "by_level_after": {
+      "principiante": 1710,
+      "intermedio": 2850,
+      "avanzado": 3990
+    }
+  },
+  "source": [
+    "GUIA-PRE-U-UNAH-2026.pdf páginas impresas 7–9",
+    "catálogo complementario Ecología, Materia, Reacciones, Tabla periódica"
+  ],
+  "paths": {
+    "new": "src/lib/science-m3.ts",
+    "cumulative": "src/lib/science-m3.ts",
+    "integrated": "src/routes/naturales.tsx",
+    "coverage": "src/lib/coverage.ts",
+    "inventory": "scripts/inventory-items.mjs",
+    "audit": "scripts/audit-science-m3.mjs",
+    "tests": "src/test/science-m3-integration.test.ts",
+    "artifact": "naturales-m3-corte"
+  },
+  "quality": {
+    "technical": "PENDIENTE_CI",
+    "oracles": "PENDIENTE_CI",
+    "human": "PENDIENTE_AUTORIZADA",
+    "semantic_independence": "NO_CERTIFICADA",
+    "psychometrics": "NO_CERTIFICADA",
+    "family_note": "Aproximadamente 190 anclajes conceptuales × modalidades y contextos. El total 8550 registra variantes técnicas, no independencia conceptual."
+  },
+  "publication": {
+    "ci": "PENDIENTE",
+    "render": "PENDIENTE",
+    "same_sha": false
+  },
+  "continuation": "sociales-M1 tras corte completo Naturales verificado"
+}
