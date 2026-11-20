@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "areas": [
     "espanol",
     "matematicas",
@@ -237,12 +237,24 @@
         "espanol-CORTE"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         10,
         15,
         20
-      ]
+      ],
+      "evidence": "docs/naturales-m1-manifiesto-20261120.json",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "scope": "19 subtemas (9 Biología, 5 Química, 5 Física), tres juegos y tres niveles: 171 celdas/2565 registros técnicos con 10/15/20",
+      "technical": {
+        "topics": 3,
+        "subtopics": 19,
+        "combinations": 57,
+        "cells": 171,
+        "planned": 2565,
+        "conceptual_independence": "NO_CERTIFICADA",
+        "scientific_review": "PENDIENTE_AUTORIZADA"
+      }
     },
     {
       "id": "naturales-M2",
