@@ -90,7 +90,7 @@ describe("M1: cierre de diez subtemas geométricos, estadísticos y sucesiones",
  });
  it("estadística: cambios de base, filtro, balance firmado y probabilidad",()=>{
   expect(remainingMathPedagogy("Promedios","avanzado",[6,9,12])?.result.n).toBe(11);
-  expect(remainingMathPedagogy("Probabilidad","avanzado",[3,5])?.result).toEqual({n:2,d:10});
+  expect(remainingMathPedagogy("Probabilidad","avanzado",[3,5])?.result).toEqual({n:1,d:5});
   expect(remainingMathPedagogy("Dispersión de datos","avanzado",[2,5,11])?.result.n).toBe(11);
   const b=remainingMathPedagogy("Tablas y gráficas","intermedio",[4,7,15])!;
   expect(b.kind).toBe("bar-balance");
