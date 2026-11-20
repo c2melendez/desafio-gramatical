@@ -26,7 +26,7 @@ for(const topic of SOCIAL_TOPICS)for(const subtopic of topic.subtopics){
    {...x,expected:"respuesta incorrecta"},
    {...x,oracle:{...x.oracle,scenario:"escenario ajeno"}},
    {...x,options:[x.expected,x.expected,"otro","distinto"]},
-   {...x,cognitiveStage:1},
+   {...x,cognitiveStage:level==="principiante"?3:1},
    {...x,steps:[{...x.steps[0],answerIndex:10},x.steps[1]]}
   ]){
    mutants++;if(verifyScienceItem(mutation,level,mode,facts).length)detected++;
@@ -52,4 +52,4 @@ const report={module:"sociales-M1",status:issues.length?"FAIL":"PASS",
  limits:{source:"Guía PRE-U UNAH 2026 página impresa 10 y catálogo complementario",anchors:100,
  semantic_independence:"NO_CERTIFICADA",human_review:"PENDIENTE_AUTORIZADA",browser_visual:"NO_EJECUTADA"},
  matrix:rows,issues};
-console.log(JSON.stringify(report,null,2));if(issues.length)process.exitCode=1;
+console.log(JSON.stringify(report,null,2));if(issues.length){console.error("SOCIALES M1 AUDIT FAIL",JSON.stringify({count:issues.length,sample:issues.slice(0,15),mutants,detected}));process.exitCode=1;}
