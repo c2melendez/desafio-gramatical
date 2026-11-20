@@ -1,11 +1,11 @@
 {
-  "version": 31,
-  "scope": "Cierre Naturales M3 y núcleo Ciencias Sociales M1: 20 subtemas, 180 celdas y 2700 registros técnicos; contratos históricos conservados.",
+  "version": 32,
+  "scope": "Sociales M2: ampliación acumulada 20/35/45 en 180 celdas, 6000 registros técnicos; M1 intacto y M0 sin degradación",
   "baseline_main": "9491afa0c938eb69a02dfd583448b82f556b3843",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "63d6f6a6c285d11e511ac22c7c01e19683a909f4",
-    "src/lib/coverage.ts": "04eb0cb237d41fa345da2b34fac1ac74e05de619",
+    "src/lib/coverage.ts": "a1347f064c459cbe1486022c6f9d80bad02424c6",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449",
@@ -18,6 +18,6 @@
     "src/lib/study-context.ts": "543bf8b6b23c8f5da9a5cc49d456c322319e0fa3"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Habilitar Ciencias Sociales M1 conservando 10 rondas, rutas y trazabilidad de historia; revisión docente pendiente.",
+  "change_note": "Actualiza cobertura M2 con banco aditivo; preserva rutas y reglas del historial, paridad visual y regresiones",
   "previous_baseline": "4953387adc09fda400827e35dd6f3e72b9692cc2"
 }
