@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "id": "math-M3-20261119-integral",
+  "module": "matematicas-M3",
+  "stage": "M3",
+  "state": "EN_CURSO",
+  "base_sha": "6f0dbbf194107c9da7ab19b31f588b7cf4ad7d71",
+  "scope": {
+    "area": "matematicas",
+    "topics": 4,
+    "subtopics": 22,
+    "game_types": 3,
+    "combinations": 66,
+    "cells": 198,
+    "rounds_per_game": 10
+  },
+  "per_cell": {
+    "before": {
+      "principiante": 20,
+      "intermedio": 35,
+      "avanzado": 45
+    },
+    "added": {
+      "principiante": 10,
+      "intermedio": 15,
+      "avanzado": 25
+    },
+    "after": {
+      "principiante": 30,
+      "intermedio": 50,
+      "avanzado": 70
+    }
+  },
+  "aggregates": {
+    "before": 6600,
+    "added": 3300,
+    "after": 9900,
+    "added_by_level": {
+      "principiante": 660,
+      "intermedio": 990,
+      "avanzado": 1650
+    },
+    "after_by_level": {
+      "principiante": 1980,
+      "intermedio": 3300,
+      "avanzado": 4620
+    }
+  },
+  "sources": [
+    "GUIA-PRE-U-UNAH-2026.pdf:p6",
+    "src/lib/phuma-catalog.ts",
+    "docs/matematicas-m2-cierre.md"
+  ],
+  "paths": {
+    "generator": "src/lib/math-m3.ts",
+    "audit": "scripts/audit-math-m3.mjs",
+    "test": "src/test/math-m3-integration.test.ts",
+    "inventory": "scripts/inventory-items.mjs",
+    "ui": "src/routes/matematicas.tsx",
+    "artifact": "matematicas-m3-integral"
+  },
+  "quality": {
+    "automated": "PENDIENTE_CI",
+    "human": "PENDIENTE_AUTORIZADA",
+    "semantic_independence": "NO_CERTIFICADA",
+    "psychometrics": "NO_CERTIFICADA",
+    "status_of_new_models": "editorial-draft"
+  },
+  "publication": {
+    "ci": "PENDIENTE",
+    "render": "PENDIENTE",
+    "same_sha": false
+  },
+  "notes": "3300 IDs técnicos nuevos de familias parametrizadas. No equivalen automáticamente a 3300 preguntas cognitivamente independientes. El cierre de área requiere verificación técnica cumulativa, CI, Render y prueba funcional pública."
+}
