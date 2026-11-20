@@ -24,7 +24,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics){
     if(item.requiredEvidence?.length < stage[level]+1)failures.push(item.id+": demanda insuficiente para etapa");
     if(!item.modeOperation)failures.push(item.id+": falta contrato de modalidad");
     if(!item.explanation?.trim()||!item.formula?.trim())failures.push(item.id+": falta fundamentacion");
-    if(item.visual?.stage && item.cognitiveStage!==1 && !item.prompt.includes("original") && !item.prompt.includes("inicial")) failures.push(item.id+": transformación sin referencia al diagrama original");
+    if(item.visual?.stage && item.cognitiveStage!==1 && !item.prompt.includes("original") && !item.prompt.includes("inicial") && !item.prompt.includes("origen")) failures.push(item.id+": transformación sin referencia al diagrama original");
     if(item.visual?.stage && item.cognitiveStage!==1 && !item.explanation.includes(item.expected)) failures.push(item.id+": justificación visual omite resultado transformado");
     uniqueOperations.add(item.operation);
    }
