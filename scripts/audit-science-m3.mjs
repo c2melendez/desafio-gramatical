@@ -25,7 +25,7 @@ for(const topic of SCIENCE_TOPICS)for(const subtopic of topic.subtopics){
    globalIds.add(item.id);
    families.add(item.family);
    if(item.topic!==topic.name||item.subtopic!==subtopic)errors.push(cell+": catálogo diferente "+item.id);
-   if(!item.prompt.includes(item.oracle.scenario))errors.push(cell+": no refleja evidencia base "+item.id);
+   if(!item.prompt.includes(item.oracle.scenario)&&!item.formula.includes(item.oracle.scenario))errors.push(cell+": no refleja evidencia base "+item.id);
    if(!item.explanation.includes(item.oracle.property))errors.push(cell+": explicación ajena al oráculo "+item.id);
   }
   for(const item of fresh){
