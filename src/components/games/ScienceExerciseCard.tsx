@@ -3,8 +3,8 @@ import type {ScienceItem} from "@/lib/science-m1";
 import {LearningFeedback} from "./LearningFeedback";
 
 /** Paridad de mecánicas y una sola actualización de marcador por diez rondas. */
-export function ScienceExerciseCard({item,onResult,onNext,isLast}:{
- item:ScienceItem;onResult:(ok:boolean,given:string)=>void;onNext:()=>void;isLast:boolean;
+export function ScienceExerciseCard({item,onResult,onNext,isLast,areaLabel="Ciencias Naturales"}:{
+ item:ScienceItem;areaLabel?:string;onResult:(ok:boolean,given:string)=>void;onNext:()=>void;isLast:boolean;
 }){
  const [choices,setChoices]=useState<number[]>([]);
  const expected=item.mode==="clasificar"?item.assertions.map(x=>x.truth?"Verdadero":"Falso").join(" · "):
@@ -27,7 +27,7 @@ export function ScienceExerciseCard({item,onResult,onNext,isLast}:{
    item.mode==="construir"?next.map((v,i)=>item.steps[i].choices[v]).join(" → "):item.options[n];
   onResult(ok,selected);
  }
- return <section className="card-ink bg-card p-5 space-y-4" aria-label="Ejercicio de Ciencias Naturales">
+ return <section className="card-ink bg-card p-5 space-y-4" aria-label={`Ejercicio de ${areaLabel}`}>
   <p className="text-xs font-bold uppercase tracking-wide text-primary">{item.subtopic} · {item.mode==="quiz"?"Selección":item.mode==="clasificar"?"Clasificación":"Construcción"}</p>
   <h2 className="text-xl font-black leading-relaxed">{item.prompt}</h2>
   {item.mode==="clasificar"&&!finished&&<div className="space-y-3">
