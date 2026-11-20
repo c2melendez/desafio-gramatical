@@ -17,9 +17,9 @@ export function remainingMathPedagogy(subtopic:string,level:Level,inputs:number[
   const [L,W,flag]=inputs,plusL=stage===1?0:stage===2?2:3,plusW=stage===3?2:0;
   const a=L+plusL,b=W+plusW;
   values=[a,b,flag];result=q(flag?a*b:2*(a+b));intermediate=q(a+b);
-  prompt=stage===1?"Usa el largo y el ancho del rectángulo dibujado para determinar la medida solicitada.":
-   stage===2?"El dibujo representa el rectángulo inicial. Si aumenta su largo 2 cm y el ancho permanece igual, ¿cuánto vale la misma medida (área o perímetro) del nuevo rectángulo?":
-   "El dibujo representa el rectángulo inicial. Si se aumenta el largo 3 cm y el ancho 2 cm, ¿cuánto vale la medida solicitada (área o perímetro) del rectángulo resultante?";
+  prompt=stage===1?`Usa el largo y el ancho del rectángulo dibujado para calcular su ${flag?"área (cm²)":"perímetro (cm)"}.`:
+   stage===2?`El dibujo representa el rectángulo inicial. Si aumenta su largo 2 cm y el ancho permanece igual, ¿cuánto vale el ${flag?"área (cm²)":"perímetro (cm)"} del nuevo rectángulo?`:
+   `El dibujo representa el rectángulo inicial. Si se aumenta el largo 3 cm y el ancho 2 cm, ¿cuánto vale el ${flag?"área (cm²)":"perímetro (cm)"} del rectángulo resultante?`;
   explanation=`Largo nuevo ${a} cm y ancho nuevo ${b} cm. La fórmula correcta ${flag?"área = largo × ancho":"perímetro = 2(largo + ancho)"} da ${fmt(result)} ${flag?"cm²":"cm"}. No debe confundirse contorno con superficie.`;
   formula=flag?`${a}×${b}=${fmt(result)}`:`2(${a}+${b})=${fmt(result)}`;
   operation=["aplicar-formula-rectangulo","transformar-una-dimension","transformar-dos-dimensiones-y-evaluar"][stage-1];label="Suma las dos dimensiones del rectángulo resultante";
@@ -56,9 +56,9 @@ export function remainingMathPedagogy(subtopic:string,level:Level,inputs:number[
  }else if(subtopic==="Sólidos: área y volumen"){
   const [L,W,H,flag]=inputs,a=L+(stage===3?1:0),b=W+(stage===3?2:0),c=H+(stage===2?1:0);
   values=[a,b,c,flag];result=q(flag?a*b*c:2*(a*b+a*c+b*c));intermediate=q(a*b);
-  prompt=stage===1?"Usa las tres dimensiones rotuladas del prisma para calcular la medida solicitada.":
-   stage===2?"El prisma del dibujo representa la caja original. Si la ALTURA aumenta 1 cm, ¿cuál es la medida solicitada (volumen o área superficial total) de la nueva caja?":
-   "La caja dibujada es el objeto inicial. Su largo aumenta 1 cm y su ancho 2 cm, sin alterar su altura. Calcula la nueva medida solicitada, considerando todas las caras si se pide área superficial.";
+  prompt=stage===1?`Usa las tres dimensiones rotuladas del prisma para calcular su ${flag?"volumen (cm³)":"área superficial total (cm²)"}.`:
+   stage===2?`El prisma del dibujo representa la caja original. Si la ALTURA aumenta 1 cm, ¿cuál es el ${flag?"volumen (cm³)":"área superficial total (cm²)"} de la nueva caja?`:
+   `La caja dibujada es el objeto inicial. Su largo aumenta 1 cm y su ancho 2 cm, sin alterar su altura. Calcula el nuevo ${flag?"volumen (cm³)":"área superficial total (cm²)"}; si se trata del área, incluye todas las caras.`;
   explanation=`Las nuevas dimensiones son ${a} cm × ${b} cm × ${c} cm. ${flag?"El volumen se obtiene multiplicando las tres dimensiones":"El área superficial exige sumar dos veces las tres parejas de caras"}: resultado ${fmt(result)} ${flag?"cm³":"cm²"}.`;
   formula=flag?`${a}×${b}×${c}=${fmt(result)}`:`2(${a}×${b}+${a}×${c}+${b}×${c})=${fmt(result)}`;
   operation=["calcular-medida-prisma","transformar-altura","transformar-largo-ancho-y-todas-las-caras"][stage-1];label="Calcula el área de la base transformada";
