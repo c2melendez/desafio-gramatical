@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "areas": [
     "espanol",
     "matematicas",
@@ -177,12 +177,22 @@
         "matematicas-M2"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         30,
         50,
         70
-      ]
+      ],
+      "scope": "22 subtemas × 3 juegos × 3 niveles, 9900 registros técnicos acumulados; revisión docente pendiente",
+      "evidence": "docs/matematicas-m3-manifiesto-20261119.json",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "cells": 198,
+        "prior": 6600,
+        "added": 3300,
+        "cumulative": 9900,
+        "independence": "NO_CERTIFICADA"
+      }
     },
     {
       "id": "matematicas-CORTE",
@@ -192,7 +202,8 @@
         "matematicas-M3"
       ],
       "optional": [],
-      "state": "PENDIENTE"
+      "state": "PENDIENTE",
+      "evidence": "docs/matematicas-m3-manifiesto-20261119.json"
     },
     {
       "id": "naturales-M1",

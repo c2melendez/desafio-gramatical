@@ -2,7 +2,7 @@ import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {mathTopic,MATH_SUBTOPICS,MATH_MODES,type MathModel} from "@/lib/math-m1";
-import {mathM2Pool} from "@/lib/math-m2";
+import {mathM3Pool} from "@/lib/math-m3";
 import {gameNames} from "@/lib/phuma-catalog";
 import {studyReturn} from "@/lib/study-context";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
@@ -16,7 +16,7 @@ export const Route=createFileRoute("/matematicas")({
   nivel:LEVELS.includes(s.nivel as Level)?s.nivel as Level:"principiante",
  }),
  head:()=>({meta:[{title:"Matemáticas — Academia PHUMA Play"},
-  {name:"description",content:"Práctica matemática M2 ampliada con 10 rondas y explicaciones."}]}),
+  {name:"description",content:"Práctica matemática M3 completa con 10 rondas y explicaciones."}]}),
  component:MathPlay,
 });
 function MathPlay(){
@@ -31,13 +31,13 @@ function MathPlay(){
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
  useEffect(()=>{
-  const bank=mathM2Pool(topic,subtema,nivel,modo),key=rotationKey("matematicas",topic,subtema,modo,nivel);
+  const bank=mathM3Pool(topic,subtema,nivel,modo),key=rotationKey("matematicas",topic,subtema,modo,nivel);
   const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
   setItems(chosen);setIndex(0);setCorrect(0);setTotal(0);setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[topic,subtema,nivel,modo,run]);
  const report=(ok:boolean,given:string)=>{
   if(!items||total>index)return;
-  const item=items[index],bank=mathM2Pool(topic,subtema,nivel,modo),key=rotationKey("matematicas",topic,subtema,modo,nivel);
+  const item=items[index],bank=mathM3Pool(topic,subtema,nivel,modo),key=rotationKey("matematicas",topic,subtema,modo,nivel);
   writeRotation(key,recordRotation(readRotation(key,bank.map(x=>x.id)),item.id,ok));
   setTotal(t=>t+1);
   if(ok){setCorrect(t=>t+1);setScore(t=>t+pointsFor(streak));setStreak(t=>t+1);setBest(b=>Math.max(b,streak+1));}

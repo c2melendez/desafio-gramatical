@@ -1,0 +1,40 @@
+import type {Level,Mode} from "./grammar";
+import {MATH_LEVELS,MATH_MODES,MATH_SUBTOPICS,MATH_LEVEL_COUNT,MATH_TOPICS,mathModel,type MathModel} from "./math-m1";
+import {mathM2Pool,MATH_M2_LEVEL_COUNT} from "./math-m2";
+
+/** Capa M3: solo agrega IDs nuevos al banco M2; no migra ni modifica el progreso anterior. */
+export const MATH_M3_LEVEL_COUNT:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
+export const MATH_M3_NEW_PER_LEVEL:Record<Level,number>={principiante:10,intermedio:15,avanzado:25};
+const slug=(s:string)=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+export const mathStimulusSignature=(x:MathModel)=>x.prompt.normalize("NFKC").toLocaleLowerCase("es")
+ .replace(/\(ejercicio \d+\)\.?/gi,"").replace(/\s+/g," ").trim()+"|"+(x.visual?JSON.stringify(x.visual):"");
+
+export function mathM3NewPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ if(!MATH_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))||!MATH_LEVELS.includes(level)||!MATH_MODES.includes(mode))
+  throw Error("Celda Matemáticas M3 fuera de catálogo");
+ const prior=mathM2Pool(topic,subtopic,level,mode);
+ if(prior.length!==MATH_M2_LEVEL_COUNT[level])throw Error("M2 incompleto; M3 no puede reutilizar IDs");
+ const seen=new Set(prior.map(mathStimulusSignature));
+ const fresh:MathModel[]=[];
+ const ti=MATH_SUBTOPICS.indexOf(subtopic),li=MATH_LEVELS.indexOf(level),mi=MATH_MODES.indexOf(mode);
+ let seed=600001+ti*50011+li*19001+mi*30011;
+ for(let i=0;i<MATH_M3_NEW_PER_LEVEL[level];i++){
+  let chosen:MathModel|undefined;
+  for(let tries=0;tries<2500;tries++){
+   const candidate=mathModel(topic,subtopic,level,mode,i%MATH_LEVEL_COUNT[level],seed);
+   seed+=131;
+   const key=mathStimulusSignature(candidate);
+   if(seen.has(key))continue;
+   seen.add(key);chosen=candidate;break;
+  }
+  if(!chosen)throw Error("Variedad insuficiente M3: "+[topic,subtopic,mode,level].join("/"));
+  fresh.push({...chosen,id:"math-m3-"+[topic,subtopic,mode,level,i].map(x=>slug(String(x))).join("-"),
+   family:"math-m3-"+slug(subtopic)+"-"+(chosen.operation??"original"),reviewStatus:"editorial-draft"});
+ }
+ return fresh;
+}
+export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return [...mathM2Pool(topic,subtopic,level,mode),...mathM3NewPool(topic,subtopic,level,mode)];
+}
+export const MATH_M3_NEW_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(10+15+25);
+export const MATH_M3_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(30+50+70);

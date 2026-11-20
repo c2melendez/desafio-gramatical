@@ -133,6 +133,16 @@ jobs:
           path: matematicas-m2-integral.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar Matemáticas M3 completo — 9900 registros, 198 celdas y 3300 nuevos
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-math-m3.mjs > matematicas-m3-integral.json
+      - name: Conservar auditoría Matemáticas M3 acumulada
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: matematicas-m3-integral
+          path: matematicas-m3-integral.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema

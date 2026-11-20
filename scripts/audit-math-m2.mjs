@@ -38,7 +38,7 @@ function independentOracle(kind,values){
  }
 }
 
-const normalize=s=>s.normalize("NFKC").toLocaleLowerCase("es").replace(/\\(ejercicio [0-9]+\\)\\.?/gi,"").replace(/\\s+/g," ").trim();
+const normalize=s=>s.normalize("NFKC").toLocaleLowerCase("es").replace(/\(ejercicio \d+\)\.?/gi,"").replace(/\s+/g," ").trim();
 const issues=[],rows=[],globalIds=new Set(),stage={principiante:1,intermedio:2,avanzado:3};
 let coreCount=0,newCount=0;
 for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)

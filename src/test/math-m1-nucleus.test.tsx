@@ -17,7 +17,7 @@ describe("Núcleo M1 Matemáticas: 22 subtemas, 3 juegos, 3 niveles",()=>{
   for(const mode of MATH_MODES)for(const level of MATH_LEVELS){
    const bank=mathPool(topic.name,subtopic,level,mode);
    expect(bank.length).toBe(({principiante:10,intermedio:15,avanzado:20})[level]);
-   expect(countContent("matematicas",topic.name,subtopic,mode,level)).toBe(({principiante:20,intermedio:35,avanzado:45})[level]);
+   expect(countContent("matematicas",topic.name,subtopic,mode,level)).toBe(({principiante:30,intermedio:50,avanzado:70})[level]);
    expect(availableModule("matematicas",topic.name,subtopic)).toBe(true);
    for(const item of bank){expect(ids.has(item.id)).toBe(false);ids.add(item.id);expect(item.reviewStatus).toBe("editorial-draft");}
    total+=bank.length;
