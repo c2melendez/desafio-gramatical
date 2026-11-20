@@ -5,7 +5,7 @@ Plataforma independiente para practicar mediante juegos las competencias que se 
 - **Aplicación:** https://desafio-gramatical.onrender.com/
 - **Repositorio:** https://github.com/c2melendez/desafio-gramatical
 - **Catálogo:** 5 áreas, 19 temas, 90 subtemas
-- **Juegos disponibles:** Categorías gramaticales (3 juegos), Comprensión lectora (7 subtemas × 3 juegos), Redacción (5 subtemas × 3 juegos), todos con 3 niveles. El resto del catálogo está planificado y se marca «En desarrollo».
+- **Juegos disponibles:** Español (13 subtemas), Matemáticas (22 subtemas) y Ciencias Naturales (19 subtemas), con 3 modalidades y 3 niveles por subtema. Ciencias Sociales y Habilidades Blandas siguen planificadas.
 - **Historial:** se conservan registros locales de partidas antiguas; puntos de juego distintos de cualquier puntaje PHUMA oficial.
 
 ## Política de corridas ampliadas

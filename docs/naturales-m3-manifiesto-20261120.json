@@ -2,8 +2,8 @@
   "version": 1,
   "id": "naturales-M3-corte-integral-20261120",
   "module": "naturales-M3",
-  "area_cut": "naturales-CORTE",
-  "state": "EN_CURSO",
+  "area_cut": "COMPLETADA_TECNICA",
+  "state": "COMPLETADA",
   "base_sha": "9491afa0c938eb69a02dfd583448b82f556b3843",
   "dependencies": [
     "naturales-M1",
@@ -74,7 +74,7 @@
     "artifact": "naturales-m3-corte"
   },
   "quality": {
-    "technical": "PENDIENTE_CI",
+    "technical": "PASS_CI_MAIN_8550_171_CELLS_REGRESSION_AND_MUTATIONS",
     "oracles": "PENDIENTE_CI",
     "human": "PENDIENTE_AUTORIZADA",
     "semantic_independence": "NO_CERTIFICADA",
@@ -82,9 +82,23 @@
     "family_note": "Aproximadamente 190 anclajes conceptuales × modalidades y contextos. El total 8550 registra variantes técnicas, no independencia conceptual."
   },
   "publication": {
-    "ci": "PENDIENTE",
-    "render": "PENDIENTE",
-    "same_sha": false
+    "pr": 39,
+    "merged": true,
+    "merge_sha": "e9881e48f2378929ed002da4256fcd8874642345",
+    "ci": {
+      "run": 44703305238,
+      "sha": "e9881e48f2378929ed002da4256fcd8874642345",
+      "conclusion": "success"
+    },
+    "render": {
+      "deploy_id": "dep-dc00b0o473hc73826v4g",
+      "sha": "e9881e48f2378929ed002da4256fcd8874642345",
+      "status": "live",
+      "url": "https://desafio-gramatical.onrender.com/"
+    },
+    "same_sha": true,
+    "http": "PASS_PUBLISHED_SCIENCE_ROUTES_HTML",
+    "documentation_sha": "PENDIENTE_VERIFICACION_PROPIA"
   },
-  "continuation": "sociales-M1 tras corte completo Naturales verificado"
+  "continuation": "sociales-M1"
 }

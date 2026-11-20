@@ -1,6 +1,6 @@
 # Ciencias Naturales M3 — cierre técnico y corte de área
 
-**Estado de trabajo: EN_CURSO**, pendiente de CI en main, Render Live con idéntico SHA y comprobación pública. La revisión académica y psicométrica permanece PENDIENTE_AUTORIZADA.
+**Estado: COMPLETADA TÉCNICAMENTE**, CI en main SUCCESS, Render LIVE del mismo SHA y prueba HTTP publicada PASS. La revisión académica y psicométrica permanece PENDIENTE_AUTORIZADA.
 
 ## Línea base, perímetro y cuotas acumuladas
 
@@ -34,3 +34,14 @@ Los 2.850 registros de M3 son variantes técnicas apoyadas en aproximadamente **
 **Cierre técnico**: cobertura de 171 celdas completa, auditoría acumulada PASS, pruebas funcionales y negativas PASS, matriz de mutaciones documentada, suite de regresión sin excepciones, PR fusionado en main, CI SUCCESS, Render LIVE del mismo SHA y prueba HTTP de rutas Naturales. Se documentarán por separado las verificaciones visuales manuales no ejecutadas. Un commit documental posterior deberá pasar sus propios controles antes de declararse definitivo.
 
 Al completar el corte técnico `naturales-CORTE`, el siguiente módulo del orquestador es `sociales-M1` sujeto a la reconciliación de dependencias y estado vigente.
+
+## Corte técnico: evidencia confirmada
+
+- PR #39 fusionado: https://github.com/c2melendez/desafio-gramatical/pull/39, SHA `e9881e48f2378929ed002da4256fcd8874642345`.
+- GitHub Actions: https://github.com/c2melendez/desafio-gramatical/actions/runs/44703305238 — **COMPLETED/SUCCESS** para `e9881e48f2378929ed002da4256fcd8874642345`, incluido build, todas las pruebas funcionales, mutaciones negativas, inventario completo, M0/Matemáticas/Español, auditorías M1 y M2 de Naturales, auditoría propia M3 acumulativa y puerta de cierre M0.
+- Render: despliegue `dep-dc00b0o473hc73826v4g`, **LIVE** en https://desafio-gramatical.onrender.com/ para el mismo SHA `e9881e48f2378929ed002da4256fcd8874642345`.
+- Prueba HTTP publicada de rutas representativas Naturales: **PASS** (HTML de la aplicación; no equivale a inspección visual manual de escritorio/móvil).
+- La auditoría M3 ejecutó la matriz de **171 celdas y 8.550 registros técnicos**, y detectó inicialmente 380 falsas alarmas en preguntas básicas M1 por no contemplar evidencia presente en `formula`. Se corrigió únicamente el verificador y se reejecutó con éxito, sin alterar ítems históricos.
+- IDs anteriores M1/M2 preservados, más 2.850 nuevos con prefijo `science-m3-`. Quedan 0 déficits **técnicos por nivel**. **No se acredita independencia semántica ni revisión académica/psicométrica**, que permanecen pendientes autorizadas.
+- Estado del orquestador: `naturales-M3` y `naturales-CORTE` cerrados técnicamente; siguiente área `sociales`, módulo `sociales-M1`, sujeto a reconciliación de datos actuales.
+- Este commit documental nuevo tiene SHA distinto y requiere repetir CI y Render sobre ese SHA para su aceptación final.
