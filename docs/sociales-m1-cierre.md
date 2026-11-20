@@ -1,5 +1,5 @@
 # Ciencias Sociales M1 — núcleo de práctica y puerta técnica
-**Estado: CANDIDATO; pendiente de GitHub Actions SUCCESS y Render LIVE del mismo SHA.**
+**Estado: COMPLETADA TÉCNICAMENTE.** CI SUCCESS en main y Render LIVE del mismo SHA de integración. Revisión académica PENDIENTE_AUTORIZADA.
 Revisión académica, histórica, geográfica y psicométrica: **PENDIENTE AUTORIZADA**.
 
 ## Matriz de entrega
@@ -22,3 +22,15 @@ Revisión académica, histórica, geográfica y psicométrica: **PENDIENTE AUTOR
 - Cierre técnico solamente al comprobar PR fusionado, suite completa SUCCESS y Render LIVE para **el mismo SHA**; toda documentación posterior necesita verificación de su propio SHA.
 - Hallazgos críticos se corrigen y revalidan; ausencia de evidencia deja el módulo EN_PRODUCCION.
 - Siguiente módulo tras cierre técnico: `sociales-M2`, acumulado 20/35/45 por nivel y juego.
+
+## Publicación técnica verificada — 20 de noviembre de 2026
+
+- PR #40: https://github.com/c2melendez/desafio-gramatical/pull/40, **fusionado en main**.
+- SHA integrado `6a73210cb727c1bbccf8bd8769a3af2d443a4fa3`.
+- CI de PR **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44760810716.
+- CI en main **SUCCESS**, SHA idéntico al fusionado: https://github.com/c2melendez/desafio-gramatical/actions/runs/44761376495.
+- Render **LIVE**, despliegue `dep-dc067u59el5s73et0nm0`, SHA `6a73210cb727c1bbccf8bd8769a3af2d443a4fa3` y URL https://desafio-gramatical.onrender.com/.
+- Build, 345 pruebas automatizadas, inventario y grafo, bloqueo M0, regresiones anteriores, 180 celdas de Sociales y 900 mutaciones negativas aprobaron. El smoke HTTP publicado comprueba respuesta HTML de rutas representativas; no certifica revisión visual manual.
+- 2700 registros técnicos M1 distribuidos como 600/900/1200 por nivel; 100 anclajes conceptuales, **sin independencia semántica demostrada**.
+- La revisión docente y académica sigue expresamente pendiente, permitiendo iniciar `sociales-M2`.
+- Este commit de documentación tendrá un SHA nuevo. Para su cierre final verificar de nuevo CI/Render de ese propio SHA.

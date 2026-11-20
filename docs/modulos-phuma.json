@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "areas": [
     "espanol",
     "matematicas",
@@ -393,7 +393,7 @@
         "espanol-CORTE"
       ],
       "optional": [],
-      "state": "EN_PRODUCCION",
+      "state": "COMPLETADA",
       "targets": [
         10,
         15,
@@ -413,8 +413,27 @@
           "avanzado": 20
         },
         "semantic_independence": "NO_CERTIFICADA",
-        "ci": "PENDIENTE_PR",
-        "render": "PENDIENTE_MERGE"
+        "ci": "PASS_PR_AND_MAIN",
+        "render": "LIVE",
+        "mutants_tested": 900,
+        "mutants_detected": 900
+      },
+      "release": {
+        "merged_pr": 40,
+        "verified_sha": "6a73210cb727c1bbccf8bd8769a3af2d443a4fa3",
+        "ci_main": {
+          "run_id": 44761376495,
+          "sha": "6a73210cb727c1bbccf8bd8769a3af2d443a4fa3",
+          "conclusion": "success"
+        },
+        "render": {
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "deploy_id": "dep-dc067u59el5s73et0nm0",
+          "sha": "6a73210cb727c1bbccf8bd8769a3af2d443a4fa3",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com/"
+        },
+        "documentation_commit": "PENDIENTE_VERIFICACION_SHA_PROPIO"
       }
     },
     {
