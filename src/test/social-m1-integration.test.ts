@@ -13,7 +13,7 @@ describe("Ciencias Sociales M1: núcleo completo con auditoría de 180 celdas",(
    for(const mode of SOCIAL_MODES)for(const level of SOCIAL_LEVELS){
     const bank=socialPool(topic.name,subtopic,level,mode);
     expect(bank).toHaveLength(({principiante:10,intermedio:15,avanzado:20})[level]);
-    expect(countContent("sociales",topic.name,subtopic,mode,level)).toBe(({principiante:20,intermedio:35,avanzado:45})[level]);
+    expect(countContent("sociales",topic.name,subtopic,mode,level)).toBe(({principiante:30,intermedio:50,avanzado:70})[level]);
     expect(availableModule("sociales",topic.name,subtopic)).toBe(true);
     expect(verifyScienceCell(bank,level,mode,socialFacts(subtopic))).toEqual([]);
     for(const item of bank){expect(ids.has(item.id)).toBe(false);ids.add(item.id);expect(item.reviewStatus).toBe("editorial-draft");}
