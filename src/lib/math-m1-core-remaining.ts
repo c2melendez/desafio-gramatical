@@ -43,7 +43,7 @@ export function remainingMathPedagogy(subtopic:string,level:Level,inputs:number[
   if(stage===1){values=[a,b];result=q(h);intermediate=q(a*a+b*b);}
   if(stage===2){values=[2*a,2*b];result=q(2*h);intermediate=q(4*(a*a+b*b));}
   if(stage===3){values=[2*a,2*b];result=q(2*(a+b+h));intermediate=q(2*h);kind="Pitágoras-perímetro";}
-  prompt=stage===1?"Observa los dos catetos del triángulo rectángulo. Calcula su hipotenusa.":
+  prompt=stage===1?`El cateto horizontal mide ${a} cm. Observa el triángulo rectángulo para encontrar el otro cateto y calcula su hipotenusa.`:
    stage===2?"Los dos catetos del dibujo se duplican para construir un triángulo semejante. ¿Cuánto mide su nueva hipotenusa?":
    "Los dos catetos del dibujo se duplican para construir otro triángulo rectángulo. Primero encuentra la nueva hipotenusa con Pitágoras y después calcula el PERÍMETRO del triángulo nuevo.";
   explanation=stage===3?`El triángulo de origen tiene hipotenusa √(${a}²+${b}²)=${h}. Al duplicar los catetos, los nuevos lados son ${2*a}, ${2*b}, ${2*h}; su perímetro es ${fmt(result)} cm. Se requiere Pitágoras y luego sumar tres lados.`:
