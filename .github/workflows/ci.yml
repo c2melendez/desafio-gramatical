@@ -143,6 +143,16 @@ jobs:
           path: matematicas-m3-integral.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar Ciencias Naturales M1 — 2565 registros y 171 celdas
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-science-m1.mjs > naturales-m1-integral.json
+      - name: Conservar matriz de auditoría Naturales M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: naturales-m1-integral
+          path: naturales-m1-integral.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema
