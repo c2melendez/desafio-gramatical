@@ -105,6 +105,16 @@ jobs:
           retention-days: 30
       - name: Auditar Matemáticas M1 — 2970 respuestas con oráculos independientes
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-math-m1.mjs > matematicas-m1-audit.json
+      - name: Auditar progresión cognitiva de 1620 registros rehabilitados de Matemáticas M1
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-math-m1-cognitive.mjs > matematicas-m1-cognitiva.json
+      - name: Conservar matriz de operaciones cognitivas M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: matematicas-m1-progresion-cognitiva
+          path: matematicas-m1-cognitiva.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Archivar evidencia integral Matemáticas M1
         if: always()
         uses: actions/upload-artifact@v4
