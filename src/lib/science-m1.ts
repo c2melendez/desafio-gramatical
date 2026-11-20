@@ -269,16 +269,18 @@ export function scienceModel(topic:string,subtopic:string,level:Level,mode:Mode,
  const facts=scienceFacts(subtopic),fact=facts[index%facts.length],k=index%facts.length,variant=Math.floor(index/facts.length);
  const distractors=[1,2,3].map(j=>facts[(k+j+variant)%facts.length]);
  const levelN=SCIENCE_LEVELS.indexOf(level)+1;
+ const context=variant===0?fact.scenario:
+  `Se contrastan dos observaciones: «${fact.scenario}» frente a «${distractors[0].scenario}». Identifica la explicación de la primera sin atribuirle la función de la segunda.`;
  const source:ScienceItem["source"]=["Ecología","Tabla periódica","Materia","Reacciones"].includes(subtopic)?
   "catalogo-practica-complementaria":topic==="Biología"?
   (["Cuerpo humano","Método científico"].includes(subtopic)?"GUIA-PRE-U-UNAH-2026:p8":"GUIA-PRE-U-UNAH-2026:p7"):
   "GUIA-PRE-U-UNAH-2026:p9";
  const intro=level==="principiante"?`Identifica la propiedad científica del concepto «${fact.concept}».`:
-  level==="intermedio"?`Situación de estudio: ${fact.scenario}. Para analizarla se considera «${fact.concept}». ¿Cuál descripción es apropiada?`:
-  `Análisis y descarte de hipótesis: ${fact.scenario}. Se evalúa el papel de «${fact.concept}» frente a otras explicaciones. ¿Qué conclusión es coherente con el conocimiento científico?`;
+  level==="intermedio"?`Situación de estudio: ${context}. Para analizarla se considera «${fact.concept}». ¿Cuál descripción es apropiada?`:
+  `Análisis y descarte de hipótesis: ${context}. Se evalúa el papel de «${fact.concept}» frente a otras explicaciones. ¿Qué conclusión es coherente con el conocimiento científico?`;
  const prompt=mode==="clasificar"?`${intro} Evalúa tres afirmaciones sin confundir las funciones de conceptos diferentes. Caso ${variant+1}.`:
   mode==="quiz"?`${intro} Selecciona una respuesta. Caso ${variant+1}.`:
-  `Caso para reconstruir la relación entre observación y explicación: ${fact.scenario}. Identifica el concepto y después la propiedad que corresponde. Caso ${variant+1}.`;
+  `Caso para reconstruir la relación entre observación y explicación: ${context}. Identifica el concepto y después la propiedad que corresponde. Caso ${variant+1}.`;
  const options=choose([fact.property,...distractors.map(x=>x.property)],index+levelN);
  const a=[
   {text:`«${fact.concept}»: ${fact.property}.`,truth:true},
