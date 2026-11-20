@@ -318,13 +318,13 @@ jobs:
       - name: Comprobar código
         run: |
           bunx eslint . --rule "prettier/prettier: off"
-      - name: Prueba HTTP publicada de Español y Matemáticas M3
+      - name: Prueba HTTP publicada de Español, Matemáticas M3 y Naturales M1
         if: github.ref == 'refs/heads/main'
         shell: bash
         run: |
           set -euo pipefail
           base="https://desafio-gramatical.onrender.com"
-          for route in "/" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante" "/jugar?modo=clasificar&nivel=intermedio&subtema=Morfosintaxis" "/lectura?subtema=Inferencias&modo=construir&nivel=avanzado" "/redaccion?subtema=Correcci%C3%B3n&modo=quiz&nivel=intermedio" "/jugar?modo=clasificar&nivel=avanzado&subtema=Hiperonimia" "/lectura?subtema=Lectura%20comparada&modo=quiz&nivel=avanzado" "/redaccion?subtema=Generalizaci%C3%B3n%20e%20integraci%C3%B3n&modo=construir&nivel=avanzado" "/matematicas?subtema=Operaciones&modo=clasificar&nivel=principiante" "/matematicas?subtema=Pit%C3%A1goras&modo=construir&nivel=intermedio" "/matematicas?subtema=Funciones&modo=quiz&nivel=avanzado" "/matematicas?subtema=Tablas%20y%20gr%C3%A1ficas&modo=quiz&nivel=avanzado" "/matematicas?subtema=S%C3%B3lidos%3A%20%C3%A1rea%20y%20volumen&modo=clasificar&nivel=avanzado"; do
+          for route in "/" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante" "/jugar?modo=clasificar&nivel=intermedio&subtema=Morfosintaxis" "/lectura?subtema=Inferencias&modo=construir&nivel=avanzado" "/redaccion?subtema=Correcci%C3%B3n&modo=quiz&nivel=intermedio" "/jugar?modo=clasificar&nivel=avanzado&subtema=Hiperonimia" "/lectura?subtema=Lectura%20comparada&modo=quiz&nivel=avanzado" "/redaccion?subtema=Generalizaci%C3%B3n%20e%20integraci%C3%B3n&modo=construir&nivel=avanzado" "/matematicas?subtema=Operaciones&modo=clasificar&nivel=principiante" "/matematicas?subtema=Pit%C3%A1goras&modo=construir&nivel=intermedio" "/matematicas?subtema=Funciones&modo=quiz&nivel=avanzado" "/matematicas?subtema=Tablas%20y%20gr%C3%A1ficas&modo=quiz&nivel=avanzado" "/matematicas?subtema=S%C3%B3lidos%3A%20%C3%A1rea%20y%20volumen&modo=clasificar&nivel=avanzado" "/naturales?subtema=C%C3%A9lula&modo=clasificar&nivel=principiante" "/naturales?subtema=Compuestos%20inorg%C3%A1nicos&modo=quiz&nivel=intermedio" "/naturales?subtema=Movimiento&modo=construir&nivel=avanzado"; do
             file="$(mktemp)"
             code=$(curl --fail --location --silent --show-error --retry 4 --retry-delay 7 --retry-all-errors --max-time 50 --output "$file" --write-out '%{http_code}' "$base$route")
             if ! grep -Eiq '<html|<!doctype html' "$file"; then
