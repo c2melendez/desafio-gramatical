@@ -2,10 +2,11 @@
 import {MATH_TOPICS,MATH_MODES,MATH_LEVELS,MATH_LEVEL_COUNT,mathPool} from "../src/lib/math-m1.ts";
 const rehabilitated=new Set([
  "Operaciones","Fracciones","Porcentajes","Proporciones","Potencias","MCD y MCM",
- "Ecuaciones","Sistemas de ecuaciones","Ecuaciones cuadráticas","Inecuaciones","Funciones","Patrones algebraicos"
+ "Ecuaciones","Sistemas de ecuaciones","Ecuaciones cuadráticas","Inecuaciones","Funciones","Patrones algebraicos",
+ "Áreas y perímetros","Ángulos","Pitágoras","Sólidos: área y volumen","Semejanza",
+ "Promedios","Probabilidad","Dispersión de datos","Tablas y gráficas","Sucesiones"
 ]);
 const stage={principiante:1,intermedio:2,avanzado:3};
-const modes={clasificar:"clasificacion",quiz:"seleccion",construir:"construccion"};
 const failures=[],rows=[],ids=new Set();
 for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics){
  if(!rehabilitated.has(subtopic))continue;
@@ -23,6 +24,8 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics){
     if(item.requiredEvidence?.length < stage[level]+1)failures.push(item.id+": demanda insuficiente para etapa");
     if(!item.modeOperation)failures.push(item.id+": falta contrato de modalidad");
     if(!item.explanation?.trim()||!item.formula?.trim())failures.push(item.id+": falta fundamentacion");
+    if(item.visual?.stage && item.cognitiveStage!==1 && !item.prompt.includes("original") && !item.prompt.includes("inicial")) failures.push(item.id+": transformación sin referencia al diagrama original");
+    if(item.visual?.stage && item.cognitiveStage!==1 && !item.explanation.includes(item.expected)) failures.push(item.id+": justificación visual omite resultado transformado");
     uniqueOperations.add(item.operation);
    }
    if(uniqueOperations.size!==1)failures.push(subtopic+"/"+mode+"/"+level+": operacion inconsistente");
@@ -38,7 +41,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics){
  }
 }
 const total=rows.reduce((s,r)=>s+r.registros,0);
-if(rows.length!==108||total!==1620||ids.size!==1620)failures.push("Cobertura esperada 108 celdas / 1620 registros: "+rows.length+"/"+total+"/"+ids.size);
+if(rows.length!==198||total!==2970||ids.size!==2970)failures.push("Cobertura esperada 198 celdas / 2970 registros: "+rows.length+"/"+total+"/"+ids.size);
 const report={module:"matematicas-M1",control:"regresion-progresion-cognitiva",
  status:failures.length?"FAIL":"PASS",subtopics:rehabilitated.size,cells:rows.length,records:total,
  identities:ids.size,remaining_original_subtopics:MATH_TOPICS.reduce((n,t)=>n+t.subtopics.filter(s=>!rehabilitated.has(s)).length,0),
