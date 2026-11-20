@@ -3,7 +3,7 @@
   "id": "naturales-M2-integral-20261120",
   "module": "naturales-M2",
   "phase": "M2",
-  "state": "EN_CURSO",
+  "state": "COMPLETADA",
   "base_sha": "4953387adc09fda400827e35dd6f3e72b9692cc2",
   "dependencies": [
     "naturales-M1"
@@ -82,7 +82,7 @@
     ]
   },
   "quality": {
-    "automated": "PENDIENTE_CI",
+    "automated": "PASS_5700_IDS_171_CELLS_CUMULATIVE_NEGATIVE_TESTS_M1_IMMUTABLE",
     "academic": "PENDIENTE_AUTORIZADA",
     "independence": "NO_CERTIFICADA",
     "psychometrics": "NO_CERTIFICADA",
@@ -90,9 +90,24 @@
     "family_note": "190 anclajes conceptuales combinados en escenarios de observación, comparación y descarte; 3135 registros no son 3135 unidades semánticamente independientes"
   },
   "release": {
-    "ci": "PENDIENTE",
-    "render": "PENDIENTE",
-    "sha_match": false
+    "pr": 38,
+    "merge_sha": "c831b77e59e7c2e2f28717846e63402f3950fd37",
+    "verified_sha": "c831b77e59e7c2e2f28717846e63402f3950fd37",
+    "ci": {
+      "run_id": 44696421842,
+      "sha": "c831b77e59e7c2e2f28717846e63402f3950fd37",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "render": {
+      "deploy_id": "dep-dbvvhogu01pc73b791o0",
+      "sha": "c831b77e59e7c2e2f28717846e63402f3950fd37",
+      "status": "live",
+      "url": "https://desafio-gramatical.onrender.com/"
+    },
+    "sha_match": true,
+    "http": "PASS_3_PUBLIC_NATURALES_ROUTES; HTML smoke; no browser visual inspection",
+    "note": "El SHA del commit de documentación final requiere nuevamente CI SUCCESS y Render LIVE"
   },
   "next": "naturales-M3"
 }

@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "areas": [
     "espanol",
     "matematicas",
@@ -287,22 +287,40 @@
         "naturales-M1"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         20,
         35,
         45
       ],
-      "scope": "19 subtemas × 3 juegos × 3 niveles; ampliación técnica a 20/35/45, 5700 acumulados, +3135 nuevos",
-      "evidence": "docs/naturales-m2-manifiesto-20261120.json",
+      "scope": "19 subtemas, 57 combinaciones, 171 celdas; núcleo M1 2565 y expansión M2 +3135, total 5700 registros técnicos 20/35/45",
+      "evidence": "docs/naturales-m2-cierre.md",
       "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
       "technical": {
         "cells": 171,
         "prior": 2565,
         "added": 3135,
         "cumulative": 5700,
-        "unique_ids_target": 5700,
-        "semantic_independence": "NO_CERTIFICADA"
+        "automated_structural_verified": 5700,
+        "preserved_M1": true,
+        "independent_conceptual": "NO_CERTIFICADA",
+        "human": "PENDIENTE_AUTORIZADA"
+      },
+      "release": {
+        "pr": 38,
+        "verified_sha": "c831b77e59e7c2e2f28717846e63402f3950fd37",
+        "ci": {
+          "id": 44696421842,
+          "conclusion": "success",
+          "sha": "c831b77e59e7c2e2f28717846e63402f3950fd37"
+        },
+        "render": {
+          "id": "dep-dbvvhogu01pc73b791o0",
+          "status": "live",
+          "sha": "c831b77e59e7c2e2f28717846e63402f3950fd37"
+        },
+        "http": "PASS",
+        "documentation_sha": "PENDIENTE_VERIFICACION_PROPIO_SHA"
       }
     },
     {

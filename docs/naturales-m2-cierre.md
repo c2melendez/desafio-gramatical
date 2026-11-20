@@ -1,6 +1,6 @@
 # Ciencias Naturales M2 — ampliación integral
 
-**Estado: EN_CURSO** hasta aprobar auditorías, CI en main, Render Live del mismo SHA y prueba HTTP pública. Revisión científica y docente **PENDIENTE_AUTORIZADA**.
+**Estado: COMPLETADA TÉCNICAMENTE.** Auditorías, CI en main, Render Live del mismo SHA y prueba HTTP pública aprobadas. Revisión docente pendiente autorizada. Revisión científica y docente **PENDIENTE_AUTORIZADA**.
 
 ## Origen, alcance y matriz congelada
 
@@ -36,3 +36,13 @@ Los **3.135 nuevos registros son modelos técnicos de práctica** derivados de 1
 Un éxito del PR no basta: el módulo M2 requiere CI **SUCCESS** del commit fusionado y Render **LIVE** del mismo SHA, más prueba HTTP pública. La inspección visual manual se declara no ejecutada si no existe evidencia y no se sustituye por un smoke de HTML. Todo informe posterior que cambie SHA exige verificarlo de nuevo.
 
 Siguiente fase, una vez cerrado M2: **Naturales M3**, objetivo acumulado 30/50/70 y aumento nominal de **2.850 registros técnicos** (570 básicos, 855 intermedios y 1.425 avanzados), con corte integral de área tras completar los 8.550 registros acumulados.
+
+## Resultado y evidencia de esta corrida integral
+
+- PR <https://github.com/c2melendez/desafio-gramatical/pull/38> **fusionado**. SHA de merge `c831b77e59e7c2e2f28717846e63402f3950fd37`.
+- CI en main: <https://github.com/c2melendez/desafio-gramatical/actions/runs/44696421842>, **SUCCESS**, SHA `c831b77e59e7c2e2f28717846e63402f3950fd37`. Se ejecutaron build, pruebas, inventario, grafo modular, M0, Español, Matemáticas M1/M2/M3, Naturales M1 y la auditoría M2 de **5.700 registros acumulados, 171 celdas**, plus mutaciones negativas y pruebas de las tres mecánicas.
+- Render: despliegue `dep-dbvvhogu01pc73b791o0`, **LIVE** para el mismo SHA `c831b77e59e7c2e2f28717846e63402f3950fd37`, https://desafio-gramatical.onrender.com/.
+- La prueba HTTP de las tres rutas Naturales representativas (básico, intermedio, avanzado) fue **SUCCESS** en la CI de main. El smoke valida HTML y conectividad del servicio, no una revisión visual manual de diseño.
+- Artefacto GitHub Actions: `naturales-m2-integral`, matriz completa por subtema × juego × nivel. No se atribuye equivalencia de independencia a los ítems técnicos.
+- Los **2.565 registros M1 y sus contenidos** se preservan sin alteración; los **3.135** nuevos registros técnicos llevan el prefijo `science-m2-`. Las regresiones preexistentes permanecieron activas.
+- El commit documental final, de SHA diferente, debe superar una nueva ejecución completa de CI y Render antes de declarar el cierre definitivo de esa versión.
