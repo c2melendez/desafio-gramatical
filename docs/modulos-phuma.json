@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "areas": [
     "espanol",
     "matematicas",
@@ -331,12 +331,23 @@
         "naturales-M2"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         30,
         50,
         70
-      ]
+      ],
+      "scope": "19 subtemas × 3 juegos × 3 niveles: 171 celdas; M2 5700 + M3 2850 = 8550 técnicos con 30/50/70",
+      "evidence": "docs/naturales-m3-manifiesto-20261120.json",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "cells": 171,
+        "prior": 5700,
+        "added": 2850,
+        "cumulative": 8550,
+        "independence": "NO_CERTIFICADA",
+        "status": "CI_PENDIENTE"
+      }
     },
     {
       "id": "naturales-CORTE",
@@ -346,7 +357,8 @@
         "naturales-M3"
       ],
       "optional": [],
-      "state": "PENDIENTE"
+      "state": "PENDIENTE",
+      "evidence": "docs/naturales-m3-manifiesto-20261120.json"
     },
     {
       "id": "sociales-M1",
