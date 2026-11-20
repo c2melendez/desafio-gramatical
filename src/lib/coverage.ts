@@ -18,7 +18,8 @@ import {MATH_TOPICS,MATH_MODES} from "./math-m1";
 import {MATH_M3_LEVEL_COUNT} from "./math-m3";
 import {SCIENCE_TOPICS,SCIENCE_MODES} from "./science-m1";
 import {SCIENCE_M3_LEVEL_COUNT} from "./science-m3";
-import {SOCIAL_TOPICS,SOCIAL_MODES,SOCIAL_LEVEL_COUNT} from "./social-m1";
+import {SOCIAL_TOPICS,SOCIAL_MODES} from "./social-m1";
+import {SOCIAL_M2_LEVEL_COUNT} from "./social-m2";
 
 export const CONTENT_TARGET:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
 export const CONTENT_STAGE_ONE:Record<Level,number>={principiante:10,intermedio:15,avanzado:20};
@@ -31,7 +32,7 @@ export type ContentCoverage={
 export function countContent(area:AreaId,topic:string,subtopic:string,mode:GameId,level:Level):number{
  if(area==="matematicas")return MATH_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&MATH_MODES.includes(mode)?(MATH_M3_LEVEL_COUNT[level]??0):0;
  if(area==="naturales")return SCIENCE_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&SCIENCE_MODES.includes(mode)?SCIENCE_M3_LEVEL_COUNT[level]:0;
- if(area==="sociales")return SOCIAL_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&SOCIAL_MODES.includes(mode)?SOCIAL_LEVEL_COUNT[level]:0;
+ if(area==="sociales")return SOCIAL_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&SOCIAL_MODES.includes(mode)?SOCIAL_M2_LEVEL_COUNT[level]:0;
  if(area!=="espanol")return 0;
  if(topic==="Gramática y semántica"&&subtopic==="Categorías gramaticales")
   return mode==="clasificar"?SENTENCES[level].length+EXTRA_SENTENCES[level].length+(level==="avanzado"?GRAMMAR_ADVANCED_SENTENCES.length:0)+M2_CATEGORY_SENTENCES[level].length+M3_CATEGORY_SENTENCES[level].length:mode==="quiz"?QUIZ[level].length+EXTRA_QUIZ[level].length+M2_CATEGORY_QUIZ[level].length+M3_CATEGORY_QUIZ[level].length:BUILD[level].length+EXTRA_BUILD[level].length+GRAMMAR_NUCLEUS_BUILD[level].length+M2_CATEGORY_BUILD[level].length+M3_CATEGORY_BUILD[level].length;
