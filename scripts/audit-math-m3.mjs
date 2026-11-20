@@ -3,6 +3,7 @@ import {MATH_M2_LEVEL_COUNT,mathM2Pool} from "../src/lib/math-m2.ts";
 import {MATH_M3_LEVEL_COUNT,MATH_M3_NEW_PER_LEVEL,MATH_M3_TOTAL,MATH_M3_NEW_TOTAL,mathM3Pool,mathM3NewPool,mathStimulusSignature} from "../src/lib/math-m3.ts";
 import {selectRotation,emptyRotation,recordRotation} from "../src/lib/rotation.ts";
 import {execFileSync} from "node:child_process";
+import {verifyMathM3Cell} from "../src/lib/math-m3-guards.ts";
 const eq=(a,b)=>a.n*b.d===b.n*a.d;
 const ratio=(n,d=1)=>({n,d});
 function gcd(a,b){while(b){const k=a%b;a=b;b=k;}return Math.abs(a)}
@@ -47,6 +48,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
  const core=mathM2Pool(topic.name,subtopic,level,mode),fresh=mathM3NewPool(topic.name,subtopic,level,mode);
  const bank=mathM3Pool(topic.name,subtopic,level,mode);
  const cell=topic.name+"/"+subtopic+"/"+mode+"/"+level,issuesBefore=issues.length;
+ for(const issue of verifyMathM3Cell(bank,level))issues.push(cell+": structural guard "+issue);
  if(core.length!==MATH_M2_LEVEL_COUNT[level]||fresh.length!==MATH_M3_NEW_PER_LEVEL[level]||bank.length!==MATH_M3_LEVEL_COUNT[level])
   issues.push(cell+": wrong quota");
  for(let i=0;i<core.length;i++)if(bank[i].id!==core[i].id)issues.push(cell+": M2 ID changed");
