@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "areas": [
     "espanol",
     "matematicas",
@@ -444,12 +444,29 @@
         "sociales-M1"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         20,
         35,
         45
-      ]
+      ],
+      "evidence": "docs/sociales-m2-cierre.md",
+      "scope": "20 subtemas × 3 juegos × 3 niveles, 180 celdas; 2700 M1 + 3300 M2 = 6000 modelos técnicos",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "cells": 180,
+        "prior": 2700,
+        "added": 3300,
+        "cumulative": 6000,
+        "targets": {
+          "principiante": 20,
+          "intermedio": 35,
+          "avanzado": 45
+        },
+        "semantic_independence": "NO_CERTIFICADA",
+        "audit": "PENDIENTE_CI",
+        "render": "PENDIENTE"
+      }
     },
     {
       "id": "sociales-M3",

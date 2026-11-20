@@ -183,6 +183,16 @@ jobs:
           path: sociales-m1-integral.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar Ciencias Sociales M2 — 6000 registros, 180 celdas, preservar M1
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-social-m2.mjs > sociales-m2-integral.json
+      - name: Conservar auditoría integral Ciencias Sociales M2
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sociales-m2-integral
+          path: sociales-m2-integral.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema

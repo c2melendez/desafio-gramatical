@@ -2,7 +2,8 @@ import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
 import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {type ScienceItem} from "@/lib/science-m1";
-import {socialTopic,SOCIAL_SUBTOPICS,SOCIAL_MODES,socialPool} from "@/lib/social-m1";
+import {socialTopic,SOCIAL_SUBTOPICS,SOCIAL_MODES} from "@/lib/social-m1";
+import {socialM2Pool} from "@/lib/social-m2";
 import {gameNames} from "@/lib/phuma-catalog";
 import {studyReturn} from "@/lib/study-context";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
@@ -16,7 +17,7 @@ export const Route=createFileRoute("/sociales")({
   nivel:LEVELS.includes(s.nivel as Level)?s.nivel as Level:"principiante",
  }),
  head:()=>({meta:[{title:"Ciencias Sociales — Academia PHUMA Play"},
-  {name:"description",content:"Práctica de Ciencias Sociales M1 con 10 rondas y explicaciones."}]}),
+  {name:"description",content:"Práctica de Ciencias Sociales M2 con 10 rondas y explicaciones."}]}),
  component:SocialPlay,
 });
 function SocialPlay(){
@@ -31,13 +32,13 @@ function SocialPlay(){
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
  useEffect(()=>{
-  const bank=socialPool(topic,subtema,nivel,modo),key=rotationKey("sociales",topic,subtema,modo,nivel);
+  const bank=socialM2Pool(topic,subtema,nivel,modo),key=rotationKey("sociales",topic,subtema,modo,nivel);
   const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
   setItems(chosen);setIndex(0);setCorrect(0);setTotal(0);setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[topic,subtema,nivel,modo,run]);
  const report=(ok:boolean,given:string)=>{
   if(!items||total>index)return;
-  const item=items[index],bank=socialPool(topic,subtema,nivel,modo),key=rotationKey("sociales",topic,subtema,modo,nivel);
+  const item=items[index],bank=socialM2Pool(topic,subtema,nivel,modo),key=rotationKey("sociales",topic,subtema,modo,nivel);
   writeRotation(key,recordRotation(readRotation(key,bank.map(x=>x.id)),item.id,ok));
   setTotal(t=>t+1);
   if(ok){setCorrect(t=>t+1);setScore(t=>t+pointsFor(streak));setStreak(t=>t+1);setBest(b=>Math.max(b,streak+1));}
