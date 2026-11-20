@@ -5,7 +5,7 @@
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "176dfd7e976febaaedb16d2c0a0bbfb91feabf79",
-    "src/lib/coverage.ts": "a0a06d6cfb0edfe8fd07266c189cf8ab79797137",
+    "src/lib/coverage.ts": "b115f15838ba19199a4f2ea97b70018c43a3d9d7",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449",
