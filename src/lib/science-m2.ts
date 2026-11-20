@@ -1,7 +1,7 @@
 import type {Level,Mode} from "./grammar";
 import {
  SCIENCE_TOPICS,SCIENCE_SUBTOPICS,SCIENCE_MODES,SCIENCE_LEVELS,SCIENCE_LEVEL_COUNT,
- sciencePool,scienceModel,scienceFacts,type ScienceFact,type ScienceItem
+ sciencePool,scienceModel,scienceFacts,type ScienceItem
 } from "./science-m1";
 
 /**
@@ -48,9 +48,9 @@ function buildItem(topic:string,subtopic:string,level:Level,mode:Mode,index:numb
  const options=rotate(propertyCandidates,(index+levelStage)%4);
  const names=rotate(conceptCandidates,(index+levelStage+2)%4);
  const assertions=rotate([
-  {text:`En la observación A, la función relevante es: ${fact.property}.`,truth:true},
-  {text:`En la observación A, la función relevante es: ${foils[0].property}.`,truth:false},
-  {text:`En la observación A, la función relevante es: ${foils[1].property}.`,truth:false}
+  {text:`En la observación principal, la función relevante es: ${fact.property}.`,truth:true},
+  {text:`En la observación principal, la función relevante es: ${foils[0].property}.`,truth:false},
+  {text:`En la observación principal, la función relevante es: ${foils[1].property}.`,truth:false}
  ],(index+levelStage)%3);
  const steps=[
   {label:"Identifica el concepto respaldado por la observación original",choices:names,answerIndex:names.indexOf(fact.concept)},
