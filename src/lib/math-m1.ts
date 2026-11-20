@@ -76,7 +76,7 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  const original=compute(subtopic,level,seed);
  const core=corePedagogy(subtopic,level,original.inputs)??nextAlgebraPedagogy(subtopic,level,original.inputs)??arithmeticPedagogy(subtopic,level,original.inputs)??remainingMathPedagogy(subtopic,level,original.inputs);
  const r=core?{...original,question:core.prompt,result:core.result,intermediate:core.intermediate,
-  interLabel:core.procedure.label,reason:core.explanation,formula:core.formula,inputs:core.inputs,kind:("kind" in core&&core.kind)||original.kind}:original;
+  interLabel:core.procedure.label,reason:core.explanation,formula:core.formula,inputs:core.inputs,kind:("kind" in core&&typeof core.kind==="string"?core.kind:original.kind)}:original;
  const solution=fmt(r.result),base=variants(r.result);
  // Piloto G0–G5: en estas celdas de selección, los datos relevantes
  // se trasladan de la frase a la representación visual original.
