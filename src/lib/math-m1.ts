@@ -4,6 +4,7 @@ import {visualAnswer,visualPrompt,type MathVisual} from "./math-visual";
 import {corePedagogy} from "./math-m1-core-pedagogy";
 import {nextAlgebraPedagogy} from "./math-m1-core-algebra-next";
 import {arithmeticPedagogy} from "./math-m1-core-arithmetic";
+import {remainingMathPedagogy} from "./math-m1-core-remaining";
 
 /** Banco técnico original M1 de Matemáticas: 10/15/20 por subtema y juego.
  * Los parámetros y los casos se calculan con aritmética exacta; las variantes
@@ -73,9 +74,9 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  const levelN=MATH_LEVELS.indexOf(level),modeN=MATH_MODES.indexOf(mode);
  const seed=1+index+levelN*43+modeN*137;
  const original=compute(subtopic,level,seed);
- const core=corePedagogy(subtopic,level,original.inputs)??nextAlgebraPedagogy(subtopic,level,original.inputs)??arithmeticPedagogy(subtopic,level,original.inputs);
+ const core=corePedagogy(subtopic,level,original.inputs)??nextAlgebraPedagogy(subtopic,level,original.inputs)??arithmeticPedagogy(subtopic,level,original.inputs)??remainingMathPedagogy(subtopic,level,original.inputs);
  const r=core?{...original,question:core.prompt,result:core.result,intermediate:core.intermediate,
-  interLabel:core.procedure.label,reason:core.explanation,formula:core.formula,inputs:core.inputs}:original;
+  interLabel:core.procedure.label,reason:core.explanation,formula:core.formula,inputs:core.inputs,kind:("kind" in core&&core.kind)||original.kind}:original;
  const solution=fmt(r.result),base=variants(r.result);
  // Piloto G0–G5: en estas celdas de selección, los datos relevantes
  // se trasladan de la frase a la representación visual original.
@@ -84,19 +85,19 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
  // Ninguna oración proporciona todos los datos del diagrama.
  {
   switch(subtopic){
-   case "Ángulos":visual={kind:"triangle-angles",alpha:r.inputs[0],beta:r.inputs[1]};break;
-   case "Pitágoras":visual={kind:"right-triangle",legA:r.inputs[0],legB:r.inputs[1]};break;
-   case "Tablas y gráficas":visual={kind:"bar-chart",monday:r.inputs[0],tuesday:r.inputs[1],wednesday:r.inputs[2]};break;
+   case "Ángulos":visual={kind:"triangle-angles",alpha:original.inputs[0],beta:original.inputs[1],stage:core?.cognitiveStage};break;
+   case "Pitágoras":visual={kind:"right-triangle",legA:original.inputs[0],legB:original.inputs[1],stage:core?.cognitiveStage};break;
+   case "Tablas y gráficas":visual={kind:"bar-chart",monday:original.inputs[0],tuesday:original.inputs[1],wednesday:original.inputs[2],stage:core?.cognitiveStage};break;
    case "Funciones":visual={kind:"linear-function",slope:original.inputs[0],intercept:original.inputs[1],targetX:original.inputs[2],operation:core?(level==="principiante"?"direct":level==="intermedio"?"shift":"compose"):"direct"};break;
    case "Inecuaciones":visual={kind:"number-line",boundary:(original.inputs[2]-original.inputs[1])/original.inputs[0],open:true,direction:"right",operation:core?(level==="principiante"?"direct":level==="intermedio"?"shift":"reflect"):"direct"};break;
-   case "Áreas y perímetros":visual={kind:"rectangle",length:r.inputs[0],width:r.inputs[1],measure:r.inputs[2]?"area":"perimeter"};break;
-   case "Sólidos: área y volumen":visual={kind:"prism",length:r.inputs[0],width:r.inputs[1],height:r.inputs[2],measure:r.inputs[3]?"volume":"surface"};break;
-   case "Semejanza":visual={kind:"similar-triangles",small:r.inputs[0],large:r.inputs[1],other:r.inputs[2]};break;
+   case "Áreas y perímetros":visual={kind:"rectangle",length:original.inputs[0],width:original.inputs[1],measure:original.inputs[2]?"area":"perimeter",stage:core?.cognitiveStage};break;
+   case "Sólidos: área y volumen":visual={kind:"prism",length:original.inputs[0],width:original.inputs[1],height:original.inputs[2],measure:original.inputs[3]?"volume":"surface",stage:core?.cognitiveStage};break;
+   case "Semejanza":visual={kind:"similar-triangles",small:original.inputs[0],large:original.inputs[1],other:original.inputs[2],stage:core?.cognitiveStage};break;
   }
  }
  if(visual&&visualAnswer(visual)!==r.result.n/r.result.d)throw Error("El estímulo visual no coincide con el oráculo matemático");
  const choices=choose(seed,base);
- const visualIntermediate=visual?.kind==="number-line"?q(visual.boundary):visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate;
+ const visualIntermediate=core?.procedure.value??(visual?.kind==="number-line"?q(visual.boundary):visual?.kind==="rectangle"&&visual.measure==="area"?q(visual.length):r.intermediate);
  const step=choose(seed+1,variants(visualIntermediate));
  const correctClaim={text:visual?.kind==="number-line"?`La solución ${core?.operation==="transformar-coeficiente-negativo-e-invertir-inecuacion"?"transformada es x <":"representada es x >"} ${solution}.`:visual?`La representación permite concluir que el resultado es ${solution}.`:`La solución obtenida es ${solution}.`,truth:true};
  const falseClaims=visual?.kind==="number-line"
@@ -123,7 +124,7 @@ export function mathModel(topic:string,subtopic:string,level:Level,mode:Mode,ind
   :visual?.kind==="similar-triangles"
   ? `Las bases correspondientes miden ${visual.small} y ${visual.large} cm, por eso el factor es ${visual.large}/${visual.small}. El otro lado pequeño mide ${visual.other} cm: el lado desconocido mide ${solution} cm.`
   :r.reason;
- return {id,topic,subtopic,level,mode,seed,prompt:visual?`${visualPrompt(visual)} (Ejercicio ${index+1}).`:r.question,visual,visualRequirement:visual?"essential":"none",expected:solution,explanation:visualExplanation,
+ return {id,topic,subtopic,level,mode,seed,prompt:visual?(core?`${core.prompt} Observa la figura de origen para identificar sus medidas. (Ejercicio ${index+1}).`:`${visualPrompt(visual)} (Ejercicio ${index+1}).`):r.question,visual,visualRequirement:visual?"essential":"none",expected:solution,explanation:core?`${r.reason} Representación y respuesta verificadas: ${solution}.`:visualExplanation,
   formula:r.formula,source:guideSubtopics.has(subtopic)?"GUIA-PRE-U-UNAH-2026:p6":"catalogo-practica-complementaria",
   oracle:{kind:r.kind,inputs:r.inputs,answer:r.result,intermediate:r.intermediate},
   options:choices.choices,answerIndex:choices.answerIndex,assertions,
