@@ -10,18 +10,36 @@ export const MATH_M2_LEVEL_COUNT:Record<Level,number>={principiante:20,intermedi
 export const MATH_M2_NEW_PER_LEVEL:Record<Level,number>={principiante:10,intermedio:20,avanzado:25};
 const slug=(s:string)=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 
+const stimulusSignature=(item:MathModel)=>item.prompt.normalize("NFKC").toLocaleLowerCase("es")
+ .replace(/\\(ejercicio [0-9]+\\)\\.?/gi,"").replace(/\\s+/g," ").trim()+"|"+
+ (item.visual?JSON.stringify(item.visual):"");
+
 export function mathM2NewPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  if(!MATH_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))||!MATH_LEVELS.includes(level)||!MATH_MODES.includes(mode))
   throw Error("Celda matemática M2 fuera del catálogo");
  const originalSize=MATH_LEVEL_COUNT[level],amount=MATH_M2_NEW_PER_LEVEL[level];
  const topicIndex=MATH_SUBTOPICS.indexOf(subtopic),levelIndex=MATH_LEVELS.indexOf(level),modeIndex=MATH_MODES.indexOf(mode);
- return Array.from({length:amount},(_,i)=>{
-  const seed=1801+(i*97)+(levelIndex*10009)+(modeIndex*20011)+(topicIndex*30011);
-  const model=mathModel(topic,subtopic,level,mode,i%originalSize,seed);
+ const used=new Set(mathPool(topic,subtopic,level,mode).map(stimulusSignature));
+ const fresh:MathModel[]=[];
+ let nextSeed=1801+(levelIndex*10009)+(modeIndex*20011)+(topicIndex*30011);
+ for(let i=0;i<amount;i++){
+  let item:MathModel|undefined;
+  for(let attempts=0;attempts<2000;attempts++){
+   const seed=nextSeed;
+   nextSeed+=97;
+   const candidate=mathModel(topic,subtopic,level,mode,i%originalSize,seed);
+   const fingerprint=stimulusSignature(candidate);
+   if(used.has(fingerprint))continue;
+   used.add(fingerprint);
+   item=candidate;
+   break;
+  }
+  if(!item)throw Error("M2: variedad insuficiente en "+[topic,subtopic,mode,level].join("/"));
   const id="math-m2-"+[topic,subtopic,mode,level,i].map(x=>slug(String(x))).join("-");
-  return {...model,id,seed,family:"math-m2-"+slug(subtopic)+"-"+(model.operation??"original"),
-    reviewStatus:"editorial-draft" as const};
- });
+  fresh.push({...item,id,family:"math-m2-"+slug(subtopic)+"-"+(item.operation??"original"),
+   reviewStatus:"editorial-draft" as const});
+ }
+ return fresh;
 }
 export function mathM2Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return [...mathPool(topic,subtopic,level,mode),...mathM2NewPool(topic,subtopic,level,mode)];
