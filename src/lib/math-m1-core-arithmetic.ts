@@ -29,7 +29,7 @@ export function arithmeticPedagogy(subtopic:string,level:Level,inputs:number[]):
   else {nextInputs=[0,b,c];prompt=`Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (${a}+${b})×${c}−${a}×${c}. ¿Cuál es su valor?`;}
   const [u,v,w]=nextInputs;
   intermediate=q(u+v);result=q((u+v)*w);label="Calcula la suma que queda dentro del paréntesis";
-  explanation=stage===3?`Distribuir y cancelar ${a}×${c} deja ${b}×${c}=${fmt(result)}.`:`Después de aplicar las condiciones, el paréntesis vale ${u}+${v}=${u+v}; multiplicar por ${w} da ${fmt(result)}.`;
+  explanation=stage===3?`Aplicamos la propiedad distributiva: (${a}+${b})×${c} se convierte en ${a}×${c}+${b}×${c}. Al restar ${a}×${c}, los dos términos iguales se cancelan; queda solo ${b}×${c}=${fmt(result)}. No es necesario calcular todo el primer producto antes de simplificar.`:`Después de aplicar las condiciones, el paréntesis vale ${u}+${v}=${u+v}; multiplicar por ${w} da ${fmt(result)}.`;
   formula=`(${u}+${v})×${w}=${fmt(result)}`;
   correct=`Es válido resolver primero ${u}+${v} y multiplicar su resultado por ${w}.`;
   incorrect1=`Es válido multiplicar solo el primer sumando ${u} por ${w} y después sumar ${v} sin multiplicarlo.`;
@@ -79,7 +79,7 @@ export function arithmeticPedagogy(subtopic:string,level:Level,inputs:number[]):
   else {nextInputs=[base,2*exp-3];prompt=`Aplica potencia de una potencia y cociente de potencias de igual base: (${base}^${exp})² ÷ ${base}³. ¿Cuál es el valor?`;}
   const [b,e]=nextInputs;
   result=q(b**e);intermediate=q(b**(e-1));label="Calcula la potencia parcial anterior al último factor";
-  explanation=stage===1?`La base ${b} se multiplica ${e} veces; el resultado es ${fmt(result)}.`:stage===2?`Al multiplicar potencias de base ${b} se suman exponentes: ${exp}+2=${e}. Resultado ${fmt(result)}.`:`La potencia de potencia produce exponente 2×${exp}; al dividir se resta 3, quedando ${e}. Resultado ${fmt(result)}.`;
+  explanation=stage===1?`La expresión ${b}^${e} indica un producto de ${e} factores iguales a ${b}; no significa multiplicar la base por el exponente. Al efectuar el producto completo se obtiene ${fmt(result)}. La potencia parcial ${b}^${e-1} permite comprobar el último paso.`:stage===2?`Al multiplicar potencias de base ${b} se suman exponentes: ${exp}+2=${e}. Resultado ${fmt(result)}.`:`La potencia de potencia produce exponente 2×${exp}; al dividir se resta 3, quedando ${e}. Resultado ${fmt(result)}.`;
   formula=`${b}^${e}=${fmt(result)}`;
   correct="En un producto de potencias de la misma base se suman los exponentes, sin sumar las bases.";
   incorrect1="En un producto de potencias de la misma base siempre se multiplican entre sí los exponentes.";
