@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "areas": [
     "espanol",
     "matematicas",
@@ -237,23 +237,46 @@
         "espanol-CORTE"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         10,
         15,
         20
       ],
-      "evidence": "docs/naturales-m1-manifiesto-20261120.json",
+      "evidence": "docs/naturales-m1-cierre.md",
       "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
-      "scope": "19 subtemas (9 Biología, 5 Química, 5 Física), tres juegos y tres niveles: 171 celdas/2565 registros técnicos con 10/15/20",
+      "scope": "19 subtemas (9 Biología, 5 Química, 5 Física), 3 juegos, 3 niveles, 171 celdas y 2565 registros técnicos: núcleo M1 10/15/20",
       "technical": {
         "topics": 3,
         "subtopics": 19,
         "combinations": 57,
         "cells": 171,
-        "planned": 2565,
-        "conceptual_independence": "NO_CERTIFICADA",
+        "technical_added": 2565,
+        "technical_total": 2565,
+        "concept_anchors": 190,
+        "source_alignment": "GUIA-PRE-U-UNAH-2026:p7-9; práctica complementaria separada",
+        "automatic_oracles": "PASS",
+        "mutation_tests": "PASS",
+        "academic_independence": "NO_CERTIFICADA",
         "scientific_review": "PENDIENTE_AUTORIZADA"
+      },
+      "release": {
+        "pr": 37,
+        "merge_sha": "f69139376e77d298648f84159e90dcfef25509b8",
+        "verified_sha": "7f21467e8df8c7f12a95a44133de013e43309ab4",
+        "ci_main": {
+          "run_id": 44690951231,
+          "sha": "7f21467e8df8c7f12a95a44133de013e43309ab4",
+          "conclusion": "success"
+        },
+        "render": {
+          "deploy_id": "dep-dbvuskkipgvc738opl8g",
+          "sha": "7f21467e8df8c7f12a95a44133de013e43309ab4",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com"
+        },
+        "http": "PASS_3_NATURALES_ROUTES",
+        "documentation_sha": "PENDIENTE_VERIFICACION_PROPIO_SHA"
       }
     },
     {

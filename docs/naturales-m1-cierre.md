@@ -1,6 +1,6 @@
 # Ciencias Naturales M1 — cierre técnico del núcleo
 
-**Estado de la rama:** EN_CURSO, publicación supeditada a GitHub Actions y Render Live del mismo SHA.
+**Estado del módulo:** COMPLETADA TÉCNICAMENTE. Revisión académica autorizada pendiente.
 
 ## Alcance, línea base y procedencia
 
@@ -30,3 +30,22 @@ El manifiesto `docs/naturales-m1-manifiesto-20261120.json` conserva las cuotas y
 No declarar COMPLETADA hasta comprobar **CI SUCCESS y Render LIVE para exactamente el mismo SHA**, auditoría del propio módulo sin fallos y prueba HTTP de ruta pública `/naturales` con nivel representativo. Si un commit documental cambia SHA, repetir los controles sobre ese último SHA.
 
 Próximo módulo, **solo después del cierre técnico de este núcleo**: `naturales-M2`, objetivo acumulado 20/35/45 por combinación (déficit adicional nominal 10/20/25 por combinación, **3.135 nuevos registros técnicos**). El corte completo del área corresponde a M3, no a este núcleo.
+
+## Evidencias verificadas de la publicación M1
+
+- PR #37 fusionado: https://github.com/c2melendez/desafio-gramatical/pull/37. SHA de fusión `f69139376e77d298648f84159e90dcfef25509b8`.
+- GitHub Actions en `main`: https://github.com/c2melendez/desafio-gramatical/actions/runs/44690951231 — **completed / success** para `7f21467e8df8c7f12a95a44133de013e43309ab4`. Se ejecutaron las pruebas del nuevo banco, mutaciones negativas, regresiones del inventario, M0 y áreas previas, auditoría de 171 celdas de Naturales y el smoke HTTP. No se omitieron controles obligatorios del pipeline.
+- Render: despliegue `dep-dbvuskkipgvc738opl8g` **LIVE** con el mismo SHA `7f21467e8df8c7f12a95a44133de013e43309ab4`, servicio `srv-dbt0rilg1s2s738eku8g`, https://desafio-gramatical.onrender.com/.
+- La CI publicó `naturales-m1-integral` con la matriz de todas las celdas; verificó **2.565 IDs únicos y 171 celdas**, diez rondas, selección/clasificación/construcción, claves y explicaciones. Una prueba de navegación adicional comprobó selector, sesión, retroalimentación, reinicio y regreso contextual.
+- La prueba HTTP publicada comprendió tres rutas Naturales de los tres niveles y modalidades. Garantiza respuesta HTML, no una inspección visual manual.
+
+| Tema | Subtemas | Combinaciones subtema×juego | Básicos añadidos | Intermedios añadidos | Avanzados añadidos | Total M1 |
+|---|---:|---:|---:|---:|---:|---:|
+| Biología | 9 | 27 | 270 | 405 | 540 | 1.215 |
+| Química | 5 | 15 | 150 | 225 | 300 | 675 |
+| Física | 5 | 15 | 150 | 225 | 300 | 675 |
+| **Total** | **19** | **57** | **570** | **855** | **1.140** | **2.565** |
+
+**Decisión del corte M1:** módulo integrado y terminado a nivel técnico-operativo; 190 familias de concepto por subtema sustentan 2.565 registros técnicos, no 2.565 preguntas conceptualmente independientes. Revisión docente, fiabilidad científica externa, calibración psicométrica, contrastes gráficos/escritorio/móvil manuales **pendientes/no certificadas**. El commit documental propio debe superar CI/Render también.
+
+**Próxima fase:** Naturales M2, meta acumulada 20/35/45 por combinación; déficit nominal adicional **3.135 registros técnicos** (570 básicos, 1.140 intermedios y 1.425 avanzados). No abrir Sociales hasta terminar M2 y M3 y corte de Naturales.

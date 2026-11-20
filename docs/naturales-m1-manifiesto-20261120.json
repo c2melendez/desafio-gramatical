@@ -2,7 +2,7 @@
   "version": 1,
   "id": "naturales-M1-integral-20261120",
   "module": "naturales-M1",
-  "state": "EN_CURSO",
+  "state": "COMPLETADA",
   "baseline_sha": "923762ff71d4c9a5e1f86751c0b2c1f3ad91baea",
   "source": {
     "title": "GUIA-PRE-U-UNAH-2026.pdf",
@@ -59,13 +59,29 @@
     "scientific_factual_oracle_independent": "NO_VERIFICADO_EXTERNAMENTE",
     "academic_review": "PENDIENTE_AUTORIZADA",
     "examples": "190 conceptos y propiedades curados, múltiples instancias de práctica a partir de familias compartidas",
-    "psychometric": "NO_CERTIFICADA"
+    "psychometric": "NO_CERTIFICADA",
+    "automatic_structural": "PASS: 171 celdas/2565 registros/190 anclajes"
   },
   "publication": {
-    "ci": "PENDIENTE",
-    "render": "PENDIENTE",
-    "same_sha": false
+    "pr": 37,
+    "pr_merged": true,
+    "merge_sha": "f69139376e77d298648f84159e90dcfef25509b8",
+    "verified_sha": "7f21467e8df8c7f12a95a44133de013e43309ab4",
+    "ci": {
+      "run": 44690951231,
+      "sha": "7f21467e8df8c7f12a95a44133de013e43309ab4",
+      "conclusion": "success"
+    },
+    "render": {
+      "deploy_id": "dep-dbvuskkipgvc738opl8g",
+      "sha": "7f21467e8df8c7f12a95a44133de013e43309ab4",
+      "status": "live",
+      "url": "https://desafio-gramatical.onrender.com"
+    },
+    "same_sha": true,
+    "http_smoke": "PASS; 3 rutas de Naturales por niveles y modalidades; HTML HTTP, no browser manual",
+    "note": "El commit documental posterior necesita CI/Render del SHA final"
   },
-  "handoff": "naturales-M2 after technical module closure",
+  "handoff": "naturales-M2 (20/35/45 acumulados), 3135 candidatos técnicos adicionales: 570 básicos, 1140 intermedios, 1425 avanzados.",
   "notes": "Los registros son técnicos, no 2565 preguntas independientes. No declarar entrega sin CI y Render Live mismo SHA."
 }
