@@ -1,5 +1,5 @@
 {
-  "version": 18,
+  "version": 19,
   "areas": [
     "espanol",
     "matematicas",
@@ -495,7 +495,7 @@
         "sociales-M2"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         30,
         50,
@@ -515,8 +515,31 @@
           "avanzado": 70
         },
         "semantic_independence": "NO_CERTIFICADA",
-        "ci": "PENDIENTE",
-        "render": "PENDIENTE"
+        "ci": "SUCCESS_MAIN",
+        "render": "LIVE",
+        "mutants_tested": 900,
+        "mutants_detected": 900
+      },
+      "release": {
+        "pr": 42,
+        "merge_sha": "1f665d0e609594c6fd7adebced722a84e6bbebb8",
+        "ci_pr": {
+          "run": 44772723594,
+          "conclusion": "success"
+        },
+        "ci_main": {
+          "run": 44773146018,
+          "sha": "1f665d0e609594c6fd7adebced722a84e6bbebb8",
+          "conclusion": "success"
+        },
+        "render": {
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "deploy_id": "dep-dc078l6q1p3s73ddhbp0",
+          "sha": "1f665d0e609594c6fd7adebced722a84e6bbebb8",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com/"
+        },
+        "documentation_commit": "VERIFICAR_CI_RENDER_SHA_PROPIO"
       }
     },
     {

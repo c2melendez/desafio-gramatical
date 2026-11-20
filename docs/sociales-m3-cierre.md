@@ -1,6 +1,6 @@
 # Ciencias Sociales M3 — corte técnico acumulado
 
-**Estado: CANDIDATO DE INTEGRACIÓN.** Requiere PR fusionado, GitHub Actions SUCCESS y Render LIVE para el mismo SHA. La revisión docente, histórica, editorial y psicométrica queda **PENDIENTE AUTORIZADA**.
+**Estado: COMPLETADA TÉCNICAMENTE.** GitHub Actions SUCCESS en main y Render LIVE del mismo SHA. Revisión académica pendiente autorizada. La revisión docente, histórica, editorial y psicométrica queda **PENDIENTE AUTORIZADA**.
 
 ## Alcance entregado
 
@@ -28,3 +28,14 @@
 ## Puerta de publicación y continuidad
 
 Completar tras verificar PR fusionado, CI SUCCESS de `main` y Render LIVE del mismo commit. Siguiente objetivo: `sociales-CORTE` para reconciliar el área antes de iniciar Habilidades Blandas M1.
+
+## Reconciliación de publicación — 20 de noviembre de 2026
+
+- PR #42 fusionado a main: https://github.com/c2melendez/desafio-gramatical/pull/42, commit `1f665d0e609594c6fd7adebced722a84e6bbebb8`.
+- CI del PR: **SUCCESS**, https://github.com/c2melendez/desafio-gramatical/actions/runs/44772723594.
+- CI de main: **SUCCESS**, https://github.com/c2melendez/desafio-gramatical/actions/runs/44773146018, SHA `1f665d0e609594c6fd7adebced722a84e6bbebb8`.
+- Render: **LIVE**, despliegue `dep-dc078l6q1p3s73ddhbp0`, SHA `1f665d0e609594c6fd7adebced722a84e6bbebb8`, https://desafio-gramatical.onrender.com/.
+- Auditoría acumulada: 9000 IDs técnicos, 180 celdas, 3000 nuevos M3 y 6000 M1/M2 preservados; 900 mutaciones negativas verificadas en CI.
+- La guía oficial se usa como referencia curricular, no se reproducen preguntas oficiales; auditorías automáticas no certifican 9000 ejercicios independientes.
+- **Siguiente fase:** `sociales-CORTE` para conciliación de área; después `blandas-M1` según dependencias. Revisión académica y visual manual continúan pendientes.
+- El commit de esta documentación es distinto del commit de integración. Volver a verificar CI y Render de su SHA antes de darlo como definitivo.
