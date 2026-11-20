@@ -1,5 +1,5 @@
 /** Estímulos originales y deterministas; no confundir coordenadas dibujadas con un oráculo. */
-export type MathVisual =
+export type MathVisual = (
  | {kind:"triangle-angles";alpha:number;beta:number}
  | {kind:"right-triangle";legA:number;legB:number}
  | {kind:"bar-chart";monday:number;tuesday:number;wednesday:number}
@@ -7,18 +7,18 @@ export type MathVisual =
  | {kind:"number-line";boundary:number;open:true;direction:"right"|"left";operation?:"direct"|"shift"|"reflect"}
  | {kind:"rectangle";length:number;width:number;measure:"area"|"perimeter"}
  | {kind:"prism";length:number;width:number;height:number;measure:"volume"|"surface"}
- | {kind:"similar-triangles";small:number;large:number;other:number};
+ | {kind:"similar-triangles";small:number;large:number;other:number}) & {stage?:1|2|3};
 
 export function visualAnswer(v:MathVisual):number {
  switch(v.kind){
- case "triangle-angles":return 180-v.alpha-v.beta;
- case "right-triangle":return Math.sqrt(v.legA*v.legA+v.legB*v.legB);
- case "bar-chart":return v.monday+v.tuesday+v.wednesday;
+ case "triangle-angles":return 180-v.alpha-v.beta+(v.stage===2?6:v.stage===3?10:0);
+ case "right-triangle":{const h=Math.sqrt(v.legA*v.legA+v.legB*v.legB);return v.stage===2?2*h:v.stage===3?2*(v.legA+v.legB+h):h;}
+ case "bar-chart":return v.stage===3?(v.monday-2)+(v.tuesday+3)-(v.wednesday+4):v.stage===2?v.monday+v.tuesday-v.wednesday:v.monday+v.tuesday+v.wednesday;
  case "linear-function":return v.slope*v.targetX+v.intercept+(v.operation==="shift"?2*v.slope:v.operation==="compose"?3*v.slope:0);
  case "number-line":return v.operation==="shift"?v.boundary+2:v.operation==="reflect"?2-v.boundary:v.boundary;
- case "rectangle":return v.measure==="area"?v.length*v.width:2*(v.length+v.width);
- case "prism":return v.measure==="volume"?v.length*v.width*v.height:2*(v.length*v.width+v.length*v.height+v.width*v.height);
- case "similar-triangles":return v.large*v.other/v.small;
+ case "rectangle":{const L=v.length+(v.stage===2?2:v.stage===3?3:0),W=v.width+(v.stage===3?2:0);return v.measure==="area"?L*W:2*(L+W);}
+ case "prism":{const L=v.length+(v.stage===3?1:0),W=v.width+(v.stage===3?2:0),H=v.height+(v.stage===2?1:0);return v.measure==="volume"?L*W*H:2*(L*W+L*H+W*H);}
+ case "similar-triangles":return (v.large+(v.stage===3?v.small:0))*(v.other+(v.stage===2||v.stage===3?2:0))/v.small;
  }
 }
 export function visualPrompt(v:MathVisual):string {

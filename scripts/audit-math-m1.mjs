@@ -16,6 +16,8 @@ function independentOracle(kind,values){
  case "Ecuaciones":return ratio(x[2]-x[1],x[0]);
  case "Sistemas de ecuaciones":return ratio(x[0]+x[1],2);
  case "Sucesiones":return ratio(x[0]+3*x[1]);
+ case "Sucesiones-quinto":return ratio(x[0]+4*x[1]);
+ case "Sucesiones-diferencia":return ratio(4*x[1]);
  case "Funciones":return ratio(x[0]*x[2]+x[1]);
  case "Ecuaciones cuadráticas":{const r=Math.sqrt(x[0]*x[0]-4*x[1]);return ratio((x[0]+r)/2)}
  case "Inecuaciones":return ratio(x[2]-x[1],x[0]);
@@ -23,12 +25,14 @@ function independentOracle(kind,values){
  case "Áreas y perímetros":return ratio(x[2]?x[0]*x[1]:2*(x[0]+x[1]));
  case "Ángulos":return ratio(180-x[0]-x[1]);
  case "Pitágoras":return ratio(Math.sqrt(x[0]**2+x[1]**2));
+ case "Pitágoras-perímetro":return ratio(Math.sqrt(x[0]**2+x[1]**2)+x[0]+x[1]);
  case "Sólidos: área y volumen":return ratio(x[3]?x[0]*x[1]*x[2]:2*(x[0]*x[1]+x[0]*x[2]+x[1]*x[2]));
  case "Semejanza":return ratio(x[1]*x[2],x[0]);
  case "Promedios":return ratio(x[0]+x[1]+x[2],3);
  case "Probabilidad":return ratio(x[0],x[0]+x[1]);
  case "Dispersión de datos":return ratio(x[2]-x[0]);
  case "Tablas y gráficas":return ratio(x[0]+x[1]+x[2]);
+ case "bar-balance":return ratio(x[0]+x[1]-x[2]);
  default:throw new Error("oráculo independiente sin modelo "+kind);
  }
 }
