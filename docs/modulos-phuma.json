@@ -1,5 +1,5 @@
 {
-  "version": 19,
+  "version": 20,
   "areas": [
     "espanol",
     "matematicas",
@@ -550,7 +550,26 @@
         "sociales-M3"
       ],
       "optional": [],
-      "state": "PENDIENTE"
+      "state": "CORTE_PENDIENTE",
+      "evidence": "docs/sociales-corte-20261120.md",
+      "scope": "5 temas, 20 subtemas, 3 juegos, 3 niveles = 180 celdas; 9000 registros técnicos, 30/50/70, revisión humana diferida",
+      "technical": {
+        "cells": 180,
+        "subtopics": 20,
+        "technical_records": 9000,
+        "targets": {
+          "principiante": 30,
+          "intermedio": 50,
+          "avanzado": 70
+        },
+        "mutants": 1800,
+        "unreviewed_human": 9000,
+        "semantic_independence": "NO_VERIFICADA",
+        "manual_visual": "NO_EJECUTADA",
+        "ci": "PENDIENTE",
+        "render": "PENDIENTE"
+      },
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA"
     },
     {
       "id": "blandas-M1",
