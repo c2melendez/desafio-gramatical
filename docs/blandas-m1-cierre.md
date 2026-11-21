@@ -1,6 +1,6 @@
 # Habilidades Blandas M1 — entrega técnica del núcleo
 
-**Estado: EN_CURSO hasta obtener CI SUCCESS y Render LIVE del mismo SHA.**
+**Estado: COMPLETADA TÉCNICAMENTE; PR fusionado, CI SUCCESS y Render LIVE sobre el mismo SHA de integración.**
 La revisión académica, independencia semántica, calibración y revisión visual manual están pendientes y no se consideran aprobadas.
 
 ## Alcance y cifras
@@ -23,9 +23,9 @@ La revisión académica, independencia semántica, calibración y revisión visu
 
 ## Criterios de aceptación
 
-- [ ] CI de PR completo SUCCESS sin fallos bloqueantes.
-- [ ] PR integrado a rama principal.
-- [ ] CI principal SUCCESS para el SHA integrado y Render LIVE del mismo SHA.
+- [x] CI de PR completo SUCCESS sin fallos bloqueantes.
+- [x] PR integrado a rama principal.
+- [x] CI principal SUCCESS para el SHA integrado y Render LIVE del mismo SHA.
 - [ ] Reconciliación documental final con CI/Render del SHA de documentación.
 - [ ] Revisión académica/manual por especialistas (pendiente autorizada, separada del cierre técnico).
 - [ ] Inspección manual visual en dispositivos y accesibilidad asistiva (no ejecutada).
@@ -34,3 +34,15 @@ La revisión académica, independencia semántica, calibración y revisión visu
 ## Siguiente objetivo
 
 Tras M1 técnico: **Habilidades Blandas M2**, ampliación acumulativa a 20/35/45 por subtema × juego, conservando los 1080 IDs M1, seguida de auditorías, integración, CI y despliegue.
+
+## Evidencia de publicación — 20 de noviembre de 2026 (hora de Honduras)
+
+- Pull request #44, fusionado: https://github.com/c2melendez/desafio-gramatical/pull/44.
+- Commit técnico integrado: `958b84b5297f61ba769fd012e3d1f34403139659`.
+- CI PR **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44870424885.
+- CI `main` **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44870701910, mismo SHA `958b84b5297f61ba769fd012e3d1f34403139659`.
+- Render **LIVE**: `dep-dc0ilr3tqb8s73dhdl4g`, mismo SHA `958b84b5297f61ba769fd012e3d1f34403139659`, URL https://desafio-gramatical.onrender.com/.
+- Auditoría de 72 celdas: 1080 registros técnicos con 240 básicos, 360 intermedios y 480 avanzados; 576/576 mutantes negativos detectados. Las regresiones de Español, Matemáticas, Naturales, Sociales y M0 permanecieron aprobadas.
+- Corrección efectuada durante CI: auditor de rotación repara falsa exigencia de cero repeticiones **entre** dos sesiones cuando el nivel tiene solo 10 o 15 ítems. Sigue prohibiendo duplicados **dentro** de una sesión de 10 rondas.
+- Revisión académica y visual manual pendientes, autorizadas; no equivalen a defectos técnicos críticos ni a certificación docente.
+- **Siguiente módulo:** Habilidades Blandas M2 con objetivos acumulados 20/35/45. Esta documentación se confirma con un commit nuevo, por lo que deben verificarse de nuevo CI y Render sobre su SHA.

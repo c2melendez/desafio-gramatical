@@ -1,5 +1,5 @@
 {
-  "version": 22,
+  "version": 23,
   "areas": [
     "espanol",
     "matematicas",
@@ -605,7 +605,7 @@
         "espanol-CORTE"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         10,
         15,
@@ -627,8 +627,34 @@
         "semantic_independence": "NO_CERTIFICADA",
         "official_curriculum": "PRACTICA_COMPLEMENTARIA_NO_ENUMERADA_GUIA_2026",
         "mutants_planned": 576,
-        "ci": "PENDIENTE",
-        "render": "PENDIENTE"
+        "ci": "SUCCESS_MAIN",
+        "render": "LIVE",
+        "mutants_tested": 576,
+        "mutants_detected": 576,
+        "technical_deficits": 0,
+        "review_status": "PENDIENTE_AUTORIZADA"
+      },
+      "release": {
+        "pr": 44,
+        "merged_sha": "958b84b5297f61ba769fd012e3d1f34403139659",
+        "ci_pr": {
+          "run": 44870424885,
+          "sha": "0432aedc835b858941027d23d25d266700a3088e",
+          "conclusion": "success"
+        },
+        "ci_main": {
+          "run": 44870701910,
+          "sha": "958b84b5297f61ba769fd012e3d1f34403139659",
+          "conclusion": "success"
+        },
+        "render": {
+          "deploy_id": "dep-dc0ilr3tqb8s73dhdl4g",
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "sha": "958b84b5297f61ba769fd012e3d1f34403139659",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com/"
+        },
+        "documentation_sha": "PENDIENTE_VERIFICACION_SHA_PROPIO"
       }
     },
     {
