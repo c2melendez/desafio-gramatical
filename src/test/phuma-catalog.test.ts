@@ -19,14 +19,14 @@ describe("Academia PHUMA Play: curriculum and staged rollout", () => {
    expect(Object.values(games).every(g=>g.length>=5)).toBe(true);
   }
  });
- it("habilita Matemáticas, Naturales y Sociales M1; mantiene Blandas pendiente",()=>{
+ it("habilita Matemáticas, Naturales, Sociales y Blandas M1",()=>{
   const modules=AREAS.flatMap(a=>a.topics.flatMap(t=>t.subtopics.map(s=>({area:a.id,topic:t.name,subtopic:s}))));
   const playable=modules.filter(m=>availableModule(m.area as typeof FIRST_MODULE.area,m.topic,m.subtopic));
-  expect(playable).toHaveLength(74);
+  expect(playable).toHaveLength(82);
   expect(playable.filter(x=>x.area==="matematicas")).toHaveLength(22);
   expect(playable.filter(x=>x.area==="naturales")).toHaveLength(19);
    expect(playable.filter(x=>x.area==="sociales")).toHaveLength(20);
-   expect(playable.filter(x=>x.area==="blandas")).toHaveLength(0);
+   expect(playable.filter(x=>x.area==="blandas")).toHaveLength(8);
   expect(playable).toContainEqual(FIRST_MODULE);
   expect(playable.filter(x=>x.topic==="Comprensión lectora")).toHaveLength(7);
   expect(playable.filter(x=>x.topic==="Redacción")).toHaveLength(5);

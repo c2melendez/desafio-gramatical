@@ -20,6 +20,7 @@ import {SCIENCE_TOPICS,SCIENCE_MODES} from "./science-m1";
 import {SCIENCE_M3_LEVEL_COUNT} from "./science-m3";
 import {SOCIAL_TOPICS,SOCIAL_MODES} from "./social-m1";
 import {SOCIAL_M3_LEVEL_COUNT} from "./social-m3";
+import {SOFT_TOPICS,SOFT_MODES,SOFT_LEVEL_COUNT} from "./soft-m1";
 
 export const CONTENT_TARGET:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
 export const CONTENT_STAGE_ONE:Record<Level,number>={principiante:10,intermedio:15,avanzado:20};
@@ -33,6 +34,7 @@ export function countContent(area:AreaId,topic:string,subtopic:string,mode:GameI
  if(area==="matematicas")return MATH_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&MATH_MODES.includes(mode)?(MATH_M3_LEVEL_COUNT[level]??0):0;
  if(area==="naturales")return SCIENCE_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&SCIENCE_MODES.includes(mode)?SCIENCE_M3_LEVEL_COUNT[level]:0;
  if(area==="sociales")return SOCIAL_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&SOCIAL_MODES.includes(mode)?SOCIAL_M3_LEVEL_COUNT[level]:0;
+ if(area==="blandas")return SOFT_TOPICS.some(t=>t.name===topic&&t.subtopics.includes(subtopic))&&SOFT_MODES.includes(mode)?SOFT_LEVEL_COUNT[level]:0;
  if(area!=="espanol")return 0;
  if(topic==="Gramática y semántica"&&subtopic==="Categorías gramaticales")
   return mode==="clasificar"?SENTENCES[level].length+EXTRA_SENTENCES[level].length+(level==="avanzado"?GRAMMAR_ADVANCED_SENTENCES.length:0)+M2_CATEGORY_SENTENCES[level].length+M3_CATEGORY_SENTENCES[level].length:mode==="quiz"?QUIZ[level].length+EXTRA_QUIZ[level].length+M2_CATEGORY_QUIZ[level].length+M3_CATEGORY_QUIZ[level].length:BUILD[level].length+EXTRA_BUILD[level].length+GRAMMAR_NUCLEUS_BUILD[level].length+M2_CATEGORY_BUILD[level].length+M3_CATEGORY_BUILD[level].length;
@@ -55,7 +57,7 @@ export function coverageRows():ContentCoverage[]{
     rows.push({area:area.id,topic:topic.name,subtopic,mode,level,
       available,target:CONTENT_TARGET[level],stageOne:CONTENT_STAGE_ONE[level],
       stageOneComplete:available>=CONTENT_STAGE_ONE[level],complete:available>=CONTENT_TARGET[level],
-      source:available===0?"not-developed":["naturales","sociales"].includes(area.id)?"original-context":topic.name==="Gramática y semántica"&&subtopic!=="Categorías gramaticales"?"original-context":topic.name==="Redacción"&&subtopic==="Conectores"&&mode==="quiz"?"original-context":"legacy"});
+      source:available===0?"not-developed":["naturales","sociales","blandas"].includes(area.id)?"original-context":topic.name==="Gramática y semántica"&&subtopic!=="Categorías gramaticales"?"original-context":topic.name==="Redacción"&&subtopic==="Conectores"&&mode==="quiz"?"original-context":"legacy"});
    }
  return rows;
 }
