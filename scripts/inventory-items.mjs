@@ -19,14 +19,14 @@ import { writingPool } from '../src/lib/writing.ts';
 import {mathM3Pool} from '../src/lib/math-m3.ts';
 import {scienceM3Pool} from '../src/lib/science-m3.ts';
 import {socialM3Pool} from '../src/lib/social-m3.ts';
-import {softPool} from '../src/lib/soft-m1.ts';
+import {softM2Pool} from '../src/lib/soft-m2.ts';
 
 export function pool(row) {
   const {area,topic,subtopic,mode,level}=row;
   if(area==='matematicas')return mathM3Pool(topic,subtopic,level,mode);
   if(area==='naturales')return scienceM3Pool(topic,subtopic,level,mode);
   if(area==='sociales')return socialM3Pool(topic,subtopic,level,mode);
-  if(area==='blandas')return softPool(topic,subtopic,level,mode);
+  if(area==='blandas')return softM2Pool(topic,subtopic,level,mode);
   if(area!=='espanol')return [];
   if(topic==='Gramática y semántica'&&subtopic==='Categorías gramaticales'){
     if(mode==='clasificar')return [...SENTENCES[level],...EXTRA_SENTENCES[level],...(level==='avanzado'?GRAMMAR_ADVANCED_SENTENCES:[]),...M2_CATEGORY_SENTENCES[level],...M3_CATEGORY_SENTENCES[level]];
