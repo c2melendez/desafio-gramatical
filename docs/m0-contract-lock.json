@@ -1,7 +1,7 @@
 {
-  "version": 33,
-  "scope": "Corte Ciencias Sociales M3: 9000 registros técnicos y 180 celdas 30/50/70, M1/M2 inalterados",
-  "baseline_main": "9491afa0c938eb69a02dfd583448b82f556b3843",
+  "version": 34,
+  "scope": "Ciencias Sociales CORTE: 9000 registros y 180 celdas, entradas directas válidas, 20 descripciones didácticas; preservar M0 y áreas anteriores",
+  "baseline_main": "db347499687a68b4ec405cdf34ad88d15588a915",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "63d6f6a6c285d11e511ac22c7c01e19683a909f4",
@@ -15,9 +15,11 @@
     "src/routes/lectura.tsx": "2586e077fa1fe5169f878adc195f79c93b1d7f52",
     "src/routes/redaccion.tsx": "359637749ef4289c6c153699f087dd9ad7556d24",
     "src/routes/historial.tsx": "d720f22412daf48c6b0fc5d73a2ce3ca322cbd9d",
-    "src/lib/study-context.ts": "543bf8b6b23c8f5da9a5cc49d456c322319e0fa3"
+    "src/lib/study-context.ts": "8984405755fed78f227e24f75310d504a7da346c",
+    "src/routes/sociales.tsx": "79d9f116ab95c9acd0f548dbca7427fba75c514f",
+    "src/lib/social-route.ts": "35f1182f565003fb1bce4bbfba7a5ff50ff437a8"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Habilitar banco Social M3 y reconciliar cobertura por nivel sin variar contratos M0 restantes",
-  "previous_baseline": "4953387adc09fda400827e35dd6f3e72b9692cc2"
+  "change_note": "Congela ruta Sociales y validación de búsqueda después de reparar fallback erróneo «Célula»; añade descripciones curadas de 20 subtemas.",
+  "previous_baseline": "9491afa0c938eb69a02dfd583448b82f556b3843"
 }

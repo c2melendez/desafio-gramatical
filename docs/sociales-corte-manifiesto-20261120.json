@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "run_id": "sociales-corte-20261120",
+  "area": "sociales",
+  "state": "CORTE_PENDIENTE",
+  "base_main_sha": "db347499687a68b4ec405cdf34ad88d15588a915",
+  "catalog_sha1": "63d6f6a6c285d11e511ac22c7c01e19683a909f4",
+  "guide": {
+    "name": "GUIA-PRE-U-UNAH-2026(9).pdf",
+    "pages_indexed": [
+      11
+    ],
+    "printed_pages": [
+      10
+    ],
+    "official_question_text_copied": false
+  },
+  "scope": {
+    "topics": 5,
+    "subtopics": 20,
+    "games": [
+      "clasificar",
+      "quiz",
+      "construir"
+    ],
+    "levels": [
+      "principiante",
+      "intermedio",
+      "avanzado"
+    ],
+    "cells": 180,
+    "quota_per_game_subtopic": [
+      30,
+      50,
+      70
+    ],
+    "technical_records": 9000,
+    "technical_records_by_level": {
+      "principiante": 1800,
+      "intermedio": 3000,
+      "avanzado": 4200
+    },
+    "conceptual_anchors": 100
+  },
+  "changes": [
+    "src/lib/social-route.ts",
+    "src/routes/sociales.tsx",
+    "src/lib/study-context.ts",
+    "scripts/audit-social-cut.mjs",
+    "src/test/social-cut-integration.test.ts",
+    "src/test/social-cut-navigation.test.tsx",
+    "docs/m0-contract-lock.json",
+    ".github/workflows/ci.yml"
+  ],
+  "risk_register": [
+    {
+      "id": "review-academica",
+      "status": "PENDIENTE_AUTORIZADA",
+      "severity": "editorial"
+    },
+    {
+      "id": "independencia-semantica",
+      "status": "NO_VERIFICADA",
+      "severity": "pedagogica"
+    },
+    {
+      "id": "visual-manual-movil-escritorio",
+      "status": "NO_EJECUTADA",
+      "severity": "interfaz"
+    }
+  ],
+  "verification": {
+    "structural_audit": "PENDIENTE_CI",
+    "mutation_tests": "PENDIENTE_CI",
+    "global_regressions": "PENDIENTE_CI",
+    "pr": "PENDIENTE",
+    "main_ci": "PENDIENTE",
+    "render": "PENDIENTE"
+  },
+  "next": "blandas-M1"
+}
