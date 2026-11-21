@@ -2,7 +2,7 @@
   "schema_version": 1,
   "run_id": "sociales-corte-20261120",
   "area": "sociales",
-  "state": "CORTE_PENDIENTE",
+  "state": "AREA_COMPLETADA_TECNICAMENTE",
   "base_main_sha": "db347499687a68b4ec405cdf34ad88d15588a915",
   "catalog_sha1": "63d6f6a6c285d11e511ac22c7c01e19683a909f4",
   "guide": {
@@ -70,12 +70,36 @@
     }
   ],
   "verification": {
-    "structural_audit": "PENDIENTE_CI",
-    "mutation_tests": "PENDIENTE_CI",
-    "global_regressions": "PENDIENTE_CI",
-    "pr": "PENDIENTE",
-    "main_ci": "PENDIENTE",
-    "render": "PENDIENTE"
+    "structural_audit": "PASS_N1_CI",
+    "mutation_tests": "PASS_N1_CI",
+    "global_regressions": "PASS_N1_CI",
+    "pr": 43,
+    "main_ci": {
+      "run": 44863038646,
+      "sha": "f79894f3215ef9500bb01444c953a26909b0a330",
+      "conclusion": "success"
+    },
+    "render": {
+      "deploy": "dep-dc0h9dm8bjmc73ahm9p0",
+      "sha": "f79894f3215ef9500bb01444c953a26909b0a330",
+      "status": "live"
+    },
+    "artifact": {
+      "id": 14690777408,
+      "digest_sha256": "625a7a319dcc84e88892bfed82bfb29ded66a8067ec56afd5efefb79b41b9f18"
+    },
+    "documentation_verification": "PENDIENTE_SHA_PROPIO"
   },
-  "next": "blandas-M1"
+  "next": "blandas-M1",
+  "results": {
+    "cells_checked": 180,
+    "technical_records_checked": 9000,
+    "deficit": 0,
+    "negative_mutations": 1800,
+    "mutants_survived": 0,
+    "route_default_fixed": true,
+    "learning_descriptions_curated": 20,
+    "human_review": "PENDIENTE_AUTORIZADA",
+    "manual_visual": "NO_EJECUTADA"
+  }
 }

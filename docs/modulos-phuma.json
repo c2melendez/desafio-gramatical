@@ -1,5 +1,5 @@
 {
-  "version": 20,
+  "version": 21,
   "areas": [
     "espanol",
     "matematicas",
@@ -550,7 +550,7 @@
         "sociales-M3"
       ],
       "optional": [],
-      "state": "CORTE_PENDIENTE",
+      "state": "COMPLETADA",
       "evidence": "docs/sociales-corte-20261120.md",
       "scope": "5 temas, 20 subtemas, 3 juegos, 3 niveles = 180 celdas; 9000 registros técnicos, 30/50/70, revisión humana diferida",
       "technical": {
@@ -566,10 +566,35 @@
         "unreviewed_human": 9000,
         "semantic_independence": "NO_VERIFICADA",
         "manual_visual": "NO_EJECUTADA",
-        "ci": "PENDIENTE",
-        "render": "PENDIENTE"
+        "ci": "SUCCESS_MAIN",
+        "render": "LIVE",
+        "mutants_executed": 1800,
+        "mutants_detected": 1800,
+        "mutants_survivors": 0,
+        "technical_deficits": 0,
+        "reviewed_human": null
       },
-      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA"
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "completion_type": "CORTE_TECNICO_CON_REVISION_DOCENTE_Y_VISUAL_PENDIENTE",
+      "release": {
+        "pr": 43,
+        "merged_sha": "f79894f3215ef9500bb01444c953a26909b0a330",
+        "ci": {
+          "run": 44863038646,
+          "sha": "f79894f3215ef9500bb01444c953a26909b0a330",
+          "conclusion": "success",
+          "artifact_id": 14690777408,
+          "artifact_sha256": "625a7a319dcc84e88892bfed82bfb29ded66a8067ec56afd5efefb79b41b9f18"
+        },
+        "render": {
+          "deploy_id": "dep-dc0h9dm8bjmc73ahm9p0",
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "sha": "f79894f3215ef9500bb01444c953a26909b0a330",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com/"
+        },
+        "documentation_sha": "PENDIENTE_VERIFICACION_SHA_PROPIO"
+      }
     },
     {
       "id": "blandas-M1",

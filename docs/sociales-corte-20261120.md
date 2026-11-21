@@ -1,5 +1,5 @@
 # Ciencias Sociales — corte integral del área
-**Estado de esta rama: CORTE_PENDIENTE.** Solo se declara `AREA_COMPLETADA` con CI SUCCESS en `main` y Render LIVE del mismo commit.
+**Estado: AREA_COMPLETADA TÉCNICAMENTE.** La revisión docente, independencia semántica y prueba visual manual permanecen pendientes; no se declaran certificadas.
 
 ## Identidad y alcance congelado
 - Repositorio: `c2melendez/desafio-gramatical`; SHA de partida: `db347499687a68b4ec405cdf34ad88d15588a915`.
@@ -33,3 +33,17 @@
 
 ## Publicación
 Pendiente de integrar el PR y registrar la evidencia verificable: SHA de `main`, run de CI, artefacto `sociales-corte-integral` y deploy Render del mismo commit. Si después se genera un commit documental, repetir CI y Render para ese commit.
+
+## Cierre de publicación verificado — 20 de noviembre de 2026 (Honduras)
+
+- PR #43: https://github.com/c2melendez/desafio-gramatical/pull/43, **fusionado en main**; SHA `f79894f3215ef9500bb01444c953a26909b0a330`.
+- CI del PR: **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44862748105.
+- CI de main: **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44863038646, exactamente SHA `f79894f3215ef9500bb01444c953a26909b0a330`.
+- Render: **LIVE**, despliegue `dep-dc0h9dm8bjmc73ahm9p0`, mismo SHA `f79894f3215ef9500bb01444c953a26909b0a330`, URL https://desafio-gramatical.onrender.com/.
+- Artefacto integral de corte: https://github.com/c2melendez/desafio-gramatical/actions/runs/44863038646/artifacts/14690777408, digest SHA256 `625a7a319dcc84e88892bfed82bfb29ded66a8067ec56afd5efefb79b41b9f18`. Contiene matriz de 180 celdas, 9.000 hashes de registros y auditoría de 1.800 mutantes.
+- **Resultado de alcance:** 180/180 celdas, 9.000 IDs técnicos, cuotas 30/50/70, déficit técnico cero, 1.800/1.800 mutantes detectados; M1/M2/M3 preservados. No son pruebas de 9.000 preguntas semánticamente independientes.
+- **Hallazgo reparado:** ruta directa `/sociales` y parámetros inválidos, antes con el subtema ajeno «Célula», ahora resueltos mediante `Independencia` y validación de catálogo. Se incorporaron 20 descripciones de aprendizaje curadas.
+- **Pruebas funcionales:** 10 rondas, resultados, reinicio, navegación, restauración de selección y rotación. La interfaz se comprobó en entorno automatizado jsdom y HTTP; no se realizó inspección visual manual de escritorio/móvil.
+- **Pendiente no bloqueante según autorización:** revisión académica y psicométrica; revisión visual manual documentada como no ejecutada. Ninguna se presenta como aprobada.
+- Este informe y el manifiesto se integran mediante otro commit, que requiere nuevo CI y Render LIVE de su SHA propio.
+- **Próximo objetivo:** Habilidades Blandas M1 (núcleo 10/15/20 por subtema y juego), tras confirmar el commit documental.
