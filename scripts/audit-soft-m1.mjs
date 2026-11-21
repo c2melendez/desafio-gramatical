@@ -27,7 +27,7 @@ for(const t of SOFT_TOPICS)for(const sub of t.subtopics){
   let state=emptyRotation();for(const x of first)state=recordRotation(state,x.id,true);
   const second=selectRotation(bank,parseRotation(JSON.stringify(state),bank.map(x=>x.id)),10,()=>0.61);
   if(first.length!==10||second.length!==10||new Set(first.map(x=>x.id)).size!==10||
-   new Set(second.map(x=>x.id)).size!==10||second.some(x=>first.some(y=>x.id===y.id)))
+   new Set(second.map(x=>x.id)).size!==10||second.filter(x=>first.some(y=>x.id===y.id)).length!==Math.max(0,20-bank.length))
    errors.push(cell+": rotación 10/10 o persistencia rota");
   const item=bank[0];
   const tests=[
