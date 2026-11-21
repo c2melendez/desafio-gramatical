@@ -1,8 +1,9 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
+import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Mistake} from "@/lib/grammar";
 import {type ScienceItem} from "@/lib/science-m1";
-import {socialTopic,SOCIAL_SUBTOPICS,SOCIAL_MODES} from "@/lib/social-m1";
+import {socialTopic} from "@/lib/social-m1";
+import {validateSocialSearch} from "@/lib/social-route";
 import {socialM3Pool} from "@/lib/social-m3";
 import {gameNames} from "@/lib/phuma-catalog";
 import {studyReturn} from "@/lib/study-context";
@@ -11,11 +12,7 @@ import {ScienceExerciseCard} from "@/components/games/ScienceExerciseCard";
 import {rotationKey,readRotation,selectRotation,recordRotation,writeRotation} from "@/lib/rotation";
 
 export const Route=createFileRoute("/sociales")({
- validateSearch:(s:Record<string,unknown>):{subtema:string;modo:Mode;nivel:Level}=>({
-  subtema:SOCIAL_SUBTOPICS.includes(s.subtema as string)?s.subtema as string:"Célula",
-  modo:SOCIAL_MODES.includes(s.modo as Mode)?s.modo as Mode:"clasificar",
-  nivel:LEVELS.includes(s.nivel as Level)?s.nivel as Level:"principiante",
- }),
+ validateSearch:validateSocialSearch,
  head:()=>({meta:[{title:"Ciencias Sociales — Academia PHUMA Play"},
   {name:"description",content:"Práctica de Ciencias Sociales M3 con 10 rondas y explicaciones."}]}),
  component:SocialPlay,
@@ -52,7 +49,7 @@ function SocialPlay(){
    setFinished(true);
   }else setIndex(i=>i+1);
  };
- if(!items)return <main className="mx-auto max-w-xl p-6">Preparando ejercicios de ciencias naturales…</main>;
+ if(!items)return <main className="mx-auto max-w-xl p-6">Preparando ejercicios de Ciencias Sociales…</main>;
  if(items.length!==ROUNDS_PER_GAME)throw Error("El banco de Ciencias Sociales debe permitir exactamente 10 rondas sin repetición");
  const names=gameNames(topic),title=names[modo],levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished){
