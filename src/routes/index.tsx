@@ -46,6 +46,7 @@ function Home() {
  const math=areaId==="matematicas";
   const science=areaId==="naturales";
   const social=areaId==="sociales";
+ const soft=areaId==="blandas";
  const names={...gameNames(topic),...(topic==="Redacción"&&subtopic==="Corrección"?{quiz:"Corrección precisa"}:{}),...(topic==="Redacción"&&subtopic==="Organización textual"?{quiz:"Continúa el texto"}:{}),...(topic==="Redacción"&&subtopic==="Elisión y adición"?{quiz:"Revisión precisa"}:{}),...(topic==="Redacción"&&subtopic==="Generalización e integración"?{quiz:"Conclusión sustentada"}:{})};
  const availableCount=countContent(areaId,topic,subtopic,mode,level);
  const targetCount=CONTENT_TARGET[level];
@@ -127,7 +128,7 @@ function Home() {
       </button>
      ))}
     </div>
-    <p className="text-sm text-muted-foreground">Básico: fundamentos · Intermedio: aplicación tipo PHUMA · Avanzado: razonamiento complejo. Estos niveles son orientativos, no una clasificación oficial.</p>
+    <p className="text-sm text-muted-foreground">Básico: fundamentos · Intermedio: aplicación contextual · Avanzado: razonamiento complejo. Estos niveles son orientativos, no una clasificación oficial.</p>
    </section>
 
    <section className="card-ink bg-card p-4 space-y-3" aria-label="Cobertura del banco de ejercicios">
@@ -150,7 +151,10 @@ function Home() {
     <div aria-live="polite" className="rounded-xl border-2 border-foreground bg-accent/40 p-4 text-sm">
       <strong>Tu ruta:</strong> {selectedArea.label} → {topic} → {subtopic} → {names[mode]} → {level==="principiante"?"Básico":LEVEL_LABEL[level]}
     </div>
-    {active?(social?
+    {active?(soft?
+     <Link to="/blandas" search={{subtema:subtopic,modo:mode,nivel:level}}
+      className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
+     social?
      <Link to="/sociales" search={{subtema:subtopic,modo:mode,nivel:level}}
       className="tile block w-full bg-primary py-4 text-center text-xl text-primary-foreground">▶ ¡Comenzar desafío!</Link>:
      science?
