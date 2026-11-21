@@ -1,6 +1,6 @@
 # Habilidades Blandas M2 — Ampliación acumulativa técnica
 
-**Estado del candidato: EN_CURSO.** No declarar cerrado sin CI SUCCESS de la integración en `main` y Render LIVE del mismo SHA.
+**Estado: COMPLETADA TÉCNICAMENTE.** CI de PR y main SUCCESS; Render LIVE del mismo SHA de integración. Revisión académica pendiente.
 
 ## Alcance y procedencia
 
@@ -29,10 +29,22 @@
 
 ## Puerta de publicación
 
-- [ ] Suite de tests, build, inventario y auditorías CI del PR: SUCCESS.
-- [ ] PR fusionado en `main`.
-- [ ] CI `main` SUCCESS y Render LIVE del mismo SHA integrado.
+- [x] Suite de tests, build, inventario y auditorías CI del PR: SUCCESS.
+- [x] PR fusionado en `main`.
+- [x] CI `main` SUCCESS y Render LIVE del mismo SHA integrado.
 - [ ] Informe de cierre y manifiesto con evidencia real, seguidos de CI/Render para el SHA documental si hay nuevo commit.
 - [ ] Revisión docente y visual manual pendientes, no se declaran verificadas.
 
 **Siguiente objetivo:** Habilidades Blandas M3, cuota acumulativa por juego y subtema **30/50/70**, preservando los 2400 registros de M1/M2.
+
+## Publicación verificada — 21 de noviembre de 2026
+
+- PR #45 fusionado en `main`: https://github.com/c2melendez/desafio-gramatical/pull/45; SHA `2612d414a3164fe0291028ef09e92e861b14cd5e`.
+- CI de PR **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44955114766.
+- CI principal **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44955329544, mismo SHA `2612d414a3164fe0291028ef09e92e861b14cd5e`.
+- Render **LIVE**: despliegue `dep-dc11dhnb9u1s73fqmkm0`, mismo SHA `2612d414a3164fe0291028ef09e92e861b14cd5e`, https://desafio-gramatical.onrender.com/.
+- Auditoría integral M2 aceptada en CI: 72/72 celdas; **2400 IDs**; M1 1080 intactos; **1320 agregados**; 720/720 mutaciones negativas detectadas; inventario global 39300.
+- Los 2400 registros no son 2400 capacidades cognitivas independientemente redactadas; se reutilizan 40 anclajes conductuales. Control editorial humano, adecuación psicométrica y prueba visual manual siguen sin certificación.
+- El estado del módulo se marca **COMPLETADA únicamente a nivel técnico**. La revisión académica diferida no bloquea la continuidad autorizada.
+- **Siguiente módulo:** Habilidades Blandas M3, objetivos 30/50/70 por juego y subtema, conservando todos los registros previos.
+- Esta documentación produce un nuevo SHA; debe verificarse CI y Render del nuevo commit antes del cierre definitivo.
