@@ -16,14 +16,14 @@ describe("CORTE Ciencias Sociales: 180 combinaciones y 9000 IDs válidos",()=>{
   expect(validateSocialSearch({subtema:"Célula",modo:"x",nivel:"desconocido"})).toEqual(validateSocialSearch({}));
   expect(validateSocialSearch({subtema:null,modo:17,nivel:[]})).toEqual(validateSocialSearch({}));
   for(const sub of SOCIAL_SUBTOPICS)for(const mode of SOCIAL_MODES)for(const level of SOCIAL_LEVELS)
-   expect(validateSocialSearch({subtema:sub,modo:mode,nivel:level})).toEqual({subtema:sub,modo, nivel:level});
+   expect(validateSocialSearch({subtema:sub,modo:mode,nivel:level})).toEqual({subtema:sub,modo:mode,nivel:level});
  });
  it("usa una competencia específica por cada subtema y mantiene navegación contextual",()=>{
   for(const topic of SOCIAL_TOPICS)for(const subtopic of topic.subtopics){
    const rule=learningDescription("sociales",topic.name,subtopic);
    expect(rule.length).toBeGreaterThan(65);
    expect(rule).not.toContain("En «"+subtopic+"»");
-   expect(rule).not.toMatch(/módulo|CI|auditoría|ampliación M3/i);
+   expect(rule).not.toMatch(/\b(?:módulo|CI|auditoría|ampliación M3)\b/i);
    expect(studyReturn(topic.name,subtopic,"quiz","avanzado","sociales"))
      .toEqual({area:"sociales",tema:topic.name,subtema:subtopic,modo:"quiz",nivel:"avanzado"});
   }
