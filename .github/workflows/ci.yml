@@ -213,6 +213,16 @@ jobs:
           path: sociales-corte-integral.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar Habilidades Blandas M1 — 1080 registros, 72 celdas, 576 mutaciones
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-soft-m1.mjs > blandas-m1-integral.json
+      - name: Conservar auditoría Habilidades Blandas M1
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blandas-m1-integral
+          path: blandas-m1-integral.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema
@@ -384,7 +394,7 @@ jobs:
         run: |
           set -euo pipefail
           base="https://desafio-gramatical.onrender.com"
-          for route in "/" "/sociales" "/sociales?subtema=C%C3%A9lula&modo=desconocido&nivel=no" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante" "/jugar?modo=clasificar&nivel=intermedio&subtema=Morfosintaxis" "/lectura?subtema=Inferencias&modo=construir&nivel=avanzado" "/redaccion?subtema=Correcci%C3%B3n&modo=quiz&nivel=intermedio" "/jugar?modo=clasificar&nivel=avanzado&subtema=Hiperonimia" "/lectura?subtema=Lectura%20comparada&modo=quiz&nivel=avanzado" "/redaccion?subtema=Generalizaci%C3%B3n%20e%20integraci%C3%B3n&modo=construir&nivel=avanzado" "/matematicas?subtema=Operaciones&modo=clasificar&nivel=principiante" "/matematicas?subtema=Pit%C3%A1goras&modo=construir&nivel=intermedio" "/matematicas?subtema=Funciones&modo=quiz&nivel=avanzado" "/matematicas?subtema=Tablas%20y%20gr%C3%A1ficas&modo=quiz&nivel=avanzado" "/matematicas?subtema=S%C3%B3lidos%3A%20%C3%A1rea%20y%20volumen&modo=clasificar&nivel=avanzado" "/naturales?subtema=C%C3%A9lula&modo=clasificar&nivel=principiante" "/naturales?subtema=Compuestos%20inorg%C3%A1nicos&modo=quiz&nivel=intermedio" "/naturales?subtema=Movimiento&modo=construir&nivel=avanzado" "/sociales?subtema=Independencia&modo=clasificar&nivel=principiante" "/sociales?subtema=Husos%20horarios&modo=quiz&nivel=intermedio" "/sociales?subtema=Constituci%C3%B3n%20y%20derechos&modo=construir&nivel=avanzado"; do
+          for route in "/" "/blandas" "/blandas?subtema=Respeto&modo=quiz&nivel=intermedio" "/sociales" "/sociales?subtema=C%C3%A9lula&modo=desconocido&nivel=no" "/jugar?modo=quiz&nivel=principiante&subtema=Hiperonimia" "/jugar?modo=construir&nivel=principiante&subtema=Morfosintaxis" "/lectura?subtema=Idea%20principal&modo=quiz&nivel=principiante" "/redaccion?subtema=Conectores&modo=quiz&nivel=principiante" "/jugar?modo=clasificar&nivel=intermedio&subtema=Morfosintaxis" "/lectura?subtema=Inferencias&modo=construir&nivel=avanzado" "/redaccion?subtema=Correcci%C3%B3n&modo=quiz&nivel=intermedio" "/jugar?modo=clasificar&nivel=avanzado&subtema=Hiperonimia" "/lectura?subtema=Lectura%20comparada&modo=quiz&nivel=avanzado" "/redaccion?subtema=Generalizaci%C3%B3n%20e%20integraci%C3%B3n&modo=construir&nivel=avanzado" "/matematicas?subtema=Operaciones&modo=clasificar&nivel=principiante" "/matematicas?subtema=Pit%C3%A1goras&modo=construir&nivel=intermedio" "/matematicas?subtema=Funciones&modo=quiz&nivel=avanzado" "/matematicas?subtema=Tablas%20y%20gr%C3%A1ficas&modo=quiz&nivel=avanzado" "/matematicas?subtema=S%C3%B3lidos%3A%20%C3%A1rea%20y%20volumen&modo=clasificar&nivel=avanzado" "/naturales?subtema=C%C3%A9lula&modo=clasificar&nivel=principiante" "/naturales?subtema=Compuestos%20inorg%C3%A1nicos&modo=quiz&nivel=intermedio" "/naturales?subtema=Movimiento&modo=construir&nivel=avanzado" "/sociales?subtema=Independencia&modo=clasificar&nivel=principiante" "/sociales?subtema=Husos%20horarios&modo=quiz&nivel=intermedio" "/sociales?subtema=Constituci%C3%B3n%20y%20derechos&modo=construir&nivel=avanzado"; do
             file="$(mktemp)"
             code=$(curl --fail --location --silent --show-error --retry 4 --retry-delay 7 --retry-all-errors --max-time 50 --output "$file" --write-out '%{http_code}' "$base$route")
             if ! grep -Eiq '<html|<!doctype html' "$file"; then
