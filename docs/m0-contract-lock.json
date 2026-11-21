@@ -1,11 +1,11 @@
 {
-  "version": 35,
-  "scope": "Habilidades Blandas M1: habilitar ocho subtemas y 72 celdas con cuotas 10/15/20, preservando las cuatro áreas previas",
-  "baseline_main": "8a0636aafe7112163011e024c2f09ac96eb5295b",
+  "version": 36,
+  "scope": "Habilidades Blandas M2: 72 celdas 20/35/45 (2400 registros), preservando íntegramente M1 y cuatro áreas anteriores",
+  "baseline_main": "78ed4eddc02a078f1718a81af1cdd64ae8ffd4a9",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "059cc139787d59d6342f4a5bd3a9214fc8b338ac",
-    "src/lib/coverage.ts": "f8c1573fda2c00b4d938064a3a114d40f41d5345",
+    "src/lib/coverage.ts": "96e593874433e1dfe21cd8efbb519a52c6ccd479",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
     "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449",
@@ -20,6 +20,6 @@
     "src/lib/social-route.ts": "35f1182f565003fb1bce4bbfba7a5ff50ff437a8"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Habilita rutas, cobertura, objetivos didácticos y banco complementario de 1080 registros; revisión académica no certificada",
-  "previous_baseline": "db347499687a68b4ec405cdf34ad88d15588a915"
+  "change_note": "Permitir segunda etapa acumulativa sin alterar contratos M0; auditada cobertura por nivel y juego",
+  "previous_baseline": "8a0636aafe7112163011e024c2f09ac96eb5295b"
 }

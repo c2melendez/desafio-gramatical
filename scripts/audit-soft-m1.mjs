@@ -1,5 +1,6 @@
 import {SOFT_TOPICS,SOFT_SUBTOPICS,SOFT_LEVELS,SOFT_MODES,SOFT_LEVEL_COUNT,SOFT_M1_TOTAL,softPool,softFacts} from "../src/lib/soft-m1.ts";
 import {verifyScienceCell,verifyScienceItem} from "../src/lib/science-m1-verifier.ts";
+import {SOFT_M2_LEVEL_COUNT} from "../src/lib/soft-m2.ts";
 import {coverageRows,countContent} from "../src/lib/coverage.ts";
 import {availableModule} from "../src/lib/phuma-catalog.ts";
 import {emptyRotation,selectRotation,recordRotation,parseRotation} from "../src/lib/rotation.ts";
@@ -11,7 +12,7 @@ for(const t of SOFT_TOPICS)for(const sub of t.subtopics){
   errors.push(sub+": cinco anclajes diferenciados obligatorios");
  for(const mode of SOFT_MODES)for(const level of SOFT_LEVELS){
   const cell=t.name+"/"+sub+"/"+mode+"/"+level,bank=softPool(t.name,sub,level,mode),before=errors.length;
-  if(bank.length!==SOFT_LEVEL_COUNT[level]||countContent("blandas",t.name,sub,mode,level)!==bank.length||!availableModule("blandas",t.name,sub))
+  if(bank.length!==SOFT_LEVEL_COUNT[level]||countContent("blandas",t.name,sub,mode,level)!==SOFT_M2_LEVEL_COUNT[level]||!availableModule("blandas",t.name,sub))
    errors.push(cell+": cuota/menú inválido");
   for(const problem of verifyScienceCell(bank,level,mode,facts))errors.push(cell+": "+problem);
   for(const item of bank){
