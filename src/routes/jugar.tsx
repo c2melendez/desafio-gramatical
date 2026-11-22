@@ -4,7 +4,7 @@ import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionH
 import {studyReturn} from "@/lib/study-context";
 import {LearningFeedback} from "@/components/games/LearningFeedback";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BUILD, LEVELS, LEVEL_LABEL, MODE_LABEL, QUIZ, SENTENCES, pointsFor, saveHistory, shuffle, type Level, type Mistake, type Mode } from "@/lib/grammar";
 import { EXTRA_BUILD } from "@/lib/extra-build";
 import { EXTRA_SENTENCES } from "@/lib/extra-sentences";
@@ -105,18 +105,34 @@ function Play() {
   const [total, setTotal] = useState(0);
   const [mistakes, setMistakes] = useState<Mistake[]>([]);
   const [finished, setFinished] = useState(false);
+  const classification = useRef({ itemId: "", count: 0, allCorrect: true });
 
   useEffect(() => {
+    classification.current = { itemId: "", count: 0, allCorrect: true };
     setItems(buildItems(modo, nivel)); setIdx(0); setScore(0); setStreak(0); setBest(0);
     setCorrect(0); setTotal(0); setMistakes([]); setFinished(false);
   }, [modo, nivel, run]);
 
   const report = (ok: boolean, m?: Mistake) => {
+    if (m) setMistakes((x) => [...x, m]);
+    // Cada palabra cuenta para la corrección, pero la ronda solo se puntúa UNA vez.
+    if (modo === "clasificar") {
+      const item = items?.[idx];
+      if (!item) return;
+      if (classification.current.itemId !== item.id) {
+        classification.current = { itemId: item.id, count: 0, allCorrect: true };
+      }
+      classification.current.count += 1;
+      classification.current.allCorrect = classification.current.allCorrect && ok;
+      const expected = item.tokens.filter((token: { c?: string }) => Boolean(token.c)).length;
+      if (classification.current.count !== expected) return;
+      ok = classification.current.allCorrect;
+    }
     setTotal((t) => t + 1);
     if (ok) {
       setCorrect((c) => c + 1);
       setStreak((s) => { setScore((sc) => sc + pointsFor(s)); const n = s + 1; setBest((b) => Math.max(b, n)); return n; });
-    } else { setStreak(0); if (m) setMistakes((x) => [...x, m]); }
+    } else setStreak(0);
   };
   const next = () => {
     if (!items) return;
