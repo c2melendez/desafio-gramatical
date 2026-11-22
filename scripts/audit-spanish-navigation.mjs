@@ -39,17 +39,17 @@ try{
      for(let i=1;i<=3;i++)await page.getByRole("group",{name:"Clasificación de afirmación "+i}).getByRole("button").first().click();
      await page.getByRole("button",{name:"Comprobar las tres afirmaciones",exact:true}).click();
     }else if(test.name==="lectura-construir"){
-     for(let i=0;i<3;i++)await page.locator("div.grid.gap-2 > button:not([disabled])").first().click();
+     for(let i=0;i<3;i++)await page.getByText("Fichas disponibles",{exact:true}).locator("xpath=following-sibling::div[1]").locator("button:not([disabled])").first().click();
      await page.getByRole("button",{name:"Comprobar secuencia",exact:true}).click();
     }else if(test.name==="lectura-quiz"){
      await page.locator("main div.grid.gap-3 button").first().click();
     }else if(test.name==="redaccion-construir"){
-     for(let i=0;i<3;i++)await page.locator("div.grid.gap-2 > button:not([disabled])").first().click();
+     for(let i=0;i<3;i++)await page.getByText("Fragmentos disponibles",{exact:true}).locator("xpath=following-sibling::div[1]").locator("button:not([disabled])").first().click();
      await page.getByRole("button",{name:"Revisar párrafo",exact:true}).click();
     }else if(test.name==="redaccion-quiz"){
-     await page.locator("main div.grid button:not([disabled])").last().click();
+     await page.locator('section[aria-label="Conector correcto"] div.grid button:not([disabled])').first().click();
     }else if(test.name==="redaccion-clasificar"){
-     await page.locator("main div.grid button:not([disabled])").first().click();
+     await page.locator('section[aria-label^="Cazador de errores"] div.grid button:not([disabled])').first().click();
     }
     const next=page.getByRole("button",{name:/^(Continuar|Siguiente|Ver resultados)/}).last();
     await next.waitFor({state:"visible",timeout:8000});
