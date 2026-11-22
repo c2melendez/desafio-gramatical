@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "policy": "La matriz técnica no acredita originalidad, validez de aprendizaje ni equivalencia con instrumentos oficiales. No reproduce preguntas protegidas.",
+  "references": [
+    {
+      "id": "PHUMA-CEI-TEST-2026",
+      "file": "GUIA-PRE-U-UNAH-2026",
+      "pages": "5-11 (PDF)",
+      "role": "estructura y temario PHUMA"
+    },
+    {
+      "id": "PHUMA-CEI-TEST-PREU",
+      "file": "GUIA-PRE-U-UNAH",
+      "pages": "4-11 (PDF)",
+      "role": "estructura y temario previo"
+    },
+    {
+      "id": "PAA-COLLEGEBOARD-2021",
+      "file": "Guia_de_estudios_PAA",
+      "pages": "7, 9-11, 38-60 (PDF)",
+      "role": "estructura, lectura, redacción, matemáticas"
+    },
+    {
+      "id": "PAA-PRACTICA",
+      "file": "0-PAA-Prueba-Practica",
+      "pages": "1-48 (PDF)",
+      "role": "variedad y mecánica de muestra"
+    }
+  ],
+  "exams": {
+    "PHUMA": {
+      "duration_minutes": 170,
+      "question_count": 120,
+      "response_format": "single_choice_four_options",
+      "sections": [
+        {
+          "area": "espanol",
+          "count": 30,
+          "topics": [
+            "Comprensión lectora",
+            "Gramática y semántica",
+            "Redacción",
+            "Literatura"
+          ]
+        },
+        {
+          "area": "matematicas",
+          "count": 30,
+          "topics": [
+            "Aritmética",
+            "Álgebra",
+            "Geometría",
+            "Estadística y probabilidad"
+          ]
+        },
+        {
+          "area": "naturales",
+          "count": 20,
+          "topics": [
+            "Biología",
+            "Química",
+            "Física"
+          ]
+        },
+        {
+          "area": "sociales",
+          "count": 20,
+          "topics": [
+            "Historia de Honduras",
+            "Historia universal",
+            "Geografía",
+            "Civismo",
+            "Ciencias sociales"
+          ]
+        },
+        {
+          "area": "blandas",
+          "count": 20,
+          "topics": [
+            "Toma de decisiones",
+            "Convivencia",
+            "Autogestión"
+          ]
+        }
+      ],
+      "reference": "PHUMA-CEI-TEST-2026, PDF pág. 5"
+    },
+    "PAA": {
+      "duration_minutes_without_english": 140,
+      "question_count_without_english": null,
+      "question_count_note": "No inferir un total único: el instrumento y materiales provistos tienen versiones distintas.",
+      "response_formats": [
+        "single_choice_four_options",
+        "math_supplied_response"
+      ],
+      "sections": [
+        {
+          "area": "espanol",
+          "name": "Lectura",
+          "topics": [
+            "Comprensión lectora",
+            "Literatura"
+          ]
+        },
+        {
+          "area": "espanol",
+          "name": "Redacción",
+          "topics": [
+            "Redacción",
+            "Gramática y semántica"
+          ]
+        },
+        {
+          "area": "matematicas",
+          "name": "Matemáticas",
+          "topics": [
+            "Aritmética",
+            "Álgebra",
+            "Geometría",
+            "Estadística y probabilidad"
+          ]
+        }
+      ],
+      "reference": "PAA College Board guía 2021, PDF pág. 7 y págs. 9-11; omitir Inglés"
+    }
+  },
+  "catalog_contract": {
+    "cells": 810,
+    "technical_records": 40500,
+    "rounds_per_game": 10,
+    "minimum_per_level": {
+      "principiante": 30,
+      "intermedio": 50,
+      "avanzado": 70
+    },
+    "areas": [
+      "espanol",
+      "matematicas",
+      "naturales",
+      "sociales",
+      "blandas"
+    ]
+  },
+  "certification_gates": {
+    "C01": {
+      "name": "alineacion_curricular",
+      "technical": "inventory_and_topic_mapping",
+      "academic": "manual_item_to_official_competency_review"
+    },
+    "C02": {
+      "name": "validez_de_respuesta",
+      "technical": "independent_structural_oracles_and_mutation",
+      "academic": "independent_subject_matter_review"
+    },
+    "C03": {
+      "name": "mecanicas",
+      "technical": "browser_progression_10_rounds_and_history",
+      "academic": "usability_and_real_devices"
+    },
+    "C04": {
+      "name": "calidad_pedagogica",
+      "technical": "explanation_and_content_diagnostics",
+      "academic": "difficulty_diversity_transfer_and_distractor_review"
+    },
+    "C05": {
+      "name": "simulacion",
+      "technical": "separate_exam_blueprint_checks",
+      "academic": "timed_full_exams_not_yet_implemented"
+    }
+  },
+  "independent_approval_required": [
+    "academic_correctness",
+    "semantic_independence",
+    "psychometric_calibration",
+    "full_PAA_simulation",
+    "full_PHUMA_simulation"
+  ]
+}
