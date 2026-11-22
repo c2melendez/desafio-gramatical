@@ -528,7 +528,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          bun run preview -- --host 127.0.0.1 --port 4173 > /tmp/m4-preview.log 2>&1 &
+          npx --yes wrangler@4.50.0 dev --config .output/server/wrangler.json --local --port 4173 --ip 127.0.0.1 > /tmp/m4-preview.log 2>&1 &
           server=$!
           trap 'kill "$server" 2>/dev/null || true' EXIT
           ready=0
