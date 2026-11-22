@@ -233,6 +233,16 @@ jobs:
           path: blandas-m2-integral.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar Habilidades Blandas M3 — 3600 registros, 72 celdas, 720 mutaciones
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-soft-m3.mjs > blandas-m3-integral.json
+      - name: Conservar auditoría acumulativa Habilidades Blandas M3
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blandas-m3-integral
+          path: blandas-m3-integral.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema
