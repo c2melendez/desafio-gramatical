@@ -50,11 +50,11 @@ function SoftPlay(){
    setFinished(true);
   }else setIndex(i=>i+1);
  };
- if(!items)return <main className="mx-auto max-w-xl p-6">Preparando ejercicios de Habilidades Blandas…</main>;
+ if(!items)return <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-xl p-6">Preparando ejercicios de Habilidades Blandas…</main>;
  if(items.length!==ROUNDS_PER_GAME)throw Error("El banco de Habilidades Blandas debe permitir exactamente 10 rondas sin repetición");
  const names=gameNames(topic),title=names[modo],levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished){
-  return <main className="mx-auto max-w-xl px-4 py-8 space-y-5">
+  return <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-xl px-4 py-8 space-y-5">
    <h1 className="text-3xl font-black">¡Reto de Habilidades Blandas completado!</h1>
    <p>{topic} · {subtema} · {title} · {levelName}</p>
    <div className="grid grid-cols-3 gap-2 text-center">
@@ -76,7 +76,7 @@ function SoftPlay(){
   </main>;
  }
  const item=items[index];
- return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5">
+ return <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-2xl px-4 py-5 space-y-5">
   <GameSessionHeader context={`${subtema} · ${levelName}`} title={title} round={index+1} score={score}
    streak={streak} onRestart={()=>setRun(x=>x+1)} returnTo={returnTo}/>
   <ScienceExerciseCard key={item.id} areaLabel="Habilidades Blandas" item={item} onResult={report} onNext={next} isLast={index===items.length-1}/>
