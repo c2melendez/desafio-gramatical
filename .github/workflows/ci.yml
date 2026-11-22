@@ -243,6 +243,16 @@ jobs:
           path: blandas-m3-integral.json
           if-no-files-found: error
           retention-days: 30
+      - name: Auditar CORTE integral Habilidades Blandas — 3600 registros, 72 celdas, 720 mutaciones y hashes
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-soft-cut.mjs > blandas-corte-integral.json
+      - name: Conservar manifiesto integral de 3600 hashes y matriz de Blandas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blandas-corte-integral
+          path: blandas-corte-integral.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar claridad, ambigüedad y competencia por ejercicio
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-clarity-competency.mjs > claridad-competencia-espanol.json
       - name: Archivar matriz editorial por ID, tema y subtema

@@ -1,7 +1,7 @@
 {
-  "version": 37,
-  "scope": "Habilidades Blandas M3: 72 celdas a 30/50/70, 3600 registros técnicos, preservando M1/M2 y las cuatro áreas anteriores",
-  "baseline_main": "202ab1b73b155c7fd55bef86058b208e079684d3",
+  "version": 38,
+  "scope": "Blandas CORTE: 3600 items, 72 celdas, route search validation and 720 negative fixtures; preserve M1–M3",
+  "baseline_main": "2a47febb7192cd9a1ca47b771625f714e8cef3d3",
   "hash_algorithm": "git-blob-sha1",
   "files": {
     "src/lib/phuma-catalog.ts": "059cc139787d59d6342f4a5bd3a9214fc8b338ac",
@@ -18,9 +18,10 @@
     "src/lib/study-context.ts": "668628e0a595e6b9339dc5445b74b6b673694e0b",
     "src/routes/sociales.tsx": "79d9f116ab95c9acd0f548dbca7427fba75c514f",
     "src/lib/social-route.ts": "35f1182f565003fb1bce4bbfba7a5ff50ff437a8",
-    "src/routes/blandas.tsx": "4f3b5f2197ea8790276e7f6ecb54b67f674e592e"
+    "src/routes/blandas.tsx": "a38d8ff0f58c365ddeb9c7f585f2237fd00fa8bc",
+    "src/lib/soft-route.ts": "d132088ba75bcddb353b8da840d6a3f00f49aaa5"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Verifica actualización aditiva M3 de ruta Blandas y cobertura, conservando selección, rotación e historial",
-  "previous_baseline": "78ed4eddc02a078f1718a81af1cdd64ae8ffd4a9"
+  "change_note": "Centraliza validación segura de búsqueda de Blandas; mantiene contratos y regresiones sin modificación de generadores",
+  "previous_baseline": "202ab1b73b155c7fd55bef86058b208e079684d3"
 }
