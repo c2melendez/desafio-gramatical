@@ -86,7 +86,7 @@ function PlayRouter() {
   if(modo==="quiz")return <GrammarPilot key={`${subtema}-${nivel}`} subtema={subtema} nivel={nivel}/>;
   if(modo==="clasificar"&&(subtema==="Sinónimos y antónimos"||subtema==="Cohesión y coherencia"))
    return <SynonymClassification key={`${subtema}-${nivel}`} nivel={nivel} subtema={subtema}/>;
-  return <main className="p-6">Esta modalidad está en desarrollo. <Link to="/" search={returnTo}>Volver a la selección</Link></main>;
+  return <main className="p-6">Esta modalidad está en desarrollo. <Link to="/" search={studyReturn(subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica",subtema,modo,nivel)}>Volver a la selección</Link></main>;
  }
  return <Play/>;
 }
