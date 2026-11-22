@@ -1,5 +1,5 @@
 {
-  "version": 31,
+  "version": 32,
   "areas": [
     "espanol",
     "matematicas",
@@ -871,7 +871,7 @@
       "optional": [],
       "state": "EN_CURSO",
       "evidence": "docs/m4-checkpoint-global.md",
-      "scope": "Cierre global: inventario, rendimiento CI, privacidad y accesibilidad; validación manual y psicométrica no certificada",
+      "scope": "40.500 registros y 810 celdas auditadas, navegador CI Chromium/Firefox en 4 perfiles PASS, privacidad local/PWA PASS, limitaciones manuales declaradas",
       "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
       "technical": {
         "target_cells": 810,
@@ -881,7 +881,29 @@
         "a11y_navigation": "CORREGIDA_PRUEBA_CI_PENDIENTE",
         "real_browser_a11y": "NO_EJECUTADA",
         "real_browser_performance": "NO_EJECUTADA",
-        "semantic_independence": "NO_CERTIFICADA"
+        "semantic_independence": "NO_CERTIFICADA",
+        "global_records": 40500,
+        "global_cells": 810,
+        "ci_browser_run": 45000733641,
+        "ci_browser_sha": "51e8d887ad567971ea40928609972b7853706cf9",
+        "browser_profiles": 4,
+        "browser_checks": 84,
+        "browser_failures": 0,
+        "browser_artifact_id": 14745458584,
+        "browser_engines": [
+          "chromium",
+          "firefox"
+        ],
+        "browser_third_party_requests": "NINGUNA_OBSERVADA_EN_RUTAS_PROBADAS_CI",
+        "privacy_guard": "PASS_CI",
+        "render_live_deploy": "dep-dc1a21e0tbcc73ag0dhg",
+        "render_live_sha": "51e8d887ad567971ea40928609972b7853706cf9",
+        "real_browser_accessibility": "PRUEBA_BASICA_NAVEGACION_CI_PASS",
+        "screen_reader": "PENDIENTE",
+        "safari_webkit": "PENDIENTE",
+        "physical_devices": "PENDIENTE",
+        "production_instrumented_network": "PENDIENTE",
+        "academic_review": "PENDIENTE_AUTORIZADA"
       }
     }
   ]
