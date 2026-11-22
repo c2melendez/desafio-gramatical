@@ -3,6 +3,7 @@ import {SOFT_TOPICS,SOFT_SUBTOPICS,SOFT_LEVELS,SOFT_MODES,softFacts,softPool} fr
 import {SOFT_M2_LEVEL_COUNT,SOFT_M2_NEW_PER_LEVEL,SOFT_M2_NEW_TOTAL,SOFT_M2_TOTAL,softM2Pool,softM2NewPool,softM2Model} from "@/lib/soft-m2";
 import {verifyScienceCell,verifyScienceItem,scienceStimulusFingerprint} from "@/lib/science-m1-verifier";
 import {countContent,coverageRows} from "@/lib/coverage";
+import {SOFT_M3_LEVEL_COUNT} from "@/lib/soft-m3";
 import {availableModule} from "@/lib/phuma-catalog";
 import {emptyRotation,selectRotation,recordRotation,parseRotation,rotationKey} from "@/lib/rotation";
 describe("Habilidades Blandas M2: integración cumulativa y regresión 2400 IDs",()=>{
@@ -17,7 +18,7 @@ describe("Habilidades Blandas M2: integración cumulativa y regresión 2400 IDs"
     expect(bank.slice(0,previous.length)).toEqual(previous);
     expect(fresh.length).toBe(SOFT_M2_NEW_PER_LEVEL[level]);
     expect(bank.length).toBe(SOFT_M2_LEVEL_COUNT[level]);
-    expect(countContent("blandas",topic.name,sub,mode,level)).toBe(bank.length);
+    expect(countContent("blandas",topic.name,sub,mode,level)).toBe(SOFT_M3_LEVEL_COUNT[level]);
     expect(availableModule("blandas",topic.name,sub)).toBe(true);
     expect(verifyScienceCell(bank,level,mode,softFacts(sub))).toEqual([]);
     const stems=new Set(previous.map(scienceStimulusFingerprint));
