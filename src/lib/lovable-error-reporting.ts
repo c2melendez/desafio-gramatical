@@ -25,7 +25,7 @@ declare global {
 }
 
 export function reportLovableError(error: unknown, context: Record<string, unknown> = {}) {
-  if (typeof window === "undefined") return;
+  // El reporte del editor solo se habilita durante desarrollo local.\n  // En producción no se envían rutas ni trazas de errores a hooks de terceros.\n  if (!import.meta.env.DEV || typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
     error,
     {
