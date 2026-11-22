@@ -1,5 +1,5 @@
 {
-  "version": 30,
+  "version": 31,
   "areas": [
     "espanol",
     "matematicas",
@@ -869,7 +869,20 @@
         "blandas-CORTE"
       ],
       "optional": [],
-      "state": "PENDIENTE"
+      "state": "EN_CURSO",
+      "evidence": "docs/m4-checkpoint-global.md",
+      "scope": "Cierre global: inventario, rendimiento CI, privacidad y accesibilidad; validación manual y psicométrica no certificada",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "target_cells": 810,
+        "target_records": 40500,
+        "baseline_ci_success_run": 44983241824,
+        "baseline_render_live": "dep-dc16ie7mocus73an149g",
+        "a11y_navigation": "CORREGIDA_PRUEBA_CI_PENDIENTE",
+        "real_browser_a11y": "NO_EJECUTADA",
+        "real_browser_performance": "NO_EJECUTADA",
+        "semantic_independence": "NO_CERTIFICADA"
+      }
     }
   ]
 }
