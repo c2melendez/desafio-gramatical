@@ -55,3 +55,11 @@ En las revisiones sin oráculo independiente se debe emitir `REVIEW`; no reetiqu
 - La clasificación curricular individual se fija expresamente en `REVIEW`: el vínculo por nombre del tema con el examen permite priorizar auditorías, pero no prueba que un ejercicio evalúe correctamente una competencia. Una referencia genérica `sourceLocator` no cambia ese estado.
 - `run.mjs` integra los nuevos oráculos de Español en C00/C02 y mantiene separado el indicador `certified_for_exams: false`. La revisión docente del contenido y la equivalencia con preguntas reales continúan pendientes.
 - El trabajo de CI conserva `academia-item-trace-spanish-oracles` con informe, trazas y fallos diagnosticables. La revisión de errores detectados debe corregir la pregunta/banco de origen o justificar una excepción documentada; nunca se deben suprimir errores por lotes.
+
+## Tercera fase — claves derivadas y distractores
+
+El script `qa/certification/semantic-lineage.mjs` contrasta, de forma independiente de la UI, las claves de las composiciones M2/M3 de Comprensión lectora y Redacción con las respuestas de sus ejercicios fuente mediante `sourceIds`. Exige que la opción compuesta correcta exista una sola vez. Marca como fallo una clave compuesta distinta de la derivada o distractores textualmente idénticos después de normalizar mayúsculas y espacios.
+
+Las opciones que solo difieren por puntuación se conservan en estado **REVIEW**, pues pueden evaluar ortografía o uso de signos; la suite no debe decidir su equivalencia académica sin lectura contextual. Los `sourceIds` no resolubles también se registran como **REVIEW** para no inventar un linaje correcto.
+
+El oráculo de linaje **no prueba** que la clave original sea semánticamente correcta. Para obtener evidencia independiente de corrección factual serán necesarios reactivos con reglas lingüísticas formalizadas o validaciones por docentes que no dependan de la misma clave original. El resultado se archiva como `academia-spanish-semantic-lineage` y debe corresponder al mismo SHA que CI y Render antes de emitir conclusiones.
