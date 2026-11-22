@@ -83,6 +83,16 @@ jobs:
           name: m0-inventario
           path: m0-inventory.json
           retention-days: 30
+      - name: M4 - validar privacidad local, fallbacks e instalabilidad PWA
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m4-runtime.mjs > m4-runtime-compatibility.json
+      - name: M4 - archivar evidencia de compatibilidad y almacenamiento
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m4-runtime-storage-pwa
+          path: m4-runtime-compatibility.json
+          if-no-files-found: error
+          retention-days: 30
       - name: M4 - auditar 40500 posiciones, 810 celdas y cinco áreas
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m4-global.mjs > m4-global-audit.json
       - name: M4 - archivar matriz técnica transversal
