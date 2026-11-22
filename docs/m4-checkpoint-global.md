@@ -27,3 +27,12 @@
 - [ ] Síntesis de riesgos y evidencia final del cierre global.
 
 No se contabilizan los controles pendientes como PASS ni se cambia el módulo a COMPLETADA antes de contar con evidencia.
+
+## Tercera pasada — privacidad local y compatibilidad PWA (22 de noviembre de 2026)
+
+- La corrida previa `ee015be37d4ce695179f7f81adc40721a48b2f41` cerró CI `44997551248` como **SUCCESS** y Render `dep-dc19e1e417fc73bag1s0` como **LIVE** para el mismo SHA. Se archivaron `m4-global-technical-baseline`, `m4-global-node-performance` y `m4-accessibility-contracts`.
+- El manifiesto PWA referenciaba `/icon-192.png` y `/icon-512.png`, y la cabecera HTML `/favicon.png`; ninguno de esos PNG estaba versionado ni generado explícitamente durante el build. Se añadió `scripts/generate-pwa-icons.mjs`, generador reproducible basado en zlib/PNG sin dependencias de terceros, y `bun run build` ahora los produce antes de Vite.
+- `scripts/audit-m4-runtime.mjs` ejercita mediante almacenamiento simulado las escrituras, restauración, borrado, truncamiento de historial a 100 registros, recuperación ante datos malformados, excepciones por almacenamiento bloqueado, claves de rotación aisladas por área y sesiones de diez preguntas. Valida estructura del manifiesto y cabeceras PNG reales después del build. Estos son **contratos de ejecución Node y adaptadores simulados**, no una prueba en navegador real.
+- `.github/workflows/ci.yml` incorpora el control obligatorio y el artefacto `m4-runtime-storage-pwa`. El resultado de CI y Render del SHA final de esta pasada **está pendiente de reconciliación** y no debe suponerse PASS sin consultarlo.
+- Los escáneres de privacidad y seguridad existentes siguen en CI. No se han observado ni registrado solicitudes de red con navegador instrumentado en esta ejecución; el CSS carga fuentes de Google y el entorno de previsualización puede usar telemetría de Lovable. Se requiere análisis independiente antes de declarar privacidad en tiempo de ejecución verificada.
+- **PENDIENTES:** pruebas efectivas con Chrome/Firefox/Safari, instalación PWA en dispositivo real, lector de pantalla, contraste/foco/zoom, inspección de solicitudes de terceros y revisión académica separada. No se declara M4 COMPLETADA por estas incorporaciones.
