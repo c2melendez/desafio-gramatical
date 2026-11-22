@@ -1,6 +1,6 @@
 # Corte técnico integral — Habilidades Blandas
 
-**Estado provisional: EN_CURSO.** Cerrar solamente si PR/CI/Render del mismo SHA se verifican; la revisión académica se difiere de forma autorizada.
+**Estado: COMPLETADA TÉCNICAMENTE.** PR #47 fusionado, CI de PR y main SUCCESS; Render LIVE del mismo SHA de integración. Revisión académica y visual manual pendientes.
 
 ## Congelación de alcance
 
@@ -26,13 +26,24 @@
 
 ## Criterios y límites de aceptación
 
-- [ ] Auditoría completa y 720/720 mutantes detectados, sin bloqueos estructurales.
-- [ ] Pruebas, integración, compilación, inventario, contratos protegidos y regresiones globales de CI — SUCCESS.
-- [ ] PR integrado a `main`.
-- [ ] CI `main` SUCCESS y Render LIVE del mismo commit integrado.
+- [x] Auditoría completa y 720/720 mutantes detectados, sin bloqueos estructurales.
+- [x] Pruebas, integración, compilación, inventario, contratos protegidos y regresiones globales de CI — SUCCESS.
+- [x] PR integrado a `main`.
+- [x] CI `main` SUCCESS y Render LIVE del mismo commit integrado.
 - [ ] Documentación definitiva con evidencia y nuevo CI/Render si el SHA cambia.
 - [ ] Revisión académica por especialistas (PENDIENTE AUTORIZADA; no representa certificación).
 - [ ] Inspección visual real en móvil y escritorio, lectores de pantalla, teclado y contraste (NO EJECUTADA).
 - [ ] Evaluación psicométrica e independencia conceptual de escenarios (NO CERTIFICADA).
 
 **Siguiente módulo después del corte técnico:** M4 — reconciliación transversal del catálogo completo de 40.500 posiciones técnicas, accesibilidad, privacidad, rendimiento y cierre global, conservando por separado la revisión docente.
+
+## Evidencia de publicación — 21 de noviembre de 2026 (Honduras)
+
+- PR #47 fusionado: https://github.com/c2melendez/desafio-gramatical/pull/47; commit `887042b3cf57a4fad544ee5390b8e8875de09964`.
+- CI del PR: SUCCESS, https://github.com/c2melendez/desafio-gramatical/actions/runs/44981005076, SHA `e2303f0cc8f97234e172c31ce22178d511297066`.
+- CI principal: SUCCESS, https://github.com/c2melendez/desafio-gramatical/actions/runs/44981285181, SHA `887042b3cf57a4fad544ee5390b8e8875de09964`.
+- Render: LIVE, despliegue `dep-dc165n7b9u1s73fv0ji0`, mismo SHA `887042b3cf57a4fad544ee5390b8e8875de09964`, https://desafio-gramatical.onrender.com/.
+- Archivo verificable `blandas-corte-integral`: ID 14738126500, SHA256 del ZIP `39f022c5159e35435baf31385ad716c62fd133269659852ee4554e0593e696e8`; matriz de 72 celdas, 3600 hashes individuales y 720 mutantes ejecutados.
+- La primera corrida del PR falló por variable `modo` en prueba; la segunda por la misma referencia en el auditor. Ambos defectos de fixture se corrigieron; la tercera corrida completa (44981005076) fue SUCCESS y se comprobó nuevamente el SHA integrado.
+- Las cifras representan posiciones técnicas, no ejercicios semánticamente independientes ni calificación PHUMA; la revisión docente y visual sigue PENDIENTE AUTORIZADA.
+- **Siguiente objetivo: M4 — cierre integral del proyecto**. El SHA documental requiere nueva CI y Render LIVE para confirmar esta publicación.

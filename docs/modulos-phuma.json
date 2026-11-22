@@ -1,5 +1,5 @@
 {
-  "version": 28,
+  "version": 29,
   "areas": [
     "espanol",
     "matematicas",
@@ -802,7 +802,7 @@
         "blandas-M3"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "evidence": "docs/blandas-corte-20261121.md",
       "scope": "3 temas, 8 subtemas, 72 celdas; 3600 registros técnicos 30/50/70, 40 anclajes; revisión académica/visual pendiente",
       "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
@@ -820,8 +820,41 @@
         "semantic_independence": "NO_CERTIFICADA",
         "official_curriculum": "PRACTICA_COMPLEMENTARIA_NO_OFICIAL",
         "manual_visual": "NO_EJECUTADA",
-        "ci": "PENDIENTE",
-        "render": "PENDIENTE"
+        "ci": "SUCCESS_MAIN",
+        "render": "LIVE",
+        "technical_deficits": 0,
+        "validated_cells": 72,
+        "validated_records": 3600,
+        "mutants_tested": 720,
+        "mutants_detected": 720,
+        "mutants_survivors": 0,
+        "global_technical_records": 40500,
+        "academic_review": "PENDIENTE_AUTORIZADA"
+      },
+      "completion_type": "CORTE_TECNICO_CON_REVISION_DOCENTE_Y_VISUAL_PENDIENTE",
+      "release": {
+        "pr": 47,
+        "merged_sha": "887042b3cf57a4fad544ee5390b8e8875de09964",
+        "ci_pr": {
+          "run": 44981005076,
+          "sha": "e2303f0cc8f97234e172c31ce22178d511297066",
+          "conclusion": "success"
+        },
+        "ci_main": {
+          "run": 44981285181,
+          "sha": "887042b3cf57a4fad544ee5390b8e8875de09964",
+          "conclusion": "success",
+          "artifact_id": 14738126500,
+          "artifact_sha256": "39f022c5159e35435baf31385ad716c62fd133269659852ee4554e0593e696e8"
+        },
+        "render": {
+          "deploy_id": "dep-dc165n7b9u1s73fv0ji0",
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "sha": "887042b3cf57a4fad544ee5390b8e8875de09964",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com/"
+        },
+        "documentation_sha": "PENDIENTE_VERIFICACION_SHA_PROPIO"
       }
     },
     {
