@@ -60,7 +60,9 @@ jobs:
       - name: Certificación PAA/PHUMA V1 - comprobar contratos, oráculos y mapeo sin Inglés
         run: node --import ./scripts/ts-resolve.mjs qa/certification/run.mjs > qa-certification-summary.json
       - name: Certificación C02-C04 - comprobar reglas originales y priorizar distractores
-        run: node --import ./scripts/ts-resolve.mjs qa/certification/original-spanish-review.mjs > qa-original-spanish-summary.json
+        run: |
+          node --import ./scripts/ts-resolve.mjs qa/certification/original-spanish-review.mjs > qa-original-spanish-summary.json
+          cat qa-original-spanish-summary.json
       - name: Certificación C02-C04 - archivar reglas verificadas y cola editorial
         if: always()
         uses: actions/upload-artifact@v4
