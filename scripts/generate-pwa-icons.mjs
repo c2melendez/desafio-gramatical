@@ -7,7 +7,6 @@ const crc32=data=>{let c=0xffffffff;for(const x of data)c=crcTable[(c^x)&255]^(c
 function chunk(type,data){const b=Buffer.from(type,"ascii"),len=Buffer.alloc(4),crc=Buffer.alloc(4);len.writeUInt32BE(data.length);crc.writeUInt32BE(crc32(Buffer.concat([b,data])));return Buffer.concat([len,b,data,crc]);}
 function icon(size){
  const bytes=Buffer.alloc(size*(1+size*4));const bg=[247,241,230],red=[230,59,51],white=[255,255,255];
- const circle=(x,y,cx,cy,r)=>Math.hypot(x-cx,y-cy)<=r;
  const rounded=(x,y,x1,y1,x2,y2,r)=>{const cx=Math.max(x1+r,Math.min(x,x2-r)),cy=Math.max(y1+r,Math.min(y,y2-r));return Math.hypot(x-cx,y-cy)<=r;};
  const pshape=(x,y)=>{const u=x/size,v=y/size;return (u>=.34&&u<=.46&&v>=.25&&v<=.77)||
   (u>=.39&&u<=.65&&v>=.25&&v<=.37)||
