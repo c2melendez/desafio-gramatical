@@ -83,6 +83,16 @@ jobs:
           name: m0-inventario
           path: m0-inventory.json
           retention-days: 30
+      - name: M4 - impedir fuentes externas y telemetría de editor en producción
+        run: node scripts/audit-m4-privacy.mjs > m4-privacy-guards.json
+      - name: M4 - conservar guardas de privacidad
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m4-first-party-privacy
+          path: m4-privacy-guards.json
+          if-no-files-found: error
+          retention-days: 30
       - name: M4 - validar privacidad local, fallbacks e instalabilidad PWA
         run: node --import ./scripts/ts-resolve.mjs scripts/audit-m4-runtime.mjs > m4-runtime-compatibility.json
       - name: M4 - archivar evidencia de compatibilidad y almacenamiento
