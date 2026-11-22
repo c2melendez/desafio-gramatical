@@ -2,7 +2,7 @@
  * E2E de progresión de rondas: pruebas efectivas del botón Continuar.
  * Ejecuta 4 áreas × 3 mecánicas sobre un navegador real y comprueba
  * que se completa el estímulo, aparece Continuar y cambia Ronda n/10.
- * La prueba se detiene en el primer defecto y archiva estado por escenario.
+ * La prueba recorre 10/10 rondas y archiva estado por escenario.
  */
 import {pathToFileURL} from "node:url";
 import {resolve} from "node:path";
@@ -32,7 +32,7 @@ try{
     if(response?.status()!==200)throw Error("HTTP "+response?.status());
     const card=page.locator('section[aria-label^="Ejercicio"]').first();
     await card.waitFor({state:"visible",timeout:20000});
-    const maxRounds=area==="matematicas"&&mode==="quiz"?10:3;
+    const maxRounds=10; // Contrato universal: observar el avance y cierre hasta 10/10, no solo el inicio.
     for(let round=1;round<=maxRounds;round++){
      const header=page.getByTestId("game-session-header");
      await header.getByText(round+"/10",{exact:true}).waitFor({timeout:5000});
