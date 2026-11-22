@@ -3,7 +3,7 @@ import {SOFT_TOPICS,SOFT_SUBTOPICS,SOFT_LEVELS,SOFT_MODES,SOFT_LEVEL_COUNT,SOFT_
 import {verifyScienceItem,verifyScienceCell} from "@/lib/science-m1-verifier";
 import {countContent,coverageRows} from "@/lib/coverage";
 import {availableModule} from "@/lib/phuma-catalog";
-import {SOFT_M2_LEVEL_COUNT} from "@/lib/soft-m2";
+import {SOFT_M3_LEVEL_COUNT} from "@/lib/soft-m3";
 import {emptyRotation,recordRotation,parseRotation,selectRotation} from "@/lib/rotation";
 describe("Habilidades Blandas M1: 1080 registros técnicos, 72 celdas",()=>{
  it("confirma 8 subtemas, 40 anclajes, 10/15/20 y oráculos por 72 celdas",()=>{
@@ -13,7 +13,7 @@ describe("Habilidades Blandas M1: 1080 registros técnicos, 72 celdas",()=>{
   for(const t of SOFT_TOPICS)for(const sub of t.subtopics)for(const mode of SOFT_MODES)for(const level of SOFT_LEVELS){
    const bank=softPool(t.name,sub,level,mode);
    expect(bank).toHaveLength(SOFT_LEVEL_COUNT[level]);
-   expect(countContent("blandas",t.name,sub,mode,level)).toBe(SOFT_M2_LEVEL_COUNT[level]);
+   expect(countContent("blandas",t.name,sub,mode,level)).toBe(SOFT_M3_LEVEL_COUNT[level]);
    expect(availableModule("blandas",t.name,sub)).toBe(true);
    expect(verifyScienceCell(bank,level,mode,softFacts(sub))).toEqual([]);
    expect(softTopic(sub)).toBe(t.name);
