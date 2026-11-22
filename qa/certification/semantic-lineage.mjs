@@ -7,6 +7,7 @@ import {pool} from '../../scripts/inventory-items.mjs';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 
+const derivedFamilies=new Map();
 const byId=new Map(),rows=coverageRows().filter(r=>r.area==='espanol'),findings=[],reviews=[],counts={rows:rows.length,items:0,derived_checked:0,unresolved_sources:0,normalized_distractors:0,source_linked:0};
 for(const row of rows)for(const item of pool(row)){
  byId.set(item.id,{row,item});counts.items++;
@@ -61,6 +62,8 @@ for(const row of rows)for(const item of pool(row)){
  const d=derive(row,item);
  if(d){
   counts.derived_checked++;
+  const family=(item.id.match(/^m[23]-(?:reading|writing)-/)??['other'])[0]+'/'+row.mode;
+  derivedFamilies.set(family,(derivedFamilies.get(family)??0)+1);
   if(!same(d.expected,d.actual))add('COMPOSITE_KEY_MISMATCH',row,item,
    {derived:d.expected,stored:d.actual,sourceIds:d.sourceIds},true);
   if(row.mode==='quiz'&&Array.isArray(item.options)){
@@ -69,6 +72,11 @@ for(const row of rows)for(const item of pool(row)){
   }
  }
 }
+const requiredFamilies=['m2-reading-/quiz','m3-reading-/quiz','m2-writing-/quiz','m3-writing-/quiz','m2-writing-/clasificar','m3-writing-/clasificar'];
+for(const family of requiredFamilies)if(!derivedFamilies.get(family))
+ findings.push({kind:'MISSING_DERIVED_FAMILY',family});
+if(counts.derived_checked<100)
+ findings.push({kind:'INSUFFICIENT_DERIVED_COVERAGE',checked:counts.derived_checked});
 const cases=[
  {name:'m2-reading',expected:'Lectura A: A; lectura B: B',actual:'Lectura A: A; lectura B: B'},
  {name:'m3-reading-mutated',expected:'Fuente A: A; Fuente B: B; Fuente C: C',actual:'Fuente A: A; Fuente B: WRONG; Fuente C: C'},
@@ -77,7 +85,7 @@ const cases=[
 const mutation={valid_accepted:same(cases[0].expected,cases[0].actual),altered_rejected:cases.slice(1).every(x=>!same(x.expected,x.actual))};
 if(!mutation.valid_accepted||!mutation.altered_rejected)findings.push({kind:'SELF_TEST_FAILED',mutation});
 const sha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
-const out={suite:'SPANISH_DERIVED_KEYS_AND_DISTRACTORS_V1',sha,status:findings.length?'FAIL':'PASS',counts,mutation,blocking:findings.slice(0,100),blocking_total:findings.length,editorial_review:reviews.slice(0,160),editorial_review_total:reviews.length,
+const out={suite:'SPANISH_DERIVED_KEYS_AND_DISTRACTORS_V1',sha,status:findings.length?'FAIL':'PASS',counts,derived_family_counts:Object.fromEntries(derivedFamilies),mutation,blocking:findings.slice(0,100),blocking_total:findings.length,editorial_review:reviews.slice(0,160),editorial_review_total:reviews.length,
  academic_certification:'PENDIENTE',limits:'Derivación desde fuentes almacenadas comprueba fidelidad de composición; no comprueba que la clave de la fuente sea correcta según guías, ni exhaustividad semántica de distractores.'};
 mkdirSync('qa/certification/evidence',{recursive:true});
 writeFileSync('qa/certification/evidence/semantic-lineage.json',JSON.stringify(out,null,2)+'\n');
