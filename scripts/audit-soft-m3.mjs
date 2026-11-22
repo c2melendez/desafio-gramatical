@@ -94,5 +94,5 @@ const report={
  mutations:{tested:mutants,detected:killed,surviving:mutants-killed,classes:10},
  methodology:{audit:"structural N1",real_session_rotation:"N1",independent_human_review:"NOT_DONE",
   semantic_independence:"NOT_CERTIFIED",visual_mobile_desktop:"NOT_DONE",source:"complementary, not official PHUMA area"},
- duration_ms:Math.round(performance.now()-start),matrix,errors};
+ duration_ms:Math.round(performance.now()-start),matrix,record_hashes:itemHashes,errors};
 console.log(JSON.stringify(report,null,2));if(errors.length){console.error("BLANDAS M3 FAIL",JSON.stringify({n:errors.length,first:errors.slice(0,15)}));process.exitCode=1;}

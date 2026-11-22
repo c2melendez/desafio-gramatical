@@ -1,5 +1,5 @@
 {
-  "version": 26,
+  "version": 27,
   "areas": [
     "espanol",
     "matematicas",
@@ -732,7 +732,7 @@
         "blandas-M2"
       ],
       "optional": [],
-      "state": "EN_CURSO",
+      "state": "COMPLETADA",
       "targets": [
         30,
         50,
@@ -757,8 +757,41 @@
         "semantic_independence": "NO_CERTIFICADA",
         "official_curriculum": "PRACTICA_COMPLEMENTARIA_NO_ENUMERADA_GUIA_2026",
         "review": "PENDIENTE_AUTORIZADA",
-        "ci": "PENDIENTE",
-        "render": "PENDIENTE"
+        "ci": "SUCCESS_MAIN",
+        "render": "LIVE",
+        "mutants_tested": 720,
+        "mutants_detected": 720,
+        "mutants_survivors": 0,
+        "technical_deficits": 0,
+        "validated_cells": 72,
+        "validated_records": 3600,
+        "global_technical_records": 40500,
+        "manual_visual": "NO_EJECUTADA",
+        "academic_review": "PENDIENTE_AUTORIZADA"
+      },
+      "completion_type": "TECNICA_SIN_CERTIFICACION_ACADEMICA",
+      "release": {
+        "pr": 46,
+        "merged_sha": "8f49419f2a4f42f3a012c3f262df0846ae94af1f",
+        "ci_pr": {
+          "run": 44978009129,
+          "sha": "ca07c52e2aefa8870d946798a77cd9e64c600877",
+          "conclusion": "success"
+        },
+        "ci_main": {
+          "run": 44978267515,
+          "sha": "8f49419f2a4f42f3a012c3f262df0846ae94af1f",
+          "conclusion": "success",
+          "artifact_id": 14737205023
+        },
+        "render": {
+          "deploy_id": "dep-dc15j6e1egvs7380332g",
+          "service_id": "srv-dbt0rilg1s2s738eku8g",
+          "sha": "8f49419f2a4f42f3a012c3f262df0846ae94af1f",
+          "status": "live",
+          "url": "https://desafio-gramatical.onrender.com/"
+        },
+        "documentation_sha": "PENDIENTE_VERIFICACION_SHA_PROPIO"
       }
     },
     {

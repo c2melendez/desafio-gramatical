@@ -1,6 +1,6 @@
 # Habilidades Blandas M3 — cierre de ampliación a 30/50/70
 
-**Estado de esta rama: EN_CURSO.** No declarar `COMPLETADA` hasta verificar GitHub Actions SUCCESS, integración `main` y Render LIVE del mismo SHA.
+**Estado: COMPLETADA TÉCNICAMENTE.** PR #46 fusionado, CI de PR y de main SUCCESS y Render LIVE del mismo commit integrado. Revisión académica y visual manual pendientes.
 
 ## Alcance, origen y conteos
 
@@ -31,4 +31,15 @@
 
 ## Publicación
 
-**PENDIENTE**: registrar PR, SHA, auditoría, CI y Render verificados. No marcar el módulo completo hasta aprobar todos los controles técnicos.
+**Verificado en el SHA integrado \`8f49419f2a4f42f3a012c3f262df0846ae94af1f\`:** PR #46, CI main SUCCESS y Render LIVE. Esta reconciliación documental incorpora también un manifiesto SHA256 individual de los 3.600 registros en el artefacto \`blandas-m3-integral\`; por modificar el código del auditor, exige repetir CI y Render en el SHA documental final.
+
+## Evidencia de entrega validada — 21 de noviembre de 2026 (hora de Honduras)
+
+- PR #46 fusionado en `main`: https://github.com/c2melendez/desafio-gramatical/pull/46. SHA `8f49419f2a4f42f3a012c3f262df0846ae94af1f`.
+- CI del PR **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44978009129.
+- CI principal **SUCCESS**: https://github.com/c2melendez/desafio-gramatical/actions/runs/44978267515, mismo SHA `8f49419f2a4f42f3a012c3f262df0846ae94af1f`.
+- Render **LIVE**, despliegue `dep-dc15j6e1egvs7380332g`, mismo SHA, https://desafio-gramatical.onrender.com/.
+- Auditoría acumulativa M3: 72 celdas, 3.600 IDs técnicos, 1.200 añadidos, 2.400 preservados, 720 mutaciones de datos detectadas, déficit técnico cero. Inventario global: 40.500 posiciones técnicas.
+- Corregido en este cierre: el artefacto `blandas-m3-integral` contendrá las 3.600 huellas SHA256 individuales además del hash global, la matriz y las mutaciones; no se presentan como certificación cognitiva.
+- Revisión docente, originalidad semántica y validación visual manual en dispositivos: PENDIENTES, sin falsear certificaciones.
+- **Siguiente objetivo**: Habilidades Blandas CORTE técnico del área, después auditoría global M4. La integración del reporte no sustituye la prueba del SHA final.
