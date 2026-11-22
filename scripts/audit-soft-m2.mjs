@@ -3,6 +3,7 @@ import {createHash} from "node:crypto";
 import {performance} from "node:perf_hooks";
 import {SOFT_TOPICS,SOFT_SUBTOPICS,SOFT_LEVELS,SOFT_MODES,SOFT_LEVEL_COUNT,softFacts,softPool} from "../src/lib/soft-m1.ts";
 import {SOFT_M2_LEVEL_COUNT,SOFT_M2_NEW_PER_LEVEL,SOFT_M2_NEW_TOTAL,SOFT_M2_TOTAL,softM2Pool,softM2NewPool} from "../src/lib/soft-m2.ts";
+import {SOFT_M3_LEVEL_COUNT} from "../src/lib/soft-m3.ts";
 import {verifyScienceCell,verifyScienceItem,scienceStimulusFingerprint} from "../src/lib/science-m1-verifier.ts";
 import {coverageRows,countContent} from "../src/lib/coverage.ts";
 import {availableModule} from "../src/lib/phuma-catalog.ts";
@@ -24,7 +25,7 @@ for(const topic of SOFT_TOPICS)for(const subtopic of topic.subtopics){
   oldCount+=old.length;newCount+=added.length;totalCount+=bank.length;
   levelTotals[level]+=bank.length;addedTotals[level]+=added.length;
   if(old.length!==SOFT_LEVEL_COUNT[level]||added.length!==SOFT_M2_NEW_PER_LEVEL[level]||
-   bank.length!==SOFT_M2_LEVEL_COUNT[level]||countContent("blandas",topic.name,subtopic,mode,level)!==bank.length||
+   bank.length!==SOFT_M2_LEVEL_COUNT[level]||countContent("blandas",topic.name,subtopic,mode,level)!==SOFT_M3_LEVEL_COUNT[level]||
    !availableModule("blandas",topic.name,subtopic))errors.push(label+": cuota/menú incongruentes");
   for(let i=0;i<old.length;i++)if(JSON.stringify(old[i])!==JSON.stringify(bank[i]))errors.push(label+": alteración M1 "+old[i].id);
   for(const issue of verifyScienceCell(bank,level,mode,facts))errors.push(label+": "+issue);
@@ -70,12 +71,12 @@ for(const topic of SOFT_TOPICS)for(const subtopic of topic.subtopics){
    issue_count:errors.length-issuesBefore,source:"catalogo-practica-complementaria",academic:"PENDIENTE_AUTORIZADA"});
  }
 }
-const inventory=inventoryItems();if(inventory.summary.declared!==39300||inventory.summary.observed!==39300||
+const inventory=inventoryItems();if(inventory.summary.declared!==40500||inventory.summary.observed!==40500||
  inventory.summary.failed_cells!==0||inventory.summary.ids_reused_between_cells!==0)
  errors.push("Regresión de inventario global "+JSON.stringify(inventory.summary));
 const coverage=coverageRows().filter(x=>x.area==="blandas");
-if(coverage.length!==72||coverage.some(x=>!x.stageOneComplete||x.complete||
- x.available!==SOFT_M2_LEVEL_COUNT[x.level]))errors.push("Cobertura Blandas inadecuada");
+if(coverage.length!==72||coverage.some(x=>!x.stageOneComplete||!x.complete||
+ x.available!==SOFT_M3_LEVEL_COUNT[x.level]))errors.push("Cobertura Blandas inadecuada");
 if(SOFT_TOPICS.length!==3||SOFT_SUBTOPICS.length!==8||matrix.length!==72||oldCount!==1080||
  newCount!==SOFT_M2_NEW_TOTAL||totalCount!==SOFT_M2_TOTAL||globalIds.size!==2400||
  levelTotals.principiante!==480||levelTotals.intermedio!==840||levelTotals.avanzado!==1080||
