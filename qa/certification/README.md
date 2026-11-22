@@ -1,0 +1,49 @@
+# Certificación académica y funcional — Academia PHUMA Play
+
+**Suite V1**, integrada en `.github/workflows/ci.yml`; sin repositorio nuevo. Esta capa **complementa** las auditorías existentes M0–M4, no las sustituye ni certifica el examen oficial.
+
+## Fundamento documental y límites
+
+Fuentes revisadas: `GUIA-PRE-U-UNAH-2026` CEI-TEST (PDF pp. 5–11), `GUIA-PRE-U-UNAH` (PDF pp. 4–11), `Guia_de_estudios_PAA` College Board (PDF pp. 7, 9–11 y sección de Matemáticas), y práctica PAA adjunta. Los PDF proporcionados en conversación se **referencian** pero **no se copian ni integran** al repositorio: se evita duplicar material protegido.
+
+- **PHUMA**: 120 ítems, 170 minutos, cuatro alternativas de selección única. Distribución: Español 30, Matemáticas 30, Naturales 20, Sociales 20 y Habilidades Blandas 20.
+- **PAA sin Inglés**: guía College Board describe 140 minutos para Lectura, Redacción y Matemáticas, selección múltiple y algunas respuestas matemáticas producidas por el alumno. **No** se fuerza un total de preguntas universal de una edición distinta.
+- La correspondencia implementada es inicialmente **tema del catálogo ↔ área/competencia de la guía**. No debe interpretarse como análisis completo de cada pregunta. El campo `question_count_without_english=null` es intencionado.
+
+## Gates
+
+| Gate | Comprobación automática V1 | No demostrado todavía |
+|---|---|---|
+| C00 — control de oráculos | Tres casos válidos y tres mutaciones estructurales rechazadas | Corrección de todos los contenidos |
+| C01 — alineación | Relación tema/área, 810 celdas y 40.500 posiciones técnicas sin ID global repetido | Pertinencia individual de cada ejercicio |
+| C02 — claves | Oráculos independientes de forma/índice para Matemáticas, Naturales, Sociales y Blandas | Equivalencia semántica; oráculos independientes completos de Español |
+| C03 — mecánicas | Presencia de suites reales de navegación, reutilización de su ejecución CI | Todos los 810 escenarios/niveles y equipos reales |
+| C04 — pedagogía | Diagnóstico de presencia de explicaciones | Dificultad cognitiva, distractores, claridad y aprendizaje medido |
+| C05 — simuladores | Dos contratos separados por examen y Inglés excluido | Simulador completo cronometrado, hojas de respuesta e informe por competencias |
+
+Ejecutar de forma reproducible:
+
+```bash
+bun install --frozen-lockfile
+node --import ./scripts/ts-resolve.mjs qa/certification/run.mjs
+```
+
+Salida: `qa/certification/evidence/latest.json`; Actions publica artefacto `academia-exam-certification-v1`, junto a los artefactos de navegadores y auditorías M4.
+
+El informe contiene `technical_status` y `certified_for_exams=false` por separado. **Prohibido** cambiar `certified_for_exams` a verdadero únicamente por CI SUCCESS.
+
+## Hoja de ruta incremental, sin lotes artificiales
+
+1. **Bloque funcional**: convertir la incidencia #48 de `Continuar/Siguiente` en una matriz parametrizada por área, juego, nivel, subtema y ronda; demostrar 10/10, transición de estado, reinicio y guardado. Registrar capturas, traza y caso mínimo de cada fallo.
+2. **Bloque editorial**: extender oráculos independientes a todas las familias de Español, medir distractores duplicados/ambiguos y detectar etiquetas internas como las señaladas en #49. Cada familia debe tener casos correctos, negativos y mutantes.
+3. **Bloque curricular**: persistir `exam→competencia→subtema→item-id→fuente/página→evidencia` y clasificar `PASS | REVIEW | FAIL | NOT_APPLICABLE`. Cualquier evidencia genérica por tópico se marca REVIEW, no PASS individual.
+4. **Bloque de simulación**: implementar flujos **PAA** y **PHUMA** separados, cronómetro, guardado/recuperación, selección única y respuestas matemáticas abiertas (PAA), navegación y resultados auditables. Implementar simulador PHUMA 120/170 con distribución oficial. Incluir simulacro PAA solamente cuando la versión y forma de secciones estén fijadas por la referencia correcta.
+5. **Certificación**: continuidad por SHA, oráculos independientes, controles de CI y Render, reportes de revisión docente/psicométrica que permanezcan pendientes hasta evidencia real, trazabilidad de cambios y revocación si una prueba falla.
+
+## Adaptaciones desde Axis-Suite y Academia_Play
+
+- **Adoptar**: cobertura y trazabilidad, mutación negativa, ejecución modular por gates, idempotencia, evidencia por SHA, continuidad y registro de excepciones, validación de contratos/JSON.
+- **Adaptar al contexto**: carga concurrente del simulador, accesibilidad y privacidad de estudiantes, restauración de progreso y fallos de navegador; las pruebas de base de datos solo aplicarán si el sistema incorpora almacenamiento servidor.
+- **No trasladar ciegamente**: downgrade de Alembic, SQL injection, permisos de APIs o rate limits de endpoints no presentes. Una etiqueta PASS de otra suite no acredita este proyecto.
+
+En las revisiones sin oráculo independiente se debe emitir `REVIEW`; no reetiquetar incertidumbre como aprobación. Cerrar M4 solo cuando los contratos académicos y de simulación relevantes estén efectivamente respaldados, separando el cierre técnico de la aprobación docente.
