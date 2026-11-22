@@ -4,7 +4,7 @@ import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mista
 import {type ScienceItem} from "@/lib/science-m1";
 import {softTopic,SOFT_SUBTOPICS,SOFT_MODES} from "@/lib/soft-m1";
 
-import {softM2Pool} from "@/lib/soft-m2";
+import {softM3Pool} from "@/lib/soft-m3";
 import {gameNames} from "@/lib/phuma-catalog";
 import {studyReturn} from "@/lib/study-context";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
@@ -18,7 +18,7 @@ export const Route=createFileRoute("/blandas")({
   nivel:LEVELS.includes(s.nivel as Level)?s.nivel as Level:"principiante",
  }),
  head:()=>({meta:[{title:"Habilidades Blandas — Academia PHUMA Play"},
-  {name:"description",content:"Práctica de Habilidades Blandas M2 con 10 rondas y explicaciones."}]}),
+  {name:"description",content:"Práctica de Habilidades Blandas M3 con 10 rondas y explicaciones."}]}),
  component:SoftPlay,
 });
 function SoftPlay(){
@@ -33,13 +33,13 @@ function SoftPlay(){
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
  useEffect(()=>{
-  const bank=softM2Pool(topic,subtema,nivel,modo),key=rotationKey("blandas",topic,subtema,modo,nivel);
+  const bank=softM3Pool(topic,subtema,nivel,modo),key=rotationKey("blandas",topic,subtema,modo,nivel);
   const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
   setItems(chosen);setIndex(0);setCorrect(0);setTotal(0);setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[topic,subtema,nivel,modo,run]);
  const report=(ok:boolean,given:string)=>{
   if(!items||total>index)return;
-  const item=items[index],bank=softM2Pool(topic,subtema,nivel,modo),key=rotationKey("blandas",topic,subtema,modo,nivel);
+  const item=items[index],bank=softM3Pool(topic,subtema,nivel,modo),key=rotationKey("blandas",topic,subtema,modo,nivel);
   writeRotation(key,recordRotation(readRotation(key,bank.map(x=>x.id)),item.id,ok));
   setTotal(t=>t+1);
   if(ok){setCorrect(t=>t+1);setScore(t=>t+pointsFor(streak));setStreak(t=>t+1);setBest(b=>Math.max(b,streak+1));}

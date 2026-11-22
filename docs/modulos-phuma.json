@@ -1,5 +1,5 @@
 {
-  "version": 25,
+  "version": 26,
   "areas": [
     "espanol",
     "matematicas",
@@ -732,12 +732,34 @@
         "blandas-M2"
       ],
       "optional": [],
-      "state": "PENDIENTE",
+      "state": "EN_CURSO",
       "targets": [
         30,
         50,
         70
-      ]
+      ],
+      "evidence": "docs/blandas-m3-cierre.md",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "scope": "3 temas, 8 subtemas, 3 juegos × 3 niveles = 72 celdas; 2400 anteriores y 1200 M3 = 3600 registros técnicos",
+      "technical": {
+        "cells": 72,
+        "subtopics": 8,
+        "anchors": 40,
+        "previous": 2400,
+        "new": 1200,
+        "cumulative": 3600,
+        "targets": {
+          "principiante": 30,
+          "intermedio": 50,
+          "avanzado": 70
+        },
+        "mutants_planned": 720,
+        "semantic_independence": "NO_CERTIFICADA",
+        "official_curriculum": "PRACTICA_COMPLEMENTARIA_NO_ENUMERADA_GUIA_2026",
+        "review": "PENDIENTE_AUTORIZADA",
+        "ci": "PENDIENTE",
+        "render": "PENDIENTE"
+      }
     },
     {
       "id": "blandas-CORTE",
