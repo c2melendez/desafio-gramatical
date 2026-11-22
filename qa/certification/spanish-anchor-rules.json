@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "scope": "Selección auditada de preguntas originales de categorías gramaticales; validación argumentada local, no certificación oficial",
+  "source": "src/lib/grammar.ts, QUIZ; referencia conceptual: distinción entre categoría gramatical, concordancia y función sintáctica",
+  "review_status": "CURATED_TECHNICAL_RULES_NOT_EXTERNAL_ACADEMIC_APPROVAL",
+  "anchors": [
+    {
+      "id": "qp1",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Sustantivo",
+      "stem_contains": "mesa",
+      "rationale": "«Mesa» designa un objeto y funciona como nombre dentro del sintagma nominal."
+    },
+    {
+      "id": "qp2",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Palabra que expresa acción, estado o proceso y se conjuga en persona, número, tiempo y modo",
+      "stem_contains": "verbo en gramática",
+      "rationale": "La conjugación de tiempo, persona y modo distingue al verbo de otras categorías."
+    },
+    {
+      "id": "qp3",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "alto",
+      "stem_contains": "adjetivo",
+      "rationale": "«Alto» admite variaciones de género y número como calificativo de un nombre."
+    },
+    {
+      "id": "qp4",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Conjunción",
+      "stem_contains": "pan y leche",
+      "rationale": "«Y» coordina dos sintagmas nominales; es una conjunción copulativa."
+    },
+    {
+      "id": "qp5",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Interjección",
+      "stem_contains": "Hola",
+      "rationale": "El saludo «hola» puede formar un enunciado exclamativo autónomo."
+    },
+    {
+      "id": "qp6",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "desde",
+      "stem_contains": "preposición",
+      "rationale": "«Desde» introduce relaciones de origen espacial, temporal o figurado."
+    },
+    {
+      "id": "qp7",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Pronombre personal",
+      "stem_contains": "Ella canta",
+      "rationale": "«Ella» ocupa la posición de un sintagma nominal sin acompañar a un nombre."
+    },
+    {
+      "id": "qp8",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Determinante (artículo)",
+      "stem_contains": "los árboles",
+      "rationale": "«Los» acompaña al sustantivo «árboles» y concuerda en número y género."
+    },
+    {
+      "id": "qp9",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Adverbio de modo",
+      "stem_contains": "lentamente",
+      "rationale": "«Lentamente» expresa manera y no se flexiona por género o número."
+    },
+    {
+      "id": "qi1",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Demostrativo",
+      "stem_contains": "aquellas casas",
+      "rationale": "«Aquellas» modifica a «casas» y señala deixis de lejanía."
+    },
+    {
+      "id": "qi2",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Contracción de la preposición «de» y el artículo «el»",
+      "stem_contains": "Vengo del mercado",
+      "rationale": "«Del» resulta de la contracción obligatoria de «de» más «el»."
+    },
+    {
+      "id": "qi3",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "La categoría es la clase de palabra; la función es el papel que cumple en la oración",
+      "stem_contains": "categoría gramatical y función sintáctica",
+      "rationale": "Clase léxica y papel sintáctico describen propiedades distintas de una palabra."
+    },
+    {
+      "id": "qi4",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Sujeto",
+      "stem_contains": "El niño come manzanas",
+      "rationale": "El grupo «el niño» concuerda como sujeto con la forma verbal «come»."
+    },
+    {
+      "id": "qi5",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "De duda",
+      "stem_contains": "quizás",
+      "rationale": "«Quizás» expresa modalidad de incertidumbre y se clasifica como adverbio de duda."
+    },
+    {
+      "id": "qi6",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Coordinante adversativa",
+      "stem_contains": "Pero",
+      "rationale": "«Pero» introduce oposición entre constituyentes mediante coordinación adversativa."
+    },
+    {
+      "id": "qi7",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Pronombre indefinido",
+      "stem_contains": "Alguien llamó",
+      "rationale": "«Alguien» tiene referencia indeterminada y no modifica a un sustantivo."
+    },
+    {
+      "id": "qi9",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Verbo (copulativo)",
+      "stem_contains": "casa grande",
+      "rationale": "«Es» es una forma finita de «ser», verbo copulativo en este contexto."
+    },
+    {
+      "id": "qa1",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Adverbio (adjetivo adverbializado)",
+      "stem_contains": "Habla claro",
+      "rationale": "En «habla claro», «claro» modifica la acción verbal con valor adverbial."
+    },
+    {
+      "id": "qa2",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Preposición",
+      "stem_contains": "Camina bajo la lluvia",
+      "rationale": "«Bajo» introduce el sintagma nominal «la lluvia», con relación locativa."
+    },
+    {
+      "id": "qa4",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Conjunción subordinante completiva",
+      "stem_contains": "Dijo que vendría",
+      "rationale": "«Que» introduce una subordinada sustantiva sin antecedente nominal."
+    },
+    {
+      "id": "qa5",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Pronombre relativo",
+      "stem_contains": "libro que leí",
+      "rationale": "«Que» recupera «libro» y cumple función dentro de la subordinada relativa."
+    },
+    {
+      "id": "qa7",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Adverbio de cantidad",
+      "stem_contains": "Trabaja mucho",
+      "rationale": "«Mucho» cuantifica el verbo «trabaja», no determina un sustantivo."
+    },
+    {
+      "id": "qa8",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Artículo neutro (determinante)",
+      "stem_contains": "Lo bueno dura poco",
+      "rationale": "«Lo» sustantiva un adjetivo y no representa un complemento pronominal."
+    },
+    {
+      "id": "qa9",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Categorías gramaticales",
+      "mode": "quiz",
+      "expected_option": "Un adjetivo puede funcionar como atributo sin dejar de ser adjetivo",
+      "stem_contains": "Qué afirmación es correcta",
+      "rationale": "La función oracional no convierte por sí misma una categoría léxica en otra."
+    }
+  ]
+}
