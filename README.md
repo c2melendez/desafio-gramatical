@@ -5,7 +5,8 @@ Plataforma independiente para practicar mediante juegos las competencias que se 
 - **Aplicación:** https://desafio-gramatical.onrender.com/
 - **Repositorio:** https://github.com/c2melendez/desafio-gramatical
 - **Catálogo:** 5 áreas, 19 temas, 90 subtemas
-- **Juegos disponibles:** Español (13 subtemas), Matemáticas (22 subtemas) y Ciencias Naturales (19 subtemas), con 3 modalidades y 3 niveles por subtema. Ciencias Sociales y Habilidades Blandas siguen planificadas.
+- **Juegos disponibles:** cinco áreas (Español, Matemáticas, Ciencias Naturales, Ciencias Sociales y Habilidades Blandas), 90 subtemas, tres modalidades y tres niveles; 810 combinaciones de juego/nivel. El inventario técnico M3/CORTE registra 40.500 posiciones; no implica independencia cognitiva ni revisión docente aprobada.
+- **M4 en ejecución:** auditoría transversal ejecutable `scripts/audit-m4-global.mjs`, obligatoria en CI; accesibilidad manual, rendimiento real y certificación editorial permanecen sujetos a evidencia diferenciada.
 - **Historial:** se conservan registros locales de partidas antiguas; puntos de juego distintos de cualquier puntaje PHUMA oficial.
 
 ## Política de corridas ampliadas
