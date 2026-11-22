@@ -57,6 +57,18 @@ jobs:
           node scripts/privacy-m0-static.mjs
           node scripts/security-client-audit.mjs --test
           node scripts/security-client-audit.mjs
+      - name: Certificación PAA/PHUMA V1 - comprobar contratos, oráculos y mapeo sin Inglés
+        run: node --import ./scripts/ts-resolve.mjs qa/certification/run.mjs > qa-certification-summary.json
+      - name: Certificación PAA/PHUMA V1 - archivar reporte reproducible
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: academia-exam-certification-v1
+          path: |
+            qa-certification-summary.json
+            qa/certification/evidence/latest.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Congelar inventario reproducible por ruta, juego y nivel
         run: |
           node --import ./scripts/ts-resolve.mjs scripts/inventory-coverage.mjs > m0-inventory.json
