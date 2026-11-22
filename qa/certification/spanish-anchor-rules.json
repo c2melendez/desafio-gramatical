@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Selección auditada de preguntas originales de categorías gramaticales; validación argumentada local, no certificación oficial",
+  "scope": "42 preguntas originales con reglas separadas en Categorías, Sinónimos, Cohesión y Morfosintaxis; sin certificación académica externa",
   "source": "src/lib/grammar.ts, QUIZ; referencia conceptual: distinción entre categoría gramatical, concordancia y función sintáctica",
   "review_status": "CURATED_TECHNICAL_RULES_NOT_EXTERNAL_ACADEMIC_APPROVAL",
   "anchors": [
@@ -243,6 +243,186 @@
       "expected_option": "Un adjetivo puede funcionar como atributo sin dejar de ser adjetivo",
       "stem_contains": "Qué afirmación es correcta",
       "rationale": "La función oracional no convierte por sí misma una categoría léxica en otra."
+    },
+    {
+      "id": "sa-p1",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Sinónimos y antónimos",
+      "mode": "quiz",
+      "expected_option": "angosto",
+      "stem_contains": "puede sustituir «estrecho»",
+      "rationale": "«Angosto» expresa poca anchura y mantiene la propiedad de estrechez descrita para el sendero."
+    },
+    {
+      "id": "sa-p2",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Sinónimos y antónimos",
+      "mode": "quiz",
+      "expected_option": "terminó",
+      "stem_contains": "lo contrario de «inició»",
+      "rationale": "La acción de terminar se opone al comienzo de la actividad descrito por el verbo «inició»."
+    },
+    {
+      "id": "sa-i1",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Sinónimos y antónimos",
+      "mode": "quiz",
+      "expected_option": "temporal",
+      "stem_contains": "«provisional»",
+      "rationale": "Una conclusión provisional es susceptible de revisión y por tanto temporal, no definitiva."
+    },
+    {
+      "id": "sa-i2",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Sinónimos y antónimos",
+      "mode": "quiz",
+      "expected_option": "atenuar",
+      "stem_contains": "«mitigar»",
+      "rationale": "Mitigar el efecto de una inundación significa disminuir su intensidad o severidad, es decir, atenuarla."
+    },
+    {
+      "id": "sa-a1",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Sinónimos y antónimos",
+      "mode": "quiz",
+      "expected_option": "Que no puede llevarse a cabo",
+      "stem_contains": "«viable»",
+      "rationale": "En el pasaje la viabilidad es la posibilidad de ejecutar el plan bajo ciertas condiciones; su negación es la imposibilidad de llevarlo a cabo."
+    },
+    {
+      "id": "sa-a2",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Sinónimos y antónimos",
+      "mode": "quiz",
+      "expected_option": "precipitada en sus conclusiones",
+      "stem_contains": "«cautelosa»",
+      "rationale": "Una interpretación cautelosa evalúa los límites de la evidencia; precipitarse en las conclusiones contrasta con esa prudencia."
+    },
+    {
+      "id": "cc-p1",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Cohesión y coherencia",
+      "mode": "quiz",
+      "expected_option": "la",
+      "stem_contains": "«su tarea»",
+      "rationale": "El complemento directo sustituye a «tarea», femenino singular; el pronombre átono apropiado es «la»."
+    },
+    {
+      "id": "cc-p2",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Cohesión y coherencia",
+      "mode": "quiz",
+      "expected_option": "después",
+      "stem_contains": "hechos en el tiempo",
+      "rationale": "La expresión «después» establece sucesión temporal entre el oscurecimiento del cielo y la lluvia."
+    },
+    {
+      "id": "cc-i1",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Cohesión y coherencia",
+      "mode": "quiz",
+      "expected_option": "Por ello",
+      "stem_contains": "completa mejor la relación",
+      "rationale": "La necesidad de repetir la medición es consecuencia de la contaminación de la muestra; «por ello» expresa consecuencia."
+    },
+    {
+      "id": "cc-i2",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Cohesión y coherencia",
+      "mode": "quiz",
+      "expected_option": "A la ampliación del horario",
+      "stem_contains": "«la medida»",
+      "rationale": "El sintagma anafórico «la medida» retoma la decisión de ampliar el horario de la biblioteca."
+    },
+    {
+      "id": "cc-a1",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Cohesión y coherencia",
+      "mode": "quiz",
+      "expected_option": "la reparación del puente",
+      "stem_contains": "continuidad del párrafo",
+      "rationale": "La solicitud y la aprobación ocurrieron; la ejecución de la reparación es lo que permanece pendiente."
+    },
+    {
+      "id": "cc-a2",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Cohesión y coherencia",
+      "mode": "quiz",
+      "expected_option": "En consecuencia, el resultado debe interpretarse con cautela.",
+      "stem_contains": "limitación",
+      "rationale": "Una asociación observacional sin control suficiente de factores no demuestra causalidad; requiere prudencia interpretativa."
+    },
+    {
+      "id": "ms-p1",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Morfosintaxis",
+      "mode": "quiz",
+      "expected_option": "estudian",
+      "stem_contains": "oración con concordancia",
+      "rationale": "El sujeto plural «Las niñas» requiere una forma verbal en tercera persona plural: «estudian»."
+    },
+    {
+      "id": "ms-p2",
+      "level": "principiante",
+      "topic": "Gramática y semántica",
+      "subtopic": "Morfosintaxis",
+      "mode": "quiz",
+      "expected_option": "están",
+      "stem_contains": "núcleo verbal",
+      "rationale": "La forma finita «están» constituye el núcleo verbal de la oración que expresa ubicación."
+    },
+    {
+      "id": "ms-i1",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Morfosintaxis",
+      "mode": "quiz",
+      "expected_option": "permanece",
+      "stem_contains": "núcleo del sujeto",
+      "rationale": "El núcleo «colección» es singular pese al complemento «de fotografías antiguas»; la concordancia exige «permanece»."
+    },
+    {
+      "id": "ms-i2",
+      "level": "intermedio",
+      "topic": "Gramática y semántica",
+      "subtopic": "Morfosintaxis",
+      "mode": "quiz",
+      "expected_option": "los datos que envió la comunidad",
+      "stem_contains": "complemento directo de «revisó»",
+      "rationale": "El grupo nominal completo designa qué revisó el equipo; funciona como complemento directo del verbo transitivo."
+    },
+    {
+      "id": "ms-a1",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Morfosintaxis",
+      "mode": "quiz",
+      "expected_option": "los delegados",
+      "stem_contains": "sujeto de «entregaron»",
+      "rationale": "El sujeto pospuesto «los delegados» realiza la acción y concuerda en plural con «entregaron»."
+    },
+    {
+      "id": "ms-a2",
+      "level": "avanzado",
+      "topic": "Gramática y semántica",
+      "subtopic": "Morfosintaxis",
+      "mode": "quiz",
+      "expected_option": "Complemento directo de «presentaron»",
+      "stem_contains": "función cumple «que»",
+      "rationale": "El relativo «que» recupera «la propuesta», que es el objeto presentado por las estudiantes en la subordinada."
     }
   ]
 }
