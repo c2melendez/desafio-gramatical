@@ -6,6 +6,7 @@ import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {coverageRows} from '../../src/lib/coverage.ts';
 import {pool} from '../../scripts/inventory-items.mjs';
+import {reviewedOrthographicOptions} from '../../scripts/editorial-decisions.mjs';
 const rules=JSON.parse(readFileSync('qa/certification/spanish-anchor-rules.json','utf8'));
 const rows=coverageRows().filter(x=>x.area==='espanol'),index=new Map(),parentCounts=new Map();
 const problems=[],queue=[],perFamily=new Map(),samples=[];
@@ -29,7 +30,7 @@ function evaluate(anchor,item){
  }
  return errs;
 }
-const counts={anchors:rules.anchors.length,by_level:{},positive:0,negative_key:0,negative_duplicate:0,exam_distractor_reviews:0,original_stems:0,source_linked:0};
+const counts={anchors:rules.anchors.length,by_level:{},positive:0,negative_key:0,negative_duplicate:0,exam_distractor_reviews:0,documented_orthographic_examples:0,original_stems:0,source_linked:0};
 const anchored=new Set();
 for(const anchor of rules.anchors){
  const match=index.get(anchor.id);
@@ -65,16 +66,19 @@ for(const {row,item} of index.values()){
   kind=ranked[2];
  if(kind){
   const sourceImpact=parentCounts.get(item.id)??0;
-  const priority=kind===ranked[0]?'BLOCKER_REVIEW':sourceImpact>0?'HIGH_EDITORIAL_REVIEW':'EDITORIAL_REVIEW';
+  const orthographicRule=kind===ranked[1]?reviewedOrthographicOptions(row,item):null;
+  if(orthographicRule)counts.documented_orthographic_examples++;
+  const priority=kind===ranked[0]?'BLOCKER_REVIEW':orthographicRule?'DOCUMENTED_RULE_REVIEW':sourceImpact>0?'HIGH_EDITORIAL_REVIEW':'EDITORIAL_REVIEW';
   queue.push({id:item.id,kind,priority,sourceImpact,topic:row.topic,subtopic:row.subtopic,mode:row.mode,level:row.level,options:item.options,selected:typeof item.answer==='number'?item.options[item.answer]:item.connector??item.correctConnector??null,
-   status:'REVIEW',note:'Heurística de semejanza; verificar contexto y reglas ortográficas antes de modificar respuestas'});
+   documented_rule:orthographicRule?{rule:orthographicRule.rule,rationale:orthographicRule.justification}:null,
+   status:'REVIEW',note:orthographicRule?'Distractor ortográfico documentado en decisiones previas; validar aplicación contextual, sin atribuir aprobación docente global.':'Heurística de semejanza; verificar contexto y reglas ortográficas antes de modificar respuestas'});
   const fam=row.topic+'/'+row.subtopic+'/'+row.mode;
   perFamily.set(fam,(perFamily.get(fam)??0)+1);
  }
  counts.original_stems+=!item.sourceIds?.length?1:0;
  counts.source_linked+=item.sourceIds?.length?1:0;
 }
-queue.sort((a,b)=>{const p=x=>x.priority==='BLOCKER_REVIEW'?0:x.priority==='HIGH_EDITORIAL_REVIEW'?1:2;return p(a)-p(b)||b.sourceImpact-a.sourceImpact||a.id.localeCompare(b.id);});
+queue.sort((a,b)=>{const p=x=>x.priority==='BLOCKER_REVIEW'?0:x.priority==='HIGH_EDITORIAL_REVIEW'?1:x.priority==='EDITORIAL_REVIEW'?2:3;return p(a)-p(b)||b.sourceImpact-a.sourceImpact||a.id.localeCompare(b.id);});
 counts.exam_distractor_reviews=queue.length;
 const sha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const report={suite:'SPANISH_ORIGINAL_RULES_AND_DISTRACTORS_V1',sha,status:problems.length?'FAIL':'PASS',
