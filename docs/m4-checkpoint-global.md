@@ -36,3 +36,16 @@ No se contabilizan los controles pendientes como PASS ni se cambia el módulo a 
 - `.github/workflows/ci.yml` incorpora el control obligatorio y el artefacto `m4-runtime-storage-pwa`. El resultado de CI y Render del SHA final de esta pasada **está pendiente de reconciliación** y no debe suponerse PASS sin consultarlo.
 - Los escáneres de privacidad y seguridad existentes siguen en CI. No se han observado ni registrado solicitudes de red con navegador instrumentado en esta ejecución; el CSS carga fuentes de Google y el entorno de previsualización puede usar telemetría de Lovable. Se requiere análisis independiente antes de declarar privacidad en tiempo de ejecución verificada.
 - **PENDIENTES:** pruebas efectivas con Chrome/Firefox/Safari, instalación PWA en dispositivo real, lector de pantalla, contraste/foco/zoom, inspección de solicitudes de terceros y revisión académica separada. No se declara M4 COMPLETADA por estas incorporaciones.
+
+## Cuarta pasada — control de navegadores, red y privacidad de producción
+
+**Evidencia técnica verificada sobre SHA `51e8d887ad567971ea40928609972b7853706cf9`:**
+
+- Se retiraron enlaces y conexiones automáticas a `fonts.googleapis.com` y `fonts.gstatic.com`; las tipografías se resuelven con alternativas del sistema para no depender de terceros. Esta decisión modifica la representación tipográfica y no equivale a certificación visual.
+- El hook de telemetría del editor queda limitado a modo desarrollo mediante `!import.meta.env.DEV` en `src/lib/lovable-error-reporting.ts`. El reporte de errores local de la aplicación sigue disponible.
+- `scripts/audit-m4-privacy.mjs` bloquea en CI reintroducir fuentes remotas, importaciones CSS HTTP o el hook de telemetría sin guarda de producción.
+- `scripts/audit-m4-browser.mjs` ejecuta navegación real en Chromium y Firefox sobre la compilación Cloudflare/Nitro servida localmente con Wrangler: escritorio 1365×768 y móvil emulado 390×844, cinco rutas por perfil, salto de teclado, persistencia local, errores JS/HTTP y observación de solicitudes HTTP(S) externas.
+- Job `navegador_m4` en GitHub Actions `45000733641`: **SUCCESS**, con **84 verificaciones PASS, 0 fallos y 4 perfiles**; artefacto `m4-real-browser-privacy-accessibility` (ID `14745458584`) con cuatro capturas y reporte JSON. No se observaron solicitudes HTTP(S) a terceros en esas cinco rutas bajo los perfiles probados.
+- Render `dep-dc1a21e0tbcc73ag0dhg`: **LIVE** para ese mismo SHA. La conciliación definitiva del trabajo principal y del SHA documental posterior se verifica por separado.
+
+**Limitaciones que siguen pendientes:** Safari/WebKit y dispositivos físicos, lector de pantalla y contraste/foco/zoom exhaustivos, red en despliegue de producción instrumentada (la prueba cubrió servidor local del mismo build), análisis completo de privacidad de dependencias/servicios y revisión académica/psicométrica autorizada como pendiente. La auditoría de navegador no reemplaza esas pruebas ni habilita certificar el módulo global como COMPLETADA.
