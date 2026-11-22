@@ -17,7 +17,7 @@ describe("Corte técnico integral Habilidades Blandas: ocho subtemas y 3600 IDs"
   expect(validateSoftSearch({subtema:"Célula",modo:"inexistente",nivel:"x"})).toEqual(validateSoftSearch({}));
   expect(validateSoftSearch({subtema:null,modo:17,nivel:[]})).toEqual(validateSoftSearch({}));
   for(const sub of SOFT_SUBTOPICS)for(const mode of SOFT_MODES)for(const level of SOFT_LEVELS)
-   expect(validateSoftSearch({subtema:sub,modo:mode,nivel:level})).toEqual({subtema:sub,modo, nivel:level});
+   expect(validateSoftSearch({subtema:sub,modo:mode,nivel:level})).toEqual({subtema:sub,modo:mode,nivel:level});
  });
  it("explica competencias transversales concretas, conserva selección de origen",()=>{
   for(const t of SOFT_TOPICS)for(const sub of t.subtopics){
