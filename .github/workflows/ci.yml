@@ -541,6 +541,7 @@ jobs:
           if [ "$ready" -ne 1 ]; then cat /tmp/m4-preview.log; exit 1; fi
           M4_PLAYWRIGHT_ROOT=/tmp/m4-playwright M4_BASE_URL=http://127.0.0.1:4173 node scripts/audit-m4-browser.mjs
           M4_PLAYWRIGHT_ROOT=/tmp/m4-playwright M4_BASE_URL=http://127.0.0.1:4173 node scripts/audit-game-progression.mjs
+          M4_PLAYWRIGHT_ROOT=/tmp/m4-playwright M4_BASE_URL=http://127.0.0.1:4173 node scripts/audit-spanish-navigation.mjs
       - name: Conservar capturas y solicitudes de red
         if: always()
         uses: actions/upload-artifact@v4
@@ -549,5 +550,6 @@ jobs:
           path: |
             m4-browser-evidence/
             m4-gameplay-evidence/
+            m4-spanish-evidence/
           if-no-files-found: warn
           retention-days: 30
