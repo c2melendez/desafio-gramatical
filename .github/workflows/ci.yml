@@ -83,6 +83,16 @@ jobs:
           name: m0-inventario
           path: m0-inventory.json
           retention-days: 30
+      - name: M4 - auditar 40500 posiciones, 810 celdas y cinco áreas
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m4-global.mjs > m4-global-audit.json
+      - name: M4 - archivar matriz técnica transversal
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m4-global-technical-baseline
+          path: m4-global-audit.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
       - name: Medir alcance real y déficit de M1 Español
