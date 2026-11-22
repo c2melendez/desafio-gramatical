@@ -60,7 +60,7 @@ function Home() {
   setSelection(previous=>({...previous,tema:name,subtema:target.subtopics[0],modo:"clasificar"}));
  };
  return (
-  <main className="mx-auto max-w-4xl px-4 py-7 md:py-10 space-y-7">
+  <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-4xl px-4 py-7 md:py-10 space-y-7">
    <header className="space-y-3">
     <p className="inline-block rounded-full border-2 border-foreground bg-accent px-3 py-1 text-sm font-bold">🎓 Preparación universitaria · Honduras</p>
     <h1 className="text-4xl sm:text-5xl font-black leading-tight">Academia <span className="text-primary">PHUMA Play</span></h1>
