@@ -1,5 +1,5 @@
 {
-  "version": 27,
+  "version": 28,
   "areas": [
     "espanol",
     "matematicas",
@@ -802,7 +802,27 @@
         "blandas-M3"
       ],
       "optional": [],
-      "state": "PENDIENTE"
+      "state": "EN_CURSO",
+      "evidence": "docs/blandas-corte-20261121.md",
+      "scope": "3 temas, 8 subtemas, 72 celdas; 3600 registros técnicos 30/50/70, 40 anclajes; revisión académica/visual pendiente",
+      "review": "REVISIÓN_ACADÉMICA_PENDIENTE_AUTORIZADA",
+      "technical": {
+        "cells": 72,
+        "subtopics": 8,
+        "anchors": 40,
+        "technical_records": 3600,
+        "targets": {
+          "principiante": 30,
+          "intermedio": 50,
+          "avanzado": 70
+        },
+        "mutants_planned": 720,
+        "semantic_independence": "NO_CERTIFICADA",
+        "official_curriculum": "PRACTICA_COMPLEMENTARIA_NO_OFICIAL",
+        "manual_visual": "NO_EJECUTADA",
+        "ci": "PENDIENTE",
+        "render": "PENDIENTE"
+      }
     },
     {
       "id": "M4",
