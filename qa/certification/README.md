@@ -47,3 +47,11 @@ El informe contiene `technical_status` y `certified_for_exams=false` por separad
 - **No trasladar ciegamente**: downgrade de Alembic, SQL injection, permisos de APIs o rate limits de endpoints no presentes. Una etiqueta PASS de otra suite no acredita este proyecto.
 
 En las revisiones sin oráculo independiente se debe emitir `REVIEW`; no reetiquetar incertidumbre como aprobación. Cerrar M4 solo cuando los contratos académicos y de simulación relevantes estén efectivamente respaldados, separando el cierre técnico de la aprobación docente.
+
+## Segunda fase implementada — C01/C02, oráculos de Español y trazabilidad
+
+- `qa/certification/spanish-oracles.mjs` verifica las estructuras de respuesta que realmente utiliza la UI: clasificación de palabras o elementos, elección entre cuatro opciones, secuencias, corrección y reconstrucción de textos. Incluye nueve casos de mutación negativa con oráculos independientes de los componentes React.
+- `qa/certification/traceability.mjs` genera **una fila por cada registro técnico** con ID, área, tema, subtema, modalidad, nivel, aplicabilidad PAA/PHUMA, huella SHA-256 del contenido y procedencia cuando está presente. El archivo `qa/certification/evidence/item-trace.json` es evidencia generada en cada CI, no un segundo banco de ejercicios.
+- La clasificación curricular individual se fija expresamente en `REVIEW`: el vínculo por nombre del tema con el examen permite priorizar auditorías, pero no prueba que un ejercicio evalúe correctamente una competencia. Una referencia genérica `sourceLocator` no cambia ese estado.
+- `run.mjs` integra los nuevos oráculos de Español en C00/C02 y mantiene separado el indicador `certified_for_exams: false`. La revisión docente del contenido y la equivalencia con preguntas reales continúan pendientes.
+- El trabajo de CI conserva `academia-item-trace-spanish-oracles` con informe, trazas y fallos diagnosticables. La revisión de errores detectados debe corregir la pregunta/banco de origen o justificar una excepción documentada; nunca se deben suprimir errores por lotes.
