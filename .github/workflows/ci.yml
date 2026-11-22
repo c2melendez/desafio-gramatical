@@ -93,6 +93,16 @@ jobs:
           path: m4-global-audit.json
           if-no-files-found: error
           retention-days: 30
+      - name: M4 - medir construcción global y memoria real en Node CI
+        run: node --import ./scripts/ts-resolve.mjs scripts/audit-m4-performance.mjs > m4-performance.json
+      - name: M4 - conservar medición reproducible
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m4-global-node-performance
+          path: m4-performance.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
       - name: Medir alcance real y déficit de M1 Español
