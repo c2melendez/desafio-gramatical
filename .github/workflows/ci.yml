@@ -103,6 +103,16 @@ jobs:
           path: m4-performance.json
           if-no-files-found: error
           retention-days: 30
+      - name: M4 - exigir contratos básicos de accesibilidad
+        run: node scripts/audit-m4-accessibility.mjs > m4-accessibility.json
+      - name: M4 - guardar auditoría accesible acotada
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m4-accessibility-contracts
+          path: m4-accessibility.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Auditar cobertura del banco y objetivos de la Fase A
         run: bun run audit:content
       - name: Medir alcance real y déficit de M1 Español
