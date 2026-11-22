@@ -1,8 +1,9 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
+import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Mistake} from "@/lib/grammar";
 import {type ScienceItem} from "@/lib/science-m1";
-import {softTopic,SOFT_SUBTOPICS,SOFT_MODES} from "@/lib/soft-m1";
+import {softTopic} from "@/lib/soft-m1";
+import {validateSoftSearch} from "@/lib/soft-route";
 
 import {softM3Pool} from "@/lib/soft-m3";
 import {gameNames} from "@/lib/phuma-catalog";
@@ -12,11 +13,7 @@ import {ScienceExerciseCard} from "@/components/games/ScienceExerciseCard";
 import {rotationKey,readRotation,selectRotation,recordRotation,writeRotation} from "@/lib/rotation";
 
 export const Route=createFileRoute("/blandas")({
- validateSearch:(s:Record<string,unknown>):{subtema:string;modo:Mode;nivel:Level}=>({
-  subtema:SOFT_SUBTOPICS.includes(s.subtema as string)?s.subtema as string:"Pensamiento crítico",
-  modo:SOFT_MODES.includes(s.modo as Mode)?s.modo as Mode:"clasificar",
-  nivel:LEVELS.includes(s.nivel as Level)?s.nivel as Level:"principiante",
- }),
+ validateSearch:validateSoftSearch,
  head:()=>({meta:[{title:"Habilidades Blandas — Academia PHUMA Play"},
   {name:"description",content:"Práctica de Habilidades Blandas M3 con 10 rondas y explicaciones."}]}),
  component:SoftPlay,
