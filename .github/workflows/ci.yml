@@ -524,11 +524,13 @@ jobs:
         run: |
           npm install --prefix /tmp/m4-playwright --no-package-lock --no-audit --no-fund playwright@1.56.1
           /tmp/m4-playwright/node_modules/.bin/playwright install --with-deps chromium firefox
+      - name: Instalar Wrangler fuera del proyecto
+        run: npm install --prefix /tmp/m4-wrangler --no-package-lock --no-audit --no-fund wrangler@4.50.0
       - name: Servir compilación local y verificar navegadores
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@4.50.0 dev --config .output/server/wrangler.json --local --port 4173 --ip 127.0.0.1 > /tmp/m4-preview.log 2>&1 &
+          /tmp/m4-wrangler/node_modules/.bin/wrangler dev --config .output/server/wrangler.json --local --port 4173 --ip 127.0.0.1 > /tmp/m4-preview.log 2>&1 &
           server=$!
           trap 'kill "$server" 2>/dev/null || true' EXIT
           ready=0
