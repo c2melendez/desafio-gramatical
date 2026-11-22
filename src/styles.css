@@ -58,8 +58,8 @@
   --color-success-foreground: var(--success-foreground);
   --color-success-soft: var(--success-soft);
   --color-destructive-soft: var(--destructive-soft);
-  --font-display: "Fraunces", Georgia, serif;
-  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --shadow-tile: var(--shadow-tile);
   --shadow-card: var(--shadow-card);
   --color-input: var(--input);
