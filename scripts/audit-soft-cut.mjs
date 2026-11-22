@@ -89,7 +89,7 @@ if(JSON.stringify(routes)!==JSON.stringify({subtema:DEFAULT_SOFT_SUBTOPIC,modo:"
  issues.push("Fallback en ruta Blandas inválido");
 for(const t of SOFT_TOPICS)for(const sub of t.subtopics)
  for(const mode of SOFT_MODES)for(const level of SOFT_LEVELS){
-  if(JSON.stringify(validateSoftSearch({subtema:sub,modo:mode,nivel:level}))!==JSON.stringify({subtema:sub,modo,nivel:level}))
+  if(JSON.stringify(validateSoftSearch({subtema:sub,modo:mode,nivel:level}))!==JSON.stringify({subtema:sub,modo:mode,nivel:level}))
    issues.push("Ruta inalcanzable "+sub+"/"+mode+"/"+level);
   if(studyReturn(t.name,sub,mode,level,"blandas").subtema!==sub)issues.push("Retorno no contextual "+sub);
  }
