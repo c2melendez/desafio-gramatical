@@ -75,3 +75,13 @@ El oráculo de linaje **no prueba** que la clave original sea semánticamente co
 ### Conciliación de distractores con decisiones editoriales existentes
 
 La cola `distractor-review-queue.json` conserva los hallazgos detectados en las 9.450 posiciones de Español. Las opciones muy similares pueden ser legítimas cuando se evalúan morfología, concordancia, acentuación o puntuación. Los casos que coincidan exactamente con `scripts/editorial-decisions.mjs` recibirán la prioridad `DOCUMENTED_RULE_REVIEW` y la justificación ya archivada; **no** se eliminan de la cola ni se marcan como aprobados académicamente. El resto se ordena por severidad y dependencia entre ejercicios. Una similitud ortográfica no prueba que existan dos claves correctas.
+
+## Quinta fase — 62 distractores de mayor impacto
+
+Se revisó la procedencia de las 62 alertas `HIGH_EDITORIAL_REVIEW` de `distractor-review-queue.json`: **32 reactivos originales** y **30 actividades compuestas M2**. Los originales pertenecen a Morfosintaxis (9) y Corrección de Redacción (23), y las composiciones reutilizan al menos dos casos fuente mediante `sourceIds`.
+
+- `qa/certification/high-impact-anchor-rules.json`: registra para cada uno de los 32 originales el ID, respuesta textual esperada, pista contextual y explicación lingüística (concordancia, antecedente, tiempo verbal, subordinación, acentuación). Los casos M2 no se presentan como preguntas independientes.
+- `qa/certification/high-impact-review.mjs`: verifica las claves de esos originales sin leer el índice almacenado como fuente de verdad; muta la clave y duplica la respuesta para exigir detección. Para los restantes 30 exige fuentes M2 resolubles, clave idéntica a la primera fuente y respuesta única. Si la fuente A dispone de un oráculo argumentado, se comprueba su concordancia; si no, se marca `SOURCE_KEY_CONSISTENT_SEMANTIC_REVIEW`.
+- `qa/certification/evidence/high-impact-review.json` es evidencia **por caso**, con dependencias y límites, y se archiva como `academia-spanish-62-high-impact-review`. Si una pregunta deja de estar entre las 62 alertas por una corrección legítima, se sigue examinando cualquier regla original de la tabla de anclajes.
+- **No se confunden riesgos de apariencia similar con fallos comprobados**: una serie de alternativas como «está / están / estamos / estoy» o «cómo / como» puede evaluar precisamente concordancia o acentuación. Corregir sin examinar el contexto falsearía la evaluación.
+- La prueba de consistencia de composiciones hereda la calidad de su origen. **La aprobación docente de semántica, transferencia PAA/PHUMA y calibración psicométrica siguen pendientes**. Un PASS técnico no autoriza cambiar esos estados.
