@@ -21,11 +21,22 @@ function issue(name){problems.push(name);}
 if(policy.batch_size!==450||total!==40500||policy.expected_batches!==90)issue('La política de 450/40500/90 no coincide con el inventario');
 if(!Number.isInteger(policy.current_batch)||policy.current_batch<0||policy.current_batch>=90)issue('Índice de lote fuera de 0..89');
 if(areas.length!==5||areaItems.size!==areas.length)issue('Distribución de áreas incompatible');
+// Stratum ordering is fixed so every 450-item run includes all five areas, three games
+// and three levels while data remain in each stratum; stable across all 90 batches.
+const modes=['clasificar','quiz','construir'];
+const levels=['principiante','intermedio','avanzado'];
+const keys=areas.flatMap(a=>modes.flatMap(m=>levels.map(l=>a+'/'+m+'/'+l)));
+const buckets=new Map(keys.map(k=>[k,[]]));
+for(const area of areas)for(const entry of areaItems.get(area)??[]){
+ const key=area+'/'+entry.row.mode+'/'+entry.row.level;
+ if(!buckets.has(key))issue('Combinación modalidad/nivel desconocida: '+key);
+ else buckets.get(key).push(entry);
+}
 const order=[];
 let position=0;
 while(order.length<total){
  let appended=false;
- for(const area of areas){const row=areaItems.get(area)?.[position];if(row){order.push(row);appended=true;}}
+ for(const key of keys){const row=buckets.get(key)?.[position];if(row){order.push(row);appended=true;}}
  if(!appended)break;
  position++;
 }
@@ -87,7 +98,7 @@ if(results[0]?.id!==ids[start]||results.at(-1)?.id!==ids[start+449])issue('El cu
 const output={schema_version:1,suite:'ACADEMIA_CERTIFICATION_450_V1',sha,batch_index:policy.current_batch,batch_number:policy.current_batch+1,batch_size:450,expected_batches:90,
  status:problems.length?'FAIL':'PASS',academic_certification:'PENDIENTE',
  scanned_records:total,exam_scope:'PAA/PHUMA sin Inglés',
- selection:'round robin por área, orden estable por tema, subtema, modo y nivel',
+ selection:'round robin por área, juego y nivel (45 estratos) con orden estable por tema/subtema',
  range:{from:start,to_exclusive:start+450},
  summary:{evaluated:results.length,technical_failures:results.filter(x=>x.technical_status==='FAIL').length,
  semantic_approved:0,semantic_review:results.length,by_area:byArea,by_level:byLevel,by_game:byGame,editorial_flags:reviewCounts},
