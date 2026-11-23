@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-23",
+  "repo": "c2melendez/desafio-gramatical",
+  "policy": "No subir obras completas protegidas a repositorio público sin licencia o permiso verificado; mantener referencias, huellas y estructura pedagógica propia.",
+  "documents": [
+    {
+      "id": "PHUMA-UNAH-2026",
+      "filename": "GUIA-PRE-U-UNAH-2026(20261123-135724).pdf",
+      "pages": 77,
+      "sha256": "cd248afe2a90605b1037f3b2fa6d32f070a6a457a6c4830d24b6c6784eaeabf0",
+      "url": "https://admisiones.unah.edu.hn/assets/Uploads/GUIA-PRE-U-UNAH-2026.pdf",
+      "role": "official-primary",
+      "repository_copy": false,
+      "access_policy": "Use rightsholder-hosted URL; verify response and version each execution",
+      "redistribution_permission": "NOT_VERIFIED"
+    },
+    {
+      "id": "PHUMA-UNAH-2025",
+      "filename": "GUIA-PRE-U-UNAH(20261123-135717).pdf",
+      "pages": 42,
+      "sha256": "0e0c9881ab8049e404fffa176490bef77b50181b5d4af16e9fbd6293e7b6f65c",
+      "url": "https://admisiones.unah.edu.hn/assets/guia-de-estudio/GUIA-PRE-U-UNAH.pdf",
+      "role": "official-historical",
+      "repository_copy": false,
+      "access_policy": "Use rightsholder-hosted URL; verify response and version each execution",
+      "redistribution_permission": "NOT_VERIFIED"
+    },
+    {
+      "id": "PAA-CB-GUIA",
+      "filename": "Guia_de_estudios_PAA(20261123-135717).pdf",
+      "pages": 84,
+      "sha256": "6bcb3efc6c4074e0a7b1272d67b50bd8835cfb3e486411020039ba84b932e1fc",
+      "url": null,
+      "role": "complementary-rights-reserved",
+      "repository_copy": false,
+      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "redistribution_permission": "NOT_VERIFIED"
+    },
+    {
+      "id": "PAA-CB-PRACTICA",
+      "filename": "0-PAA-Prueba-Practica(20261123-135727).pdf",
+      "pages": 48,
+      "sha256": "5801f046a0caa7236fc80f4680c511fbb09203c547e979b4d710cc05cd349c86",
+      "url": null,
+      "role": "complementary-rights-reserved",
+      "repository_copy": false,
+      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "redistribution_permission": "NOT_VERIFIED"
+    },
+    {
+      "id": "UNX-TEMARIO",
+      "filename": "Temario-GENERAL-PAA-UNX(20261123-135720).pdf",
+      "pages": 2,
+      "sha256": "9fa76bf27c46efe3958a44d33c0439773a55c10aac6eeedc5d7f5146af5e3656",
+      "url": null,
+      "role": "third-party-contextual",
+      "repository_copy": false,
+      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "redistribution_permission": "NOT_VERIFIED"
+    },
+    {
+      "id": "UNX-HOJA",
+      "filename": "formato-contestacion(20261123-135717).pdf",
+      "pages": 1,
+      "sha256": "59552dd53ce2088f2e23f38de1f5ba37234c840211e3d8f5be16efefbc9a4f5b",
+      "url": null,
+      "role": "third-party-format",
+      "repository_copy": false,
+      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "redistribution_permission": "NOT_VERIFIED"
+    },
+    {
+      "id": "UNX-CLAVES",
+      "filename": "Respuestas-00-Gratuito-UNAH-PAA(20261123-135721).pdf",
+      "pages": 1,
+      "sha256": "4a16559d33db85786b108be6ef9ff963c42c35ee03982cde4bce8bac44ebc752",
+      "url": null,
+      "role": "third-party-comparison",
+      "repository_copy": false,
+      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "redistribution_permission": "NOT_VERIFIED"
+    },
+    {
+      "id": "UNX-SIMULACRO",
+      "filename": "PAA-UNAH-EXAMEN-0(20261123-135730).pdf",
+      "pages": 23,
+      "sha256": "792085b771425f727b259827e6d35f0eaf4412007db1de828b48ab51f2b17021",
+      "url": null,
+      "role": "third-party-visual-only",
+      "repository_copy": false,
+      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "redistribution_permission": "NOT_VERIFIED"
+    }
+  ],
+  "duplicates": [
+    {
+      "filename": "0-PAA-Prueba-Practica (1)(20261123-135720).pdf",
+      "duplicates": "PAA-CB-PRACTICA",
+      "sha256": "5801f046a0caa7236fc80f4680c511fbb09203c547e979b4d710cc05cd349c86"
+    }
+  ],
+  "web_references": [
+    {
+      "id": "UNAH-GUIA",
+      "url": "https://admisiones.unah.edu.hn/guia-de-estudio-para-la-phuma/",
+      "role": "official"
+    },
+    {
+      "id": "UNAH-ADMISIONES",
+      "url": "https://admisiones.unah.edu.hn/pruebas-de-admision/",
+      "role": "official"
+    },
+    {
+      "id": "UNAH-INSCRIPCION-2025",
+      "url": "https://admisiones.unah.edu.hn/pruebas-de-admision/inscripcion-2025/",
+      "role": "historical"
+    },
+    {
+      "id": "PRONASA",
+      "url": "https://pronasa.dashnexpages.net/simulador-phuma/",
+      "role": "third-party"
+    },
+    {
+      "id": "STUDOCU",
+      "url": "https://www.studocu.com/latam/course/universidad-nacional-autonoma-de-honduras/examen-de-admision/7512626",
+      "role": "third-party"
+    },
+    {
+      "id": "ACADEMIA-PAA-PHUMA",
+      "url": "https://github.com/c2melendez/academia-paa-phuma",
+      "role": "other-project"
+    },
+    {
+      "id": "AXIS-QA",
+      "url": "https://github.com/c2melendez/Axis-Suite/tree/main/scripts/qa_suite",
+      "role": "suite-reference"
+    }
+  ],
+  "recommended_page_anchors": [
+    {
+      "source": "PHUMA-UNAH-2026",
+      "pdf_pages": {
+        "structure": 5,
+        "spanish": 6,
+        "math": 7,
+        "naturals": "8-10",
+        "social": 11,
+        "examples": "12+"
+      }
+    },
+    {
+      "source": "PAA-CB-GUIA",
+      "pdf_pages": {
+        "structure": 7,
+        "reading": "9-11",
+        "literary_examples": "12-15"
+      }
+    },
+    {
+      "source": "PAA-CB-PRACTICA",
+      "pdf_pages": {
+        "intro": 1,
+        "reading_start": 2
+      },
+      "note": "No reproducir preguntas protegidas"
+    }
+  ],
+  "last_checked": "2026-11-23"
+}
