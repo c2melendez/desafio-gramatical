@@ -31,10 +31,10 @@
       "filename": "Guia_de_estudios_PAA(20261123-135717).pdf",
       "pages": 84,
       "sha256": "6bcb3efc6c4074e0a7b1272d67b50bd8835cfb3e486411020039ba84b932e1fc",
-      "url": null,
+      "url": "https://admisiones.unah.edu.hn/assets/Guia-estudio-nueva-2022/Guia-de-estudios-PAA.pdf",
       "role": "complementary-rights-reserved",
       "repository_copy": false,
-      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "access_policy": "Rightsholder/institution hosted direct PDF; verify version and availability on each execution; still no repository reproduction.",
       "redistribution_permission": "NOT_VERIFIED"
     },
     {
@@ -42,10 +42,10 @@
       "filename": "0-PAA-Prueba-Practica(20261123-135727).pdf",
       "pages": 48,
       "sha256": "5801f046a0caa7236fc80f4680c511fbb09203c547e979b4d710cc05cd349c86",
-      "url": null,
+      "url": "https://latam.collegeboard.org/wp-content/uploads/2020/07/0-PAA-Prueba-Practica.pdf",
       "role": "complementary-rights-reserved",
       "repository_copy": false,
-      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
+      "access_policy": "Rightsholder/institution hosted direct PDF; verify version and availability on each execution; still no repository reproduction.",
       "redistribution_permission": "NOT_VERIFIED"
     },
     {
@@ -135,6 +135,16 @@
       "id": "AXIS-QA",
       "url": "https://github.com/c2melendez/Axis-Suite/tree/main/scripts/qa_suite",
       "role": "suite-reference"
+    },
+    {
+      "id": "PAA-CB-GUIA-UNAH",
+      "url": "https://admisiones.unah.edu.hn/assets/Guia-estudio-nueva-2022/Guia-de-estudios-PAA.pdf",
+      "role": "institution-hosted PAA 2021 guide"
+    },
+    {
+      "id": "PAA-CB-PRACTICA-OFICIAL",
+      "url": "https://latam.collegeboard.org/wp-content/uploads/2020/07/0-PAA-Prueba-Practica.pdf",
+      "role": "rightsholder-hosted PAA practice 2018"
     }
   ],
   "recommended_page_anchors": [
