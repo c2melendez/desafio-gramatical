@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "batch_size": 450,
+  "total_target": 40500,
+  "expected_batches": 90,
+  "current_batch": 0,
+  "selection": "Area-balanced deterministic round robin; stable order from coverageRows and pool",
+  "review_policy": "Technical PASS != semantic/academic certification; every reviewed entry has explicit review state",
+  "completed_batches": [],
+  "last_verified_ci_run": null,
+  "english_excluded": true
+}
