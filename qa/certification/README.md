@@ -1,6 +1,6 @@
 # Certificación académica y funcional — Academia PHUMA Play
 
-**Suite V1**, integrada en `.github/workflows/ci.yml`; sin repositorio nuevo. Esta capa **complementa** las auditorías existentes M0–M4, no las sustituye ni certifica el examen oficial.
+> **Sistema maestro vigente:** [Academia PHUMA Play — Ejecutor autónomo de certificación v6.0](../../docs/Sistema_modulos_Academia_PHUMA_Play_v6_0_Certificacion.md). Consolida la versión modular 5.4 y añade prioridad de idoneidad PAA/PHUMA (sin Inglés), nivel Intermedio de referencia, 450 registros por corrida, suite C00–C08 y aprobación perfecta 10/10 con insignia por área/tema/subtema/juego/nivel. La insignia C06 y sus pruebas de persistencia son **requisitos de implementación**, no funciones ya certificadas.\n\n> **Fuentes verificables:** [Inventario de PDFs, hashes, ediciones, derechos y enlaces](../../docs/fuentes_certificacion_paa_phuma_v6.json). No contiene reproducciones de PDFs de terceros; acceso directo a las fuentes oficiales cuando existe.\n\n**Suite V1**, integrada en `.github/workflows/ci.yml`; sin repositorio nuevo. Esta capa **complementa** las auditorías existentes M0–M4, no las sustituye ni certifica el examen oficial.
 
 ## Fundamento documental y límites
 
