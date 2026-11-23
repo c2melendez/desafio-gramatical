@@ -85,3 +85,21 @@ Se revisó la procedencia de las 62 alertas `HIGH_EDITORIAL_REVIEW` de `distract
 - `qa/certification/evidence/high-impact-review.json` es evidencia **por caso**, con dependencias y límites, y se archiva como `academia-spanish-62-high-impact-review`. Si una pregunta deja de estar entre las 62 alertas por una corrección legítima, se sigue examinando cualquier regla original de la tabla de anclajes.
 - **No se confunden riesgos de apariencia similar con fallos comprobados**: una serie de alternativas como «está / están / estamos / estoy» o «cómo / como» puede evaluar precisamente concordancia o acentuación. Corregir sin examinar el contexto falsearía la evaluación.
 - La prueba de consistencia de composiciones hereda la calidad de su origen. **La aprobación docente de semántica, transferencia PAA/PHUMA y calibración psicométrica siguen pendientes**. Un PASS técnico no autoriza cambiar esos estados.
+
+## Política operativa vigente — 450 ejercicios por corrida
+
+A partir de esta revisión, cada corrida de certificación individual toma **exactamente 450 registros técnicos**. El universo vigente es 40.500 registros y la cobertura programada requiere **90 lotes**, sin Inglés. Esta política sustituye la revisión ordinaria anterior de grupos de 24, 42 o 62 registros. La suite técnica integral de inventario y regresión sigue ejecutándose en paralelo.
+
+### Criterios de selección y avance
+
+- `qa/certification/batch-state.json` es el cursor versionado; `current_batch=0` representa el primer lote. Solo se incrementa a `1`, `2`, etc. después de obtener **CI SUCCESS y Render LIVE del mismo SHA** y conservar la evidencia del lote anterior. La herramienta nunca avanza el cursor silenciosamente ni marca lotes futuros como completos.
+- `qa/certification/audit-450.mjs` construye un orden estable de las 40.500 posiciones, intercalando áreas de forma equilibrada mientras tengan elementos; selecciona la franja [`450 × current_batch`, `450 × (current_batch+1)`). La secuencia evita inspeccionar reiteradamente siempre los primeros ejercicios y cubre el catálogo completo tras 90 pasadas. **El lote 1 es 0–449**.
+- Cada ítem queda registrado con ID, huella de contenido, área, tema, subtema, juego, nivel, estado técnico, banderas editoriales, referencias de fuente y estado de revisión académica. No se confunden `PASS` estructural con independencia semántica, corrección factual, dificultad o equivalencia a los exámenes.
+- La corrida **falla** si el lote no tiene 450 IDs únicos, si se rompe el inventario o si la clave/estructura no es utilizable. Una posible ambigüedad, similitud ortográfica o explicación deficiente se registra como `REVIEW` para corregir con criterio, sin etiquetarla falsamente como error o PASS.
+- El artefacto `academia-certification-batch-450` en GitHub Actions contiene `qa/certification/evidence/batch-450.json`, los 450 expedientes y un resumen con desglose por área, modalidad, nivel y banderas de revisión.
+
+### Cierre de un lote
+
+Un lote solo queda **técnicamente entregado** cuando su auditoría y la regresión global CI son SUCCESS, Render está LIVE con ese SHA, existe evidencia archivada y el siguiente cursor se actualiza en una nueva corrida. La aprobación **académica** necesita evidencia adicional por ejercicio y puede quedar en `REVIEW` sin detener el cierre técnico, pero debe distinguirse en todos los informes.
+
+La cobertura total de 90 lotes no sustituye calibración psicométrica, revisión por especialistas ni los simulacros reales PAA/PHUMA separados.
