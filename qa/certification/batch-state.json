@@ -3,10 +3,28 @@
   "batch_size": 450,
   "total_target": 40500,
   "expected_batches": 90,
-  "current_batch": 0,
+  "current_batch": 1,
   "selection": "Area × game × difficulty deterministic round robin (45 strata), stable within each stratum",
   "review_policy": "Technical PASS != semantic/academic certification; every reviewed entry has explicit review state",
-  "completed_batches": [],
-  "last_verified_ci_run": null,
+  "completed_batches": [
+    {
+      "batch_number": 1,
+      "batch_index": 0,
+      "range": {
+        "from": 0,
+        "to_exclusive": 450
+      },
+      "items": 450,
+      "technical_status": "PASS",
+      "academic_status": "REVIEW",
+      "ci_run_id": 45167021720,
+      "ci_conclusion": "success",
+      "ci_sha": "ad14c4c9a32137e233bcb9d4ecb8556b52a6b202",
+      "render_deploy_id": "dep-dc22bc43eqjs73893nc0",
+      "render_status": "live",
+      "artifact": "academia-certification-batch-450"
+    }
+  ],
+  "last_verified_ci_run": 45167021720,
   "english_excluded": true
 }
