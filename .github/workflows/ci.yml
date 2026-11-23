@@ -57,6 +57,20 @@ jobs:
           node scripts/privacy-m0-static.mjs
           node scripts/security-client-audit.mjs --test
           node scripts/security-client-audit.mjs
+      - name: Certificación por lotes - auditar exactamente 450 ejercicios
+        run: |
+          node --import ./scripts/ts-resolve.mjs qa/certification/audit-450.mjs > qa-batch-450-summary.json
+          cat qa-batch-450-summary.json
+      - name: Certificación por lotes - archivar 450 expedientes individuales
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: academia-certification-batch-450
+          path: |
+            qa-batch-450-summary.json
+            qa/certification/evidence/batch-450.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Certificación PAA/PHUMA V1 - comprobar contratos, oráculos y mapeo sin Inglés
         run: node --import ./scripts/ts-resolve.mjs qa/certification/run.mjs > qa-certification-summary.json
       - name: Certificación C02-C04 - comprobar reglas originales y priorizar distractores
