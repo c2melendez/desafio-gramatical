@@ -4,7 +4,7 @@
   "total_target": 40500,
   "expected_batches": 90,
   "current_batch": 0,
-  "selection": "Area-balanced deterministic round robin; stable order from coverageRows and pool",
+  "selection": "Area × game × difficulty deterministic round robin (45 strata), stable within each stratum",
   "review_policy": "Technical PASS != semantic/academic certification; every reviewed entry has explicit review state",
   "completed_batches": [],
   "last_verified_ci_run": null,
