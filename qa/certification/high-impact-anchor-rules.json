@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "context": "32 preguntas originales de entre 62 casos de revisión prioritaria; 30 restantes son composiciones con sourceIds.",
+  "review_status": "RULE_JUSTIFIED_NOT_EXTERNAL_ACADEMIC_CERTIFICATION",
+  "rules": [
+    {
+      "id": "nucleo-extra-24",
+      "kind": "grammar_original",
+      "expected": "varios paquetes de libros",
+      "context": "A la biblioteca llegaron",
+      "rationale": "El sujeto pospuesto plural es «varios paquetes de libros», mientras que «a la biblioteca» expresa destino."
+    },
+    {
+      "id": "grammar-completion-quiz-31",
+      "kind": "grammar_original",
+      "expected": "Ni la directora ni los docentes",
+      "context": "Ni la directora ni los docentes asistieron",
+      "rationale": "Los dos grupos coordinados por «ni» componen conjuntamente el sujeto del verbo plural «asistieron»."
+    },
+    {
+      "id": "nucleo-extra-21",
+      "kind": "grammar_original",
+      "expected": "está",
+      "context": "La serie de fotografías",
+      "rationale": "El núcleo singular «serie» exige la tercera persona singular «está», no la plural del complemento."
+    },
+    {
+      "id": "gram-extra-19",
+      "kind": "grammar_original",
+      "expected": "revisan",
+      "context": "Los estudiantes",
+      "rationale": "El sujeto de tercera persona plural «los estudiantes» exige la conjugación plural «revisan»."
+    },
+    {
+      "id": "gram-extra-22",
+      "kind": "grammar_original",
+      "expected": "está",
+      "context": "La lista de participantes",
+      "rationale": "El núcleo del sujeto es «lista» en singular: «está» concuerda con este núcleo."
+    },
+    {
+      "id": "grammar-405-19",
+      "kind": "grammar_original",
+      "expected": "ofrecen",
+      "context": "Las bibliotecas",
+      "rationale": "«Las bibliotecas» es un sintagma sujeto plural; el verbo adecuado es «ofrecen»."
+    },
+    {
+      "id": "grammar-completion-quiz-28",
+      "kind": "grammar_original",
+      "expected": "tiene",
+      "context": "Cada una de las cajas",
+      "rationale": "El núcleo de la expresión distributiva «cada una» es singular y concuerda con «tiene»."
+    },
+    {
+      "id": "ms-i1",
+      "kind": "grammar_original",
+      "expected": "permanece",
+      "context": "La colección de fotografías antiguas",
+      "rationale": "La concordancia se determina por el núcleo singular «colección», no por «fotografías»."
+    },
+    {
+      "id": "ms-p1",
+      "kind": "grammar_original",
+      "expected": "estudian",
+      "context": "Las niñas",
+      "rationale": "El sujeto plural «Las niñas» exige la forma de tercera persona plural «estudian»."
+    },
+    {
+      "id": "writing-correction-hunter-v1-intermedio-14",
+      "kind": "writing_original",
+      "expected": "cómo",
+      "context": "Los docentes explicaron",
+      "rationale": "La interrogativa indirecta de modo se introduce con el adverbio tónico «cómo», con tilde."
+    },
+    {
+      "id": "writing-correction-hunter-v1-intermedio-7",
+      "kind": "writing_original",
+      "expected": "demuestran",
+      "context": "Las conclusiones del estudio",
+      "rationale": "El sujeto plural «Las conclusiones» exige «demuestran» en tercera persona plural."
+    },
+    {
+      "id": "writing-correction-quiz-v1-avanzado-32",
+      "kind": "writing_original",
+      "expected": "fueran",
+      "context": "El grupo solicitó que",
+      "rationale": "El verbo de petición en pasado introduce aquí el imperfecto de subjuntivo plural «fueran»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-intermedio-10",
+      "kind": "writing_original",
+      "expected": "cómo",
+      "context": "El equipo investigó",
+      "rationale": "La pregunta indirecta «cómo se produjo» exige la forma tónica con tilde."
+    },
+    {
+      "id": "writing-correction-quiz-v1-intermedio-9",
+      "kind": "writing_original",
+      "expected": "cautela",
+      "context": "La conclusión se redactó",
+      "rationale": "En «con cautela», la preposición rige el sustantivo «cautela» y no el adjetivo ni adverbio."
+    },
+    {
+      "id": "writing-correction-hunter-v1-avanzado-28",
+      "kind": "writing_original",
+      "expected": "este",
+      "context": "El texto señala",
+      "rationale": "El demostrativo que determina «resultado» se escribe sin tilde diacrítica."
+    },
+    {
+      "id": "writing-correction-hunter-v1-principiante-0",
+      "kind": "writing_original",
+      "expected": "corre",
+      "context": "La niña",
+      "rationale": "«La niña» exige tercera persona singular del presente «corre»."
+    },
+    {
+      "id": "writing-correction-hunter-v1-principiante-1",
+      "kind": "writing_original",
+      "expected": "estudiamos",
+      "context": "Nosotros",
+      "rationale": "«Nosotros» concuerda con primera persona plural «estudiamos»."
+    },
+    {
+      "id": "writing-correction-hunter-v1-principiante-3",
+      "kind": "writing_original",
+      "expected": "terminó",
+      "context": "Mi hermana",
+      "rationale": "El pretérito de tercera persona singular «terminó» lleva tilde final."
+    },
+    {
+      "id": "writing-correction-hunter-v1-principiante-4",
+      "kind": "writing_original",
+      "expected": "llegaron",
+      "context": "Los alumnos",
+      "rationale": "El sujeto plural y el adverbio temporal exigen el pretérito plural «llegaron»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-avanzado-35",
+      "kind": "writing_original",
+      "expected": "verificable",
+      "context": "La crítica insistió",
+      "rationale": "El atributo adjetival «verificable» concuerda con «análisis» en singular."
+    },
+    {
+      "id": "writing-correction-quiz-v1-intermedio-11",
+      "kind": "writing_original",
+      "expected": "habían",
+      "context": "Los investigadores ya",
+      "rationale": "El sujeto plural y el participio «revisado» requieren el auxiliar plural «habían»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-intermedio-13",
+      "kind": "writing_original",
+      "expected": "a las",
+      "context": "La propuesta debe responder",
+      "rationale": "«Responder» en este sentido rige «a» y «necesidades» exige el artículo femenino plural «las»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-avanzado-19",
+      "kind": "writing_original",
+      "expected": "debían",
+      "context": "La investigadora sostuvo",
+      "rationale": "«Los resultados» es el sujeto plural de «debían» en la subordinada."
+    },
+    {
+      "id": "writing-correction-quiz-v1-avanzado-22",
+      "kind": "writing_original",
+      "expected": "cuyas",
+      "context": "El equipo revisó",
+      "rationale": "El relativo posesivo concuerda con el sustantivo femenino plural «procedencias»: «cuyas»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-avanzado-25",
+      "kind": "writing_original",
+      "expected": "heterogéneas",
+      "context": "Las variaciones observadas",
+      "rationale": "El atributo predicativo concuerda con «variaciones» en femenino plural."
+    },
+    {
+      "id": "writing-correction-quiz-v1-intermedio-16",
+      "kind": "writing_original",
+      "expected": "fueron",
+      "context": "Las preguntas, así como las respuestas",
+      "rationale": "El núcleo plural «Las preguntas» exige «fueron archivadas»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-principiante-0",
+      "kind": "writing_original",
+      "expected": "estudian",
+      "context": "Mis compañeros",
+      "rationale": "El sujeto plural «Mis compañeros» concuerda con «estudian»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-principiante-1",
+      "kind": "writing_original",
+      "expected": "llegó",
+      "context": "Ayer, mi papá",
+      "rationale": "«Mi papá» es singular y el pretérito «llegó» exige tilde."
+    },
+    {
+      "id": "writing-correction-quiz-v1-principiante-3",
+      "kind": "writing_original",
+      "expected": "leímos",
+      "context": "Nosotras",
+      "rationale": "La forma de primera persona plural del pretérito «leímos» lleva tilde por hiato."
+    },
+    {
+      "id": "writing-correction-quiz-v1-principiante-4",
+      "kind": "writing_original",
+      "expected": "Ahí",
+      "context": "está la respuesta correcta",
+      "rationale": "«Ahí» es adverbio de lugar que indica dónde se encuentra la respuesta."
+    },
+    {
+      "id": "writing-correction-quiz-v1-principiante-5",
+      "kind": "writing_original",
+      "expected": "entregaron",
+      "context": "Los estudiantes",
+      "rationale": "El sujeto plural y «ayer» exigen tercera persona plural pretérita «entregaron»."
+    },
+    {
+      "id": "writing-correction-quiz-v1-principiante-6",
+      "kind": "writing_original",
+      "expected": "mucho",
+      "context": "El árbol creció",
+      "rationale": "«Mucho» modifica la magnitud de la acción de crecer como adverbio invariable."
+    }
+  ]
+}
