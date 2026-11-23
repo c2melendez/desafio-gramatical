@@ -63,6 +63,20 @@ jobs:
         run: |
           node --import ./scripts/ts-resolve.mjs qa/certification/original-spanish-review.mjs > qa-original-spanish-summary.json
           cat qa-original-spanish-summary.json
+      - name: Certificación C02-C04 - revisar 62 alertas de alto impacto por contexto y linaje
+        run: |
+          node --import ./scripts/ts-resolve.mjs qa/certification/high-impact-review.mjs > qa-high-impact-summary.json
+          cat qa-high-impact-summary.json
+      - name: Certificación C02-C04 - archivar revisión individual prioritaria
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: academia-spanish-62-high-impact-review
+          path: |
+            qa-high-impact-summary.json
+            qa/certification/evidence/high-impact-review.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Certificación C02-C04 - archivar reglas verificadas y cola editorial
         if: always()
         uses: actions/upload-artifact@v4
