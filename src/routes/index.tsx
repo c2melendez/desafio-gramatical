@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {achievementKey,type Achievements} from "@/lib/game-session-contract";
+import {ACHIEVEMENT_STORAGE_KEY,loadAchievements} from "@/lib/game-achievement-storage";
 import { LEVELS, LEVEL_LABEL, type Level, type Mode } from "@/lib/grammar";
 import {
  AREAS, CATALOG_COUNTS, GAME_IDS, GAME_ICONS,
@@ -36,6 +38,14 @@ function Home() {
  const selected=Route.useSearch();
  const [selection,setSelection]=useState<StudySelection>(()=>({...selected}));
  const {area:areaId,tema:topic,subtema:subtopic,modo:mode,nivel:level}=selection;
+ const [achievements,setAchievements]=useState<Achievements>({});
+ useEffect(()=>{
+  const refresh=()=>{try{setAchievements(loadAchievements(localStorage).achievements);}catch{setAchievements({});}};
+  const onStorage=(event:StorageEvent)=>{if(event.key===null||event.key===ACHIEVEMENT_STORAGE_KEY)refresh();};
+  refresh();window.addEventListener("storage",onStorage);window.addEventListener("focus",refresh);window.addEventListener("pageshow",refresh);
+  return ()=>{window.removeEventListener("storage",onStorage);window.removeEventListener("focus",refresh);window.removeEventListener("pageshow",refresh);};
+ },[selected]);
+ const mastered=(game:Mode,difficulty:Level)=>Boolean(achievements[achievementKey({area:areaId,topic,subtopic,game,level:difficulty})]);
  const selectedArea=AREAS.find(a=>a.id===areaId)??AREAS[0];
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)??selectedArea.topics[0];
  const pilot=areaId==="espanol"&&(topic==="Gramática y semántica"||topic==="Literatura")&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
@@ -112,7 +122,7 @@ function Home() {
        className={`card-ink flex items-center gap-4 p-4 text-left transition ${mode===id?"bg-primary text-primary-foreground":"bg-card"}`}>
        <span className="text-3xl" aria-hidden>{GAME_ICONS[id]}</span>
        <span className="flex-1"><span className="block text-lg font-bold">{names[id]}</span><span className="block text-sm opacity-90">{GAME_FOCUS[id]}</span></span>
-       <span className="text-xs font-bold">{(pilot?pilotMode(id):active)?"Disponible":"Próximamente"}</span>
+       <span className="flex flex-col gap-1 text-xs font-bold">{(pilot?pilotMode(id):active)?"Disponible":"Próximamente"}{mastered(id,level)&&<span><span aria-hidden="true">★ </span>Dominado al 100 % · {level==="principiante"?"Básico":LEVEL_LABEL[level]} (histórico)</span>}</span>
       </button>
      ))}
     </div>
@@ -125,6 +135,7 @@ function Home() {
       <button key={l} aria-pressed={level===l} onClick={()=>setSelection(previous=>({...previous,nivel:l}))}
        className={`tile text-sm ${level===l?"bg-secondary text-secondary-foreground":"bg-card"}`}>
        {l==="principiante"?"Básico":LEVEL_LABEL[l]}
+       {mastered(mode,l)&&<span className="block text-xs"><span aria-hidden="true">★ </span>Dominado al 100 % (histórico)</span>}
       </button>
      ))}
     </div>
