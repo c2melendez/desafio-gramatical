@@ -46,6 +46,7 @@ function Home() {
   return ()=>{window.removeEventListener("storage",onStorage);window.removeEventListener("focus",refresh);window.removeEventListener("pageshow",refresh);};
  },[selected]);
  const mastered=(game:Mode,difficulty:Level)=>Boolean(achievements[achievementKey({area:areaId,topic,subtopic,game,level:difficulty})]);
+ const labMastered=(labTopic:string,labSubtopic:string)=>Boolean(achievements[achievementKey({area:"matematicas",topic:labTopic,subtopic:labSubtopic,game:"quiz",level})]);
  const selectedArea=AREAS.find(a=>a.id===areaId)??AREAS[0];
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)??selectedArea.topics[0];
  const pilot=areaId==="espanol"&&(topic==="Gramática y semántica"||topic==="Literatura")&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
@@ -188,22 +189,22 @@ function Home() {
      <h3 className="font-black text-lg">📈 Laboratorio de gráficas: seis habilidades</h3>
      <p className="text-sm">Nuevo juego visual independiente para interpretar dominio, rango, tramos crecientes y decrecientes e intersecciones con los ejes. Cada partida incluye diez ejercicios repartidos entre seis destrezas.</p>
      <Link to="/laboratorio-funciones" search={{nivel:level}}
-      className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de funciones ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
+      className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de funciones ({level==="principiante"?"Básico":LEVEL_LABEL[level]}){labMastered("Álgebra","Funciones · Laboratorio gráfico")&&<span className="block text-xs"><span aria-hidden="true">★ </span>Dominado al 100 % · {level==="principiante"?"Básico":LEVEL_LABEL[level]} (histórico)</span>}</Link>
      <Link to="/laboratorio-funciones-ii" search={{nivel:level}}
-      className="tile block w-full bg-card text-center font-bold">▶ Laboratorio II: parábolas, extremos y discontinuidades</Link>
+      className="tile block w-full bg-card text-center font-bold">▶ Laboratorio II: parábolas, extremos y discontinuidades{labMastered("Álgebra","Funciones · Laboratorio gráfico II")&&<span className="block text-xs"><span aria-hidden="true">★ </span>Dominado al 100 % · {level==="principiante"?"Básico":LEVEL_LABEL[level]} (histórico)</span>}</Link>
      <p className="text-xs">Práctica complementaria: el temario oficial PHUMA 2026 no enumera separadamente todas estas habilidades.</p>
     </section>}
     {math&&topic==="Geometría"&&<section className="card-ink bg-accent/40 p-4 space-y-3" aria-label="Laboratorio de geometría visual">
      <h3 className="font-black text-lg">📐 Laboratorio de geometría</h3>
      <p className="text-sm">Cuarto juego especializado para interpretar paralelas y transversales, ángulos correspondientes y suplementarios, y el área o perímetro de figuras compuestas.</p>
-     <Link to="/laboratorio-geometria" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de geometría ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
+     <Link to="/laboratorio-geometria" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de geometría ({level==="principiante"?"Básico":LEVEL_LABEL[level]}){labMastered("Geometría","Geometría · Laboratorio visual")&&<span className="block text-xs"><span aria-hidden="true">★ </span>Dominado al 100 % · {level==="principiante"?"Básico":LEVEL_LABEL[level]} (histórico)</span>}</Link>
      <p className="text-xs">Ejercicios y figuras originales. Las relaciones representadas se verifican con oráculos geométricos independientes.</p>
     </section>}
     {math&&topic==="Estadística y probabilidad"&&<section className="card-ink bg-accent/40 p-4 space-y-3" aria-label="Laboratorio de estadística visual">
      <h3 className="font-black text-lg">📊 Laboratorio de estadística y gráficos</h3>
      <p className="text-sm">Interpreta barras, tendencias en líneas, frecuencias, moda, mediana, rango y espacios muestrales. Diez rondas repartidas entre seis habilidades diferentes.</p>
-     <Link to="/laboratorio-estadistica" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de estadística ({level==="principiante"?"Básico":LEVEL_LABEL[level]})</Link>
-     <Link to="/laboratorio-estadistica-ii" search={{nivel:level}} className="tile block w-full bg-card text-center font-bold">▶ Laboratorio II: dispersión, sectores y tablas cruzadas</Link>
+     <Link to="/laboratorio-estadistica" search={{nivel:level}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold">▶ Abrir laboratorio de estadística ({level==="principiante"?"Básico":LEVEL_LABEL[level]}){labMastered("Estadística y probabilidad","Estadística · Laboratorio visual")&&<span className="block text-xs"><span aria-hidden="true">★ </span>Dominado al 100 % · {level==="principiante"?"Básico":LEVEL_LABEL[level]} (histórico)</span>}</Link>
+     <Link to="/laboratorio-estadistica-ii" search={{nivel:level}} className="tile block w-full bg-card text-center font-bold">▶ Laboratorio II: dispersión, sectores y tablas cruzadas{labMastered("Estadística y probabilidad","Estadística · Laboratorio visual II")&&<span className="block text-xs"><span aria-hidden="true">★ </span>Dominado al 100 % · {level==="principiante"?"Básico":LEVEL_LABEL[level]} (histórico)</span>}</Link>
      <p className="text-xs">La interpretación de gráficos y la dispersión corresponden al temario PHUMA. La probabilidad elemental se identifica como práctica complementaria.</p>
     </section>}
     <Link to="/historial" className="tile block w-full bg-card text-center">📊 Ver historial de partidas</Link>
