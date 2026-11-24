@@ -199,10 +199,94 @@ const SEEDS:Seed[]=[
     ]
   }
 ];
+/** Especificidad editorial de Idea principal: no altera competencias de otros subtemas. */
+const MAIN_IDEA_SEED_REVIEW:Record<string,{a:string;wrong:[string,string,string];why:string}>={
+  "La biblioteca del barrio": {
+    "a": "La ampliación del horario de la biblioteca para facilitar las visitas de estudiantes.",
+    "wrong": [
+      "La incorporación de voluntarios para ordenar libros.",
+      "La solicitud de nuevas mesas de lectura.",
+      "La organización de préstamos mediante un nuevo equipo de voluntarios."
+    ],
+    "why": "El aviso explica que ampliar el horario facilita las visitas. Ordenar libros y solicitar mesas son detalles; el préstamo sigue a cargo de la bibliotecaria."
+  },
+  "El huerto escolar": {
+    "a": "La necesidad de controlar la exposición al sol antes de atribuir al riego las diferencias de crecimiento.",
+    "wrong": [
+      "El registro de altura y agua durante cuatro semanas.",
+      "La necesidad de aumentar el riego para obtener plantas más altas.",
+      "La observación del crecimiento de frijoles en macetas con la misma tierra."
+    ],
+    "why": "El informe señala que la luz varió entre macetas y por ello no se aisló el efecto del agua. Las mediciones y la tierra son detalles; aumentar el riego no es una conclusión demostrada."
+  },
+  "La feria de ciencias": {
+    "a": "La necesidad de completar los registros de visitas antes de determinar la asistencia total a la feria.",
+    "wrong": [
+      "La diferencia de visitas entre reciclaje y biología.",
+      "La valoración positiva de las actividades por un estudiante.",
+      "La estimación de la asistencia total a partir de los dos conteos publicados."
+    ],
+    "why": "Falta el registro de física y no se conoce cuántas visitas corresponden a personas distintas. Los conteos parciales y la opinión no sustituyen un total comprobado."
+  },
+  "Clubes voluntarios de lectura": {
+    "a": "La interpretación cautelosa de las mejoras en lectura ante diferencias metodológicas entre los centros.",
+    "wrong": [
+      "La comparación de los incrementos numéricos de ambos centros.",
+      "La evaluación de los clubes mediante sus promedios finales como medida de eficacia.",
+      "La necesidad de registrar el abandono para comparar la participación en clubes."
+    ],
+    "why": "Los instrumentos distintos, la selección voluntaria y la ausencia de datos de abandono limitan la comparación y la atribución causal. Los incrementos y el abandono son componentes parciales."
+  },
+  "Agua en tres sectores": {
+    "a": "La reducción del consumo de agua y la necesidad de distinguir los efectos de varios factores simultáneos.",
+    "wrong": [
+      "La comparación de los porcentajes de ahorro en los tres sectores.",
+      "La evaluación de los dispositivos ahorradores mediante el descenso observado del consumo.",
+      "La influencia de las campañas de sensibilización en los hábitos de consumo."
+    ],
+    "why": "Los descensos son hechos, pero clima, campañas y dispositivos coexistieron. No puede atribuirse el ahorro a uno solo sin análisis adicional; los porcentajes son datos parciales."
+  },
+  "Memoria regional": {
+    "a": "La evaluación de testimonios históricos mediante su contraste con documentos y su contexto.",
+    "wrong": [
+      "La recopilación de recuerdos sobre una celebración regional.",
+      "La resolución de discrepancias mediante la selección del relato más cercano a los documentos.",
+      "La diversidad de memorias como razón para conservar todos los relatos sin contrastarlos."
+    ],
+    "why": "El museo preserva la diversidad sin renunciar a la comprobación documental. Recopilar recuerdos es solo un paso; elegir automáticamente una versión o evitar el contraste omite el criterio central."
+  },
+  "Tutorías y sesgo de selección": {
+    "a": "La necesidad de considerar diferencias iniciales y factores de confusión al interpretar los cambios asociados a las tutorías.",
+    "wrong": [
+      "La comparación de las mejoras de rendimiento mediante la diferencia de cambios de ambos grupos.",
+      "La evaluación de las tutorías a partir de la ventaja final del grupo participante.",
+      "La influencia de las condiciones domésticas como explicación principal de las diferencias."
+    ],
+    "why": "El cambio fue de seis frente a tres puntos, pero los grupos ya diferían y no se midieron todos los factores. Comparar cambios mejora la descripción sin establecer causalidad; tampoco se demuestra que el estudio doméstico sea la causa principal."
+  },
+  "Riesgo de inundaciones": {
+    "a": "La distinción entre cambios en la detección de inundaciones y cambios reales de incidencia antes de atribuir causas.",
+    "wrong": [
+      "La influencia de la expansión urbana y las lluvias en los riesgos de inundación.",
+      "La comparación de avisos históricos para cuantificar directamente el aumento de inundaciones.",
+      "La evaluación de la cobertura del sistema de alertas como explicación de los nuevos registros."
+    ],
+    "why": "La mejora del registro puede aumentar avisos sin un aumento equivalente de eventos. Urbanización, lluvia y cobertura son factores pertinentes, pero ninguno explica por sí solo la incidencia real."
+  },
+  "Tres fuentes sobre un acontecimiento": {
+    "a": "La valoración contextual y la corroboración independiente de fuentes históricas con diferentes limitaciones.",
+    "wrong": [
+      "La comparación de fuentes por su distancia temporal respecto del acontecimiento.",
+      "La identificación de intereses institucionales y recuerdos personales como indicadores de fiabilidad.",
+      "La selección de la fuente con mayor información verificable sobre su procedencia."
+    ],
+    "why": "La proximidad, los intereses y la procedencia ayudan a evaluar fuentes, pero no bastan como criterios exclusivos. El equipo contrastó detalles con registros independientes antes de concluir."
+  }
+};
 function skill(seed:Seed,subtopic:ReadingSubtopic){
- const {explicit,inference,unsupported,main,word,wordMeaning,figure,figureMeaning,comparison}=seed;
+ const {explicit,inference,unsupported,word,wordMeaning,figure,figureMeaning,comparison}=seed;
  const result:Record<ReadingSubtopic,{q:string;a:string;wrong:[string,string,string];why:string}>={
- "Idea principal":{q:"¿Qué resume mejor la idea central del pasaje?",a:main,wrong:[unsupported,wordMeaning,"El texto afirma lo contrario de lo que describe."],why:"La idea principal integra los hechos relevantes y su contexto, sin convertir una inferencia en certeza."},
+ "Idea principal":{q:"¿Qué resume mejor la idea central del pasaje?",...MAIN_IDEA_SEED_REVIEW[seed.title]},
  "Inferencias":{q:"¿Cuál conclusión es una inferencia razonable, pero no un dato afirmado literalmente?",a:inference,wrong:[explicit,unsupported,"Ninguna conclusión puede derivarse de la lectura."],why:"Una inferencia se apoya en pistas del texto y se diferencia de una afirmación literal o de una invención."},
  "Lectura crítica":{q:"¿Qué afirmación sobrepasa la evidencia disponible?",a:unsupported,wrong:[explicit,inference,"El texto reconoce límites de información."],why:"La afirmación escogida atribuye un hecho o una causalidad que el texto no demuestra."},
  "Vocabulario en contexto":{q:'En el texto, ¿qué sentido tiene la expresión «'+word+'»?',a:wordMeaning,wrong:["Es una secuencia de números sin interpretación.","Es el nombre propio de una persona no mencionada.","Es una contradicción que vuelve falsa toda la lectura."],why:"El significado se obtiene del contexto semántico donde aparece el término, no de una acepción aislada."},
