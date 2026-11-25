@@ -85,7 +85,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
  }
  // v7.8.1 requires actual curricular breadth, not one numerical template per cell.
  // Exception is exact and limited to the 3 corrective OP-04 records in each middle/advanced Operaciones cell.
- if(subtopic==="Operaciones"&&mode==="quiz"){
+ if(subtopic==="Operaciones"){
   const old=level==="principiante"?"prioridad-de-operaciones":level==="intermedio"?"modificar-parentesis-y-factor":"distributiva-y-cancelacion";
   const expected=new Set([old,R8_OPERATIONS[level]]);
   if(level!=="principiante")expected.add(level==="intermedio"?"raiz-racionales-signos":"raiz-producto-racionales-combinados");
