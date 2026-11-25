@@ -1,6 +1,7 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
-import {useEffect,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Mistake} from "@/lib/grammar";
+import {useEffect,useState,useRef} from "react";
+import {emptyLedger,recordRound,roundResult} from "@/lib/round-ledger";
+import {LEVELS,LEVEL_LABEL,saveHistory,type Mistake} from "@/lib/grammar";
 import {type ScienceItem} from "@/lib/science-m1";
 import {socialTopic} from "@/lib/social-m1";
 import {validateSocialSearch} from "@/lib/social-route";
@@ -28,23 +29,31 @@ function SocialPlay(){
  const [streak,setStreak]=useState(0),[best,setBest]=useState(0);
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
+ const ledger=useRef(emptyLedger());
+ const advanced=useRef(-1);
  useEffect(()=>{
   const bank=socialM3Pool(topic,subtema,nivel,modo),key=rotationKey("sociales",topic,subtema,modo,nivel);
   const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
+  ledger.current=emptyLedger();advanced.current=-1;
   setItems(chosen);setIndex(0);setCorrect(0);setTotal(0);setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[topic,subtema,nivel,modo,run]);
  const report=(ok:boolean,given:string)=>{
   if(!items||total>index)return;
   const item=items[index],bank=socialM3Pool(topic,subtema,nivel,modo),key=rotationKey("sociales",topic,subtema,modo,nivel);
+  const updated=recordRound(ledger.current,{id:item.id,correct:ok});
+  if(updated===ledger.current)return;
+  ledger.current=updated;
   writeRotation(key,recordRotation(readRotation(key,bank.map(x=>x.id)),item.id,ok));
-  setTotal(t=>t+1);
-  if(ok){setCorrect(t=>t+1);setScore(t=>t+pointsFor(streak));setStreak(t=>t+1);setBest(b=>Math.max(b,streak+1));}
-  else{setStreak(0);setMistakes(ms=>[...ms,{prompt:item.prompt,given,correct:item.expected,exp:item.explanation}]);}
+  setTotal(updated.events.length);setCorrect(updated.correct);setScore(updated.score);setStreak(updated.streak);setBest(updated.bestStreak);
+  if(!ok)setMistakes(ms=>[...ms,{prompt:item.prompt,given,correct:item.expected,exp:item.explanation}]);
  };
  const next=()=>{
-  if(!items||total<=index)return;
+  if(!items||ledger.current.events.length!==index+1||advanced.current===index)return;
+  advanced.current=index;
   if(index===items.length-1){
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score,correct,total,bestStreak:best,
+   const result=roundResult(ledger.current);
+   if(!result.finished)return;
+   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,
     area:"sociales",topic,subtopic:subtema});
    setFinished(true);
   }else setIndex(i=>i+1);
