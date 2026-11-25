@@ -52,7 +52,7 @@
       "topic": "Aritmética",
       "subtopic": "Operaciones"
     },
-    "status": "RDG_EN_CURSO",
+    "status": "CANDIDATO_RDG_READY",
     "historical_evidence_preserved": true,
     "active_block": "MAT-ARIT-01",
     "operational_phase": "P1",
@@ -61,7 +61,7 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R3 publicado; verificar CI del SHA de producción y congelar contrato RDG_READY. Candidato de reparación transversal: resolver afirmaciones incorrectas y déficit OP-04 en 18 IDs M3, con preflight 450 IDs, oráculo desde estímulo y fichas REVIEW; no contabilizar como P2 hasta cumplir G-REPASO.",
+    "next_action": "Ejecutar y verificar R06 explícito de toque e invalidación de hash. Tras CI SUCCESS y validación de dependencias, promover contrato R3 RDG_READY y congelar selección P2 por sublotes <=50 de los 450 IDs observados; auditar fichas A-H, no confundir preflight con PASS_SEMANTIC.",
     "previous_publication": {
       "sha": "e93b6712dfa0d42102f07b2002f86dffe72cdf34",
       "ci_run": 45685289534,
@@ -69,7 +69,7 @@
       "render_deploy": "dep-dc3jcvu0tbcc73btejcg",
       "render": "LIVE"
     },
-    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R2.json",
+    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R3.json",
     "r3_evidence": {
       "head": "2a063f107a6a5d12521624e2b6adc6ff4d7494eb",
       "ci_run": 45685434338,
@@ -82,7 +82,9 @@
       "production_ci_run": 45686697884,
       "render_deploy": "dep-dc3jgva9lscs73d4q6t0",
       "render": "LIVE",
-      "production_ci": "PENDING_OBSERVATION"
-    }
+      "production_ci": "SUCCESS"
+    },
+    "rdg_contract_path": "qa/certification/rdg/contracts/MAT-ARIT-01.json",
+    "preflight_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-P2-preflight.json"
   }
 }

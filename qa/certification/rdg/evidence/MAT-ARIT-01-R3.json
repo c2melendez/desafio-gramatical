@@ -1,0 +1,66 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "revision": "3",
+  "publication": {
+    "sha": "f1531f53d5527d8761bcba963122ef9a184c73e2",
+    "ci_run": 45686697884,
+    "ci": "SUCCESS",
+    "jobs": [
+      139461061106,
+      139461060968
+    ],
+    "render_deploy": "dep-dc3jgva9lscs73d4q6t0",
+    "render": "LIVE",
+    "browser_artifact": 15055084921,
+    "browser_artifact_sha256": "be4b1ce5e52b19f177aa96ca4344375378a10d6e87e8d638a93761eacb327133"
+  },
+  "dependencies": {
+    "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+    "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+    "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+    "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+  },
+  "checks": {
+    "rdg_tests": 8,
+    "bank_contrast": 450,
+    "remaining_grouped_collisions": 0,
+    "official_pdf_integrity": "PASS",
+    "P0": "PASS_STRUCTURAL",
+    "M0": "PASS",
+    "mobile_browser": "PASS_RESPONSIVE",
+    "actual_touch": "NOT_RUN_EXPLICIT",
+    "contract_dependency_mutation": "NOT_RUN_EXPLICIT"
+  },
+  "prior_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R2.json",
+  "review": {
+    "status": "ASSISTED",
+    "objective_coverage": {
+      "OP01": [
+        "A1",
+        "A2",
+        "A3",
+        "T1",
+        "T5"
+      ],
+      "OP02": [
+        "A4",
+        "T1",
+        "T2"
+      ],
+      "OP03": [
+        "A5",
+        "T3"
+      ],
+      "OP04": [
+        "A6",
+        "T4",
+        "T5"
+      ]
+    },
+    "scope_notes": "R3 no cambia estímulos de R2 salvo alternativas; contraste de simulacro conserva validez para las expresiones. R04 paridad completa se evalúa en P2, no en esta revisión. No hay revisión docente ni estudio con alumnos."
+  }
+}

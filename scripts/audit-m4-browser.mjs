@@ -22,7 +22,8 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
  try{
   browser=await engine.launch({headless:true});
   for(const [profile,viewport] of [['desktop',{width:1365,height:768}],['mobile',{width:390,height:844}]]){
-   const context=await browser.newContext({viewport,locale:'es-HN',reducedMotion:'reduce',deviceScaleFactor:1});
+   const touchProfile=engineName==='chromium'&&profile==='mobile';
+   const context=await browser.newContext({viewport,locale:'es-HN',reducedMotion:'reduce',deviceScaleFactor:1,hasTouch:touchProfile});
    const page=await context.newPage();
    const thirdParty=[],pageErrors=[],httpErrors=[];
    page.on('request',req=>{const url=req.url();if(/^https?:/.test(url)&&new URL(url).origin!==origin)thirdParty.push(url);});
@@ -51,9 +52,13 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    await rdg.focus(); await page.keyboard.press('Enter');
    await page.getByRole('heading',{name:'Modo Repaso: Operaciones'}).waitFor({state:'visible'});
    check(await page.getByRole('heading',{name:'Modo Repaso: Operaciones'}).isVisible(),'RDG abre por teclado');
-   await page.getByRole('button',{name:'+6',exact:true}).click();
+   if(touchProfile){
+    await page.evaluate(()=>{document.documentElement.dataset.rdgTouch='0';document.addEventListener('touchstart',()=>{document.documentElement.dataset.rdgTouch='1';},{once:true});});
+    await page.getByRole('button',{name:'+6',exact:true}).tap();
+    check(await page.evaluate(()=>document.documentElement.dataset.rdgTouch==='1'),'RDG evento táctil real en navegador emulado');
+   }else await page.getByRole('button',{name:'+6',exact:true}).click();
    check(await page.getByText('Posición actual: 2',{exact:true}).isVisible(),'RDG recta interactiva');
-   await page.getByRole('button',{name:'−3',exact:true}).click();
+   if(touchProfile)await page.getByRole('button',{name:'−3',exact:true}).tap();else await page.getByRole('button',{name:'−3',exact:true}).click();
    check(await page.getByText('Posición actual: -1',{exact:true}).isVisible(),'RDG signo y posición');
    await page.getByRole('button',{name:'−1',exact:true}).click(); await page.getByRole('button',{name:'Comprobar',exact:true}).click();
    check(await page.getByRole('status').getByText('¡Bien razonado!').isVisible(),'RDG feedback causal');
