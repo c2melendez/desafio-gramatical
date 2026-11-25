@@ -26,7 +26,7 @@ function Visual({kind}:{kind:NonNullable<ReviewTask["visual"]>}){
  if(kind==="tree")return <div className="space-y-3">
   <p>Elige la primera operación de cada expresión. Un nodo hijo se resuelve antes de su padre.</p>
   {([{expr:"11 − 3 × 2",nodes:["11 − 3","3 × 2"]},{expr:"(11 − 3) × 2",nodes:["11 − 3","3 × 2"]}]).map((row,i)=><div key={row.expr} className="rounded-lg border border-foreground p-3 text-center space-y-2">
-   <p className="font-bold">{row.expr}</p><div aria-hidden="true">↙　↘</div><div className="grid grid-cols-2 gap-2">{row.nodes.map((x,j)=><button key={x} className={tile} aria-pressed={selected.includes(i+":"+j)} onClick={()=>setSelected(old=>[...old.filter(y=>!y.startsWith(i+":")),i+":"+j])}>{x}</button>)}</div>
+   <p className="font-bold">{row.expr}</p><div aria-hidden="true">↙ ↘</div><div className="grid grid-cols-2 gap-2">{row.nodes.map((x,j)=><button key={x} className={tile} aria-pressed={selected.includes(i+":"+j)} onClick={()=>setSelected(old=>[...old.filter(y=>!y.startsWith(i+":")),i+":"+j])}>{x}</button>)}</div>
    <p aria-live="polite" className="text-sm">{selected.some(x=>x.startsWith(i+":"))?(selected.includes(i+":"+(i===0?1:0))?"Bien: este nodo debe resolverse primero.":"Revisa: el paréntesis o la prioridad del producto determina el primer nodo."):"Selecciona un nodo."}</p>
   </div>)}
  </div>;
