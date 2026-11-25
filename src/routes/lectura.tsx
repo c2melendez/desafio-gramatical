@@ -2,7 +2,8 @@ import {createFileRoute,Link} from "@tanstack/react-router";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {studyReturn} from "@/lib/study-context";
 import {useEffect,useRef,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
+import {emptyLedger,recordRound,roundResult} from "@/lib/round-ledger";
+import {LEVELS,LEVEL_LABEL,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
 import {READING_SUBTOPICS,readingItems,readingPool,type ReadingChallenge,type ReadingItem,type ReadingSubtopic} from "@/lib/reading";
 import {ReadingDetective,ReadingInference,ReadingReconstruct} from "@/components/games/ReadingGames";
@@ -47,42 +48,42 @@ function ReadingPlay(){
  const [best,setBest]=useState(0);
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
+ const ledger=useRef(emptyLedger());
+ const advanced=useRef(-1);
  const classification=useRef<{id:string;count:number;allCorrect:boolean}>({id:"",count:0,allCorrect:true});
  useEffect(()=>{
+  ledger.current=emptyLedger();advanced.current=-1;
   classification.current={id:"",count:0,allCorrect:true};
   setItems(readingItems(nivel,subtema,modo));setIdx(0);setCorrect(0);setTotal(0);
   setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[nivel,subtema,modo,run]);
  const report=(ok:boolean,m?:Mistake)=>{
-  if(items?.[idx]){
-   const itemId=items[idx].id;
-   let persist=true,allCorrect=ok;
-   if(modo==="clasificar"){
-    if(classification.current.id!==itemId)classification.current={id:itemId,count:0,allCorrect:true};
-    classification.current.count++;
-    classification.current.allCorrect=classification.current.allCorrect&&ok;
-    persist=classification.current.count===3;
-    allCorrect=classification.current.allCorrect;
-   }
-   if(persist){
-    const key=rotationKey("espanol","Comprensión lectora",subtema,modo,nivel);
-    const ids=readingPool(nivel,subtema,modo).map(q=>q.id);
-    writeRotation(key,recordRotation(readRotation(key,ids),itemId,allCorrect));
-   }
-  }
+  const item=items?.[idx];
+  if(!item||ledger.current.events.some(e=>e.id===item.id))return;
   if(m)setMistakes(ms=>[...ms,m]);
-  // Tres decisiones internas, UNA ronda evaluada. No sumar tres puntos/rachas.
-  if(modo==="clasificar"&&classification.current.count<3)return;
-  const roundCorrect=modo==="clasificar"?classification.current.allCorrect:ok;
-  setTotal(t=>t+1);
-  if(roundCorrect){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
-  else setStreak(0);
+  if(modo==="clasificar"){
+   if(classification.current.id!==item.id)classification.current={id:item.id,count:0,allCorrect:true};
+   classification.current.count++;
+   classification.current.allCorrect=classification.current.allCorrect&&ok;
+   if(classification.current.count!==3)return;
+   ok=classification.current.allCorrect;
+  }
+  const updated=recordRound(ledger.current,{id:item.id,correct:ok});
+  if(updated===ledger.current)return;
+  ledger.current=updated;
+  const key=rotationKey("espanol","Comprensión lectora",subtema,modo,nivel);
+  const ids=readingPool(nivel,subtema,modo).map(q=>q.id);
+  writeRotation(key,recordRotation(readRotation(key,ids),item.id,ok));
+  setTotal(updated.events.length);setCorrect(updated.correct);setScore(updated.score);setStreak(updated.streak);setBest(updated.bestStreak);
  };
  const next=()=>{
-  if(!items)return;
+  if(!items||ledger.current.events.length!==idx+1||advanced.current===idx)return;
+  advanced.current=idx;
   if(idx+1>=items.length){
+   const result=roundResult(ledger.current);
+   if(!result.finished)return;
    setFinished(true);
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score,correct,total,bestStreak:best,
+   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,
     area:"espanol",topic:"Comprensión lectora",subtopic:subtema});
   }else setIdx(i=>i+1);
  };
