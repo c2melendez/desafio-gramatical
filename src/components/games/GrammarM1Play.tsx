@@ -1,3 +1,5 @@
+import {savePerfect,newAttemptId} from "@/lib/perfect-achievements";
+import {PerfectBadge} from "@/components/games/PerfectBadge";
 import {SYNONYM_CLASSIFICATION} from "@/lib/grammar-classify-synonyms";
 import {COHESION_CLASSIFICATION} from "@/lib/grammar-classify-cohesion";
 import {M2_GRAMMAR_ACTIVITIES} from "@/lib/m2-grammar";
@@ -40,12 +42,13 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  const [finished,setFinished]=useState(false);
  const ledger=useRef(emptyLedger());
  const advanced=useRef(-1);
+ const attemptId=useRef("");
  const topic=subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica";
  const key=rotationKey("espanol",topic,subtema,modo,nivel);
  const returnTo=studyReturn(topic,subtema,modo,nivel);
  const source=grammarM1Pool(subtema,modo,nivel);
  useEffect(()=>{
-  ledger.current=emptyLedger();advanced.current=-1;
+  ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
   const bank=grammarM1Pool(subtema,modo,nivel);
   setItems(selectRotation(bank,readRotation(key,bank.map(x=>x.id)),10));
   setIndex(0);setCorrect(0);setStreak(0);setScore(0);setFinished(false);
@@ -64,12 +67,12 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
   advanced.current=index;
   if(index+1===items.length){
    const result=roundResult(ledger.current);if(!result.finished)return;
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,
+   savePerfect(returnTo,ledger.current,attemptId.current);saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,
     bestStreak:ledger.current.bestStreak,area:"espanol",topic,subtopic:subtema});
    setFinished(true);
   }else setIndex(i=>i+1);
  };
- if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema}: {correct}/{items.length} respuestas correctas</p>
+ if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/><p>{subtema}: {correct}/{items.length} respuestas correctas</p>
  <p className="text-sm">Este resultado corresponde al juego y no equivale a una puntuación PHUMA oficial.</p>
  <button className="tile bg-primary text-primary-foreground" onClick={()=>setRound(n=>n+1)}>Practicar de nuevo</button>
  <Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;
