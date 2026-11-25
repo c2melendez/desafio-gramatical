@@ -117,7 +117,7 @@ function Play() {
     ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
     classification.current = { itemId: "", count: 0, allCorrect: true };
     setItems(buildItems(modo, nivel)); setIdx(0); setScore(0); setStreak(0); 
-    setCorrect(0); setTotal(0); setMistakes([]); setFinished(false);
+    setCorrect(0); setTotal(0); setBest(0); setMistakes([]); setFinished(false);
   }, [modo, nivel, run]);
 
   const report = (ok: boolean, m?: Mistake) => {
@@ -248,7 +248,7 @@ export function SynonymClassification({nivel,subtema="Sinónimos y antónimos"}:
  const ledger=useRef(emptyLedger());
  const advanced=useRef(-1);
  const attemptId=useRef("");
- useEffect(()=>{ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();const list=source.filter(q=>q.level===nivel);setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));setIndex(0);setCorrect(0);setStreak(0);setBest(0);setScore(0);setFinished(false);},[nivel,run,key,source]);
+ useEffect(()=>{ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();const list=source.filter(q=>q.level===nivel);setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));setIndex(0);setCorrect(0);setStreak(0);setScore(0);setFinished(false);},[nivel,run,key,source]);
  if(!items)return <main className="p-6">Preparando ejercicios…</main>;
  if(!items.length)return <main className="p-6">No hay ejercicios para esta selección. <Link to="/" search={returnTo}>Volver a la selección</Link></main>;
  if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;
