@@ -1,7 +1,7 @@
 import {createHash} from "node:crypto";
 import {it,expect,vi,afterEach} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
-import {mathM3Pool,mathM3R8Pool} from "@/lib/math-m3";
+import {mathM3R9Pool as mathM3Pool,mathM3R8Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {verifyMathM3Record} from "@/lib/math-m3-guards";
 import {MathExerciseCard} from "@/components/games/MathExerciseCard";
