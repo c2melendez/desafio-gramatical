@@ -9,6 +9,10 @@ import {createHash} from 'node:crypto';
 import {coverageRows} from '../../src/lib/coverage.ts';
 import {pool} from '../../scripts/inventory-items.mjs';
 import {validateSpanishItem} from './spanish-oracles.mjs';
+import {selectFrozen} from './select-frozen.mjs';
+const manifestPath=process.env.PHUMA_FROZEN_BATCH;
+const manifest=manifestPath?JSON.parse(readFileSync(manifestPath,'utf8')):null;
+const hashItem=item=>createHash('sha256').update(JSON.stringify(item)).digest('hex');
 const policy=JSON.parse(readFileSync('qa/certification/batch-state.json','utf8'));
 const contract=JSON.parse(readFileSync('qa/certification/exam-contracts.json','utf8'));
 const sha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
@@ -21,8 +25,8 @@ function issue(name){problems.push(name);}
 const expectedBatches=Math.ceil(total/450);
 if(policy.batch_size!==450)issue('La cuota nominal debe ser 450');
 if(total===0)issue('Banco real vacío');
-if(policy.total_target!==total||policy.expected_batches!==expectedBatches)issue('Cursor histórico requiere reconciliación explícita con el banco real');
-if(!Number.isInteger(policy.current_batch)||policy.current_batch<0||policy.current_batch>=expectedBatches)issue('Índice de lote fuera del banco real');
+if(!manifest&&(policy.total_target!==total||policy.expected_batches!==expectedBatches))issue('Cursor histórico requiere reconciliación explícita con el banco real');
+if(!manifest&&(!Number.isInteger(policy.current_batch)||policy.current_batch<0||policy.current_batch>=expectedBatches))issue('Índice de lote fuera del banco real');
 if(areas.length!==5||areaItems.size!==areas.length)issue('Distribución de áreas incompatible');
 // Stratum ordering is fixed so every 450-item run includes all five areas, three games
 // and three levels while data remain in each stratum; stable across all 90 batches.
@@ -46,8 +50,8 @@ while(order.length<total){
 if(order.length!==total)issue('Orden global no cubre todo el inventario');
 const ids=order.map(({item})=>item?.id),unique=new Set(ids);
 if(unique.size!==total)issue('IDs no únicos entre registros');
-const start=policy.current_batch*policy.batch_size,selected=order.slice(start,start+policy.batch_size);
-const quota=Math.min(450,Math.max(0,total-start));
+const start=policy.current_batch*policy.batch_size,selected=manifest?selectFrozen(order,manifest,hashItem):order.slice(start,start+policy.batch_size);
+const quota=manifest?selected.length:Math.min(450,Math.max(0,total-start));
 if(selected.length!==quota)issue('Selección distinta de la cuota real');
 const canon=x=>String(x??'').normalize('NFKC').trim();
 const noSpace=x=>canon(x).replace(/\s+/g,' ').toLocaleLowerCase('es');
@@ -84,7 +88,7 @@ const candidates=selected.map(({row,item},i)=>{
  byArea[row.area]=(byArea[row.area]??0)+1;
  byLevel[row.level]=(byLevel[row.level]??0)+1;
  byGame[row.mode]=(byGame[row.mode]??0)+1;
- const record={batch_position:i,global_position:start+i,id:item.id,area:row.area,topic:row.topic,subtopic:row.subtopic,level:row.level,game:row.mode,
+ const record={batch_position:i,global_position:manifest?null:start+i,id:item.id,area:row.area,topic:row.topic,subtopic:row.subtopic,level:row.level,game:row.mode,
   content_sha256:createHash('sha256').update(JSON.stringify(item)).digest('hex'),
   technical_status:errors.length?'FAIL':'PASS',
   curricular_status:'REVIEW',semantic_status:'REVIEW',difficulty_status:'REVIEW',
@@ -98,12 +102,12 @@ const target=new Set(selected.map(x=>x.item.id));
 if(target.size!==quota)issue('IDs repetidos en lote');
 if(new Set(selected.map(({item})=>JSON.stringify(item))).size<quota)reviewCounts['POSIBLE_REPETICION_ESTRUCTURAL']=(reviewCounts['POSIBLE_REPETICION_ESTRUCTURAL']??0)+1;
 // Independent selection controls: the first and last ID in this batch must be exactly those in stable global order.
-if(results[0]?.id!==ids[start]||results.at(-1)?.id!==ids[start+quota-1])issue('El cursor no coincide con el orden de inventario');
-const output={schema_version:1,suite:'ACADEMIA_CERTIFICATION_450_V1',sha,batch_index:policy.current_batch,batch_number:policy.current_batch+1,batch_size:quota,nominal_batch_size:450,expected_batches:expectedBatches,
+if(!manifest&&(results[0]?.id!==ids[start]||results.at(-1)?.id!==ids[start+quota-1]))issue('El cursor no coincide con el orden de inventario');
+const output={schema_version:1,suite:'ACADEMIA_CERTIFICATION_450_V1',sha,batch_index:manifest?null:policy.current_batch,batch_number:manifest?null:policy.current_batch+1,batch_size:quota,nominal_batch_size:450,expected_batches:expectedBatches,
  status:problems.length?'FAIL':'PASS',academic_certification:'PENDIENTE',
  scanned_records:total,bank_size_real:total,exam_scope:'PAA/PHUMA sin Inglés',
- selection:'round robin por área, juego y nivel (45 estratos) con orden estable por tema/subtema',
- range:{from:start,to_exclusive:start+quota},
+ selection:manifest?'v7.6 frozen ID/hash selection':'round robin por área, juego y nivel (45 estratos) con orden estable por tema/subtema',
+ range:manifest?null:{from:start,to_exclusive:start+quota},frozen_selection:manifest?manifest.items:null,
  summary:{evaluated:results.length,technical_failures:results.filter(x=>x.technical_status==='FAIL').length,
  semantic_approved:0,semantic_review:results.length,by_area:byArea,by_level:byLevel,by_game:byGame,editorial_flags:reviewCounts},
  problems,items:results,

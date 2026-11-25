@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {selectFrozen} from './select-frozen.mjs';
+const order=[{item:{id:'a',h:'1'}},{item:{id:'b',h:'2'}}];
+const hash=x=>x.h;
+test('conserva orden explícito y admite sublote',()=>assert.deepEqual(selectFrozen(order,{items:[{id:'b',content_sha256:'2'}]},hash),[order[1]]));
+test('rechaza duplicados',()=>assert.throws(()=>selectFrozen(order,{items:[{id:'a',content_sha256:'1'},{id:'a',content_sha256:'1'}]},hash)));
+test('rechaza hash obsoleto',()=>assert.throws(()=>selectFrozen(order,{items:[{id:'a',content_sha256:'2'}]},hash)));
+test('rechaza ID inexistente',()=>assert.throws(()=>selectFrozen(order,{items:[{id:'x',content_sha256:'1'}]},hash)));
+test('rechaza lote vacío y exceso',()=>{assert.throws(()=>selectFrozen(order,{items:[]},hash));assert.throws(()=>selectFrozen(order,{items:Array(451).fill({id:'a'})},hash));});

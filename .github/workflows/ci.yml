@@ -61,6 +61,7 @@ jobs:
       - name: v7.6 - verificar integridad de PDF originales y guard G-ACTION
         run: |
           python3 qa/certification/verify_sources.py
+          node --test qa/certification/test-select-frozen.mjs
           python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py' -v
       - name: Certificación por lotes - auditar hasta 450 ejercicios del banco real
         if: ${{ !cancelled() && steps.install_cert_deps.outcome == 'success' }}

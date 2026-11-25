@@ -107,3 +107,6 @@ La cobertura total de 90 lotes no sustituye calibración psicométrica, revisió
 
 ## v7.6: controles de ejecución
 `python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py'` comprueba el guard local. `python3 qa/certification/verify_sources.py` comprueba los bytes de los PDF, no su interpretación ni derechos. El control de CI no autentica por sí solo evidencia semántica/docente. El cursor legado se conserva sin promover REVIEW a PASS; seleccionar lotes adaptativos por IDs y hashes bajo v7.6.
+
+### Selección adaptativa ejecutable
+`PHUMA_FROZEN_BATCH=/ruta/lote.json node --import ./scripts/ts-resolve.mjs qa/certification/audit-450.mjs` acepta un JSON `{"items":[{"id":"ID real","content_sha256":"huella real"}]}` de 1–450 IDs únicos. Rechaza hashes obsoletos e IDs inexistentes. Sin variable conserva el recorrido histórico de CI; no modifica el cursor ni aprueba semántica.
