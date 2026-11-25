@@ -1,3 +1,5 @@
+import {savePerfect,newAttemptId} from "@/lib/perfect-achievements";
+import {PerfectBadge} from "@/components/games/PerfectBadge";
 import {createFileRoute,Link} from "@tanstack/react-router";
 import {useEffect,useState,useRef} from "react";
 import {emptyLedger,recordRound,roundResult} from "@/lib/round-ledger";
@@ -33,10 +35,11 @@ function MathPlay(){
  const [finished,setFinished]=useState(false);
  const ledger=useRef(emptyLedger());
  const advanced=useRef(-1);
+ const attemptId=useRef("");
  useEffect(()=>{
   const bank=scienceM3Pool(topic,subtema,nivel,modo),key=rotationKey("naturales",topic,subtema,modo,nivel);
   const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
-  ledger.current=emptyLedger();advanced.current=-1;
+  ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
   setItems(chosen);setIndex(0);setCorrect(0);setTotal(0);setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[topic,subtema,nivel,modo,run]);
  const report=(ok:boolean,given:string)=>{
@@ -55,7 +58,7 @@ function MathPlay(){
   if(index===items.length-1){
    const result=roundResult(ledger.current);
    if(!result.finished)return;
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,
+   savePerfect(returnTo,ledger.current,attemptId.current);saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,
     area:"naturales",topic,subtopic:subtema});
    setFinished(true);
   }else setIndex(i=>i+1);
@@ -65,7 +68,7 @@ function MathPlay(){
  const names=gameNames(topic),title=names[modo],levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished){
   return <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-xl px-4 py-8 space-y-5">
-   <h1 className="text-3xl font-black">¡Reto de Ciencias Naturales completado!</h1>
+   <h1 className="text-3xl font-black">¡Reto de Ciencias Naturales completado!</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/>
    <p>{topic} · {subtema} · {title} · {levelName}</p>
    <div className="grid grid-cols-3 gap-2 text-center">
     <div className="card-ink p-3"><p className="text-xs">Puntaje</p><strong className="text-2xl text-primary">{score}</strong></div>
