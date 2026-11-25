@@ -452,6 +452,90 @@ const MAIN_IDEA_SEED_CLAIMS:Record<string,ReadingChallenge['claims']>={
     }
   ]
 };
+/** Secuencias editoriales de Idea principal, con evidencia, relación y síntesis contextualizadas. */
+const MAIN_IDEA_SEED_ORDER:Record<string,ReadingChallenge['order']>={
+  "La biblioteca del barrio": {
+    "parts": [
+      "El aviso anuncia que la biblioteca pasará de dos a cinco tardes semanales.",
+      "Al interpretar ese anuncio, debe distinguirse la ampliación confirmada de la solicitud de mesas todavía pendiente.",
+      "La idea central es la ampliación del acceso a la biblioteca, sin afirmar que se hayan adquirido mesas."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "El anuncio establece un cambio concreto de horario; la petición de mesas tiene otro estado. La síntesis debe preservar esa diferencia."
+  },
+  "El huerto escolar": {
+    "parts": [
+      "Los grupos registraron el crecimiento de frijoles y la cantidad de agua durante cuatro semanas.",
+      "Al interpretar esas mediciones se advierte que las macetas también recibieron distinta cantidad de sol.",
+      "Se propone repetir la comparación con exposición solar equivalente antes de atribuir diferencias al riego."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Las mediciones permiten comparar resultados, pero la diferencia de luz impide aislar el efecto del agua. Igualar la exposición solar reduce esa diferencia sin garantizar el control de todas las variables."
+  },
+  "La feria de ciencias": {
+    "parts": [
+      "Se publicaron 60 visitas al puesto de reciclaje y 45 al de biología.",
+      "La suma de esos registros es 105 visitas, pero no incluye el puesto de física ni distingue visitantes únicos.",
+      "El informe solo permite interpretar cifras parciales y requiere completar los registros para calcular la asistencia total."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Sumar las cifras publicadas proporciona un subtotal. El registro ausente y la posible repetición de visitantes impiden convertirlo en el total de personas."
+  },
+  "Clubes voluntarios de lectura": {
+    "parts": [
+      "Los promedios aumentaron 12 puntos en el centro A y 6 en el centro B.",
+      "Para interpretar esos cambios hay que considerar los instrumentos distintos, la selección voluntaria y la falta de tasas de abandono.",
+      "Las mejoras observadas no demuestran por sí solas un efecto causal exclusivo de los clubes."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Los incrementos se deducen de las medias iniciales y finales. La diferencia metodológica limita la comparabilidad y la atribución causal."
+  },
+  "Agua en tres sectores": {
+    "parts": [
+      "Los consumos disminuyeron de 100 a 85, de 80 a 72 y de 120 a 114 unidades.",
+      "Para atribuir esos descensos se deben considerar los dispositivos, las campañas y los cambios climáticos simultáneos.",
+      "La evidencia muestra una reducción del consumo, pero todavía no permite identificar la contribución independiente de cada factor."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Las reducciones son observables; su causa exclusiva no lo es. El informe propone ampliar las observaciones para separar factores."
+  },
+  "Memoria regional": {
+    "parts": [
+      "Dos testimonios recogidos por el museo sitúan la celebración en fechas diferentes.",
+      "Para evaluar esa discrepancia se propone contrastar los relatos con registros cercanos a los acontecimientos.",
+      "La memoria regional puede reconstruirse conservando testimonios y distinguiendo las afirmaciones corroboradas de las pendientes."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "La discrepancia identifica el dato que debe comprobarse. El contraste aporta evidencia sin justificar el rechazo automático de los testimonios."
+  },
+  "Tutorías y sesgo de selección": {
+    "parts": [
+      "Antes de las tutorías, los promedios eran 75 y 71 puntos, por lo que los grupos ya diferían.",
+      "Al comparar cada resultado final con su punto de partida se obtienen aumentos de seis y tres puntos, respectivamente.",
+      "La diferencia de cambios describe los resultados observados, pero no demuestra causalidad sin controlar la selección y otros factores."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Las condiciones iniciales anteceden a la comparación de cambios. Las medias finales son 81 y 74, una diferencia de siete puntos, no los ocho atribuidos al boletín. Ninguna de esas diferencias prueba por sí sola el efecto causal de las tutorías."
+  },
+  "Riesgo de inundaciones": {
+    "parts": [
+      "Los avisos aumentaron después de ampliar el sistema de alertas.",
+      "Para interpretar ese aumento hay que distinguir cambios en la detección de cambios reales en los sucesos y considerar las lluvias y la ocupación del suelo.",
+      "Se requieren series comparables antes de atribuir a una causa concreta una variación de la incidencia real."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Un aumento de avisos puede reflejar mayor cobertura del registro, más inundaciones o ambos. El texto solicita evidencia comparable y no demuestra una causa exclusiva."
+  },
+  "Tres fuentes sobre un acontecimiento": {
+    "parts": [
+      "El decreto, la entrevista tardía y el resumen anónimo ofrecen información de procedencia y características distintas.",
+      "Para valorar las afirmaciones de esas fuentes se examinan sus circunstancias y se contrastan detalles con registros independientes.",
+      "La interpretación histórica debe limitarse al grado de corroboración alcanzado, sin privilegiar automáticamente la antigüedad."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "La procedencia orienta la evaluación de las fuentes; la corroboración independiente permite distinguir coincidencias respaldadas de afirmaciones todavía inciertas."
+  }
+};
 export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>READING_SUBTOPICS.map((subtopic,topicIndex)=>{
  const def=skill(seed,subtopic);
  const plain=[def.a,...def.wrong] as [string,string,string,string];
@@ -463,7 +547,7 @@ export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>REA
  {text:seed.inference,tag:"inference",explanation:"Es una conclusión plausible apoyada en la información, no una afirmación literal."},
  {text:seed.unsupported,tag:"unsupported",explanation:"Los datos disponibles no prueban esta afirmación."}
  ],question:def.q,options,answer:options.indexOf(def.a),explanation:def.why,
- order:{parts:seed.steps,hint:"Organiza un razonamiento: observa, contrasta y concluye.",explanation:"Un análisis sólido comienza localizando los datos, examina sus limitaciones y termina con una conclusión justificada."}
+ order:subtopic==="Idea principal"?MAIN_IDEA_SEED_ORDER[seed.title]:{parts:seed.steps,hint:"Organiza un razonamiento: observa, contrasta y concluye.",explanation:"Un análisis sólido comienza localizando los datos, examina sus limitaciones y termina con una conclusión justificada."}
  };
 }));
 export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct|FigurativeDetectiveCase|FigurativeChoiceCase|FigurativeReconstructCase;
