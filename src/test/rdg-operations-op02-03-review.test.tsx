@@ -2,7 +2,7 @@ import {readFileSync} from "node:fs";
 import {createHash} from "node:crypto";
 import {expect,it,vi,afterEach} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3HistoricalPool as mathM3Pool} from "@/lib/math-m3";
 import {MathExerciseCard} from "@/components/games/MathExerciseCard";
 afterEach(cleanup);
 const report=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json","utf8"));
