@@ -58,17 +58,17 @@ jobs:
           node scripts/privacy-m0-static.mjs
           node scripts/security-client-audit.mjs --test
           node scripts/security-client-audit.mjs
-      - name: v7.6.1 - verificar integridad de PDF originales y guard G-ACTION
+      - name: v7.7 - verificar integridad de PDF originales y guard G-ACTION
         run: |
           python3 qa/certification/verify_sources.py
           node --test qa/certification/test-select-frozen.mjs
           python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py' -v
-      - name: Certificación por lotes - auditar hasta 450 ejercicios del banco real
+      - name: Diagnóstico técnico legado - auditar hasta 450 registros sin certificación semántica
         if: ${{ !cancelled() && steps.install_cert_deps.outcome == 'success' }}
         run: |
           node --import ./scripts/ts-resolve.mjs qa/certification/audit-450.mjs > qa-batch-450-summary.json
           cat qa-batch-450-summary.json
-      - name: Certificación por lotes - archivar 450 expedientes individuales
+      - name: Diagnóstico técnico legado - archivar expedientes individuales
         if: always()
         uses: actions/upload-artifact@v4
         with:

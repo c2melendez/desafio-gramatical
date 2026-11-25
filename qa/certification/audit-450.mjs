@@ -9,9 +9,15 @@ import {createHash} from 'node:crypto';
 import {coverageRows} from '../../src/lib/coverage.ts';
 import {pool} from '../../scripts/inventory-items.mjs';
 import {validateSpanishItem} from './spanish-oracles.mjs';
-import {selectFrozen} from './select-frozen.mjs';
+import {selectFrozen,assertRdgContract} from './select-frozen.mjs';
 const manifestPath=process.env.PHUMA_FROZEN_BATCH;
 const manifest=manifestPath?JSON.parse(readFileSync(manifestPath,'utf8')):null;
+if(manifest){
+ const rdg=assertRdgContract(manifest);
+ const committed=execFileSync('git',['show','HEAD:'+rdg.route_path]);
+ if(createHash('sha256').update(committed).digest('hex')!==rdg.route_sha256) throw Error('RDG: hash de ruta no coincide con HEAD');
+ if(!committed.equals(readFileSync(rdg.route_path))) throw Error('RDG: ruta local difiere de HEAD');
+}
 const hashItem=item=>createHash('sha256').update(JSON.stringify(item)).digest('hex');
 const policy=JSON.parse(readFileSync('qa/certification/batch-state.json','utf8'));
 const contract=JSON.parse(readFileSync('qa/certification/exam-contracts.json','utf8'));
@@ -88,7 +94,7 @@ const candidates=selected.map(({row,item},i)=>{
  byArea[row.area]=(byArea[row.area]??0)+1;
  byLevel[row.level]=(byLevel[row.level]??0)+1;
  byGame[row.mode]=(byGame[row.mode]??0)+1;
- const record={batch_position:i,global_position:manifest?null:start+i,id:item.id,area:row.area,topic:row.topic,subtopic:row.subtopic,level:row.level,game:row.mode,
+ const record={rdg_route_sha256:manifest?manifest.rdg_contract.route_sha256:null,objective_ids:manifest?manifest.items[i].objective_ids:[],batch_position:i,global_position:manifest?null:start+i,id:item.id,area:row.area,topic:row.topic,subtopic:row.subtopic,level:row.level,game:row.mode,
   content_sha256:createHash('sha256').update(JSON.stringify(item)).digest('hex'),
   technical_status:errors.length?'FAIL':'PASS',
   curricular_status:'REVIEW',semantic_status:'REVIEW',difficulty_status:'REVIEW',
@@ -106,7 +112,8 @@ if(!manifest&&(results[0]?.id!==ids[start]||results.at(-1)?.id!==ids[start+quota
 const output={schema_version:1,suite:'ACADEMIA_CERTIFICATION_450_V1',sha,batch_index:manifest?null:policy.current_batch,batch_number:manifest?null:policy.current_batch+1,batch_size:quota,nominal_batch_size:450,expected_batches:expectedBatches,
  status:problems.length?'FAIL':'PASS',academic_certification:'PENDIENTE',
  scanned_records:total,bank_size_real:total,exam_scope:'PAA/PHUMA sin Inglés',
- selection:manifest?'v7.6 frozen ID/hash selection':'round robin por área, juego y nivel (45 estratos) con orden estable por tema/subtema',
+ certification_scope:manifest?'ASSOCIATED_TECHNICAL_DIAGNOSTIC':'LEGACY_GLOBAL_TECHNICAL_DIAGNOSTIC',rdg_contract:manifest?manifest.rdg_contract:null,subtopic_scope:manifest?manifest.subtopic_scope:null,
+ selection:manifest?'v7.7 frozen subtopic ID/hash selection':'round robin por área, juego y nivel (45 estratos) con orden estable por tema/subtema',
  range:manifest?null:{from:start,to_exclusive:start+quota},frozen_selection:manifest?manifest.items:null,
  summary:{evaluated:results.length,technical_failures:results.filter(x=>x.technical_status==='FAIL').length,
  semantic_approved:0,semantic_review:results.length,by_area:byArea,by_level:byLevel,by_game:byGame,editorial_flags:reviewCounts},

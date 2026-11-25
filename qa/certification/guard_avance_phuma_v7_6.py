@@ -70,6 +70,27 @@ def validate(repo, run):
         sets[name]=set(a)
     sel,exam,passed,review,fail=(sets[f] for f in fields)
     if len(sel)>450 or not exam<=sel or passed|review|fail!=exam or passed&review or passed&fail or review&fail: errors.append('IDS: selección, partición o límite incorrecto')
+    # v7.7: no semantic approval outside a single prepared learning route.
+    # Structural binding only; no self-approval of RDG quality.
+    scope=run.get('subtopic_scope')
+    rdg=run.get('rdg_contract')
+    objectives=set()
+    def valid_scope(s):
+        return isinstance(s,dict) and all(isinstance(s.get(k),str) and s[k].strip() for k in ('area','topic','subtopic'))
+    if passed:
+        if run.get('phase')!='CERTIFICACION_ASOCIADA_EN_CURSO' or not valid_scope(scope) or not isinstance(rdg,dict) or rdg.get('status')!='RDG_READY' or rdg.get('subtopic_scope')!=scope:
+            errors.append('RDG: aprobación requiere ruta READY del subtema activo')
+        else:
+            obj=rdg.get('objective_ids',[])
+            if not isinstance(obj,list) or not obj or any(not isinstance(x,str) or not x.strip() for x in obj) or len(set(obj))!=len(obj):
+                errors.append('RDG: objetivos inválidos')
+            else: objectives=set(obj)
+            route=rdg.get('route_path','')
+            try:
+                if not isinstance(route,str) or not route.startswith('src/') or '..' in Path(route).parts or rdg.get('evidence_ref') not in artifacts: raise ValueError()
+                raw=subprocess.check_output(['git','-C',str(repo),'show',head+':'+route],stderr=subprocess.DEVNULL)
+                if hashlib.sha256(raw).hexdigest()!=rdg.get('route_sha256'): raise ValueError()
+            except (ValueError,subprocess.CalledProcessError,TypeError): errors.append('RDG: evidencia o hash de ruta en commit inválido')
     idx={}
     for i in run.get('items',[]):
         k=i.get('id')
@@ -79,6 +100,10 @@ def validate(repo, run):
     for k,i in idx.items():
         expected='PASS_SEMANTIC' if k in passed else 'REVIEW' if k in review else 'FAIL'
         if i.get('status')!=expected or not HASH.fullmatch(i.get('content_hash','')) or i.get('evidence_ref') not in artifacts: errors.append('FICHA: estado/hash/evidencia inválidos '+str(k))
+        if k in passed:
+            obj=i.get('objective_ids',[])
+            if not isinstance(rdg,dict) or i.get('subtopic_scope')!=scope or i.get('rdg_route_sha256')!=rdg.get('route_sha256') or not isinstance(obj,list) or not obj or any(not isinstance(x,str) or x not in objectives for x in obj):
+                errors.append('RDG: ID fuera del contrato de aprendizaje '+str(k))
         if k in passed and (i.get('oracle_status')!='VERIFIED' or i.get('evidence_level')!='E1'): errors.append('SEMANTIC: sin oráculo VERIFIED/E1 '+str(k))
         if k in passed and k+':'+i.get('content_hash','') in run.get('prior_evidence_keys',[]): errors.append('IDEMPOTENCIA: evidencia repetida como nueva '+str(k))
         if i.get('teacher_status')=='APROBADO_DOCENTE': errors.append('DOCENTE: requiere canal independiente')

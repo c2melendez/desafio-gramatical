@@ -11,6 +11,14 @@ class GuardTests(unittest.TestCase):
         (self.p/'result.log').write_text('synthetic fixture result\n');digest=hashlib.sha256((self.p/'result.log').read_bytes()).hexdigest()
         self.r={'base_sha':b,'candidate_sha':h,'checks':[{'command':'fixture','exit_code':0,'sha':h,'artifact':'result.log','artifact_sha256':digest}],'selected_ids':['a'],'examined_ids':['a'],'new_semantic_pass_ids':['a'],'review_ids':[],'fail_ids':[],'items':[{'id':'a','content_hash':'a'*64,'status':'PASS_SEMANTIC','oracle_status':'VERIFIED','evidence_level':'E1','evidence_ref':'result.log'}]}
         self.r['interventions']=[{'scope':'fixture/a','action':'CORREGIR','finding_ref':'result.log','evidence_ref':'result.log','affected_paths':['src/x.js'],'justification':'synthetic minimal correction'}]
+        scope={'area':'fixture','topic':'fixture','subtopic':'fixture'}
+        routehash=hashlib.sha256((self.p/'src/x.js').read_bytes()).hexdigest()
+        self.r.update(phase='CERTIFICACION_ASOCIADA_EN_CURSO',subtopic_scope=scope,rdg_contract={'status':'RDG_READY','subtopic_scope':scope,'route_path':'src/x.js','route_sha256':routehash,'objective_ids':['o1'],'evidence_ref':'result.log'})
+        self.r['items'][0].update(subtopic_scope=scope,rdg_route_sha256=routehash,objective_ids=['o1'])
+    def test_rdg_not_ready(self): self.r['rdg_contract']['status']='RDG_EN_CURSO';self.assertTrue(any('RDG:' in e for e in validate(self.p,self.r)))
+    def test_rdg_hash_stale(self): self.r['rdg_contract']['route_sha256']='b'*64;self.assertTrue(any('hash de ruta' in e for e in validate(self.p,self.r)))
+    def test_rdg_wrong_scope(self): self.r['items'][0]['subtopic_scope']={'area':'other'};self.assertTrue(any('fuera del contrato' in e for e in validate(self.p,self.r)))
+    def test_rdg_unknown_objective(self): self.r['items'][0]['objective_ids']=['other'];self.assertTrue(any('fuera del contrato' in e for e in validate(self.p,self.r)))
     def test_unjustified_product_change(self): self.r['interventions']=[];self.assertTrue(any('INTERVENCION' in e for e in validate(self.p,self.r)))
     def test_creation_requires_minimal_alternative(self): self.r['interventions'][0]['action']='CREAR';self.assertTrue(any('insuficiencia' in e for e in validate(self.p,self.r)))
     def test_creation_justified(self):
