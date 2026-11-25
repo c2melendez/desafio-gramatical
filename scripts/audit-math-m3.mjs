@@ -3,6 +3,7 @@ import {MATH_M2_LEVEL_COUNT,mathM2Pool} from "../src/lib/math-m2.ts";
 import {MATH_M3_LEVEL_COUNT,MATH_M3_NEW_PER_LEVEL,MATH_M3_TOTAL,MATH_M3_NEW_TOTAL,mathM3Pool,mathM3NewPool,mathStimulusSignature} from "../src/lib/math-m3.ts";
 import {selectRotation,emptyRotation,recordRotation} from "../src/lib/rotation.ts";
 import {execFileSync} from "node:child_process";
+import {expectedOperationClassificationTruthCount} from "../src/lib/math-operations-classification.ts";
 import {verifyMathM3Cell} from "../src/lib/math-m3-guards.ts";
 const eq=(a,b)=>a.n*b.d===b.n*a.d;
 const ratio=(n,d=1)=>({n,d});
@@ -65,7 +66,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
    issues.push(cell+": invalid independent oracle "+item.id);
   if(item.options.length!==4||new Set(item.options).size!==4||item.options[item.answerIndex]!==item.expected)
    issues.push(cell+": invalid quiz answer "+item.id);
-  if(item.assertions.length!==3||item.assertions.filter(a=>a.truth).length!==1||new Set(item.assertions.map(a=>a.text)).size!==3)
+  if(item.assertions.length!==3||item.assertions.filter(a=>a.truth).length!==expectedOperationClassificationTruthCount(item)||new Set(item.assertions.map(a=>a.text)).size!==3)
    issues.push(cell+": invalid classification "+item.id);
   if(item.steps.length!==2||item.steps.some(st=>st.choices.length!==4||new Set(st.choices).size!==4||st.answerIndex<0||st.answerIndex>=4))
    issues.push(cell+": invalid construction "+item.id);
