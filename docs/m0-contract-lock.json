@@ -1,6 +1,6 @@
 {
-  "version": 45,
-  "scope": "Reconciliación candidata v7 C09: 27 explicaciones y nueve inferencias de semillas Idea principal",
+  "version": 46,
+  "scope": "Reconciliación candidata v7 C09: nueve secuencias semilla de Idea principal",
   "baseline_main": "2a47febb7192cd9a1ca47b771625f714e8cef3d3",
   "hash_algorithm": "git-blob-sha1",
   "files": {
@@ -8,7 +8,7 @@
     "src/lib/coverage.ts": "4f08416a6f8bcc78b26af48234e0f54ae8d5d82d",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
-    "src/lib/reading.ts": "cba88c709a8bbd98f00f40cc87d6c22f092aea3f",
+    "src/lib/reading.ts": "f676fdf05d2ba0997b51287b65d34990ddb6e877",
     "src/lib/writing.ts": "623c4d4c2429fd340a52359a80a44dcc83425094",
     "src/routes/index.tsx": "df96ccfa72ed79d99d7e31be526fd33a2a259695",
     "src/routes/jugar.tsx": "6f72a7014eecf360f455078eb56bfe3cfdb3db2b",
@@ -22,16 +22,16 @@
     "src/lib/soft-route.ts": "d132088ba75bcddb353b8da840d6a3f00f49aaa5"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "Revisión editorial de 4241348; CI 45524047813 detectó el cambio en reading.ts; se conserva el verificador y se exige CI completo. Sin cierre académico.",
+  "change_note": "Revisión editorial del commit 0017e54; CI 45562298285 detectó cambio en reading.ts. Se preserva el verificador y se exige CI completo.",
   "previous_baseline": "2a47febb7192cd9a1ca47b771625f714e8cef3d3",
   "reconciliation": {
-    "candidate_sha": "4241348c6eadd7582510060ef6433f1d975c4e82",
-    "previous_version": 44,
-    "previous_manifest_blob": "8273dfcc57444d9abec51df610b21d6d0781d0a6",
+    "candidate_sha": "0017e54df020a0f12973669a3102692594ccd4a7",
+    "previous_version": 45,
+    "previous_manifest_blob": "000aaeaac916da59bd31cf1a4311494a2fa94790",
     "previous_hashes": {
-      "src/lib/reading.ts": "01ee426daeff985258f6b6b824496d6925ca9ba0"
+      "src/lib/reading.ts": "cba88c709a8bbd98f00f40cc87d6c22f092aea3f"
     },
-    "source_run": 45524047813,
+    "source_run": 45562298285,
     "status": "PENDING_FULL_CI"
   }
 }
