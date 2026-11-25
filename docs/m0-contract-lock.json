@@ -1,6 +1,6 @@
 {
-  "version": 44,
-  "scope": "Reconciliación candidata v7 C09: corrección de nueve preguntas semilla Idea principal",
+  "version": 45,
+  "scope": "Reconciliación candidata v7 C09: 27 explicaciones y nueve inferencias de semillas Idea principal",
   "baseline_main": "2a47febb7192cd9a1ca47b771625f714e8cef3d3",
   "hash_algorithm": "git-blob-sha1",
   "files": {
@@ -8,7 +8,7 @@
     "src/lib/coverage.ts": "4f08416a6f8bcc78b26af48234e0f54ae8d5d82d",
     "src/lib/rotation.ts": "67db478e704c3d2326eda1f2281166d126febb07",
     "src/lib/grammar.ts": "767f866b55e6ca7143590511b4ca29172592e63f",
-    "src/lib/reading.ts": "01ee426daeff985258f6b6b824496d6925ca9ba0",
+    "src/lib/reading.ts": "cba88c709a8bbd98f00f40cc87d6c22f092aea3f",
     "src/lib/writing.ts": "623c4d4c2429fd340a52359a80a44dcc83425094",
     "src/routes/index.tsx": "df96ccfa72ed79d99d7e31be526fd33a2a259695",
     "src/routes/jugar.tsx": "6f72a7014eecf360f455078eb56bfe3cfdb3db2b",
@@ -22,16 +22,16 @@
     "src/lib/soft-route.ts": "d132088ba75bcddb353b8da840d6a3f00f49aaa5"
   },
   "notes": "Hash de archivo no equivale a comprobación pedagógica ni de compatibilidad de UI. Cambios posteriores exigen actualizar lock tras ejecutar los controles.",
-  "change_note": "CI 45512533615: inventario 40500 y 13 mutaciones PASS; lock rechazó exclusivamente reading.ts. Se revisó el cambio editorial del commit 9bfd257; no se modifica el verificador ni se declara cierre.",
+  "change_note": "Revisión editorial de 4241348; CI 45524047813 detectó el cambio en reading.ts; se conserva el verificador y se exige CI completo. Sin cierre académico.",
   "previous_baseline": "2a47febb7192cd9a1ca47b771625f714e8cef3d3",
   "reconciliation": {
-    "candidate_sha": "9bfd257b282184e23a4b0a9eb54b9543b5d8f096",
-    "previous_version": 43,
-    "previous_manifest_blob": "7c9fcd1dc77f727e71665f59e441f7b08cdf09d6",
+    "candidate_sha": "4241348c6eadd7582510060ef6433f1d975c4e82",
+    "previous_version": 44,
+    "previous_manifest_blob": "8273dfcc57444d9abec51df610b21d6d0781d0a6",
     "previous_hashes": {
-      "src/lib/reading.ts": "08b0bc602fd50a19c0915fa5261be6817bf27449"
+      "src/lib/reading.ts": "01ee426daeff985258f6b6b824496d6925ca9ba0"
     },
-    "source_run": 45512533615,
+    "source_run": 45524047813,
     "status": "PENDING_FULL_CI"
   }
 }
