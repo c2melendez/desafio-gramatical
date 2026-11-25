@@ -1,0 +1,180 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "source_ci": 45690836989,
+  "source_sha": "f8c29b3eaafe0419d022a2ef67d467e27a30bd55",
+  "status": "REVIEW",
+  "supersedes": "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
+      "content_hash": "15253bc28e43ba6ca1357fc75ceb9520574f503f487d6aaa3c047a3fa373473d",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_hash": "6f693123d3148407cd4c9ccd7ee074a502bcf0a2cc56dee81bf3a2da61002978",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-14",
+      "content_hash": "74f2009488494c307bf4753cc6708e815d8d9117425d3ae4c57d58479469f7fd",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-12",
+      "content_hash": "6a6e52a0b8523a25b10c7b40bd829a9c9237dfb2a8d43f09bab86ca241523152",
+      "previous_E": 3,
+      "current_E": 3,
+      "reason": "Feedback específico verificado antes.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-13",
+      "content_hash": "1392294147890cee774b0d0cd6ebd83b98344d3f8a7d680a650b2a8608e90eb0",
+      "previous_E": 3,
+      "current_E": 3,
+      "reason": "Feedback específico verificado antes.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-14",
+      "content_hash": "f4a062f537a8c354032add4c32119175dc84f092c9c842cb3a2f303e8a467e10",
+      "previous_E": 3,
+      "current_E": 3,
+      "reason": "Feedback específico verificado antes.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-12",
+      "content_hash": "a44f109a129741f075338e7a2cb311f524446be9a371cf7a3ae4b5e5681ce955",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-13",
+      "content_hash": "14cd80d99f3bcc2a48035215285a8a41b7057464699cb999231f0b0407ab66cb",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-14",
+      "content_hash": "6288ec586e16b171e3f9f98929d5d114c22f2c46ceb57d4e2cf049883bada12b",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
+      "content_hash": "71988aba89078a41c6d05d6a5ec308b8926358a5146030ab133511d43cbbb623",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-23",
+      "content_hash": "c1e8298b0fb08d21d95d7477c530c3332e568f0f09f5776ac24e0d50730e45fa",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-24",
+      "content_hash": "8c2663d0f6d8ef6604b68eb033632c9357225c35b54b69409c71e6bd0e60cf9d",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-22",
+      "content_hash": "08b2dc2b080c49f7d11d5ea06022b3eab502efdadfea54d9b8f0160b25d96d92",
+      "previous_E": 3,
+      "current_E": 3,
+      "reason": "Feedback específico verificado antes.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-23",
+      "content_hash": "ed1a51e5c0eccdb1f4e711f58ddd03979b47f155069523ca893c07fc4d0db53f",
+      "previous_E": 3,
+      "current_E": 3,
+      "reason": "Feedback específico verificado antes.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-24",
+      "content_hash": "de7fa0df1747d4a50b2b7b45ccec58a1c5e323649d1a5c3b0723e1e23d94370e",
+      "previous_E": 3,
+      "current_E": 3,
+      "reason": "Feedback específico verificado antes.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-22",
+      "content_hash": "161816de0110f38c059702905d11d590c5658a18a503cfa13f88384e2f6111e1",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-23",
+      "content_hash": "5e0114a4326defb069ed7f65dfb081615c5887c4e768e8d81a176d7015802b90",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-24",
+      "content_hash": "09e2b4ae3e1d9199fb69f8eb4f03f2bb197851bb72cadc08eb0ce22f7b20861f",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "CI #845: pruebas de clasificación/construcción identifican subdecisión equivocada; componente aplica las mismas condiciones a los casos del alcance.",
+      "semantic_status": "REVIEW",
+      "remaining_reason": "G_DIVERSIDAD_INSUFICIENTE"
+    }
+  ],
+  "summary": {
+    "feedback_repaired": 12,
+    "semantic_pass": 0,
+    "review": 18
+  }
+}
