@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "policy": "No auto-approval; every approved decision requires current exercise and review SHA256, objective IDs, reviewer and rationale.",
+  "items": []
+}

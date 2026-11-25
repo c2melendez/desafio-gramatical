@@ -19,7 +19,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La cantidad de préstamos se duplicó exactamente."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «Una ampliación de horarios que será evaluada mediante el registro de visitas.». El dato «La biblioteca abrirá tres tardes adicionales.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Una ampliación de horarios que será evaluada mediante el registro de visitas.». Las tres tardes adicionales son un detalle de la ampliación; no se anunciaron edificios ni se midió una duplicación de préstamos.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -36,7 +36,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Un huerto escolar utilizado para observar plantas y comparar sus condiciones de cultivo."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «Un huerto escolar utilizado para observar plantas y comparar sus condiciones de cultivo.». El dato «Dos macetas estaban cerca de la ventana.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Un huerto escolar utilizado para observar plantas y comparar sus condiciones de cultivo.». Dos macetas junto a la ventana son un detalle. La luz varió y el texto no permite descartar el efecto del agua.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -53,7 +53,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Se colocaron recipientes de separación."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «Una jornada de limpieza comunitaria y la posibilidad de darle continuidad.». El dato «La alcaldía aprobó limpieza semanal permanente.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Una jornada de limpieza comunitaria y la posibilidad de darle continuidad.». Los recipientes son un detalle de la jornada. No existe calendario aprobado ni evidencia de una solución definitiva.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -70,7 +70,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Todos los libros del intercambio eran nuevos."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «Un intercambio escolar de libros que promovió compartir lecturas entre cursos.». El dato «Se canceló toda la biblioteca escolar.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Un intercambio escolar de libros que promovió compartir lecturas entre cursos.». La revisión docente es una acción del intercambio; no se menciona cancelar la biblioteca y los libros eran usados.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -87,7 +87,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Las canchas quedaron cerradas definitivamente."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «La mejora del acceso al agua en el recreo acompañada de cuidados de mantenimiento.». El dato «Las fuentes quedaron cerca de las canchas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La mejora del acceso al agua en el recreo acompañada de cuidados de mantenimiento.». La ubicación cerca de las canchas es un detalle. El mantenimiento sigue siendo necesario y no se informa un cierre.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -104,7 +104,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La recopilación de recuerdos diversos para conservar la memoria de juegos tradicionales."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «La recopilación de recuerdos diversos para conservar la memoria de juegos tradicionales.». El dato «El museo recibió fotografías y relatos.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La recopilación de recuerdos diversos para conservar la memoria de juegos tradicionales.». Las fotografías y relatos son medios de recopilación. Los testimonios no representan necesariamente a todas las familias ni son idénticos.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -121,7 +121,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Las familias tomaron fotografías de la calle."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La documentación de problemas de acceso escolar para solicitar una solución.». El dato «Las autoridades repararon la vía al día siguiente.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La documentación de problemas de acceso escolar para solicitar una solución.». Las fotografías son evidencia de los problemas. Se anunció una inspección, no una reparación realizada ni el fin de las inundaciones.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -138,7 +138,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Todas las visitas adicionales fueron por publicidad."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «La necesidad de interpretar el aumento de visitantes considerando cambios en la medición.». El dato «El nuevo sistema excluyó excursiones escolares.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La necesidad de interpretar el aumento de visitantes considerando cambios en la medición.». La inclusión de excursiones es un cambio concreto. No fueron excluidas por el sistema nuevo ni se demuestra que la publicidad explique el aumento.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -155,7 +155,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "No hubo crecimiento residencial en veinte años."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «Una comparación histórica de mapas que reconoce límites de escala y cobertura.». El dato «Los mapas utilizaban escalas distintas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Una comparación histórica de mapas que reconoce límites de escala y cobertura.». Las escalas distintas son una limitación concreta. No eran iguales y el texto sí informa expansión residencial.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -172,7 +172,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El aprendizaje de una comunicación responsable mediante verificación de fuentes."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «El aprendizaje de una comunicación responsable mediante verificación de fuentes.». El dato «Los jóvenes corrigieron un guion.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «El aprendizaje de una comunicación responsable mediante verificación de fuentes.». Corregir el guion es parte del proceso de verificación. El taller no prohibió verificar ni demuestra que todos los programas fueran falsos.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -189,7 +189,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El barrio central registró más viajes."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La interpretación de los préstamos de bicicletas mediante indicadores comparables.». El dato «Se cerraron las estaciones de otros barrios.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La interpretación de los préstamos de bicicletas mediante indicadores comparables.». Los viajes del centro son un dato parcial. No se estableció igualdad de demanda por estación ni se informó el cierre de otros barrios.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -206,7 +206,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Una fotografía representaba a todas las familias."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «La integración crítica de fuentes distintas para comprender costumbres históricas.». El dato «Los anuncios fueron descartados por completo.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La integración crítica de fuentes distintas para comprender costumbres históricas.». Las fotografías y anuncios son los materiales utilizados. No se descartaron los anuncios ni una imagen representa necesariamente a toda una generación.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -223,7 +223,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "No hubo días de vacaciones en ese período."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «La evaluación cautelosa de una reducción energética ocurrida durante varios cambios.». El dato «Se realizaron charlas de ahorro eléctrico.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La evaluación cautelosa de una reducción energética ocurrida durante varios cambios.». Las charlas son una de varias medidas. Las vacaciones impiden atribuir toda la reducción a las lámparas.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -240,7 +240,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La necesidad de comparar rutas por el tiempo total y no solo por el trayecto."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «La necesidad de comparar rutas por el tiempo total y no solo por el trayecto.». El dato «Una ruta tenía esperas más largas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La necesidad de comparar rutas por el tiempo total y no solo por el trayecto.». Las esperas largas son un dato parcial. Un trayecto corto no garantiza un viaje total más rápido; no se cancelaron las rutas.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -257,7 +257,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El riego no había sido uniforme."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La importancia de controlar variables antes de atribuir diferencias de crecimiento.». El dato «La luz quedó probada como causa única.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La importancia de controlar variables antes de atribuir diferencias de crecimiento.». El riego desigual es una variable que debe controlarse. No se probó la luz como causa exclusiva ni hubo riego idéntico.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -274,7 +274,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Toda la ciudad respondió la encuesta."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «Una encuesta con resultados útiles pero limitados por la selección de participantes.». El dato «Nadie sin internet quedó fuera de la muestra.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Una encuesta con resultados útiles pero limitados por la selección de participantes.». La preferencia por novelas corresponde a los participantes. La encuesta excluyó a personas sin internet y no abarcó toda la ciudad.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -291,7 +291,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "El río nunca presentó turbidez."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «Una observación ambiental acompañada de cautela al determinar sus causas.». El dato «La turbidez creció después de días lluviosos.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Una observación ambiental acompañada de cautela al determinar sus causas.». El aumento de turbidez tras lluvias es una observación. No demuestra culpabilidad de una fábrica y contradice que nunca hubo turbidez.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -308,7 +308,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "La verificación y corrección de datos como parte de una noticia responsable."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «La verificación y corrección de datos como parte de una noticia responsable.». El dato «La redacción consultó actas del torneo.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La verificación y corrección de datos como parte de una noticia responsable.». Consultar actas es un paso de verificación. La noticia sí se comprobó y no se mencionó eliminar torneos.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -325,7 +325,7 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
       "Algunas narraciones discreparon sobre fechas."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La preservación de memorias comunitarias sin ocultar discrepancias entre relatos.». El dato «Todas las fechas de los relatos fueron idénticas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La preservación de memorias comunitarias sin ocultar discrepancias entre relatos.». Las fechas discrepantes son un detalle relevante. No fueron idénticas ni se eligió una única versión definitiva.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -336,13 +336,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Dos programas escolares publicaron tasas de abandono diferentes. Uno contaba ausencias superiores a un mes y otro solo casos sin retorno al año siguiente. Una investigadora explicó que esas definiciones no medían exactamente el mismo fenómeno y propuso armonizar el indicador antes de comparar programas.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Ambos programas contaban el abandono igual.",
+      "La duración de las ausencias como criterio suficiente para comparar programas escolares.",
       "La necesidad de definir de forma equivalente un indicador antes de comparar tasas.",
-      "Los programas contaban el abandono de manera distinta.",
-      "La tasa más alta demostró el peor programa."
+      "La diferencia entre dos definiciones administrativas del abandono escolar.",
+      "La conveniencia de ordenar los programas por sus tasas publicadas antes de armonizarlas."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «La necesidad de definir de forma equivalente un indicador antes de comparar tasas.». El dato «Ambos programas contaban el abandono igual.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La necesidad de definir de forma equivalente un indicador antes de comparar tasas.». La duración solo describe una definición; reconocer la diferencia no recoge la propuesta de armonización; ordenar antes de armonizar contradice la cautela metodológica.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -354,12 +354,12 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
       "La dificultad de interpretar resultados de tutorías cuando se pierde parte de la muestra.",
-      "Cuarenta alumnos no completaron el seguimiento.",
-      "Quienes abandonaron necesariamente mejoraron.",
-      "No se perdió ningún participante del seguimiento."
+      "La mejora observada entre los alumnos que completaron la evaluación de tutorías.",
+      "La necesidad de ampliar el número inicial de participantes en programas de tutorías.",
+      "La conveniencia de estimar la eficacia del programa a partir del grupo que terminó."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «La dificultad de interpretar resultados de tutorías cuando se pierde parte de la muestra.». El dato «Cuarenta alumnos no completaron el seguimiento.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La dificultad de interpretar resultados de tutorías cuando se pierde parte de la muestra.». La mejora de quienes terminaron es parcial; ampliar la muestra inicial no resuelve necesariamente el abandono selectivo; usar solo los casos completos sin examinar el sesgo omite el problema central.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -370,13 +370,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Una revisión reunió estudios que llamaban bienestar a fenómenos medidos con instrumentos distintos. Unos usaban una escala breve y otros evaluaban varias dimensiones. Antes de producir una puntuación global, el equipo examinó si los cuestionarios medían constructos comparables.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Los cuestionarios tenían diseños distintos.",
-      "Las escalas de bienestar eran equivalentes por su nombre.",
-      "Los cuestionarios medían dimensiones idénticas.",
+      "La variedad de dimensiones utilizadas para describir el bienestar en distintas investigaciones.",
+      "La necesidad de convertir las puntuaciones de bienestar a una escala numérica común.",
+      "La conveniencia de elegir cuestionarios breves para facilitar las revisiones de bienestar.",
       "La importancia de verificar equivalencia conceptual antes de combinar medidas de bienestar."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «La importancia de verificar equivalencia conceptual antes de combinar medidas de bienestar.». El dato «Los cuestionarios tenían diseños distintos.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La importancia de verificar equivalencia conceptual antes de combinar medidas de bienestar.». La variedad de instrumentos es el antecedente; convertir escalas no garantiza equivalencia conceptual; la brevedad no es el criterio que propone el equipo.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -387,13 +387,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Una ciudad amplió becas de transporte mientras varias escuelas cambiaban sus horarios. La asistencia aumentó después y un boletín atribuyó toda la mejora a las becas. El equipo evaluador advirtió que ambas medidas podían intervenir y solicitó comparar contextos similares antes de inferir causalidad.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Las becas fueron la causa exclusiva de la mejora.",
-      "Los horarios permanecieron iguales.",
+      "La relación temporal entre las becas de transporte y la mejora de asistencia escolar.",
+      "La comparación de horarios escolares como explicación principal de la asistencia.",
       "La cautela necesaria para atribuir resultados cuando existen cambios simultáneos.",
-      "Se ampliaron becas y cambiaron horarios."
+      "La descripción de dos políticas escolares aplicadas durante el mismo período."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La cautela necesaria para atribuir resultados cuando existen cambios simultáneos.». El dato «Las becas fueron la causa exclusiva de la mejora.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La cautela necesaria para atribuir resultados cuando existen cambios simultáneos.». La coincidencia temporal no establece causalidad; privilegiar los horarios sustituye una atribución no demostrada por otra; enumerar las políticas no recoge la necesidad de controlar explicaciones alternativas.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -404,13 +404,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Dos regiones exhibieron tasas de atención médica que parecían muy diferentes. Los analistas descubrieron variaciones en la estructura de edades y en las definiciones de consulta. El informe propuso examinar ambos factores antes de ordenar las regiones por desempeño o combinar promedios.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Las regiones tenían edades idénticas.",
+      "La necesidad de ajustar las tasas sanitarias por la estructura de edades de las regiones.",
       "La comparación de tasas sanitarias condicionada por diferencias demográficas y metodológicas.",
-      "Las regiones tenían distintas estructuras de edad.",
-      "Las tasas brutas demostraron mejor atención sin ajustes."
+      "La descripción de diferencias en la definición administrativa de consulta médica.",
+      "La utilidad de combinar las tasas regionales para obtener un indicador general de atención."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «La comparación de tasas sanitarias condicionada por diferencias demográficas y metodológicas.». El dato «Las regiones tenían edades idénticas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La comparación de tasas sanitarias condicionada por diferencias demográficas y metodológicas.». Los dos primeros enfoques recogen solo uno de los factores; combinar tasas antes de examinar ambos puede ocultar diferencias de población y medición.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -422,12 +422,12 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
       "La evaluación contextual de testimonios tardíos mediante comparación documental.",
-      "Hubo discrepancias en las fechas recordadas.",
-      "Las memorias tardías fueron descartadas automáticamente.",
-      "Todos los testigos recordaban la misma fecha."
+      "La importancia de reconstruir la cronología del conflicto mediante recuerdos de sus participantes.",
+      "La conservación de testimonios orales para completar archivos históricos insuficientes.",
+      "La preferencia por testimonios respaldados documentalmente como criterio general de selección."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «La evaluación contextual de testimonios tardíos mediante comparación documental.». El dato «Hubo discrepancias en las fechas recordadas.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La evaluación contextual de testimonios tardíos mediante comparación documental.». Reconstruir fechas o conservar recuerdos son aspectos parciales; preferir automáticamente los testimonios documentados no recoge la evaluación de procedencia y corroboración sin descartar la memoria oral.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -438,13 +438,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Una evaluación de lectura halló una mejora media positiva, pero ciertas escuelas no mostraron avances. En lugar de comunicar un éxito uniforme, los autores publicaron resultados por grupos y señalaron limitaciones metodológicas. Planean estudiar qué condiciones podrían explicar las diferencias observadas.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Algunas escuelas no registraron progreso.",
-      "El promedio implicaba mejora uniforme.",
-      "Se ocultaron los datos por escuela.",
+      "La identificación de escuelas que necesitan nuevas estrategias de enseñanza de la lectura.",
+      "La publicación de resultados por escuela para explicar las causas de la mejora media.",
+      "La valoración del éxito general del programa a partir del promedio positivo.",
       "La interpretación de una mejora media junto con la heterogeneidad entre grupos."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «La interpretación de una mejora media junto con la heterogeneidad entre grupos.». El dato «Algunas escuelas no registraron progreso.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La interpretación de una mejora media junto con la heterogeneidad entre grupos.». El texto no prescribe nuevas estrategias concretas; publicar datos por grupos no explica aún las causas; valorar el éxito solo por la media omite la heterogeneidad y los límites.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -455,13 +455,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Una ciudad instaló sensores nuevos y después registró más episodios de contaminación. El equipo reconoció que una parte del aumento podría deberse a mayor capacidad de detección y propuso comparar instrumentos. Una columna había atribuido cada episodio a nuevas fábricas sin pruebas adicionales.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Cada aviso fue causado por una fábrica nueva.",
-      "Los sensores tenían la misma sensibilidad anterior.",
+      "La evaluación del crecimiento de la contaminación mediante los nuevos registros municipales.",
+      "La comparación de sensores como procedimiento para atribuir episodios a las fábricas.",
       "La necesidad de separar cambios reales de cambios en la capacidad de detección.",
-      "Los sensores nuevos eran más sensibles."
+      "La posible mejora de la sensibilidad de los instrumentos de vigilancia ambiental."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La necesidad de separar cambios reales de cambios en la capacidad de detección.». El dato «Cada aviso fue causado por una fábrica nueva.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La necesidad de separar cambios reales de cambios en la capacidad de detección.». El aumento de registros no demuestra crecimiento real; comparar instrumentos no identifica por sí solo las fuentes de contaminación; la sensibilidad es una hipótesis parcial, no el contraste central entre incidencia y detección.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -472,13 +472,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Un informe mostró que bajó el gasto eléctrico de edificios públicos después de una remodelación. También disminuyeron las tarifas y algunos edificios cerraron varias semanas. Para medir eficiencia real, el equipo decidió comparar unidades de energía consumida por día de funcionamiento.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Las tarifas nunca cambiaron.",
+      "La influencia de las tarifas eléctricas en el gasto de los edificios públicos.",
       "La diferencia entre una reducción monetaria y una mejora energética demostrada.",
-      "Los edificios tuvieron cierres temporales.",
-      "El gasto menor demostró menos consumo físico."
+      "La conveniencia de ajustar el gasto de electricidad por los días de apertura.",
+      "La evaluación del ahorro económico de una remodelación mediante sus facturas."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «La diferencia entre una reducción monetaria y una mejora energética demostrada.». El dato «Las tarifas nunca cambiaron.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La diferencia entre una reducción monetaria y una mejora energética demostrada.». Las tarifas son solo un factor; ajustar el gasto monetario no elimina el efecto del precio; las facturas permiten estudiar costos, pero la eficiencia requiere comparar energía física por tiempo de funcionamiento.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -490,12 +490,12 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
       "Una síntesis crítica que compara resultados y diseños antes de extraer conclusiones.",
-      "Se analizaron trabajos favorables y desfavorables.",
-      "Se excluyeron todos los estudios negativos.",
-      "Todas las fuentes probaban causas con el mismo diseño."
+      "La inclusión de investigaciones con resultados contrapuestos en revisiones educativas.",
+      "La clasificación de los estudios según sus resultados favorables y desfavorables.",
+      "La identificación de asociaciones comunes como base de una conclusión causal general."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «Una síntesis crítica que compara resultados y diseños antes de extraer conclusiones.». El dato «Se analizaron trabajos favorables y desfavorables.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Una síntesis crítica que compara resultados y diseños antes de extraer conclusiones.». Incluir discrepancias es necesario pero parcial; clasificar por signo del resultado omite la calidad del diseño; las asociaciones comunes no garantizan causalidad.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -506,13 +506,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Dos encuestas sobre hábitos de lectura dieron resultados distintos. Una preguntaba por novelas leídas por placer y otra por materiales escolares obligatorios. Los investigadores detectaron que las preguntas medían conductas diferentes y pidieron formularios equivalentes antes de comparar los porcentajes nacionales.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Las encuestas preguntaron sobre lecturas diferentes.",
-      "Las preguntas eran idénticas en ambas encuestas.",
-      "La diferencia confirmó que una encuesta era falsa.",
+      "La distinción entre lecturas recreativas y lecturas exigidas por la escuela.",
+      "La conveniencia de comparar porcentajes nacionales después de unificar tamaños muestrales.",
+      "La medición de diferencias entre hábitos lectores mediante dos tipos de cuestionario.",
       "El efecto de las definiciones y preguntas sobre la comparación de encuestas."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «El efecto de las definiciones y preguntas sobre la comparación de encuestas.». El dato «Las encuestas preguntaron sobre lecturas diferentes.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «El efecto de las definiciones y preguntas sobre la comparación de encuestas.». La distinción de conductas es un ejemplo del problema; igualar muestras no corrige preguntas no equivalentes; medir diferencias con esos cuestionarios presupone precisamente la comparabilidad cuestionada.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -523,13 +523,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Antes de calcular un promedio, un equipo retiró las observaciones más altas sin explicar por qué. Después de una revisión, documentó la cantidad retirada y calculó nuevamente la media con todos los registros. El informe destacó que una exclusión selectiva puede modificar las estimaciones.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Quitar datos extremos siempre mejora la precisión.",
-      "La exclusión fue justificada desde el inicio.",
+      "La presentación transparente de los datos extremos retirados de un análisis.",
+      "La recuperación de los valores más altos como método para mejorar toda estimación.",
       "La necesidad de justificar la eliminación de datos y revisar su efecto en los resultados.",
-      "Se había eliminado parte de la muestra."
+      "La comparación de promedios calculados con diferentes tamaños de muestra."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La necesidad de justificar la eliminación de datos y revisar su efecto en los resultados.». El dato «Quitar datos extremos siempre mejora la precisión.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La necesidad de justificar la eliminación de datos y revisar su efecto en los resultados.». Documentar exclusiones es solo una parte; reincorporar extremos no mejora necesariamente toda estimación; el contraste de promedios sirve para evaluar el efecto de una decisión de exclusión, no solo del tamaño.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -540,13 +540,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Un organismo calculó proyecciones demográficas bajo tres escenarios migratorios. Las cifras dependían de supuestos sobre natalidad, movilidad y permanencia. El comunicado explicó que una predicción es una estimación condicionada y no equivale a contar hoy habitantes del futuro.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Los tres escenarios garantizaban un único resultado.",
+      "La influencia de los movimientos migratorios en la estimación del crecimiento poblacional.",
       "La naturaleza condicional de las proyecciones de población y su incertidumbre.",
-      "Se contemplaron tres escenarios.",
-      "Las proyecciones eran un censo futuro exacto."
+      "La comparación de tres escenarios para seleccionar la cifra demográfica más probable.",
+      "La necesidad de incorporar datos de natalidad en las estadísticas de población."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «La naturaleza condicional de las proyecciones de población y su incertidumbre.». El dato «Los tres escenarios garantizaban un único resultado.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La naturaleza condicional de las proyecciones de población y su incertidumbre.». La migración y natalidad son factores parciales; no se seleccionó una cifra más probable; la idea central es que las proyecciones dependen de supuestos y no son recuentos ciertos.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -558,12 +558,12 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
       "La interpretación de avisos de riesgo considerando la detección y las condiciones.",
-      "Se habilitó una línea de emergencias.",
-      "Todos los avisos eran incendios nuevos confirmados.",
-      "La línea de emergencia no cambió el registro."
+      "La influencia de las semanas calurosas sobre los avisos de incendios.",
+      "La ampliación de la cobertura municipal para recibir reportes de emergencias.",
+      "La comparación de los avisos anteriores y posteriores para estimar directamente los incendios reales."
     ],
     "answer": 0,
-    "explanation": "El tema central es: «La interpretación de avisos de riesgo considerando la detección y las condiciones.». El dato «Se habilitó una línea de emergencias.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La interpretación de avisos de riesgo considerando la detección y las condiciones.». El calor es una posible condición; la cobertura es un cambio de detección; comparar avisos directamente sin comprobar incidentes confunde registro con incidencia.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -574,13 +574,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Una comisión analizó un programa de becas y documentó beneficios en acceso a talleres. También reunió costos de transporte, materiales y personal, además de resultados aún no medidos. La recomendación fue ampliar primero en zonas comparables y seguir evaluando los gastos y limitaciones.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Se registraron costos de transporte.",
-      "Se aprobó expandir sin revisar costos.",
-      "Todos los efectos habían sido medidos.",
+      "La estimación de los costos de transporte, materiales y personal del programa.",
+      "La conveniencia de ampliar el acceso a talleres en las zonas donde se registraron beneficios.",
+      "La ampliación gradual del programa como forma de reducir los gastos iniciales.",
       "La necesidad de integrar beneficios, costos y límites antes de ampliar un programa."
     ],
     "answer": 3,
-    "explanation": "El tema central es: «La necesidad de integrar beneficios, costos y límites antes de ampliar un programa.». El dato «Se registraron costos de transporte.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La necesidad de integrar beneficios, costos y límites antes de ampliar un programa.». Los costos son un componente; los beneficios por sí solos no justifican la expansión; la gradualidad se recomienda para evaluar contextos comparables y límites, no se afirma que reduzca gastos iniciales.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -591,13 +591,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Un comité comparó una carta de la época, una entrevista posterior y un resumen sin autor sobre un hecho comunitario. Los tres documentos coincidían en el lugar pero diferían en participantes. La síntesis explicó cada origen y mantuvo abiertas las discrepancias que todavía no podían resolverse.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Todos los relatos coincidían en participantes.",
-      "El resumen anónimo fue declarado la mejor fuente.",
+      "La comparación de documentos históricos según su cercanía temporal al acontecimiento.",
+      "La identificación de coincidencias como criterio para reconstruir los hechos comunitarios.",
       "La integración cuidadosa de fuentes históricas que contienen coincidencias y desacuerdos.",
-      "Las fuentes coincidían en el lugar."
+      "La conservación de versiones discrepantes para estudiar la memoria de los participantes."
     ],
     "answer": 2,
-    "explanation": "El tema central es: «La integración cuidadosa de fuentes históricas que contienen coincidencias y desacuerdos.». El dato «Todos los relatos coincidían en participantes.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «La integración cuidadosa de fuentes históricas que contienen coincidencias y desacuerdos.». La cercanía temporal es un aspecto de procedencia; las coincidencias no resuelven desacuerdos; conservar versiones es parcial frente a una síntesis que explica sus orígenes y deja abiertas discrepancias no resueltas.",
     "reviewStatus": "editorial-draft"
   },
   {
@@ -608,13 +608,13 @@ export const MAIN_IDEA_CHOICE_CASES:MainIdeaChoiceCase[]=[
     "passage": "Una investigación sobre asistencia a bibliotecas observó que algunos distritos mejoraron su promedio anual, aunque otros sufrieron cierres temporales. Las encuestas fueron voluntarias y registraron horarios diferentes. Los autores recomendaron describir cada distrito por separado y reconocer que la muestra no permite atribuir las mejoras a una única medida municipal.",
     "question": "¿Qué opción sintetiza mejor la idea central del texto?",
     "options": [
-      "Las encuestas voluntarias probaron una causa exclusiva.",
+      "La evaluación de los cierres temporales como explicación de las diferencias de asistencia.",
       "Los resultados de asistencia a bibliotecas deben interpretarse considerando diferencias entre distritos y selección de participantes.",
-      "Las encuestas fueron voluntarias.",
-      "Todos los distritos mejoraron idénticamente."
+      "La comparación de los promedios distritales mediante encuestas de participación voluntaria.",
+      "La identificación de medidas municipales relacionadas con los aumentos de asistencia."
     ],
     "answer": 1,
-    "explanation": "El tema central es: «Los resultados de asistencia a bibliotecas deben interpretarse considerando diferencias entre distritos y selección de participantes.». El dato «Las encuestas voluntarias probaron una causa exclusiva.» forma parte del desarrollo, pero no resume el propósito completo. La respuesta debe recoger el sentido global sin generalizar más allá de lo leído.",
+    "explanation": "La mejor síntesis es «Los resultados de asistencia a bibliotecas deben interpretarse considerando diferencias entre distritos y selección de participantes.». Los cierres son un factor parcial; comparar promedios sin atender selección y horarios no basta; identificar una medida asociada no demuestra causalidad. La síntesis correcta integra diferencias de contexto y limitaciones de muestra.",
     "reviewStatus": "editorial-draft"
   }
 ];

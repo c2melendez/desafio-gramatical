@@ -71,6 +71,25 @@ jobs:
             qa/certification/evidence/batch-450.json
           if-no-files-found: error
           retention-days: 30
+      - name: C09 - auditar paridad candidata de 450 ejercicios de Idea principal
+        run: |
+          node --import ./scripts/ts-resolve.mjs qa/certification/review-parity.mjs > qa-review-main-idea-summary.json
+          cat qa-review-main-idea-summary.json
+      - name: C09 - publicar estado académico separado del PASS técnico
+        if: always()
+        run: |
+          node --input-type=module -e 'import {readFileSync,appendFileSync} from "node:fs"; const r=JSON.parse(readFileSync("qa/certification/evidence/review-main-idea.json","utf8")); appendFileSync(process.env.GITHUB_STEP_SUMMARY,"## C09 — Idea principal\n\n"+ "SHA: "+r.sha+"\n\nInventario: "+r.inventory_count+"; técnica: "+r.technical_status+"; aprobaciones semánticas: "+r.semantic_approved+"; revisión pendiente: "+r.semantic_review+"; C09: "+r.c09_status+"\n\nLa paridad candidata no constituye aprobación académica ni cierre del lote activo.\n"); if(r.inventory_count!==450||r.technical_status!=="PASS")process.exitCode=1;'
+      - name: C09 - conservar expediente individual y decisiones académicas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: academia-c09-main-idea-450
+          path: |
+            qa-review-main-idea-summary.json
+            qa/certification/evidence/review-main-idea.json
+            qa/certification/review-main-idea-decisions.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Certificación PAA/PHUMA V1 - comprobar contratos, oráculos y mapeo sin Inglés
         run: node --import ./scripts/ts-resolve.mjs qa/certification/run.mjs > qa-certification-summary.json
       - name: Certificación C02-C04 - comprobar reglas originales y priorizar distractores

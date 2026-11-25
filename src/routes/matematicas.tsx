@@ -1,6 +1,8 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
-import {useEffect,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
+import {useEffect,useRef,useState} from "react";
+import {startSession,submitRound,sessionResult,type Session} from "@/lib/game-session-contract";
+import {persistPerfect} from "@/lib/game-achievement-storage";
+import {LEVELS,LEVEL_LABEL,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {mathTopic,MATH_SUBTOPICS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {mathM3Pool} from "@/lib/math-m3";
 import {gameNames} from "@/lib/phuma-catalog";
@@ -26,32 +28,47 @@ function MathPlay(){
  const [run,setRun]=useState(0);
  const [items,setItems]=useState<MathModel[]|null>(null);
  const [index,setIndex]=useState(0);
- const [correct,setCorrect]=useState(0),[total,setTotal]=useState(0),[score,setScore]=useState(0);
- const [streak,setStreak]=useState(0),[best,setBest]=useState(0);
+ const sessionRef=useRef<Session|null>(null);
+ const finalized=useRef(false);
+ const [session,setSession]=useState<Session|null>(null);
+ const [savedPerfect,setSavedPerfect]=useState(false);
+ const [storageWarning,setStorageWarning]=useState(false);
+ const result=session?sessionResult(session):null;
+ const {correct=0,score=0,streak=0,bestStreak:best=0}=result??{};
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
  useEffect(()=>{
   const bank=mathM3Pool(topic,subtema,nivel,modo),key=rotationKey("matematicas",topic,subtema,modo,nivel);
   const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
-  setItems(chosen);setIndex(0);setCorrect(0);setTotal(0);setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
+  const nextSession=startSession(crypto.randomUUID(),{area:"matematicas",topic,subtopic:subtema,game:modo,level:nivel},"math-m3-contract-v1",chosen.map(x=>x.id));
+  sessionRef.current=nextSession;finalized.current=false;setSession(nextSession);setSavedPerfect(false);setStorageWarning(false);
+  setItems(chosen);setIndex(0);setMistakes([]);setFinished(false);
  },[topic,subtema,nivel,modo,run]);
  const report=(ok:boolean,given:string)=>{
-  if(!items||total>index)return;
+  const current=sessionRef.current;
+  if(!items||!current||finalized.current)return;
   const item=items[index],bank=mathM3Pool(topic,subtema,nivel,modo),key=rotationKey("matematicas",topic,subtema,modo,nivel);
+  const updated=submitRound(current,item.id,[ok]);
+  if(updated===current)return;
+  sessionRef.current=updated;setSession(updated);
   writeRotation(key,recordRotation(readRotation(key,bank.map(x=>x.id)),item.id,ok));
-  setTotal(t=>t+1);
-  if(ok){setCorrect(t=>t+1);setScore(t=>t+pointsFor(streak));setStreak(t=>t+1);setBest(b=>Math.max(b,streak+1));}
-  else{setStreak(0);setMistakes(ms=>[...ms,{prompt:item.prompt,given,correct:item.expected,exp:item.explanation}]);}
+  if(!ok)setMistakes(ms=>[...ms,{prompt:item.prompt,given,correct:item.expected,exp:item.explanation}]);
  };
  const next=()=>{
-  if(!items||total<=index)return;
+  const current=sessionRef.current;
+  if(!items||!current||finalized.current||current.rounds.length!==index+1)return;
   if(index===items.length-1){
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score,correct,total,bestStreak:best,
+   const final=sessionResult(current);
+   if(!final.finished)return;
+   finalized.current=true;
+   const date=new Date().toISOString();
+   saveHistory({date,mode:modo,level:nivel,score:final.score,correct:final.correct,total:final.attempted,bestStreak:final.bestStreak,
     area:"matematicas",topic,subtopic:subtema});
+   if(final.approved100){try{const saved=persistPerfect(localStorage,current,date);setSavedPerfect(saved.status==="ok");setStorageWarning(saved.status!=="ok");}catch{setStorageWarning(true);}}
    setFinished(true);
-  }else setIndex(i=>i+1);
+  }else setIndex(index+1);
  };
- if(!items)return <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-xl p-6">Preparando ejercicios matemáticos…</main>;
+ if(!items||!session)return <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-xl p-6">Preparando ejercicios matemáticos…</main>;
  if(items.length!==ROUNDS_PER_GAME)throw Error("El núcleo debe permitir exactamente 10 rondas sin repetición");
  const names=gameNames(topic),title=modo==="quiz"&&subtema==="Funciones"?"Interpreta la función":modo==="quiz"&&subtema==="Inecuaciones"?"Lee la recta numérica":names[modo],levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished){
@@ -60,9 +77,11 @@ function MathPlay(){
    <p>{topic} · {subtema} · {title} · {levelName}</p>
    <div className="grid grid-cols-3 gap-2 text-center">
     <div className="card-ink p-3"><p className="text-xs">Puntaje</p><strong className="text-2xl text-primary">{score}</strong></div>
-    <div className="card-ink p-3"><p className="text-xs">Aciertos</p><strong className="text-2xl">{correct}/10</strong></div>
+    <div className="card-ink p-3"><p className="text-xs">Aciertos</p><strong className="text-2xl">{correct}/10</strong><p className="text-xs">{result?.accuracy}%</p></div>
     <div className="card-ink p-3"><p className="text-xs">Racha</p><strong className="text-2xl">🔥{best}</strong></div>
    </div>
+   {savedPerfect&&<p role="status" className="card-ink bg-success-soft p-3 font-bold"><span aria-hidden="true">★ </span>Dominado al 100 % · logro guardado</p>}
+   {storageWarning&&<p role="status" className="card-ink p-3">Partida perfecta; no fue posible guardar el logro en este navegador.</p>}
    <section className="space-y-2"><h2 className="text-xl font-black">Revisión de errores</h2>
     {mistakes.length?mistakes.map((m,i)=><div key={i} className="card-ink p-3 space-y-1">
      <p className="font-bold">{m.prompt}</p><p>Tu respuesta: {m.given}</p><p>Correcta: {m.correct}</p><p>{m.exp}</p></div>):

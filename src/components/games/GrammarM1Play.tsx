@@ -5,8 +5,10 @@ import {M3_GRAMMAR_ACTIVITIES} from "@/lib/m3-grammar";
 import {Link} from "@tanstack/react-router";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {studyReturn} from "@/lib/study-context";
-import {useEffect,useState} from "react";
-import {pointsFor,saveHistory,type Level,type Mode} from "@/lib/grammar";
+import {useEffect,useRef,useState} from "react";
+import {startSession,submitRound,sessionResult,type Session} from "@/lib/game-session-contract";
+import {persistPerfect} from "@/lib/game-achievement-storage";
+import {saveHistory,type Level,type Mode} from "@/lib/grammar";
 import {readRotation,recordRotation,rotationKey,selectRotation,writeRotation} from "@/lib/rotation";
 import {GrammarClassification,GrammarConstruction} from "@/components/games/GrammarActivities";
 import type {ClassificationActivity,ConstructionActivity} from "@/lib/grammar-activities";
@@ -32,10 +34,13 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  const [round,setRound]=useState(0);
  const [items,setItems]=useState<M1Item[]|null>(null);
  const [index,setIndex]=useState(0);
- const [correct,setCorrect]=useState(0);
- const [streak,setStreak]=useState(0);
- const [best,setBest]=useState(0);
- const [score,setScore]=useState(0);
+ const sessionRef=useRef<Session|null>(null);
+ const finalized=useRef(false);
+ const [session,setSession]=useState<Session|null>(null);
+ const [savedPerfect,setSavedPerfect]=useState(false);
+ const [storageWarning,setStorageWarning]=useState(false);
+ const result=session?sessionResult(session):null;
+ const {correct=0,streak=0,score=0}=result??{};
  const [finished,setFinished]=useState(false);
  const topic=subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica";
  const key=rotationKey("espanol",topic,subtema,modo,nivel);
@@ -43,25 +48,33 @@ export function GrammarM1Play({subtema,modo,nivel}:{subtema:string;modo:Mode;niv
  const source=grammarM1Pool(subtema,modo,nivel);
  useEffect(()=>{
   const bank=grammarM1Pool(subtema,modo,nivel);
-  setItems(selectRotation(bank,readRotation(key,bank.map(x=>x.id)),10));
-  setIndex(0);setCorrect(0);setStreak(0);setBest(0);setScore(0);setFinished(false);
- },[subtema,modo,nivel,round,key]);
+  const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
+  const nextSession=chosen.length===ROUNDS_PER_GAME?startSession(crypto.randomUUID(),{area:"espanol",topic,subtopic:subtema,game:modo,level:nivel},"grammar-m1-m3-contract-v1",chosen.map(x=>x.id)):null;
+  sessionRef.current=nextSession;finalized.current=false;setSession(nextSession);setSavedPerfect(false);setStorageWarning(false);
+  setItems(chosen);setIndex(0);setFinished(false);
+ },[subtema,modo,nivel,round,key,topic]);
  if(!items)return <main className="p-6">Preparando ejercicios…</main>;
- if(!items.length)return <main className="p-6">No hay ejercicios para esta combinación. <Link to="/">Volver al menú</Link></main>;
+ if(!session)return <main className="p-6">No hay diez ejercicios únicos disponibles para esta combinación. <Link to="/">Volver al menú</Link></main>;
  const item=items[index];
  const onResult=(ok:boolean)=>{
-  if(ok){setCorrect(n=>n+1);setStreak(n=>{setScore(p=>p+pointsFor(n));const next=n+1;setBest(v=>Math.max(v,next));return next;});}
-  else setStreak(0);
+  const current=sessionRef.current;if(!current||finalized.current)return;
+  const updated=submitRound(current,item.id,[ok]);if(updated===current)return;
+  sessionRef.current=updated;setSession(updated);
   writeRotation(key,recordRotation(readRotation(key,source.map(x=>x.id)),item.id,ok));
  };
  const onNext=()=>{
-  if(index+1===items.length){
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score,correct,total:items.length,
-    bestStreak:best,area:"espanol",topic,subtopic:subtema});
+  const current=sessionRef.current;if(!current||finalized.current||current.rounds.length!==index+1)return;
+  if(index===items.length-1){
+   const final=sessionResult(current);if(!final.finished)return;
+   finalized.current=true;const date=new Date().toISOString();
+   saveHistory({date,mode:modo,level:nivel,score:final.score,correct:final.correct,total:final.attempted,bestStreak:final.bestStreak,area:"espanol",topic,subtopic:subtema});
+   if(final.approved100){try{const saved=persistPerfect(localStorage,current,date);setSavedPerfect(saved.status==="ok");setStorageWarning(saved.status!=="ok");}catch{setStorageWarning(true);}}
    setFinished(true);
-  }else setIndex(i=>i+1);
+  }else setIndex(index+1);
  };
  if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema}: {correct}/{items.length} respuestas correctas</p>
+ {savedPerfect&&<p role="status" className="card-ink bg-success-soft p-3 font-bold">★ Dominado al 100 % · logro guardado</p>}
+ {storageWarning&&<p role="status">Partida perfecta; no fue posible guardar el logro en este navegador.</p>}
  <p className="text-sm">Este resultado corresponde al juego y no equivale a una puntuación PHUMA oficial.</p>
  <button className="tile bg-primary text-primary-foreground" onClick={()=>setRound(n=>n+1)}>Practicar de nuevo</button>
  <Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;

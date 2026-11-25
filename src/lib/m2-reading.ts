@@ -1,3 +1,4 @@
+import {mainIdeaCompositeOrder} from "./main-idea-composite-order";
 import type {Level,Mode} from "./grammar";
 import type {ReadingChallenge,ReadingItem,ReadingSubtopic,EvidenceTag} from "./reading";
 import {distributeAnswer} from "./answer-position";
@@ -62,6 +63,14 @@ export function m2ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,bas
     answer:0,explanation:"Las afirmaciones se interpretan solo dentro de la lectura indicada.",
     order:{parts:["Ubicar datos en A","Ubicar indicios en B","Evaluar afirmaciones"],hint:"Clasifica sin confundir fuentes.",explanation:"Un indicio de B no se transforma en hecho explícito de A."},
     ...metadata};
+  }
+  if(subtopic==="Idea principal"){
+   const order=mainIdeaCompositeOrder([a as ReadingChallenge,b as ReadingChallenge]);
+   return {id,level,subtopic,title,passage, ...metadata,
+    cognitiveGoal:"Organizar argumentos completos de dos fuentes sin transferir evidencias",
+    order,claims:[{text:"Cada conclusión depende de las evidencias de su propia lectura.",tag:"inference",explanation:order.explanation}],
+    question:"Ordena las etapas del análisis de ambas lecturas sin mezclar sus evidencias.",
+    options:["Examinar datos","Relacionar datos","Sintetizar","Ignorar fuentes"],answer:0,explanation:order.explanation};
   }
   const ra=a as ReadingChallenge,rb=b as ReadingChallenge;
   return {id,level,subtopic,title,passage,

@@ -1,8 +1,10 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {studyReturn} from "@/lib/study-context";
-import {useEffect,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
+import {useEffect,useRef,useState} from "react";
+import {startSession,submitRound,sessionResult,type Session} from "@/lib/game-session-contract";
+import {persistPerfect} from "@/lib/game-achievement-storage";
+import {LEVELS,LEVEL_LABEL,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
 import {WRITING_SUBTOPICS,writingItems,writingPool,type WritingChallenge,type WritingItem,type WritingSubtopic} from "@/lib/writing";
 import {ErrorHunter,ConnectorGame,ExpertEditor} from "@/components/games/WritingGames";
@@ -42,37 +44,44 @@ function WritingPlay(){
  const [run,setRun]=useState(0);
  const [items,setItems]=useState<WritingItem[]|null>(null);
  const [idx,setIdx]=useState(0);
- const [correct,setCorrect]=useState(0);
- const [total,setTotal]=useState(0);
- const [score,setScore]=useState(0);
- const [streak,setStreak]=useState(0);
- const [best,setBest]=useState(0);
+ const sessionRef=useRef<Session|null>(null);
+ const finalized=useRef(false);
+ const [session,setSession]=useState<Session|null>(null);
+ const [savedPerfect,setSavedPerfect]=useState(false);
+ const [storageWarning,setStorageWarning]=useState(false);
+ const result=session?sessionResult(session):null;
+ const {correct=0,attempted:total=0,score=0,streak=0,bestStreak:best=0}=result??{};
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
  useEffect(()=>{
-  setItems(writingItems(nivel,subtema,modo));setIdx(0);setCorrect(0);setTotal(0);
-  setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
+  const chosen=writingItems(nivel,subtema,modo);
+  const nextSession=startSession(crypto.randomUUID(),{area:"espanol",topic:"Redacción",subtopic:subtema,game:modo,level:nivel},"writing-m3-contract-v1",chosen.map(x=>x.id));
+  sessionRef.current=nextSession;finalized.current=false;setSession(nextSession);setSavedPerfect(false);setStorageWarning(false);
+  setItems(chosen);setIdx(0);setMistakes([]);setFinished(false);
  },[nivel,subtema,modo,run]);
  const report=(ok:boolean,m?:Mistake)=>{
-  if(items?.[idx]){
-   const key=rotationKey("espanol","Redacción",subtema,modo,nivel);
-   const ids=writingPool(nivel,subtema,modo).map(x=>x.id);
-   const state=readRotation(key,ids);
-   writeRotation(key,recordRotation(state,items[idx].id,ok));
-  }
-  setTotal(t=>t+1);
-  if(ok){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
-  else {setStreak(0);if(m)setMistakes(ms=>[...ms,m])}
+  const current=sessionRef.current,item=items?.[idx];
+  if(!current||!item||finalized.current||current.rounds.length!==idx||current.ids[idx]!==item.id)return;
+  if(!ok&&m)setMistakes(ms=>[...ms,m]);
+  const updated=submitRound(current,item.id,[ok]);
+  if(updated===current)return;
+  sessionRef.current=updated;setSession(updated);
+  const key=rotationKey("espanol","Redacción",subtema,modo,nivel);
+  const ids=writingPool(nivel,subtema,modo).map(x=>x.id);
+  writeRotation(key,recordRotation(readRotation(key,ids),item.id,ok));
  };
  const next=()=>{
-  if(!items)return;
-  if(idx+1>=items.length){
+  const current=sessionRef.current;
+  if(!items||!current||finalized.current||current.rounds.length!==idx+1)return;
+  if(idx===items.length-1){
+   const final=sessionResult(current);if(!final.finished)return;
+   finalized.current=true;const date=new Date().toISOString();
+   saveHistory({date,mode:modo,level:nivel,score:final.score,correct:final.correct,total:final.attempted,bestStreak:final.bestStreak,area:"espanol",topic:"Redacción",subtopic:subtema});
+   if(final.approved100){try{const saved=persistPerfect(localStorage,current,date);setSavedPerfect(saved.status==="ok");setStorageWarning(saved.status!=="ok");}catch{setStorageWarning(true);}}
    setFinished(true);
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score,correct,total,bestStreak:best,
-    area:"espanol",topic:"Redacción",subtopic:subtema});
-  }else setIdx(i=>i+1);
+  }else setIdx(idx+1);
  };
- if(!items)return <main className="p-8 text-center">Preparando retos de redacción…</main>;
+ if(!items||!session)return <main className="p-8 text-center">Preparando retos de redacción…</main>;
  const title=subtema==="Corrección"&&modo==="quiz"?"Corrección precisa":subtema==="Organización textual"&&modo==="quiz"?"Continúa el texto":subtema==="Elisión y adición"&&modo==="quiz"?"Revisión precisa":subtema==="Generalización e integración"&&modo==="quiz"?"Conclusión sustentada":gameNames("Redacción")[modo];
  const levelName=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(items.length!==ROUNDS_PER_GAME)throw new Error("Paridad de rondas: se esperaban 10 en redaccion");
@@ -87,6 +96,8 @@ function WritingPlay(){
     <div className="card-ink p-3"><p className="text-xs">Aciertos</p><strong className="text-3xl">{pct}%</strong><p className="text-xs">{correct}/{total}</p></div>
     <div className="card-ink p-3"><p className="text-xs">Racha</p><strong className="text-3xl">🔥 {best}</strong></div>
    </div>
+   {savedPerfect&&<p role="status" className="card-ink bg-success-soft p-3 font-bold"><span aria-hidden="true">★ </span>Dominado al 100 % · logro guardado</p>}
+   {storageWarning&&<p role="status" className="card-ink p-3">Partida perfecta; no fue posible guardar el logro en este navegador.</p>}
    <section className="space-y-3"><h2 className="text-2xl font-bold">Revisión de errores</h2>
     {mistakes.length===0?<p className="card-ink bg-success-soft p-3">¡Todas las respuestas correctas!</p>:
      <ul className="space-y-2">{mistakes.map((m,i)=><li key={i} className="card-ink bg-card p-4 space-y-1">

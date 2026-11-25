@@ -199,10 +199,94 @@ const SEEDS:Seed[]=[
     ]
   }
 ];
+/** Especificidad editorial de Idea principal: no altera competencias de otros subtemas. */
+const MAIN_IDEA_SEED_REVIEW:Record<string,{a:string;wrong:[string,string,string];why:string}>={
+  "La biblioteca del barrio": {
+    "a": "La ampliación del horario de la biblioteca para facilitar las visitas de estudiantes.",
+    "wrong": [
+      "La incorporación de voluntarios para ordenar libros.",
+      "La solicitud de nuevas mesas de lectura.",
+      "La organización de préstamos mediante un nuevo equipo de voluntarios."
+    ],
+    "why": "El aviso explica que ampliar el horario facilita las visitas. Ordenar libros y solicitar mesas son detalles; el préstamo sigue a cargo de la bibliotecaria."
+  },
+  "El huerto escolar": {
+    "a": "La necesidad de controlar la exposición al sol antes de atribuir al riego las diferencias de crecimiento.",
+    "wrong": [
+      "El registro de altura y agua durante cuatro semanas.",
+      "La necesidad de aumentar el riego para obtener plantas más altas.",
+      "La observación del crecimiento de frijoles en macetas con la misma tierra."
+    ],
+    "why": "El informe señala que la luz varió entre macetas y por ello no se aisló el efecto del agua. Las mediciones y la tierra son detalles; aumentar el riego no es una conclusión demostrada."
+  },
+  "La feria de ciencias": {
+    "a": "La necesidad de completar los registros de visitas antes de determinar la asistencia total a la feria.",
+    "wrong": [
+      "La diferencia de visitas entre reciclaje y biología.",
+      "La valoración positiva de las actividades por un estudiante.",
+      "La estimación de la asistencia total a partir de los dos conteos publicados."
+    ],
+    "why": "Falta el registro de física y no se conoce cuántas visitas corresponden a personas distintas. Los conteos parciales y la opinión no sustituyen un total comprobado."
+  },
+  "Clubes voluntarios de lectura": {
+    "a": "La interpretación cautelosa de las mejoras en lectura ante diferencias metodológicas entre los centros.",
+    "wrong": [
+      "La comparación de los incrementos numéricos de ambos centros.",
+      "La evaluación de los clubes mediante sus promedios finales como medida de eficacia.",
+      "La necesidad de registrar el abandono para comparar la participación en clubes."
+    ],
+    "why": "Los instrumentos distintos, la selección voluntaria y la ausencia de datos de abandono limitan la comparación y la atribución causal. Los incrementos y el abandono son componentes parciales."
+  },
+  "Agua en tres sectores": {
+    "a": "La reducción del consumo de agua y la necesidad de distinguir los efectos de varios factores simultáneos.",
+    "wrong": [
+      "La comparación de los porcentajes de ahorro en los tres sectores.",
+      "La evaluación de los dispositivos ahorradores mediante el descenso observado del consumo.",
+      "La influencia de las campañas de sensibilización en los hábitos de consumo."
+    ],
+    "why": "Los descensos son hechos, pero clima, campañas y dispositivos coexistieron. No puede atribuirse el ahorro a uno solo sin análisis adicional; los porcentajes son datos parciales."
+  },
+  "Memoria regional": {
+    "a": "La evaluación de testimonios históricos mediante su contraste con documentos y su contexto.",
+    "wrong": [
+      "La recopilación de recuerdos sobre una celebración regional.",
+      "La resolución de discrepancias mediante la selección del relato más cercano a los documentos.",
+      "La diversidad de memorias como razón para conservar todos los relatos sin contrastarlos."
+    ],
+    "why": "El museo preserva la diversidad sin renunciar a la comprobación documental. Recopilar recuerdos es solo un paso; elegir automáticamente una versión o evitar el contraste omite el criterio central."
+  },
+  "Tutorías y sesgo de selección": {
+    "a": "La necesidad de considerar diferencias iniciales y factores de confusión al interpretar los cambios asociados a las tutorías.",
+    "wrong": [
+      "La comparación de las mejoras de rendimiento mediante la diferencia de cambios de ambos grupos.",
+      "La evaluación de las tutorías a partir de la ventaja final del grupo participante.",
+      "La influencia de las condiciones domésticas como explicación principal de las diferencias."
+    ],
+    "why": "El cambio fue de seis frente a tres puntos, pero los grupos ya diferían y no se midieron todos los factores. Comparar cambios mejora la descripción sin establecer causalidad; tampoco se demuestra que el estudio doméstico sea la causa principal."
+  },
+  "Riesgo de inundaciones": {
+    "a": "La distinción entre cambios en la detección de inundaciones y cambios reales de incidencia antes de atribuir causas.",
+    "wrong": [
+      "La influencia de la expansión urbana y las lluvias en los riesgos de inundación.",
+      "La comparación de avisos históricos para cuantificar directamente el aumento de inundaciones.",
+      "La evaluación de la cobertura del sistema de alertas como explicación de los nuevos registros."
+    ],
+    "why": "La mejora del registro puede aumentar avisos sin un aumento equivalente de eventos. Urbanización, lluvia y cobertura son factores pertinentes, pero ninguno explica por sí solo la incidencia real."
+  },
+  "Tres fuentes sobre un acontecimiento": {
+    "a": "La valoración contextual y la corroboración independiente de fuentes históricas con diferentes limitaciones.",
+    "wrong": [
+      "La comparación de fuentes por su distancia temporal respecto del acontecimiento.",
+      "La identificación de intereses institucionales y recuerdos personales como indicadores de fiabilidad.",
+      "La selección de la fuente con mayor información verificable sobre su procedencia."
+    ],
+    "why": "La proximidad, los intereses y la procedencia ayudan a evaluar fuentes, pero no bastan como criterios exclusivos. El equipo contrastó detalles con registros independientes antes de concluir."
+  }
+};
 function skill(seed:Seed,subtopic:ReadingSubtopic){
- const {explicit,inference,unsupported,main,word,wordMeaning,figure,figureMeaning,comparison}=seed;
+ const {explicit,inference,unsupported,word,wordMeaning,figure,figureMeaning,comparison}=seed;
  const result:Record<ReadingSubtopic,{q:string;a:string;wrong:[string,string,string];why:string}>={
- "Idea principal":{q:"¿Qué resume mejor la idea central del pasaje?",a:main,wrong:[unsupported,wordMeaning,"El texto afirma lo contrario de lo que describe."],why:"La idea principal integra los hechos relevantes y su contexto, sin convertir una inferencia en certeza."},
+ "Idea principal":{q:"¿Qué resume mejor la idea central del pasaje?",...MAIN_IDEA_SEED_REVIEW[seed.title]},
  "Inferencias":{q:"¿Cuál conclusión es una inferencia razonable, pero no un dato afirmado literalmente?",a:inference,wrong:[explicit,unsupported,"Ninguna conclusión puede derivarse de la lectura."],why:"Una inferencia se apoya en pistas del texto y se diferencia de una afirmación literal o de una invención."},
  "Lectura crítica":{q:"¿Qué afirmación sobrepasa la evidencia disponible?",a:unsupported,wrong:[explicit,inference,"El texto reconoce límites de información."],why:"La afirmación escogida atribuye un hecho o una causalidad que el texto no demuestra."},
  "Vocabulario en contexto":{q:'En el texto, ¿qué sentido tiene la expresión «'+word+'»?',a:wordMeaning,wrong:["Es una secuencia de números sin interpretación.","Es el nombre propio de una persona no mencionada.","Es una contradicción que vuelve falsa toda la lectura."],why:"El significado se obtiene del contexto semántico donde aparece el término, no de una acepción aislada."},
@@ -212,18 +296,258 @@ function skill(seed:Seed,subtopic:ReadingSubtopic){
  };
  return result[subtopic];
 }
+/** Explicaciones específicas y deducciones no literales para las semillas de Idea principal. */
+const MAIN_IDEA_SEED_CLAIMS:Record<string,ReadingChallenge['claims']>={
+  "La biblioteca del barrio": [
+    {
+      "tag": "explicit",
+      "explanation": "El anuncio fija cinco tardes semanales en lugar de dos, a partir del lunes.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Pasar de dos a cinco tardes ofrece tres tardes adicionales de acceso; que aumenten las visitas efectivas depende de que los estudiantes aprovechen esas oportunidades.",
+      "text": "El nuevo horario ofrece tres tardes adicionales de acceso cada semana."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "La petición de mesas sigue sin decisión; no se ha informado una compra.",
+      "text": ""
+    }
+  ],
+  "El huerto escolar": [
+    {
+      "tag": "explicit",
+      "explanation": "El informe indica que algunas macetas recibieron más sol que otras.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Si se iguala la exposición solar en una repetición, se reduce una diferencia entre las condiciones de cultivo. No se garantiza por ello que todas las demás variables estén controladas.",
+      "text": "Igualar la exposición al sol reduciría una diferencia entre las condiciones de cultivo."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "No se presentan cifras de crecimiento por cantidad de agua que permitan afirmar que un grupo creció el doble.",
+      "text": ""
+    }
+  ],
+  "La feria de ciencias": [
+    {
+      "tag": "explicit",
+      "explanation": "La organización publicó 60 visitas para reciclaje y 45 para biología.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Restar 45 de 60 permite deducir una diferencia exacta de 15 visitas; la cifra no está enunciada directamente.",
+      "text": "Reciclaje registró 15 visitas más que biología."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "Falta el registro de física y una persona puede visitar más de un puesto; 105 visitas parciales no equivalen a 105 personas únicas.",
+      "text": ""
+    }
+  ],
+  "Clubes voluntarios de lectura": [
+    {
+      "tag": "explicit",
+      "explanation": "Se informan las medias iniciales y finales de ambos centros: 60 a 72 y 64 a 70.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Los cambios numéricos son 12 y 6 puntos. La diferencia de 6 puntos entre cambios es calculable, pero los instrumentos distintos impiden asumir equivalencia de las escalas.",
+      "text": "El aumento numérico del centro A supera en seis puntos al del centro B, sin garantizar comparabilidad entre instrumentos."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "No hubo asignación aleatoria ni instrumentos equivalentes; el estudio no aísla el efecto de los clubes.",
+      "text": ""
+    }
+  ],
+  "Agua en tres sectores": [
+    {
+      "tag": "explicit",
+      "explanation": "El informe da los consumos iniciales y finales de los tres sectores.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Las reducciones se calculan respecto del consumo inicial: 15 %, 10 % y 5 %. El descenso relativo del Norte supera al del Sur en diez puntos porcentuales.",
+      "text": "El descenso relativo del Norte supera al del Sur en diez puntos porcentuales."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "Solo Norte bajó 15 %; Centro bajó 10 % y Sur 5 %. La afirmación contradice los datos.",
+      "text": ""
+    }
+  ],
+  "Memoria regional": [
+    {
+      "tag": "explicit",
+      "explanation": "Dos relatos ubican el acontecimiento en fechas distintas.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Si los registros de época son independientes de los relatos, pueden aportar evidencia adicional para evaluar cuál fecha tiene mayor respaldo. No garantizan resolver la discrepancia.",
+      "text": "Un registro independiente de los testimonios aportaría evidencia adicional para evaluar las fechas."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "La discrepancia no demuestra invención; el museo todavía necesita contrastar los registros.",
+      "text": ""
+    }
+  ],
+  "Tutorías y sesgo de selección": [
+    {
+      "tag": "explicit",
+      "explanation": "Las medias de los grupos pasan de 75 a 81 y de 71 a 74, respectivamente.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "El primer cambio es 6 y el segundo 3; su diferencia es 3 puntos. Esa operación no elimina las diferencias iniciales ni los factores de confusión.",
+      "text": "La diferencia de cambios es de tres puntos, pero no constituye por sí sola una estimación causal."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "El resultado final es 81 frente a 74, una diferencia de siete puntos, no ocho. Además, los grupos ya diferían y no se controlaron todas las condiciones domésticas.",
+      "text": ""
+    }
+  ],
+  "Riesgo de inundaciones": [
+    {
+      "tag": "explicit",
+      "explanation": "El pasaje informa un aumento de avisos después de ampliar el sistema de alertas.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Si el sistema detecta sucesos antes omitidos, el conteo de avisos puede crecer aun con igual incidencia real. La lluvia y las viviendas también pueden influir.",
+      "text": "Un aumento de la cobertura del registro puede elevar los avisos aunque la incidencia real permanezca estable."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "El equipo distingue avisos de eventos reales y solicita series comparables; no demuestra que la expansión urbana sea la causa exclusiva.",
+      "text": ""
+    }
+  ],
+  "Tres fuentes sobre un acontecimiento": [
+    {
+      "tag": "explicit",
+      "explanation": "El equipo examinó un decreto contemporáneo, una entrevista cuarenta años posterior y un resumen sin autor ni fecha.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Una coincidencia entre fuentes de procedencia independiente aportaría corroboración más fuerte que repetir una versión derivada del mismo documento. Se debe comprobar la independencia.",
+      "text": "Una coincidencia entre fuentes de origen independiente aportaría más corroboración que la repetición de una misma versión."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "El anonimato dificulta verificar procedencia y no aporta una razón para considerar el resumen más confiable.",
+      "text": ""
+    }
+  ]
+};
+/** Secuencias editoriales de Idea principal, con evidencia, relación y síntesis contextualizadas. */
+const MAIN_IDEA_SEED_ORDER:Record<string,ReadingChallenge['order']>={
+  "La biblioteca del barrio": {
+    "parts": [
+      "El aviso anuncia que la biblioteca pasará de dos a cinco tardes semanales.",
+      "Al interpretar ese anuncio, debe distinguirse la ampliación confirmada de la solicitud de mesas todavía pendiente.",
+      "La idea central es la ampliación del acceso a la biblioteca, sin afirmar que se hayan adquirido mesas."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "El anuncio establece un cambio concreto de horario; la petición de mesas tiene otro estado. La síntesis debe preservar esa diferencia."
+  },
+  "El huerto escolar": {
+    "parts": [
+      "Los grupos registraron el crecimiento de frijoles y la cantidad de agua durante cuatro semanas.",
+      "Al interpretar esas mediciones se advierte que las macetas también recibieron distinta cantidad de sol.",
+      "Se propone repetir la comparación con exposición solar equivalente antes de atribuir diferencias al riego."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Las mediciones permiten comparar resultados, pero la diferencia de luz impide aislar el efecto del agua. Igualar la exposición solar reduce esa diferencia sin garantizar el control de todas las variables."
+  },
+  "La feria de ciencias": {
+    "parts": [
+      "Se publicaron 60 visitas al puesto de reciclaje y 45 al de biología.",
+      "La suma de esos registros es 105 visitas, pero no incluye el puesto de física ni distingue visitantes únicos.",
+      "El informe solo permite interpretar cifras parciales y requiere completar los registros para calcular la asistencia total."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Sumar las cifras publicadas proporciona un subtotal. El registro ausente y la posible repetición de visitantes impiden convertirlo en el total de personas."
+  },
+  "Clubes voluntarios de lectura": {
+    "parts": [
+      "Los promedios aumentaron 12 puntos en el centro A y 6 en el centro B.",
+      "Para interpretar esos cambios hay que considerar los instrumentos distintos, la selección voluntaria y la falta de tasas de abandono.",
+      "Las mejoras observadas no demuestran por sí solas un efecto causal exclusivo de los clubes."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Los incrementos se deducen de las medias iniciales y finales. La diferencia metodológica limita la comparabilidad y la atribución causal."
+  },
+  "Agua en tres sectores": {
+    "parts": [
+      "Los consumos disminuyeron de 100 a 85, de 80 a 72 y de 120 a 114 unidades.",
+      "Para atribuir esos descensos se deben considerar los dispositivos, las campañas y los cambios climáticos simultáneos.",
+      "La evidencia muestra una reducción del consumo, pero todavía no permite identificar la contribución independiente de cada factor."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Las reducciones son observables; su causa exclusiva no lo es. El informe propone ampliar las observaciones para separar factores."
+  },
+  "Memoria regional": {
+    "parts": [
+      "Dos testimonios recogidos por el museo sitúan la celebración en fechas diferentes.",
+      "Para evaluar esa discrepancia se propone contrastar los relatos con registros cercanos a los acontecimientos.",
+      "La memoria regional puede reconstruirse conservando testimonios y distinguiendo las afirmaciones corroboradas de las pendientes."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "La discrepancia identifica el dato que debe comprobarse. El contraste aporta evidencia sin justificar el rechazo automático de los testimonios."
+  },
+  "Tutorías y sesgo de selección": {
+    "parts": [
+      "Antes de las tutorías, los promedios eran 75 y 71 puntos, por lo que los grupos ya diferían.",
+      "Al comparar cada resultado final con su punto de partida se obtienen aumentos de seis y tres puntos, respectivamente.",
+      "La diferencia de cambios describe los resultados observados, pero no demuestra causalidad sin controlar la selección y otros factores."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Las condiciones iniciales anteceden a la comparación de cambios. Las medias finales son 81 y 74, una diferencia de siete puntos, no los ocho atribuidos al boletín. Ninguna de esas diferencias prueba por sí sola el efecto causal de las tutorías."
+  },
+  "Riesgo de inundaciones": {
+    "parts": [
+      "Los avisos aumentaron después de ampliar el sistema de alertas.",
+      "Para interpretar ese aumento hay que distinguir cambios en la detección de cambios reales en los sucesos y considerar las lluvias y la ocupación del suelo.",
+      "Se requieren series comparables antes de atribuir a una causa concreta una variación de la incidencia real."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "Un aumento de avisos puede reflejar mayor cobertura del registro, más inundaciones o ambos. El texto solicita evidencia comparable y no demuestra una causa exclusiva."
+  },
+  "Tres fuentes sobre un acontecimiento": {
+    "parts": [
+      "El decreto, la entrevista tardía y el resumen anónimo ofrecen información de procedencia y características distintas.",
+      "Para valorar las afirmaciones de esas fuentes se examinan sus circunstancias y se contrastan detalles con registros independientes.",
+      "La interpretación histórica debe limitarse al grado de corroboración alcanzado, sin privilegiar automáticamente la antigüedad."
+    ],
+    "hint": "Reconstruye la relación entre los datos, su interpretación y la conclusión del pasaje.",
+    "explanation": "La procedencia orienta la evaluación de las fuentes; la corroboración independiente permite distinguir coincidencias respaldadas de afirmaciones todavía inciertas."
+  }
+};
 export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>READING_SUBTOPICS.map((subtopic,topicIndex)=>{
  const def=skill(seed,subtopic);
  const plain=[def.a,...def.wrong] as [string,string,string,string];
  const offset=(seedIndex+topicIndex)%4;
  const options=[...plain.slice(offset),...plain.slice(0,offset)] as [string,string,string,string];
  return {id:`reading-${seed.level}-${seedIndex}-${topicIndex}`,level:seed.level,subtopic,title:seed.title,passage:seed.passage,
- claims:[
+ claims:subtopic==="Idea principal"?MAIN_IDEA_SEED_CLAIMS[seed.title].map(c=>({...c,text:c.tag==="explicit"?seed.explicit:c.tag==="unsupported"?seed.unsupported:c.text})):[
  {text:seed.explicit,tag:"explicit",explanation:"El texto declara este hecho."},
  {text:seed.inference,tag:"inference",explanation:"Es una conclusión plausible apoyada en la información, no una afirmación literal."},
  {text:seed.unsupported,tag:"unsupported",explanation:"Los datos disponibles no prueban esta afirmación."}
  ],question:def.q,options,answer:options.indexOf(def.a),explanation:def.why,
- order:{parts:seed.steps,hint:"Organiza un razonamiento: observa, contrasta y concluye.",explanation:"Un análisis sólido comienza localizando los datos, examina sus limitaciones y termina con una conclusión justificada."}
+ order:subtopic==="Idea principal"?MAIN_IDEA_SEED_ORDER[seed.title]:{parts:seed.steps,hint:"Organiza un razonamiento: observa, contrasta y concluye.",explanation:"Un análisis sólido comienza localizando los datos, examina sus limitaciones y termina con una conclusión justificada."}
  };
 }));
 export type ReadingItem=ReadingChallenge|MainIdeaChoiceCase|MainIdeaDetectiveCase|MainIdeaReconstructCase|InferenceDetectiveCase|InferenceChoiceCase|InferenceReconstructCase|CriticalDetectiveCase|CriticalChoiceCase|CriticalReconstructCase|NewReadingDetective|NewReadingChoice|NewReadingReconstruct|AnalysisDetective|AnalysisChoice|AnalysisReconstruct|CompareDetective|CompareChoice|CompareReconstruct|FigurativeDetectiveCase|FigurativeChoiceCase|FigurativeReconstructCase;

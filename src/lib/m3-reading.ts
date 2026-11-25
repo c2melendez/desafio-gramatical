@@ -1,3 +1,4 @@
+import {mainIdeaCompositeOrder} from "./main-idea-composite-order";
 import type {Level,Mode} from './grammar';
 import type {ReadingChallenge,ReadingItem,ReadingSubtopic} from './reading';
 import {distributeAnswer} from './answer-position';
@@ -47,6 +48,12 @@ export function m3ReadingPool(level:Level,subtopic:ReadingSubtopic,mode:Mode,exi
     claims,options:['Dato explícito','Inferencia','No sustentado','No aplica'],answer:0,
     explanation:'Cada fuente se evalúa según su evidencia: '+candidates.map(x=>x.text+' → '+x.explanation).join(' '),
     order:a.order};
+  }
+  if(subtopic==="Idea principal"){
+   const order=mainIdeaCompositeOrder([a,b,c]);
+   return {...common,cognitiveGoal:"Organizar argumentos completos de tres fuentes sin transferir evidencias",
+    question:"Ordena las etapas del análisis de las tres fuentes sin mezclar sus evidencias.",
+    order,claims:a.claims,options:["Examinar datos","Relacionar datos","Sintetizar","Ignorar fuentes"],answer:0,explanation:order.explanation};
   }
   return {...common,
    question:'Ordena un análisis de tres fuentes con evidencia, contraste y conclusión.',
