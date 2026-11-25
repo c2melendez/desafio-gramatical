@@ -1,7 +1,7 @@
 import {readFileSync} from "node:fs";
 import {createHash} from "node:crypto";
 import {expect,it} from "vitest";
-import {mathM3Pool,mathM3HistoricalPool,mathM3R8Pool} from "@/lib/math-m3";
+import {mathM3R9Pool as mathM3Pool,mathM3HistoricalPool,mathM3R8Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 const hash=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");
 type Claim={text:string;truth:boolean;oracle_truth:boolean};
