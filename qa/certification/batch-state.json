@@ -26,5 +26,21 @@
     }
   ],
   "last_verified_ci_run": 45167021720,
-  "english_excluded": true
+  "english_excluded": true,
+  "active_prompt_version": "7.6",
+  "batch_policy": {
+    "mode": "LEGACY_TECHNICAL_CURSOR_PLUS_ADAPTIVE_SEMANTIC_LEDGER",
+    "max_ids": 450,
+    "adaptive_sizes": [
+      50,
+      100,
+      150,
+      225,
+      300,
+      450
+    ],
+    "legacy_cursor_preserved": true,
+    "semantic_approved_from_legacy": 0,
+    "requires_frozen_ids_and_hashes": true
+  }
 }

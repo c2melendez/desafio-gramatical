@@ -80,7 +80,8 @@
             "Toma de decisiones",
             "Convivencia",
             "Autogestión"
-          ]
+          ],
+          "curricular_authority": "20 preguntas confirmadas; detalle de temas complementario no oficial hasta fuente explícita"
         }
       ],
       "reference": "PHUMA-CEI-TEST-2026, PDF pág. 5"
@@ -139,7 +140,8 @@
       "naturales",
       "sociales",
       "blandas"
-    ]
+    ],
+    "count_kind": "historical technical inventory target; not semantic approval"
   },
   "certification_gates": {
     "C01": {
@@ -166,6 +168,18 @@
       "name": "simulacion",
       "technical": "separate_exam_blueprint_checks",
       "academic": "timed_full_exams_not_yet_implemented"
+    },
+    "C09": {
+      "name": "repaso",
+      "status": "REQUIRES_IMPLEMENTATION_VERIFICATION"
+    },
+    "C10": {
+      "name": "pedagogical_audit",
+      "status": "REQUIRES_IMPLEMENTATION_VERIFICATION"
+    },
+    "C11": {
+      "name": "causal_repair",
+      "status": "REQUIRES_IMPLEMENTATION_VERIFICATION"
     }
   },
   "independent_approval_required": [
@@ -174,5 +188,6 @@
     "psychometric_calibration",
     "full_PAA_simulation",
     "full_PHUMA_simulation"
-  ]
+  ],
+  "active_prompt_version": "7.6"
 }

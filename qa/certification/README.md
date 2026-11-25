@@ -1,6 +1,6 @@
 # Certificación académica y funcional — Academia PHUMA Play
 
-> **Sistema maestro vigente:** [Academia PHUMA Play — Ejecutor autónomo de certificación v6.0](../../docs/Sistema_modulos_Academia_PHUMA_Play_v6_0_Certificacion.md). Consolida la versión modular 5.4 y añade prioridad de idoneidad PAA/PHUMA (sin Inglés), nivel Intermedio de referencia, 450 registros por corrida, suite C00–C08 y aprobación perfecta 10/10 con insignia por área/tema/subtema/juego/nivel. La insignia C06 y sus pruebas de persistencia son **requisitos de implementación**, no funciones ya certificadas.\n\n> **Fuentes verificables:** [Inventario de PDFs, hashes, ediciones, derechos y enlaces](../../docs/fuentes_certificacion_paa_phuma_v6.json). No contiene reproducciones de PDFs de terceros; acceso directo a las fuentes oficiales cuando existe.\n\n**Suite V1**, integrada en `.github/workflows/ci.yml`; sin repositorio nuevo. Esta capa **complementa** las auditorías existentes M0–M4, no las sustituye ni certifica el examen oficial.
+> **Sistema maestro vigente:** [Ejecutor v7.6](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Hasta 450 IDs por corrida, no necesariamente 450 aprobaciones semánticas. Los controles descritos abajo son implementación histórica salvo verificación actual.
 
 ## Fundamento documental y límites
 
@@ -86,9 +86,9 @@ Se revisó la procedencia de las 62 alertas `HIGH_EDITORIAL_REVIEW` de `distract
 - **No se confunden riesgos de apariencia similar con fallos comprobados**: una serie de alternativas como «está / están / estamos / estoy» o «cómo / como» puede evaluar precisamente concordancia o acentuación. Corregir sin examinar el contexto falsearía la evaluación.
 - La prueba de consistencia de composiciones hereda la calidad de su origen. **La aprobación docente de semántica, transferencia PAA/PHUMA y calibración psicométrica siguen pendientes**. Un PASS técnico no autoriza cambiar esos estados.
 
-## Política operativa vigente — 450 ejercicios por corrida
+## Política histórica — lotes técnicos de 450 (cursor legado preservado)
 
-A partir de esta revisión, cada corrida de certificación individual toma **exactamente 450 registros técnicos**. El universo vigente es 40.500 registros y la cobertura programada requiere **90 lotes**, sin Inglés. Esta política sustituye la revisión ordinaria anterior de grupos de 24, 42 o 62 registros. La suite técnica integral de inventario y regresión sigue ejecutándose en paralelo.
+El auditor legado procesa lotes nominales de 450 registros técnicos; no define la cuota de certificación semántica v7.6. El universo vigente es 40.500 registros y la cobertura programada requiere **90 lotes**, sin Inglés. Esta política sustituye la revisión ordinaria anterior de grupos de 24, 42 o 62 registros. La suite técnica integral de inventario y regresión sigue ejecutándose en paralelo.
 
 ### Criterios de selección y avance
 
@@ -103,3 +103,7 @@ A partir de esta revisión, cada corrida de certificación individual toma **exa
 Un lote solo queda **técnicamente entregado** cuando su auditoría y la regresión global CI son SUCCESS, Render está LIVE con ese SHA, existe evidencia archivada y el siguiente cursor se actualiza en una nueva corrida. La aprobación **académica** necesita evidencia adicional por ejercicio y puede quedar en `REVIEW` sin detener el cierre técnico, pero debe distinguirse en todos los informes.
 
 La cobertura total de 90 lotes no sustituye calibración psicométrica, revisión por especialistas ni los simulacros reales PAA/PHUMA separados.
+
+
+## v7.6: controles de ejecución
+`python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py'` comprueba el guard local. `python3 qa/certification/verify_sources.py` comprueba los bytes de los PDF, no su interpretación ni derechos. El control de CI no autentica por sí solo evidencia semántica/docente. El cursor legado se conserva sin promover REVIEW a PASS; seleccionar lotes adaptativos por IDs y hashes bajo v7.6.

@@ -1,3 +1,5 @@
+> **ARCHIVO HISTÓRICO — NO EJECUTAR.** Sustituido por [v7.6](Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Se conserva el contenido histórico sin autoridad operativa.
+
 # Academia PHUMA Play — Sistema de ejecución autónoma por módulos + Certificación PAA/PHUMA
 
 **VERSIÓN 6.0 — 23 de noviembre de 2026**  

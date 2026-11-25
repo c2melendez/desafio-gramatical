@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-23",
+  "updated": "2026-11-25",
   "repo": "c2melendez/desafio-gramatical",
-  "policy": "No subir obras completas protegidas a repositorio público sin licencia o permiso verificado; mantener referencias, huellas y estructura pedagógica propia.",
+  "policy": "No subir obras completas protegidas a repositorio público sin licencia o permiso verificado; mantener referencias, huellas y estructura pedagógica propia. Los originales ya publicados por el propietario se conservan sin cambios; disponibilidad no implica licencia de redistribución.",
   "documents": [
     {
       "id": "PHUMA-UNAH-2026",
@@ -11,9 +11,10 @@
       "sha256": "cd248afe2a90605b1037f3b2fa6d32f070a6a457a6c4830d24b6c6784eaeabf0",
       "url": "https://admisiones.unah.edu.hn/assets/Uploads/GUIA-PRE-U-UNAH-2026.pdf",
       "role": "official-primary",
-      "repository_copy": false,
-      "access_policy": "Use rightsholder-hosted URL; verify response and version each execution",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/GUIA-PRE-U-UNAH-2026.pdf"
     },
     {
       "id": "PHUMA-UNAH-2025",
@@ -22,20 +23,22 @@
       "sha256": "0e0c9881ab8049e404fffa176490bef77b50181b5d4af16e9fbd6293e7b6f65c",
       "url": "https://admisiones.unah.edu.hn/assets/guia-de-estudio/GUIA-PRE-U-UNAH.pdf",
       "role": "official-historical",
-      "repository_copy": false,
-      "access_policy": "Use rightsholder-hosted URL; verify response and version each execution",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/GUIA-PRE-U-UNAH.pdf"
     },
     {
       "id": "PAA-CB-GUIA",
       "filename": "Guia_de_estudios_PAA(20261123-135717).pdf",
-      "pages": 84,
+      "pages": 83,
       "sha256": "6bcb3efc6c4074e0a7b1272d67b50bd8835cfb3e486411020039ba84b932e1fc",
       "url": "https://admisiones.unah.edu.hn/assets/Guia-estudio-nueva-2022/Guia-de-estudios-PAA.pdf",
       "role": "complementary-rights-reserved",
-      "repository_copy": false,
-      "access_policy": "Rightsholder/institution hosted direct PDF; verify version and availability on each execution; still no repository reproduction.",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/Guia_de_estudios_PAA.pdf"
     },
     {
       "id": "PAA-CB-PRACTICA",
@@ -44,9 +47,10 @@
       "sha256": "5801f046a0caa7236fc80f4680c511fbb09203c547e979b4d710cc05cd349c86",
       "url": "https://latam.collegeboard.org/wp-content/uploads/2020/07/0-PAA-Prueba-Practica.pdf",
       "role": "complementary-rights-reserved",
-      "repository_copy": false,
-      "access_policy": "Rightsholder/institution hosted direct PDF; verify version and availability on each execution; still no repository reproduction.",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/0-PAA-Prueba-Practica.pdf"
     },
     {
       "id": "UNX-TEMARIO",
@@ -55,9 +59,10 @@
       "sha256": "9fa76bf27c46efe3958a44d33c0439773a55c10aac6eeedc5d7f5146af5e3656",
       "url": null,
       "role": "third-party-contextual",
-      "repository_copy": false,
-      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/Temario-GENERAL-PAA-UNX.pdf"
     },
     {
       "id": "UNX-HOJA",
@@ -66,9 +71,10 @@
       "sha256": "59552dd53ce2088f2e23f38de1f5ba37234c840211e3d8f5be16efefbc9a4f5b",
       "url": null,
       "role": "third-party-format",
-      "repository_copy": false,
-      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/formato-contestacion.pdf"
     },
     {
       "id": "UNX-CLAVES",
@@ -77,27 +83,31 @@
       "sha256": "4a16559d33db85786b108be6ef9ff963c42c35ee03982cde4bce8bac44ebc752",
       "url": null,
       "role": "third-party-comparison",
-      "repository_copy": false,
-      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/Respuestas-00-Gratuito-UNAH-PAA.pdf"
     },
     {
       "id": "UNX-SIMULACRO",
       "filename": "PAA-UNAH-EXAMEN-0(20261123-135730).pdf",
-      "pages": 23,
+      "pages": 22,
       "sha256": "792085b771425f727b259827e6d35f0eaf4412007db1de828b48ab51f2b17021",
       "url": null,
       "role": "third-party-visual-only",
-      "repository_copy": false,
-      "access_policy": "Private user-supplied PDF; access only through user-provided connected source; report SIN_ACCESO when unavailable",
-      "redistribution_permission": "NOT_VERIFIED"
+      "repository_copy": true,
+      "access_policy": "Consultar primero copia original existente en repositorio, verificar SHA-256 y páginas realmente abiertas; URL institucional cuando proceda; no redistribuir ni reproducir reactivos.",
+      "redistribution_permission": "NOT_VERIFIED",
+      "repository_path": "qa/certification/PDF/PAA-UNAH-EXAMEN-0.pdf"
     }
   ],
   "duplicates": [
     {
       "filename": "0-PAA-Prueba-Practica (1)(20261123-135720).pdf",
       "duplicates": "PAA-CB-PRACTICA",
-      "sha256": "5801f046a0caa7236fc80f4680c511fbb09203c547e979b4d710cc05cd349c86"
+      "sha256": "5801f046a0caa7236fc80f4680c511fbb09203c547e979b4d710cc05cd349c86",
+      "repository_path": "qa/certification/PDF/0-PAA-Prueba-Practica (1).pdf",
+      "repository_copy": true
     }
   ],
   "web_references": [
@@ -176,5 +186,7 @@
       "note": "No reproducir preguntas protegidas"
     }
   ],
-  "last_checked": "2026-11-23"
+  "last_checked": "2026-11-23",
+  "active_prompt_version": "7.6",
+  "repository_pdf_directory": "qa/certification/PDF/"
 }
