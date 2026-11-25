@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import {loadAchievements,type PerfectAchievement} from "@/lib/perfect-achievements";
+import {PerfectBadge} from "@/components/games/PerfectBadge";
 import {gameNames} from "@/lib/phuma-catalog";
 import { useEffect, useState } from "react";
 import { clearHistory, loadHistory, LEVEL_LABEL, MODE_LABEL, type HistoryEntry } from "@/lib/grammar";
@@ -17,7 +19,8 @@ export const Route = createFileRoute("/historial")({
 
 function History() {
   const [h, setH] = useState<HistoryEntry[]>([]);
-  useEffect(() => setH(loadHistory()), []);
+  const [achievements,setAchievements]=useState<PerfectAchievement[]>([]);
+  useEffect(() => {setH(loadHistory());setAchievements(Object.values(loadAchievements()));}, []);
   const best = h.reduce((m, e) => Math.max(m, e.score), 0);
   return (
     <main className="mx-auto max-w-xl px-4 py-8 space-y-6">
@@ -27,6 +30,9 @@ function History() {
         <div className="card-ink p-4"><p className="text-sm">Partidas</p><p className="text-3xl font-black">{h.length}</p></div>
         <div className="card-ink p-4"><p className="text-sm">Mejor puntaje</p><p className="text-3xl font-black text-primary">{best}</p></div>
       </div>
+      <section className="space-y-2" aria-label="Logros permanentes"><h2 className="text-2xl font-black">Logros permanentes</h2>
+        {achievements.length===0?<p className="text-sm text-muted-foreground">Todavía no hay partidas perfectas verificadas.</p>:<ul className="space-y-2">{achievements.map(a=><li key={JSON.stringify(a.scope)} className="card-ink p-3"><PerfectBadge/><p className="font-bold">{a.scope.tema} · {a.scope.subtema}</p><p className="text-sm">{a.scope.area} · {a.scope.modo} · {a.scope.nivel} · {a.perfectRuns} partidas perfectas</p><p className="text-sm">Mejor puntaje: {a.bestScore} · Último logro: {new Date(a.lastPerfectAt).toLocaleDateString("es")}</p></li>)}</ul>}
+        <p className="text-xs text-muted-foreground">Borrar el historial reciente no elimina estos logros.</p></section>
       {h.length === 0 ? <p className="text-muted-foreground">Aún no hay partidas. ¡Juega una!</p> : (
         <ul className="space-y-2">
           {h.map((e, i) => (
