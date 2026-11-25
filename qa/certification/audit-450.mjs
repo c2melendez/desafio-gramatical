@@ -18,8 +18,11 @@ for(const row of allRows)for(const item of pool(row))areaItems.get(row.area)?.pu
 const total=[...areaItems.values()].reduce((n,x)=>n+x.length,0);
 const problems=[],reviewCounts={},byArea={},byLevel={},byGame={},results=[];
 function issue(name){problems.push(name);}
-if(policy.batch_size!==450||total!==40500||policy.expected_batches!==90)issue('La política de 450/40500/90 no coincide con el inventario');
-if(!Number.isInteger(policy.current_batch)||policy.current_batch<0||policy.current_batch>=90)issue('Índice de lote fuera de 0..89');
+const expectedBatches=Math.ceil(total/450);
+if(policy.batch_size!==450)issue('La cuota nominal debe ser 450');
+if(total===0)issue('Banco real vacío');
+if(policy.total_target!==total||policy.expected_batches!==expectedBatches)issue('Cursor histórico requiere reconciliación explícita con el banco real');
+if(!Number.isInteger(policy.current_batch)||policy.current_batch<0||policy.current_batch>=expectedBatches)issue('Índice de lote fuera del banco real');
 if(areas.length!==5||areaItems.size!==areas.length)issue('Distribución de áreas incompatible');
 // Stratum ordering is fixed so every 450-item run includes all five areas, three games
 // and three levels while data remain in each stratum; stable across all 90 batches.
@@ -44,7 +47,8 @@ if(order.length!==total)issue('Orden global no cubre todo el inventario');
 const ids=order.map(({item})=>item?.id),unique=new Set(ids);
 if(unique.size!==total)issue('IDs no únicos entre registros');
 const start=policy.current_batch*policy.batch_size,selected=order.slice(start,start+policy.batch_size);
-if(selected.length!==450)issue('Selección distinta de 450');
+const quota=Math.min(450,Math.max(0,total-start));
+if(selected.length!==quota)issue('Selección distinta de la cuota real');
 const canon=x=>String(x??'').normalize('NFKC').trim();
 const noSpace=x=>canon(x).replace(/\s+/g,' ').toLocaleLowerCase('es');
 const getKey=(item,mode)=>mode==='quiz'?(item?.answerIndex??item?.answer):undefined;
@@ -91,19 +95,19 @@ const candidates=selected.map(({row,item},i)=>{
 });
 results.push(...candidates);
 const target=new Set(selected.map(x=>x.item.id));
-if(target.size!==450)issue('IDs repetidos en lote');
-if(new Set(selected.map(({item})=>JSON.stringify(item))).size<450)reviewCounts['POSIBLE_REPETICION_ESTRUCTURAL']=(reviewCounts['POSIBLE_REPETICION_ESTRUCTURAL']??0)+1;
+if(target.size!==quota)issue('IDs repetidos en lote');
+if(new Set(selected.map(({item})=>JSON.stringify(item))).size<quota)reviewCounts['POSIBLE_REPETICION_ESTRUCTURAL']=(reviewCounts['POSIBLE_REPETICION_ESTRUCTURAL']??0)+1;
 // Independent selection controls: the first and last ID in this batch must be exactly those in stable global order.
-if(results[0]?.id!==ids[start]||results.at(-1)?.id!==ids[start+449])issue('El cursor no coincide con el orden de inventario');
-const output={schema_version:1,suite:'ACADEMIA_CERTIFICATION_450_V1',sha,batch_index:policy.current_batch,batch_number:policy.current_batch+1,batch_size:450,expected_batches:90,
+if(results[0]?.id!==ids[start]||results.at(-1)?.id!==ids[start+quota-1])issue('El cursor no coincide con el orden de inventario');
+const output={schema_version:1,suite:'ACADEMIA_CERTIFICATION_450_V1',sha,batch_index:policy.current_batch,batch_number:policy.current_batch+1,batch_size:quota,nominal_batch_size:450,expected_batches:expectedBatches,
  status:problems.length?'FAIL':'PASS',academic_certification:'PENDIENTE',
- scanned_records:total,exam_scope:'PAA/PHUMA sin Inglés',
+ scanned_records:total,bank_size_real:total,exam_scope:'PAA/PHUMA sin Inglés',
  selection:'round robin por área, juego y nivel (45 estratos) con orden estable por tema/subtema',
- range:{from:start,to_exclusive:start+450},
+ range:{from:start,to_exclusive:start+quota},
  summary:{evaluated:results.length,technical_failures:results.filter(x=>x.technical_status==='FAIL').length,
  semantic_approved:0,semantic_review:results.length,by_area:byArea,by_level:byLevel,by_game:byGame,editorial_flags:reviewCounts},
  problems,items:results,
- limitations:'450 auditorías técnicas individuales, NO 450 aprobaciones académicas. Los flags de distractores necesitan lectura contextual; CI PASS no certifica validez, originalidad, dificultad ni transferencia al examen.'};
+ limitations:'Auditorías técnicas individuales, NO aprobaciones académicas. Los flags de distractores necesitan lectura contextual; CI PASS no certifica validez, originalidad, dificultad ni transferencia al examen.'};
 mkdirSync('qa/certification/evidence',{recursive:true});
 writeFileSync('qa/certification/evidence/batch-450.json',JSON.stringify(output,null,2)+'\n');
 console.log(JSON.stringify({sha,number:output.batch_number,status:output.status,summary:output.summary,range:output.range,problems:problems.slice(0,12)},null,2));
