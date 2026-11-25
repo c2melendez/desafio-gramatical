@@ -1,6 +1,6 @@
 import {expect,it,vi,afterEach} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R8Pool as mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS} from "@/lib/math-m1";
 import {operationStepReason} from "@/lib/math-operations-distractors";
 import {operationClassificationReason} from "@/lib/math-operations-classification";

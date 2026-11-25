@@ -1,0 +1,202 @@
+{
+  "revision": "R8",
+  "source_ci": 45707730994,
+  "source_job": 139533892483,
+  "publication_sha": "aa72d2a81522a96034107058756050e04b7f571f",
+  "summary": {
+    "changed": 9,
+    "unchanged": 441,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-0",
+      "previous_sha256": "2fdde206e5b1259aa8612b5f5937a393e9c055c8afdc07edbc8199cb5329f3ee",
+      "content_sha256": "9e3cc886670943b439a58245de1852e9d5923318585cc984ce72b6364b7a5bf8",
+      "stimulus": "Calcula 24÷3×2−3. ¿Cuál es el resultado?",
+      "expected": "13",
+      "intermediate": 8,
+      "options": [
+        "13",
+        "16",
+        "5",
+        "19"
+      ],
+      "distractors": {
+        "5": "Se omitió multiplicar por el factor siguiente.",
+        "16": "Se omitió la resta final.",
+        "19": "Se sumó el último término en vez de restarlo."
+      },
+      "family": "division-producto-izquierda-derecha",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-1",
+      "previous_sha256": "128d4c6f489595400ac36b8e0b1cce292d49cc1a0509d2c58dd50127957d6af6",
+      "content_sha256": "0b41ea5d4a8a31e2c6c9df477d947fd2109c87a044520cf9b2254282c1f5863a",
+      "stimulus": "Calcula 44÷4×3−4. ¿Cuál es el resultado?",
+      "expected": "29",
+      "intermediate": 11,
+      "options": [
+        "37",
+        "29",
+        "33",
+        "7"
+      ],
+      "distractors": {
+        "7": "Se omitió multiplicar por el factor siguiente.",
+        "33": "Se omitió la resta final.",
+        "37": "Se sumó el último término en vez de restarlo."
+      },
+      "family": "division-producto-izquierda-derecha",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-2",
+      "previous_sha256": "112a689253d040430c1f85cdfae5a976eae417aeac0f7207be7480de0e4b6132",
+      "content_sha256": "b1ace4d0d34a0bb4226869e13ef90cf39eb21bbbd80829ec853596056f3c269c",
+      "stimulus": "Calcula 70÷5×4−5. ¿Cuál es el resultado?",
+      "expected": "51",
+      "intermediate": 14,
+      "options": [
+        "9",
+        "61",
+        "51",
+        "56"
+      ],
+      "distractors": {
+        "9": "Se omitió multiplicar por el factor siguiente.",
+        "56": "Se omitió la resta final.",
+        "61": "Se sumó el último término en vez de restarlo."
+      },
+      "family": "division-producto-izquierda-derecha",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-0",
+      "previous_sha256": "1df1a71ccfc6c414b1bbf9a957e976d4c7420d5cf63c80095aff97a2d317f569",
+      "content_sha256": "911c58088ab023664dbb73950adb0f4941398ef9a69e696460154a2fcbbb8e55",
+      "stimulus": "Una bodega tiene 8 cajas con 8 piezas cada una. Retira 2 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "60",
+      "intermediate": 6,
+      "options": [
+        "80",
+        "48",
+        "50",
+        "60"
+      ],
+      "distractors": {
+        "48": "Se omitió agregar piezas a cada caja restante.",
+        "50": "Se agregaron las piezas una sola vez, no a cada caja.",
+        "80": "Se agregaron piezas también a las cajas retiradas."
+      },
+      "family": "cambio-contextual-inventario",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-1",
+      "previous_sha256": "bd6851ab7ef339b04091e261c8a60589e5fb209f099ca8e677dfaed4655bf11c",
+      "content_sha256": "c71358f67f3fb979dfe200611edf7c2801ca921e28aced63f545eec52546bd2e",
+      "stimulus": "Una bodega tiene 11 cajas con 9 piezas cada una. Retira 3 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "88",
+      "intermediate": 8,
+      "options": [
+        "88",
+        "121",
+        "72",
+        "74"
+      ],
+      "distractors": {
+        "72": "Se omitió agregar piezas a cada caja restante.",
+        "74": "Se agregaron las piezas una sola vez, no a cada caja.",
+        "121": "Se agregaron piezas también a las cajas retiradas."
+      },
+      "family": "cambio-contextual-inventario",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-2",
+      "previous_sha256": "761e8be17dc91978cc60a67209a8bdf72b9ddb091265c28c2d3fdf8f18dd49f4",
+      "content_sha256": "e9ec7d223ed2f686373b55ffd67869ffc1ee209e7d225f5725af5863df9e9f30",
+      "stimulus": "Una bodega tiene 14 cajas con 10 piezas cada una. Retira 4 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "120",
+      "intermediate": 10,
+      "options": [
+        "102",
+        "120",
+        "168",
+        "100"
+      ],
+      "distractors": {
+        "100": "Se omitió agregar piezas a cada caja restante.",
+        "102": "Se agregaron las piezas una sola vez, no a cada caja.",
+        "168": "Se agregaron piezas también a las cajas retiradas."
+      },
+      "family": "cambio-contextual-inventario",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-0",
+      "previous_sha256": "dbbec1fb93d82d9363e92791b6342864affcf8fdc9f01aaf44f1197767452cd3",
+      "content_sha256": "96789485279beaac201f7081a2b01b23b55f0003f06dca4bcb5cb85f53882cd5",
+      "stimulus": "Simplifica 2×(8−3)−2×8. ¿Qué valor se obtiene?",
+      "expected": "-6",
+      "intermediate": 3,
+      "options": [
+        "0",
+        "10",
+        "-6",
+        "6"
+      ],
+      "distractors": {
+        "0": "Se cancelaron términos que no tienen opuestos iguales.",
+        "6": "Se perdió el signo negativo del término restante.",
+        "10": "Se omitió la resta del producto repetido."
+      },
+      "family": "distributiva-signo-negativo",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-1",
+      "previous_sha256": "b5eb700c877a1156f4690acb18938caea9a4db52cb9a08cd9dbd44a69570034b",
+      "content_sha256": "b2fd40d8b064ac54fa34584c6d1f3e4f88186eae04428a095d56bc7713fd47cc",
+      "stimulus": "Simplifica 3×(11−4)−3×11. ¿Qué valor se obtiene?",
+      "expected": "-12",
+      "intermediate": 4,
+      "options": [
+        "12",
+        "0",
+        "21",
+        "-12"
+      ],
+      "distractors": {
+        "0": "Se cancelaron términos que no tienen opuestos iguales.",
+        "12": "Se perdió el signo negativo del término restante.",
+        "21": "Se omitió la resta del producto repetido."
+      },
+      "family": "distributiva-signo-negativo",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-2",
+      "previous_sha256": "46a64699b53d82455a3557e25c66d17419d8838760eed4abfaa043588f0dbd74",
+      "content_sha256": "e96ce72af51f3fb33ed5964003a886053bcf66b92246da0c4092f5232d9edfc8",
+      "stimulus": "Simplifica 4×(14−5)−4×14. ¿Qué valor se obtiene?",
+      "expected": "-20",
+      "intermediate": 5,
+      "options": [
+        "-20",
+        "20",
+        "0",
+        "36"
+      ],
+      "distractors": {
+        "0": "Se cancelaron términos que no tienen opuestos iguales.",
+        "20": "Se perdió el signo negativo del término restante.",
+        "36": "Se omitió la resta del producto repetido."
+      },
+      "family": "distributiva-signo-negativo",
+      "semantic_status": "REVIEW"
+    }
+  ]
+}

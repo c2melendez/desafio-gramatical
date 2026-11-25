@@ -35,6 +35,7 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
  }
  // OP-04: report the actual mistaken subdecision before showing the worked solution.
  const operationClaimReason=(text:string,truth:boolean)=>{
+  if(item.assertionExplanations?.[text])return item.assertionExplanations[text];
   if(item.oracle.kind!=="Operaciones")return item.explanation;
   const revisedReason=operationClassificationReason(item,text);
   if(revisedReason)return revisedReason;
@@ -46,11 +47,12 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
   if(text.includes("sin respetar el producto"))return "Sumar el factor como un tercer sumando sustituye una multiplicación por una suma y altera el resultado.";
   return item.explanation;
  };
- const subdecisionFeedback=complete&&!correct&&(item.oracle.kind==="Operaciones-racionales"||item.oracle.kind==="Operaciones")
+ const subdecisionFeedback=complete&&!correct&&(item.oracle.kind==="Operaciones-racionales"||item.oracle.kind==="Operaciones"||item.oracle.kind==="Operaciones-diversidad")
   ?item.mode==="clasificar"?item.assertions.flatMap((a,i)=>(choices[i]===0)===a.truth?[]:[`Afirmación «${a.text}»: es ${a.truth?"verdadera":"falsa"}. ${operationClaimReason(a.text,a.truth)}`]).join(" ")
    :item.mode==="construir"?item.steps.flatMap((s,i)=>{
     if(choices[i]===s.answerIndex)return [];
     const chosen=s.choices[choices[i]];
+    if(item.oracle.kind==="Operaciones-diversidad")return [`Paso elegido: ${chosen}. ${i===0?item.stepOptionExplanations?.[chosen]??item.explanation:item.optionExplanations?.[chosen]??item.explanation} El valor correcto de este paso es ${s.choices[s.answerIndex]}.`];
     return [i===0&&item.oracle.kind==="Operaciones"?`Paso elegido: ${chosen}. ${operationStepReason(item,chosen)??item.explanation} El valor correcto de este paso es ${s.choices[s.answerIndex]}.`:i===0?`Raíz elegida: ${chosen}. La raíz principal debe ser no negativa y su cuadrado debe coincidir con el radicando; el valor correcto es ${s.choices[s.answerIndex]}.`:item.oracle.kind==="Operaciones"?`Resultado elegido: ${chosen}. ${item.optionExplanations?.[chosen]??item.explanation} El valor de la expresión solicitada es ${item.expected}, no ${chosen}. Verifica el paso anterior antes de multiplicar o cancelar.`:`Resultado elegido: ${chosen}. ${item.optionExplanations?.[chosen]??"Comprueba la precedencia y las unidades fraccionarias."}`];
    }).join(" "):""
   :"";
