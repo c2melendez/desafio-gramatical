@@ -21,3 +21,26 @@ it("reconciles 50 independently reviewed R4 successors against the actual bank a
   expect(r.semantic_status).toBe("REVIEW");
  }
 });
+
+const successors=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-R4-successors.json","utf8"));
+const rechecked=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-02-R4-recheck.json","utf8"));
+it("R4 evidence maps every changed runtime hash, preserves all others and reconciles 37 reopened reviews",()=>{
+ const before=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>mathM3HistoricalPool("Aritmética","Operaciones",level,mode)));
+ const after=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>mathM3Pool("Aritmética","Operaciones",level,mode)));
+ const revisions=new Map<string,{previous_sha256:string;content_sha256:string}>(successors.records.map((r:{id:string;previous_sha256:string;content_sha256:string})=>[r.id,r]));
+ expect(revisions.size).toBe(288);
+ for(const [i,current] of after.entries()){
+  const old=before[i],r=revisions.get(current.id);
+  expect(current.id).toBe(old.id);
+  if(r){expect(hash(old)).toBe(r.previous_sha256);expect(hash(current)).toBe(r.content_sha256);}
+  else expect(hash(current)).toBe(hash(old));
+ }
+ expect(rechecked.records).toHaveLength(37);
+ for(const r of rechecked.records){
+  const x=after.find(item=>item.id===r.id)!;
+  expect(hash(x),r.id).toBe(r.content_hash);
+  expect(x.expected).toBe(r.respuesta_esperada);
+  expect(x.steps.map(s=>({label:s.label,correct:s.choices[s.answerIndex],options:s.choices,distractors:s.choices.filter(v=>v!==s.choices[s.answerIndex])}))).toEqual(r.construction);
+  expect(r.semantic_status).toBe("REVIEW");
+ }
+});
