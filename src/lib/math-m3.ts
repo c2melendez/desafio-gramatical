@@ -2,6 +2,7 @@ import type {Level,Mode} from "./grammar";
 import {MATH_LEVELS,MATH_MODES,MATH_SUBTOPICS,MATH_LEVEL_COUNT,MATH_TOPICS,mathModel,type MathModel} from "./math-m1";
 import {mathM2Pool,MATH_M2_LEVEL_COUNT} from "./math-m2";
 import {repairRationalOperation} from "./math-operations-rational";
+import {repairConstructionChoices} from "./math-operations-construction-patch";
 
 /** Capa M3: solo agrega IDs nuevos al banco M2; no migra ni modifica el progreso anterior. */
 export const MATH_M3_LEVEL_COUNT:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
@@ -37,8 +38,13 @@ export function mathM3NewPool(topic:string,subtopic:string,level:Level,mode:Mode
  }
  return fresh;
 }
-export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+/** Historical snapshot for archived P2 evidence; never used by runtime. */
+export function mathM3HistoricalPool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return [...mathM2Pool(topic,subtopic,level,mode),...mathM3NewPool(topic,subtopic,level,mode)];
+}
+export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ const bank=mathM3HistoricalPool(topic,subtopic,level,mode);
+ return subtopic==="Operaciones"&&mode==="construir"?bank.map(repairConstructionChoices):bank;
 }
 export const MATH_M3_NEW_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(10+15+25);
 export const MATH_M3_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(30+50+70);

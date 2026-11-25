@@ -61,7 +61,7 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI del lote 02. Prioridad correctiva: sustituir distractores ±1/2 por errores conceptuales y ampliar familias sin cambiar cuotas ni desactivar oráculos. Conservar selección histórica; generar sucesoras solo para hashes afectados y reejecutar fichas. Continuar lote 03 sin repetir examinados vigentes.",
+    "next_action": "Validar hashes sucesores de 37 reparaciones, oráculo y causas específicas; reexaminar fichas C/E afectadas y conservar G/F en REVIEW. Después ampliar diversidad conceptual y continuar lote 03. No contar hashes históricos como evaluación vigente.",
     "previous_publication": {
       "sha": "2dfd1b577b71387388fd2291ace61a913517127e",
       "ci_run": 45692947128,
@@ -105,7 +105,7 @@
     },
     "selection_paths": [
       "qa/certification/rdg/selections/MAT-ARIT-01-01.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-02.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-02-R2.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-03.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-04.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-05.json",
@@ -123,11 +123,51 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-feedback-recheck.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-02-review.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-feedback-recheck.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-feedback-recheck.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-02-construction-R2.json"
     ],
     "completed_review_batches": [
-      "MAT-ARIT-01-01",
-      "MAT-ARIT-01-02"
-    ]
+      "MAT-ARIT-01-01"
+    ],
+    "reopened_ids": [
+      "math-m1-aritmetica-operaciones-construir-avanzado-0",
+      "math-m1-aritmetica-operaciones-construir-avanzado-1",
+      "math-m1-aritmetica-operaciones-construir-avanzado-10",
+      "math-m1-aritmetica-operaciones-construir-avanzado-11",
+      "math-m1-aritmetica-operaciones-construir-avanzado-12",
+      "math-m1-aritmetica-operaciones-construir-avanzado-13",
+      "math-m1-aritmetica-operaciones-construir-avanzado-14",
+      "math-m1-aritmetica-operaciones-construir-avanzado-15",
+      "math-m1-aritmetica-operaciones-construir-avanzado-16",
+      "math-m1-aritmetica-operaciones-construir-avanzado-17",
+      "math-m1-aritmetica-operaciones-construir-avanzado-18",
+      "math-m1-aritmetica-operaciones-construir-avanzado-19",
+      "math-m1-aritmetica-operaciones-construir-avanzado-2",
+      "math-m1-aritmetica-operaciones-construir-avanzado-3",
+      "math-m1-aritmetica-operaciones-construir-avanzado-4",
+      "math-m1-aritmetica-operaciones-construir-avanzado-5",
+      "math-m1-aritmetica-operaciones-construir-avanzado-6",
+      "math-m1-aritmetica-operaciones-construir-avanzado-7",
+      "math-m1-aritmetica-operaciones-construir-avanzado-8",
+      "math-m1-aritmetica-operaciones-construir-avanzado-9",
+      "math-m1-aritmetica-operaciones-construir-intermedio-0",
+      "math-m1-aritmetica-operaciones-construir-intermedio-1",
+      "math-m1-aritmetica-operaciones-construir-intermedio-10",
+      "math-m1-aritmetica-operaciones-construir-intermedio-11",
+      "math-m1-aritmetica-operaciones-construir-intermedio-12",
+      "math-m1-aritmetica-operaciones-construir-intermedio-13",
+      "math-m1-aritmetica-operaciones-construir-intermedio-14",
+      "math-m1-aritmetica-operaciones-construir-intermedio-2",
+      "math-m1-aritmetica-operaciones-construir-intermedio-3",
+      "math-m1-aritmetica-operaciones-construir-intermedio-4",
+      "math-m1-aritmetica-operaciones-construir-intermedio-5",
+      "math-m1-aritmetica-operaciones-construir-intermedio-6",
+      "math-m1-aritmetica-operaciones-construir-intermedio-7",
+      "math-m1-aritmetica-operaciones-construir-intermedio-8",
+      "math-m1-aritmetica-operaciones-construir-intermedio-9",
+      "math-m1-aritmetica-operaciones-construir-principiante-0",
+      "math-m1-aritmetica-operaciones-construir-principiante-1"
+    ],
+    "current_revision_examined_ids": 63
   }
 }
