@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { CATS, CAT_LABEL, type Cat, type Sentence } from "@/lib/grammar";
 import type { GameProps } from "./types";
 import { NextButton } from "./Feedback";
@@ -8,16 +8,19 @@ export function ClassifyGame({ item, report, next, isLast }: GameProps<Sentence>
   const [sel, setSel] = useState<number>(words[0].i);
   const [ans, setAns] = useState<Record<number, Cat>>({});
   const [checked, setChecked] = useState(false);
+  const submitted = useRef(false);
   const done = words.every((w) => ans[w.i]);
 
   const assign = (c: Cat) => {
-    if (checked) return;
+    if (submitted.current) return;
     const nextAns = { ...ans, [sel]: c };
     setAns(nextAns);
     const pending = words.find((w) => !nextAns[w.i] && w.i !== sel);
     if (pending) setSel(pending.i);
   };
   const check = () => {
+    if (submitted.current || !done || words.length === 0) return;
+    submitted.current = true;
     setChecked(true);
     const sentence = item.tokens.map((t) => t.t).join(" ");
     words.forEach((w) => {
