@@ -29,5 +29,7 @@ use the editor.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
 
-## Autoridad técnico-pedagógica — v7.6
+## Autoridad técnico-pedagógica — v7.6.1
 Leer [PROMPT_EJECUTOR_REPOSITORIO.md](PROMPT_EJECUTOR_REPOSITORIO.md) y [ejecutor completo](docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Sustituyen los prompts históricos; preservar el bloque Lovable. CONTINUAR inicia trabajo real, con G-ACTION, no un informe. Las fuentes originales están en qa/certification/PDF/; verificar huella y páginas, no redistribuir ni copiar reactivos. Mantener cursor y evidencia, no reiniciar módulos.
+
+**v7.6.1 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.
