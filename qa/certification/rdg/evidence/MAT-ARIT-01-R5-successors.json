@@ -1,0 +1,945 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "revision": "R5",
+  "source_ci": 45703246319,
+  "source_job": 139518528517,
+  "source_head": "6200b56fed2f9bbab964a1293096453be80ca48a",
+  "summary": {
+    "changed": 44,
+    "unchanged": 406,
+    "claims_verified": 132,
+    "previously_reviewed_reopened": 0,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-0",
+      "previous_sha256": "e22f764f73ec596e46b4859ae9316e03f82141e121bdfec37cba94214a49360b",
+      "content_sha256": "e747e651eac4450e7ee416766bd8f4aa6c8fb698787a224ccc087fb3642c2e8a",
+      "claims": [
+        {
+          "text": "La suma dentro del paréntesis es 12.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 7×4+5×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-1",
+      "previous_sha256": "322973581813e2113fda899cc9ac93759022dcce1e26eb7104d03e94430feacb",
+      "content_sha256": "c0f9c496f911cc5025f42064c1ecbf6558d9a5984c4fc05ade9b318cf22b550f",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 152.",
+          "truth": false
+        },
+        {
+          "text": "La suma dentro del paréntesis es 27.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 19×8+8×0.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-2",
+      "previous_sha256": "13d3969bbd969ce0488ca13fc548e2624e399d00ff03b67a09bc1d6e389b6af5",
+      "content_sha256": "f18cc4cbb013f3332c5f34bd67eca2707b5a2373574cacf9532df5a674eb84a1",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 14×5+11×5.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 125.",
+          "truth": true
+        },
+        {
+          "text": "La suma dentro del paréntesis es 3.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-3",
+      "previous_sha256": "f5e7a16b05355d76ff54176a58018917cf58fd108fd50831b4bb2d230edcf21d",
+      "content_sha256": "f3e1c73e2b82fee50e97314e049fe84f89b4d9f072a2e73775ebb9d0c1dfefc4",
+      "claims": [
+        {
+          "text": "La suma dentro del paréntesis es -5.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 9×2+14×2.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 18.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-4",
+      "previous_sha256": "3e31ffe9cda23a8345b1905163a689facf8f22d539891f8cf9780b1a4bea4dfe",
+      "content_sha256": "77b6c707fc3c497b69857b421c35352f2ee6206a7097d3e3ee2bd2dfaffb9b9f",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": true
+        },
+        {
+          "text": "La suma dentro del paréntesis es 0.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 4×6+4×0.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-5",
+      "previous_sha256": "b597d0f8f541430edd6d9af14d2ddafbaa7c955d5126baf8d0820ae3b64ba3b5",
+      "content_sha256": "b71770f4a881dd2667f83b007ba7a0c96c4a2949e108c259d113a9039dccfdbd",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 16×3+7×3.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": false
+        },
+        {
+          "text": "La suma dentro del paréntesis es 23.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-6",
+      "previous_sha256": "ca18a666c84289f047085dec86a3f650d7b71bef2edfc1644e919d722b2b3081",
+      "content_sha256": "9d31f662642bd230666ab1f8d55171cc125f2bd7216c8c46940750755ea98f9b",
+      "claims": [
+        {
+          "text": "La suma dentro del paréntesis es 21.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 11×7+10×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 147.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-7",
+      "previous_sha256": "63715a17b3de2267d4595852c9a3dba51daf48bf652ec25e8c0f6cbaecf893b2",
+      "content_sha256": "114397d4f6c5ee28f9bd50995105830db21760803573df636b03010610c40c5b",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 24.",
+          "truth": false
+        },
+        {
+          "text": "La suma dentro del paréntesis es 19.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 6×4+13×0.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-8",
+      "previous_sha256": "2378d9986008172068d4647591f69b7f1ba3076e46c42c8dd99084e4a7ab5422",
+      "content_sha256": "09f407ce40c2055891f29d0b2431f9445e64f82fd6b6a9244815f5a3eaab2568",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 18×8+3×8.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 168.",
+          "truth": true
+        },
+        {
+          "text": "La suma dentro del paréntesis es 15.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
+      "previous_sha256": "3aa848a535be475bbed39ea7506eadbe50c3ccf052ab24e886b49d8e1148aabe",
+      "content_sha256": "4ad791172b00ed5c11ea0c5d904f28dcf62e723d69f782f6bd1154c01a693125",
+      "claims": [
+        {
+          "text": "La suma dentro del paréntesis es 7.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×5+6×5.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 65.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-0",
+      "previous_sha256": "69fa33148e7bd055ce917ba5b7e8df4c55231d14b5383499769bc135d51f2381",
+      "content_sha256": "6b9eb186269b8ba0954e2a0da115431be519dec30f1aa41463b3b953c32785d2",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 112.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 28.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 21×4+7×0.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-1",
+      "previous_sha256": "3183be643b66950646db84369820c58f39d59e10b9f6a00c7a602ad5f3b85beb",
+      "content_sha256": "161fd80d1b62f0d0138b5595fb64cfba0a9dffa8a42ff00668ac5064418887e3",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 16×1+10×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 16.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 26.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-2",
+      "previous_sha256": "af0642eca4f03ac2ea0d7c5fe9bbdf958b3cd1c256671d680570a943dc5f8648",
+      "content_sha256": "dadbd268741da2f3e24e7ee51c2dbd30b74bb9435b2945e7a29983d8502beaec",
+      "claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -2.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 11×5+13×5.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 120.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-3",
+      "previous_sha256": "125a626516fe9c6401e72f61a1270a7a6496fa8e1e976b3d738a59a922a6c573",
+      "content_sha256": "a632dfc745636e03abcbf99e03d65c83fe94ed7df6d6e7cb6d3074ffc4594ce8",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 12.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -10.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 6×2+16×2.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-4",
+      "previous_sha256": "06b65d700ff056585ff3905ce7f7cc7400837cadc5a4dc19cb5256e698ad271a",
+      "content_sha256": "469959b171a7fe16fa4dd8308754ada11a8971875ba7c32ea446b2417e382a5b",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 18×6+19×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 222.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -1.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-5",
+      "previous_sha256": "68c13b848588bf7fe62080651b1b598ac397f6b44311528e96f4397ee219e89c",
+      "content_sha256": "582f79760a78d22a117808c748ff4136e46d15b182434d1ad73bc0a9439506a2",
+      "claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 22.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×3+9×3.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 39.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-6",
+      "previous_sha256": "00df53ed546b0fb7f4e08d95efda0c1962107a60143105074b03c853e33d8f55",
+      "content_sha256": "d56fe8e4595371c2dd2a01a7626b5bf8cea9ea1de90c42476d9b39c304d44919",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 140.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 20.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 8×7+12×0.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-7",
+      "previous_sha256": "166c82b4d9c70e090c0cdf4ef9f56b8444044de9c89165773d49ffa1a79711d7",
+      "content_sha256": "29167c90ff5ff60e3984181e5441916094c73db4acce32ec0e28be31209a8974",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 20×4+15×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 80.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 35.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-8",
+      "previous_sha256": "abdd902668aa48c912898d887b170a56d0aec655b918e8958cb22e61442399f2",
+      "content_sha256": "e15d6cee1adeff1eacd48f8f8be136c50a58166651d9b5a1d13ccf6b6662af20",
+      "claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -3.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 15×1+18×1.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 33.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-9",
+      "previous_sha256": "97573d036331d2ba727903334724689bb8a79465bb021ba833fe8ba97ad208d2",
+      "content_sha256": "849d1c8b9a15b7000d0675ce8f3a0d66e76324e8386926b1e41f1dd617d923f8",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 50.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 2.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 10×5+8×5.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-10",
+      "previous_sha256": "4becc51be6c9bdcbdd4e703ddea3c0dd01e0b40c21a49f72c99802a262acf8ba",
+      "content_sha256": "4e37866c28991fff412fd0c889113a027ea23c749915596c4f7b95c1613eefb9",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 22×2+11×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 66.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 11.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-11",
+      "previous_sha256": "df0b4c0cd1b64ff11579a02853e7d08255c4c9d22babc2d24956303c9ce07030",
+      "content_sha256": "031fcde3a8e64d0d673cc81189cb31e96e34428096d9a80e6012eb531b13e4b9",
+      "claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 31.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 17×6+14×6.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 102.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-0",
+      "previous_sha256": "52691cce53eb8e6c03df88f7cbf67c1ed3c026c98f011f60338297871eccc04f",
+      "content_sha256": "2fc60c2feb05ae9d6d47bbb4d5f9146106ece4affff94d5f94e03b46463d0bfe",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a -18×6.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 108.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-1",
+      "previous_sha256": "598e1c228aa585e366e1b0a6eb6042f805402cd7092707fd7a5a863e00025427",
+      "content_sha256": "37339f1d55d418131622dd44a991b7cae1281bdcbd1e8e9c676f5dd8f707ac61",
+      "claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 8.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -8×3.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -24.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-2",
+      "previous_sha256": "81573f11e887fd1dc91a4f4ae9e11bce6d1fac60ebf9633e9d00ec2d778d330b",
+      "content_sha256": "737fa9368103751dcac02e7de43f08fecefda8e7376c7a20e303fa88e88fdc4f",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 77.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 11×7.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-3",
+      "previous_sha256": "eb89b3506a8ba1b50f2cc8d210cbf823d6bcc7b7bbeae79b142a0856b323467b",
+      "content_sha256": "ca0913414a0671b19cf449c3f31e845847fd6ce548c181c2b972b9fd0d0a48d8",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 14×4.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -56.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-4",
+      "previous_sha256": "304a3199e71977506212fc6a985464aadee5e3d558d2e16522d30a988939b49c",
+      "content_sha256": "6951a51b66e9707128851c5f8f106a1384477e49c734b41ee6088c31f2e7bdb8",
+      "claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -17.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a -17×8.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 136.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-5",
+      "previous_sha256": "c181f7de4eb677d5c6189d776954419970fbf400b3bf87fca099cd12b4179555",
+      "content_sha256": "c459768a564dd38ccc23ebac700f5f792b20536e4eab8cfe30da4c2f95223f8e",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es -35.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 7×5.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-6",
+      "previous_sha256": "8cd3d540e4b81841459636e371c60024c85b5727308aa7afdc30ce9445b1efe0",
+      "content_sha256": "f6646c55cb3367e339e235a1248f5346fe463f9a26f23b0ef4cc7ccbd76e8680",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a -10×2.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 20.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-7",
+      "previous_sha256": "658bc304967e9d12caef6620364bcf904d2aa07392164b5e400b9c447ed4cb53",
+      "content_sha256": "83a7b1d6690735f4f989db0e2c1b18e9d7efa2f631543525740fc592642160cd",
+      "claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 13.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -13×6.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -78.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-8",
+      "previous_sha256": "437c12adad87b2e9e7558073b1d563713abc61d301d85a7d6c7ba51f6f9bc627",
+      "content_sha256": "c1422155fd031f00b57a4be5bdb67e4e74341d622f62f3c22b140543fe9d4e16",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 16×3.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-9",
+      "previous_sha256": "298aee66b36539a579ce679917e428a60abc8e2cd1a0e9b4313343c42ca5a088",
+      "content_sha256": "132e25baa95a274290d0643c75fc64e15e47835fe13fb323f69b37e05db1950a",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 19×7.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -133.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-10",
+      "previous_sha256": "673413b4ee4507d330178309db42d491421e0e88af796ab16282a88822012c87",
+      "content_sha256": "db50f993578b96b158271fe4d6aa38a99c332d09233d260487997cb786bf7893",
+      "claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a -9×4.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 36.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-11",
+      "previous_sha256": "ca6ae560eef4263a7fa2198a945c1397cc84de229e2ee65248cc46fcfa99782e",
+      "content_sha256": "62c4a84faac5cbde9bf568ca0c580edd8d44aec3adafd22663d9c7a3f23a2142",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es -96.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 12.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 12×8.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "previous_sha256": "e308d58dab4b697151de298eb040104f8046e88295ddaaf17a99b279bfce94ee",
+      "content_sha256": "742f839efcfa043eb91c62949bb028d6a3c4c259f7f57a47a4936e3a60b67d2d",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a -15×5.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 75.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "previous_sha256": "6b777d0e0ceeb113b26d587ed3f189a8884bddee89e6af10710f9d2d757de67a",
+      "content_sha256": "2798b378d88cbb81f5f616be6b8f6e5dc69774f5cbd0f060485951a448260e28",
+      "claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -18×2.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -36.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "previous_sha256": "db49c71cda3fed5252f68ec7d4b77f974082df4a8f6bd396b1afccaa82c0f1e4",
+      "content_sha256": "a808f5611b30a459ac61f4dd9895a3376f1850833b9432dc79aee9bcbe8a23b1",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -8.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 8×6.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "previous_sha256": "a78dd3ea42885fc031e1f490e96ebda46fd21f2248cb18c2af8030d7932d4da4",
+      "content_sha256": "36e9a3acf1a0516618355d20d501d53c9e105301c6466c0bae4d926a048e8755",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 11×3.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -33.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "previous_sha256": "51e066882ee7800c53b7977e8b3d7bbaa23b760bb61928339b05cfcffe88607a",
+      "content_sha256": "28da26c75325c54350b61f2422d3f08429593c1d399a6b4f5996dc9c78cca009",
+      "claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a -14×7.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 98.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "previous_sha256": "3293f5f6be8cec4ed39ac108528b0336ea36e62c48cf3aa2eeeea046d1e71133",
+      "content_sha256": "1acff64698404a8cbf4242be0926036169da229bac65ef8bbaf2dbeaad9460a6",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es -68.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 17×4.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "previous_sha256": "ae10274f3a442ee74da04a8aa1624aa3a17859d521d95d74c58290f5b051cde4",
+      "content_sha256": "ad4cdd5024b6cfbb3f6dd292bf3287f0fa4dda1186969d8c0ee97885a2445139",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a -7×8.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 56.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "previous_sha256": "77cad720b3aa453db6ee63bb8b705e9357f54264fec06a4397f4f46a2a037584",
+      "content_sha256": "2725714c7ae66961ea5a14638f3b07be398d21910286fd002efe4b107934bb30",
+      "claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -10×5.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -50.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "previous_sha256": "2e17353cdac926ec115645382c0e7f3ab46e103c3746e862fdc0d3e8c8701c66",
+      "content_sha256": "8d41b417f88e70cf60838ec05cff3370b37dcbd5bffce94df2a479633a059cfe",
+      "claims": [
+        {
+          "text": "El valor de la expresión solicitada es 26.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×2.",
+          "truth": true
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "previous_sha256": "6476fa1ed868dd2c1ca5431d3dd6580c70e3e7cfff715ad7b422f12245c45002",
+      "content_sha256": "b69b5252ffa0485254b17b7b20065266682daa78bb4095a4829e6530677c193e",
+      "claims": [
+        {
+          "text": "La expresión solicitada equivale a 16×6.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -96.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "truth": false
+        }
+      ],
+      "oracle_status": "VERIFIED",
+      "semantic_status": "REVIEW"
+    }
+  ],
+  "limitations": "Verificación real CI del candidato; no confundir con publicación ni suficiencia semántica. Solo M3 no racional de Clasificar."
+}

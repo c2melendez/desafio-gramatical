@@ -61,12 +61,13 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI del lote 02. Prioridad correctiva: sustituir distractores ±1/2 por errores conceptuales y ampliar familias sin cambiar cuotas ni desactivar oráculos. Conservar selección histórica; generar sucesoras solo para hashes afectados y reejecutar fichas. Continuar lote 03 sin repetir examinados vigentes.",
+    "next_action": "Conciliar PR #59/#60 y CI/LIVE. Verificar CI de lote 04 y 44 sucesores R5. Extender corrección de clasificación a M1/M2 sin modificar estímulos válidos; reabrir solo hashes afectados. Ampliar diversidad/profundidad y feedback intermedio. Continuar lote 05.",
     "previous_publication": {
-      "sha": "2dfd1b577b71387388fd2291ace61a913517127e",
-      "ci_run": 45692947128,
-      "ci": "SUCCESS",
-      "render_deploy": "dep-dc3k31g473hc738eflbg",
+      "sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f",
+      "candidate_ci_run": 45697495623,
+      "candidate_ci": "SUCCESS",
+      "production_ci": "UNOBSERVED",
+      "render_deploy": "dep-dc3kqul9el5s73adpd8g",
       "render": "LIVE"
     },
     "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R3.json",
@@ -115,7 +116,7 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-09.json"
     ],
     "selection_total": 450,
-    "examined_semantic_ids": 100,
+    "examined_semantic_ids": 200,
     "semantic_pass_ids": 0,
     "review_ids": 450,
     "review_evidence": [
@@ -123,11 +124,52 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-feedback-recheck.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-02-review.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-feedback-recheck.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-feedback-recheck.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-03-R4-review-candidate.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-02-R4-recheck.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-04-R5-review.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-01",
-      "MAT-ARIT-01-02"
-    ]
+      "MAT-ARIT-01-02",
+      "MAT-ARIT-01-03",
+      "MAT-ARIT-01-04"
+    ],
+    "r4_revision": {
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-successors.json",
+      "changed": 288,
+      "unchanged": 162,
+      "previously_reviewed_reopened_and_rechecked": 37,
+      "previously_reviewed_unchanged": 63,
+      "newly_examined": 50,
+      "reviewed_current": 150,
+      "semantic_pass": 0,
+      "source_ci": 45697495623,
+      "source_job": 139498599266,
+      "publication_sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f",
+      "publication_status": "LIVE",
+      "production_ci_status": "UNOBSERVED",
+      "checkpoint_ci": "SUCCESS_IN_R5_CANDIDATE_45703246319"
+    },
+    "r5_revision": {
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "changed": 44,
+      "unchanged": 406,
+      "claims_verified": 132,
+      "previously_reviewed_reopened": 0,
+      "source_ci": 45703246319,
+      "source_job": 139518528517,
+      "candidate_sha": "6200b56fed2f9bbab964a1293096453be80ca48a",
+      "candidate_ci": "SUCCESS",
+      "publication": "PENDING"
+    },
+    "lote04": {
+      "examined": 50,
+      "claims_verified": 150,
+      "review": 50,
+      "semantic_pass": 0,
+      "runtime_ci": "PENDING",
+      "fixed_pattern_debt": 47
+    }
   }
 }
