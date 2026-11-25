@@ -1,0 +1,5495 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "revision": "R4",
+  "source_ci": 45697495623,
+  "source_job": 139498599266,
+  "source_head": "b5b1af8125edca63ee1985002bb2a4e994f89e65",
+  "publication_sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f",
+  "render_deploy": "dep-dc3kqul9el5s73adpd8g",
+  "render_status": "LIVE",
+  "summary": {
+    "changed": 288,
+    "unchanged": 162,
+    "semantic_pass": 0,
+    "lote03_reconciled": 50
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-0",
+      "previous_sha256": "5a07d252a7bc0cdb9a832a18c45a1d010f8f23a945ad89166ffcb4509ea27976",
+      "content_sha256": "7abede7bbf37de7085342e4503fb6ba278f551fdd86adb8c01553ed0e940f401",
+      "expected": "84",
+      "intermediate": "12",
+      "options": [
+        "19",
+        "42",
+        "84",
+        "48"
+      ],
+      "step": [
+        "6",
+        "12",
+        "0",
+        "36"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-1",
+      "previous_sha256": "44d257f5d9348fb7c551a57e32d59c0c29cb184209c9012597d358fa71e6f8a5",
+      "content_sha256": "f3db99b75d7cad86eba690a4c35fc0181d912cb0b3b7f4e438011c7de466e8d1",
+      "expected": "80",
+      "intermediate": "16",
+      "options": [
+        "35",
+        "80",
+        "44",
+        "21"
+      ],
+      "step": [
+        "16",
+        "-2",
+        "63",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-2",
+      "previous_sha256": "6b97d9260af17c8424984c1f3ac2c3fdf20fa0f0f273737245ab1fabd39f3f7f",
+      "content_sha256": "b5776315b75c70679be4735b6c5538e54f63fd9332b191a108c37a5828596333",
+      "expected": "60",
+      "intermediate": "20",
+      "options": [
+        "60",
+        "36",
+        "23",
+        "24"
+      ],
+      "step": [
+        "-4",
+        "96",
+        "8",
+        "20"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-3",
+      "previous_sha256": "0eca29bde76968190fc0b9d983be5b9cdccdf86a4eb4b5a328fadf924306088b",
+      "content_sha256": "7cdfc1586fdbd0cf6b72a69a154b3ea51f6eecb9896a454c6eac4d696991ed8e",
+      "expected": "192",
+      "intermediate": "24",
+      "options": [
+        "87",
+        "32",
+        "72",
+        "192"
+      ],
+      "step": [
+        "135",
+        "9",
+        "24",
+        "-6"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-4",
+      "previous_sha256": "2be70e2067325499794c8a18809e9ad6d6324181370fdff2a12490de02a0ee5e",
+      "content_sha256": "2d29141bf19a1bb521bd7522fae1f38b7408b1c5a80ea5cbf8620d974dab6435",
+      "expected": "90",
+      "intermediate": "15",
+      "options": [
+        "21",
+        "60",
+        "90",
+        "65"
+      ],
+      "step": [
+        "10",
+        "15",
+        "5",
+        "50"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-5",
+      "previous_sha256": "f2f24b085c0f50704a23f581a92bac3cfccf63781883bb72cc3a777af847d444",
+      "content_sha256": "9eb083b00fac528a8ccf82f0c05ac09e95a932c93ffe5e132e3fa0b4c8d93bb4",
+      "expected": "76",
+      "intermediate": "19",
+      "options": [
+        "44",
+        "76",
+        "52",
+        "23"
+      ],
+      "step": [
+        "19",
+        "3",
+        "88",
+        "11"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-6",
+      "previous_sha256": "21ab65b868665956dd8e439805112315fa67da47ff8eb17d0d42c66ccdb2f568",
+      "content_sha256": "acd2e55b007ea50f3ea323612028dddd51766f2b71b930931b370f3fbe80c586",
+      "expected": "46",
+      "intermediate": "23",
+      "options": [
+        "46",
+        "35",
+        "25",
+        "24"
+      ],
+      "step": [
+        "1",
+        "132",
+        "12",
+        "23"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-7",
+      "previous_sha256": "05b511b5959a0d6971c886890f6a8ba0e0a5e00f5fefd3ebc95c28570e4bb730",
+      "content_sha256": "cd4e0613d73d8fccc5453575b2fb315fc83c109db10b1364e32c21c62bf52b91",
+      "expected": "189",
+      "intermediate": "27",
+      "options": [
+        "105",
+        "34",
+        "91",
+        "189"
+      ],
+      "step": [
+        "182",
+        "13",
+        "27",
+        "-1"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-8",
+      "previous_sha256": "49153b131d028b6261e0a011d06f59531e4825f8cc4e2790c96c71b3218bc96e",
+      "content_sha256": "de2e90fbdc97075027b88cb60643bd70abd9f01c2558b271eeadce3d4be172d9",
+      "expected": "90",
+      "intermediate": "18",
+      "options": [
+        "23",
+        "70",
+        "90",
+        "74"
+      ],
+      "step": [
+        "14",
+        "18",
+        "10",
+        "56"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-9",
+      "previous_sha256": "2d232ea93d3a6728231a726845875720fd9cb1b80617c9d306f3df20fcf5ad78",
+      "content_sha256": "cc38be71ea1ecad8ffda41a644138a610f201dbd002efe404ce81284fa1ee906",
+      "expected": "66",
+      "intermediate": "22",
+      "options": [
+        "45",
+        "66",
+        "52",
+        "25"
+      ],
+      "step": [
+        "22",
+        "8",
+        "105",
+        "15"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-0",
+      "previous_sha256": "230028fcbff936ba7ebef21b7d61922300031883a130aa02495ab503df2aecd8",
+      "content_sha256": "79d02ae9ff0140807c310b4fbde47b433e4f2480e1b8613ef4f36b2bc7815d73",
+      "expected": "60",
+      "intermediate": "20",
+      "options": [
+        "60",
+        "30",
+        "23",
+        "15"
+      ],
+      "step": [
+        "-10",
+        "75",
+        "5",
+        "20"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-1",
+      "previous_sha256": "a04418d524e7e80f0484eb20a8c36dd3f27f8d0b0892fdd6ca006cb40331159c",
+      "content_sha256": "79db90fa9445a4e079c3e19ad4b3d746d0153c0d60e777292d7426791ca5a624",
+      "expected": "120",
+      "intermediate": "24",
+      "options": [
+        "92",
+        "29",
+        "85",
+        "120"
+      ],
+      "step": [
+        "119",
+        "17",
+        "24",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-2",
+      "previous_sha256": "84952ee6ae815267719617d45868fbc46464c46453156f414d64034fe937d3f0",
+      "content_sha256": "8b515e13a42de2988a39ddea24bf42977d98ebc084e3ebc545062cdbfb4f5529",
+      "expected": "168",
+      "intermediate": "24",
+      "options": [
+        "31",
+        "84",
+        "168",
+        "96"
+      ],
+      "step": [
+        "12",
+        "24",
+        "0",
+        "144"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-3",
+      "previous_sha256": "7d06e90d9d5852a1f34189a293cff64f74a2dec6244d97b6cf1ae09365577a5b",
+      "content_sha256": "cb5124fbfe50fa416e013c4617a01a4afe3617dba455cea14a5e5548bf72fb8a",
+      "expected": "22",
+      "intermediate": "11",
+      "options": [
+        "14",
+        "22",
+        "18",
+        "13"
+      ],
+      "step": [
+        "11",
+        "3",
+        "28",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-4",
+      "previous_sha256": "d84936911bc16adf02199e92d02406f70231d85951175474788d74ff348f46eb",
+      "content_sha256": "550dfa0bc6d313f36cbab740aa0d34676c266d67876bd6d38cbc4bba20d11477",
+      "expected": "112",
+      "intermediate": "28",
+      "options": [
+        "112",
+        "85",
+        "32",
+        "76"
+      ],
+      "step": [
+        "10",
+        "171",
+        "19",
+        "28"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-5",
+      "previous_sha256": "0ec2510fc6b946174fd757aacd83b4d6537199a88989a8ec45634b2a4509b078",
+      "content_sha256": "656478fe8409963a8c2ff85332127ff126b34fefbf8db54f800489f8482e0718",
+      "expected": "168",
+      "intermediate": "28",
+      "options": [
+        "98",
+        "34",
+        "84",
+        "168"
+      ],
+      "step": [
+        "196",
+        "14",
+        "28",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-6",
+      "previous_sha256": "763cc7f77c193c9d42b91aef08bdc5cd3fa90a5d1af3d9e65b3d31d8bc79fe7d",
+      "content_sha256": "d620c72e478a957997af8ccbf5ae61185544f3ce14774b4f17a033b382baa84e",
+      "expected": "120",
+      "intermediate": "15",
+      "options": [
+        "23",
+        "72",
+        "120",
+        "78"
+      ],
+      "step": [
+        "9",
+        "15",
+        "3",
+        "54"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-7",
+      "previous_sha256": "c175a6bd3e6795fc1a916d5f0818d593fd2fe3f99bfd2d7f0593b1221d6a53a8",
+      "content_sha256": "3192340c6f427b9d4596eb4fdb6d445b4fc53d27eaf7ea261954293bb866571b",
+      "expected": "45",
+      "intermediate": "15",
+      "options": [
+        "12",
+        "45",
+        "23",
+        "18"
+      ],
+      "step": [
+        "15",
+        "-7",
+        "44",
+        "4"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-8",
+      "previous_sha256": "8393566ef06746fb91342d660becda2aa63bf44252c08e6a8f5a2d191c74777b",
+      "content_sha256": "8aa1bcd805f898248e247769723ac12d1ab4d65cef9028e8205ece808c65addd",
+      "expected": "95",
+      "intermediate": "19",
+      "options": [
+        "95",
+        "83",
+        "24",
+        "80"
+      ],
+      "step": [
+        "13",
+        "48",
+        "16",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "previous_sha256": "12313661928d39e24b36e868f68bfac85f49974123e2330128d4649bf22cfd4d",
+      "content_sha256": "6d34433fbc90c08cd6fb3d46e9ef7d533d668570503543913162a6e3e2fe9f7e",
+      "expected": "133",
+      "intermediate": "19",
+      "options": [
+        "85",
+        "26",
+        "77",
+        "133"
+      ],
+      "step": [
+        "88",
+        "11",
+        "19",
+        "3"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-0",
+      "previous_sha256": "599c65f1de0fcf1ba1ea57f3160a18f328a33a1a0e888c3c1060d0347a3f32fa",
+      "content_sha256": "2fdde206e5b1259aa8612b5f5937a393e9c055c8afdc07edbc8199cb5329f3ee",
+      "expected": "182",
+      "intermediate": "26",
+      "options": [
+        "182",
+        "104",
+        "33",
+        "91"
+      ],
+      "step": [
+        "0",
+        "169",
+        "13",
+        "26"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-1",
+      "previous_sha256": "5780d97d47da89888a76bccad167655d1afe1efcc17eeebdb1b2953093adffee",
+      "content_sha256": "128d4c6f489595400ac36b8e0b1cce292d49cc1a0509d2c58dd50127957d6af6",
+      "expected": "44",
+      "intermediate": "11",
+      "options": [
+        "32",
+        "44",
+        "35",
+        "15"
+      ],
+      "step": [
+        "11",
+        "5",
+        "24",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-2",
+      "previous_sha256": "825095bb42eaaa2c2f41c8e7c19e58c62f2267b5e583cc8ac9167c7200016343",
+      "content_sha256": "112a689253d040430c1f85cdfae5a976eae417aeac0f7207be7480de0e4b6132",
+      "expected": "208",
+      "intermediate": "26",
+      "options": [
+        "34",
+        "160",
+        "208",
+        "166"
+      ],
+      "step": [
+        "20",
+        "26",
+        "14",
+        "120"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-3",
+      "previous_sha256": "b31176c8350274e16019164818d17c2bc113dac6ae475469cb85015cb20f6bb1",
+      "content_sha256": "a2a6711384ddd7f25f3b82d5df0301ef03f0e3761611e24bada4e5e353d6fdf4",
+      "expected": "120",
+      "intermediate": "24",
+      "options": [
+        "84",
+        "29",
+        "75",
+        "120"
+      ],
+      "step": [
+        "135",
+        "15",
+        "24",
+        "6"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-4",
+      "previous_sha256": "6bd50a96eac3f74751cec6469abd394d1b56eb8610281c2e10573152c010783d",
+      "content_sha256": "56fdb4d8a8aee6bbec5fdc7325ad7b15ca2c5b3c03902172c924ab3fe249f56c",
+      "expected": "44",
+      "intermediate": "22",
+      "options": [
+        "44",
+        "32",
+        "24",
+        "20"
+      ],
+      "step": [
+        "-2",
+        "120",
+        "10",
+        "22"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-5",
+      "previous_sha256": "41197798c43f670d292e67bca7b0be232ffd796efc4178cd193da12f953c5c2d",
+      "content_sha256": "4d138c6802abb753aa7aba80c42d09e434465b26493eb089c99693163a5c8f81",
+      "expected": "120",
+      "intermediate": "20",
+      "options": [
+        "30",
+        "120",
+        "45",
+        "26"
+      ],
+      "step": [
+        "20",
+        "-10",
+        "75",
+        "5"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-6",
+      "previous_sha256": "e16e589dd5339da8ce36f6bfacaba5d88a857240fc842335483e3e7cdd18a6ea",
+      "content_sha256": "2f3669350e6f0c8ccce6b68e2eae15d24f4a9fa3a9e0516cbe5bd6003bcd7855",
+      "expected": "66",
+      "intermediate": "22",
+      "options": [
+        "25",
+        "51",
+        "66",
+        "56"
+      ],
+      "step": [
+        "17",
+        "22",
+        "12",
+        "85"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-7",
+      "previous_sha256": "4106cf59b59819173550a4ef511f9f10a7d0533061b7e06120c994ef09dfb84d",
+      "content_sha256": "58dec9ef2d751f9097d8c4d3cd9258a9ef46161b36b03a92099c3cef7dacbccf",
+      "expected": "140",
+      "intermediate": "20",
+      "options": [
+        "92",
+        "27",
+        "84",
+        "140"
+      ],
+      "step": [
+        "96",
+        "12",
+        "20",
+        "4"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-8",
+      "previous_sha256": "5389cc1d93812b3e66d1c5eeaecd54ac41d808d394ac439fc51baec7b5809d9b",
+      "content_sha256": "d740172b13867c6c35002c3d82e2b15c63075bb4b69acf6a110bf9f028c66eea",
+      "expected": "72",
+      "intermediate": "18",
+      "options": [
+        "72",
+        "39",
+        "22",
+        "28"
+      ],
+      "step": [
+        "-4",
+        "77",
+        "7",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-principiante-9",
+      "previous_sha256": "94c3550890912b7024e55661933e583c85aa55a095648d9152de913dd4cf2163",
+      "content_sha256": "f5c7693c56e1b02cb177cb4912ff53f7106328644fb80369a6271b171073efc6",
+      "expected": "264",
+      "intermediate": "33",
+      "options": [
+        "152",
+        "264",
+        "166",
+        "41"
+      ],
+      "step": [
+        "33",
+        "5",
+        "266",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-0",
+      "previous_sha256": "9d52832994fa1d08c8226d6967c0632a4623c0b7e4a03a423ebe26349a7810ce",
+      "content_sha256": "d29ca193cafef6faf98d834893687f253cd4d9f1441ebc9fe1864f8a26bc96e2",
+      "expected": "126",
+      "intermediate": "21",
+      "options": [
+        "42",
+        "126",
+        "56",
+        "27"
+      ],
+      "step": [
+        "21",
+        "-7",
+        "98",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-1",
+      "previous_sha256": "8b95154ba3f36eb18aee31d225a48c9d357d7546d653695c0fdfdf7431afdd9d",
+      "content_sha256": "5828a99b7d49c91cf5d669f5a4ae46d59c4e474229dddfd32798537c56a94eb0",
+      "expected": "48",
+      "intermediate": "12",
+      "options": [
+        "48",
+        "36",
+        "16",
+        "32"
+      ],
+      "step": [
+        "4",
+        "32",
+        "8",
+        "12"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-2",
+      "previous_sha256": "7735e064ed40107f00ca474aaa706d9e52c862008f93ba873f168a38526a726d",
+      "content_sha256": "0e08068ec3edc3da85073bc48bfd10f3b926fd4baee036d507811112abed8a27",
+      "expected": "32",
+      "intermediate": "16",
+      "options": [
+        "25",
+        "18",
+        "14",
+        "32"
+      ],
+      "step": [
+        "63",
+        "9",
+        "16",
+        "2"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-3",
+      "previous_sha256": "cbe857c35fb80a27249c231fa41e479ad3605e2201aae047b7867298c8c93ede",
+      "content_sha256": "35ea214952abd01bba37d00959fb4c6c266e6c6fc9bfde63a71660b5dae2c71b",
+      "expected": "140",
+      "intermediate": "20",
+      "options": [
+        "27",
+        "70",
+        "140",
+        "80"
+      ],
+      "step": [
+        "10",
+        "20",
+        "0",
+        "100"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-4",
+      "previous_sha256": "134476ef3202aaba704c18a10e0b134b3791c34b14eb240931f2cd575b645f91",
+      "content_sha256": "0f432497f6710cc4f34893d82fb39485b3e43b722ec90e2ee6b99d9eb055f5bc",
+      "expected": "120",
+      "intermediate": "24",
+      "options": [
+        "55",
+        "120",
+        "68",
+        "29"
+      ],
+      "step": [
+        "24",
+        "-2",
+        "143",
+        "11"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-5",
+      "previous_sha256": "1c2d6e1f070f9f91c0c0b1fd8d4b8e52be7092d6723a3c61b35f8dfa92a177f0",
+      "content_sha256": "17ee3f9afa09094fa2ae34f4120cadbfb7c14035a77262db25e76c7a732545d7",
+      "expected": "45",
+      "intermediate": "15",
+      "options": [
+        "45",
+        "39",
+        "18",
+        "36"
+      ],
+      "step": [
+        "9",
+        "36",
+        "12",
+        "15"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-6",
+      "previous_sha256": "d9165da83ca8bde6304980ef5d9fe2134179ded45509245a9e1fff0b19c551bf",
+      "content_sha256": "6766449809cdcf50df755e1a324d985ecbbe55d7303f1f11a46e96ff443ac2bb",
+      "expected": "152",
+      "intermediate": "19",
+      "options": [
+        "110",
+        "27",
+        "104",
+        "152"
+      ],
+      "step": [
+        "78",
+        "13",
+        "19",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-7",
+      "previous_sha256": "f9742aeb6b2eab148f7a1126435618365ac4bb7fc7dc29f734094acb624ade35",
+      "content_sha256": "8aaec2cfda09e24ade0d42279dd5c7bd4af3aecd2597a7f12e7124a3a0226ab1",
+      "expected": "138",
+      "intermediate": "23",
+      "options": [
+        "29",
+        "84",
+        "138",
+        "93"
+      ],
+      "step": [
+        "14",
+        "23",
+        "5",
+        "126"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-8",
+      "previous_sha256": "ae0d15cc1c3b7e8083b77f667563ad1b36eaad08599d98ce064d1422efa6bb08",
+      "content_sha256": "13308e9a1e16e4343bbf149835855313b868173260948c307995adea28993b03",
+      "expected": "108",
+      "intermediate": "27",
+      "options": [
+        "60",
+        "108",
+        "72",
+        "31"
+      ],
+      "step": [
+        "27",
+        "3",
+        "180",
+        "15"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-9",
+      "previous_sha256": "4587dcacb6b6733f7a1dc6369551d980bc794ebb2981ab0be1adee65dd4bdfbc",
+      "content_sha256": "efb51b96c03843760ec9852260eb15bacf37b60c7a8039cc227e4f18aedf0894",
+      "expected": "62",
+      "intermediate": "31",
+      "options": [
+        "62",
+        "47",
+        "33",
+        "32"
+      ],
+      "step": [
+        "1",
+        "240",
+        "16",
+        "31"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-0",
+      "previous_sha256": "f74fce558961114e5549c76106b8a8559d160b33471c9da112d6b2e583ec550b",
+      "content_sha256": "04b28f5ecf6e6210d255db9b2423e8b18f5055ed037103e2bda3c2ec1c47ea06",
+      "expected": "147",
+      "intermediate": "21",
+      "options": [
+        "49",
+        "147",
+        "63",
+        "28"
+      ],
+      "step": [
+        "21",
+        "-7",
+        "98",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-1",
+      "previous_sha256": "0256071cefa350cf3f997e0e1fd6b92fbb6529971cdc3177e2836df4afe37336",
+      "content_sha256": "871bdb46e9bb9d6890e28fde0af755db56364ddb554e793efdeb4a32ec35b73d",
+      "expected": "50",
+      "intermediate": "25",
+      "options": [
+        "50",
+        "44",
+        "27",
+        "38"
+      ],
+      "step": [
+        "13",
+        "114",
+        "19",
+        "25"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-2",
+      "previous_sha256": "cd170187ce0b93c3c01603fbcd4a651d117cc2b77af878ce6b7b30b0edc9946a",
+      "content_sha256": "9bbf8dcb33bb1d29719f2908e96629638daa0f7ca334a92dc3fd796bf05d542f",
+      "expected": "100",
+      "intermediate": "25",
+      "options": [
+        "67",
+        "29",
+        "56",
+        "100"
+      ],
+      "step": [
+        "154",
+        "14",
+        "25",
+        "3"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-3",
+      "previous_sha256": "33f4ddb132de9574a66833cb41fd8d086e5279530d10c913df9194db8eae73f3",
+      "content_sha256": "13576afb8a7fa11d9746bef6684cb80ac09b297dab52c9cf73ad32fcd9a9b093",
+      "expected": "72",
+      "intermediate": "12",
+      "options": [
+        "18",
+        "54",
+        "72",
+        "57"
+      ],
+      "step": [
+        "9",
+        "12",
+        "6",
+        "27"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-4",
+      "previous_sha256": "583cee956bf11a50ed980bf0eec580ddb826365039460dcd7d5ce882122fa070",
+      "content_sha256": "6631b9e72b0628d51efe030b07294d74ec6a99efb4476a94c1cc7a56d472bf12",
+      "expected": "96",
+      "intermediate": "12",
+      "options": [
+        "32",
+        "96",
+        "40",
+        "20"
+      ],
+      "step": [
+        "12",
+        "-4",
+        "32",
+        "4"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-5",
+      "previous_sha256": "46c6b09231b7b9c1b7ce2a977a6188a1c16de4984136ea148aa3520ee490280e",
+      "content_sha256": "541e10c2c2c98ed530ae29bf6b0ee9f21afa23eab4789fa0d043c1830950fdde",
+      "expected": "87",
+      "intermediate": "29",
+      "options": [
+        "87",
+        "61",
+        "32",
+        "48"
+      ],
+      "step": [
+        "3",
+        "208",
+        "16",
+        "29"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-6",
+      "previous_sha256": "8c3991d347ad45d758fb35d78814ed6572647b78be7c6ccf4c718562c09fa6eb",
+      "content_sha256": "995ba54296945ac147fe54e7f78970c338bad20226d2242b3f270e180b64b262",
+      "expected": "80",
+      "intermediate": "16",
+      "options": [
+        "60",
+        "21",
+        "55",
+        "80"
+      ],
+      "step": [
+        "55",
+        "11",
+        "16",
+        "6"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-7",
+      "previous_sha256": "89669b3a8ff25fd8cf10ece3847be3d65bf81731c0e4d47b3c85af7fa2d1fe97",
+      "content_sha256": "aea69a64ab0866bd71dbd599824dea07b5e3c49324bbb1fb0a4146321d790250",
+      "expected": "112",
+      "intermediate": "16",
+      "options": [
+        "23",
+        "42",
+        "112",
+        "52"
+      ],
+      "step": [
+        "6",
+        "16",
+        "-4",
+        "60"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "previous_sha256": "8162943a311247af9219a20ba2d16bdaa82961b95a1259f33511f3f2d99a8dc1",
+      "content_sha256": "d85aaf18c237ece37c1b5d357d45346d5c0987631a44ce901de00576522a0ac4",
+      "expected": "66",
+      "intermediate": "33",
+      "options": [
+        "36",
+        "66",
+        "51",
+        "35"
+      ],
+      "step": [
+        "33",
+        "3",
+        "270",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-9",
+      "previous_sha256": "fc9d3708778b62ddebfcfcc698634ad26f00ad4bd3f75455aeb2ff085e71d5d3",
+      "content_sha256": "f9be5a88b19ce865465ed20ee6984f0b8cd78f3bef629e37d9489f2e94a698cd",
+      "expected": "80",
+      "intermediate": "20",
+      "options": [
+        "80",
+        "59",
+        "24",
+        "52"
+      ],
+      "step": [
+        "6",
+        "91",
+        "13",
+        "20"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-0",
+      "previous_sha256": "93a51e0b08a65971f4cb2ec65316e5917a0772ae73e93ee8958642dd69efab5d",
+      "content_sha256": "5990f3f18b91c9cba729edd30654fdbe5a49ece24d891e1c7f820fade72d5502",
+      "expected": "81",
+      "intermediate": "27",
+      "options": [
+        "57",
+        "81",
+        "65",
+        "30"
+      ],
+      "step": [
+        "27",
+        "11",
+        "152",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-1",
+      "previous_sha256": "d076b994bd5932c4c0ffba934ef3c29cb2785b50d4d9e1afb43d5462137ffed1",
+      "content_sha256": "1724ec42d89a0e7f573a7ce00ea8c0ab06624e5fe47afe3870e82c56f37eeb25",
+      "expected": "175",
+      "intermediate": "25",
+      "options": [
+        "32",
+        "98",
+        "175",
+        "109"
+      ],
+      "step": [
+        "14",
+        "25",
+        "3",
+        "154"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-2",
+      "previous_sha256": "7e7b4d744d604de3c9e3815cf9825bb74f275b9a46904191a8345b42b1e6f230",
+      "content_sha256": "c67ca4e6fa02dea31db1aa97322470a267183c3005fa488b7cdc44100b74dbc6",
+      "expected": "92",
+      "intermediate": "23",
+      "options": [
+        "50",
+        "27",
+        "36",
+        "92"
+      ],
+      "step": [
+        "126",
+        "9",
+        "23",
+        "-5"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-3",
+      "previous_sha256": "7b916619006639da396449d90024a206eb75aa75410434c758c8d4fefb6969a7",
+      "content_sha256": "895ad58d29267b2d182d46cdad78f018333ae27ceec9f7f755f54c4409277b77",
+      "expected": "64",
+      "intermediate": "8",
+      "options": [
+        "64",
+        "36",
+        "16",
+        "32"
+      ],
+      "step": [
+        "0",
+        "16",
+        "4",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-4",
+      "previous_sha256": "0966fc6b363c9035787c0730a8917f45b92f4daa7a5327b1f9b01e6b3ff31564",
+      "content_sha256": "b824675c02d78412de0f22bc57572d80848da8922ea4e99e15fe2659bbe6ddfa",
+      "expected": "115",
+      "intermediate": "23",
+      "options": [
+        "80",
+        "115",
+        "87",
+        "28"
+      ],
+      "step": [
+        "23",
+        "9",
+        "112",
+        "16"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-5",
+      "previous_sha256": "a50e63a5bbedcb4ed834963b7d616d2f2b61ef7231fa016ea95d5c1c603b97af",
+      "content_sha256": "552338a91e5230ee0fb260c500e57a05cb5d6974379659001e58ba2ef31169ce",
+      "expected": "42",
+      "intermediate": "21",
+      "options": [
+        "23",
+        "22",
+        "42",
+        "32"
+      ],
+      "step": [
+        "11",
+        "21",
+        "1",
+        "110"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-6",
+      "previous_sha256": "ed45c3cfdc2b4e5efbfe5265fe9c7c866d576dea2f5d2c8bdbb4300f2864ee98",
+      "content_sha256": "d676ced6c405e471fc86b2ae44e5b0d9d186e872c681bd809fe7893a91d7965e",
+      "expected": "114",
+      "intermediate": "19",
+      "options": [
+        "49",
+        "25",
+        "36",
+        "114"
+      ],
+      "step": [
+        "78",
+        "6",
+        "19",
+        "-7"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-7",
+      "previous_sha256": "0f0a25f2bd6ca109e6bab4e8a3955261c00c38a3f590bfaa7aa3436d6f68d4f3",
+      "content_sha256": "c9c3eb26097d92d64f0273ee9f539920930c085ee0fa5db467a4abd89b91ae4c",
+      "expected": "63",
+      "intermediate": "21",
+      "options": [
+        "63",
+        "57",
+        "24",
+        "54"
+      ],
+      "step": [
+        "15",
+        "54",
+        "18",
+        "21"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-8",
+      "previous_sha256": "ea7840d5431464c54af80bc478a9b2fad0f02144dfe03d9df2ff8118bfcd9008",
+      "content_sha256": "26e2cf21fed3ae8427336a480fc97417ee7a645548bda4cc33ec01538fe0bd77",
+      "expected": "133",
+      "intermediate": "19",
+      "options": [
+        "91",
+        "133",
+        "97",
+        "26"
+      ],
+      "step": [
+        "19",
+        "7",
+        "78",
+        "13"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-9",
+      "previous_sha256": "7547474c392bdec97a2ac8da7ddcccaf81b656b11f992444a8a90d5295e963dd",
+      "content_sha256": "06a44b41c0893ae5f0446a9e6ca87cbc4c38fa83de37b8bc749f737d277052eb",
+      "expected": "68",
+      "intermediate": "17",
+      "options": [
+        "21",
+        "32",
+        "68",
+        "41"
+      ],
+      "step": [
+        "8",
+        "17",
+        "-1",
+        "72"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-0",
+      "previous_sha256": "17fb0888f326da5a1b0cdb7b2efd366290c7fb624f3f6b3f4f375c8b79ebbb76",
+      "content_sha256": "798aa01ca2f8909887c6dd4fc9305a4dea1f573c0fc32b9a052c578e6de90c85",
+      "expected": "104",
+      "intermediate": "26",
+      "options": [
+        "77",
+        "30",
+        "68",
+        "104"
+      ],
+      "step": [
+        "153",
+        "17",
+        "26",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-1",
+      "previous_sha256": "410993e7b93aeb028c52fc9080e7d254c26cdefa524128912a434a42a0ef1a20",
+      "content_sha256": "7362a6b3b3ad9691e0a0b2d3e0ce8d14ece16a50bdc69a3bfc68e0106fe7044e",
+      "expected": "60",
+      "intermediate": "30",
+      "options": [
+        "32",
+        "36",
+        "60",
+        "48"
+      ],
+      "step": [
+        "18",
+        "30",
+        "6",
+        "216"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-2",
+      "previous_sha256": "bb1848c0daefd77257c64f7aa882991c78aaf19073f7e47c46862c10eb3b86c5",
+      "content_sha256": "262e439a8d045716383f8c6c8eb98a244a2922a4060eb5bcf57c17fc533126bb",
+      "expected": "238",
+      "intermediate": "34",
+      "options": [
+        "133",
+        "238",
+        "148",
+        "41"
+      ],
+      "step": [
+        "34",
+        "4",
+        "285",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-3",
+      "previous_sha256": "b7c20cb51968dfc1136ecd51f830545ee58c9e34e0c8b839a2558e269fe594b7",
+      "content_sha256": "4f203858c5b210eeada5812a563a55d42e334eea4f4a08ba6d7648a10eb83c31",
+      "expected": "190",
+      "intermediate": "38",
+      "options": [
+        "190",
+        "118",
+        "43",
+        "100"
+      ],
+      "step": [
+        "2",
+        "360",
+        "20",
+        "38"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-4",
+      "previous_sha256": "16cca8b4f2f6d100a51ad1035ac1a2ba229333a3cf09f8d4f7bbe9bc57b3c536",
+      "content_sha256": "e5dffa270ff6d59754c50097af232d79509f8449150df832e21bbd5eebf52955",
+      "expected": "87",
+      "intermediate": "29",
+      "options": [
+        "71",
+        "32",
+        "63",
+        "87"
+      ],
+      "step": [
+        "168",
+        "21",
+        "29",
+        "13"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-5",
+      "previous_sha256": "ffec6e7197c71e13625b98759d6b2ce1f5d2cc04b2f22b89e60376d17bf20ac3",
+      "content_sha256": "1e3872f6c502dd4e502896667d45ff4a2d5d42c9ce29768283d072095f0faa04",
+      "expected": "33",
+      "intermediate": "33",
+      "options": [
+        "22",
+        "11",
+        "33",
+        "34"
+      ],
+      "step": [
+        "22",
+        "33",
+        "11",
+        "242"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-6",
+      "previous_sha256": "c1c0c4cfd466b5588bda8b305d4c9482cb7d8b715e7581f2b9a7425015ed6b0a",
+      "content_sha256": "70b70116bf3f60fd3c78c1e86dd5b4e9c414d2c2265aff0831321d169d1f738e",
+      "expected": "120",
+      "intermediate": "20",
+      "options": [
+        "36",
+        "120",
+        "50",
+        "26"
+      ],
+      "step": [
+        "20",
+        "-8",
+        "84",
+        "6"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-7",
+      "previous_sha256": "bef3089386ceaa2b98c3817383b1702eeab948e5927e4eca463676e400dadd46",
+      "content_sha256": "a31d177beef6097a16222cb7a7053432076a0da8fff0ab6c93c1ea7cfd1731a4",
+      "expected": "96",
+      "intermediate": "24",
+      "options": [
+        "96",
+        "45",
+        "28",
+        "68"
+      ],
+      "step": [
+        "-10",
+        "119",
+        "7",
+        "24"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-8",
+      "previous_sha256": "ffac6d1861ea2812eb96495259694b9208d722a68e0e8c64e8717b9869b35536",
+      "content_sha256": "68ac357a4eef6effa912e56b0730897dfd9392760c1ece5d31cbc56e10ccbabc",
+      "expected": "30",
+      "intermediate": "15",
+      "options": [
+        "23",
+        "17",
+        "16",
+        "30"
+      ],
+      "step": [
+        "56",
+        "8",
+        "15",
+        "1"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-9",
+      "previous_sha256": "f730ae7e9c7609e81d4f8d51fa3a353120c75f196249b27f4ae2fd54211879ae",
+      "content_sha256": "137e939c33699e7dbbfdfcc16e0fa3a5a50ffb0028e5c54742c4a7d91a33b103",
+      "expected": "133",
+      "intermediate": "19",
+      "options": [
+        "26",
+        "63",
+        "133",
+        "73"
+      ],
+      "step": [
+        "9",
+        "19",
+        "-1",
+        "90"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-10",
+      "previous_sha256": "0a92aa41c38e4dedfc1a07a6cf2b8934f997a423c4712393ab913fa94b0d8bed",
+      "content_sha256": "f3a6aa9cd9b3987438d4d610a02bb1e3c52b4ab5b39e25f9028a8a2b4be719f1",
+      "expected": "115",
+      "intermediate": "23",
+      "options": [
+        "50",
+        "115",
+        "63",
+        "28"
+      ],
+      "step": [
+        "23",
+        "-3",
+        "130",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-11",
+      "previous_sha256": "75b5475f4226491869bd4fb3c753c8119457d140c8c6fdd81ab27f10ee417dd2",
+      "content_sha256": "1aa8327c73790f9ce9938cacc24df442a4d9839f575a7040eff90081714b5e11",
+      "expected": "81",
+      "intermediate": "27",
+      "options": [
+        "81",
+        "49",
+        "30",
+        "33"
+      ],
+      "step": [
+        "-5",
+        "176",
+        "11",
+        "27"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-12",
+      "previous_sha256": "4d0b8621aa75d8cc0532b0eb8116fe68c21f5598a0c8943c2f2ad90e7d6eebea",
+      "content_sha256": "8ab4c1ad758823b939914bbe6c97eae53ff57a95f9e09f07abbdc05d76cb4878",
+      "expected": "31",
+      "intermediate": "31",
+      "options": [
+        "32",
+        "12",
+        "19",
+        "31"
+      ],
+      "step": [
+        "228",
+        "12",
+        "31",
+        "-7"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-13",
+      "previous_sha256": "8adea0b2cdb440bb37778aaccf0508679cac79d64a67a4cf3f200d15a0317232",
+      "content_sha256": "b4782169f4b89f1809068b61a8a4ff7f4cf90c9d17c8b0b5919f4a56e0846ec0",
+      "expected": "132",
+      "intermediate": "22",
+      "options": [
+        "28",
+        "78",
+        "132",
+        "87"
+      ],
+      "step": [
+        "13",
+        "22",
+        "4",
+        "117"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-14",
+      "previous_sha256": "607a7140a801b62d94d21bc361211d1bdd43de681124c57ac33fed7ea28d2104",
+      "content_sha256": "1de4d89b2bbd3345fdb0a771da3aae753efdc58daa82c96e89fb9d261271a29b",
+      "expected": "104",
+      "intermediate": "26",
+      "options": [
+        "56",
+        "104",
+        "68",
+        "30"
+      ],
+      "step": [
+        "26",
+        "2",
+        "168",
+        "14"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-0",
+      "previous_sha256": "af1546a7dbdfaacdda59db07410fc069f9f14fe8460ec8cfa0e6254a8498b962",
+      "content_sha256": "e41baf55ad3bfd157f41261dc45a3c5d63326c9992b426eb6f4f463685987ef7",
+      "expected": "144",
+      "intermediate": "36",
+      "options": [
+        "96",
+        "40",
+        "80",
+        "144"
+      ],
+      "step": [
+        "320",
+        "20",
+        "36",
+        "4"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-1",
+      "previous_sha256": "e0483eb493aa89294480eb1b9a3f99063324d0ff518592c2640475cae1f24f18",
+      "content_sha256": "320e48106925ab361f112dff6370431284a40b92c64bca6aa78ab948a7e51d13",
+      "expected": "138",
+      "intermediate": "23",
+      "options": [
+        "29",
+        "90",
+        "138",
+        "98"
+      ],
+      "step": [
+        "15",
+        "23",
+        "7",
+        "120"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-2",
+      "previous_sha256": "55831cee3e24b233ee9a0069a5fe7d1f302f67de1fe5c08a7489634c64a050bb",
+      "content_sha256": "8084b4d27d353e633506a38a9d9ca6913f56c1b1b731562fce1f025b885ee75e",
+      "expected": "23",
+      "intermediate": "23",
+      "options": [
+        "13",
+        "23",
+        "24",
+        "10"
+      ],
+      "step": [
+        "23",
+        "-3",
+        "130",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-3",
+      "previous_sha256": "468d04745770d6f7e37babd69f0af03abb467741bc6839f2d500276cb8cac41b",
+      "content_sha256": "d4750fe2f9814f61ac83267cb633e05ae38614d1bbd9fba9a8921db2905df40a",
+      "expected": "120",
+      "intermediate": "40",
+      "options": [
+        "120",
+        "84",
+        "43",
+        "66"
+      ],
+      "step": [
+        "4",
+        "396",
+        "22",
+        "40"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-4",
+      "previous_sha256": "33a356959567b0b29106a3ef9e748b2e0767c65b5b7f1750d48f71fc8bc926a6",
+      "content_sha256": "381b1c6c8c41a0ee06754b4f91c33827a194f6b6c1c6324ffe53870c1d49f8bf",
+      "expected": "135",
+      "intermediate": "27",
+      "options": [
+        "95",
+        "32",
+        "85",
+        "135"
+      ],
+      "step": [
+        "170",
+        "17",
+        "27",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-5",
+      "previous_sha256": "3e685dcb9f7fbff9ecb425a0df59d1987b1b9b0393d612849fe73bfcc7611c43",
+      "content_sha256": "54debc19c9a25a7343babeb2f29f5bbc0ebc4a86dda4e1f66060c324575231bd",
+      "expected": "189",
+      "intermediate": "27",
+      "options": [
+        "34",
+        "84",
+        "189",
+        "99"
+      ],
+      "step": [
+        "12",
+        "27",
+        "-3",
+        "180"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-6",
+      "previous_sha256": "a3020ada5a0890d67812c0ad5c7caf820fcc607d03e953f04e4eb9b8d3e2d6e0",
+      "content_sha256": "498f6232ff6f87520d68e5d952504656d1b5fe1ce2a886b4b291641a1556ccc8",
+      "expected": "28",
+      "intermediate": "14",
+      "options": [
+        "14",
+        "28",
+        "21",
+        "16"
+      ],
+      "step": [
+        "14",
+        "0",
+        "49",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-7",
+      "previous_sha256": "4b60a37b37f6b9698c713059130e4a7c3503ab4d3b44252b2f00276693f94bb6",
+      "content_sha256": "4fc767c6a79557e7673329f95fc79272ff8155da7945ebfc9fadb5989bdd4618",
+      "expected": "124",
+      "intermediate": "31",
+      "options": [
+        "124",
+        "88",
+        "35",
+        "76"
+      ],
+      "step": [
+        "7",
+        "228",
+        "19",
+        "31"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-8",
+      "previous_sha256": "6f150596960694f08cb1e013d8a21dd3d41caa9ff807adb2429696260bfdfb11",
+      "content_sha256": "e1e436cd484a45ab9167a9209bfc2e471f72dc1b2c8744eebb2d46df4b8c8545",
+      "expected": "186",
+      "intermediate": "31",
+      "options": [
+        "101",
+        "37",
+        "84",
+        "186"
+      ],
+      "step": [
+        "238",
+        "14",
+        "31",
+        "-3"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-9",
+      "previous_sha256": "d79f0a19bc5256259e304c53d1716b6727a73276639edcd569b2a987dec2b8a7",
+      "content_sha256": "651a557a5582b997064a0667f17466591aee2797f238436eb6cf0b64c0122198",
+      "expected": "18",
+      "intermediate": "18",
+      "options": [
+        "9",
+        "0",
+        "18",
+        "19"
+      ],
+      "step": [
+        "9",
+        "18",
+        "0",
+        "81"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-10",
+      "previous_sha256": "1cbf1e241ffedc02343573bffc27a5df5fafec9b068da5d6655d531f57b6449c",
+      "content_sha256": "7a0be99bba37404cddb7a8854fc8e237268efd0206aff8e064e5c18824a14689",
+      "expected": "105",
+      "intermediate": "35",
+      "options": [
+        "63",
+        "105",
+        "77",
+        "38"
+      ],
+      "step": [
+        "35",
+        "7",
+        "294",
+        "21"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-11",
+      "previous_sha256": "cbe37db2cda44ce0a21fdc1cfc8ffeef6b9b7a085914066c716e7244ce2719b7",
+      "content_sha256": "22a37954d874cb64604511aba4d361abe69fca3342782615b30a096c4ed50846",
+      "expected": "175",
+      "intermediate": "35",
+      "options": [
+        "175",
+        "99",
+        "40",
+        "80"
+      ],
+      "step": [
+        "-3",
+        "304",
+        "16",
+        "35"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-12",
+      "previous_sha256": "4166bf67505ca0567da1fc3791ab716cda5f67aee48eb430376dbc2a7224509f",
+      "content_sha256": "db1547b41115ab97b39bc076930de17ca4ecdab1884f99bb2f97b4c33704ccf1",
+      "expected": "154",
+      "intermediate": "22",
+      "options": [
+        "88",
+        "29",
+        "77",
+        "154"
+      ],
+      "step": [
+        "121",
+        "11",
+        "22",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-13",
+      "previous_sha256": "96cc94406d449932b048eda91f672cf3260e9fc22723c07d4d7ba50c3ca45a1b",
+      "content_sha256": "51a8b14036054ecac63f8806a6a8cd6e85546fc148bed83bee18bb89e5513ef3",
+      "expected": "44",
+      "intermediate": "22",
+      "options": [
+        "24",
+        "12",
+        "44",
+        "28"
+      ],
+      "step": [
+        "6",
+        "22",
+        "-10",
+        "96"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-14",
+      "previous_sha256": "032a51a9a3cbdf05930507bf3565c53697aa73f834bf411e27f1ff7a12a63673",
+      "content_sha256": "b7a02a4434fcea1148622c97cbee84672a4f56619908b1681afeffc3ab27842d",
+      "expected": "104",
+      "intermediate": "26",
+      "options": [
+        "72",
+        "104",
+        "80",
+        "30"
+      ],
+      "step": [
+        "26",
+        "10",
+        "144",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-15",
+      "previous_sha256": "44d5a57d537652f0ec1f89fb31e42606082a3b329db080c18fbf7df86a86b450",
+      "content_sha256": "1d2fd4efe4e09ee689b03c6bf722af7ba3e749c34a78a29e74bbe02ea011a39e",
+      "expected": "156",
+      "intermediate": "26",
+      "options": [
+        "156",
+        "91",
+        "32",
+        "78"
+      ],
+      "step": [
+        "0",
+        "169",
+        "13",
+        "26"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+      "previous_sha256": "f643a9ccc08e243650dfa41c2c50deedf8ea7dfc711cb56069d7b7aee7fbb159",
+      "content_sha256": "ef9de5dd2af5a1a481e82171ba89814b40cd4853e9433ea0325de8f1e3944c7c",
+      "expected": "26",
+      "intermediate": "26",
+      "options": [
+        "27",
+        "8",
+        "18",
+        "26"
+      ],
+      "step": [
+        "144",
+        "8",
+        "26",
+        "-10"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-17",
+      "previous_sha256": "4b18c30d7f7be8cd303f60f8cebe2d3ad9b98ba991d1f013b7b789530a2a1769",
+      "content_sha256": "b7e230e47b2f923fea7343bdb911675ef303c846aae018c6f5bc263b2b30d4cf",
+      "expected": "90",
+      "intermediate": "30",
+      "options": [
+        "33",
+        "60",
+        "90",
+        "70"
+      ],
+      "step": [
+        "20",
+        "30",
+        "10",
+        "200"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-18",
+      "previous_sha256": "9737cc5263dc269b7153a09191fbe66f2d247f0f35b132de1b80a5834838151a",
+      "content_sha256": "50f35d09634470140fda627a05c365691e65645020f5a12ebc1018ef43a035c6",
+      "expected": "150",
+      "intermediate": "30",
+      "options": [
+        "75",
+        "150",
+        "90",
+        "35"
+      ],
+      "step": [
+        "30",
+        "0",
+        "225",
+        "15"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-19",
+      "previous_sha256": "0af1e209e493486f044f645c46e6e822d5e539fd21eadf560a101a6f34370d23",
+      "content_sha256": "3fdda5fea6f9beaeb7603b183ce7d3df5e52b350fc7dafbb3d0bb49484cc872a",
+      "expected": "119",
+      "intermediate": "17",
+      "options": [
+        "119",
+        "77",
+        "24",
+        "70"
+      ],
+      "step": [
+        "3",
+        "70",
+        "10",
+        "17"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-0",
+      "previous_sha256": "6d4b5e24b6ffc3f8eb7093525d595c634e0b0d50885daa2473fdf044edc34344",
+      "content_sha256": "1df1a71ccfc6c414b1bbf9a957e976d4c7420d5cf63c80095aff97a2d317f569",
+      "expected": "175",
+      "intermediate": "25",
+      "options": [
+        "85",
+        "32",
+        "70",
+        "175"
+      ],
+      "step": [
+        "150",
+        "10",
+        "25",
+        "-5"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-1",
+      "previous_sha256": "ecec72163444390cb8e388581df84348707863d5fff9cb07d9a79e8d1fe47d1e",
+      "content_sha256": "bd6851ab7ef339b04091e261c8a60589e5fb209f099ca8e677dfaed4655bf11c",
+      "expected": "160",
+      "intermediate": "40",
+      "options": [
+        "160",
+        "106",
+        "44",
+        "88"
+      ],
+      "step": [
+        "4",
+        "396",
+        "22",
+        "40"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-2",
+      "previous_sha256": "e716b1ce198e738305d0123b5022d68423121bdeefd055738c1ba81cf2f256d4",
+      "content_sha256": "761e8be17dc91978cc60a67209a8bdf72b9ddb091265c28c2d3fdf8f18dd49f4",
+      "expected": "25",
+      "intermediate": "25",
+      "options": [
+        "8",
+        "25",
+        "26",
+        "17"
+      ],
+      "step": [
+        "25",
+        "9",
+        "136",
+        "17"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-3",
+      "previous_sha256": "65f80a6611216a3d1490a7f4054fe99cc5d94ac0afb19aef3aef2b57442b0391",
+      "content_sha256": "ec5f999218f2b1e13a23f0821d83003c15e62127c383b6eadc4dd51aa514e793",
+      "expected": "115",
+      "intermediate": "23",
+      "options": [
+        "28",
+        "60",
+        "115",
+        "71"
+      ],
+      "step": [
+        "12",
+        "23",
+        "1",
+        "132"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-4",
+      "previous_sha256": "6fe61a37ba97437731aef1e89cf4ee8ad4989b48482812f43f299db87d9de924",
+      "content_sha256": "9dc686b8d986780c7c8658fc534f938b422a08fa1164d8231ea4da0ad78ad8e9",
+      "expected": "42",
+      "intermediate": "21",
+      "options": [
+        "28",
+        "23",
+        "14",
+        "42"
+      ],
+      "step": [
+        "98",
+        "7",
+        "21",
+        "-7"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-5",
+      "previous_sha256": "8f72eb84fd727e3c9f0482ef23b20c77033bfb9c8155e6d2cffd96eed6a2bfcc",
+      "content_sha256": "8aa7c410461cf6a02de8cbba7f627f9b469660024c2b0112476451ce27d10e91",
+      "expected": "216",
+      "intermediate": "36",
+      "options": [
+        "216",
+        "131",
+        "42",
+        "114"
+      ],
+      "step": [
+        "2",
+        "323",
+        "19",
+        "36"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-6",
+      "previous_sha256": "0d221308936655d88b8d9ac3f1fdcba3e2031b542f2e5fbce87003d2ef548eac",
+      "content_sha256": "e5dd3fc4c9ed0d3871519e7bed56b60e63601d151d0cad219288503d35a85f85",
+      "expected": "63",
+      "intermediate": "21",
+      "options": [
+        "42",
+        "63",
+        "49",
+        "24"
+      ],
+      "step": [
+        "21",
+        "7",
+        "98",
+        "14"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-7",
+      "previous_sha256": "b3fff8d67775aa695e2b8a7252aa70ce67d155ab73b2c3cb1bcaeae8258d5610",
+      "content_sha256": "f61a9a8fdae44af276c3254d51fcbaaf788971488acb17bc6eee83723880942a",
+      "expected": "136",
+      "intermediate": "34",
+      "options": [
+        "97",
+        "38",
+        "84",
+        "136"
+      ],
+      "step": [
+        "273",
+        "21",
+        "34",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-8",
+      "previous_sha256": "b9d892b134a5acba57ad28f2a3a10accd854263e27e693aa72ddf5226c0f04b8",
+      "content_sha256": "b6eb5057129de71f80586c6406f250cce3e923e6dadbb3ec971cd528a9d02bfb",
+      "expected": "32",
+      "intermediate": "32",
+      "options": [
+        "32",
+        "33",
+        "16",
+        "0"
+      ],
+      "step": [
+        "0",
+        "256",
+        "16",
+        "32"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-9",
+      "previous_sha256": "7316f06befd103724ea5dc61558a8b69c3133647311a153cd3ba29fad317a7b4",
+      "content_sha256": "2154513a70164de5f51b63a83ac02406e44b8cb39402b8e265a612fc59f1cac7",
+      "expected": "150",
+      "intermediate": "30",
+      "options": [
+        "55",
+        "150",
+        "74",
+        "35"
+      ],
+      "step": [
+        "30",
+        "-8",
+        "209",
+        "11"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-10",
+      "previous_sha256": "274072ab9b977d3260aba8c4c6f96b18c65be31484f1c124d5b920adbb2cf3bd",
+      "content_sha256": "2dbaa3b0f7dd445a94b47bf41da4e38f4c474c5c644c22423a1069deb0745e04",
+      "expected": "30",
+      "intermediate": "15",
+      "options": [
+        "17",
+        "12",
+        "30",
+        "21"
+      ],
+      "step": [
+        "6",
+        "15",
+        "-3",
+        "54"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-11",
+      "previous_sha256": "35417d0a9a9adc72ece19c614fb662b12439e6a0eaf6a7eff4b583ead771ba2e",
+      "content_sha256": "48ae899af71d35e055ddfb2625fcd0d0f92a548c3c40565c8caada692fa05b5e",
+      "expected": "180",
+      "intermediate": "30",
+      "options": [
+        "120",
+        "36",
+        "108",
+        "180"
+      ],
+      "step": [
+        "216",
+        "18",
+        "30",
+        "6"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-0",
+      "previous_sha256": "1bf0ce7d9d2fa67af13bfcd2f5832061b7b7ef60b6833779f040aba32bfba0d9",
+      "content_sha256": "ad692bd7435629d5fa43e03f35234d78d590b9cfcf00262bdb2cdd941bb33e61",
+      "expected": "105",
+      "intermediate": "35",
+      "options": [
+        "38",
+        "54",
+        "105",
+        "71"
+      ],
+      "step": [
+        "18",
+        "35",
+        "1",
+        "306"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-1",
+      "previous_sha256": "37310492b74189cadb46101fcccdfde6ceef863662635ee03039b1dfe0f96fcc",
+      "content_sha256": "d58f37e15dd537df532de46726d8f87e29df62cd10167dbf2d89a45ff2175595",
+      "expected": "26",
+      "intermediate": "26",
+      "options": [
+        "7",
+        "26",
+        "27",
+        "19"
+      ],
+      "step": [
+        "26",
+        "12",
+        "133",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-2",
+      "previous_sha256": "fe893e85694f5dae3c09f10640e77b8a80a92ee39aabe9fbcf58c4eb2c3dd7e7",
+      "content_sha256": "b9274137ebbb5d9765fe645928b8ec1dcdf3c1442149b955a91040467454fcfb",
+      "expected": "180",
+      "intermediate": "30",
+      "options": [
+        "180",
+        "130",
+        "36",
+        "120"
+      ],
+      "step": [
+        "10",
+        "200",
+        "20",
+        "30"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-3",
+      "previous_sha256": "ac24576284ba4a86c0e8315c2b2a4411b072727ff597d9bbe3dd506408f4a991",
+      "content_sha256": "a535140f3798b40d47119dfde8402adc6a114ca512b239092e3086c753e1c3b9",
+      "expected": "136",
+      "intermediate": "34",
+      "options": [
+        "97",
+        "38",
+        "84",
+        "136"
+      ],
+      "step": [
+        "273",
+        "21",
+        "34",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-4",
+      "previous_sha256": "0de74269e4e35d95e02b052f06eb771aa42f926ec8fb4c6287fc6338f0bc1996",
+      "content_sha256": "1dea88ab3259b34e7a5a435cb08213729eba89acac339eeaecfcc7faf016002c",
+      "expected": "76",
+      "intermediate": "38",
+      "options": [
+        "40",
+        "44",
+        "76",
+        "60"
+      ],
+      "step": [
+        "22",
+        "38",
+        "6",
+        "352"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-5",
+      "previous_sha256": "d52bedb5641d4af327d9c111abade00bb0dd8778319eba2e13456d5a6524432e",
+      "content_sha256": "a175b724b89217f9b44aaf13211c3470a5058cf979a5f016f0df2e3b5b001551",
+      "expected": "175",
+      "intermediate": "25",
+      "options": [
+        "42",
+        "175",
+        "61",
+        "32"
+      ],
+      "step": [
+        "25",
+        "-13",
+        "114",
+        "6"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-6",
+      "previous_sha256": "b2476ef44634cf087e448b4b6f3483143e7b198a79101c89bc21767d125d57e8",
+      "content_sha256": "d7bba6231d590764478f79d6753bbf5ba867cb60f56798e3d9c17909a7f9a272",
+      "expected": "80",
+      "intermediate": "16",
+      "options": [
+        "80",
+        "44",
+        "21",
+        "35"
+      ],
+      "step": [
+        "-2",
+        "63",
+        "7",
+        "16"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-7",
+      "previous_sha256": "8381543cbbe4f0af7a844073bf79d09bb9aac0220a0b5bd3571d407edac9386e",
+      "content_sha256": "67569ff1cb2a74d149bcf510840058446372c5d5a72dc81d43b9021d84a2ce4d",
+      "expected": "60",
+      "intermediate": "20",
+      "options": [
+        "36",
+        "23",
+        "24",
+        "60"
+      ],
+      "step": [
+        "96",
+        "8",
+        "20",
+        "-4"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-8",
+      "previous_sha256": "74162db5ca8c877f7c7c6c1a8273543228ef9a5c6d65be39b77c6337a9cf31ca",
+      "content_sha256": "544cbff323de815342b0177466cbaaa905afced3ac7f7ccef6d32f38a39290e4",
+      "expected": "24",
+      "intermediate": "24",
+      "options": [
+        "9",
+        "15",
+        "24",
+        "25"
+      ],
+      "step": [
+        "9",
+        "24",
+        "-6",
+        "135"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-9",
+      "previous_sha256": "f3a90bcfc63acaf5ad74608f43a6adc488e58b27ba5d81047d8fc6bbbe53a40e",
+      "content_sha256": "07b89c48712b6fa39dbd4e7995464cb1f96f4314e8f18f965b7091b7ce74e8b1",
+      "expected": "168",
+      "intermediate": "28",
+      "options": [
+        "60",
+        "168",
+        "78",
+        "34"
+      ],
+      "step": [
+        "28",
+        "-8",
+        "180",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-10",
+      "previous_sha256": "dc957180ec0a75d830279ed43079e0f04c86fd4b836cd260928f868bf121899c",
+      "content_sha256": "c51c2e212de58d6722f2fff773344e4c106fe1e2f6700dea44e0f0ac0dbeb246",
+      "expected": "76",
+      "intermediate": "19",
+      "options": [
+        "76",
+        "52",
+        "23",
+        "44"
+      ],
+      "step": [
+        "3",
+        "88",
+        "11",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-11",
+      "previous_sha256": "f86ea40e4ff98f460f349096975e1f12818e5081e6a9d97bd795137daa8e41a1",
+      "content_sha256": "710832be872b488d76635277e89ec532d9fbefcf0a36bc163bbf29fd1db13a71",
+      "expected": "46",
+      "intermediate": "23",
+      "options": [
+        "35",
+        "25",
+        "24",
+        "46"
+      ],
+      "step": [
+        "132",
+        "12",
+        "23",
+        "1"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-12",
+      "previous_sha256": "236510a20172bf9b7633e38f30db8f6520a5466b36a56c33e98bbac18ab6e9c5",
+      "content_sha256": "26a6a0fcb5d4000c0fb50930af9eebf7efc7b8db82c97b0d212b4265cd6a269e",
+      "expected": "189",
+      "intermediate": "27",
+      "options": [
+        "34",
+        "91",
+        "189",
+        "105"
+      ],
+      "step": [
+        "13",
+        "27",
+        "-1",
+        "182"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-13",
+      "previous_sha256": "a88b62baa91b1983a01e5f70920eb737ad4a5b11a9d85b154dcd8cb229df669c",
+      "content_sha256": "0c17f3e897c0de27e2d8fdab42a20df9537a58eb65ea77855ba79df2ecbaf485",
+      "expected": "155",
+      "intermediate": "31",
+      "options": [
+        "70",
+        "155",
+        "87",
+        "36"
+      ],
+      "step": [
+        "31",
+        "-3",
+        "238",
+        "14"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-14",
+      "previous_sha256": "c5f224a7cdac9bf434186df17d861077cc5d2100cda70f3b02ccc9e4e98b9e42",
+      "content_sha256": "196d256bfbe21d10efe8a1f021fd99cd2922243f46ff6ef9731720305da4fd45",
+      "expected": "66",
+      "intermediate": "22",
+      "options": [
+        "66",
+        "52",
+        "25",
+        "45"
+      ],
+      "step": [
+        "8",
+        "105",
+        "15",
+        "22"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-0",
+      "previous_sha256": "6e8a48478ebd680617bfde52f20a2be4e1741278aec5a3f1a676fce602cc97b8",
+      "content_sha256": "ad4cacd3b6846a4da89faa452e96029b16d0908538d04e8b75cb4f5687c1a8c4",
+      "expected": "37",
+      "intermediate": "37",
+      "options": [
+        "37",
+        "38",
+        "22",
+        "15"
+      ],
+      "step": [
+        "7",
+        "330",
+        "22",
+        "37"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-1",
+      "previous_sha256": "87ed7f1f182e12498197d8268d769057a405de0b008183457a4661732e1466f7",
+      "content_sha256": "56f71f3d824571ed0a93c8555f689b5f15afb3ad3092480b596e4cd62a815f2a",
+      "expected": "72",
+      "intermediate": "24",
+      "options": [
+        "58",
+        "27",
+        "51",
+        "72"
+      ],
+      "step": [
+        "119",
+        "17",
+        "24",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-2",
+      "previous_sha256": "7ebc1c1b0a46a79e42a729717a35321f501bdad47cff09300e759fe7f6a2d2f4",
+      "content_sha256": "218bb5e29650b7f539de26bd5f57deaea3895b200c6fc69c26f523205ad8fa13",
+      "expected": "120",
+      "intermediate": "24",
+      "options": [
+        "29",
+        "60",
+        "120",
+        "72"
+      ],
+      "step": [
+        "12",
+        "24",
+        "0",
+        "144"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-3",
+      "previous_sha256": "80082645eed312906197f0a8f10a01bc50626a620ec30ba7f3d5298b03b134e8",
+      "content_sha256": "e8e93dc0d1e162b637bda282d7fb961a8e570f791af67cff443ea48e36dc28e6",
+      "expected": "168",
+      "intermediate": "24",
+      "options": [
+        "49",
+        "168",
+        "66",
+        "31"
+      ],
+      "step": [
+        "24",
+        "-10",
+        "119",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-4",
+      "previous_sha256": "c4765c5adb69cf4be7769d27b8215456e5e4043ce331520ad570de76a36bdf48",
+      "content_sha256": "c14ef8b276374032bfc241cad1bc68c20e9b7794cc920269472829e3f68e3440",
+      "expected": "56",
+      "intermediate": "28",
+      "options": [
+        "56",
+        "47",
+        "30",
+        "38"
+      ],
+      "step": [
+        "10",
+        "171",
+        "19",
+        "28"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-5",
+      "previous_sha256": "68bfe7eedc6daeeb191790b0b6a3b80094635acf4794699fcf335313195e36ff",
+      "content_sha256": "cde079682b9d5e12d1b87d6309777796598a44422fcdf4f93520287c2d2e4304",
+      "expected": "112",
+      "intermediate": "28",
+      "options": [
+        "70",
+        "32",
+        "56",
+        "112"
+      ],
+      "step": [
+        "196",
+        "14",
+        "28",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-6",
+      "previous_sha256": "214c67bb1479602eddd9eb4f217cd9f5baf4408e739187dd2d5de18695625139",
+      "content_sha256": "8b1847e055b0009887b6ee579f46adc902c8af7bccc8eabd94aa709fba950ced",
+      "expected": "168",
+      "intermediate": "28",
+      "options": [
+        "34",
+        "54",
+        "168",
+        "73"
+      ],
+      "step": [
+        "9",
+        "28",
+        "-10",
+        "171"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-7",
+      "previous_sha256": "7c2d49068378b8cc521ee1f3f86a5be4df02a19facab1681e5e4edde365cdbf6",
+      "content_sha256": "b1fb81720d7bc9b6ffa1728012f88ebac0200145b403b6477c2a7d75c4bc8d54",
+      "expected": "32",
+      "intermediate": "32",
+      "options": [
+        "11",
+        "32",
+        "33",
+        "21"
+      ],
+      "step": [
+        "32",
+        "10",
+        "231",
+        "21"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-8",
+      "previous_sha256": "2b7f122267f733325db14617ed3cb9c2818ea1bc223ce2650289066c033c7b22",
+      "content_sha256": "aa74fa912309cb14bdb9231e4f6a67a3863af22b34fb6c25ae1daec92d0796cc",
+      "expected": "96",
+      "intermediate": "32",
+      "options": [
+        "96",
+        "64",
+        "35",
+        "48"
+      ],
+      "step": [
+        "0",
+        "256",
+        "16",
+        "32"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-9",
+      "previous_sha256": "4ed25b7d2d50806428aa076557a7cdde5caf6139de02893838e8d2fc69ed6c1b",
+      "content_sha256": "a08b69580ad06c3d228bab47504fd4bfb8b2ada2a31ac5ee71eb2a74f2dc38ed",
+      "expected": "95",
+      "intermediate": "19",
+      "options": [
+        "63",
+        "24",
+        "55",
+        "95"
+      ],
+      "step": [
+        "88",
+        "11",
+        "19",
+        "3"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-10",
+      "previous_sha256": "f29001c6130c3d9aef573eaa7dccc067c40f13b9f2043e358d2cc7666c5e94ff",
+      "content_sha256": "b3b4a12caf6d19d6d7a3aba84c13e749c6f30ea4125cab1760c4aabe6d5598e3",
+      "expected": "133",
+      "intermediate": "19",
+      "options": [
+        "26",
+        "42",
+        "133",
+        "55"
+      ],
+      "step": [
+        "6",
+        "19",
+        "-7",
+        "78"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-11",
+      "previous_sha256": "7c8831821ed33d8ac545e4460e3978874fc646492f9d28e700889aa974f4a747",
+      "content_sha256": "8644a3729dc1a1ff456ed4cb7dfb02fa1b1765c1759a28f9f5a6644b85d748c7",
+      "expected": "72",
+      "intermediate": "36",
+      "options": [
+        "36",
+        "72",
+        "54",
+        "38"
+      ],
+      "step": [
+        "36",
+        "0",
+        "324",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-12",
+      "previous_sha256": "6eaa526159278ca0285988a0415689afee340872297054320d099457494715ed",
+      "content_sha256": "8875acf9cf0b15ac39398b6322181a71b0222859cc08165d7d4ed291b02606fa",
+      "expected": "92",
+      "intermediate": "23",
+      "options": [
+        "92",
+        "62",
+        "27",
+        "52"
+      ],
+      "step": [
+        "3",
+        "130",
+        "13",
+        "23"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-13",
+      "previous_sha256": "31c978c544345440b5e56f8d42b4cffbeddc1556945c37e7cd4614b0ab939206",
+      "content_sha256": "06372d01ae97f84842c9ecb1017e45db21b2e7557c93fafa8581b7d224fdc63d",
+      "expected": "138",
+      "intermediate": "23",
+      "options": [
+        "63",
+        "29",
+        "48",
+        "138"
+      ],
+      "step": [
+        "120",
+        "8",
+        "23",
+        "-7"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-14",
+      "previous_sha256": "af6d7608caafb57f00d0bee14b32d34da6caa21c13ce0e829292114cf95d9b4a",
+      "content_sha256": "d998102844fac0361d9dfadb0bf888f7d0cbd5223ac73fb6ffe757662a12718c",
+      "expected": "27",
+      "intermediate": "27",
+      "options": [
+        "20",
+        "7",
+        "27",
+        "28"
+      ],
+      "step": [
+        "20",
+        "27",
+        "13",
+        "140"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-15",
+      "previous_sha256": "51b76f5c7b3179c9ce53ed89d8ffd0b4bd3dc3b834a7aeb179a9ae51e31b2e17",
+      "content_sha256": "08b7213794b6aa23822f8b1e09bceb5a8025a79b2287e045c3038e1b0f271512",
+      "expected": "81",
+      "intermediate": "27",
+      "options": [
+        "45",
+        "81",
+        "57",
+        "30"
+      ],
+      "step": [
+        "27",
+        "3",
+        "180",
+        "15"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+      "previous_sha256": "81153a1324fc6983ee0d02ed490e539c395733e646e5dcfd4fd2f8028d8e5566",
+      "content_sha256": "bcbacdd15ada8e420df731ec8c6534cbf740a806c27872ccc92674832e3586b5",
+      "expected": "135",
+      "intermediate": "27",
+      "options": [
+        "135",
+        "67",
+        "32",
+        "50"
+      ],
+      "step": [
+        "-7",
+        "170",
+        "10",
+        "27"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-17",
+      "previous_sha256": "ed401fa00abe7ebb80bf18e11a8a98dbb8103fb41b0cfaa3fcf1e2bac1bdde88",
+      "content_sha256": "868ecd1d144d4aa57f8b6f3f498d0dc652a0546f84c6e4a916d3e8a26207575f",
+      "expected": "217",
+      "intermediate": "31",
+      "options": [
+        "163",
+        "38",
+        "154",
+        "217"
+      ],
+      "step": [
+        "198",
+        "22",
+        "31",
+        "13"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-18",
+      "previous_sha256": "47008977bc6befd3808591d8f58c97f4f0bc5e0e26926b9a6bad5ed820118e67",
+      "content_sha256": "bad9bb8274ec123c0f639f3c9119031bae3f38d6e60af8d61d27138c51dd0a88",
+      "expected": "62",
+      "intermediate": "31",
+      "options": [
+        "33",
+        "34",
+        "62",
+        "48"
+      ],
+      "step": [
+        "17",
+        "31",
+        "3",
+        "238"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-19",
+      "previous_sha256": "c3657ac587d620a9c0bf064b7082b62bcfd3986d1170cf25c6d70e435f7f0254",
+      "content_sha256": "3d90e62dc2f923a019fffca15dc75f58b903afca84476580f4bbdf3bc697f870",
+      "expected": "124",
+      "intermediate": "31",
+      "options": [
+        "48",
+        "124",
+        "67",
+        "35"
+      ],
+      "step": [
+        "31",
+        "-7",
+        "228",
+        "12"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-0",
+      "previous_sha256": "98e1ff10e1f4a9e43a540c21b3b5a489354fdd0df822f43474bee4eaf5721b0f",
+      "content_sha256": "2762f070de6d2159d952ba18b86d80bc512ca3632a54cb0df14b5bf8c1896889",
+      "expected": "78",
+      "intermediate": "26",
+      "options": [
+        "78",
+        "58",
+        "29",
+        "48"
+      ],
+      "step": [
+        "6",
+        "160",
+        "16",
+        "26"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-1",
+      "previous_sha256": "9ef9cf6d149b687b94c788917eee3e56d3b00a895e548c4cb55c2c64230721ae",
+      "content_sha256": "e487c3c528b475618b3389ba6246fb5c3d044b5d0f16f983b0c8ed44c630962d",
+      "expected": "168",
+      "intermediate": "24",
+      "options": [
+        "77",
+        "168",
+        "90",
+        "31"
+      ],
+      "step": [
+        "24",
+        "-2",
+        "143",
+        "11"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-2",
+      "previous_sha256": "4dd7bc237164fdba89619aa60bf96b39116d63de01aa533104865e86e3932302",
+      "content_sha256": "e1c5d567cc1132dc540740591164c7f98f33b22481d889719ab9f165eeff5665",
+      "expected": "88",
+      "intermediate": "22",
+      "options": [
+        "26",
+        "24",
+        "88",
+        "40"
+      ],
+      "step": [
+        "6",
+        "22",
+        "-10",
+        "96"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-3",
+      "previous_sha256": "1df428cf2c55b34c79c754321f1250209d949e08199d5be7579ab08e291373df",
+      "content_sha256": "4b77d2506b3baadbc1a501911241213a9ef77433cfe960a928c32adcbd733577",
+      "expected": "37",
+      "intermediate": "37",
+      "options": [
+        "38",
+        "18",
+        "19",
+        "37"
+      ],
+      "step": [
+        "342",
+        "18",
+        "37",
+        "-1"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-4",
+      "previous_sha256": "9851de48e4b32bf575126ee1cd93f5b292b6e08d06ce15bd9fba3eed97025264",
+      "content_sha256": "7cb418ad4a4a9e9c72b6534088e80c46f92148a8d9d7bbc17b60d1e7cc9a0bcd",
+      "expected": "110",
+      "intermediate": "22",
+      "options": [
+        "110",
+        "74",
+        "27",
+        "65"
+      ],
+      "step": [
+        "4",
+        "117",
+        "13",
+        "22"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-5",
+      "previous_sha256": "7e39494d571d9b28a7403273f01ec970bb3cc986dd89c343de0d13af2cafd8e4",
+      "content_sha256": "0f0a04574cb7921776d0fa5e989478139bfbd4090f51668b2c7a4e189c381e9f",
+      "expected": "40",
+      "intermediate": "20",
+      "options": [
+        "16",
+        "40",
+        "28",
+        "22"
+      ],
+      "step": [
+        "20",
+        "-4",
+        "96",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-6",
+      "previous_sha256": "3b008d30f614a7eafc28abc4053a669d1b76e2b1f3cad884e9baa01bc902c608",
+      "content_sha256": "4d976da3a5fdf1aa0c9811419edd78ac6a98eac7f1fade4fe658100b2bbf3df3",
+      "expected": "210",
+      "intermediate": "35",
+      "options": [
+        "41",
+        "120",
+        "210",
+        "135"
+      ],
+      "step": [
+        "20",
+        "35",
+        "5",
+        "300"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-7",
+      "previous_sha256": "45cd7aae9308be73622b07e12d581549c9a2b227737f66e1b0a4475ba438f316",
+      "content_sha256": "3dbdc2fcaf4f39d50b5d871cdd8070c3b08b1f8199eef812dba79f94158b685b",
+      "expected": "99",
+      "intermediate": "33",
+      "options": [
+        "63",
+        "36",
+        "45",
+        "99"
+      ],
+      "step": [
+        "270",
+        "15",
+        "33",
+        "-3"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-8",
+      "previous_sha256": "e14270ab32b089196c662612a074187001dc627b43e811aac77559e819ed9927",
+      "content_sha256": "5ad07e5fd0e5f3357ae1e13e28f3572633af3d2d34c483a63ee1ae1d013ea28a",
+      "expected": "126",
+      "intermediate": "18",
+      "options": [
+        "126",
+        "78",
+        "25",
+        "70"
+      ],
+      "step": [
+        "2",
+        "80",
+        "10",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-9",
+      "previous_sha256": "3c3aa59f4dee725ff4adfa4bd5e60834c9c356e94fb10dea0c658687ed6a29f6",
+      "content_sha256": "ef59c041b566dd99b5e3c5b3d67d692e7d53472147e1628ef17902c32f0c7a99",
+      "expected": "132",
+      "intermediate": "33",
+      "options": [
+        "88",
+        "132",
+        "99",
+        "37"
+      ],
+      "step": [
+        "33",
+        "11",
+        "242",
+        "22"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-10",
+      "previous_sha256": "a9eb3eeffc8910a3d03de91f0b8d9a09e13af5bcdb7503ff703cc91249df8b72",
+      "content_sha256": "dc6c4a20e3c3282ba8cca471167e1a5efbde13bf1468e3b99980c171f3f47374",
+      "expected": "31",
+      "intermediate": "31",
+      "options": [
+        "17",
+        "14",
+        "31",
+        "32"
+      ],
+      "step": [
+        "17",
+        "31",
+        "3",
+        "238"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-11",
+      "previous_sha256": "9ec423080e3636ccead2bc6dd596a05d86d6f60f938d6596cb87566606f169f5",
+      "content_sha256": "61529459ba12e170f38b2057695c4a4957f83890ad7a8d680111d04a06cf0eb2",
+      "expected": "145",
+      "intermediate": "29",
+      "options": [
+        "77",
+        "34",
+        "60",
+        "145"
+      ],
+      "step": [
+        "204",
+        "12",
+        "29",
+        "-5"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-0",
+      "previous_sha256": "b5bee036961c582e261e33cfd71fa474a275e9ad6f082b550c628de8b0f7104f",
+      "content_sha256": "ed283d9fd83af11fdb57c0bc14d2e6bfd1ed6e3b0b68ff5e832f983ee26caeb0",
+      "expected": "24",
+      "intermediate": "8",
+      "options": [
+        "24",
+        "-24",
+        "0",
+        "57"
+      ],
+      "step": [
+        "-8",
+        "19",
+        "0",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-1",
+      "previous_sha256": "e6e5a3129d51a0657f8779ce3b001a36710c09d51a3d57e19ff504be93198b07",
+      "content_sha256": "1614ac913a5d5a637577fe7d0a919f45854b78008fe01e97966f0ffb8b3dbd4d",
+      "expected": "88",
+      "intermediate": "11",
+      "options": [
+        "-88",
+        "0",
+        "184",
+        "88"
+      ],
+      "step": [
+        "23",
+        "0",
+        "11",
+        "-11"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-2",
+      "previous_sha256": "c773faf8a4910e51f2c8fb0e6a24a1a6cb9cfa8b1ad97cbf8c220f2b204d570b",
+      "content_sha256": "83787f7fa6b58395158b222925c285a76d68b5585d6ba0affad2d592d4ccd490",
+      "expected": "84",
+      "intermediate": "14",
+      "options": [
+        "0",
+        "162",
+        "84",
+        "-84"
+      ],
+      "step": [
+        "0",
+        "14",
+        "-14",
+        "27"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-3",
+      "previous_sha256": "c876be8eaa7da87709bdcbe7e35cf262244a3faf706490fe8f490feb65c589cc",
+      "content_sha256": "7ec99f82d46dcfe2bbb390e0429191ff26b3e73f5a0568ad20ac1976192b83e9",
+      "expected": "68",
+      "intermediate": "17",
+      "options": [
+        "124",
+        "68",
+        "-68",
+        "0"
+      ],
+      "step": [
+        "17",
+        "-17",
+        "31",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-4",
+      "previous_sha256": "ca4ed3b5e6f82aefd9298388c501bcf8c29617fe72d3a5d86d5e6fd885a1833a",
+      "content_sha256": "31b3edeb5f7d82724342fe5c4c27e44acdec13ccec5fc58b06ba01ba345ddedb",
+      "expected": "14",
+      "intermediate": "7",
+      "options": [
+        "14",
+        "-14",
+        "0",
+        "44"
+      ],
+      "step": [
+        "-7",
+        "22",
+        "0",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-5",
+      "previous_sha256": "cc219ad1d3f757796d70f8f25f17a6da92f230d210adabae52f6098d260022f7",
+      "content_sha256": "1fb45d8473ff9ebd22f587d892a45ae515b8cef13c70ca563fa8f990484a2357",
+      "expected": "70",
+      "intermediate": "10",
+      "options": [
+        "-70",
+        "0",
+        "182",
+        "70"
+      ],
+      "step": [
+        "26",
+        "0",
+        "10",
+        "-10"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-6",
+      "previous_sha256": "5a683aaf7d910b08e38d2d44f109f252c56f188b041f29381735b5f398a5b7d7",
+      "content_sha256": "7caf6b86fcc27d8099503e7968551e90db10e7ea08b077bfa78cca96426bb55d",
+      "expected": "65",
+      "intermediate": "13",
+      "options": [
+        "0",
+        "150",
+        "65",
+        "-65"
+      ],
+      "step": [
+        "0",
+        "13",
+        "-13",
+        "30"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-7",
+      "previous_sha256": "b45cdbdbe399bfdb1f392c4fd6d89ee493aa78de87a82fc81463099655e7e452",
+      "content_sha256": "2eeb7e6526d536116e09c3270fedd735044b6f4ffebcebeef46334f59fe94ecf",
+      "expected": "48",
+      "intermediate": "16",
+      "options": [
+        "102",
+        "48",
+        "-48",
+        "0"
+      ],
+      "step": [
+        "16",
+        "-16",
+        "34",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-8",
+      "previous_sha256": "6a798974a81b7b3e5bf0649a268d5e2ecf1eff830e54d79911c48c64a1c1e8a5",
+      "content_sha256": "77004329aa5afc0f8734e16f7e815dc5f456eff22e8bc10bf7542e9660cd9e0d",
+      "expected": "152",
+      "intermediate": "19",
+      "options": [
+        "152",
+        "-152",
+        "0",
+        "304"
+      ],
+      "step": [
+        "-19",
+        "38",
+        "0",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-9",
+      "previous_sha256": "a5314deb1cecf84ed707da1f2b3763c339d34308e2875d886a0c984800183979",
+      "content_sha256": "ef51f1c972de4436db215e33e9b5d2b2a6a88f2f8c0fdeaef6124dafb96e7ae8",
+      "expected": "54",
+      "intermediate": "9",
+      "options": [
+        "-54",
+        "0",
+        "174",
+        "54"
+      ],
+      "step": [
+        "29",
+        "0",
+        "9",
+        "-9"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-10",
+      "previous_sha256": "18a901cb96dd323d42116fde02d6496f6614d027cad1a467f66f5ceab892a35a",
+      "content_sha256": "fce290ee08156f144121ccb6d2e0b0d1c57d39127ffce86acf14aa11fd796ace",
+      "expected": "48",
+      "intermediate": "12",
+      "options": [
+        "0",
+        "132",
+        "48",
+        "-48"
+      ],
+      "step": [
+        "0",
+        "12",
+        "-12",
+        "33"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-11",
+      "previous_sha256": "1afab9066526bc693becabb902841d57097cfccd0c0a2cad72d749db2c53507e",
+      "content_sha256": "30e57049f7b2f623e8dcfa9f26909ccd9dabb9a99e33c675326bc639d5c7c12a",
+      "expected": "30",
+      "intermediate": "15",
+      "options": [
+        "74",
+        "30",
+        "-30",
+        "0"
+      ],
+      "step": [
+        "15",
+        "-15",
+        "37",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-12",
+      "previous_sha256": "a3beada2890c51ef5b70b1ce82ece28f33a0441ef8645bddfe339319b9428074",
+      "content_sha256": "0fc75c8c08e3aa26cd45d1de9506b8de9c3e5b5735ddde3bb8c3785da5a02f20",
+      "expected": "126",
+      "intermediate": "18",
+      "options": [
+        "126",
+        "-126",
+        "0",
+        "287"
+      ],
+      "step": [
+        "-18",
+        "41",
+        "0",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-13",
+      "previous_sha256": "fb0e7c2f9bf7b84f484f124761618f3a69423dff9e7ae6d2f6f6aee6d13c5bb7",
+      "content_sha256": "6fefd28f706a1a55f3481779ea68e5b8b6458bbd9879543b7d9988394531a345",
+      "expected": "40",
+      "intermediate": "8",
+      "options": [
+        "-40",
+        "0",
+        "160",
+        "40"
+      ],
+      "step": [
+        "32",
+        "0",
+        "8",
+        "-8"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-14",
+      "previous_sha256": "c187414ec286ec8587b3033b111dc53bc222ab3ea6bfe5a0e3ec35f0ffb7744d",
+      "content_sha256": "a2f8ec72310465028353904fd411d6c5fde34265ae4e5c36c5ecee6c2fd16578",
+      "expected": "33",
+      "intermediate": "11",
+      "options": [
+        "0",
+        "57",
+        "33",
+        "-33"
+      ],
+      "step": [
+        "0",
+        "11",
+        "-11",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-15",
+      "previous_sha256": "880cfa2bed8d84db4e06e27c43288f3c38c5373111596a8e362c454527169cec",
+      "content_sha256": "6ee55f84cf66d7f044c9185cbfa938f8b2f3f30c0f24a3742bce2893895a633e",
+      "expected": "112",
+      "intermediate": "14",
+      "options": [
+        "184",
+        "112",
+        "-112",
+        "0"
+      ],
+      "step": [
+        "14",
+        "-14",
+        "23",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-16",
+      "previous_sha256": "8c75f5b2407b995c05be10236f46b73c847e88178f9ca961db48f7006807cc98",
+      "content_sha256": "7152c5e29a41902f4b488278185720dc93c6ecc178a6c1bf94345466349165d4",
+      "expected": "102",
+      "intermediate": "17",
+      "options": [
+        "102",
+        "-102",
+        "0",
+        "162"
+      ],
+      "step": [
+        "-17",
+        "27",
+        "0",
+        "17"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-17",
+      "previous_sha256": "bcc9b268321fdb3053ecc2164a88bc776142dccfbd95748c8305be9cf7f2b2c3",
+      "content_sha256": "6611283d4fd79176a0dd154386c4ef44ef56f9be7b215c3a01582c3fb2097a8c",
+      "expected": "28",
+      "intermediate": "7",
+      "options": [
+        "-28",
+        "0",
+        "72",
+        "28"
+      ],
+      "step": [
+        "18",
+        "0",
+        "7",
+        "-7"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-18",
+      "previous_sha256": "ba5d03650c0773a6dfaaf68278d7d4adcc6692d4ed888d865f7a3a850b36cf0c",
+      "content_sha256": "4197276271c1fa7e51983fa1b6588ed35f59a6b1234ab841ddd96c176f916933",
+      "expected": "20",
+      "intermediate": "10",
+      "options": [
+        "0",
+        "44",
+        "20",
+        "-20"
+      ],
+      "step": [
+        "0",
+        "10",
+        "-10",
+        "22"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-19",
+      "previous_sha256": "b1255e50987c7dea6827e3067a4f0ef449cc2a7e1063af0e103ab5dddd3ce52a",
+      "content_sha256": "937ec10ed3568fc47bc5a8ca85858f42e2b92a555535a649d57a1f413459c9b9",
+      "expected": "91",
+      "intermediate": "13",
+      "options": [
+        "182",
+        "91",
+        "-91",
+        "0"
+      ],
+      "step": [
+        "13",
+        "-13",
+        "26",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+      "previous_sha256": "1acca66c7ef79362d73babdb37d333f33a3a7db0c2f911da72f49164225fb51e",
+      "content_sha256": "f62161b53c09195f2d403ea3057d9530164b28259a27331e9e7b489e460d9320",
+      "expected": "91",
+      "intermediate": "13",
+      "options": [
+        "0",
+        "217",
+        "91",
+        "-91"
+      ],
+      "step": [
+        "0",
+        "13",
+        "-13",
+        "31"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+      "previous_sha256": "790decb07af10159973bd5e47d78bf998f35db4f7cb2dec9c9cbac25ae107b61",
+      "content_sha256": "294e3e7eb27e88ca69b0eb1bc6ef2aef8a5ce18bef874cc01624874cfa8263de",
+      "expected": "36",
+      "intermediate": "18",
+      "options": [
+        "62",
+        "36",
+        "-36",
+        "0"
+      ],
+      "step": [
+        "18",
+        "-18",
+        "31",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+      "previous_sha256": "fa8ed88eb316647411f01d9db4af28d4f3ea78ae0ab2464d06630b308de5f6ce",
+      "content_sha256": "057c5d020c40ac66c685f4d2f131e1b5af083257f22965de699c7e2685eeb915",
+      "expected": "40",
+      "intermediate": "10",
+      "options": [
+        "40",
+        "-40",
+        "0",
+        "72"
+      ],
+      "step": [
+        "-10",
+        "18",
+        "0",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+      "previous_sha256": "fa1711659fa533b8259b27cd117998d0c9d77d8862b09db7510bf5dc17146bb5",
+      "content_sha256": "f7c39a13002e98652c9a8851926aac8567ae1db7a7ebadb9fdbd0a813f524ee9",
+      "expected": "90",
+      "intermediate": "15",
+      "options": [
+        "-90",
+        "0",
+        "210",
+        "90"
+      ],
+      "step": [
+        "35",
+        "0",
+        "15",
+        "-15"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+      "previous_sha256": "a400879b51cea20c7589faabe73f83d710f69eaede1f9539814761c4dcd3bb48",
+      "content_sha256": "74a1069fc4bdabe1522b78c121b994b8d28c7ff847dfb99fd7d995b34c4414fa",
+      "expected": "56",
+      "intermediate": "7",
+      "options": [
+        "0",
+        "176",
+        "56",
+        "-56"
+      ],
+      "step": [
+        "0",
+        "7",
+        "-7",
+        "22"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+      "previous_sha256": "ff18c32dc645cd965fb6e1ab7c04c797e89ba60501f6cbc71c2e57707263500d",
+      "content_sha256": "47901d7907b945ac29b5ad6e1b32a7a29725ba7a6aa2b5ccd0ecd34a29c9afdb",
+      "expected": "36",
+      "intermediate": "12",
+      "options": [
+        "66",
+        "36",
+        "-36",
+        "0"
+      ],
+      "step": [
+        "12",
+        "-12",
+        "22",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-6",
+      "previous_sha256": "873b38d7a551fbd179f37b3453584f5682fcd82efa235484623d5c908c4e9f0e",
+      "content_sha256": "efa1ac203f16c5b98c2cd2c68b7a84fb96be4a2b86c381063523d38b178568b5",
+      "expected": "85",
+      "intermediate": "17",
+      "options": [
+        "85",
+        "-85",
+        "0",
+        "195"
+      ],
+      "step": [
+        "-17",
+        "39",
+        "0",
+        "17"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-7",
+      "previous_sha256": "5be1b87fb1d012ac896af997f2fb32713ee1d8536e0246611b8d349a808bf9a5",
+      "content_sha256": "a45291cbde7a7fd60fe1bb32bbcc230dab94ab159fef626b2320e0a0d66b9698",
+      "expected": "63",
+      "intermediate": "9",
+      "options": [
+        "-63",
+        "0",
+        "182",
+        "63"
+      ],
+      "step": [
+        "26",
+        "0",
+        "9",
+        "-9"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-8",
+      "previous_sha256": "6a2410c97139621e2fd0a6726577ba4bfaa83f94c39283286a74dfcc6f4f874a",
+      "content_sha256": "60f082b49d7eeeb4eb373248aee70d57a028393ea9ba1805df79c56978712abf",
+      "expected": "28",
+      "intermediate": "14",
+      "options": [
+        "0",
+        "52",
+        "28",
+        "-28"
+      ],
+      "step": [
+        "0",
+        "14",
+        "-14",
+        "26"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+      "previous_sha256": "4e3440e74b821bd1586954ba90813652a92262391120b287afabd6ca327ac6e2",
+      "content_sha256": "7ae43dce2df3812927097de79c3f33af49f2a350fd9f2a1951a81757cf8f49d1",
+      "expected": "76",
+      "intermediate": "19",
+      "options": [
+        "172",
+        "76",
+        "-76",
+        "0"
+      ],
+      "step": [
+        "19",
+        "-19",
+        "43",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+      "previous_sha256": "f17e75f1c54930e14ace2bd7b7b248f8433db7b182b2297a7f2222ef6f63eae0",
+      "content_sha256": "18f3598f0d4bfdb21962986c354422a1314c57d28a5fdcd01f71b31b6e7c883d",
+      "expected": "66",
+      "intermediate": "11",
+      "options": [
+        "66",
+        "-66",
+        "0",
+        "180"
+      ],
+      "step": [
+        "-11",
+        "30",
+        "0",
+        "11"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+      "previous_sha256": "597eadd819ea2143584599390d9bca8e6f755ac8a4537d00dc37d64db7cef43a",
+      "content_sha256": "04988145e646a21a09bfaac2ce92f5c831d2026bd39e21d8e188f52a5f3b53f7",
+      "expected": "128",
+      "intermediate": "16",
+      "options": [
+        "-128",
+        "0",
+        "240",
+        "128"
+      ],
+      "step": [
+        "30",
+        "0",
+        "16",
+        "-16"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-12",
+      "previous_sha256": "c170fef63356f374308bd2d8374739964651f073707390081127530f94547257",
+      "content_sha256": "184b95a11adf33834b8bc9c6f75a9c3d6145b7ec4a6b61c3733bc486f152b955",
+      "expected": "24",
+      "intermediate": "8",
+      "options": [
+        "0",
+        "51",
+        "24",
+        "-24"
+      ],
+      "step": [
+        "0",
+        "8",
+        "-8",
+        "17"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-13",
+      "previous_sha256": "48f6be72ed4873f09c0477af8bec0f51c71fdbdbcc6133d8f650b5d9d59412c6",
+      "content_sha256": "bc9008ded5091e9861b1bd91a064f2bf43acd008c5f70b62cab86d2c376ef9fc",
+      "expected": "65",
+      "intermediate": "13",
+      "options": [
+        "170",
+        "65",
+        "-65",
+        "0"
+      ],
+      "step": [
+        "13",
+        "-13",
+        "34",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-14",
+      "previous_sha256": "26d4bba423fd011dea9a1da541ecf7d3a766fe9f5c5f27c59ef96681ec8c60c4",
+      "content_sha256": "bb464d7ee8c782bdc5663f6d6837e190cbd2cbd2aeb6825d118b7a08f7ff1298",
+      "expected": "126",
+      "intermediate": "18",
+      "options": [
+        "126",
+        "-126",
+        "0",
+        "238"
+      ],
+      "step": [
+        "-18",
+        "34",
+        "0",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-15",
+      "previous_sha256": "fb19d5b434946ccaed27e4b6819ba6e231cb30ea0c1ee0e441e9388ee1f2cb36",
+      "content_sha256": "4c45edcec0fa797337368e511be8450a6cccb5327377e38f311db5ad4a541a7b",
+      "expected": "20",
+      "intermediate": "10",
+      "options": [
+        "-20",
+        "0",
+        "42",
+        "20"
+      ],
+      "step": [
+        "21",
+        "0",
+        "10",
+        "-10"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-16",
+      "previous_sha256": "a90916786c635b6228d7c6d86edf1a4d0785f2b4b72c404fbc6cac33450474aa",
+      "content_sha256": "bcc7579b93a73a20beeb3835a58c44dd7d33b8873bdb4c54453c5eb54e71b1d1",
+      "expected": "60",
+      "intermediate": "15",
+      "options": [
+        "0",
+        "152",
+        "60",
+        "-60"
+      ],
+      "step": [
+        "0",
+        "15",
+        "-15",
+        "38"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-17",
+      "previous_sha256": "f9763f647a3f826b175523a43e4701bd0eaebcc7e1a34074a0c8802bc1b95048",
+      "content_sha256": "809809d000f43dd8c09795f5cb8e081c75e4fbd99038db3bfe7f4a4dfbb61967",
+      "expected": "42",
+      "intermediate": "7",
+      "options": [
+        "150",
+        "42",
+        "-42",
+        "0"
+      ],
+      "step": [
+        "7",
+        "-7",
+        "25",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-18",
+      "previous_sha256": "18e7c075595196b32f5599ec4dc4b5d5a714204145678ff82c7a78833f378940",
+      "content_sha256": "26db2f59a0bd6e01c4cb50e4c778509ea778a7a47a5bdd741f3320eb7f3d3fe9",
+      "expected": "96",
+      "intermediate": "12",
+      "options": [
+        "96",
+        "-96",
+        "0",
+        "200"
+      ],
+      "step": [
+        "-12",
+        "25",
+        "0",
+        "12"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-19",
+      "previous_sha256": "41f18e8462c144d66af9445b32a0011df714f71073c11222ad65015f4062fdfe",
+      "content_sha256": "d5287120f0074a6d655e6089a8572eb219fe962994c0e170565ba5b662ceb425",
+      "expected": "51",
+      "intermediate": "17",
+      "options": [
+        "-51",
+        "0",
+        "75",
+        "51"
+      ],
+      "step": [
+        "25",
+        "0",
+        "17",
+        "-17"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-20",
+      "previous_sha256": "5312fc93557df04dc8a7db4f262cb0fc9b7bf749474a8e762fe6335599075725",
+      "content_sha256": "c0bfa313c54280f483f33f054bdb23b62e0dd3743cc34df48acc2a21d4420d24",
+      "expected": "45",
+      "intermediate": "9",
+      "options": [
+        "0",
+        "145",
+        "45",
+        "-45"
+      ],
+      "step": [
+        "0",
+        "9",
+        "-9",
+        "29"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-21",
+      "previous_sha256": "4a8baf3a6b786a4052ce7aee606cba6e2089a305fe953ffc8f85299f43ea619d",
+      "content_sha256": "1d367945142aea70e11c782849f8171ea5b4fd2bf4bb7e69326f8a977ebee433",
+      "expected": "98",
+      "intermediate": "14",
+      "options": [
+        "203",
+        "98",
+        "-98",
+        "0"
+      ],
+      "step": [
+        "14",
+        "-14",
+        "29",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-22",
+      "previous_sha256": "a3702940a7edaf81d3a55c5ed1aff570483ff59699ac27498b868235c739019c",
+      "content_sha256": "d730092f55f58b0e6e6df77dd6904f0a671d322c3bd6694eb9b0c7e620c5b832",
+      "expected": "38",
+      "intermediate": "19",
+      "options": [
+        "38",
+        "-38",
+        "0",
+        "58"
+      ],
+      "step": [
+        "-19",
+        "29",
+        "0",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-23",
+      "previous_sha256": "44c80148516bfb14cc180c0036f49662bea119a09c3d1642ee33fb4c3c787762",
+      "content_sha256": "6240ebb534b54176983be88758369b1abc83b6cbcc90b61850877add351000fd",
+      "expected": "44",
+      "intermediate": "11",
+      "options": [
+        "-44",
+        "0",
+        "132",
+        "44"
+      ],
+      "step": [
+        "33",
+        "0",
+        "11",
+        "-11"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-24",
+      "previous_sha256": "2210fb3390fc1531cae13f07e460aad8e1f9f0ce6e75b057e413a97c8929a0b9",
+      "content_sha256": "0584f755035ca7c7c672416f557566f892145c2d00183e3793437289e13e899d",
+      "expected": "96",
+      "intermediate": "16",
+      "options": [
+        "0",
+        "198",
+        "96",
+        "-96"
+      ],
+      "step": [
+        "0",
+        "16",
+        "-16",
+        "33"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-0",
+      "previous_sha256": "d0cf2e63b2d5432ae1cc4095b427983952e9da9b3d037559507a50ee2059ba01",
+      "content_sha256": "dbbec1fb93d82d9363e92791b6342864affcf8fdc9f01aaf44f1197767452cd3",
+      "expected": "26",
+      "intermediate": "13",
+      "options": [
+        "0",
+        "74",
+        "26",
+        "-26"
+      ],
+      "step": [
+        "0",
+        "13",
+        "-13",
+        "37"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-1",
+      "previous_sha256": "c284515c66c912cc063ac80fa653b8b4e4c4d52beaf7e394e080588d0fd691ca",
+      "content_sha256": "b5eb700c877a1156f4690acb18938caea9a4db52cb9a08cd9dbd44a69570034b",
+      "expected": "96",
+      "intermediate": "16",
+      "options": [
+        "-96",
+        "0",
+        "210",
+        "96"
+      ],
+      "step": [
+        "35",
+        "0",
+        "16",
+        "-16"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-2",
+      "previous_sha256": "fc3d54dc6c9192c2bcbd222d9b9068ff99d536769dd69f45f50cc3da9136362b",
+      "content_sha256": "46a64699b53d82455a3557e25c66d17419d8838760eed4abfaa043588f0dbd74",
+      "expected": "57",
+      "intermediate": "19",
+      "options": [
+        "57",
+        "-57",
+        "0",
+        "99"
+      ],
+      "step": [
+        "-19",
+        "33",
+        "0",
+        "19"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-3",
+      "previous_sha256": "26176dc1e4870084ee041029d63bd0262a80e54e49cdfedfc9c66cd4a4d488bd",
+      "content_sha256": "039131d12ffa5dcb8d27fc6063402699507d2cd6028260cd0e365c2d163487e7",
+      "expected": "63",
+      "intermediate": "9",
+      "options": [
+        "126",
+        "63",
+        "-63",
+        "0"
+      ],
+      "step": [
+        "9",
+        "-9",
+        "18",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-4",
+      "previous_sha256": "08e9feaacd004708b6487073ac1e0e2980213e88daae06f5a3df6ab50fb1c727",
+      "content_sha256": "c4abef3ce2873a5745c1e022e5883a2cd87d146e9b0856a46a1279575b1e1b05",
+      "expected": "120",
+      "intermediate": "15",
+      "options": [
+        "-120",
+        "0",
+        "248",
+        "120"
+      ],
+      "step": [
+        "31",
+        "0",
+        "15",
+        "-15"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-5",
+      "previous_sha256": "bcfe447333d8b1e806e87e468dc8b48f4ec4cb109ff0bb9387f605c0d2b19e9c",
+      "content_sha256": "07257dc039cfdb9c803f12d5bff6f7ecc72381323e9f1040a294d6fd1b97d5eb",
+      "expected": "90",
+      "intermediate": "18",
+      "options": [
+        "90",
+        "-90",
+        "0",
+        "145"
+      ],
+      "step": [
+        "-18",
+        "29",
+        "0",
+        "18"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-6",
+      "previous_sha256": "ea8c7bfa4de624d61302e969cf4f5109ce78929cc60841c34a43b66e7a3a6349",
+      "content_sha256": "16b5f6f8eff0e0dc669297d9a9653bfd34c6b97e1aad9fa34c2d72960c5a4984",
+      "expected": "16",
+      "intermediate": "8",
+      "options": [
+        "62",
+        "16",
+        "-16",
+        "0"
+      ],
+      "step": [
+        "8",
+        "-8",
+        "31",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-7",
+      "previous_sha256": "69f2dbdf75c589ebee1e168f82e824318ec348584dd192fa0a076509c3cf3afd",
+      "content_sha256": "567a4b3673f34a75be3aae0c032523030c6f4584498265af48f65035873c4229",
+      "expected": "66",
+      "intermediate": "11",
+      "options": [
+        "0",
+        "174",
+        "66",
+        "-66"
+      ],
+      "step": [
+        "0",
+        "11",
+        "-11",
+        "29"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-8",
+      "previous_sha256": "cd0cb148386d25f6ff6244a40b74df7e2cabcfbe4a7a12d4e1d2738cfee8b07e",
+      "content_sha256": "ee9b281828af752a66d26d01b2a72b15e15bb28b9818323806c0f57cae61ea51",
+      "expected": "42",
+      "intermediate": "14",
+      "options": [
+        "-42",
+        "0",
+        "81",
+        "42"
+      ],
+      "step": [
+        "27",
+        "0",
+        "14",
+        "-14"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-9",
+      "previous_sha256": "3793211d379d9ed0fd1b2b4f9ef3f9ddea315246fabb733211edf787c6ad8214",
+      "content_sha256": "6e107008f46bedeba1bd24cc7ca1d9f6150ce5e15548c79d339f098e2280aa7c",
+      "expected": "119",
+      "intermediate": "17",
+      "options": [
+        "119",
+        "-119",
+        "0",
+        "175"
+      ],
+      "step": [
+        "-17",
+        "25",
+        "0",
+        "17"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-10",
+      "previous_sha256": "03c263998dcbef63f8d618a866165f13aa7fff38c9bbf2f91bc2a1d91f570ca6",
+      "content_sha256": "d62404663d955c022b82a40101b0b3e761e6ddf788033935a87e9da98e980427",
+      "expected": "28",
+      "intermediate": "7",
+      "options": [
+        "108",
+        "28",
+        "-28",
+        "0"
+      ],
+      "step": [
+        "7",
+        "-7",
+        "27",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-11",
+      "previous_sha256": "e3153a9b04462b72186e27d55ae2c71a92a284f76ec2e0dbade3f0e1862263e7",
+      "content_sha256": "eed01d4a49590354bdea292fd77b724b4d55e2724a6b5f1ae6af17d71127feb5",
+      "expected": "80",
+      "intermediate": "10",
+      "options": [
+        "0",
+        "200",
+        "80",
+        "-80"
+      ],
+      "step": [
+        "0",
+        "10",
+        "-10",
+        "25"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-12",
+      "previous_sha256": "1280bcaa0590bebab25d9ed5b7934e5c78fee695b15135f81111f2767142d4ad",
+      "content_sha256": "83035882c41536f4df2419dbd431a34ccdd29760996d933356d8b8f908a40f5c",
+      "expected": "65",
+      "intermediate": "13",
+      "options": [
+        "-65",
+        "0",
+        "115",
+        "65"
+      ],
+      "step": [
+        "23",
+        "0",
+        "13",
+        "-13"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-13",
+      "previous_sha256": "fe887a04242fb07a66a332373c06e563745f21e350a37fd0debdb873c2f44efc",
+      "content_sha256": "81131664658c9f928c9ea7babbbe4602babc3e5445b7ead33ce693964c5dcc9f",
+      "expected": "32",
+      "intermediate": "16",
+      "options": [
+        "32",
+        "-32",
+        "0",
+        "76"
+      ],
+      "step": [
+        "-16",
+        "38",
+        "0",
+        "16"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-14",
+      "previous_sha256": "feb08bb4b80a56c725a64e09ac89224ce15bfe6734c37cae5c22553b46a81955",
+      "content_sha256": "135dd8ebb6a6e611d1052003b0243db19983156f9c88d14d5cd406e43aaed75e",
+      "expected": "114",
+      "intermediate": "19",
+      "options": [
+        "216",
+        "114",
+        "-114",
+        "0"
+      ],
+      "step": [
+        "19",
+        "-19",
+        "36",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-15",
+      "previous_sha256": "087182e48ee304b0c15943d75bdc5437a31bd5d4efcc7ff455863d50cb23b669",
+      "content_sha256": "0e863b5df98cae9a10b99e5d3c271a71e8c9f3e1ec1f11fdca5de37b01d8ddfd",
+      "expected": "27",
+      "intermediate": "9",
+      "options": [
+        "0",
+        "63",
+        "27",
+        "-27"
+      ],
+      "step": [
+        "0",
+        "9",
+        "-9",
+        "21"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-16",
+      "previous_sha256": "eff0d8491e57b29d3215c00f3910c1fe5cf6c47b2dac4a370649ec48ddaf158c",
+      "content_sha256": "569fe86e41f8ee51e71557e648fa37012eb16911a6f033cf8438015c62afa2e1",
+      "expected": "84",
+      "intermediate": "12",
+      "options": [
+        "-84",
+        "0",
+        "252",
+        "84"
+      ],
+      "step": [
+        "36",
+        "0",
+        "12",
+        "-12"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-17",
+      "previous_sha256": "af54d9ba8d8de64da592f8c41cc1dbe7d49216a92ee639d392fcb501a4b94e9b",
+      "content_sha256": "23114013c44ad981b03b7812a3ef02532dbd286d7ff0dcf868bb397df023275d",
+      "expected": "60",
+      "intermediate": "15",
+      "options": [
+        "60",
+        "-60",
+        "0",
+        "136"
+      ],
+      "step": [
+        "-15",
+        "34",
+        "0",
+        "15"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-18",
+      "previous_sha256": "3a54631d49f0ead6fb724f40c9c6dce7da4de8032ff442ca98b9c5c07affc926",
+      "content_sha256": "8457931f404dece2d733d469e86182484f2d7a4440387ddb7366dff1c881f039",
+      "expected": "144",
+      "intermediate": "18",
+      "options": [
+        "256",
+        "144",
+        "-144",
+        "0"
+      ],
+      "step": [
+        "18",
+        "-18",
+        "32",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-19",
+      "previous_sha256": "e4c5ae45ed63df378e8f3d105cdb2fe2733a0f9aec099d1889f0ce6ce7f76b4f",
+      "content_sha256": "8014e7f12d2dc5fa6a4413b87fa2b02abe516e9307da00057931b275be0ef248",
+      "expected": "40",
+      "intermediate": "8",
+      "options": [
+        "0",
+        "85",
+        "40",
+        "-40"
+      ],
+      "step": [
+        "0",
+        "8",
+        "-8",
+        "17"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-20",
+      "previous_sha256": "bb06c09d2de8288d1609bd37a9f9fd07a541f52a165d6b02dc314fba1486b2fa",
+      "content_sha256": "405182492219c2fafd30fc0347c6ba70cde101e9c560e5d65af0b40a712fb857",
+      "expected": "22",
+      "intermediate": "11",
+      "options": [
+        "-22",
+        "0",
+        "64",
+        "22"
+      ],
+      "step": [
+        "32",
+        "0",
+        "11",
+        "-11"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-21",
+      "previous_sha256": "ee7ba8714f5eb59af4eedcde60743e80453b0e9d609ae61cc349e415f8a21320",
+      "content_sha256": "e82a572faa7158f9c7442f680820194a98f629235f5a65e3b21c9921438f9fd9",
+      "expected": "84",
+      "intermediate": "14",
+      "options": [
+        "84",
+        "-84",
+        "0",
+        "180"
+      ],
+      "step": [
+        "-14",
+        "30",
+        "0",
+        "14"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-0",
+      "previous_sha256": "ee0e3d98abd7d0e364a491fa448584cb2d43b4b90cc337f06aaaa60f297dc30e",
+      "content_sha256": "587b47dbe6bda5aeb44f948bfb06bdc2430d022caf35cdc95fbf566bc5713a93",
+      "expected": "32",
+      "intermediate": "16",
+      "options": [
+        "-32",
+        "0",
+        "56",
+        "32"
+      ],
+      "step": [
+        "28",
+        "0",
+        "16",
+        "-16"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-1",
+      "previous_sha256": "d869b2dbcdabe86160af4b5d160bb70a512b4f86190cdf38d5a46c8ef82e2597",
+      "content_sha256": "bfaf027ab7aff6f4164b5d027a5298da44450bdf6ad54f9a8230e290368f7505",
+      "expected": "133",
+      "intermediate": "19",
+      "options": [
+        "0",
+        "224",
+        "133",
+        "-133"
+      ],
+      "step": [
+        "0",
+        "19",
+        "-19",
+        "32"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-2",
+      "previous_sha256": "68ca6f180a7311a0effa20ff6a63e81bd19a46b0fc01e61c2561f971741f7c38",
+      "content_sha256": "db9a53253246378173ec6163e623b29531a954ca1ba0d8d10fbd064faba2e396",
+      "expected": "45",
+      "intermediate": "9",
+      "options": [
+        "115",
+        "45",
+        "-45",
+        "0"
+      ],
+      "step": [
+        "9",
+        "-9",
+        "23",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-3",
+      "previous_sha256": "ce49e1aaae418e6a95d09d15bb02c0ac9a95dac66be860706af5670478262b1b",
+      "content_sha256": "6089811eb8e07e2bf013e46a5f83fb6ca3497ff80a681c12f91ac847769f98ac",
+      "expected": "36",
+      "intermediate": "12",
+      "options": [
+        "36",
+        "-36",
+        "0",
+        "81"
+      ],
+      "step": [
+        "-12",
+        "27",
+        "0",
+        "12"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-4",
+      "previous_sha256": "23a2b0f2ed9c30043b6e3156a41c0cc635cd393f2e2c4450cee3a1e0169e85e6",
+      "content_sha256": "31d3aba56dc7d37c878cf4517982e8277804bdcd54fab258eeef5b77d65ef735",
+      "expected": "120",
+      "intermediate": "15",
+      "options": [
+        "-120",
+        "0",
+        "248",
+        "120"
+      ],
+      "step": [
+        "31",
+        "0",
+        "15",
+        "-15"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-5",
+      "previous_sha256": "0ee4222e7838c2ac1fa3a1b7780546bff20c51dfd28f0722a7d0f155ae26ee5d",
+      "content_sha256": "97e273d9daedb05a89529aaea9e7fca302cf35dfc79e4388c879a0aa41e3a59c",
+      "expected": "108",
+      "intermediate": "18",
+      "options": [
+        "0",
+        "210",
+        "108",
+        "-108"
+      ],
+      "step": [
+        "0",
+        "18",
+        "-18",
+        "35"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-6",
+      "previous_sha256": "10bc4ac9a812e5fcf29eded8e885d85933c4eeae8502fadd29bf8df6bc4e5170",
+      "content_sha256": "ee2470371f8526bec232291407faffe321e9c1755b5678c699554267a2a11307",
+      "expected": "32",
+      "intermediate": "8",
+      "options": [
+        "104",
+        "32",
+        "-32",
+        "0"
+      ],
+      "step": [
+        "8",
+        "-8",
+        "26",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-7",
+      "previous_sha256": "50073c945faccc96d552b61ae052b330aeff6b7ab8eae62a521ff4fe1f8f03ca",
+      "content_sha256": "639d9177f347ba7d166da603347d206a2691db77540d625686370001f2f97bc9",
+      "expected": "22",
+      "intermediate": "11",
+      "options": [
+        "22",
+        "-22",
+        "0",
+        "60"
+      ],
+      "step": [
+        "-11",
+        "30",
+        "0",
+        "11"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-8",
+      "previous_sha256": "33ae75ca4f96ba87e3b671f39a43104753109dfeb3f874acba9aa806752bb40f",
+      "content_sha256": "b620132ffe50547078fc12241f128a5c2bd335628485df65ef0d4f37944fad47",
+      "expected": "98",
+      "intermediate": "14",
+      "options": [
+        "-98",
+        "0",
+        "238",
+        "98"
+      ],
+      "step": [
+        "34",
+        "0",
+        "14",
+        "-14"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-9",
+      "previous_sha256": "c4571e0961a2a5a034ec84ac2766ba59273e27ff5d3a736478874dee1ebc2a61",
+      "content_sha256": "dc315cabdcc417fab352b1d75c301c34aa359f5460745647ec312afb35868a2e",
+      "expected": "85",
+      "intermediate": "17",
+      "options": [
+        "0",
+        "190",
+        "85",
+        "-85"
+      ],
+      "step": [
+        "0",
+        "17",
+        "-17",
+        "38"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-10",
+      "previous_sha256": "7d5cb3c77da4e93871d63997b5d49e27bb845519c6f6dc11243e48e84ebaff01",
+      "content_sha256": "9c72022788079a06d769ced9ee41c01a9fa5aac19d79325ab7b5770e6f49d1e9",
+      "expected": "21",
+      "intermediate": "7",
+      "options": [
+        "87",
+        "21",
+        "-21",
+        "0"
+      ],
+      "step": [
+        "7",
+        "-7",
+        "29",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-11",
+      "previous_sha256": "f9bc3fca1f9977ee9e32ddbe4c0c84ccdaeb0e353839a71b680abb451317d2cd",
+      "content_sha256": "54907cd3882d3266a9c67aa9e375c1a72afc48a21b7f4b8408dbb2e5fb8bf68b",
+      "expected": "80",
+      "intermediate": "10",
+      "options": [
+        "80",
+        "-80",
+        "0",
+        "264"
+      ],
+      "step": [
+        "-10",
+        "33",
+        "0",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-12",
+      "previous_sha256": "c53d03a3803cb7379b59fff23b10d03bc875e68ab23e84842d693a807b7e7229",
+      "content_sha256": "318c730423bfd82ac2d5f891a8ca8a09c7332f15d6c31c8dd31b1c563f25c16b",
+      "expected": "78",
+      "intermediate": "13",
+      "options": [
+        "-78",
+        "0",
+        "222",
+        "78"
+      ],
+      "step": [
+        "37",
+        "0",
+        "13",
+        "-13"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-13",
+      "previous_sha256": "d2a597581194f7dc3ad73a82a3ef8927c18d9c79faab9ace5c3dc4df4fa2e703",
+      "content_sha256": "2124795627d093180a2ed4e93ec97705616ff3111765d5beeb720542d8ff5d0d",
+      "expected": "64",
+      "intermediate": "16",
+      "options": [
+        "0",
+        "96",
+        "64",
+        "-64"
+      ],
+      "step": [
+        "0",
+        "16",
+        "-16",
+        "24"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-14",
+      "previous_sha256": "0646ad5a36cb5fe83aae03c413b0cb99d0dd67c57dc52ac5492925e30a415e4f",
+      "content_sha256": "686aeeba41b2258a16ec2289a69bccaadd41291a60658fd209f7ff89410ca624",
+      "expected": "38",
+      "intermediate": "19",
+      "options": [
+        "56",
+        "38",
+        "-38",
+        "0"
+      ],
+      "step": [
+        "19",
+        "-19",
+        "28",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-15",
+      "previous_sha256": "2ceb9cf57bdb9268d1bdda70229096fa54a33e543fe2257233141f1a506fb72a",
+      "content_sha256": "b7b9504580020781ddc24926b04e003f2348510528a4413f67c69fd84eb7e479",
+      "expected": "63",
+      "intermediate": "9",
+      "options": [
+        "63",
+        "-63",
+        "0",
+        "133"
+      ],
+      "step": [
+        "-9",
+        "19",
+        "0",
+        "9"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-16",
+      "previous_sha256": "4b649c739a3444da61c02316b4c83c2a2567af23a75ecfc7bb4e84a01e1d6105",
+      "content_sha256": "bf34425a7e22e9afa3cd41ab3a3a33649c2e31344df3290cc2826700e5800719",
+      "expected": "60",
+      "intermediate": "12",
+      "options": [
+        "-60",
+        "0",
+        "115",
+        "60"
+      ],
+      "step": [
+        "23",
+        "0",
+        "12",
+        "-12"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-17",
+      "previous_sha256": "d27c1898fe73bed2d98debcc821d803921802a17e24c036e4ec72d4b6e763a84",
+      "content_sha256": "669398a2becaaefacbf6b0c9aedcc5255d42bed4cf19d4e470f2c4d6bdadb7ac",
+      "expected": "45",
+      "intermediate": "15",
+      "options": [
+        "0",
+        "81",
+        "45",
+        "-45"
+      ],
+      "step": [
+        "0",
+        "15",
+        "-15",
+        "27"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-18",
+      "previous_sha256": "a2517b0a84567d9b53bbbe7df1023ec97afdb82022d76b6efedf1155b3e34a14",
+      "content_sha256": "c1f80b09a38f23eb71969f8dfabe82a40f7545a2744a1b927ec8c698c49e97e1",
+      "expected": "144",
+      "intermediate": "18",
+      "options": [
+        "248",
+        "144",
+        "-144",
+        "0"
+      ],
+      "step": [
+        "18",
+        "-18",
+        "31",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-19",
+      "previous_sha256": "1b52331100c387f3c33d64d6fcb6d9e1b3fe3d6f30990d1eb90eb008f24ac932",
+      "content_sha256": "3f2e2045ba7d9e529c8a66e819d2f451594db0c5e474bc32917026c5a0124935",
+      "expected": "48",
+      "intermediate": "8",
+      "options": [
+        "48",
+        "-48",
+        "0",
+        "132"
+      ],
+      "step": [
+        "-8",
+        "22",
+        "0",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "previous_sha256": "24d5b2597782704f079917b66df308287994b5f88e1ccc616dd7dee38687e44b",
+      "content_sha256": "ddd51d9f7bff31dda7b33f58bca44ce093d324373e8c2f9f0d5a82428b82331b",
+      "expected": "48",
+      "intermediate": "12",
+      "options": [
+        "-48",
+        "0",
+        "128",
+        "48"
+      ],
+      "step": [
+        "32",
+        "0",
+        "12",
+        "-12"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "previous_sha256": "5640b1ea8cc70d15091883009be0f698c6b071cfa7135ede5cdb86916392d297",
+      "content_sha256": "207fdefdd34d8deda7d7951560b1e9c9ee96ee21ebf001eb7da1e2f1abd4cbc5",
+      "expected": "102",
+      "intermediate": "17",
+      "options": [
+        "0",
+        "192",
+        "102",
+        "-102"
+      ],
+      "step": [
+        "0",
+        "17",
+        "-17",
+        "32"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+      "previous_sha256": "5a0cccc1c89a8bda080e868a153dcde352b9e65ac858081617bb4cb309e034a5",
+      "content_sha256": "3979f9e51b77684f4669863db7334302a63cfe59808400327234a4d4c440e3d7",
+      "expected": "72",
+      "intermediate": "9",
+      "options": [
+        "152",
+        "72",
+        "-72",
+        "0"
+      ],
+      "step": [
+        "9",
+        "-9",
+        "19",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+      "previous_sha256": "7558a0c0dc5fdc61d1c541be9f3d51a392b469de6f8dcdf67ddf06370c9ef35a",
+      "content_sha256": "bce97e62c181810565e3d7e1d4f099b69e0ac9d095037b82f26ce52b154a519f",
+      "expected": "42",
+      "intermediate": "14",
+      "options": [
+        "42",
+        "-42",
+        "0",
+        "108"
+      ],
+      "step": [
+        "-14",
+        "36",
+        "0",
+        "14"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+      "previous_sha256": "3d00ad8cd81ee27b122d8b3665a50c90b88324d4a560ff3b75cfce36e3c39e48",
+      "content_sha256": "ce16f49cc9e7fa94ddf8fa36a462f85612378bad04d92a6df16c595786ce84a7",
+      "expected": "95",
+      "intermediate": "19",
+      "options": [
+        "-95",
+        "0",
+        "180",
+        "95"
+      ],
+      "step": [
+        "36",
+        "0",
+        "19",
+        "-19"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+      "previous_sha256": "464c381b2ac83ab436a252643726e148b546073bcb8c3e2099005afec2e6be66",
+      "content_sha256": "384dd1477b9d1dded8f2fbe4f7c887688a8596227156b50290b535f2a7adc954",
+      "expected": "77",
+      "intermediate": "11",
+      "options": [
+        "0",
+        "161",
+        "77",
+        "-77"
+      ],
+      "step": [
+        "0",
+        "11",
+        "-11",
+        "23"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-6",
+      "previous_sha256": "4358716540880145526dbd39ed20ef6dcdc3536b926a7615b4f97c05b8ffc45b",
+      "content_sha256": "6a7ee6ea4d01f246cb6f30a0dec4f3b9335e74a8883ebf4110da778f383a373a",
+      "expected": "32",
+      "intermediate": "16",
+      "options": [
+        "80",
+        "32",
+        "-32",
+        "0"
+      ],
+      "step": [
+        "16",
+        "-16",
+        "40",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-7",
+      "previous_sha256": "d8c366b00c653a30d12c5084d0136369bd74e6ba5c3bed3449e109f71f2d4d57",
+      "content_sha256": "6bd7187cf0e2559a50cf66c03be88c3e9c767acb40c18482e065661b47032044",
+      "expected": "32",
+      "intermediate": "8",
+      "options": [
+        "32",
+        "-32",
+        "0",
+        "108"
+      ],
+      "step": [
+        "-8",
+        "27",
+        "0",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-8",
+      "previous_sha256": "c802570ba75c58e0aa1a7196aa1d6142abda786c76e02a59fd0daf013b9b21df",
+      "content_sha256": "7c0f1d8c5896dd303892ba2bdfc9f463e4ca2b3ca22879218757129dc88dd057",
+      "expected": "78",
+      "intermediate": "13",
+      "options": [
+        "-78",
+        "0",
+        "162",
+        "78"
+      ],
+      "step": [
+        "27",
+        "0",
+        "13",
+        "-13"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "previous_sha256": "04f0ccc4373498289d62893b081f03cd7b948d325053ccb3224196f47ce57e80",
+      "content_sha256": "22be6eb766be9774bd2b7838a4a8ca4e5d5423e943f8de8784b81ac4bfa9c21e",
+      "expected": "144",
+      "intermediate": "18",
+      "options": [
+        "0",
+        "216",
+        "144",
+        "-144"
+      ],
+      "step": [
+        "0",
+        "18",
+        "-18",
+        "27"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "previous_sha256": "3ebca3b0bc5b50d0d77a7aa074eb982d69a44753ba978f8bf31c3a886bb34cc2",
+      "content_sha256": "821658f894af56528679f004b54d760ee95fd212c0d33664b73352d24851b6d2",
+      "expected": "30",
+      "intermediate": "10",
+      "options": [
+        "93",
+        "30",
+        "-30",
+        "0"
+      ],
+      "step": [
+        "10",
+        "-10",
+        "31",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+      "previous_sha256": "311ae437da8ce2a3b97ecd4c188aa46a5211315ae7d9266fb62967a7a45ce9eb",
+      "content_sha256": "68fe843d88b9c2ad97730b1644c20bc7594b6c114d55b2bbe3b92b51956d4609",
+      "expected": "75",
+      "intermediate": "15",
+      "options": [
+        "75",
+        "-75",
+        "0",
+        "155"
+      ],
+      "step": [
+        "-15",
+        "31",
+        "0",
+        "15"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-12",
+      "previous_sha256": "8dc31f7b754f764dd860eec91559d6a90ef2e924df30e131e97dab7ef083389e",
+      "content_sha256": "d6a39cbc3dc88cf23bdd6f1070a30b8495f4fdac0ca6beb30dc157f98dc860ed",
+      "expected": "49",
+      "intermediate": "7",
+      "options": [
+        "-49",
+        "0",
+        "126",
+        "49"
+      ],
+      "step": [
+        "18",
+        "0",
+        "7",
+        "-7"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+      "previous_sha256": "c2ed461a2a81f4079bcc1ca44386f5ea3510c94ba9724a9d2c69581d6fcfba20",
+      "content_sha256": "13c317c06c00212b8ea8f2242c70be25883f834b1b41bf51ae32de6176c078d7",
+      "expected": "24",
+      "intermediate": "12",
+      "options": [
+        "0",
+        "70",
+        "24",
+        "-24"
+      ],
+      "step": [
+        "0",
+        "12",
+        "-12",
+        "35"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-14",
+      "previous_sha256": "eac079dbbeda509e17716491a07c1db7ad4239682492e20e9327d44f54b6a4d9",
+      "content_sha256": "7f84c0a6fd0fe014e908f2bbb3408cbd90c0a5da2e4d7d65fe95730e2c5c571c",
+      "expected": "68",
+      "intermediate": "17",
+      "options": [
+        "140",
+        "68",
+        "-68",
+        "0"
+      ],
+      "step": [
+        "17",
+        "-17",
+        "35",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-15",
+      "previous_sha256": "289601df3e728f7cd2512b183a437ba67434ed0e10855818c3c70b953591f909",
+      "content_sha256": "2350f2f80b79fac124e80b246a57ba0e045bd1fb9dea9527821040d67d0cd508",
+      "expected": "54",
+      "intermediate": "9",
+      "options": [
+        "54",
+        "-54",
+        "0",
+        "132"
+      ],
+      "step": [
+        "-9",
+        "22",
+        "0",
+        "9"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-16",
+      "previous_sha256": "8b7a21d22a139ebb1285a4ed4145f78aee1ad7392868df13da92aa132e36193b",
+      "content_sha256": "60152a0844a6d1dd1875ad46e1f603bccf5ef1e538f02d30ed0781196beb0ad0",
+      "expected": "112",
+      "intermediate": "14",
+      "options": [
+        "-112",
+        "0",
+        "176",
+        "112"
+      ],
+      "step": [
+        "22",
+        "0",
+        "14",
+        "-14"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-17",
+      "previous_sha256": "529482610c80e317107eb4fdb648cb5772257871fecdf04d1cbc892a49f083ea",
+      "content_sha256": "ae00e3cf5964a4b4616fed889aa3c64fa0b44a31382dfa6bd98ddfe95852168d",
+      "expected": "57",
+      "intermediate": "19",
+      "options": [
+        "0",
+        "117",
+        "57",
+        "-57"
+      ],
+      "step": [
+        "0",
+        "19",
+        "-19",
+        "39"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-18",
+      "previous_sha256": "2e62a42cbeb1c328a0ff9bc02ace946e1adbd48f8c25425e7486ad46a4570726",
+      "content_sha256": "d1d5556d71d171430a06d9bb3666b7a8fc94be45fe2e5fd5bd10a3e23e0055e5",
+      "expected": "55",
+      "intermediate": "11",
+      "options": [
+        "130",
+        "55",
+        "-55",
+        "0"
+      ],
+      "step": [
+        "11",
+        "-11",
+        "26",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-19",
+      "previous_sha256": "6a86b4a1f2ee4ec75d0f976f3bbbb55b0a25072f415b4f8d276255a741a91007",
+      "content_sha256": "0e02fd34d5d0436258bf977088fb399a1aa149713f2ac24738354e1d03a209e3",
+      "expected": "112",
+      "intermediate": "16",
+      "options": [
+        "112",
+        "-112",
+        "0",
+        "182"
+      ],
+      "step": [
+        "-16",
+        "26",
+        "0",
+        "16"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-20",
+      "previous_sha256": "dcf5c108695b09e68b90be524d70a61955f5a7b0f7256353590a67e5fa0a7468",
+      "content_sha256": "3483adda0d725bab64a60e16775c7342867e777f8071946c204c2433503fcf02",
+      "expected": "16",
+      "intermediate": "8",
+      "options": [
+        "-16",
+        "0",
+        "60",
+        "16"
+      ],
+      "step": [
+        "30",
+        "0",
+        "8",
+        "-8"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-21",
+      "previous_sha256": "287390080929cf61420784b21958616997fd52290e2b44481506b9d8c827057e",
+      "content_sha256": "474dd54b2cd4b578c5905acf714498cc89599794edb0680b1e54bcda31f1d1c2",
+      "expected": "52",
+      "intermediate": "13",
+      "options": [
+        "0",
+        "120",
+        "52",
+        "-52"
+      ],
+      "step": [
+        "0",
+        "13",
+        "-13",
+        "30"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-22",
+      "previous_sha256": "f0a325730cfbb10194b0550dc6c4e129cd1370ecad9093a581f0c5ec2c9711eb",
+      "content_sha256": "a0bc4ae7ae9e59c0421f5c9b83fe6b48491887ee4bfcdf3bb183622d10edeb41",
+      "expected": "108",
+      "intermediate": "18",
+      "options": [
+        "180",
+        "108",
+        "-108",
+        "0"
+      ],
+      "step": [
+        "18",
+        "-18",
+        "30",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-23",
+      "previous_sha256": "9474e84e0724c59703abc0087d616548633bcb86124adeb48862dc78994ed1b3",
+      "content_sha256": "ab952cab607f8829e4003dee5d795ca19491403409a9f2dd7029f4040ce9365b",
+      "expected": "80",
+      "intermediate": "10",
+      "options": [
+        "80",
+        "-80",
+        "0",
+        "272"
+      ],
+      "step": [
+        "-10",
+        "34",
+        "0",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-24",
+      "previous_sha256": "4e578688dfa680e33537f7a51e563e030311cfe8c09e4722151259819dd1343c",
+      "content_sha256": "e741671374761252d9fb2b57aa74c71a9f32848ebf9ec20190d09a199ef09cee",
+      "expected": "45",
+      "intermediate": "15",
+      "options": [
+        "-45",
+        "0",
+        "102",
+        "45"
+      ],
+      "step": [
+        "34",
+        "0",
+        "15",
+        "-15"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-0",
+      "previous_sha256": "f200da8182fb114966d2d5dbb7e2b06d841faf131b752dd274d448b2ee91176a",
+      "content_sha256": "805458a3c8a5e200836bbc3a27826d2ab842db26f0f5423c48b71f44e1ed8741",
+      "expected": "40",
+      "intermediate": "8",
+      "options": [
+        "-40",
+        "0",
+        "105",
+        "40"
+      ],
+      "step": [
+        "21",
+        "0",
+        "8",
+        "-8"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-1",
+      "previous_sha256": "ea7af544a0c157cde67849b50a91cd53c94e6b1f80b8ddbfed8b63d2e47751d1",
+      "content_sha256": "7de0e4a40b0a8a9c06e22c129a76a2fbb868525ec7890d792e5e5ebc6ba7cc49",
+      "expected": "22",
+      "intermediate": "11",
+      "options": [
+        "22",
+        "-22",
+        "0",
+        "38"
+      ],
+      "step": [
+        "-11",
+        "19",
+        "0",
+        "11"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-2",
+      "previous_sha256": "396016834baefe702ae57b2c764f7c3782ee3adc65d034ae6583c6ce52a2a15b",
+      "content_sha256": "f834aee315649dd0f88ebd8324def2813ba4018dfd8fc680d963e09962175075",
+      "expected": "84",
+      "intermediate": "14",
+      "options": [
+        "204",
+        "84",
+        "-84",
+        "0"
+      ],
+      "step": [
+        "14",
+        "-14",
+        "34",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-3",
+      "previous_sha256": "114dc2163b451cbaca694a545076d7096a91dbe5e08ffcd4b8e8e86aca447bea",
+      "content_sha256": "edcbbc745f83917714879957215b9aba39fc7676e84b2502f6483733df529b83",
+      "expected": "51",
+      "intermediate": "17",
+      "options": [
+        "0",
+        "96",
+        "51",
+        "-51"
+      ],
+      "step": [
+        "0",
+        "17",
+        "-17",
+        "32"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-4",
+      "previous_sha256": "7b6040613e1bf6b2d2631b4eb09dcca86ece5e41405ea883d01cb3e87c387ca1",
+      "content_sha256": "832438ff8a3e301751dccb4fd8397a6513ee55472ea28025b5dbc4f07010a89c",
+      "expected": "49",
+      "intermediate": "7",
+      "options": [
+        "-49",
+        "0",
+        "119",
+        "49"
+      ],
+      "step": [
+        "17",
+        "0",
+        "7",
+        "-7"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-5",
+      "previous_sha256": "05fcb606129ddc623af249af2a22df758d0f8c1bccfa77a756941e7388ac1e44",
+      "content_sha256": "c10df8562408ddd9f3e1f67c1328f8399890dd7302836d0556e81e1a4b8d5022",
+      "expected": "40",
+      "intermediate": "10",
+      "options": [
+        "40",
+        "-40",
+        "0",
+        "128"
+      ],
+      "step": [
+        "-10",
+        "32",
+        "0",
+        "10"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-6",
+      "previous_sha256": "379cc135f0fcdea21491425c76c10e0efef763f2a228799eb9f2934ded3f357b",
+      "content_sha256": "d32eaa0ef920162fc355e89ea078243a50fddfa23e48de9734ed7774f60038ab",
+      "expected": "104",
+      "intermediate": "13",
+      "options": [
+        "240",
+        "104",
+        "-104",
+        "0"
+      ],
+      "step": [
+        "13",
+        "-13",
+        "30",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-7",
+      "previous_sha256": "19983d153edc9e40390d24c071187f2bd13ccbbf2ff86fd8c82e4bee80706262",
+      "content_sha256": "e09aaf90023bf86afdea2072fc69dce4590e1c7b0a61b7301669622d29ca6197",
+      "expected": "80",
+      "intermediate": "16",
+      "options": [
+        "0",
+        "140",
+        "80",
+        "-80"
+      ],
+      "step": [
+        "0",
+        "16",
+        "-16",
+        "28"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-8",
+      "previous_sha256": "615bd206cff0e0911971bf4275aaea5e6205cf2be110064d1362149ff45600a1",
+      "content_sha256": "162fa7d87a3969d1bd02d746e9f5ea64e7451a6114fa9f304d3d37fad8c4ed92",
+      "expected": "38",
+      "intermediate": "19",
+      "options": [
+        "-38",
+        "0",
+        "86",
+        "38"
+      ],
+      "step": [
+        "43",
+        "0",
+        "19",
+        "-19"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-9",
+      "previous_sha256": "3797f90a88caa95a4f448bd43b991f93502ee63ae025cfe966e7c84b6e05435e",
+      "content_sha256": "b01d6805cac35bcb9f1d470f55d124d203b6238e1f1d077b0a41e3d5ca6bd5c0",
+      "expected": "54",
+      "intermediate": "9",
+      "options": [
+        "54",
+        "-54",
+        "0",
+        "168"
+      ],
+      "step": [
+        "-9",
+        "28",
+        "0",
+        "9"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-10",
+      "previous_sha256": "b170c9eeb9e5d56b529672daae1a7fc62336c7ed4578c58bf0738dc9f9b66762",
+      "content_sha256": "3ae230ffa33b2db74f012c31ce9dd342fb243ddd06007a69021f998915819116",
+      "expected": "36",
+      "intermediate": "12",
+      "options": [
+        "78",
+        "36",
+        "-36",
+        "0"
+      ],
+      "step": [
+        "12",
+        "-12",
+        "26",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-11",
+      "previous_sha256": "610f4ec72d64e6a6163aa2362b6c843abce5cf874d2fa7b80d887f704f82b88f",
+      "content_sha256": "1d28e27099b9ff30ce98978bdae1a5798524d50467c8f93e709027fe119e00f3",
+      "expected": "105",
+      "intermediate": "15",
+      "options": [
+        "0",
+        "168",
+        "105",
+        "-105"
+      ],
+      "step": [
+        "0",
+        "15",
+        "-15",
+        "24"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-12",
+      "previous_sha256": "79d5cfe1c4e817207d1fcac136c67e1b15c838e908dc80aeec84521501caf690",
+      "content_sha256": "ca5af24d4e2b556378d46c6a5420292e8aa43464fbd1d14c255fe50232b65794",
+      "expected": "72",
+      "intermediate": "18",
+      "options": [
+        "-72",
+        "0",
+        "156",
+        "72"
+      ],
+      "step": [
+        "39",
+        "0",
+        "18",
+        "-18"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-13",
+      "previous_sha256": "e63fc5d4522586493a17e4deea4c2d8b6ab610f2482dc4425d59ad9962469ffd",
+      "content_sha256": "a2e1b7a5575034bed57822c2c9436fe6a44db0270d9bf360031226c5760ac1e9",
+      "expected": "64",
+      "intermediate": "8",
+      "options": [
+        "64",
+        "-64",
+        "0",
+        "192"
+      ],
+      "step": [
+        "-8",
+        "24",
+        "0",
+        "8"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-14",
+      "previous_sha256": "fac61954b88187e111460d3c4b40916591b31f6258e0f88b34a0acd8950bf7fd",
+      "content_sha256": "b672090ebe6e2ca91595c159b200d01178987c494b2f7d4b70f7d39d45f4005a",
+      "expected": "55",
+      "intermediate": "11",
+      "options": [
+        "110",
+        "55",
+        "-55",
+        "0"
+      ],
+      "step": [
+        "11",
+        "-11",
+        "22",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-15",
+      "previous_sha256": "ee46d01a3014c64a8863765b3b94c4946d588fb09d374d66c4a6db9d967e2ab2",
+      "content_sha256": "7e2af034f8947ada9d4df2ffd05f3bd66f080982c5f573b3dca823e89fbafc3e",
+      "expected": "28",
+      "intermediate": "14",
+      "options": [
+        "0",
+        "74",
+        "28",
+        "-28"
+      ],
+      "step": [
+        "0",
+        "14",
+        "-14",
+        "37"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-16",
+      "previous_sha256": "f8ccd7adec895b79f78e53493de35a64706b16502af2500c9cfcb46d89140c69",
+      "content_sha256": "eaaa02a5a58c76cf3ab18c5a2465c2278ba66a7cc5ecc6df6f57f1095780a908",
+      "expected": "102",
+      "intermediate": "17",
+      "options": [
+        "-102",
+        "0",
+        "210",
+        "102"
+      ],
+      "step": [
+        "35",
+        "0",
+        "17",
+        "-17"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-17",
+      "previous_sha256": "71945658c548ca5c60731c76b22b319bfb0ece06294248c3cb9f48cf6d89b064",
+      "content_sha256": "40ea8f2be28550b22fdc55053e7d8c9582a7dbdac6c60289000c693203c6e017",
+      "expected": "21",
+      "intermediate": "7",
+      "options": [
+        "21",
+        "-21",
+        "0",
+        "60"
+      ],
+      "step": [
+        "-7",
+        "20",
+        "0",
+        "7"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-18",
+      "previous_sha256": "5bee5121a7ba132a50736b414667fb911fe1884d625023094e0940de54001b62",
+      "content_sha256": "bda57c5caf377ccc3949bd0ccd3c598911e35531f37857cbe2793f06a243730a",
+      "expected": "70",
+      "intermediate": "10",
+      "options": [
+        "126",
+        "70",
+        "-70",
+        "0"
+      ],
+      "step": [
+        "10",
+        "-10",
+        "18",
+        "0"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-19",
+      "previous_sha256": "a1b14b809dc759f16367c66d2e9d484ff010046d98184289ae940d67c2c57087",
+      "content_sha256": "06fdc0b2879b76e072c465625cb73908717fdb9ba1d4289fda60613b5d02033e",
+      "expected": "52",
+      "intermediate": "13",
+      "options": [
+        "0",
+        "132",
+        "52",
+        "-52"
+      ],
+      "step": [
+        "0",
+        "13",
+        "-13",
+        "33"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-20",
+      "previous_sha256": "f7e57f602884109672cabc17b2445d5e0582b6d1c01f1e2eba56d08051be2787",
+      "content_sha256": "a71923756455bf56a72a7f399f524f9872ebea866878dbcdccedca15a7fb04d7",
+      "expected": "128",
+      "intermediate": "16",
+      "options": [
+        "-128",
+        "0",
+        "248",
+        "128"
+      ],
+      "step": [
+        "31",
+        "0",
+        "16",
+        "-16"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-21",
+      "previous_sha256": "d341d2a2fab9691cd3ddcb1302064696430dcea246986ad843f1887de5d5769f",
+      "content_sha256": "624718fbfffafe8e3d32daf763c3bc6ba2360793cd2af51094121f5422bbdd11",
+      "expected": "95",
+      "intermediate": "19",
+      "options": [
+        "95",
+        "-95",
+        "0",
+        "145"
+      ],
+      "step": [
+        "-19",
+        "29",
+        "0",
+        "19"
+      ]
+    }
+  ],
+  "limitations": "Candidate CI emitted hashes; no semantic promotion; current production CI still not observed. Historical R3 preflight retained; unchanged IDs are those not present in this list."
+}
