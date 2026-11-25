@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { QuizQ } from "@/lib/grammar";
 import type { GameProps } from "./types";
 import { NextButton } from "./Feedback";
@@ -6,8 +6,10 @@ import {LearningFeedback} from "./LearningFeedback";
 
 export function QuizGame({ item, report, next, isLast }: GameProps<QuizQ & { order: number[] }>) {
   const [pick, setPick] = useState<number | null>(null);
+  const submitted = useRef(false);
   const choose = (i: number) => {
-    if (pick !== null) return;
+    if (submitted.current || !Number.isInteger(i) || i < 0 || i >= item.options.length || !item.order.includes(i)) return;
+    submitted.current = true;
     setPick(i);
     const ok = i === item.answer;
     report(ok, ok ? undefined : { prompt: item.q, given: item.options[i], correct: item.options[item.answer], exp: item.exp });
