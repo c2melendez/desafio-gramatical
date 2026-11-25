@@ -2,7 +2,7 @@ import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3HistoricalPool as mathM3Pool} from "@/lib/math-m3";
 // The production frozen-selector is a JS module with no TS declarations.
 // @ts-expect-error JS selector has no TypeScript declaration.
 import {selectFrozen} from "../../qa/certification/select-frozen.mjs";
