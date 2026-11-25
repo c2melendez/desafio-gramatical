@@ -1,0 +1,3314 @@
+{
+  "revision": "R11",
+  "scope": "MAT-ARIT-01",
+  "source_ci": 45715287350,
+  "source_job": 139559670050,
+  "candidate_sha": "601d33ed1ef92d7ca76dfc81708ff5f3c74a0947",
+  "summary": {
+    "changed": 18,
+    "unchanged": 432,
+    "matched_predecessors": 18,
+    "distractors_verified": 108,
+    "claims_verified": 54,
+    "additional_families": 2,
+    "review": 18,
+    "semantic_pass": 0
+  },
+  "method": "CI real + recálculo independiente desde estímulo y coincidencia de 18 hashes históricos. Sin promoción semántica.",
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-9",
+      "previous_sha256": "849d1c8b9a15b7000d0675ce8f3a0d66e76324e8386926b1e41f1dd617d923f8",
+      "content_sha256": "3b0f0ab39a0d1691654e67f6eebc317881480fef2ad90e98dd57b7f5a316a974",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Calcula √49 + 10 × 3 − 17. ¿Cuál es el resultado?",
+      "expected": "20",
+      "intermediate": 7,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "49",
+            "8",
+            "7",
+            "-7"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "6",
+            "3",
+            "54",
+            "20"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 20.",
+          "truth": true,
+          "value": 20,
+          "correct": 20,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -7.",
+          "truth": false,
+          "value": -7,
+          "correct": 7,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 6.",
+          "truth": false,
+          "value": 6,
+          "correct": 20,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "La raíz principal es 7 porque 7² = 49. El producto 10×3 = 30 se resuelve antes de sumar y restar. Finalmente 7 + 30 − 17 = 20.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "49",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 1,
+          "value": "8",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 1,
+          "value": "-7",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "6",
+          "reason": "Raíz negativa en lugar de principal."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        },
+        {
+          "step": 2,
+          "value": "54",
+          "reason": "Suma del sustraendo."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 20,
+        "intermediate": 7
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "49",
+            "8",
+            "7",
+            "-7"
+          ],
+          "correct": "7"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "6",
+            "3",
+            "54",
+            "20"
+          ],
+          "correct": "20"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-9",
+        "sha256": "849d1c8b9a15b7000d0675ce8f3a0d66e76324e8386926b1e41f1dd617d923f8",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-10",
+      "previous_sha256": "4e37866c28991fff412fd0c889113a027ea23c749915596c4f7b95c1613eefb9",
+      "content_sha256": "f34676362420ab0e90bd68b499f4050834d344cac1b719975c82fc3157bfaba3",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Calcula √64 + 11 × 4 − 20. ¿Cuál es el resultado?",
+      "expected": "32",
+      "intermediate": 8,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "-8",
+            "64",
+            "9",
+            "8"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "32",
+            "16",
+            "3",
+            "72"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 16.",
+          "truth": false,
+          "value": 16,
+          "correct": 32,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 32.",
+          "truth": true,
+          "value": 32,
+          "correct": 32,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es 8.",
+          "truth": true,
+          "value": 8,
+          "correct": 8,
+          "oracle_truth": true
+        }
+      ],
+      "explanation": "La raíz principal es 8 porque 8² = 64. El producto 11×4 = 44 se resuelve antes de sumar y restar. Finalmente 8 + 44 − 20 = 32.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-8",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "64",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 1,
+          "value": "9",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 2,
+          "value": "16",
+          "reason": "Raíz negativa en lugar de principal."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        },
+        {
+          "step": 2,
+          "value": "72",
+          "reason": "Suma del sustraendo."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 32,
+        "intermediate": 8
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "-8",
+            "64",
+            "9",
+            "8"
+          ],
+          "correct": "8"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "32",
+            "16",
+            "3",
+            "72"
+          ],
+          "correct": "32"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-10",
+        "sha256": "4e37866c28991fff412fd0c889113a027ea23c749915596c4f7b95c1613eefb9",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-07-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-11",
+      "previous_sha256": "031fcde3a8e64d0d673cc81189cb31e96e34428096d9a80e6012eb531b13e4b9",
+      "content_sha256": "acfcf01eba1e00fe819186f7381644693d198cac98e0a77d17f16452197455aa",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Calcula √81 + 12 × 5 − 23. ¿Cuál es el resultado?",
+      "expected": "46",
+      "intermediate": 9,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "9",
+            "-9",
+            "81",
+            "10"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "92",
+            "46",
+            "28",
+            "3"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -9.",
+          "truth": false,
+          "value": -9,
+          "correct": 9,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 28.",
+          "truth": false,
+          "value": 28,
+          "correct": 46,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 46.",
+          "truth": true,
+          "value": 46,
+          "correct": 46,
+          "oracle_truth": true
+        }
+      ],
+      "explanation": "La raíz principal es 9 porque 9² = 81. El producto 12×5 = 60 se resuelve antes de sumar y restar. Finalmente 9 + 60 − 23 = 46.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-9",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "81",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 1,
+          "value": "10",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 2,
+          "value": "92",
+          "reason": "Suma del sustraendo."
+        },
+        {
+          "step": 2,
+          "value": "28",
+          "reason": "Raíz negativa en lugar de principal."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 46,
+        "intermediate": 9
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "9",
+            "-9",
+            "81",
+            "10"
+          ],
+          "correct": "9"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "92",
+            "46",
+            "28",
+            "3"
+          ],
+          "correct": "46"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-11",
+        "sha256": "031fcde3a8e64d0d673cc81189cb31e96e34428096d9a80e6012eb531b13e4b9",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-07-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-9",
+      "previous_sha256": "2154513a70164de5f51b63a83ac02406e44b8cb39402b8e265a612fc59f1cac7",
+      "content_sha256": "94caf05c6fd9f1c32241877f8d6c3a9366d951d9b7797971b41d0446f9bb59de",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Calcula √16 + 7 × 3 − 11. ¿Cuál es el resultado?",
+      "expected": "14",
+      "intermediate": 4,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "4",
+            "-4",
+            "16",
+            "5"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "36",
+            "14",
+            "6",
+            "3"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -4.",
+          "truth": false,
+          "value": -4,
+          "correct": 4,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 6.",
+          "truth": false,
+          "value": 6,
+          "correct": 14,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 14.",
+          "truth": true,
+          "value": 14,
+          "correct": 14,
+          "oracle_truth": true
+        }
+      ],
+      "explanation": "La raíz principal es 4 porque 4² = 16. El producto 7×3 = 21 se resuelve antes de sumar y restar. Finalmente 4 + 21 − 11 = 14.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-4",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "16",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 1,
+          "value": "5",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 2,
+          "value": "36",
+          "reason": "Suma del sustraendo."
+        },
+        {
+          "step": 2,
+          "value": "6",
+          "reason": "Raíz negativa en lugar de principal."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 14,
+        "intermediate": 4
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "4",
+            "-4",
+            "16",
+            "5"
+          ],
+          "correct": "4"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "36",
+            "14",
+            "6",
+            "3"
+          ],
+          "correct": "14"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-quiz-intermedio-9",
+        "sha256": "2154513a70164de5f51b63a83ac02406e44b8cb39402b8e265a612fc59f1cac7",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-09-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-10",
+      "previous_sha256": "2dbaa3b0f7dd445a94b47bf41da4e38f4c474c5c644c22423a1069deb0745e04",
+      "content_sha256": "2bd91d08c6669da084f9dae5764a046ac8670ef8d9a73434dd4c5ccf4aae5141",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Calcula √25 + 8 × 4 − 14. ¿Cuál es el resultado?",
+      "expected": "23",
+      "intermediate": 5,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "6",
+            "5",
+            "-5",
+            "25"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "3",
+            "51",
+            "23",
+            "13"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 23.",
+          "truth": true,
+          "value": 23,
+          "correct": 23,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -5.",
+          "truth": false,
+          "value": -5,
+          "correct": 5,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 13.",
+          "truth": false,
+          "value": 13,
+          "correct": 23,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "La raíz principal es 5 porque 5² = 25. El producto 8×4 = 32 se resuelve antes de sumar y restar. Finalmente 5 + 32 − 14 = 23.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "6",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 1,
+          "value": "-5",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "25",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        },
+        {
+          "step": 2,
+          "value": "51",
+          "reason": "Suma del sustraendo."
+        },
+        {
+          "step": 2,
+          "value": "13",
+          "reason": "Raíz negativa en lugar de principal."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 23,
+        "intermediate": 5
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "6",
+            "5",
+            "-5",
+            "25"
+          ],
+          "correct": "5"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "3",
+            "51",
+            "23",
+            "13"
+          ],
+          "correct": "23"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-quiz-intermedio-10",
+        "sha256": "2dbaa3b0f7dd445a94b47bf41da4e38f4c474c5c644c22423a1069deb0745e04",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-09-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-11",
+      "previous_sha256": "48ae899af71d35e055ddfb2625fcd0d0f92a548c3c40565c8caada692fa05b5e",
+      "content_sha256": "1cb8559cf71b6d5aaaf48a33e468656a695debcc1dadd57566341d690db921aa",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Calcula √36 + 9 × 5 − 17. ¿Cuál es el resultado?",
+      "expected": "34",
+      "intermediate": 6,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "36",
+            "7",
+            "6",
+            "-6"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "22",
+            "3",
+            "68",
+            "34"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 22.",
+          "truth": false,
+          "value": 22,
+          "correct": 34,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 34.",
+          "truth": true,
+          "value": 34,
+          "correct": 34,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -6.",
+          "truth": false,
+          "value": -6,
+          "correct": 6,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "La raíz principal es 6 porque 6² = 36. El producto 9×5 = 45 se resuelve antes de sumar y restar. Finalmente 6 + 45 − 17 = 34.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "36",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 1,
+          "value": "-6",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "22",
+          "reason": "Raíz negativa en lugar de principal."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        },
+        {
+          "step": 2,
+          "value": "68",
+          "reason": "Suma del sustraendo."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 34,
+        "intermediate": 6
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "36",
+            "7",
+            "6",
+            "-6"
+          ],
+          "correct": "6"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "22",
+            "3",
+            "68",
+            "34"
+          ],
+          "correct": "34"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-quiz-intermedio-11",
+        "sha256": "48ae899af71d35e055ddfb2625fcd0d0f92a548c3c40565c8caada692fa05b5e",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-09-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-9",
+      "previous_sha256": "ef59c041b566dd99b5e3c5b3d67d692e7d53472147e1628ef17902c32f0c7a99",
+      "content_sha256": "e52029e9e04ae3fbe7bcbde5e26f5c7baafdca036fd2a8c789dab63472a8351d",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Calcula √100 + 13 × 3 − 23. ¿Cuál es el resultado?",
+      "expected": "26",
+      "intermediate": 10,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "10",
+            "-10",
+            "100",
+            "11"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "72",
+            "26",
+            "6",
+            "3"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -10.",
+          "truth": false,
+          "value": -10,
+          "correct": 10,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 6.",
+          "truth": false,
+          "value": 6,
+          "correct": 26,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 26.",
+          "truth": true,
+          "value": 26,
+          "correct": 26,
+          "oracle_truth": true
+        }
+      ],
+      "explanation": "La raíz principal es 10 porque 10² = 100. El producto 13×3 = 39 se resuelve antes de sumar y restar. Finalmente 10 + 39 − 23 = 26.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-10",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "100",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 2,
+          "value": "72",
+          "reason": "Suma del sustraendo."
+        },
+        {
+          "step": 2,
+          "value": "6",
+          "reason": "Raíz negativa en lugar de principal."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 26,
+        "intermediate": 10
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "10",
+            "-10",
+            "100",
+            "11"
+          ],
+          "correct": "10"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "72",
+            "26",
+            "6",
+            "3"
+          ],
+          "correct": "26"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-construir-intermedio-9",
+        "sha256": "ef59c041b566dd99b5e3c5b3d67d692e7d53472147e1628ef17902c32f0c7a99",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-10",
+      "previous_sha256": "dc6c4a20e3c3282ba8cca471167e1a5efbde13bf1468e3b99980c171f3f47374",
+      "content_sha256": "0bcf6e011629f6561e507ddaaa891dbb99127db59468f0ffb2c3e194c4565bb7",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Calcula √121 + 14 × 4 − 26. ¿Cuál es el resultado?",
+      "expected": "41",
+      "intermediate": 11,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "12",
+            "11",
+            "-11",
+            "121"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "3",
+            "93",
+            "41",
+            "19"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 41.",
+          "truth": true,
+          "value": 41,
+          "correct": 41,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -11.",
+          "truth": false,
+          "value": -11,
+          "correct": 11,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 19.",
+          "truth": false,
+          "value": 19,
+          "correct": 41,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "La raíz principal es 11 porque 11² = 121. El producto 14×4 = 56 se resuelve antes de sumar y restar. Finalmente 11 + 56 − 26 = 41.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "12",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 1,
+          "value": "-11",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "121",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        },
+        {
+          "step": 2,
+          "value": "93",
+          "reason": "Suma del sustraendo."
+        },
+        {
+          "step": 2,
+          "value": "19",
+          "reason": "Raíz negativa en lugar de principal."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 41,
+        "intermediate": 11
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "12",
+            "11",
+            "-11",
+            "121"
+          ],
+          "correct": "11"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "3",
+            "93",
+            "41",
+            "19"
+          ],
+          "correct": "41"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-construir-intermedio-10",
+        "sha256": "dc6c4a20e3c3282ba8cca471167e1a5efbde13bf1468e3b99980c171f3f47374",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-11",
+      "previous_sha256": "61529459ba12e170f38b2057695c4a4957f83890ad7a8d680111d04a06cf0eb2",
+      "content_sha256": "fc86c24a8fb25911776d28d375f274a8afe896a029c90ca5e7e35b8903c10b39",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Calcula √144 + 15 × 5 − 29. ¿Cuál es el resultado?",
+      "expected": "58",
+      "intermediate": 12,
+      "family": "raiz-producto-suma-resta",
+      "steps": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "144",
+            "13",
+            "12",
+            "-12"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "34",
+            "3",
+            "116",
+            "58"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 34.",
+          "truth": false,
+          "value": 34,
+          "correct": 58,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 58.",
+          "truth": true,
+          "value": 58,
+          "correct": 58,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Determina la raíz cuadrada principal» es -12.",
+          "truth": false,
+          "value": -12,
+          "correct": 12,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "La raíz principal es 12 porque 12² = 144. El producto 15×5 = 75 se resuelve antes de sumar y restar. Finalmente 12 + 75 − 29 = 58.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "144",
+          "reason": "Radicando confundido con raíz."
+        },
+        {
+          "step": 1,
+          "value": "13",
+          "reason": "Raíz incorrecta."
+        },
+        {
+          "step": 1,
+          "value": "-12",
+          "reason": "Raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "34",
+          "reason": "Raíz negativa en lugar de principal."
+        },
+        {
+          "step": 2,
+          "value": "3",
+          "reason": "Suma de factores en lugar de producto."
+        },
+        {
+          "step": 2,
+          "value": "116",
+          "reason": "Suma del sustraendo."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": 58,
+        "intermediate": 12
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Determina la raíz cuadrada principal",
+          "choices": [
+            "144",
+            "13",
+            "12",
+            "-12"
+          ],
+          "correct": "12"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "34",
+            "3",
+            "116",
+            "58"
+          ],
+          "correct": "58"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-construir-intermedio-11",
+        "sha256": "61529459ba12e170f38b2057695c4a4957f83890ad7a8d680111d04a06cf0eb2",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-9",
+      "previous_sha256": "132e25baa95a274290d0643c75fc64e15e47835fe13fb323f69b37e05db1950a",
+      "content_sha256": "d3624ca4821d982ad58990831f504dbe6a575b701a08bdc729a139c8a04a7d96",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "clasificar",
+      "stimulus": "Calcula 10 − √49 × 3 + (12 − 3) ÷ 3. ¿Cuál es el resultado?",
+      "expected": "-8",
+      "intermediate": 21,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "7",
+            "21",
+            "-21",
+            "10"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "12",
+            "-2",
+            "-8",
+            "34"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 34.",
+          "truth": false,
+          "value": 34,
+          "correct": -8,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es -8.",
+          "truth": true,
+          "value": -8,
+          "correct": -8,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -21.",
+          "truth": false,
+          "value": -21,
+          "correct": 21,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "Primero √49 = 7 y el paréntesis 12−3 = 9. Luego el producto 7×3 = 21 y la división 9÷3 = 3. Respeta los signos al combinar: 10 − 21 + 3 = -8.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "7",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 1,
+          "value": "-21",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "10",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 2,
+          "value": "12",
+          "reason": "Resta antes del producto."
+        },
+        {
+          "step": 2,
+          "value": "-2",
+          "reason": "Omisión de división."
+        },
+        {
+          "step": 2,
+          "value": "34",
+          "reason": "Se suma el producto en vez de restarlo."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -8,
+        "intermediate": 21
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "7",
+            "21",
+            "-21",
+            "10"
+          ],
+          "correct": "21"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "12",
+            "-2",
+            "-8",
+            "34"
+          ],
+          "correct": "-8"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-9",
+        "sha256": "132e25baa95a274290d0643c75fc64e15e47835fe13fb323f69b37e05db1950a",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-07-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-10",
+      "previous_sha256": "db50f993578b96b158271fe4d6aa38a99c332d09233d260487997cb786bf7893",
+      "content_sha256": "6eb8edf96e82145332df73ec547b357aedb9301f2e20b70276ce2dff03761253",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "clasificar",
+      "stimulus": "Calcula 11 − √64 × 4 + (19 − 3) ÷ 4. ¿Cuál es el resultado?",
+      "expected": "-17",
+      "intermediate": 32,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "12",
+            "8",
+            "32",
+            "-32"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "47",
+            "16",
+            "-5",
+            "-17"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es 32.",
+          "truth": true,
+          "value": 32,
+          "correct": 32,
+          "oracle_truth": true
+        },
+        {
+          "text": "El resultado solicitado es 47.",
+          "truth": false,
+          "value": 47,
+          "correct": -17,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es -17.",
+          "truth": true,
+          "value": -17,
+          "correct": -17,
+          "oracle_truth": true
+        }
+      ],
+      "explanation": "Primero √64 = 8 y el paréntesis 19−3 = 16. Luego el producto 8×4 = 32 y la división 16÷4 = 4. Respeta los signos al combinar: 11 − 32 + 4 = -17.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "12",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 1,
+          "value": "8",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 1,
+          "value": "-32",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 2,
+          "value": "47",
+          "reason": "Se suma el producto en vez de restarlo."
+        },
+        {
+          "step": 2,
+          "value": "16",
+          "reason": "Resta antes del producto."
+        },
+        {
+          "step": 2,
+          "value": "-5",
+          "reason": "Omisión de división."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -17,
+        "intermediate": 32
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "12",
+            "8",
+            "32",
+            "-32"
+          ],
+          "correct": "32"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "47",
+            "16",
+            "-5",
+            "-17"
+          ],
+          "correct": "-17"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-10",
+        "sha256": "db50f993578b96b158271fe4d6aa38a99c332d09233d260487997cb786bf7893",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-07-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-11",
+      "previous_sha256": "62c4a84faac5cbde9bf568ca0c580edd8d44aec3adafd22663d9c7a3f23a2142",
+      "content_sha256": "031854ac450de7e49c69e0688e16fcfe850322970778674ecb7b69033a69a855",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "clasificar",
+      "stimulus": "Calcula 12 − √81 × 5 + (28 − 3) ÷ 5. ¿Cuál es el resultado?",
+      "expected": "-28",
+      "intermediate": 45,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "-45",
+            "14",
+            "9",
+            "45"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-28",
+            "62",
+            "20",
+            "-8"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -28.",
+          "truth": true,
+          "value": -28,
+          "correct": -28,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -45.",
+          "truth": false,
+          "value": -45,
+          "correct": 45,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 62.",
+          "truth": false,
+          "value": 62,
+          "correct": -28,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "Primero √81 = 9 y el paréntesis 28−3 = 25. Luego el producto 9×5 = 45 y la división 25÷5 = 5. Respeta los signos al combinar: 12 − 45 + 5 = -28.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-45",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "14",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 1,
+          "value": "9",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 2,
+          "value": "62",
+          "reason": "Se suma el producto en vez de restarlo."
+        },
+        {
+          "step": 2,
+          "value": "20",
+          "reason": "Resta antes del producto."
+        },
+        {
+          "step": 2,
+          "value": "-8",
+          "reason": "Omisión de división."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -28,
+        "intermediate": 45
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "-45",
+            "14",
+            "9",
+            "45"
+          ],
+          "correct": "45"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-28",
+            "62",
+            "20",
+            "-8"
+          ],
+          "correct": "-28"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-11",
+        "sha256": "62c4a84faac5cbde9bf568ca0c580edd8d44aec3adafd22663d9c7a3f23a2142",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-07-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-9",
+      "previous_sha256": "6e107008f46bedeba1bd24cc7ca1d9f6150ce5e15548c79d339f098e2280aa7c",
+      "content_sha256": "cb627420eb94af6c54e9265615a9e68590b1974c82b573e911e2102ebccbe38c",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Calcula 7 − √16 × 3 + (8 − 2) ÷ 3. ¿Cuál es el resultado?",
+      "expected": "-3",
+      "intermediate": 12,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "-12",
+            "7",
+            "4",
+            "12"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-3",
+            "21",
+            "11",
+            "1"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -3.",
+          "truth": true,
+          "value": -3,
+          "correct": -3,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -12.",
+          "truth": false,
+          "value": -12,
+          "correct": 12,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 21.",
+          "truth": false,
+          "value": 21,
+          "correct": -3,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "Primero √16 = 4 y el paréntesis 8−2 = 6. Luego el producto 4×3 = 12 y la división 6÷3 = 2. Respeta los signos al combinar: 7 − 12 + 2 = -3.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-12",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 1,
+          "value": "4",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 2,
+          "value": "21",
+          "reason": "Se suma el producto en vez de restarlo."
+        },
+        {
+          "step": 2,
+          "value": "11",
+          "reason": "Resta antes del producto."
+        },
+        {
+          "step": 2,
+          "value": "1",
+          "reason": "Omisión de división."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -3,
+        "intermediate": 12
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "-12",
+            "7",
+            "4",
+            "12"
+          ],
+          "correct": "12"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-3",
+            "21",
+            "11",
+            "1"
+          ],
+          "correct": "-3"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-quiz-avanzado-9",
+        "sha256": "6e107008f46bedeba1bd24cc7ca1d9f6150ce5e15548c79d339f098e2280aa7c",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-09-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-10",
+      "previous_sha256": "d62404663d955c022b82a40101b0b3e761e6ddf788033935a87e9da98e980427",
+      "content_sha256": "bf91d632a65ac50d8b8459bcad6fabce986919c53cc1585e3f8a19b7e359f14f",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Calcula 8 − √25 × 4 + (14 − 2) ÷ 4. ¿Cuál es el resultado?",
+      "expected": "-9",
+      "intermediate": 20,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "20",
+            "-20",
+            "9",
+            "5"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "0",
+            "-9",
+            "31",
+            "15"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 31.",
+          "truth": false,
+          "value": 31,
+          "correct": -9,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es -9.",
+          "truth": true,
+          "value": -9,
+          "correct": -9,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -20.",
+          "truth": false,
+          "value": -20,
+          "correct": 20,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "Primero √25 = 5 y el paréntesis 14−2 = 12. Luego el producto 5×4 = 20 y la división 12÷4 = 3. Respeta los signos al combinar: 8 − 20 + 3 = -9.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-20",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "9",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 1,
+          "value": "5",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "reason": "Omisión de división."
+        },
+        {
+          "step": 2,
+          "value": "31",
+          "reason": "Se suma el producto en vez de restarlo."
+        },
+        {
+          "step": 2,
+          "value": "15",
+          "reason": "Resta antes del producto."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -9,
+        "intermediate": 20
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "20",
+            "-20",
+            "9",
+            "5"
+          ],
+          "correct": "20"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "0",
+            "-9",
+            "31",
+            "15"
+          ],
+          "correct": "-9"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-quiz-avanzado-10",
+        "sha256": "d62404663d955c022b82a40101b0b3e761e6ddf788033935a87e9da98e980427",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-09-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-11",
+      "previous_sha256": "eed01d4a49590354bdea292fd77b724b4d55e2724a6b5f1ae6af17d71127feb5",
+      "content_sha256": "f9fabcf5a364e65fbd0fa276c88ff3f5ee6060b7443936a7e279c2cc7f84c2cf",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Calcula 9 − √36 × 5 + (22 − 2) ÷ 5. ¿Cuál es el resultado?",
+      "expected": "-17",
+      "intermediate": 30,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "6",
+            "30",
+            "-30",
+            "11"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "19",
+            "-1",
+            "-17",
+            "43"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -30.",
+          "truth": false,
+          "value": -30,
+          "correct": 30,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 43.",
+          "truth": false,
+          "value": 43,
+          "correct": -17,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es -17.",
+          "truth": true,
+          "value": -17,
+          "correct": -17,
+          "oracle_truth": true
+        }
+      ],
+      "explanation": "Primero √36 = 6 y el paréntesis 22−2 = 20. Luego el producto 6×5 = 30 y la división 20÷5 = 4. Respeta los signos al combinar: 9 − 30 + 4 = -17.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "6",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 1,
+          "value": "-30",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 2,
+          "value": "19",
+          "reason": "Resta antes del producto."
+        },
+        {
+          "step": 2,
+          "value": "-1",
+          "reason": "Omisión de división."
+        },
+        {
+          "step": 2,
+          "value": "43",
+          "reason": "Se suma el producto en vez de restarlo."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -17,
+        "intermediate": 30
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "6",
+            "30",
+            "-30",
+            "11"
+          ],
+          "correct": "30"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "19",
+            "-1",
+            "-17",
+            "43"
+          ],
+          "correct": "-17"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-quiz-avanzado-11",
+        "sha256": "eed01d4a49590354bdea292fd77b724b4d55e2724a6b5f1ae6af17d71127feb5",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-09-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-9",
+      "previous_sha256": "b01d6805cac35bcb9f1d470f55d124d203b6238e1f1d077b0a41e3d5ca6bd5c0",
+      "content_sha256": "a5cb5795c5724a6a0627b38c12d30daab9dd267f8e8d20e0fe55674f4568ce3d",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Calcula 13 − √100 × 3 + (16 − 4) ÷ 3. ¿Cuál es el resultado?",
+      "expected": "-13",
+      "intermediate": 30,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "-30",
+            "13",
+            "10",
+            "30"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-13",
+            "47",
+            "13",
+            "-5"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -13.",
+          "truth": true,
+          "value": -13,
+          "correct": -13,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -30.",
+          "truth": false,
+          "value": -30,
+          "correct": 30,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 47.",
+          "truth": false,
+          "value": 47,
+          "correct": -13,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "Primero √100 = 10 y el paréntesis 16−4 = 12. Luego el producto 10×3 = 30 y la división 12÷3 = 4. Respeta los signos al combinar: 13 − 30 + 4 = -13.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-30",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "13",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 1,
+          "value": "10",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 2,
+          "value": "47",
+          "reason": "Se suma el producto en vez de restarlo."
+        },
+        {
+          "step": 2,
+          "value": "13",
+          "reason": "Resta antes del producto."
+        },
+        {
+          "step": 2,
+          "value": "-5",
+          "reason": "Omisión de división."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -13,
+        "intermediate": 30
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "-30",
+            "13",
+            "10",
+            "30"
+          ],
+          "correct": "30"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-13",
+            "47",
+            "13",
+            "-5"
+          ],
+          "correct": "-13"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-construir-avanzado-9",
+        "sha256": "b01d6805cac35bcb9f1d470f55d124d203b6238e1f1d077b0a41e3d5ca6bd5c0",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-10",
+      "previous_sha256": "3ae230ffa33b2db74f012c31ce9dd342fb243ddd06007a69021f998915819116",
+      "content_sha256": "a8ab24c25d5318f2e4d6e3bb65a73fcc98f54d8f69fd56664b67ba10a6122261",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Calcula 14 − √121 × 4 + (24 − 4) ÷ 4. ¿Cuál es el resultado?",
+      "expected": "-25",
+      "intermediate": 44,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "44",
+            "-44",
+            "15",
+            "11"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-10",
+            "-25",
+            "63",
+            "17"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 63.",
+          "truth": false,
+          "value": 63,
+          "correct": -25,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es -25.",
+          "truth": true,
+          "value": -25,
+          "correct": -25,
+          "oracle_truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -44.",
+          "truth": false,
+          "value": -44,
+          "correct": 44,
+          "oracle_truth": false
+        }
+      ],
+      "explanation": "Primero √121 = 11 y el paréntesis 24−4 = 20. Luego el producto 11×4 = 44 y la división 20÷4 = 5. Respeta los signos al combinar: 14 − 44 + 5 = -25.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-44",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "15",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 2,
+          "value": "-10",
+          "reason": "Omisión de división."
+        },
+        {
+          "step": 2,
+          "value": "63",
+          "reason": "Se suma el producto en vez de restarlo."
+        },
+        {
+          "step": 2,
+          "value": "17",
+          "reason": "Resta antes del producto."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -25,
+        "intermediate": 44
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "44",
+            "-44",
+            "15",
+            "11"
+          ],
+          "correct": "44"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-10",
+            "-25",
+            "63",
+            "17"
+          ],
+          "correct": "-25"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-construir-avanzado-10",
+        "sha256": "3ae230ffa33b2db74f012c31ce9dd342fb243ddd06007a69021f998915819116",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-11",
+      "previous_sha256": "1d28e27099b9ff30ce98978bdae1a5798524d50467c8f93e709027fe119e00f3",
+      "content_sha256": "485f2d4d3e780a463a44afe3a72f7f83b35051478eddba12fadb13339b301a4d",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Calcula 15 − √144 × 5 + (34 − 4) ÷ 5. ¿Cuál es el resultado?",
+      "expected": "-39",
+      "intermediate": 60,
+      "family": "raiz-producto-cociente-agrupado",
+      "steps": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "12",
+            "60",
+            "-60",
+            "17"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "21",
+            "-15",
+            "-39",
+            "81"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto de la raíz principal por el factor» es -60.",
+          "truth": false,
+          "value": -60,
+          "correct": 60,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es 81.",
+          "truth": false,
+          "value": 81,
+          "correct": -39,
+          "oracle_truth": false
+        },
+        {
+          "text": "El resultado solicitado es -39.",
+          "truth": true,
+          "value": -39,
+          "correct": -39,
+          "oracle_truth": true
+        }
+      ],
+      "explanation": "Primero √144 = 12 y el paréntesis 34−4 = 30. Luego el producto 12×5 = 60 y la división 30÷5 = 6. Respeta los signos al combinar: 15 − 60 + 6 = -39.",
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "12",
+          "reason": "Omisión del factor."
+        },
+        {
+          "step": 1,
+          "value": "-60",
+          "reason": "Signo exterior incorporado al producto."
+        },
+        {
+          "step": 1,
+          "value": "17",
+          "reason": "Suma de factores."
+        },
+        {
+          "step": 2,
+          "value": "21",
+          "reason": "Resta antes del producto."
+        },
+        {
+          "step": 2,
+          "value": "-15",
+          "reason": "Omisión de división."
+        },
+        {
+          "step": 2,
+          "value": "81",
+          "reason": "Se suma el producto en vez de restarlo."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo desde estímulo visible, seis alternativas y tres afirmaciones; cotejo ID/hash predecesor.",
+        "answer": -39,
+        "intermediate": 60
+      },
+      "source": "Contrato R3 OP-04, plan vigente, anclas PHUMA-UNAH-2026 físicas 58 y 61; comparación cualitativa, no equivalencia psicométrica.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el producto de la raíz principal por el factor",
+          "choices": [
+            "12",
+            "60",
+            "-60",
+            "17"
+          ],
+          "correct": "60"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "21",
+            "-15",
+            "-39",
+            "81"
+          ],
+          "correct": "-39"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m3-aritmetica-operaciones-construir-avanzado-11",
+        "sha256": "1d28e27099b9ff30ce98978bdae1a5798524d50467c8f93e709027fe119e00f3",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45715287350/job/139559670050"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal y jerarquía integradas."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Resultado y paso recalculados desde estímulo visible."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas y tres afirmaciones contrastadas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Expresión y alcance de operaciones explícitos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicación causal y cálculo intermedio."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Profundidad cualitativamente diferenciada; no validación empírica; falta revisión transversal."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Dos familias nuevas, persiste concentración."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente de color; pendiente dispositivo físico."
+        }
+      }
+    }
+  ]
+}
