@@ -296,13 +296,169 @@ function skill(seed:Seed,subtopic:ReadingSubtopic){
  };
  return result[subtopic];
 }
+/** Explicaciones específicas y deducciones no literales para las semillas de Idea principal. */
+const MAIN_IDEA_SEED_CLAIMS:Record<string,ReadingChallenge['claims']>={
+  "La biblioteca del barrio": [
+    {
+      "tag": "explicit",
+      "explanation": "El anuncio fija cinco tardes semanales en lugar de dos, a partir del lunes.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Pasar de dos a cinco tardes ofrece tres tardes adicionales de acceso; que aumenten las visitas efectivas depende de que los estudiantes aprovechen esas oportunidades.",
+      "text": "El nuevo horario ofrece tres tardes adicionales de acceso cada semana."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "La petición de mesas sigue sin decisión; no se ha informado una compra.",
+      "text": ""
+    }
+  ],
+  "El huerto escolar": [
+    {
+      "tag": "explicit",
+      "explanation": "El informe indica que algunas macetas recibieron más sol que otras.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Si se iguala la exposición solar en una repetición, se reduce una diferencia entre las condiciones de cultivo. No se garantiza por ello que todas las demás variables estén controladas.",
+      "text": "Igualar la exposición al sol reduciría una diferencia entre las condiciones de cultivo."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "No se presentan cifras de crecimiento por cantidad de agua que permitan afirmar que un grupo creció el doble.",
+      "text": ""
+    }
+  ],
+  "La feria de ciencias": [
+    {
+      "tag": "explicit",
+      "explanation": "La organización publicó 60 visitas para reciclaje y 45 para biología.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Restar 45 de 60 permite deducir una diferencia exacta de 15 visitas; la cifra no está enunciada directamente.",
+      "text": "Reciclaje registró 15 visitas más que biología."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "Falta el registro de física y una persona puede visitar más de un puesto; 105 visitas parciales no equivalen a 105 personas únicas.",
+      "text": ""
+    }
+  ],
+  "Clubes voluntarios de lectura": [
+    {
+      "tag": "explicit",
+      "explanation": "Se informan las medias iniciales y finales de ambos centros: 60 a 72 y 64 a 70.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Los cambios numéricos son 12 y 6 puntos. La diferencia de 6 puntos entre cambios es calculable, pero los instrumentos distintos impiden asumir equivalencia de las escalas.",
+      "text": "El aumento numérico del centro A supera en seis puntos al del centro B, sin garantizar comparabilidad entre instrumentos."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "No hubo asignación aleatoria ni instrumentos equivalentes; el estudio no aísla el efecto de los clubes.",
+      "text": ""
+    }
+  ],
+  "Agua en tres sectores": [
+    {
+      "tag": "explicit",
+      "explanation": "El informe da los consumos iniciales y finales de los tres sectores.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Las reducciones se calculan respecto del consumo inicial: 15 %, 10 % y 5 %. El descenso relativo del Norte supera al del Sur en diez puntos porcentuales.",
+      "text": "El descenso relativo del Norte supera al del Sur en diez puntos porcentuales."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "Solo Norte bajó 15 %; Centro bajó 10 % y Sur 5 %. La afirmación contradice los datos.",
+      "text": ""
+    }
+  ],
+  "Memoria regional": [
+    {
+      "tag": "explicit",
+      "explanation": "Dos relatos ubican el acontecimiento en fechas distintas.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Si los registros de época son independientes de los relatos, pueden aportar evidencia adicional para evaluar cuál fecha tiene mayor respaldo. No garantizan resolver la discrepancia.",
+      "text": "Un registro independiente de los testimonios aportaría evidencia adicional para evaluar las fechas."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "La discrepancia no demuestra invención; el museo todavía necesita contrastar los registros.",
+      "text": ""
+    }
+  ],
+  "Tutorías y sesgo de selección": [
+    {
+      "tag": "explicit",
+      "explanation": "Las medias de los grupos pasan de 75 a 81 y de 71 a 74, respectivamente.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "El primer cambio es 6 y el segundo 3; su diferencia es 3 puntos. Esa operación no elimina las diferencias iniciales ni los factores de confusión.",
+      "text": "La diferencia de cambios es de tres puntos, pero no constituye por sí sola una estimación causal."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "El resultado final es 81 frente a 74, una diferencia de siete puntos, no ocho. Además, los grupos ya diferían y no se controlaron todas las condiciones domésticas.",
+      "text": ""
+    }
+  ],
+  "Riesgo de inundaciones": [
+    {
+      "tag": "explicit",
+      "explanation": "El pasaje informa un aumento de avisos después de ampliar el sistema de alertas.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Si el sistema detecta sucesos antes omitidos, el conteo de avisos puede crecer aun con igual incidencia real. La lluvia y las viviendas también pueden influir.",
+      "text": "Un aumento de la cobertura del registro puede elevar los avisos aunque la incidencia real permanezca estable."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "El equipo distingue avisos de eventos reales y solicita series comparables; no demuestra que la expansión urbana sea la causa exclusiva.",
+      "text": ""
+    }
+  ],
+  "Tres fuentes sobre un acontecimiento": [
+    {
+      "tag": "explicit",
+      "explanation": "El equipo examinó un decreto contemporáneo, una entrevista cuarenta años posterior y un resumen sin autor ni fecha.",
+      "text": ""
+    },
+    {
+      "tag": "inference",
+      "explanation": "Una coincidencia entre fuentes de procedencia independiente aportaría corroboración más fuerte que repetir una versión derivada del mismo documento. Se debe comprobar la independencia.",
+      "text": "Una coincidencia entre fuentes de origen independiente aportaría más corroboración que la repetición de una misma versión."
+    },
+    {
+      "tag": "unsupported",
+      "explanation": "El anonimato dificulta verificar procedencia y no aporta una razón para considerar el resumen más confiable.",
+      "text": ""
+    }
+  ]
+};
 export const READING_BANK:ReadingChallenge[]=SEEDS.flatMap((seed,seedIndex)=>READING_SUBTOPICS.map((subtopic,topicIndex)=>{
  const def=skill(seed,subtopic);
  const plain=[def.a,...def.wrong] as [string,string,string,string];
  const offset=(seedIndex+topicIndex)%4;
  const options=[...plain.slice(offset),...plain.slice(0,offset)] as [string,string,string,string];
  return {id:`reading-${seed.level}-${seedIndex}-${topicIndex}`,level:seed.level,subtopic,title:seed.title,passage:seed.passage,
- claims:[
+ claims:subtopic==="Idea principal"?MAIN_IDEA_SEED_CLAIMS[seed.title].map(c=>({...c,text:c.tag==="explicit"?seed.explicit:c.tag==="unsupported"?seed.unsupported:c.text})):[
  {text:seed.explicit,tag:"explicit",explanation:"El texto declara este hecho."},
  {text:seed.inference,tag:"inference",explanation:"Es una conclusión plausible apoyada en la información, no una afirmación literal."},
  {text:seed.unsupported,tag:"unsupported",explanation:"Los datos disponibles no prueban esta afirmación."}
