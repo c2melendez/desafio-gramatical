@@ -60,6 +60,11 @@ const ph=exam.PHUMA,pa=exam.PAA;
 if(ph.duration_minutes!==170||ph.question_count!==120||ph.response_format!=='single_choice_four_options')
  blueprintIssues.push('PHUMA no mantiene el contrato 120/170/4');
 if(ph.sections.reduce((n,x)=>n+x.count,0)!==120)blueprintIssues.push('Secciones PHUMA no suman 120');
+const expectedPhumaSections={espanol:30,matematicas:30,naturales:20,sociales:20,blandas:20};
+if(ph.sections.length!==Object.keys(expectedPhumaSections).length ||
+ new Set(ph.sections.map(s=>s.area)).size!==ph.sections.length ||
+ ph.sections.some(s=>expectedPhumaSections[s.area]!==s.count))
+ blueprintIssues.push('Distribución PHUMA incorrecta: 30/30/20/20/20');
 if(pa.duration_minutes_without_english!==140||pa.question_count_without_english!==null)
  blueprintIssues.push('PAA sin Inglés no mantiene el contrato documentado y total no inferido');
 if(!pa.response_formats.includes('math_supplied_response'))blueprintIssues.push('PAA sin respuestas matemáticas producidas');
@@ -70,8 +75,10 @@ for(const sect of [...ph.sections,...pa.sections]){
  if(!cat)blueprintIssues.push('Área curricular no existe: '+sect.area);
  for(const name of sect.topics)if(!cat?.topics.some(t=>t.name===name))blueprintIssues.push('Tema no enlazado: '+sect.area+'/'+name);
 }
-gate('C05','contratos_simulacion',5+ph.sections.length+pa.sections.length,blueprintIssues,
- 'Especificaciones por examen; NO existe aún simulador completo validado');
+gate('C05_BLUEPRINT','contratos_simulacion',6+ph.sections.length+pa.sections.length,blueprintIssues,
+ 'Verifica únicamente el diseño del examen');
+gates.push({id:'C05',name:'simulador_integral',status:'NOT_IMPLEMENTED',checks:0,issues:[],scope:'Sin prueba ejecutada de simulador integral; no acredita implementación'});
+
 const rows=coverageRows(),cells=[],allIds=new Set();
 const areaCount={},topicGroups=new Map();
 let checkedDecisions=0,missedModels=0,missingExplanations=0,examStyleQuestions=0,checkedSpanish=0;
@@ -126,6 +133,9 @@ gate('C04','diagnostico_pedagogico_reproducible',rows.length,
  pedagogyIssues,
  'Se registran explicaciones faltantes; profundidad, calidad y transferencia todavía sin certificar');
 const sha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+for(const id of ['C06','C07','C08','C09','C10','C11']) {
+ if(!gates.some(g=>g.id===id)) gates.push({id,name:'evidencia pendiente',status:'NOT_RUN',checks:0,issues:[],scope:'No ejecutado por esta suite; no acredita cierre'});
+}
 const technical=failures.length?'FAIL':'PASS';
 const report={version:1,suite:'ACADEMIA_PAA_PHUMA_CERT_V1',sha,
  generated_at:new Date().toISOString(),technical_status:technical,
