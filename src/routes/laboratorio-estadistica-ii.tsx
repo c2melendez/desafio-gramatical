@@ -1,6 +1,9 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
-import {useEffect,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mistake} from "@/lib/grammar";
+import {useEffect,useRef,useState} from "react";
+import {emptyLedger,recordRound,roundResult} from "@/lib/round-ledger";
+import {savePerfect,newAttemptId} from "@/lib/perfect-achievements";
+import {PerfectBadge} from "@/components/games/PerfectBadge";
+import {LEVELS,LEVEL_LABEL,saveHistory,type Level,type Mistake} from "@/lib/grammar";
 import {stats2Pool,STATS2_SKILLS,STATS2_NAMES,type Stats2Task} from "@/lib/statistics-visual-advanced";
 import {StatisticsAdvancedVisual} from "@/components/games/StatisticsAdvancedVisual";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
@@ -23,9 +26,11 @@ function FunctionLab(){
  const [index,setIndex]=useState(0),[selected,setSelected]=useState<number|null>(null);
  const [score,setScore]=useState(0),[correct,setCorrect]=useState(0),[streak,setStreak]=useState(0),[best,setBest]=useState(0);
  const [mistakes,setMistakes]=useState<Mistake[]>([]),[finished,setFinished]=useState(false);
+ const ledger=useRef(emptyLedger()),advanced=useRef(-1),attemptId=useRef("");
  const back=studyReturn(TOPIC,"Tablas y gráficas","quiz",nivel,"matematicas");
  const key=rotationKey("matematicas",TOPIC,SUBTOPIC,"quiz",nivel);
  useEffect(()=>{
+  ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
   const bank=stats2Pool(nivel),state=readRotation(key,bank.map(q=>q.id));
   const order=[...STATS2_SKILLS.slice(run%4),...STATS2_SKILLS.slice(0,run%4)];
   const picked:Stats2Task[]=[];
@@ -43,23 +48,29 @@ function FunctionLab(){
  function choose(i:number){
   if(selected!==null||!items)return;
   const item=items[index],ok=i===item.answerIndex;
+  const updated=recordRound(ledger.current,{id:item.id,correct:ok});
+  if(updated===ledger.current)return;
+  ledger.current=updated;
   setSelected(i);
   writeRotation(key,recordRotation(readRotation(key,stats2Pool(nivel).map(q=>q.id)),item.id,ok));
-  if(ok){setCorrect(n=>n+1);setScore(n=>n+pointsFor(streak));setStreak(n=>n+1);setBest(n=>Math.max(n,streak+1));}
-  else{setStreak(0);setMistakes(m=>[...m,{prompt:item.prompt,given:item.options[i],correct:item.answer,exp:item.explanation}]);}
+  setCorrect(updated.correct);setScore(updated.score);setStreak(updated.streak);setBest(updated.bestStreak);
+  if(!ok){setMistakes(m=>[...m,{prompt:item.prompt,given:item.options[i],correct:item.answer,exp:item.explanation}]);}
  }
  function next(){
-  if(selected===null||!items)return;
+  if(selected===null||!items||ledger.current.events.length!==index+1||advanced.current===index)return;
+  advanced.current=index;
   if(index===ROUNDS_PER_GAME-1){
+   const result=roundResult(ledger.current);if(!result.finished)return;
+   savePerfect(studyReturn(TOPIC,SUBTOPIC,"quiz",nivel,"matematicas"),ledger.current,attemptId.current);
    saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,area:"matematicas",topic:TOPIC,
-    subtopic:SUBTOPIC,score,correct,total:ROUNDS_PER_GAME,bestStreak:best});
+    subtopic:SUBTOPIC,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak});
    setFinished(true);
   }else{setIndex(n=>n+1);setSelected(null);}
  }
  if(!items)return <main className="mx-auto max-w-2xl p-6">Preparando el laboratorio estadístico…</main>;
  const levelLabel=nivel==="principiante"?"Básico":LEVEL_LABEL[nivel];
  if(finished)return <main className="mx-auto max-w-2xl px-4 py-8 space-y-4">
-  <h1 className="text-3xl font-black">¡Laboratorio completado!</h1>
+  <h1 className="text-3xl font-black">¡Laboratorio completado!</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/>
   <p>Estadística · {levelLabel} · {correct}/{ROUNDS_PER_GAME} respuestas correctas</p>
   <p className="card-ink p-4 font-bold">Puntaje: {score} · Mejor racha: {best}</p>
   {mistakes.length>0&&<section className="space-y-3"><h2 className="text-xl font-bold">Repasa las respuestas</h2>
