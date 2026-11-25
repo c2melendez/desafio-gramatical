@@ -13,7 +13,7 @@ Plataforma independiente para practicar mediante juegos las competencias que se 
 
 Se adopta una meta aproximada de **tres subtemas pendientes por corrida: 405 ejercicios nuevos si parten de cero**, para completar 10/15/20 en cada juego. La prioridad es **terminar los subtemas del tema actual antes de cambiar de tema**. Una corrida solo se declara completa después de **GitHub Actions success y despliegue Render Live en el mismo commit**, con auditoría aprobada. Si quedan menos de tres subtemas en el tema, se informa un bloque menor, sin trasladar trabajo de otra área para simular la cuota. Véanse [política operativa](docs/politica-corridas-bloques.md), [hoja de ruta por subtema](docs/hoja-ruta-expansion-phuma.md) e [informe del primer bloque](docs/corrida-bloque-lectura-324.md).
 
-> **Política histórica de ejecución (17-11-2026; sustituida por v7.6):** las antiguas metas de 324 y 405 registros por corrida describen entregas históricas. El nuevo sistema modular prioriza terminar el bloque abierto, después finalizar **una sola área** en Núcleo 10/15/20, Ampliación 20/35/45 y Completo 30/50/70 por combinación elegible. Los paquetes orientativos de 450 y 900 no sustituyen el cierre ni la auditoría. M0 sigue EN_CURSO hasta que su runner tenga todas las etapas obligatorias PASS y CI/Render correspondan al mismo SHA. [Evidencia de esta ejecución](docs/m0-evidencia-sesion-20261117.md).
+> **Política histórica de ejecución (17-11-2026; sustituida por v7.6.1):** las antiguas metas de 324 y 405 registros por corrida describen entregas históricas. El nuevo sistema modular prioriza terminar el bloque abierto, después finalizar **una sola área** en Núcleo 10/15/20, Ampliación 20/35/45 y Completo 30/50/70 por combinación elegible. Los paquetes orientativos de 450 y 900 no sustituyen el cierre ni la auditoría. M0 sigue EN_CURSO hasta que su runner tenga todas las etapas obligatorias PASS y CI/Render correspondan al mismo SHA. [Evidencia de esta ejecución](docs/m0-evidencia-sesion-20261117.md).
 
 ## Fase A — ampliación verificable
 
@@ -50,5 +50,7 @@ El CI realiza compilación, pruebas, auditoría de cobertura y ESLint antes de q
 **Aviso:** contenido original no oficial, sin afiliación ni aval de la UNAH. Las dificultades son pedagógicas, no calibradas estadísticamente.
 
 
-## Sistema ejecutor vigente — v7.6
+## Sistema ejecutor vigente — v7.6.1
 [Entrada única](PROMPT_EJECUTOR_REPOSITORIO.md) · [Prompt completo](docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md) · [Certificación y fuentes](qa/certification/README.md). Los PDF originales del propietario están en `qa/certification/PDF/`. La prioridad es aprendizaje y fidelidad PAA/PHUMA, sin Inglés; hasta 450 IDs por corrida, con evidencia real y G-ACTION. Los estados anteriores son históricos, no certificación actual.
+
+**v7.6.1 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.

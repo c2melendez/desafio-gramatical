@@ -1,6 +1,6 @@
 # Certificación académica y funcional — Academia PHUMA Play
 
-> **Sistema maestro vigente:** [Ejecutor v7.6](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Hasta 450 IDs por corrida, no necesariamente 450 aprobaciones semánticas. Los controles descritos abajo son implementación histórica salvo verificación actual.
+> **Sistema maestro vigente:** [Ejecutor v7.6.1](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Hasta 450 IDs por corrida, no necesariamente 450 aprobaciones semánticas. Los controles descritos abajo son implementación histórica salvo verificación actual.
 
 ## Fundamento documental y límites
 
@@ -105,8 +105,13 @@ Un lote solo queda **técnicamente entregado** cuando su auditoría y la regresi
 La cobertura total de 90 lotes no sustituye calibración psicométrica, revisión por especialistas ni los simulacros reales PAA/PHUMA separados.
 
 
-## v7.6: controles de ejecución
+## v7.6.1: controles de ejecución
 `python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py'` comprueba el guard local. `python3 qa/certification/verify_sources.py` comprueba los bytes de los PDF, no su interpretación ni derechos. El control de CI no autentica por sí solo evidencia semántica/docente. El cursor legado se conserva sin promover REVIEW a PASS; seleccionar lotes adaptativos por IDs y hashes bajo v7.6.
 
 ### Selección adaptativa ejecutable
 `PHUMA_FROZEN_BATCH=/ruta/lote.json node --import ./scripts/ts-resolve.mjs qa/certification/audit-450.mjs` acepta un JSON `{"items":[{"id":"ID real","content_sha256":"huella real"}]}` de 1–450 IDs únicos. Rechaza hashes obsoletos e IDs inexistentes. Sin variable conserva el recorrido histórico de CI; no modifica el cursor ni aprueba semántica.
+
+**v7.6.1 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.
+
+### Verificación de intervención mínima (v7.6.1)
+G-ACTION comprueba que cambios bajo `src/` estén asociados a `interventions[]` con `scope`, `action`, `affected_paths`, `justification`, `finding_ref` y `evidence_ref` referidos a artefactos registrados. `SUSTITUIR`/`CREAR` exigen `why_minimal_insufficient`. Es un control estructural local; no demuestra por sí solo la necesidad pedagógica ni sustituye el oráculo/revisión independiente. Conservar el código válido no exige modificarlo. Se mantienen los criterios y evidencias históricos compatibles.

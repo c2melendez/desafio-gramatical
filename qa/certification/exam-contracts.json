@@ -189,5 +189,24 @@
     "full_PAA_simulation",
     "full_PHUMA_simulation"
   ],
-  "active_prompt_version": "7.6"
+  "active_prompt_version": "7.6.1",
+  "intervention_policy": {
+    "mode": "CORRECTIVE_INCREMENTAL",
+    "priority": [
+      "CONSERVAR",
+      "VERIFICAR",
+      "CORREGIR",
+      "COMPLEMENTAR",
+      "SUSTITUIR",
+      "CREAR"
+    ],
+    "shared_audit_scopes": [
+      "CURRICULAR",
+      "FUNCTIONAL",
+      "GLOBAL"
+    ],
+    "individual_review_required": true,
+    "defect_evidence_required_for_changes": true,
+    "minimum_intervention_justification_required": true
+  }
 }
