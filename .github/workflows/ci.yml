@@ -27,6 +27,7 @@ jobs:
         with:
           bun-version: latest
       - name: Instalar dependencias
+        id: install_cert_deps
         run: bun install --frozen-lockfile
       - name: Compilar aplicación y generar rutas de TanStack Router
         run: bun run build
@@ -57,7 +58,8 @@ jobs:
           node scripts/privacy-m0-static.mjs
           node scripts/security-client-audit.mjs --test
           node scripts/security-client-audit.mjs
-      - name: Certificación por lotes - auditar exactamente 450 ejercicios
+      - name: Certificación por lotes - auditar hasta 450 ejercicios del banco real
+        if: ${{ !cancelled() && steps.install_cert_deps.outcome == 'success' }}
         run: |
           node --import ./scripts/ts-resolve.mjs qa/certification/audit-450.mjs > qa-batch-450-summary.json
           cat qa-batch-450-summary.json
@@ -72,6 +74,7 @@ jobs:
           if-no-files-found: error
           retention-days: 30
       - name: Certificación PAA/PHUMA V1 - comprobar contratos, oráculos y mapeo sin Inglés
+        if: ${{ !cancelled() && steps.install_cert_deps.outcome == 'success' }}
         run: node --import ./scripts/ts-resolve.mjs qa/certification/run.mjs > qa-certification-summary.json
       - name: Certificación C02-C04 - comprobar reglas originales y priorizar distractores
         run: |
