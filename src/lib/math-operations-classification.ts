@@ -1,9 +1,11 @@
 import type {MathModel} from "./math-m1";
 
-// Only the non-rational M3 classification variants are revised. Historical
-// M1/M2 and the OP-04 rational substitutions retain their existing bytes.
+// R5: M3 non-rational classification. R6 extends this to M1/M2 at the cumulative runtime boundary.
 export function isOperationClassificationR5(item:MathModel):boolean{
  return item.subtopic==="Operaciones"&&item.mode==="clasificar"&&item.oracle.kind==="Operaciones"&&item.id.startsWith("math-m3-");
+}
+export function isOperationClassificationR6(item:MathModel):boolean{
+ return item.subtopic==="Operaciones"&&item.mode==="clasificar"&&item.oracle.kind==="Operaciones"&&/^math-m[12]-/.test(item.id);
 }
 const masks=[[true,true,false],[false,true,false],[true,false,true],[false,false,true],[true,false,false],[false,true,true]];
 function maskFor(item:MathModel){
@@ -12,10 +14,10 @@ function maskFor(item:MathModel){
  return masks[index%masks.length];
 }
 export function expectedOperationClassificationTruthCount(item:MathModel):number{
- return isOperationClassificationR5(item)?maskFor(item).filter(Boolean).length:1;
+ return isOperationClassificationR5(item)||isOperationClassificationR6(item)?maskFor(item).filter(Boolean).length:1;
 }
 export function repairOperationClassification(item:MathModel):MathModel{
- if(!isOperationClassificationR5(item))return item;
+ if(!isOperationClassificationR5(item)&&!isOperationClassificationR6(item))return item;
  const [u,v,w]=item.oracle.inputs;
  const advanced=item.level==="avanzado";
  const result=(u+v)*w,step=u+v;
