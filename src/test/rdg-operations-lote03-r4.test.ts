@@ -1,7 +1,7 @@
 import {readFileSync} from "node:fs";
 import {createHash} from "node:crypto";
 import {expect,it} from "vitest";
-import {mathM3HistoricalPool,mathM3Pool} from "@/lib/math-m3";
+import {mathM3HistoricalPool,mathM3R4Pool as mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 const hash=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");
 const report=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-03-R4-review-candidate.json","utf8"));
