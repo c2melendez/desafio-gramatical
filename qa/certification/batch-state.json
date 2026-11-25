@@ -61,7 +61,7 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Ejecutar selección congelada por sublote con hash exacto; completar fichas §5 A–H por ID y reparar defectos, empezando por OP-04. No transferir PASS de diagnóstico técnico a semántico.",
+    "next_action": "Reconciliar CI de selección y feedback OP04. Reexaminar las 12 fichas E afectadas al aprobar regresión y conservar G REVIEW hasta ampliar diversidad conceptual. Continuar los 32 IDs restantes de MAT-ARIT-01-01; no certificar por conteo.",
     "previous_publication": {
       "sha": "e93b6712dfa0d42102f07b2002f86dffe72cdf34",
       "ci_run": 45685289534,
@@ -115,8 +115,11 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-09.json"
     ],
     "selection_total": 450,
-    "examined_semantic_ids": 0,
+    "examined_semantic_ids": 18,
     "semantic_pass_ids": 0,
-    "review_ids": 450
+    "review_ids": 450,
+    "review_evidence": [
+      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json"
+    ]
   }
 }
