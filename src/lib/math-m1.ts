@@ -23,7 +23,7 @@ export type MathModel={id:string;topic:string;subtopic:string;level:Level;mode:M
  visual?:MathVisual;visualRequirement?:"essential"|"supporting"|"none";
  source:"GUIA-PRE-U-UNAH-2026:p6"|"catalogo-practica-complementaria";
  oracle:{kind:string;inputs:number[];answer:Rational;intermediate:Rational};
- options:string[];answerIndex:number;optionExplanations?:Record<string,string>;
+ options:string[];answerIndex:number;optionExplanations?:Record<string,string>;stepOptionExplanations?:Record<string,string>;assertionExplanations?:Record<string,string>;
  assertions:{text:string;truth:boolean}[];
  steps:{label:string;choices:string[];answerIndex:number}[];
  reviewStatus:"editorial-draft";family:string;
