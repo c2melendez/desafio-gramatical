@@ -1,0 +1,378 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "block_id",
+    "architecture_sha256",
+    "catalog_sha256",
+    "source_manifest_sha256",
+    "route_specs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "7.8"
+    },
+    "block_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "architecture_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "catalog_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "route_specs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "scope",
+          "sources",
+          "didactic_evidence",
+          "objectives",
+          "foundations",
+          "bridges",
+          "common_errors",
+          "activities",
+          "worked_examples",
+          "transfer_tasks",
+          "games",
+          "acceptance"
+        ],
+        "properties": {
+          "scope": {
+            "type": "object",
+            "required": [
+              "area",
+              "topic",
+              "subtopic"
+            ],
+            "properties": {
+              "area": {
+                "type": "string",
+                "minLength": 1
+              },
+              "topic": {
+                "type": "string",
+                "minLength": 1
+              },
+              "subtopic": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "source_id",
+                "sha256",
+                "pages",
+                "finding"
+              ],
+              "properties": {
+                "source_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "pages": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "finding": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "didactic_evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "url",
+                "accessed_at",
+                "finding",
+                "limitations"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "accessed_at": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "finding": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "limitations": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "objectives": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "statement",
+                "operation",
+                "depth",
+                "source_refs",
+                "classification"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "statement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "operation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "depth": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_refs": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "classification": {
+                  "enum": [
+                    "PHUMA",
+                    "PAA_COMPLEMENT",
+                    "PREREQUISITO",
+                    "CONTEXTO",
+                    "HYPOTHESIS"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "foundations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "bridges": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "common_errors": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "activities": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "objective_ids",
+                "function",
+                "interaction",
+                "representation",
+                "prompt",
+                "expected_reasoning",
+                "feedback",
+                "help",
+                "acceptance"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "objective_ids": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "function": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "interaction": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "representation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected_reasoning": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "feedback": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "help": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "acceptance": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "worked_examples": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "transfer_tasks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "prompt",
+                "solution",
+                "oracle",
+                "objective_ids"
+              ],
+              "properties": {
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "solution": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "oracle": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "objective_ids": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "games": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "mode",
+                "level",
+                "objective_ids",
+                "operation"
+              ],
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "level": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "objective_ids": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "operation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "acceptance": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

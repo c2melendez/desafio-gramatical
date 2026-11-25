@@ -17,7 +17,8 @@ def validate(repo, run):
     except (ValueError,subprocess.CalledProcessError,TypeError): return ['GIT: commits distintos y ancestro verificable requeridos']
     def material(x):
         return Path(x).suffix in EXT and (x.startswith(('src/','scripts/','tests/','.github/workflows/')) or (x.startswith('qa/certification/') and not x.startswith(('qa/certification/evidence/','qa/certification/audit/')) and Path(x).suffix in {'.mjs','.js','.ts','.py'}))
-    if not any(material(x) for x in paths): errors.append('DIFF: ningún cambio material reconocido')
+    planning=run.get('operational_phase')=='P0'
+    if not planning and not any(material(x) for x in paths): errors.append('DIFF: ningún cambio material reconocido')
     artifacts=set(); checks=run.get('checks',[])
     if not checks: errors.append('E1: ninguna prueba registrada')
     for c in checks:
@@ -28,6 +29,20 @@ def validate(repo, run):
             if c['sha']!=head or not c['command'].strip() or type(c['exit_code']) is not int: raise ValueError()
             artifacts.add(c['artifact'])
         except (KeyError,ValueError,TypeError,AttributeError,OSError): errors.append('E1: artefacto, hash, comando, exit code o SHA inválido')
+    if planning:
+        path=run.get('plan_path','')
+        try:
+            if not isinstance(path,str) or not (path=='qa/certification/rdg/architecture.json' or re.fullmatch(r'qa/certification/rdg/plans/[A-Za-z0-9_-]+\.json',path)) or path not in paths: raise ValueError()
+            raw=subprocess.check_output(['git','-C',str(repo),'show',head+':'+path],stderr=subprocess.DEVNULL)
+            if hashlib.sha256(raw).hexdigest()!=run.get('plan_sha256') or (repo/path).read_bytes()!=raw or git('rev-parse','HEAD')!=head: raise ValueError()
+            arg='--architecture' if path.endswith('/architecture.json') else path
+            command=['node','--import','./scripts/ts-resolve.mjs','qa/certification/rdg/validate.mjs',arg]
+            verified=json.loads(subprocess.check_output(command,cwd=repo,text=True,stderr=subprocess.DEVNULL))
+            if verified.get('status')!='PASS_STRUCTURAL' or verified.get('sha256')!=run.get('plan_sha256'): raise ValueError()
+            if not any(c.get('artifact') in artifacts and c.get('exit_code')==0 and json.loads((repo/c['artifact']).read_text())==verified for c in checks if 'validate.mjs' in c.get('command','')): raise ValueError()
+        except (ValueError,TypeError,OSError,subprocess.CalledProcessError):
+            errors.append('P0: requiere diseño nuevo en commit, validación real y artefacto coincidente')
+        if any(run.get(f) for f in ('selected_ids','examined_ids','new_semantic_pass_ids','review_ids','fail_ids')): errors.append('P0: diseño no acredita IDs')
     # v7.6.1: student-facing changes require a corrective intervention record.
     # This is a structural check, not independent verification of pedagogical claims.
     changed_product={p for p in paths if p.startswith('src/')}
