@@ -60,7 +60,7 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
   </div>}
   {complete&&<div className="space-y-3">
    <LearningFeedback correct={correct} subtopic={item.subtopic} selected={given} expected={expected}
-    explanation={item.explanation+" Procedimiento comprobable: "+item.formula+"."}/>
+    explanation={(!correct&&item.mode==="quiz"&&item.optionExplanations?.[given]?item.optionExplanations[given]+" ":"")+item.explanation+" Procedimiento comprobable: "+item.formula+"."}/>
    <button type="button" className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>
     {isLast?"Ver resultados":"Continuar"}
    </button>

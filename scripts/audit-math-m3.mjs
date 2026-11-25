@@ -11,6 +11,7 @@ function independentOracle(kind,values){
  const x=values;
  switch(kind){
  case "Operaciones":return ratio((x[0]+x[1])*x[2]);
+ case "Operaciones-racionales":{const [p,d,n,m,stage]=x;return stage===3?ratio(2*p+4*n-m,2*d):ratio(p+n-m,d);}
  case "Fracciones":return ratio(x[0]*x[3]+x[2]*x[1],x[1]*x[3]);
  case "Porcentajes":return ratio(x[0]*x[1],100);
  case "Proporciones":return ratio(x[1]*x[2],x[0]);
@@ -79,7 +80,14 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
   if(item.reviewStatus!=="editorial-draft")issues.push(cell+": invalid review status "+item.id);
   operations.add(item.operation);
  }
- if(operations.size!==1)issues.push(cell+": mixed cognitive operation");
+ // v7.8.1 requires actual curricular breadth, not one numerical template per cell.
+ // Exception is exact and limited to the 3 corrective OP-04 records in each middle/advanced Operaciones cell.
+ if(subtopic==="Operaciones"&&level!=="principiante"){
+  const old=level==="intermedio"?"modificar-parentesis-y-factor":"distributiva-y-cancelacion";
+  const added=level==="intermedio"?"raiz-racionales-signos":"raiz-producto-racionales-combinados";
+  if(operations.size!==2||!operations.has(old)||!operations.has(added)||bank.filter(x=>x.operation===added&&x.oracle.kind==="Operaciones-racionales").length!==3)
+   issues.push(cell+": invalid OP-04 coverage");
+ }else if(operations.size!==1)issues.push(cell+": mixed cognitive operation");
  const first=selectRotation(bank,emptyRotation(),10,()=>0.42);
  let history=emptyRotation();for(const x of first)history=recordRotation(history,x.id,true);
  const second=selectRotation(bank,history,10,()=>0.57);
