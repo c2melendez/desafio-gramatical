@@ -1,0 +1,3445 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "status": "CANDIDATO_REPARACION",
+  "source_sha": "aef128b4eff992545f63b288e90c3ef97061cd02",
+  "source_ci": 45695457781,
+  "source_review": "qa/certification/rdg/evidence/MAT-ARIT-01-02-review.json",
+  "method": "Reproducción de objetos M1 a partir de arithmeticPedagogy del SHA base, orden de propiedades/semilla de mathModel, y cotejo exacto SHA256 con las 37 fichas congeladas antes de sustituir únicamente alternativas y feedback. Los 222 distractores nuevos representan errores de procedimiento con valores calculables. CI debe confirmar hashes sucesores en runtime; no se cambia la clave ni el enunciado.",
+  "summary": {
+    "reopened": 37,
+    "changed_distractors": 222,
+    "unchanged_ids": 413,
+    "semantic_pass": 0,
+    "review": 37
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-0",
+      "previous_hash": "ee0e3d98abd7d0e364a491fa448584cb2d43b4b90cc337f06aaaa60f297dc30e",
+      "content_sha256": "98d0a2929d3fa1bcb84aeaec5520cd4173472349497864fa5967cecda0d7f253",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+16)×2−12×2. ¿Cuál es su valor?",
+      "expected": "32",
+      "intermediate": "16",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "28",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "12+16"
+            },
+            {
+              "value": "-16",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−16"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "56",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(12+16)×2"
+            },
+            {
+              "value": "-32",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−16×2"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (12+16)×2−12×2 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (12+16)×2−12×2=32; intermedio 16; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+16)×2−12×2. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-1",
+      "previous_hash": "d869b2dbcdabe86160af4b5d160bb70a512b4f86190cdf38d5a46c8ef82e2597",
+      "content_sha256": "a5a99f5d5c7b5c68d7857490345eac6208cc6bf5495c48c708b2bef49ec19b88",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+19)×7−13×7. ¿Cuál es su valor?",
+      "expected": "133",
+      "intermediate": "19",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "32",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "13+19"
+            },
+            {
+              "value": "-19",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−19"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "224",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(13+19)×7"
+            },
+            {
+              "value": "-133",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−19×7"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (13+19)×7−13×7 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (13+19)×7−13×7=133; intermedio 19; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+19)×7−13×7. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-10",
+      "previous_hash": "7d5cb3c77da4e93871d63997b5d49e27bb845519c6f6dc11243e48e84ebaff01",
+      "content_sha256": "586890e60ee3adfe7634a5bb3e4112ba046c07f73218e828c70b39ec7e2cf161",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (22+7)×3−22×3. ¿Cuál es su valor?",
+      "expected": "21",
+      "intermediate": "7",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "29",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "22+7"
+            },
+            {
+              "value": "-7",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−7"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "87",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(22+7)×3"
+            },
+            {
+              "value": "-21",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−7×3"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (22+7)×3−22×3 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (22+7)×3−22×3=21; intermedio 7; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (22+7)×3−22×3. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-11",
+      "previous_hash": "f9bc3fca1f9977ee9e32ddbe4c0c84ccdaeb0e353839a71b680abb451317d2cd",
+      "content_sha256": "35ee859fe83eebfcea86da76db88eb75d5ca686d59511340e13911cd3a16056c",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+10)×8−23×8. ¿Cuál es su valor?",
+      "expected": "80",
+      "intermediate": "10",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "33",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "23+10"
+            },
+            {
+              "value": "-10",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−10"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "264",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(23+10)×8"
+            },
+            {
+              "value": "-80",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−10×8"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (23+10)×8−23×8 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (23+10)×8−23×8=80; intermedio 10; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+10)×8−23×8. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-12",
+      "previous_hash": "c53d03a3803cb7379b59fff23b10d03bc875e68ab23e84842d693a807b7e7229",
+      "content_sha256": "ab8db1fbc853a9fd7d7a13d6b566f04b615861b4f6fbacf876e47fb322eba1f5",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (24+13)×6−24×6. ¿Cuál es su valor?",
+      "expected": "78",
+      "intermediate": "13",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "37",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "24+13"
+            },
+            {
+              "value": "-13",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−13"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "222",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(24+13)×6"
+            },
+            {
+              "value": "-78",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−13×6"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (24+13)×6−24×6 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (24+13)×6−24×6=78; intermedio 13; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (24+13)×6−24×6. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-13",
+      "previous_hash": "d2a597581194f7dc3ad73a82a3ef8927c18d9c79faab9ace5c3dc4df4fa2e703",
+      "content_sha256": "176c0c5a62c3ae8cb8736a48f0654523b7494ab9527d37b409ab3a69dd24ce79",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+16)×4−8×4. ¿Cuál es su valor?",
+      "expected": "64",
+      "intermediate": "16",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "24",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "8+16"
+            },
+            {
+              "value": "-16",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−16"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "96",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(8+16)×4"
+            },
+            {
+              "value": "-64",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−16×4"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (8+16)×4−8×4 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (8+16)×4−8×4=64; intermedio 16; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+16)×4−8×4. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-14",
+      "previous_hash": "0646ad5a36cb5fe83aae03c413b0cb99d0dd67c57dc52ac5492925e30a415e4f",
+      "content_sha256": "b7bace2b00735a8b85f30b1e694ef6cdd8052c08905eccbfaad004b20824237e",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+19)×2−9×2. ¿Cuál es su valor?",
+      "expected": "38",
+      "intermediate": "19",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "28",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "9+19"
+            },
+            {
+              "value": "-19",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−19"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "56",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(9+19)×2"
+            },
+            {
+              "value": "-38",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−19×2"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (9+19)×2−9×2 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (9+19)×2−9×2=38; intermedio 19; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+19)×2−9×2. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-15",
+      "previous_hash": "2ceb9cf57bdb9268d1bdda70229096fa54a33e543fe2257233141f1a506fb72a",
+      "content_sha256": "d52eb2bef7f5ebff7586b56ff1bf3713c2627f8866169ef6faac243e05544857",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+9)×7−10×7. ¿Cuál es su valor?",
+      "expected": "63",
+      "intermediate": "9",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "19",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "10+9"
+            },
+            {
+              "value": "-9",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−9"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "133",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(10+9)×7"
+            },
+            {
+              "value": "-63",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−9×7"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (10+9)×7−10×7 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (10+9)×7−10×7=63; intermedio 9; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+9)×7−10×7. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-16",
+      "previous_hash": "4b649c739a3444da61c02316b4c83c2a2567af23a75ecfc7bb4e84a01e1d6105",
+      "content_sha256": "e90182534a0c0c1ca72f6ba7f2770cceb0a650e45f23ef978bb4992b2ecbfb27",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+12)×5−11×5. ¿Cuál es su valor?",
+      "expected": "60",
+      "intermediate": "12",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "23",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "11+12"
+            },
+            {
+              "value": "-12",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−12"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "115",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(11+12)×5"
+            },
+            {
+              "value": "-60",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−12×5"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (11+12)×5−11×5 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (11+12)×5−11×5=60; intermedio 12; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+12)×5−11×5. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-17",
+      "previous_hash": "d27c1898fe73bed2d98debcc821d803921802a17e24c036e4ec72d4b6e763a84",
+      "content_sha256": "98a7b6dd397e80066e0792abd22e55cd831bdbc4f16712c193f3391c7e46d783",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+15)×3−12×3. ¿Cuál es su valor?",
+      "expected": "45",
+      "intermediate": "15",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "27",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "12+15"
+            },
+            {
+              "value": "-15",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−15"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "81",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(12+15)×3"
+            },
+            {
+              "value": "-45",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−15×3"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (12+15)×3−12×3 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (12+15)×3−12×3=45; intermedio 15; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+15)×3−12×3. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-18",
+      "previous_hash": "a2517b0a84567d9b53bbbe7df1023ec97afdb82022d76b6efedf1155b3e34a14",
+      "content_sha256": "0a8eb789a15dc7477c93750930065577102d32c7b033acd1f74e2ff634b1fad3",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+18)×8−13×8. ¿Cuál es su valor?",
+      "expected": "144",
+      "intermediate": "18",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "31",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "13+18"
+            },
+            {
+              "value": "-18",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−18"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "248",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(13+18)×8"
+            },
+            {
+              "value": "-144",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−18×8"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (13+18)×8−13×8 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (13+18)×8−13×8=144; intermedio 18; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+18)×8−13×8. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-19",
+      "previous_hash": "1b52331100c387f3c33d64d6fcb6d9e1b3fe3d6f30990d1eb90eb008f24ac932",
+      "content_sha256": "c98dfa232d9dd3a8a4132179f655cfaff94f004680e87ab7832afbe46c18c2e1",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+8)×6−14×6. ¿Cuál es su valor?",
+      "expected": "48",
+      "intermediate": "8",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "22",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "14+8"
+            },
+            {
+              "value": "-8",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−8"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "132",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(14+8)×6"
+            },
+            {
+              "value": "-48",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−8×6"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (14+8)×6−14×6 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (14+8)×6−14×6=48; intermedio 8; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+8)×6−14×6. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-2",
+      "previous_hash": "68ca6f180a7311a0effa20ff6a63e81bd19a46b0fc01e61c2561f971741f7c38",
+      "content_sha256": "0cec46d4f3568f3cc0a304226d5dae516d16c435933be0ada8446c43f8194b93",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+9)×5−14×5. ¿Cuál es su valor?",
+      "expected": "45",
+      "intermediate": "9",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "23",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "14+9"
+            },
+            {
+              "value": "-9",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−9"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "115",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(14+9)×5"
+            },
+            {
+              "value": "-45",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−9×5"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (14+9)×5−14×5 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (14+9)×5−14×5=45; intermedio 9; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+9)×5−14×5. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-3",
+      "previous_hash": "ce49e1aaae418e6a95d09d15bb02c0ac9a95dac66be860706af5670478262b1b",
+      "content_sha256": "f2e7bb6ec8845f6926af4daec96c4eb529281eabd7b639c9378d8f5c6bb4648e",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+12)×3−15×3. ¿Cuál es su valor?",
+      "expected": "36",
+      "intermediate": "12",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "27",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "15+12"
+            },
+            {
+              "value": "-12",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−12"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "81",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(15+12)×3"
+            },
+            {
+              "value": "-36",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−12×3"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (15+12)×3−15×3 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (15+12)×3−15×3=36; intermedio 12; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+12)×3−15×3. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-4",
+      "previous_hash": "23a2b0f2ed9c30043b6e3156a41c0cc635cd393f2e2c4450cee3a1e0169e85e6",
+      "content_sha256": "fed2dad1bb5dbb1d35b40de71c593b0d3e1eda647670269ac69df070207c2080",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+15)×8−16×8. ¿Cuál es su valor?",
+      "expected": "120",
+      "intermediate": "15",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "31",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "16+15"
+            },
+            {
+              "value": "-15",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−15"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "248",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(16+15)×8"
+            },
+            {
+              "value": "-120",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−15×8"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (16+15)×8−16×8 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (16+15)×8−16×8=120; intermedio 15; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+15)×8−16×8. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-5",
+      "previous_hash": "0ee4222e7838c2ac1fa3a1b7780546bff20c51dfd28f0722a7d0f155ae26ee5d",
+      "content_sha256": "48549d74590d102d6fd1b496c795002d82d7296193a4aff4173849d6b0a30f61",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (17+18)×6−17×6. ¿Cuál es su valor?",
+      "expected": "108",
+      "intermediate": "18",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "35",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "17+18"
+            },
+            {
+              "value": "-18",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−18"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "210",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(17+18)×6"
+            },
+            {
+              "value": "-108",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−18×6"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (17+18)×6−17×6 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (17+18)×6−17×6=108; intermedio 18; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (17+18)×6−17×6. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-6",
+      "previous_hash": "10bc4ac9a812e5fcf29eded8e885d85933c4eeae8502fadd29bf8df6bc4e5170",
+      "content_sha256": "0ed9cde086647150b112e3325e241bb8ec24057151b6b50b0829abb4c7c7de72",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+8)×4−18×4. ¿Cuál es su valor?",
+      "expected": "32",
+      "intermediate": "8",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "26",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "18+8"
+            },
+            {
+              "value": "-8",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−8"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "104",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(18+8)×4"
+            },
+            {
+              "value": "-32",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−8×4"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (18+8)×4−18×4 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (18+8)×4−18×4=32; intermedio 8; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+8)×4−18×4. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-7",
+      "previous_hash": "50073c945faccc96d552b61ae052b330aeff6b7ab8eae62a521ff4fe1f8f03ca",
+      "content_sha256": "7d98be870fa683f08c2e208a97a387fcabe3e9b57519d0e9edeaf9f73ad3f642",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (19+11)×2−19×2. ¿Cuál es su valor?",
+      "expected": "22",
+      "intermediate": "11",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "30",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "19+11"
+            },
+            {
+              "value": "-11",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−11"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "60",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(19+11)×2"
+            },
+            {
+              "value": "-22",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−11×2"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (19+11)×2−19×2 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (19+11)×2−19×2=22; intermedio 11; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (19+11)×2−19×2. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-8",
+      "previous_hash": "33ae75ca4f96ba87e3b671f39a43104753109dfeb3f874acba9aa806752bb40f",
+      "content_sha256": "c8260acb59c4ef1f0d8080a762036bcd48329e2bb2fa6c464a7828dc60f07179",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+14)×7−20×7. ¿Cuál es su valor?",
+      "expected": "98",
+      "intermediate": "14",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "34",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "20+14"
+            },
+            {
+              "value": "-14",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−14"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "238",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(20+14)×7"
+            },
+            {
+              "value": "-98",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−14×7"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (20+14)×7−20×7 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (20+14)×7−20×7=98; intermedio 14; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+14)×7−20×7. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-avanzado-9",
+      "previous_hash": "c4571e0961a2a5a034ec84ac2766ba59273e27ff5d3a736478874dee1ebc2a61",
+      "content_sha256": "f804083cbbdfa5155c2c6a8ffea9fad8dab2c05f14e0f3c3d5f5bcc250dbb5e5",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+17)×5−21×5. ¿Cuál es su valor?",
+      "expected": "85",
+      "intermediate": "17",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "38",
+              "reason": "Conservar ambos sumandos ignora que el primer producto se cancela.",
+              "calculation": "21+17"
+            },
+            {
+              "value": "-17",
+              "reason": "Cambiar de signo el sumando que no se cancela altera el valor.",
+              "calculation": "−17"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar ambos sumandos elimina un término que no tiene opuesto.",
+              "calculation": "0"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "190",
+              "reason": "Omitir la resta del primer producto.",
+              "calculation": "(21+17)×5"
+            },
+            {
+              "value": "-85",
+              "reason": "Invertir el signo del término restante.",
+              "calculation": "−17×5"
+            },
+            {
+              "value": "0",
+              "reason": "Cancelar también el producto restante.",
+              "calculation": "0"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (21+17)×5−21×5 evalúa OP-03 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (21+17)×5−21×5=85; intermedio 17; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+17)×5−21×5. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad con números positivos, insuficiente para generalizar transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-0",
+      "previous_hash": "1bf0ce7d9d2fa67af13bfcd2f5832061b7b7ef60b6833779f040aba32bfba0d9",
+      "content_sha256": "15ba0248c64f61e5b54ec13891e53ff96e137e8f096d612c87539a2e0fa35217",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (18+15)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "105",
+      "intermediate": "35",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "33",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "18+15"
+            },
+            {
+              "value": "31",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "18+15−2"
+            },
+            {
+              "value": "34",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "18+15+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "99",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(18+15)×3"
+            },
+            {
+              "value": "140",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(18+17)×4"
+            },
+            {
+              "value": "93",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(18+15−2)×3"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (18+17)×3 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (18+17)×3=105; intermedio 35; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (18+15)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-1",
+      "previous_hash": "37310492b74189cadb46101fcccdfde6ceef863662635ee03039b1dfe0f96fcc",
+      "content_sha256": "502e5721a2bf4922bcc1c0cd5a5192ca8b0dbf51bddf45c938a8722708eb0623",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (19+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "26",
+      "intermediate": "26",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "24",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "19+5"
+            },
+            {
+              "value": "22",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "19+5−2"
+            },
+            {
+              "value": "25",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "19+5+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "24",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(19+5)×1"
+            },
+            {
+              "value": "52",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(19+7)×2"
+            },
+            {
+              "value": "22",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(19+5−2)×1"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (19+7)×1 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (19+7)×1=26; intermedio 26; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (19+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-10",
+      "previous_hash": "dc957180ec0a75d830279ed43079e0f04c86fd4b836cd260928f868bf121899c",
+      "content_sha256": "855cf481614092468311ffc483d3017cea346fd982e08234bbaaba211165c132",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (11+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "76",
+      "intermediate": "19",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "17",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "11+6"
+            },
+            {
+              "value": "15",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "11+6−2"
+            },
+            {
+              "value": "18",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "11+6+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "68",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(11+6)×4"
+            },
+            {
+              "value": "95",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(11+8)×5"
+            },
+            {
+              "value": "60",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(11+6−2)×4"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (11+8)×4 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (11+8)×4=76; intermedio 19; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (11+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-11",
+      "previous_hash": "f86ea40e4ff98f460f349096975e1f12818e5081e6a9d97bd795137daa8e41a1",
+      "content_sha256": "900691ac8ce83cc4d8f00a9f3ba3ae0083ddeb394e95a2a172640ac34693599f",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (12+9)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "46",
+      "intermediate": "23",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "21",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "12+9"
+            },
+            {
+              "value": "19",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "12+9−2"
+            },
+            {
+              "value": "22",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "12+9+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "42",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(12+9)×2"
+            },
+            {
+              "value": "69",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(12+11)×3"
+            },
+            {
+              "value": "38",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(12+9−2)×2"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (12+11)×2 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (12+11)×2=46; intermedio 23; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (12+9)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-12",
+      "previous_hash": "236510a20172bf9b7633e38f30db8f6520a5466b36a56c33e98bbac18ab6e9c5",
+      "content_sha256": "6286dda989be881d0847f291f346fb3275f39f72f3f4d65c6c4fadbc7d5cf9ff",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (13+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "189",
+      "intermediate": "27",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "25",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "13+12"
+            },
+            {
+              "value": "23",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "13+12−2"
+            },
+            {
+              "value": "26",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "13+12+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "175",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(13+12)×7"
+            },
+            {
+              "value": "216",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(13+14)×8"
+            },
+            {
+              "value": "161",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(13+12−2)×7"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (13+14)×7 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (13+14)×7=189; intermedio 27; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (13+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-13",
+      "previous_hash": "a88b62baa91b1983a01e5f70920eb737ad4a5b11a9d85b154dcd8cb229df669c",
+      "content_sha256": "3c3f368343d47f13f9c91de6c7b633473b477f6bfe009bfd37e9b5482341787e",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (14+15)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "155",
+      "intermediate": "31",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "29",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "14+15"
+            },
+            {
+              "value": "27",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "14+15−2"
+            },
+            {
+              "value": "30",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "14+15+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "145",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(14+15)×5"
+            },
+            {
+              "value": "186",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(14+17)×6"
+            },
+            {
+              "value": "135",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(14+15−2)×5"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (14+17)×5 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (14+17)×5=155; intermedio 31; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (14+15)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-14",
+      "previous_hash": "c5f224a7cdac9bf434186df17d861077cc5d2100cda70f3b02ccc9e4e98b9e42",
+      "content_sha256": "c31e7aad1fd9b74ff5d103b2e007e6f19741fc22d2074a8a739d8f295b04033c",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (15+5)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "66",
+      "intermediate": "22",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "20",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "15+5"
+            },
+            {
+              "value": "18",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "15+5−2"
+            },
+            {
+              "value": "21",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "15+5+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "60",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(15+5)×3"
+            },
+            {
+              "value": "88",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(15+7)×4"
+            },
+            {
+              "value": "54",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(15+5−2)×3"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (15+7)×3 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (15+7)×3=66; intermedio 22; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (15+5)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-2",
+      "previous_hash": "fe893e85694f5dae3c09f10640e77b8a80a92ee39aabe9fbcf58c4eb2c3dd7e7",
+      "content_sha256": "00168c3934d736c3579aa3cd0db62e87526537a0f80e7c97014bb166652201df",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (20+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "180",
+      "intermediate": "30",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "28",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "20+8"
+            },
+            {
+              "value": "26",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "20+8−2"
+            },
+            {
+              "value": "29",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "20+8+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "168",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(20+8)×6"
+            },
+            {
+              "value": "210",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(20+10)×7"
+            },
+            {
+              "value": "156",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(20+8−2)×6"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (20+10)×6 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (20+10)×6=180; intermedio 30; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (20+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-3",
+      "previous_hash": "ac24576284ba4a86c0e8315c2b2a4411b072727ff597d9bbe3dd506408f4a991",
+      "content_sha256": "c15defcbb80e92281215824c90707f005653cfa0a041743896a3db978b2e6d69",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (21+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "136",
+      "intermediate": "34",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "32",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "21+11"
+            },
+            {
+              "value": "30",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "21+11−2"
+            },
+            {
+              "value": "33",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "21+11+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "128",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(21+11)×4"
+            },
+            {
+              "value": "170",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(21+13)×5"
+            },
+            {
+              "value": "120",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(21+11−2)×4"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (21+13)×4 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (21+13)×4=136; intermedio 34; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (21+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-4",
+      "previous_hash": "0de74269e4e35d95e02b052f06eb771aa42f926ec8fb4c6287fc6338f0bc1996",
+      "content_sha256": "7b90e1d66be9e4db3ec597c28c66e242504e42c61966dff92b5da45530811ede",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (22+14)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "76",
+      "intermediate": "38",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "36",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "22+14"
+            },
+            {
+              "value": "34",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "22+14−2"
+            },
+            {
+              "value": "37",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "22+14+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "72",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(22+14)×2"
+            },
+            {
+              "value": "114",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(22+16)×3"
+            },
+            {
+              "value": "68",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(22+14−2)×2"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (22+16)×2 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (22+16)×2=76; intermedio 38; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (22+14)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-5",
+      "previous_hash": "d52bedb5641d4af327d9c111abade00bb0dd8778319eba2e13456d5a6524432e",
+      "content_sha256": "a85f607150f215b2161cb983fec328f279af12af57bd9740a24856c17ebb9933",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (6+17)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "175",
+      "intermediate": "25",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "23",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "6+17"
+            },
+            {
+              "value": "21",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "6+17−2"
+            },
+            {
+              "value": "24",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "6+17+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "161",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(6+17)×7"
+            },
+            {
+              "value": "200",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(6+19)×8"
+            },
+            {
+              "value": "147",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(6+17−2)×7"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (6+19)×7 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (6+19)×7=175; intermedio 25; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (6+17)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-6",
+      "previous_hash": "b2476ef44634cf087e448b4b6f3483143e7b198a79101c89bc21767d125d57e8",
+      "content_sha256": "43d916b9747aeec158873e15ae52abc3ccf54fe5ca446ae4422ed8c02c6f5e63",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (7+7)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "80",
+      "intermediate": "16",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "14",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "7+7"
+            },
+            {
+              "value": "12",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "7+7−2"
+            },
+            {
+              "value": "15",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "7+7+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "70",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(7+7)×5"
+            },
+            {
+              "value": "96",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(7+9)×6"
+            },
+            {
+              "value": "60",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(7+7−2)×5"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (7+9)×5 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (7+9)×5=80; intermedio 16; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (7+7)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-7",
+      "previous_hash": "8381543cbbe4f0af7a844073bf79d09bb9aac0220a0b5bd3571d407edac9386e",
+      "content_sha256": "ea4ad4f9a6b38349e2330ee5b0bf3009f346d96cda7890700cda42530b6e4a6f",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (8+10)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "60",
+      "intermediate": "20",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "18",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "8+10"
+            },
+            {
+              "value": "16",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "8+10−2"
+            },
+            {
+              "value": "19",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "8+10+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "54",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(8+10)×3"
+            },
+            {
+              "value": "80",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(8+12)×4"
+            },
+            {
+              "value": "48",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(8+10−2)×3"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (8+12)×3 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (8+12)×3=60; intermedio 20; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (8+10)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-8",
+      "previous_hash": "74162db5ca8c877f7c7c6c1a8273543228ef9a5c6d65be39b77c6337a9cf31ca",
+      "content_sha256": "ccbed479c46e98990e3aa58f97861927da9b98aaa7144a94a8f1f23b2e81c6c6",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (9+13)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "24",
+      "intermediate": "24",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "22",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "9+13"
+            },
+            {
+              "value": "20",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "9+13−2"
+            },
+            {
+              "value": "23",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "9+13+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "22",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(9+13)×1"
+            },
+            {
+              "value": "48",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(9+15)×2"
+            },
+            {
+              "value": "20",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(9+13−2)×1"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (9+15)×1 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (9+15)×1=24; intermedio 24; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (9+13)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-intermedio-9",
+      "previous_hash": "f3a90bcfc63acaf5ad74608f43a6adc488e58b27ba5d81047d8fc6bbbe53a40e",
+      "content_sha256": "9ecaed4552b960b444f6daa8b50f654ea7f28e424fa8cb8444462d8efa87ad40",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "stimulus": "La expresión original es (10+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "168",
+      "intermediate": "28",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "26",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "10+16"
+            },
+            {
+              "value": "24",
+              "reason": "Restar 2 en vez de sumar 2.",
+              "calculation": "10+16−2"
+            },
+            {
+              "value": "27",
+              "reason": "Aplicar indebidamente la disminución del factor también al paréntesis.",
+              "calculation": "10+16+2−1"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "156",
+              "reason": "Omitir el aumento del segundo sumando.",
+              "calculation": "(10+16)×6"
+            },
+            {
+              "value": "196",
+              "reason": "Omitir la disminución del factor.",
+              "calculation": "(10+18)×7"
+            },
+            {
+              "value": "144",
+              "reason": "Disminuir el segundo sumando en vez de aumentarlo.",
+              "calculation": "(10+16−2)×6"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (10+18)×6 evalúa OP-02 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (10+18)×6=168; intermedio 28; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: La expresión original es (10+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-0",
+      "previous_hash": "9d52832994fa1d08c8226d6967c0632a4623c0b7e4a03a423ebe26349a7810ce",
+      "content_sha256": "6e58b858ddbbb4fe27fedd16e077a22a6eb87455e66adc97cf5ed545586dd317",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "stimulus": "Resuelve (7+14)×6. ¿Cuál es el resultado?",
+      "expected": "126",
+      "intermediate": "21",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "7",
+              "reason": "Omitir el segundo sumando.",
+              "calculation": "7"
+            },
+            {
+              "value": "14",
+              "reason": "Omitir el primer sumando.",
+              "calculation": "14"
+            },
+            {
+              "value": "91",
+              "reason": "Multiplicar antes de resolver la agrupación.",
+              "calculation": "7+14×6"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "91",
+              "reason": "Ignorar los paréntesis y multiplicar solo el segundo sumando.",
+              "calculation": "7+14×6"
+            },
+            {
+              "value": "56",
+              "reason": "Multiplicar únicamente el primer sumando.",
+              "calculation": "7×6+14"
+            },
+            {
+              "value": "27",
+              "reason": "Sumar el factor en lugar de multiplicar.",
+              "calculation": "7+14+6"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (7+14)×6 evalúa OP-01 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (7+14)×6=126; intermedio 21; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Resuelve (7+14)×6. ¿Cuál es el resultado?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-1",
+      "previous_hash": "8b95154ba3f36eb18aee31d225a48c9d357d7546d653695c0fdfdf7431afdd9d",
+      "content_sha256": "fc7bc1f53a3506bb84b01ce7d823a2023d3c3bf1bf404bd665b2eed8ba655062",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "stimulus": "Resuelve (8+4)×4. ¿Cuál es el resultado?",
+      "expected": "48",
+      "intermediate": "12",
+      "distractors": [
+        {
+          "step": 1,
+          "alternatives": [
+            {
+              "value": "8",
+              "reason": "Omitir el segundo sumando.",
+              "calculation": "8"
+            },
+            {
+              "value": "4",
+              "reason": "Omitir el primer sumando.",
+              "calculation": "4"
+            },
+            {
+              "value": "24",
+              "reason": "Multiplicar antes de resolver la agrupación.",
+              "calculation": "8+4×4"
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "alternatives": [
+            {
+              "value": "24",
+              "reason": "Ignorar los paréntesis y multiplicar solo el segundo sumando.",
+              "calculation": "8+4×4"
+            },
+            {
+              "value": "36",
+              "reason": "Multiplicar únicamente el primer sumando.",
+              "calculation": "8×4+4"
+            },
+            {
+              "value": "16",
+              "reason": "Sumar el factor en lugar de multiplicar.",
+              "calculation": "8+4+4"
+            }
+          ]
+        }
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "La operación (8+4)×4 evalúa OP-01 conforme al plan R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Cálculo directo (8+4)×4=48; intermedio 12; cuatro alternativas únicas en cada paso."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres mecanismos conceptuales distintos por paso; se descartan colisiones con la clave y entre alternativas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito y datos completos: Resuelve (8+4)×4. ¿Cuál es el resultado?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Causas específicas implementadas; falta observar regresión del candidato."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión de agrupación directa a cambios de dos operandos; calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Estructura repetida por familia y nivel; modificar números no acredita diversidad."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica textual por botones, sin dependencia de color ni contexto sensible; falta prueba en dispositivo físico y lector de pantalla."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "E_REGRESION_PENDIENTE"
+      ]
+    }
+  ]
+}
