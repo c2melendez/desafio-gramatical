@@ -52,22 +52,23 @@
       "topic": "Aritmética",
       "subtopic": "Operaciones"
     },
-    "status": "CANDIDATO_P1_R2",
+    "status": "CANDIDATO_P1_R3",
     "historical_evidence_preserved": true,
     "active_block": "MAT-ARIT-01",
     "operational_phase": "P1",
     "architecture_path": "qa/certification/rdg/architecture.json",
     "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01.json",
-    "plan_sha256": "347e12b3b2c6c275f8574ca208dbec75c4b9e500961ad264b8cc6d4ccbce7b9b",
+    "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Reconciliar ejecución CI de R2, evidencia de contraste de 450 IDs y navegador, revisión de suficiencia y no contaminación del examen. Congelar RDG_READY solo si cumple; OP-04 ausente del banco es deuda P2, no ID certificado.",
+    "next_action": "Reconciliar CI/Render de R2 y CI R3; congelar contrato G-REPASO con hashes de plan/ruta/datos y evidencias ejecutadas. P2: reparar déficit OP-04 y revisar 450 IDs existentes sin contabilizar el inventario como certificado.",
     "previous_publication": {
       "sha": "404305e9a75ec8263b7570f977b4da4776a55f39",
       "ci_run": 45682422505,
       "ci": "SUCCESS",
       "render_deploy": "dep-dc3j4umtlv9c73f196hg",
       "render": "LIVE"
-    }
+    },
+    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R2.json"
   }
 }
