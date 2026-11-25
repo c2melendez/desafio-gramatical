@@ -14,9 +14,7 @@ function maskFor(item:MathModel){
  return masks[index%masks.length];
 }
 export function expectedOperationClassificationTruthCount(item:MathModel):number{
- // Archived M1/M2 objects still use their original assertions. Current R6
- // records are identified by the revised claim schema, not by a relaxed count.
- return isOperationClassificationR5(item)||isOperationClassificationR6(item)&&item.assertions.some(a=>a.text.startsWith("El valor de la expresión solicitada es "))?maskFor(item).filter(Boolean).length:1;
+ return isOperationClassificationR5(item)||isOperationClassificationR6(item)?maskFor(item).filter(Boolean).length:1;
 }
 export function repairOperationClassification(item:MathModel):MathModel{
  if(!isOperationClassificationR5(item)&&!isOperationClassificationR6(item))return item;
