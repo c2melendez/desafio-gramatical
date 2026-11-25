@@ -1,3 +1,5 @@
+import {savePerfect,newAttemptId} from "@/lib/perfect-achievements";
+import {PerfectBadge} from "@/components/games/PerfectBadge";
 import {M2_CATEGORY_SENTENCES,M2_CATEGORY_QUIZ,M2_CATEGORY_BUILD} from "@/lib/m2-grammar";
 import {M3_CATEGORY_SENTENCES,M3_CATEGORY_QUIZ,M3_CATEGORY_BUILD} from "@/lib/m3-grammar";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
@@ -108,10 +110,11 @@ function Play() {
   const [finished, setFinished] = useState(false);
   const ledger=useRef(emptyLedger());
   const advanced=useRef(-1);
+ const attemptId=useRef("");
   const classification = useRef({ itemId: "", count: 0, allCorrect: true });
 
   useEffect(() => {
-    ledger.current=emptyLedger();advanced.current=-1;
+    ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
     classification.current = { itemId: "", count: 0, allCorrect: true };
     setItems(buildItems(modo, nivel)); setIdx(0); setScore(0); setStreak(0); 
     setCorrect(0); setTotal(0); setMistakes([]); setFinished(false);
@@ -144,7 +147,7 @@ function Play() {
     if (idx + 1 >= items.length) {
       const result=roundResult(ledger.current);if(!result.finished)return;
       setFinished(true);
-      saveHistory({ date: new Date().toISOString(), mode: modo, level: nivel, score:result.score, correct:result.correct, total:result.attempted, bestStreak:ledger.current.bestStreak,area:"espanol",topic:"Gramática y semántica",subtopic:"Categorías gramaticales" });
+      savePerfect(returnTo,ledger.current,attemptId.current);saveHistory({date:new Date().toISOString(),mode: modo, level: nivel, score:result.score, correct:result.correct, total:result.attempted, bestStreak:ledger.current.bestStreak,area:"espanol",topic:"Gramática y semántica",subtopic:"Categorías gramaticales" });
     } else setIdx(idx + 1);
   };
 
@@ -155,7 +158,7 @@ function Play() {
     const pct = total ? Math.round((correct / total) * 100) : 0;
     return (
       <main className="mx-auto max-w-xl px-4 py-8 space-y-6">
-        <h1 className="text-4xl font-black">Resultados</h1>
+        <h1 className="text-4xl font-black">Resultados</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/>
         <p className="text-muted-foreground">{MODE_LABEL[modo]} · {LEVEL_LABEL[nivel]}</p>
         <div className="grid grid-cols-3 gap-2 text-center">
           <div className="card-ink p-3"><p className="text-xs">Puntaje</p><p className="text-3xl font-black text-primary">{score}</p></div>
@@ -208,23 +211,24 @@ export function GrammarPilot({subtema,nivel}:{subtema:string;nivel:Level}) {
  const [finished,setFinished]=useState(false);
  const ledger=useRef(emptyLedger());
  const advanced=useRef(-1);
+ const attemptId=useRef("");
  const [order,setOrder]=useState<number[]>([]);
  const pool=grammarPilotPool(subtema,nivel);
  const topic=subtema==="Figuras retóricas"||subtema==="Géneros literarios"?"Literatura":"Gramática y semántica";
  const key=rotationKey("espanol",topic,subtema,"quiz",nivel);
  const returnTo=studyReturn(topic,subtema,"quiz",nivel);
  useEffect(()=>{
-  ledger.current=emptyLedger();advanced.current=-1;
+  ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
   const list=grammarPilotPool(subtema,nivel);
   setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));
   setIndex(0);setPicked(null);setCorrect(0);setPilotStreak(0);setScore(0);setFinished(false);setOrder(shuffle([0,1,2,3]));
  },[subtema,nivel,run,key]);
  if(!items)return <main className="p-6">Preparando ejercicios…</main>;
  if(!items.length)return <main className="p-6">No hay ejercicios para esta selección. <Link to="/" search={returnTo}>Volver a la selección</Link></main>;
- if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;
+ if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;
  const q=items[index];
  const choose=(i:number)=>{if(picked!==null)return;const ok=i===q.answer;const updated=recordRound(ledger.current,{id:q.id,correct:ok});if(updated===ledger.current)return;ledger.current=updated;setPicked(i);setCorrect(updated.correct);setScore(updated.score);setPilotStreak(updated.streak);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
- const next=()=>{if(ledger.current.events.length!==index+1||advanced.current===index)return;advanced.current=index;if(index+1===items.length){const result=roundResult(ledger.current);if(!result.finished)return;saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,area:"espanol",topic,subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
+ const next=()=>{if(ledger.current.events.length!==index+1||advanced.current===index)return;advanced.current=index;if(index+1===items.length){const result=roundResult(ledger.current);if(!result.finished)return;savePerfect(returnTo,ledger.current,attemptId.current);saveHistory({date:new Date().toISOString(),mode:"quiz",level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,area:"espanol",topic,subtopic:subtema});setFinished(true);}else{setIndex(n=>n+1);setPicked(null);setOrder(shuffle([0,1,2,3]));}};
  return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5"><GameSessionHeader context={`${subtema} · ${nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}`} title={subtema} round={index+1} score={score} streak={pilotStreak} onRestart={()=>setRun(n=>n+1)} returnTo={returnTo}/><p role="note" className="text-sm text-muted-foreground">Ejercicios originales en revisión académica, no preguntas PHUMA oficiales.</p><div className="card-ink p-5 space-y-4"><p>{q.passage}</p><h2 className="font-bold">{q.question}</h2></div><div className="grid gap-3">{order.map(i=><button key={i} disabled={picked!==null} onClick={()=>choose(i)} className={`tile text-left ${picked===null?"bg-card":i===q.answer?"bg-success-soft":i===picked?"bg-destructive-soft":"bg-muted"}`}>{q.options[i]}</button>)}</div>{picked!==null&&<div aria-live="polite" className="space-y-3"><LearningFeedback correct={picked===q.answer} subtopic={subtema} selected={q.options[picked]} expected={q.options[q.answer]} explanation={q.explanation} title={picked===q.answer?"Correcto.":"Revisa tu respuesta."}/><button onClick={next} className="tile w-full bg-primary text-primary-foreground">{index+1===items.length?"Ver resultado":"Siguiente"}</button></div>}</main>;
 }
 
@@ -243,12 +247,13 @@ export function SynonymClassification({nivel,subtema="Sinónimos y antónimos"}:
  const [finished,setFinished]=useState(false);
  const ledger=useRef(emptyLedger());
  const advanced=useRef(-1);
- useEffect(()=>{ledger.current=emptyLedger();advanced.current=-1;const list=source.filter(q=>q.level===nivel);setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));setIndex(0);setCorrect(0);setStreak(0);setBest(0);setScore(0);setFinished(false);},[nivel,run,key,source]);
+ const attemptId=useRef("");
+ useEffect(()=>{ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();const list=source.filter(q=>q.level===nivel);setItems(selectRotation(list,readRotation(key,list.map(q=>q.id)),10));setIndex(0);setCorrect(0);setStreak(0);setBest(0);setScore(0);setFinished(false);},[nivel,run,key,source]);
  if(!items)return <main className="p-6">Preparando ejercicios…</main>;
  if(!items.length)return <main className="p-6">No hay ejercicios para esta selección. <Link to="/" search={returnTo}>Volver a la selección</Link></main>;
- if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;
+ if(finished)return <main className="mx-auto max-w-xl p-6 space-y-4"><h1 className="text-3xl font-black">Práctica terminada</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/><p>{subtema} · {correct}/{items.length} respuestas correctas</p><p className="text-sm">La práctica es orientativa y no representa un puntaje oficial PHUMA.</p><button className="tile bg-primary text-primary-foreground" onClick={()=>setRun(n=>n+1)}>Practicar de nuevo</button><Link className="block underline" to="/" search={returnTo}>Volver a la selección</Link></main>;
  const q=items[index];
  const report=(ok:boolean)=>{const updated=recordRound(ledger.current,{id:q.id,correct:ok});if(updated===ledger.current)return;ledger.current=updated;setCorrect(updated.correct);setScore(updated.score);setStreak(updated.streak);writeRotation(key,recordRotation(readRotation(key,pool.map(x=>x.id)),q.id,ok));};
- const next=()=>{if(ledger.current.events.length!==index+1||advanced.current===index)return;advanced.current=index;if(index+1===items.length){const result=roundResult(ledger.current);if(!result.finished)return;saveHistory({date:new Date().toISOString(),mode:"clasificar",level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else setIndex(n=>n+1);};
+ const next=()=>{if(ledger.current.events.length!==index+1||advanced.current===index)return;advanced.current=index;if(index+1===items.length){const result=roundResult(ledger.current);if(!result.finished)return;savePerfect(returnTo,ledger.current,attemptId.current);saveHistory({date:new Date().toISOString(),mode:"clasificar",level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,area:"espanol",topic:"Gramática y semántica",subtopic:subtema});setFinished(true);}else setIndex(n=>n+1);};
  return <main className="mx-auto max-w-2xl px-4 py-5 space-y-5"><GameSessionHeader context={`${subtema} · ${nivel==="principiante"?"Básico":LEVEL_LABEL[nivel]}`} title="Clasificación" round={index+1} score={score} streak={streak} onRestart={()=>setRun(n=>n+1)} returnTo={returnTo}/><GrammarClassification key={q.id} item={q} onResult={report} onNext={next}/></main>;
 }
