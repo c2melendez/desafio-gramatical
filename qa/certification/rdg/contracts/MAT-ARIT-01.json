@@ -2,7 +2,7 @@
   "schema_version": "7.8",
   "block_id": "MAT-ARIT-01",
   "revision": "3",
-  "status": "CANDIDATO_RDG_READY",
+  "status": "RDG_READY",
   "subtopic_scope": {
     "area": "matematicas",
     "topic": "Aritmética",
@@ -29,7 +29,24 @@
     "OP-04"
   ],
   "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R3.json",
-  "readiness_limit": "R06: falta comprobación explícita de evento táctil y prueba ejecutada de invalidación de dependencias; el selector no debe admitir este candidato como RDG_READY.",
+  "readiness_limit": "No dispositivo físico, ni lector de pantalla, ni evaluación docente o empírica. Cierre R04/C09 integral permanece en P2.",
   "teacher_status": "PENDING",
-  "empirical_status": "NOT_RUN"
+  "empirical_status": "NOT_RUN",
+  "gate_evidence": {
+    "ci_run": 45689363635,
+    "ci": "SUCCESS",
+    "tested_sha": "3d730ec871898e0b8a8424bd1fad4753a8587748",
+    "head_sha": "d70af0278ec0ebf06cfea6fb19a7c22263f8d22e",
+    "jobs": [
+      139470401286,
+      139470401112
+    ],
+    "browser_artifact": 15058122129,
+    "rdg_browser_checks": 65,
+    "touch": "PASS_CHROMIUM_EMULATED",
+    "dependency_mutations": "PASS",
+    "archived_item_hashes": 450,
+    "item_hash_mutation": "PASS",
+    "limits": "No dispositivo físico, ni lector de pantalla, ni evaluación docente o empírica. Cierre R04/C09 integral permanece en P2."
+  }
 }

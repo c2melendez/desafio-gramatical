@@ -32,8 +32,9 @@
     "P0": "PASS_STRUCTURAL",
     "M0": "PASS",
     "mobile_browser": "PASS_RESPONSIVE",
-    "actual_touch": "NOT_RUN_EXPLICIT",
-    "contract_dependency_mutation": "NOT_RUN_EXPLICIT"
+    "actual_touch": "PASS_CHROMIUM_EMULATED",
+    "contract_dependency_mutation": "PASS",
+    "preflight_hash_reconciliation": 450
   },
   "prior_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R2.json",
   "review": {
@@ -62,5 +63,22 @@
       ]
     },
     "scope_notes": "R3 no cambia estímulos de R2 salvo alternativas; contraste de simulacro conserva validez para las expresiones. R04 paridad completa se evalúa en P2, no en esta revisión. No hay revisión docente ni estudio con alumnos."
+  },
+  "gate_completion": {
+    "ci_run": 45689363635,
+    "ci": "SUCCESS",
+    "tested_sha": "3d730ec871898e0b8a8424bd1fad4753a8587748",
+    "head_sha": "d70af0278ec0ebf06cfea6fb19a7c22263f8d22e",
+    "jobs": [
+      139470401286,
+      139470401112
+    ],
+    "browser_artifact": 15058122129,
+    "rdg_browser_checks": 65,
+    "touch": "PASS_CHROMIUM_EMULATED",
+    "dependency_mutations": "PASS",
+    "archived_item_hashes": 450,
+    "item_hash_mutation": "PASS",
+    "limits": "No dispositivo físico, ni lector de pantalla, ni evaluación docente o empírica. Cierre R04/C09 integral permanece en P2."
   }
 }

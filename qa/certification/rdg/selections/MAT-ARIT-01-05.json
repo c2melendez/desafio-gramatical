@@ -1,0 +1,414 @@
+{
+  "schema_version": "7.8",
+  "block_id": "MAT-ARIT-01",
+  "batch_id": "MAT-ARIT-01-05",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "rdg_contract": {
+    "schema_version": "7.8",
+    "block_id": "MAT-ARIT-01",
+    "revision": "3",
+    "status": "RDG_READY",
+    "subtopic_scope": {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Operaciones"
+    },
+    "route_path": "src/components/review/OperationsReview.tsx",
+    "route_sha256": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+    "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01.json",
+    "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+    "data_path": "src/lib/rdg/operations.ts",
+    "data_sha256": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+    "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+    "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+    "dependency_hashes": {
+      "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+      "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+      "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+      "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+    },
+    "objective_ids": [
+      "OP-01",
+      "OP-02",
+      "OP-03",
+      "OP-04"
+    ],
+    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R3.json",
+    "readiness_limit": "No dispositivo físico, ni lector de pantalla, ni evaluación docente o empírica. Cierre R04/C09 integral permanece en P2.",
+    "teacher_status": "PENDING",
+    "empirical_status": "NOT_RUN",
+    "gate_evidence": {
+      "ci_run": 45689363635,
+      "ci": "SUCCESS",
+      "tested_sha": "3d730ec871898e0b8a8424bd1fad4753a8587748",
+      "head_sha": "d70af0278ec0ebf06cfea6fb19a7c22263f8d22e",
+      "jobs": [
+        139470401286,
+        139470401112
+      ],
+      "browser_artifact": 15058122129,
+      "rdg_browser_checks": 65,
+      "touch": "PASS_CHROMIUM_EMULATED",
+      "dependency_mutations": "PASS",
+      "archived_item_hashes": 450,
+      "item_hash_mutation": "PASS",
+      "limits": "No dispositivo físico, ni lector de pantalla, ni evaluación docente o empírica. Cierre R04/C09 integral permanece en P2."
+    }
+  },
+  "items": [
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-2",
+      "content_sha256": "55aac45dc369f6fa1eca680e54a192ce366f9a771da9e9e4b30755bbf339a43d",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-3",
+      "content_sha256": "10ff4f84d16a4cb5d7052cbf9a0c881345b7758dd7126a762cbcc5ea52016511",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-4",
+      "content_sha256": "42d045464e77acac1e3b41868d33316f14f066de6b32d699366cc1eba122e27c",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-5",
+      "content_sha256": "2dd9ab139c67c54456f6f3e2c5942e533573ca437a8059c73f58cbcfd0b01f55",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-6",
+      "content_sha256": "fd68fcf5750f8c3a5d1358b07cdf1cf921248c7d70978abefd545db488d3a135",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-7",
+      "content_sha256": "77b94de2fddb5f6433bd7a17289e170834b9d5f3b31da26a5d7f41eaac561bb8",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-8",
+      "content_sha256": "67a806962c48790cca02f3791b81c4d167bb577f49cad5405560706edf884012",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-9",
+      "content_sha256": "86e261a3bcad243b1bf49459e0fd4125aec5f91f17b1c86464ac2eda24c8f6e5",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "content_sha256": "24d5b2597782704f079917b66df308287994b5f88e1ccc616dd7dee38687e44b",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "content_sha256": "5640b1ea8cc70d15091883009be0f698c6b071cfa7135ede5cdb86916392d297",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "content_sha256": "3ebca3b0bc5b50d0d77a7aa074eb982d69a44753ba978f8bf31c3a886bb34cc2",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+      "content_sha256": "311ae437da8ce2a3b97ecd4c188aa46a5211315ae7d9266fb62967a7a45ce9eb",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-12",
+      "content_sha256": "8dc31f7b754f764dd860eec91559d6a90ef2e924df30e131e97dab7ef083389e",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+      "content_sha256": "c2ed461a2a81f4079bcc1ca44386f5ea3510c94ba9724a9d2c69581d6fcfba20",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-14",
+      "content_sha256": "eac079dbbeda509e17716491a07c1db7ad4239682492e20e9327d44f54b6a4d9",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-15",
+      "content_sha256": "289601df3e728f7cd2512b183a437ba67434ed0e10855818c3c70b953591f909",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-16",
+      "content_sha256": "8b7a21d22a139ebb1285a4ed4145f78aee1ad7392868df13da92aa132e36193b",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-17",
+      "content_sha256": "529482610c80e317107eb4fdb648cb5772257871fecdf04d1cbc892a49f083ea",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-18",
+      "content_sha256": "2e62a42cbeb1c328a0ff9bc02ace946e1adbd48f8c25425e7486ad46a4570726",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-19",
+      "content_sha256": "6a86b4a1f2ee4ec75d0f976f3bbbb55b0a25072f415b4f8d276255a741a91007",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+      "content_sha256": "5a0cccc1c89a8bda080e868a153dcde352b9e65ac858081617bb4cb309e034a5",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-20",
+      "content_sha256": "dcf5c108695b09e68b90be524d70a61955f5a7b0f7256353590a67e5fa0a7468",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-21",
+      "content_sha256": "287390080929cf61420784b21958616997fd52290e2b44481506b9d8c827057e",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-22",
+      "content_sha256": "f0a325730cfbb10194b0550dc6c4e129cd1370ecad9093a581f0c5ec2c9711eb",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-23",
+      "content_sha256": "9474e84e0724c59703abc0087d616548633bcb86124adeb48862dc78994ed1b3",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-24",
+      "content_sha256": "4e578688dfa680e33537f7a51e563e030311cfe8c09e4722151259819dd1343c",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+      "content_sha256": "7558a0c0dc5fdc61d1c541be9f3d51a392b469de6f8dcdf67ddf06370c9ef35a",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+      "content_sha256": "3d00ad8cd81ee27b122d8b3665a50c90b88324d4a560ff3b75cfce36e3c39e48",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+      "content_sha256": "464c381b2ac83ab436a252643726e148b546073bcb8c3e2099005afec2e6be66",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-6",
+      "content_sha256": "4358716540880145526dbd39ed20ef6dcdc3536b926a7615b4f97c05b8ffc45b",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-7",
+      "content_sha256": "d8c366b00c653a30d12c5084d0136369bd74e6ba5c3bed3449e109f71f2d4d57",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-8",
+      "content_sha256": "c802570ba75c58e0aa1a7196aa1d6142abda786c76e02a59fd0daf013b9b21df",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "content_sha256": "04f0ccc4373498289d62893b081f03cd7b948d325053ccb3224196f47ce57e80",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-0",
+      "content_sha256": "6e8a48478ebd680617bfde52f20a2be4e1741278aec5a3f1a676fce602cc97b8",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-1",
+      "content_sha256": "87ed7f1f182e12498197d8268d769057a405de0b008183457a4661732e1466f7",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-10",
+      "content_sha256": "f29001c6130c3d9aef573eaa7dccc067c40f13b9f2043e358d2cc7666c5e94ff",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-11",
+      "content_sha256": "7c8831821ed33d8ac545e4460e3978874fc646492f9d28e700889aa974f4a747",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-12",
+      "content_sha256": "6eaa526159278ca0285988a0415689afee340872297054320d099457494715ed",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-13",
+      "content_sha256": "31c978c544345440b5e56f8d42b4cffbeddc1556945c37e7cd4614b0ab939206",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-14",
+      "content_sha256": "af6d7608caafb57f00d0bee14b32d34da6caa21c13ce0e829292114cf95d9b4a",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-15",
+      "content_sha256": "51b76f5c7b3179c9ce53ed89d8ffd0b4bd3dc3b834a7aeb179a9ae51e31b2e17",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+      "content_sha256": "81153a1324fc6983ee0d02ed490e539c395733e646e5dcfd4fd2f8028d8e5566",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-17",
+      "content_sha256": "ed401fa00abe7ebb80bf18e11a8a98dbb8103fb41b0cfaa3fcf1e2bac1bdde88",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-18",
+      "content_sha256": "47008977bc6befd3808591d8f58c97f4f0bc5e0e26926b9a6bad5ed820118e67",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-19",
+      "content_sha256": "c3657ac587d620a9c0bf064b7082b62bcfd3986d1170cf25c6d70e435f7f0254",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-2",
+      "content_sha256": "7ebc1c1b0a46a79e42a729717a35321f501bdad47cff09300e759fe7f6a2d2f4",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-3",
+      "content_sha256": "80082645eed312906197f0a8f10a01bc50626a620ec30ba7f3d5298b03b134e8",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-4",
+      "content_sha256": "c4765c5adb69cf4be7769d27b8215456e5e4043ce331520ad570de76a36bdf48",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-5",
+      "content_sha256": "68bfe7eedc6daeeb191790b0b6a3b80094635acf4794699fcf335313195e36ff",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-6",
+      "content_sha256": "214c67bb1479602eddd9eb4f217cd9f5baf4408e739187dd2d5de18695625139",
+      "objective_ids": [
+        "OP-02"
+      ]
+    }
+  ]
+}
