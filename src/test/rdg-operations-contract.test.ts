@@ -3,7 +3,7 @@ import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3HistoricalPool as mathM3Pool} from "@/lib/math-m3";
 const load=(path:string)=>JSON.parse(readFileSync(path,"utf8"));
 const sha=(value:Buffer|string)=>createHash("sha256").update(value).digest("hex");
 const contract=load("qa/certification/rdg/contracts/MAT-ARIT-01.json");
@@ -20,7 +20,7 @@ it("R05/R06 verifies exact published plan, route, data and source hashes and det
   expect(()=>assertDependencies(contract.dependency_hashes,p=>p===path?Buffer.concat([readFileSync(p),Buffer.from("\n")]):readFileSync(p))).toThrow("RDG dependency changed: "+path);
  }
 });
-it("reconciles all 450 archived real preflight records with current runtime bytes; detects stale item hash",()=>{
+it("reconciles all 450 archived real preflight records with archived R3 runtime bytes; detects stale item hash",()=>{
  const map=new Map<string,MathModel>();
  for(const level of MATH_LEVELS)for(const mode of MATH_MODES)for(const x of mathM3Pool("Aritmética","Operaciones",level,mode))map.set(x.id,x);
  expect(map.size).toBe(450);expect(evidence.records).toHaveLength(450);
