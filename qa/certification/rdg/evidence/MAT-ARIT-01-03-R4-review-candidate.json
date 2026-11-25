@@ -6,9 +6,9 @@
   },
   "batch_id": "MAT-ARIT-01-03",
   "revision": "R4",
-  "status": "REVIEW_PENDING_CI",
+  "status": "REVIEW",
   "source_sha": "b5b1af8125edca63ee1985002bb2a4e994f89e65",
-  "method": "Reconstructed 50 original runtime objects and matched all SHA-256 hashes of frozen selection; independent arithmetic via repeated addition; computed candidate successors in JS. Runtime CI still required; no semantic PASS.",
+  "method": "Reconstructed 50 original runtime objects and matched all SHA-256 hashes of frozen selection; independent arithmetic via repeated addition; computed candidate successors in JS. Runtime CI still required; no semantic PASS. Los 50 hashes sucesores, claves y alternativas se cotejaron con los logs del candidato R4 con CI SUCCESS. Los seis distractores de cada ficha se contrastaron contra errores calculables; no se acredita PASS semántico.",
   "summary": {
     "examined": 50,
     "semantic_pass": 0,
@@ -84,7 +84,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -98,7 +98,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -106,7 +106,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -123,7 +123,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "63",
+          "correct": "16",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "9",
+          "correct": "16",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "2",
+          "correct": "16",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "25",
+          "correct": "32",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "18",
+          "correct": "32",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "14",
+          "correct": "32",
+          "error": "Omitir primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -192,7 +236,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -206,7 +250,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -214,7 +258,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -231,7 +275,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "10",
+          "correct": "20",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "20",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "100",
+          "correct": "20",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "27",
+          "correct": "140",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "70",
+          "correct": "140",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "80",
+          "correct": "140",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -300,7 +388,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -314,7 +402,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -322,7 +410,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -339,7 +427,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-2",
+          "correct": "24",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "143",
+          "correct": "24",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "correct": "24",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "55",
+          "correct": "120",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "68",
+          "correct": "120",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "29",
+          "correct": "120",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -408,7 +540,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -422,7 +554,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -430,7 +562,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -447,7 +579,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "9",
+          "correct": "15",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "36",
+          "correct": "15",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "12",
+          "correct": "15",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "39",
+          "correct": "45",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "18",
+          "correct": "45",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "36",
+          "correct": "45",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -516,7 +692,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -530,7 +706,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -538,7 +714,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -555,7 +731,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "78",
+          "correct": "19",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "13",
+          "correct": "19",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "correct": "19",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "110",
+          "correct": "152",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "27",
+          "correct": "152",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "104",
+          "correct": "152",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -624,7 +844,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -638,7 +858,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -646,7 +866,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -663,7 +883,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "14",
+          "correct": "23",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "5",
+          "correct": "23",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "126",
+          "correct": "23",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "29",
+          "correct": "138",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "84",
+          "correct": "138",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "93",
+          "correct": "138",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -732,7 +996,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -746,7 +1010,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -754,7 +1018,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -771,7 +1035,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "3",
+          "correct": "27",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "180",
+          "correct": "27",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "15",
+          "correct": "27",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "60",
+          "correct": "108",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "72",
+          "correct": "108",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "31",
+          "correct": "108",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -840,7 +1148,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -854,7 +1162,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -862,7 +1170,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -879,7 +1187,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "1",
+          "correct": "31",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "240",
+          "correct": "31",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "16",
+          "correct": "31",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "47",
+          "correct": "62",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "33",
+          "correct": "62",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "32",
+          "correct": "62",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -948,7 +1300,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -962,7 +1314,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -970,11 +1322,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -987,7 +1339,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-8",
+          "correct": "8",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "19",
+          "correct": "8",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "8",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-24",
+          "correct": "24",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "24",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "57",
+          "correct": "24",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -1056,7 +1453,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1070,7 +1467,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1078,11 +1475,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1095,7 +1492,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "23",
+          "correct": "11",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "11",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-11",
+          "correct": "11",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-88",
+          "correct": "88",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "88",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "184",
+          "correct": "88",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -1164,7 +1606,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1178,7 +1620,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1186,11 +1628,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1203,7 +1645,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "12",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-12",
+          "correct": "12",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "33",
+          "correct": "12",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "48",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "132",
+          "correct": "48",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-48",
+          "correct": "48",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        }
       ]
     },
     {
@@ -1272,7 +1759,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1286,7 +1773,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1294,11 +1781,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1311,7 +1798,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-15",
+          "correct": "15",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "37",
+          "correct": "15",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "15",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "74",
+          "correct": "30",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-30",
+          "correct": "30",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "30",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        }
       ]
     },
     {
@@ -1380,7 +1912,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1394,7 +1926,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1402,11 +1934,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1419,7 +1951,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-18",
+          "correct": "18",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "41",
+          "correct": "18",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "18",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-126",
+          "correct": "126",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "126",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "287",
+          "correct": "126",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -1488,7 +2065,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1502,7 +2079,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1510,11 +2087,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1527,7 +2104,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "32",
+          "correct": "8",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "8",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-8",
+          "correct": "8",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-40",
+          "correct": "40",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "40",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "160",
+          "correct": "40",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -1596,7 +2218,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1610,7 +2232,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1618,11 +2240,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1635,7 +2257,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "11",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-11",
+          "correct": "11",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "19",
+          "correct": "11",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "33",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "57",
+          "correct": "33",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-33",
+          "correct": "33",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        }
       ]
     },
     {
@@ -1704,7 +2371,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1718,7 +2385,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1726,11 +2393,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1743,7 +2410,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-14",
+          "correct": "14",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "23",
+          "correct": "14",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "14",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "184",
+          "correct": "112",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-112",
+          "correct": "112",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "112",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        }
       ]
     },
     {
@@ -1812,7 +2524,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1826,7 +2538,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1834,11 +2546,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1851,7 +2563,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-17",
+          "correct": "17",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "27",
+          "correct": "17",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "17",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-102",
+          "correct": "102",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "102",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "162",
+          "correct": "102",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -1920,7 +2677,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -1934,7 +2691,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -1942,11 +2699,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -1959,7 +2716,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "18",
+          "correct": "7",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "7",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-7",
+          "correct": "7",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-28",
+          "correct": "28",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "28",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "72",
+          "correct": "28",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -2028,7 +2830,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2042,7 +2844,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2050,11 +2852,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2067,7 +2869,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "10",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-10",
+          "correct": "10",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "22",
+          "correct": "10",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "20",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "44",
+          "correct": "20",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-20",
+          "correct": "20",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        }
       ]
     },
     {
@@ -2136,7 +2983,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2150,7 +2997,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2158,11 +3005,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2175,7 +3022,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-13",
+          "correct": "13",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "26",
+          "correct": "13",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "13",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "182",
+          "correct": "91",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-91",
+          "correct": "91",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "91",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        }
       ]
     },
     {
@@ -2244,7 +3136,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2258,7 +3150,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2266,11 +3158,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2283,7 +3175,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "14",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-14",
+          "correct": "14",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "27",
+          "correct": "14",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "84",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "162",
+          "correct": "84",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-84",
+          "correct": "84",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        }
       ]
     },
     {
@@ -2352,7 +3289,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2366,7 +3303,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2374,11 +3311,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2391,7 +3328,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-17",
+          "correct": "17",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "31",
+          "correct": "17",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "17",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "124",
+          "correct": "68",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-68",
+          "correct": "68",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "68",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        }
       ]
     },
     {
@@ -2460,7 +3442,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2474,7 +3456,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2482,11 +3464,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2499,7 +3481,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-7",
+          "correct": "7",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "22",
+          "correct": "7",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "7",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-14",
+          "correct": "14",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "14",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "44",
+          "correct": "14",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -2568,7 +3595,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2582,7 +3609,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2590,11 +3617,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2607,7 +3634,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "26",
+          "correct": "10",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "10",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-10",
+          "correct": "10",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-70",
+          "correct": "70",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "70",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "182",
+          "correct": "70",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -2676,7 +3748,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2690,7 +3762,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2698,11 +3770,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2715,7 +3787,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "13",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-13",
+          "correct": "13",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "30",
+          "correct": "13",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "65",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "150",
+          "correct": "65",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-65",
+          "correct": "65",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        }
       ]
     },
     {
@@ -2784,7 +3901,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2798,7 +3915,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2806,11 +3923,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2823,7 +3940,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-16",
+          "correct": "16",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "34",
+          "correct": "16",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "16",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "102",
+          "correct": "48",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-48",
+          "correct": "48",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "48",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        }
       ]
     },
     {
@@ -2892,7 +4054,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -2906,7 +4068,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -2914,11 +4076,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -2931,7 +4093,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-19",
+          "correct": "19",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "38",
+          "correct": "19",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "19",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-152",
+          "correct": "152",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "152",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "304",
+          "correct": "152",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -3000,7 +4207,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3014,7 +4221,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3022,11 +4229,11 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
-          "score": 3,
-          "reason": "Progresión de agrupación, cambios de operandos y cancelación; calibración cualitativa."
+          "score": 2,
+          "reason": "Una sola identidad de cancelación con números positivos; insuficiente generalización avanzada."
         },
         "G": {
           "score": 2,
@@ -3039,7 +4246,52 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "29",
+          "correct": "9",
+          "error": "No cancelar primer sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "9",
+          "error": "Cancelar ambos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-9",
+          "correct": "9",
+          "error": "Invertir signo",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "-54",
+          "correct": "54",
+          "error": "Inversión del signo del producto que queda",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "correct": "54",
+          "error": "Cancelación indebida del producto restante",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "174",
+          "correct": "54",
+          "error": "Omisión de la resta del primer producto",
+          "unique": true
+        }
       ]
     },
     {
@@ -3108,7 +4360,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3122,7 +4374,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3130,7 +4382,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3147,7 +4399,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "153",
+          "correct": "26",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "17",
+          "correct": "26",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "8",
+          "correct": "26",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "77",
+          "correct": "104",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "30",
+          "correct": "104",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "68",
+          "correct": "104",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -3216,7 +4512,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3230,7 +4526,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3238,7 +4534,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3255,7 +4551,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "18",
+          "correct": "30",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "6",
+          "correct": "30",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "216",
+          "correct": "30",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "32",
+          "correct": "60",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "36",
+          "correct": "60",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "48",
+          "correct": "60",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -3324,7 +4664,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3338,7 +4678,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3346,7 +4686,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3363,7 +4703,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-3",
+          "correct": "23",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "130",
+          "correct": "23",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "10",
+          "correct": "23",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "50",
+          "correct": "115",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "63",
+          "correct": "115",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "28",
+          "correct": "115",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -3432,7 +4816,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3446,7 +4830,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3454,7 +4838,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3471,7 +4855,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-5",
+          "correct": "27",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "176",
+          "correct": "27",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "correct": "27",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "49",
+          "correct": "81",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "30",
+          "correct": "81",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "33",
+          "correct": "81",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -3540,7 +4968,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3554,7 +4982,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3562,7 +4990,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3579,7 +5007,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "228",
+          "correct": "31",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "12",
+          "correct": "31",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-7",
+          "correct": "31",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "32",
+          "correct": "31",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "12",
+          "correct": "31",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "19",
+          "correct": "31",
+          "error": "Omitir primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -3648,7 +5120,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3662,7 +5134,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3670,7 +5142,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3687,7 +5159,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "13",
+          "correct": "22",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "4",
+          "correct": "22",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "117",
+          "correct": "22",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "28",
+          "correct": "132",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "78",
+          "correct": "132",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "87",
+          "correct": "132",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -3756,7 +5272,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3770,7 +5286,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3778,7 +5294,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3795,7 +5311,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "2",
+          "correct": "26",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "168",
+          "correct": "26",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "14",
+          "correct": "26",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "56",
+          "correct": "104",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "68",
+          "correct": "104",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "30",
+          "correct": "104",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -3864,7 +5424,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3878,7 +5438,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3886,7 +5446,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -3903,7 +5463,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "4",
+          "correct": "34",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "285",
+          "correct": "34",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "19",
+          "correct": "34",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "133",
+          "correct": "238",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "148",
+          "correct": "238",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "41",
+          "correct": "238",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -3972,7 +5576,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -3986,7 +5590,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -3994,7 +5598,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4011,7 +5615,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "2",
+          "correct": "38",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "360",
+          "correct": "38",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "20",
+          "correct": "38",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "118",
+          "correct": "190",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "43",
+          "correct": "190",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "100",
+          "correct": "190",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -4080,7 +5728,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4094,7 +5742,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4102,7 +5750,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4119,7 +5767,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "168",
+          "correct": "29",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "21",
+          "correct": "29",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "13",
+          "correct": "29",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "71",
+          "correct": "87",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "32",
+          "correct": "87",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "63",
+          "correct": "87",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -4188,7 +5880,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4202,7 +5894,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4210,7 +5902,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4227,7 +5919,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "22",
+          "correct": "33",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "correct": "33",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "242",
+          "correct": "33",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "22",
+          "correct": "33",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "11",
+          "correct": "33",
+          "error": "Omitir primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "34",
+          "correct": "33",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -4296,7 +6032,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4310,7 +6046,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4318,7 +6054,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4335,7 +6071,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-8",
+          "correct": "20",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "84",
+          "correct": "20",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "6",
+          "correct": "20",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "36",
+          "correct": "120",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "50",
+          "correct": "120",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "26",
+          "correct": "120",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -4404,7 +6184,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4418,7 +6198,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4426,7 +6206,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4443,7 +6223,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-10",
+          "correct": "24",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "119",
+          "correct": "24",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "correct": "24",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "45",
+          "correct": "96",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "28",
+          "correct": "96",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "68",
+          "correct": "96",
+          "error": "Omitir primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -4512,7 +6336,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4526,7 +6350,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4534,7 +6358,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4551,7 +6375,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "56",
+          "correct": "15",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "8",
+          "correct": "15",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "1",
+          "correct": "15",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "23",
+          "correct": "30",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "17",
+          "correct": "30",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "16",
+          "correct": "30",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -4620,7 +6488,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4634,7 +6502,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4642,7 +6510,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4659,7 +6527,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "9",
+          "correct": "19",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-1",
+          "correct": "19",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "90",
+          "correct": "19",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "26",
+          "correct": "133",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "63",
+          "correct": "133",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "73",
+          "correct": "133",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -4728,7 +6640,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4742,7 +6654,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4750,7 +6662,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4767,7 +6679,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "6",
+          "correct": "12",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "correct": "12",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "36",
+          "correct": "12",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "19",
+          "correct": "84",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "42",
+          "correct": "84",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "48",
+          "correct": "84",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -4836,7 +6792,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4850,7 +6806,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4858,7 +6814,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4875,7 +6831,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-2",
+          "correct": "16",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "63",
+          "correct": "16",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "correct": "16",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "35",
+          "correct": "80",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "44",
+          "correct": "80",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "21",
+          "correct": "80",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -4944,7 +6944,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -4958,7 +6958,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -4966,7 +6966,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -4983,7 +6983,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "-4",
+          "correct": "20",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "96",
+          "correct": "20",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "8",
+          "correct": "20",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "36",
+          "correct": "60",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "23",
+          "correct": "60",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "24",
+          "correct": "60",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -5052,7 +7096,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -5066,7 +7110,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -5074,7 +7118,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -5091,7 +7135,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "135",
+          "correct": "24",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "9",
+          "correct": "24",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "-6",
+          "correct": "24",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "87",
+          "correct": "192",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "32",
+          "correct": "192",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "72",
+          "correct": "192",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -5160,7 +7248,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -5174,7 +7262,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -5182,7 +7270,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -5199,7 +7287,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "10",
+          "correct": "15",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "5",
+          "correct": "15",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "50",
+          "correct": "15",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "21",
+          "correct": "90",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "60",
+          "correct": "90",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "65",
+          "correct": "90",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        }
       ]
     },
     {
@@ -5268,7 +7400,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -5282,7 +7414,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -5290,7 +7422,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -5307,7 +7439,51 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "3",
+          "correct": "19",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "88",
+          "correct": "19",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "correct": "19",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "44",
+          "correct": "76",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "52",
+          "correct": "76",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "23",
+          "correct": "76",
+          "error": "Sumar el factor",
+          "unique": true
+        }
       ]
     },
     {
@@ -5376,7 +7552,7 @@
       },
       "criteria_revision": "7.8.1",
       "semantic_status": "REVIEW",
-      "technical_status": "PENDING_CI",
+      "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "rubric": {
@@ -5390,7 +7566,7 @@
         },
         "C": {
           "score": 3,
-          "reason": "Tres alternativas numéricamente distintas derivadas de errores conceptuales; pendiente cotejo runtime."
+          "reason": "Seis alternativas contrastadas por modelos de error y contra opciones reales emitidas en CI."
         },
         "D": {
           "score": 3,
@@ -5398,7 +7574,7 @@
         },
         "E": {
           "score": 3,
-          "reason": "Explicación causal del resultado y del distractor final; pendiente verificación de interfaz."
+          "reason": "Explicación causal del distractor final implementada; el paso intermedio aún usa explicación general."
         },
         "F": {
           "score": 3,
@@ -5415,8 +7591,55 @@
       },
       "reason_codes": [
         "G_DIVERSIDAD_INSUFICIENTE",
-        "R4_CI_PENDIENTE"
+        "E_FEEDBACK_INTERMEDIO_AUN_GENERAL"
+      ],
+      "step_distractors": [
+        {
+          "step": 1,
+          "value": "1",
+          "correct": "23",
+          "error": "Restar sumandos",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "132",
+          "correct": "23",
+          "error": "Multiplicar dentro del paréntesis",
+          "unique": true
+        },
+        {
+          "step": 1,
+          "value": "12",
+          "correct": "23",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "35",
+          "correct": "46",
+          "error": "Distribuir solo al primer sumando",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "25",
+          "correct": "46",
+          "error": "Sumar el factor",
+          "unique": true
+        },
+        {
+          "step": 2,
+          "value": "24",
+          "correct": "46",
+          "error": "Omitir segundo sumando",
+          "unique": true
+        }
       ]
     }
-  ]
+  ],
+  "source_ci": 45697495623,
+  "source_job": 139498599266,
+  "publication_sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f"
 }
