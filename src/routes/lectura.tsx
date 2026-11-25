@@ -1,3 +1,5 @@
+import {savePerfect,newAttemptId} from "@/lib/perfect-achievements";
+import {PerfectBadge} from "@/components/games/PerfectBadge";
 import {createFileRoute,Link} from "@tanstack/react-router";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {studyReturn} from "@/lib/study-context";
@@ -50,9 +52,10 @@ function ReadingPlay(){
  const [finished,setFinished]=useState(false);
  const ledger=useRef(emptyLedger());
  const advanced=useRef(-1);
+ const attemptId=useRef("");
  const classification=useRef<{id:string;count:number;allCorrect:boolean}>({id:"",count:0,allCorrect:true});
  useEffect(()=>{
-  ledger.current=emptyLedger();advanced.current=-1;
+  ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
   classification.current={id:"",count:0,allCorrect:true};
   setItems(readingItems(nivel,subtema,modo));setIdx(0);setCorrect(0);setTotal(0);
   setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
@@ -83,7 +86,7 @@ function ReadingPlay(){
    const result=roundResult(ledger.current);
    if(!result.finished)return;
    setFinished(true);
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,
+   savePerfect(returnTo,ledger.current,attemptId.current);saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,
     area:"espanol",topic:"Comprensión lectora",subtopic:subtema});
   }else setIdx(i=>i+1);
  };
@@ -95,7 +98,7 @@ function ReadingPlay(){
  if(finished){
   const pct=total?Math.round(100*correct/total):0;
   return <main className="mx-auto max-w-xl px-4 py-8 space-y-5">
-   <h1 className="text-4xl font-black">¡Reto de lectura completado!</h1>
+   <h1 className="text-4xl font-black">¡Reto de lectura completado!</h1><PerfectBadge visible={roundResult(ledger.current).approved100}/>
    <p>{subtema} · {title} · {levelName}</p>
    <div className="grid grid-cols-3 gap-2 text-center">
     <div className="card-ink p-3"><p className="text-xs">Puntos</p><strong className="text-3xl text-primary">{score}</strong></div>
