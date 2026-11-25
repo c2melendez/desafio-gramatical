@@ -85,7 +85,8 @@
         "Recta numérica para orden, opuesto y suma de enteros; multiplicación y división como operaciones inversas; división por cero no definida.",
         "Paréntesis agrupan; multiplicar/dividir tienen prioridad igual; sumar/restar tienen prioridad igual. En cada grupo igual se opera de izquierda a derecha.",
         "Propiedad distributiva a(b+c)=ab+ac; aplicar signo de resta a todo el grupo; fracciones y potencias completas se desarrollan en subtemas relacionados.",
-        "Raíz cuadrada principal: √(a/b)=√a/√b para a≥0, b>0 y raíces exactas; equivalencia de fracciones y denominador común positivo. Enseñar aquí el mínimo indispensable y profundizar en sus subtemas propios."
+        "Raíz cuadrada principal: √(a/b)=√a/√b para a≥0, b>0 y raíces exactas; equivalencia de fracciones y denominador común positivo. Enseñar aquí el mínimo indispensable y profundizar en sus subtemas propios.",
+        "Contraejemplos de dominio real: 0÷9=0; 9÷0 no está definido. √0=0; √(-9) no tiene valor real; la raíz principal de 9 es 3, no ±3."
       ],
       "bridges": [
         "De desplazamientos y cantidades al símbolo; luego árbol de expresión con subexpresiones y operación raíz.",
@@ -106,7 +107,7 @@
           ],
           "function": "ACTIVAR/CONECTAR",
           "interaction": "Seleccionar dirección y posición por teclado o toque, revelar explicación.",
-          "representation": "Recta numérica con marcas -6 a 6 y flechas con etiquetas textuales.",
+          "representation": "Recta numérica con marcas de -10 a 10, punto móvil y lectura textual de posición.",
           "prompt": "Desde -4 suma 6; después resta 3. ¿Dónde termina?",
           "expected_reasoning": "-4+6=2; 2-3=-1.",
           "feedback": "Sumar positivo mueve a la derecha; restar positivo mueve a la izquierda; muestra ambas posiciones.",
@@ -139,7 +140,7 @@
           "expected_reasoning": "42÷7=6; 6×3=18; 18-5=13.",
           "feedback": "División y multiplicación comparten prioridad; de izquierda a derecha.",
           "help": "Separar niveles de precedencia; mostrar primer paso opcional.",
-          "acceptance": "13; detectar mutante que cambia orden y resultado."
+          "acceptance": "13; mutantes: 42÷(7×3)-5=-3; 42÷7×(3-5)=-12; omitir resta=18."
         },
         {
           "id": "A4",
@@ -192,7 +193,7 @@
       ],
       "transfer_tasks": [
         {
-          "prompt": "Una bodega recibe 6 cajas de 14 piezas y retira 3 paquetes de 8 piezas. ¿Cuántas piezas se agregan netas? Opciones 60, 84, 108, 48.",
+          "prompt": "Una bodega recibe 6 cajas de 14 piezas y retira 3 paquetes de 8 piezas. ¿Cuántas piezas se agregan netas? Opciones 60, 84, 108, 76.",
           "solution": "6×14-3×8=84-24=60.",
           "oracle": "Comprobar por sumas repetidas independientes y diferencia; P1 ejecutará oráculo y mutantes.",
           "objective_ids": [
@@ -225,7 +226,7 @@
           ]
         },
         {
-          "prompt": "Calcula 14−√36+3×5−24÷8. Opciones 20, 26, 8, 2.",
+          "prompt": "Calcula 14−√36+3×5−24÷8. Opciones 20, 26, 5, 52.",
           "solution": "14−6+15−3=20.",
           "oracle": "Evaluar árbol de expresión con raíz principal y operaciones independientes; comprobar alternativas únicas.",
           "objective_ids": [

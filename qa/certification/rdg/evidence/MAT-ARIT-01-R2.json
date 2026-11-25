@@ -1,0 +1,79 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "revision": "2",
+  "candidate_sha": "f40aaedd2b1619ab5fa3ba349d4867fe44740f41",
+  "tested_sha": "12a65e9e5663822ecd0a337cc1d54de704c840ad",
+  "plan_sha256": "347e12b3b2c6c275f8574ca208dbec75c4b9e500961ad264b8cc6d4ccbce7b9b",
+  "ci": {
+    "run": 45683730896,
+    "conclusion": "success",
+    "jobs": [
+      139450696795,
+      139450697155
+    ],
+    "rdg_tests": 6,
+    "artifact": 15054747884,
+    "browser_checks": 64,
+    "basic_game_rounds": {
+      "quiz": 10,
+      "clasificar": 10,
+      "construir": 10
+    }
+  },
+  "bank": {
+    "ids": 450,
+    "grouped_expressions": 617,
+    "remaining_grouped_collisions": 0,
+    "families": {
+      "OP-01": 90,
+      "OP-02": 150,
+      "OP-03": 210,
+      "OP-04": 0
+    }
+  },
+  "exam_contrast": {
+    "repository": "c2melendez/academia-paa-phuma",
+    "sha": "5baf93053faef098a73e6c47fb854c1ace2ccf6d",
+    "method": "Recuperación de questionBank.js y 13 dependencias sin efectos externos, ejecución JS en aislamiento de BANK y validateBank, normalización de espacios, operadores y signos; contraste literal de 20 firmas de expresiones de la ruta contra los 415 prompts de Matemáticas.",
+    "total": 989,
+    "math": 415,
+    "operations": 18,
+    "validation_errors": [],
+    "collisions": [],
+    "limitations": "No prueba independencia semántica universal; no se modificó el otro repositorio. No confundir identidad de respuesta numérica aislada con identidad de estímulo."
+  },
+  "review": {
+    "date": "2026-11-25",
+    "mode": "revisión asistida, no docente",
+    "status": "R2_PUBLICACION_TECNICA_R3_REPAIR",
+    "findings": [
+      "A1: distractor -7 corresponde a omitir el avance positivo.",
+      "A3: distractor de agrupación incorrecta debe ser -12, no 3.",
+      "T1/T5: reemplazar distractores vagos por errores reproducibles.",
+      "Explicitar condiciones de dominio de división y raíz en síntesis."
+    ],
+    "didactic_sources": [
+      {
+        "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/Maths-ks-2-3",
+        "role": "síntesis de enseñanza de matemáticas; representaciones seleccionadas y problemas resueltos",
+        "limitation": "contexto escolar, extrapolación"
+      },
+      {
+        "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/20",
+        "role": "guía basada en evidencia: análisis de problemas resueltos y estructura matemática",
+        "limitation": "álgebra escolar, no validación PHUMA"
+      },
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "role": "referencia disciplinar de raíz principal y agrupación",
+        "limitation": "no es prueba de admisión"
+      }
+    ],
+    "teacher_status": "PENDING",
+    "empirical_status": "NOT_RUN"
+  }
+}

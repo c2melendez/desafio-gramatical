@@ -76,3 +76,23 @@ it("checks distinct error mechanisms and manipulation for changed examples",asyn
  fireEvent.click(screen.getByRole("button",{name:"Comprobar"}));
  expect(screen.getByRole("status")).toHaveTextContent("no disminuiste el primer sumando");
 });
+
+it("R02/R07: distractors correspond to distinct reproducible error operations",()=>{
+ const tasks=[...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer];
+ const expected:Record<string,number[]>={A1:[-4+6+3,-4-3,-4+6],A3:[42/(7*3)-5,42/7*(3-5),42/7*3],A4:[(31+29)*11,(31+29)*13,(31-3+29)*11],T1:[6*14,6*14+3*8,6*14-8],T2:[(37+19)*11,(37+19)*12,(37-4+19)*11],T5:[14-6+15+3,14-6-3,(14-6+3)*5-3]};
+ for(const [id,values] of Object.entries(expected)){
+  const task=tasks.find(t=>t.id===id)!;
+  expect(task.options.filter(x=>x!==task.answer).map(x=>Number(x.replace("−","-"))).sort((a,b)=>a-b)).toEqual(values.sort((a,b)=>a-b));
+ }
+ expect(27-4*(3+2)).toBe(7);expect((19-7)*2).toBe(24);expect(19-7*2).toBe(5);expect(9*(8-3)-9*8).toBe(-27);
+ expect((Math.sqrt(25)-2+3)/8).toBe(3/4);
+ expect(0/9).toBe(0);expect(Number.isFinite(9/0)).toBe(false);expect(Math.sqrt(0)).toBe(0);expect(Number.isNaN(Math.sqrt(-9))).toBe(true);expect(Math.sqrt(9)).toBe(3);
+});
+it("R02: summary explicitly explains real-domain counterexamples",async()=>{
+ await mount(path+"&repaso=true");
+ await screen.findByRole("heading",{name:"Modo Repaso: Operaciones"});
+ fireEvent.click(screen.getByRole("button",{name:"Síntesis",exact:true}));
+ const section=screen.getByRole("region",{name:"Condiciones y contraejemplos"});
+ expect(section).toHaveTextContent("9 ÷ 0 no está definido");
+ expect(section).toHaveTextContent("√(−9) no tiene valor real");
+});
