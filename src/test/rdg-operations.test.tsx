@@ -4,6 +4,8 @@ import {afterEach,expect,it} from "vitest";
 import {cleanup,fireEvent,render,screen,waitFor,within} from "@testing-library/react";
 import {routeTree} from "@/routeTree.gen";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
+import {mathM3Pool} from "@/lib/math-m3";
+import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 afterEach(cleanup);
 const path="/?area=matematicas&tema=Aritm%C3%A9tica&subtema=Operaciones&modo=construir&nivel=avanzado";
 async function mount(url=path){const router=createRouter({routeTree,history:createMemoryHistory({initialEntries:[url]}),context:{queryClient:new QueryClient()}});await router.load();render(<RouterProvider router={router}/>);return router;}
@@ -37,7 +39,40 @@ it("does not publish a false review for a different subtopic",async()=>{
 it("independent arithmetic oracle covers all activity and transfer keys, rejects mutated keys",()=>{
  // Independent direct evaluation, not the explanation or selected index. Fractions use integer numerators and common denominators.
  const format=(n:number,d:number)=>{const gcd=(a:number,b:number):number=>b?gcd(b,a%b):Math.abs(a);const g=gcd(n,d);return d/g===1?String(n/g).replace("-","−"):(String(n/g)+"/"+String(d/g)).replace("-","−");};
- const independent:Record<string,string>={A1:format(-4+6-3,1),A2:[11-3*2,(11-3)*2].join(" y "),A3:String(42/7*3-5),A4:String((13-3+5)*(4+2)),A5:format(7*(12-5)-7*12,1),A6:format(Math.sqrt(9)+2-6,7),T1:String(Array(6).fill(14).reduce((a,b)=>a+b,0)-Array(3).fill(8).reduce((a,b)=>a+b,0)),T2:String((17-4+9)*(5+1)),T3:format(11*(23-8)-11*23,1),T4:format(Math.sqrt(16)-5+3,9),T5:String(14-Math.sqrt(36)+3*5-24/8)};
+ const independent:Record<string,string>={A1:format(-4+6-3,1),A2:[11-3*2,(11-3)*2].join(" y "),A3:String(42/7*3-5),A4:String((31-3+29)*(11+2)),A5:format(7*(12-5)-7*12,1),A6:format(Math.sqrt(9)+2-6,7),T1:String(Array(6).fill(14).reduce((a,b)=>a+b,0)-Array(3).fill(8).reduce((a,b)=>a+b,0)),T2:String((37-4+19)*(11+1)),T3:format(11*(23-8)-11*23,1),T4:format(Math.sqrt(16)-5+3,9),T5:String(14-Math.sqrt(36)+3*5-24/8)};
  const tasks=[...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer];expect(Object.keys(independent)).toHaveLength(tasks.length);
  for(const t of tasks){expect(independent[t.id]).toBe(t.answer);expect(new Set(t.options).size).toBe(4);expect(t.options.filter(x=>x===independent[t.id])).toHaveLength(1);for(const wrong of t.options.filter(x=>x!==t.answer)){expect(wrong).not.toBe(independent[t.id]);expect(t.errors[wrong]).toBeTruthy();}}
+});
+
+it("R06: all 450 actual game IDs are checked against review expressions, including transformed operands",()=>{
+ const bank=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>mathM3Pool("Aritmética","Operaciones",level,mode)));
+ expect(bank).toHaveLength(450);expect(new Set(bank.map(x=>x.id)).size).toBe(450);
+ const norm=(s:string)=>s.normalize("NFKC").replace(/\s/g,"").replace(/[−–]/g,"-").replace(/×/g,"*").replace(/÷/g,"/").replace(/\)(?=\d)/g,")*").replace(/(\d)\(/g,"$1*(");
+ const grouped=(s:string)=>[...norm(s).matchAll(/\(\d+\+\d+\)\*\d+/g)].map(x=>x[0]);
+ const groups=new Map<string,string[]>();
+ for(const item of bank)for(const expression of new Set([...grouped(item.prompt),...grouped(item.formula)]))groups.set(expression,[...(groups.get(expression)??[]),item.id]);
+ // Regression: both prior worked results really exist as playable basic exercises.
+ expect(groups.get("(10+5)*6")).toContain("math-m1-aritmetica-operaciones-quiz-principiante-4");
+ expect(groups.get("(13+9)*6")).toContain("math-m1-aritmetica-operaciones-clasificar-principiante-8");
+ const revision2=["(31+29)*11","(28+29)*13","(37+19)*11","(33+19)*12"];
+ for(const expression of revision2)expect(groups.has(expression),expression).toBe(false);
+ const signatures=["-4+6","2-3","11-3*2","(11-3)*2","42/7*3-5","7*(12-5)-7*12","√(9/49)+2/7-6/7","27-4*(3+2)","(19-7)*2","19-7*2","9*(8-3)-9*8","√(25/64)-1/4+3/8","6*14-3*8","11*(23-8)-11*23","√(16/81)-5/9+1/3","14-√36+3*5-24/8"];
+ // Single-step signed fragments cannot be full prompts of the current grouped-product bank.
+ for(const item of bank)for(const signature of signatures){
+  const fullFormula=norm(item.formula.split("=")[0]);
+  expect(fullFormula, item.id+" / "+signature).not.toBe(signature);
+ }
+ const counts=Object.fromEntries([...new Set(bank.map(x=>x.operation))].map(op=>[String(op),bank.filter(x=>x.operation===op).length]));
+ console.log("RDG_BANK_CONTRAST "+JSON.stringify({ids:bank.length,grouped_expressions:groups.size,corrected_collisions:2,remaining_grouped_collisions:0,families:counts,op04_gap:bank.filter(x=>/√|raíz/i.test(x.prompt)).length===0}));
+});
+it("checks distinct error mechanisms and manipulation for changed examples",async()=>{
+ await mount(path+"&repaso=true");await screen.findByRole("heading",{name:"Modo Repaso: Operaciones"});
+ fireEvent.click(screen.getByRole("button",{name:"Procedimientos",exact:true}));
+ fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ fireEvent.click(screen.getByRole("button",{name:"−3",exact:true}));
+ fireEvent.click(screen.getByRole("button",{name:"+2",exact:true}));
+ expect(screen.getByText("(28 + 29) × 13",{exact:true})).toBeInTheDocument();
+ fireEvent.click(within(screen.getByRole("group",{name:"Respuestas"})).getByRole("button",{name:"780",exact:true}));
+ fireEvent.click(screen.getByRole("button",{name:"Comprobar"}));
+ expect(screen.getByRole("status")).toHaveTextContent("no disminuiste el primer sumando");
 });

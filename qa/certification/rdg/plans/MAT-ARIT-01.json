@@ -149,11 +149,11 @@
           "function": "APLICAR",
           "interaction": "Cambiar dos operandos en una ficha de expresión antes de ejecutar cálculo.",
           "representation": "Tabla antes/después vinculada a expresión.",
-          "prompt": "Para (13+5)×4, disminuye el primer sumando en 3 y aumenta el factor en 2.",
-          "expected_reasoning": "(10+5)×6=90; se modifican los operandos originales.",
+          "prompt": "Para (31+29)×11, disminuye el primer sumando en 3 y aumenta el factor en 2.",
+          "expected_reasoning": "(28+29)×13=741; se modifican los operandos originales.",
           "feedback": "No se suma ni se resta el cambio directamente al resultado original.",
           "help": "Marcar los dos valores a modificar; ocultar resultado.",
-          "acceptance": "Expresión (10+5)×6 y resultado 90; no admitir respuesta original 72."
+          "acceptance": "Expresión (28+29)×13 y resultado 741; no admitir respuesta original 660."
         },
         {
           "id": "A5",
@@ -201,9 +201,9 @@
           ]
         },
         {
-          "prompt": "Una receta usa (17+9)×5 unidades. El primer componente disminuye 4 y el multiplicador aumenta 1. Selecciona el valor nuevo: 132, 130, 156, 122.",
-          "solution": "(13+9)×6=132.",
-          "oracle": "Sumar seis veces 22; verificar alternativas únicas.",
+          "prompt": "Una receta usa (37+19)×11 unidades. El primer componente disminuye 4 y el multiplicador aumenta 1. Selecciona el valor nuevo: 624, 616, 672, 572.",
+          "solution": "(33+19)×12=624.",
+          "oracle": "Sumar doce veces 52; verificar alternativas únicas.",
           "objective_ids": [
             "OP-02"
           ]
