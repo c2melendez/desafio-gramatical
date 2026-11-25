@@ -110,6 +110,6 @@ export const M3_CATEGORY_BUILD:Record<Level,BuildQ[]>=Object.fromEntries(LEVELS.
   const extra=[{w:'sin embargo',c:'conjuncion' as const},{w:'lentamente',c:'adverbio' as const},{w:'nuestros',c:'determinante' as const},{w:'científicas',c:'adjetivo' as const},{w:'caminan',c:'verbo' as const}];
   const extraTile=extra.find(v=>!a.tiles.some(t=>norm(t.w)===norm(v.w)))!;
   return {id,pattern:[...a.pattern],hint:'Resuelve el primer patrón y contrástalo con dos fuentes: '+a.hint+' / '+b.hint+' / '+c.hint,
-   tiles:[...a.tiles.map(t=>({...t})),extraTile],solutions:a.solutions.map(x=>[...x]),
+   tiles:[...a.tiles.map(t=>({...t})),extraTile],solutions:[...a.solutions],
    exp:a.exp+' Contraste B: '+b.exp+' Contraste C: '+c.exp};
  })])) as Record<Level,BuildQ[]>;

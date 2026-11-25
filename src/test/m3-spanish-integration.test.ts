@@ -5,6 +5,7 @@ import {grammarM1Pool} from '@/components/games/GrammarM1Play';
 import {readingPool} from '@/lib/reading';
 import {writingPool} from '@/lib/writing';
 import {M3_CATEGORY_BUILD,M3_GRAMMAR_ACTIVITIES} from '@/lib/m3-grammar';
+import {checkBuild,norm} from '@/lib/grammar';
 const targets={principiante:30,intermedio:50,avanzado:70} as const;
 describe('M3 Español — validación completa del área',()=>{
  it('completa 189 celdas con 9450 registros únicos',()=>{
@@ -41,6 +42,32 @@ describe('M3 Español — validación completa del área',()=>{
     expect(m3).toHaveLength(lev==='principiante'?10:lev==='intermedio'?15:25);
     for(const item of m3)expect(new Set(item.sourceIds).size).toBe(3);
    }
+ });
+ it('comprueba las soluciones de texto de cada construcción M3 en los tres niveles',()=>{
+  let checked=0;
+  for(const level of ['principiante','intermedio','avanzado'] as const){
+   for(const item of M3_CATEGORY_BUILD[level]){
+    expect(item.solutions.length,item.id).toBeGreaterThan(0);
+    for(const solution of item.solutions){
+     expect(typeof solution,item.id).toBe('string');
+     // Reconstruye una solución mediante fichas distintas y el patrón original.
+     const find=(pos:number,used:Set<number>,words:typeof item.tiles):typeof item.tiles|undefined=>{
+      if(pos===item.pattern.length)return norm(words.map(t=>t.w).join(' '))===norm(solution)?words:undefined;
+      for(let i=0;i<item.tiles.length;i++){
+       if(used.has(i)||item.tiles[i].c!==item.pattern[pos])continue;
+       const found=find(pos+1,new Set([...used,i]),[...words,item.tiles[i]]);
+       if(found)return found;
+      }
+     };
+     const chosen=find(0,new Set(),[]);
+     expect(chosen,item.id+': '+solution).toBeDefined();
+     expect(checkBuild(item,chosen!).ok,item.id).toBe(true);
+     checked++;
+    }
+    expect(checkBuild(item,[]).ok,item.id).toBe(false);
+   }
+  }
+  expect(checked).toBeGreaterThanOrEqual(50);
  });
  it('retiene la posición adicional del banco original sin compensarla en otra celda',()=>{
   expect(M3_CATEGORY_BUILD.avanzado).toHaveLength(25);
