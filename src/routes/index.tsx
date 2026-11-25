@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {achievementKey,loadAchievements} from "@/lib/perfect-achievements";
+import {PerfectBadge} from "@/components/games/PerfectBadge";
 import { LEVELS, LEVEL_LABEL, type Level, type Mode } from "@/lib/grammar";
 import {
  AREAS, CATALOG_COUNTS, GAME_IDS, GAME_ICONS,
@@ -34,8 +36,11 @@ export const Route = createFileRoute("/")({
 
 function Home() {
  const selected=Route.useSearch();
+ const [achievements,setAchievements]=useState<ReturnType<typeof loadAchievements>>({});
+ useEffect(()=>{const refresh=()=>setAchievements(loadAchievements());refresh();window.addEventListener("storage",refresh);window.addEventListener("focus",refresh);return()=>{window.removeEventListener("storage",refresh);window.removeEventListener("focus",refresh);};},[]);
  const [selection,setSelection]=useState<StudySelection>(()=>({...selected}));
  const {area:areaId,tema:topic,subtema:subtopic,modo:mode,nivel:level}=selection;
+ const mastered=(modo:Mode,nivel:Level)=>!!achievements[achievementKey({...selection,modo,nivel})];
  const selectedArea=AREAS.find(a=>a.id===areaId)??AREAS[0];
  const selectedTopic=selectedArea.topics.find(t=>t.name===topic)??selectedArea.topics[0];
  const pilot=areaId==="espanol"&&(topic==="Gramática y semántica"||topic==="Literatura")&&GRAMMAR_PILOT_SUBTOPICS.some(s=>s===subtopic);
@@ -112,7 +117,7 @@ function Home() {
        className={`card-ink flex items-center gap-4 p-4 text-left transition ${mode===id?"bg-primary text-primary-foreground":"bg-card"}`}>
        <span className="text-3xl" aria-hidden>{GAME_ICONS[id]}</span>
        <span className="flex-1"><span className="block text-lg font-bold">{names[id]}</span><span className="block text-sm opacity-90">{GAME_FOCUS[id]}</span></span>
-       <span className="text-xs font-bold">{(pilot?pilotMode(id):active)?"Disponible":"Próximamente"}</span>
+       <span className="text-xs font-bold">{(pilot?pilotMode(id):active)?"Disponible":"Próximamente"}<PerfectBadge visible={mastered(id,level)}/></span>
       </button>
      ))}
     </div>
@@ -124,7 +129,7 @@ function Home() {
      {LEVELS.map(l=>(
       <button key={l} aria-pressed={level===l} onClick={()=>setSelection(previous=>({...previous,nivel:l}))}
        className={`tile text-sm ${level===l?"bg-secondary text-secondary-foreground":"bg-card"}`}>
-       {l==="principiante"?"Básico":LEVEL_LABEL[l]}
+       {l==="principiante"?"Básico":LEVEL_LABEL[l]}<PerfectBadge visible={mastered(mode,l)}/>
       </button>
      ))}
     </div>
