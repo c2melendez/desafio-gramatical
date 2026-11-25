@@ -1,6 +1,6 @@
 import {createHash} from "node:crypto";
 import {expect,it} from "vitest";
-import {mathM3Pool,MATH_M3_NEW_PER_LEVEL} from "@/lib/math-m3";
+import {mathM3HistoricalPool as mathM3Pool,MATH_M3_NEW_PER_LEVEL} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {arithmeticPedagogy} from "@/lib/math-m1-core-arithmetic";
 import {repairRationalOperation} from "@/lib/math-operations-rational";
