@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { CAT_LABEL, CAT_SHORT, checkBuild, type BuildQ, type BuildResult, type Tile } from "@/lib/grammar";
 import type { GameProps } from "./types";
 import { NextButton } from "./Feedback";
@@ -10,8 +10,12 @@ export function BuildGame({ item, report, next, isLast }: GameProps<BuildQ & { b
   const tileOf = (k: number) => item.bank.find((t) => t.k === k)!;
   const words = chosen.map(tileOf);
   const locked = !!res;
+  const submitted = useRef(false);
+  const complete = chosen.length === item.pattern.length && new Set(chosen).size === chosen.length;
 
   const check = () => {
+    if (submitted.current || !complete) return;
+    submitted.current = true;
     const r = checkBuild(item, words);
     setRes(r);
     report(r.ok, r.ok ? undefined : { prompt: `Patrón: ${item.pattern.map((c) => CAT_LABEL[c]).join(" + ")}`, given: words.map((t) => t.w).join(" ") || "(vacío)", correct: item.solutions.join(" / "), exp: `${r.message} ${item.exp}` });
@@ -47,7 +51,7 @@ export function BuildGame({ item, report, next, isLast }: GameProps<BuildQ & { b
           {item.bank.map((t) => {
             const used = chosen.includes(t.k);
             return (
-              <button key={t.k} disabled={used || locked} onClick={() => setChosen([...chosen, t.k])} className="tile bg-card disabled:opacity-30">{t.w}</button>
+              <button key={t.k} disabled={used || locked || chosen.length >= item.pattern.length} onClick={() => setChosen(prev => submitted.current || prev.includes(t.k) || prev.length >= item.pattern.length ? prev : [...prev, t.k])} className="tile bg-card disabled:opacity-30">{t.w}</button>
             );
           })}
         </div>
@@ -57,7 +61,7 @@ export function BuildGame({ item, report, next, isLast }: GameProps<BuildQ & { b
         <div className="grid grid-cols-2 gap-2">
           <button onClick={() => setChosen(chosen.slice(0, -1))} disabled={!chosen.length} className="tile bg-card disabled:opacity-40">↶ Deshacer</button>
           <button onClick={() => setChosen([])} disabled={!chosen.length} className="tile bg-card disabled:opacity-40">Vaciar</button>
-          <button onClick={check} disabled={!chosen.length} className="tile col-span-2 bg-primary text-primary-foreground text-lg disabled:opacity-40">Comprobar</button>
+          <button onClick={check} disabled={!complete} className="tile col-span-2 bg-primary text-primary-foreground text-lg disabled:opacity-40">Comprobar</button>
         </div>
       ) : (
         <div className="space-y-4" aria-live="polite">
