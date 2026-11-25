@@ -41,6 +41,31 @@ export function validatePlan(p,a,ctx,schemas){
   for(const ref of r.sources){const d=docs.get(ref.source_id);need(d&&d.sha256===ref.sha256&&ref.pages.every(n=>n<=d.pages),'invalid source id/hash/page');}
   const objectives=unique(r.objectives.map(o=>o.id),'objective');
   for(const o of r.objectives){need(o.source_refs.every(x=>refs.has(x)),'unbound source');if(o.classification==='PHUMA')need(o.source_refs.some(x=>docs.get(x)?.role==='official-primary'),'PHUMA requires primary source');}
+  const research=r.external_research;
+  const resources=unique(research.resources.map(x=>x.id),'external resource');
+  const consulted=new Map(research.resources.filter(x=>x.access==='CONSULTADO'||x.access==='PARCIAL').map(x=>[x.id,x]));
+  const primary=id=>refs.has(id)&&docs.get(id)?.role==='official-primary';
+  for(const x of research.resources){
+   need(/^https?:\/\//i.test(x.url),'external URL required');
+   if(x.access==='SIN_ACCESO')need(x.decision==='DESCARTA','inaccessible source cannot support decisions');
+  }
+  need(equalSets(unique(research.profiles.map(x=>x.level),'calibration level'),new Set(['principiante','intermedio','avanzado'])),'calibration must cover three levels');
+  need(research.profiles.some(x=>x.phuma_relation==='COMPARABLE'),'PHUMA comparable anchor required');
+  for(const x of research.profiles){
+   need(x.official_anchor_ids.every(primary),'calibration requires official anchors');
+   need(x.external_resource_ids.every(id=>consulted.has(id)&&consulted.get(id).decision!=='DESCARTA'),'unavailable calibration resource');
+  }
+  for(const x of research.decisions){
+   need(x.objective_ids.every(id=>objectives.has(id)),'external decision unknown objective');
+   need(x.official_anchor_ids.every(primary),'external decision requires official anchor');
+   need(x.resource_ids.every(id=>resources.has(id)),'unknown external resource');
+   if(x.action!=='DESCARTA')need(x.resource_ids.every(id=>consulted.has(id)&&consulted.get(id).decision!=='DESCARTA'),'unavailable external evidence');
+  }
+  if(research.status==='CALIBRACION_CUALITATIVA'){
+   const usable=[...consulted.values()].filter(x=>x.decision!=='DESCARTA');
+   need(new Set(usable.map(x=>x.lineage)).size>=2,'two independent lineages or LIMITADA');
+   need(research.profiles.some(x=>x.external_resource_ids.length>0),'external calibration not linked');
+  }
   unique(r.activities.map(x=>x.id),'activity');
   for(const x of [...r.activities,...r.transfer_tasks,...r.games])need(x.objective_ids.every(id=>objectives.has(id)),'unknown objective');
   const taught=new Set(r.activities.flatMap(x=>x.objective_ids));

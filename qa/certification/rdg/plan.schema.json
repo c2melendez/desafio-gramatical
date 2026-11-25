@@ -46,7 +46,8 @@
           "worked_examples",
           "transfer_tasks",
           "games",
-          "acceptance"
+          "acceptance",
+          "external_research"
         ],
         "properties": {
           "scope": {
@@ -368,6 +369,327 @@
               "type": "string",
               "minLength": 1
             }
+          },
+          "external_research": {
+            "type": "object",
+            "required": [
+              "status",
+              "searches",
+              "resources",
+              "coverage_note",
+              "stop_reason",
+              "limitations",
+              "profiles",
+              "decisions"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "CALIBRACION_CUALITATIVA",
+                  "LIMITADA"
+                ]
+              },
+              "searches": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "query",
+                    "date",
+                    "channel",
+                    "results_reviewed",
+                    "finding"
+                  ],
+                  "properties": {
+                    "query": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "date": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "channel": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "results_reviewed": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "finding": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "resources": {
+                "type": "array",
+                "minItems": 0,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "url",
+                    "title",
+                    "producer",
+                    "lineage",
+                    "kind",
+                    "scope",
+                    "access",
+                    "locator",
+                    "finding",
+                    "quality",
+                    "limitations",
+                    "decision"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "url": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "producer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lineage": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "enum": [
+                        "APUNTES",
+                        "GUIA",
+                        "EJERCICIOS_RESUELTOS",
+                        "CUESTIONARIO",
+                        "SIMULACRO",
+                        "VIDEO_PREPARACION",
+                        "VIDEO_EXPLICACION",
+                        "OTRO"
+                      ]
+                    },
+                    "scope": {
+                      "enum": [
+                        "PHUMA",
+                        "PAA",
+                        "DISCIPLINAR",
+                        "DIDACTICO"
+                      ]
+                    },
+                    "access": {
+                      "enum": [
+                        "CONSULTADO",
+                        "PARCIAL",
+                        "SIN_ACCESO"
+                      ]
+                    },
+                    "locator": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "finding": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "quality": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "limitations": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "REFUERZA",
+                        "AJUSTA",
+                        "AMPLIA_APOYO",
+                        "DESCARTA"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "coverage_note": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stop_reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limitations": {
+                "type": "string",
+                "minLength": 1
+              },
+              "profiles": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "level",
+                    "official_anchor_ids",
+                    "external_resource_ids",
+                    "operation",
+                    "reasoning_steps",
+                    "prerequisites",
+                    "representations",
+                    "reading_load",
+                    "distractors",
+                    "format",
+                    "autonomy",
+                    "time_basis",
+                    "phuma_relation",
+                    "original_example",
+                    "decision"
+                  ],
+                  "properties": {
+                    "level": {
+                      "enum": [
+                        "principiante",
+                        "intermedio",
+                        "avanzado"
+                      ]
+                    },
+                    "official_anchor_ids": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "external_resource_ids": {
+                      "type": "array",
+                      "minItems": 0,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "operation": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "reasoning_steps": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prerequisites": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "representations": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "reading_load": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "distractors": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "format": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "autonomy": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "time_basis": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "phuma_relation": {
+                      "enum": [
+                        "PREPARATORIO",
+                        "COMPARABLE",
+                        "AMPLIACION"
+                      ]
+                    },
+                    "original_example": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "decisions": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "objective_ids",
+                    "resource_ids",
+                    "official_anchor_ids",
+                    "action",
+                    "rationale"
+                  ],
+                  "properties": {
+                    "objective_ids": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "resource_ids": {
+                      "type": "array",
+                      "minItems": 0,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "official_anchor_ids": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "action": {
+                      "enum": [
+                        "REFUERZA",
+                        "AJUSTA",
+                        "AMPLIA_APOYO",
+                        "DESCARTA"
+                      ]
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
           }
         },
         "additionalProperties": false

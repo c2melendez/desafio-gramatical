@@ -199,7 +199,7 @@
     "full_PAA_simulation",
     "full_PHUMA_simulation"
   ],
-  "active_prompt_version": "7.8",
+  "active_prompt_version": "7.8.1",
   "intervention_policy": {
     "mode": "CORRECTIVE_INCREMENTAL",
     "priority": [
@@ -247,6 +247,22 @@
       "G-CERTIFICACIÓN"
     ],
     "planning_counts_as": "design_only_validated_new_artifact",
-    "phase_transitions": "evidence_based_no_artificial_pause"
+    "phase_transitions": "evidence_based_no_artificial_pause",
+    "external_research": {
+      "required_phase": "P0",
+      "authority": "official sources and independent disciplinary oracle",
+      "purpose": [
+        "calibration",
+        "corroboration",
+        "support_extension",
+        "contrast"
+      ],
+      "difficulty": "qualitative_not_psychometric",
+      "reuse": "by relevance and revision",
+      "seed_urls": [
+        "https://www.studocu.com/es/search/Phuma?pages=1%3A250&languages=es&years=2010%3A2027&institutionId=3839"
+      ],
+      "limited_evidence_allowed_with_reason": true
+    }
   }
 }

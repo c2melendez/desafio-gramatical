@@ -27,7 +27,7 @@
   ],
   "last_verified_ci_run": 45167021720,
   "english_excluded": true,
-  "active_prompt_version": "7.8",
+  "active_prompt_version": "7.8.1",
   "batch_policy": {
     "mode": "RDG_FIRST_BLOCK_PHASED",
     "max_ids": 450,
@@ -54,6 +54,8 @@
     "operational_phase": "P0",
     "architecture_path": "qa/certification/rdg/architecture.json",
     "plan_path": null,
-    "plan_sha256": null
+    "plan_sha256": null,
+    "external_research_required": true,
+    "research_status": "PENDIENTE_VERIFICACION_REAL"
   }
 }

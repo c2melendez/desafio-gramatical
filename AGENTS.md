@@ -29,9 +29,11 @@ use the editor.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
 
-## Autoridad técnico-pedagógica — v7.8
+## Autoridad técnico-pedagógica — v7.8.1
 Leer [PROMPT_EJECUTOR_REPOSITORIO.md](PROMPT_EJECUTOR_REPOSITORIO.md) y [ejecutor completo](docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Sustituyen los prompts históricos; preservar el bloque Lovable. CONTINUAR inicia trabajo real, con G-ACTION, no un informe. Las fuentes originales están en qa/certification/PDF/; verificar huella y páginas, no redistribuir ni copiar reactivos. Mantener cursor y evidencia, no reiniciar módulos.
 
-**v7.8 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.
+**v7.8.1 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.
 
-**v7.8 — Prioridad vinculante:** unidad pedagógica = subtema; unidad operativa = bloque coherente. P0 PLANIFICAR (G-DISEÑO) → P1 IMPLEMENTAR RDG (G-REPASO) → P2 CERTIFICAR juegos e IDs asociados (G-CERTIFICACIÓN). Encadenar fases en el menor número posible de corridas, reutilizar fuentes/planes vigentes y motor común. No hay cuota de 450 por corrida. Solo P0 con artefacto ejecutable nuevo y validación real cuenta como DISEÑO, nunca producto ni certificación. Consultar `qa/certification/rdg/README.md`.
+**v7.8.1 — Prioridad vinculante:** unidad pedagógica = subtema; unidad operativa = bloque coherente. P0 PLANIFICAR (G-DISEÑO) → P1 IMPLEMENTAR RDG (G-REPASO) → P2 CERTIFICAR juegos e IDs asociados (G-CERTIFICACIÓN). Encadenar fases en el menor número posible de corridas, reutilizar fuentes/planes vigentes y motor común. No hay cuota de 450 por corrida. Solo P0 con artefacto ejecutable nuevo y validación real cuenta como DISEÑO, nunca producto ni certificación. Consultar `qa/certification/rdg/README.md`.
+
+**v7.8.1 — Investigación y calibración complementaria obligatoria en P0:** aplicar §4.1. Además de los PDF originales, buscar exhaustiva y proporcionalmente guías, apuntes, ejercicios resueltos, cuestionarios, simulacros y videos (Studocu, sitios institucionales y otros recursos legítimos). Contrastar con anclas oficiales; registrar consultas, acceso, linaje, hallazgos, decisiones y perfil cualitativo por nivel. Reutilizar evidencia vigente; no copiar preguntas ni convertir fuentes secundarias en autoridad PHUMA. P1/P2 consumen la calibración congelada. 
