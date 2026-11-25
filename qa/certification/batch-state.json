@@ -61,12 +61,12 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI y publicación de reparación de feedback OP02/03. Lote 01: 50 examinados REVIEW, OP04 recheck E=3 pero diversidad G pendiente; OP02/03 C/G y profundidad avanzada pendientes. Continuar selección MAT-ARIT-01-02 sin repetir fichas vigentes.",
+    "next_action": "Verificar CI del lote 02. Prioridad correctiva: sustituir distractores ±1/2 por errores conceptuales y ampliar familias sin cambiar cuotas ni desactivar oráculos. Conservar selección histórica; generar sucesoras solo para hashes afectados y reejecutar fichas. Continuar lote 03 sin repetir examinados vigentes.",
     "previous_publication": {
-      "sha": "e93b6712dfa0d42102f07b2002f86dffe72cdf34",
-      "ci_run": 45685289534,
+      "sha": "2dfd1b577b71387388fd2291ace61a913517127e",
+      "ci_run": 45692947128,
       "ci": "SUCCESS",
-      "render_deploy": "dep-dc3jcvu0tbcc73btejcg",
+      "render_deploy": "dep-dc3k31g473hc738eflbg",
       "render": "LIVE"
     },
     "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R3.json",
@@ -115,16 +115,19 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-09.json"
     ],
     "selection_total": 450,
-    "examined_semantic_ids": 50,
+    "examined_semantic_ids": 100,
     "semantic_pass_ids": 0,
     "review_ids": 450,
     "review_evidence": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-feedback-recheck.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-feedback-recheck.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-02-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-feedback-recheck.json"
     ],
     "completed_review_batches": [
-      "MAT-ARIT-01-01"
+      "MAT-ARIT-01-01",
+      "MAT-ARIT-01-02"
     ]
   }
 }

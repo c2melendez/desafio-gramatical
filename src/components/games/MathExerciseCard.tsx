@@ -47,7 +47,7 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
    :item.mode==="construir"?item.steps.flatMap((s,i)=>{
     if(choices[i]===s.answerIndex)return [];
     const chosen=s.choices[choices[i]];
-    return [i===0&&item.oracle.kind==="Operaciones"?`Paso elegido: ${chosen}. ${item.explanation} El valor correcto de este paso es ${s.choices[s.answerIndex]}.`:i===0?`Raíz elegida: ${chosen}. La raíz principal debe ser no negativa y su cuadrado debe coincidir con el radicando; el valor correcto es ${s.choices[s.answerIndex]}.`:`Resultado elegido: ${chosen}. ${item.optionExplanations?.[chosen]??"Comprueba la precedencia y las unidades fraccionarias."}`];
+    return [i===0&&item.oracle.kind==="Operaciones"?`Paso elegido: ${chosen}. ${item.explanation} El valor correcto de este paso es ${s.choices[s.answerIndex]}.`:i===0?`Raíz elegida: ${chosen}. La raíz principal debe ser no negativa y su cuadrado debe coincidir con el radicando; el valor correcto es ${s.choices[s.answerIndex]}.`:item.oracle.kind==="Operaciones"?`Resultado elegido: ${chosen}. ${item.explanation} El valor de la expresión solicitada es ${item.expected}, no ${chosen}. Verifica el paso anterior antes de multiplicar o cancelar.`:`Resultado elegido: ${chosen}. ${item.optionExplanations?.[chosen]??"Comprueba la precedencia y las unidades fraccionarias."}`];
    }).join(" "):""
   :"";
  const selection=item.mode==="construir"?item.steps[choices.length]?.choices:

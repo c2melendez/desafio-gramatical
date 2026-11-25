@@ -1,0 +1,273 @@
+{
+  "source_ci": 45693112604,
+  "source_head": "bf1a4298ade6a46e5b6c22407287f4fd114c4289",
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "status": "REVIEW",
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "content_hash": "e210290a4c61e8307178745a2b9d25eefe062bf2e185bc5fe6ed108da5bbf296",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "content_hash": "b6fc39805fbf8e512efab4cd1ba1247d8e80c48052ed67cdee7ad2d86613afa4",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "content_hash": "6ec9c4edf4bb3f5e2cd1a8b1f090357665582609875c8296c8e51529a8aa2dd6",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "content_hash": "c2f9685395f4510f94efebd51108f2b2cad06d2c3e1a4db3b9112446a13fa9d1",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "content_hash": "bc8d728809e0865026293827f0916f86f4607af6a533663b5fdd6695759377d0",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "content_hash": "c36369bf45a070ee3a17c0561b04d351876009d485962ceef11a1a73ccc90420",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "content_hash": "01d5113d391bb84409a94904b77a2a29c2977738fd9fe5eefbf07b226afe3103",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "content_hash": "103e60cdc97b9dcb669dfd6af4db06643b8034a43b76c35ef4d1936d9dc92f6b",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "content_hash": "10170ce10cde9e4e0ee09df5c3da2a5532ea69c8ecd96a93f67a35f2fd9d295b",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "content_hash": "2c7b2aa37ca8f643a71a5e0a423148dfd5c6340e15466fb2e010b9ecfa82fb0e",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "content_hash": "13aa6f9aeb718d7c4d3b8282840bb87244e736726f5b299f0c653b35fe3aaae6",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "content_hash": "16b4a45e0f56fec7aaa09909c71bce7f4f607213373c9851a59ce93cb7ba916c",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "content_hash": "3029763eb632f1332bd27cbf4947880e6b206f289c36f675e9a1f3b9b0dab2fd",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "content_hash": "baca3cb6693b9e7bc5420ba8b9ec6328dc5fce3a01e1ea5cd4ffeb83be10f4a2",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "content_hash": "f8e85a7a26985edfa429a78bf3fe46c42bc6f198df0d4a0b946270bed6f57c7b",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "content_hash": "e3810480f25f4589e4b33febfe1dd573e35b08101c6ee694afff10a2269b674d",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "content_hash": "c5bd17548b04a784e9811a3c399e96b3e483e6d08185631f7858a9ceea4ce6ee",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "content_hash": "c7e273343f7b1e4945fcabf89a5d6a58aec315f3866b98fe2ef49e4607a955ae",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "content_hash": "49cc90c6fcf9949f44208217e32241004c375fdd372e086de77749affef7a977",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "content_hash": "2e7330b4e5a7ec5b5426a83fecae309ef95a0322e116e4afafb8539721adba6b",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "content_hash": "9eb902bbb5dfcd49cb65e2977e650e6e12ceca7d85d301afe922246a1fd8db32",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "content_hash": "9208ef31c594d0d954cfc80f36eb37a69509c7ac803cd88c712ae519c614b7ce",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "content_hash": "bb448d86b22a1069fb3ad2b2128ed7ec026dae086f5474fa371dcd00f52a577b",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "content_hash": "dc29d40016d89249c69a6e41a24a9ed1f95c3aa35d86873d87c09b3856199038",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "content_hash": "61327d24ea239bf3e370cab5339aad0d1ef74e60d074eb89fadf7c66faa1912a",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_hash": "967c9a04409f74eba4ac50f60eafa28dc2739ad0968cb50ef8fe2497f6090b47",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "content_hash": "219831a4abf3578f810b889f640216220b780e229a6e69393f25334a3330c0d5",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "content_hash": "735de9b348f1b4a3a83864f2671e2f3ae4194971fa505577160287768cda60e2",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "content_hash": "78edf65bc0818b987bbc2d32670c8f2c0be39fc820b1d1fe2b99e85fecfa6365",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "content_hash": "ce519c36787a187d8cb19d7760504749e652aa9fcb5d6f28b646ef0cb74e0bc1",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "content_hash": "7652d1d553ef8a4281009b825387bd760973d9dadde2e44da21ec18775164987",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "content_hash": "a8ce064a003575f103be423870b941459ec3ca2940db2e628654594bef79e595",
+      "previous_E": 2,
+      "current_E": 3,
+      "reason": "Pruebas específicas CI #847 de cancelación y factor uno; componente explica la afirmación concreta incorrecta. C/F/G mantienen deuda según ficha original.",
+      "semantic_status": "REVIEW"
+    }
+  ],
+  "summary": {
+    "feedback_rechecked": 32,
+    "review": 32,
+    "semantic_pass": 0
+  }
+}
