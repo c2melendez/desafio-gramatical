@@ -1,0 +1,4217 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "batch_id": "MAT-ARIT-01-01",
+  "status": "REVIEW",
+  "source_sha": "2dfd1b577b71387388fd2291ace61a913517127e",
+  "source_ci": 45690836989,
+  "method": "Se ejecutó arithmeticPedagogy del SHA publicado con tipado retirado, sobre las semillas M1 de la selección real. Oráculo directo independiente para cada condición y cada afirmación; se contrastó la clave/intermedio/hash archivados. La prueba nueva reconcilia estímulo, afirmaciones, hash y resultado con runtime completo.",
+  "summary": {
+    "examined": 32,
+    "semantic_pass": 0,
+    "review": 32,
+    "fail": 0,
+    "oracle_verified": 32,
+    "advanced": 20,
+    "intermediate": 12,
+    "assertions_checked": 96,
+    "feedback_gap": 32
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "content_hash": "e210290a4c61e8307178745a2b9d25eefe062bf2e185bc5fe6ed108da5bbf296",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+13)×4−10×4. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "52",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          10,
+          13,
+          4
+        ],
+        "formula": "(10+13)×4−10×4",
+        "value": 52,
+        "intermediate": 13,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 52,
+          "truth": true,
+          "reason": "92−40=52: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 10×4 con su opuesto, queda 13×4."
+        },
+        {
+          "value": -52,
+          "truth": false,
+          "reason": "El término restante es positivo 13×4=52, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −13×4."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 40 y −40 se cancelan, pero 52 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (10+13)×4 se convierte en 10×4+13×4. Al restar 10×4, los dos términos iguales se cancelan; queda solo 13×4=52. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "e210290a4c61e8307178745a2b9d25eefe062bf2e185bc5fe6ed108da5bbf296",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "92−40=52: se cancela únicamente el primer producto. El término restante es positivo 13×4=52, no su opuesto. Los términos 40 y −40 se cancelan, pero 52 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+13)×4−10×4. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "content_hash": "b6fc39805fbf8e512efab4cd1ba1247d8e80c48052ed67cdee7ad2d86613afa4",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+16)×2−11×2. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "32",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          11,
+          16,
+          2
+        ],
+        "formula": "(11+16)×2−11×2",
+        "value": 32,
+        "intermediate": 16,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 32,
+          "truth": true,
+          "reason": "54−22=32: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 11×2 con su opuesto, queda 16×2."
+        },
+        {
+          "value": -32,
+          "truth": false,
+          "reason": "El término restante es positivo 16×2=32, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −16×2."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 22 y −22 se cancelan, pero 32 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (11+16)×2 se convierte en 11×2+16×2. Al restar 11×2, los dos términos iguales se cancelan; queda solo 16×2=32. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "b6fc39805fbf8e512efab4cd1ba1247d8e80c48052ed67cdee7ad2d86613afa4",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "54−22=32: se cancela únicamente el primer producto. El término restante es positivo 16×2=32, no su opuesto. Los términos 22 y −22 se cancelan, pero 32 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+16)×2−11×2. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "content_hash": "6ec9c4edf4bb3f5e2cd1a8b1f090357665582609875c8296c8e51529a8aa2dd6",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+17)×5−20×5. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "85",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          20,
+          17,
+          5
+        ],
+        "formula": "(20+17)×5−20×5",
+        "value": 85,
+        "intermediate": 17,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 85,
+          "truth": true,
+          "reason": "185−100=85: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 20×5 con su opuesto, queda 17×5."
+        },
+        {
+          "value": -85,
+          "truth": false,
+          "reason": "El término restante es positivo 17×5=85, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −17×5."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 100 y −100 se cancelan, pero 85 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (20+17)×5 se convierte en 20×5+17×5. Al restar 20×5, los dos términos iguales se cancelan; queda solo 17×5=85. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "6ec9c4edf4bb3f5e2cd1a8b1f090357665582609875c8296c8e51529a8aa2dd6",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "185−100=85: se cancela únicamente el primer producto. El término restante es positivo 17×5=85, no su opuesto. Los términos 100 y −100 se cancelan, pero 85 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+17)×5−20×5. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "content_hash": "c2f9685395f4510f94efebd51108f2b2cad06d2c3e1a4db3b9112446a13fa9d1",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+7)×3−21×3. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "21",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          21,
+          7,
+          3
+        ],
+        "formula": "(21+7)×3−21×3",
+        "value": 21,
+        "intermediate": 7,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 21,
+          "truth": true,
+          "reason": "84−63=21: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 21×3 con su opuesto, queda 7×3."
+        },
+        {
+          "value": -21,
+          "truth": false,
+          "reason": "El término restante es positivo 7×3=21, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −7×3."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 63 y −63 se cancelan, pero 21 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (21+7)×3 se convierte en 21×3+7×3. Al restar 21×3, los dos términos iguales se cancelan; queda solo 7×3=21. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "c2f9685395f4510f94efebd51108f2b2cad06d2c3e1a4db3b9112446a13fa9d1",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "84−63=21: se cancela únicamente el primer producto. El término restante es positivo 7×3=21, no su opuesto. Los términos 63 y −63 se cancelan, pero 21 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+7)×3−21×3. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "content_hash": "bc8d728809e0865026293827f0916f86f4607af6a533663b5fdd6695759377d0",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (22+10)×8−22×8. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "80",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          22,
+          10,
+          8
+        ],
+        "formula": "(22+10)×8−22×8",
+        "value": 80,
+        "intermediate": 10,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 80,
+          "truth": true,
+          "reason": "256−176=80: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 22×8 con su opuesto, queda 10×8."
+        },
+        {
+          "value": -80,
+          "truth": false,
+          "reason": "El término restante es positivo 10×8=80, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −10×8."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 176 y −176 se cancelan, pero 80 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (22+10)×8 se convierte en 22×8+10×8. Al restar 22×8, los dos términos iguales se cancelan; queda solo 10×8=80. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "bc8d728809e0865026293827f0916f86f4607af6a533663b5fdd6695759377d0",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "256−176=80: se cancela únicamente el primer producto. El término restante es positivo 10×8=80, no su opuesto. Los términos 176 y −176 se cancelan, pero 80 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (22+10)×8−22×8. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "content_hash": "c36369bf45a070ee3a17c0561b04d351876009d485962ceef11a1a73ccc90420",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+13)×6−23×6. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "78",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          23,
+          13,
+          6
+        ],
+        "formula": "(23+13)×6−23×6",
+        "value": 78,
+        "intermediate": 13,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 78,
+          "truth": true,
+          "reason": "216−138=78: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 23×6 con su opuesto, queda 13×6."
+        },
+        {
+          "value": -78,
+          "truth": false,
+          "reason": "El término restante es positivo 13×6=78, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −13×6."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 138 y −138 se cancelan, pero 78 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (23+13)×6 se convierte en 23×6+13×6. Al restar 23×6, los dos términos iguales se cancelan; queda solo 13×6=78. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "c36369bf45a070ee3a17c0561b04d351876009d485962ceef11a1a73ccc90420",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "216−138=78: se cancela únicamente el primer producto. El término restante es positivo 13×6=78, no su opuesto. Los términos 138 y −138 se cancelan, pero 78 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+13)×6−23×6. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "content_hash": "01d5113d391bb84409a94904b77a2a29c2977738fd9fe5eefbf07b226afe3103",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (24+16)×4−24×4. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "64",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          24,
+          16,
+          4
+        ],
+        "formula": "(24+16)×4−24×4",
+        "value": 64,
+        "intermediate": 16,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 64,
+          "truth": true,
+          "reason": "160−96=64: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 24×4 con su opuesto, queda 16×4."
+        },
+        {
+          "value": -64,
+          "truth": false,
+          "reason": "El término restante es positivo 16×4=64, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −16×4."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 96 y −96 se cancelan, pero 64 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (24+16)×4 se convierte en 24×4+16×4. Al restar 24×4, los dos términos iguales se cancelan; queda solo 16×4=64. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "01d5113d391bb84409a94904b77a2a29c2977738fd9fe5eefbf07b226afe3103",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "160−96=64: se cancela únicamente el primer producto. El término restante es positivo 16×4=64, no su opuesto. Los términos 96 y −96 se cancelan, pero 64 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (24+16)×4−24×4. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "content_hash": "103e60cdc97b9dcb669dfd6af4db06643b8034a43b76c35ef4d1936d9dc92f6b",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+19)×2−8×2. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "38",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          8,
+          19,
+          2
+        ],
+        "formula": "(8+19)×2−8×2",
+        "value": 38,
+        "intermediate": 19,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 38,
+          "truth": true,
+          "reason": "54−16=38: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 8×2 con su opuesto, queda 19×2."
+        },
+        {
+          "value": -38,
+          "truth": false,
+          "reason": "El término restante es positivo 19×2=38, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −19×2."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 16 y −16 se cancelan, pero 38 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (8+19)×2 se convierte en 8×2+19×2. Al restar 8×2, los dos términos iguales se cancelan; queda solo 19×2=38. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "103e60cdc97b9dcb669dfd6af4db06643b8034a43b76c35ef4d1936d9dc92f6b",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "54−16=38: se cancela únicamente el primer producto. El término restante es positivo 19×2=38, no su opuesto. Los términos 16 y −16 se cancelan, pero 38 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+19)×2−8×2. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "content_hash": "10170ce10cde9e4e0ee09df5c3da2a5532ea69c8ecd96a93f67a35f2fd9d295b",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+9)×7−9×7. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "63",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          9,
+          9,
+          7
+        ],
+        "formula": "(9+9)×7−9×7",
+        "value": 63,
+        "intermediate": 9,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 63,
+          "truth": true,
+          "reason": "126−63=63: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 9×7 con su opuesto, queda 9×7."
+        },
+        {
+          "value": -63,
+          "truth": false,
+          "reason": "El término restante es positivo 9×7=63, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −9×7."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 63 y −63 se cancelan, pero 63 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (9+9)×7 se convierte en 9×7+9×7. Al restar 9×7, los dos términos iguales se cancelan; queda solo 9×7=63. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "10170ce10cde9e4e0ee09df5c3da2a5532ea69c8ecd96a93f67a35f2fd9d295b",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "126−63=63: se cancela únicamente el primer producto. El término restante es positivo 9×7=63, no su opuesto. Los términos 63 y −63 se cancelan, pero 63 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+9)×7−9×7. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "content_hash": "2c7b2aa37ca8f643a71a5e0a423148dfd5c6340e15466fb2e010b9ecfa82fb0e",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+12)×5−10×5. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "60",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          10,
+          12,
+          5
+        ],
+        "formula": "(10+12)×5−10×5",
+        "value": 60,
+        "intermediate": 12,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 60,
+          "truth": true,
+          "reason": "110−50=60: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 10×5 con su opuesto, queda 12×5."
+        },
+        {
+          "value": -60,
+          "truth": false,
+          "reason": "El término restante es positivo 12×5=60, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −12×5."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 50 y −50 se cancelan, pero 60 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (10+12)×5 se convierte en 10×5+12×5. Al restar 10×5, los dos términos iguales se cancelan; queda solo 12×5=60. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "2c7b2aa37ca8f643a71a5e0a423148dfd5c6340e15466fb2e010b9ecfa82fb0e",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "110−50=60: se cancela únicamente el primer producto. El término restante es positivo 12×5=60, no su opuesto. Los términos 50 y −50 se cancelan, pero 60 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+12)×5−10×5. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "content_hash": "13aa6f9aeb718d7c4d3b8282840bb87244e736726f5b299f0c653b35fe3aaae6",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+15)×3−11×3. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "45",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          11,
+          15,
+          3
+        ],
+        "formula": "(11+15)×3−11×3",
+        "value": 45,
+        "intermediate": 15,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 45,
+          "truth": true,
+          "reason": "78−33=45: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 11×3 con su opuesto, queda 15×3."
+        },
+        {
+          "value": -45,
+          "truth": false,
+          "reason": "El término restante es positivo 15×3=45, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −15×3."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 33 y −33 se cancelan, pero 45 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (11+15)×3 se convierte en 11×3+15×3. Al restar 11×3, los dos términos iguales se cancelan; queda solo 15×3=45. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "13aa6f9aeb718d7c4d3b8282840bb87244e736726f5b299f0c653b35fe3aaae6",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "78−33=45: se cancela únicamente el primer producto. El término restante es positivo 15×3=45, no su opuesto. Los términos 33 y −33 se cancelan, pero 45 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+15)×3−11×3. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "content_hash": "16b4a45e0f56fec7aaa09909c71bce7f4f607213373c9851a59ce93cb7ba916c",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+18)×8−12×8. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "144",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          12,
+          18,
+          8
+        ],
+        "formula": "(12+18)×8−12×8",
+        "value": 144,
+        "intermediate": 18,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 144,
+          "truth": true,
+          "reason": "240−96=144: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 12×8 con su opuesto, queda 18×8."
+        },
+        {
+          "value": -144,
+          "truth": false,
+          "reason": "El término restante es positivo 18×8=144, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −18×8."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 96 y −96 se cancelan, pero 144 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (12+18)×8 se convierte en 12×8+18×8. Al restar 12×8, los dos términos iguales se cancelan; queda solo 18×8=144. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "16b4a45e0f56fec7aaa09909c71bce7f4f607213373c9851a59ce93cb7ba916c",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "240−96=144: se cancela únicamente el primer producto. El término restante es positivo 18×8=144, no su opuesto. Los términos 96 y −96 se cancelan, pero 144 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+18)×8−12×8. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "content_hash": "3029763eb632f1332bd27cbf4947880e6b206f289c36f675e9a1f3b9b0dab2fd",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+19)×7−12×7. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "133",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          12,
+          19,
+          7
+        ],
+        "formula": "(12+19)×7−12×7",
+        "value": 133,
+        "intermediate": 19,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 133,
+          "truth": true,
+          "reason": "217−84=133: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 12×7 con su opuesto, queda 19×7."
+        },
+        {
+          "value": -133,
+          "truth": false,
+          "reason": "El término restante es positivo 19×7=133, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −19×7."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 84 y −84 se cancelan, pero 133 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (12+19)×7 se convierte en 12×7+19×7. Al restar 12×7, los dos términos iguales se cancelan; queda solo 19×7=133. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "3029763eb632f1332bd27cbf4947880e6b206f289c36f675e9a1f3b9b0dab2fd",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "217−84=133: se cancela únicamente el primer producto. El término restante es positivo 19×7=133, no su opuesto. Los términos 84 y −84 se cancelan, pero 133 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+19)×7−12×7. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "content_hash": "baca3cb6693b9e7bc5420ba8b9ec6328dc5fce3a01e1ea5cd4ffeb83be10f4a2",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+9)×5−13×5. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "45",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          13,
+          9,
+          5
+        ],
+        "formula": "(13+9)×5−13×5",
+        "value": 45,
+        "intermediate": 9,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 45,
+          "truth": true,
+          "reason": "110−65=45: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 13×5 con su opuesto, queda 9×5."
+        },
+        {
+          "value": -45,
+          "truth": false,
+          "reason": "El término restante es positivo 9×5=45, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −9×5."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 65 y −65 se cancelan, pero 45 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (13+9)×5 se convierte en 13×5+9×5. Al restar 13×5, los dos términos iguales se cancelan; queda solo 9×5=45. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "baca3cb6693b9e7bc5420ba8b9ec6328dc5fce3a01e1ea5cd4ffeb83be10f4a2",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "110−65=45: se cancela únicamente el primer producto. El término restante es positivo 9×5=45, no su opuesto. Los términos 65 y −65 se cancelan, pero 45 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+9)×5−13×5. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "content_hash": "f8e85a7a26985edfa429a78bf3fe46c42bc6f198df0d4a0b946270bed6f57c7b",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+12)×3−14×3. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "36",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          14,
+          12,
+          3
+        ],
+        "formula": "(14+12)×3−14×3",
+        "value": 36,
+        "intermediate": 12,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 36,
+          "truth": true,
+          "reason": "78−42=36: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 14×3 con su opuesto, queda 12×3."
+        },
+        {
+          "value": -36,
+          "truth": false,
+          "reason": "El término restante es positivo 12×3=36, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −12×3."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 42 y −42 se cancelan, pero 36 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (14+12)×3 se convierte en 14×3+12×3. Al restar 14×3, los dos términos iguales se cancelan; queda solo 12×3=36. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "f8e85a7a26985edfa429a78bf3fe46c42bc6f198df0d4a0b946270bed6f57c7b",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "78−42=36: se cancela únicamente el primer producto. El término restante es positivo 12×3=36, no su opuesto. Los términos 42 y −42 se cancelan, pero 36 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+12)×3−14×3. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "content_hash": "e3810480f25f4589e4b33febfe1dd573e35b08101c6ee694afff10a2269b674d",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+15)×8−15×8. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "120",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          15,
+          15,
+          8
+        ],
+        "formula": "(15+15)×8−15×8",
+        "value": 120,
+        "intermediate": 15,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 120,
+          "truth": true,
+          "reason": "240−120=120: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 15×8 con su opuesto, queda 15×8."
+        },
+        {
+          "value": -120,
+          "truth": false,
+          "reason": "El término restante es positivo 15×8=120, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −15×8."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 120 y −120 se cancelan, pero 120 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (15+15)×8 se convierte en 15×8+15×8. Al restar 15×8, los dos términos iguales se cancelan; queda solo 15×8=120. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "e3810480f25f4589e4b33febfe1dd573e35b08101c6ee694afff10a2269b674d",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "240−120=120: se cancela únicamente el primer producto. El término restante es positivo 15×8=120, no su opuesto. Los términos 120 y −120 se cancelan, pero 120 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+15)×8−15×8. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "content_hash": "c5bd17548b04a784e9811a3c399e96b3e483e6d08185631f7858a9ceea4ce6ee",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+18)×6−16×6. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "108",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          16,
+          18,
+          6
+        ],
+        "formula": "(16+18)×6−16×6",
+        "value": 108,
+        "intermediate": 18,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 108,
+          "truth": true,
+          "reason": "204−96=108: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 16×6 con su opuesto, queda 18×6."
+        },
+        {
+          "value": -108,
+          "truth": false,
+          "reason": "El término restante es positivo 18×6=108, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −18×6."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 96 y −96 se cancelan, pero 108 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (16+18)×6 se convierte en 16×6+18×6. Al restar 16×6, los dos términos iguales se cancelan; queda solo 18×6=108. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "c5bd17548b04a784e9811a3c399e96b3e483e6d08185631f7858a9ceea4ce6ee",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "204−96=108: se cancela únicamente el primer producto. El término restante es positivo 18×6=108, no su opuesto. Los términos 96 y −96 se cancelan, pero 108 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+18)×6−16×6. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "content_hash": "c7e273343f7b1e4945fcabf89a5d6a58aec315f3866b98fe2ef49e4607a955ae",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (17+8)×4−17×4. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "32",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          17,
+          8,
+          4
+        ],
+        "formula": "(17+8)×4−17×4",
+        "value": 32,
+        "intermediate": 8,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 32,
+          "truth": true,
+          "reason": "100−68=32: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 17×4 con su opuesto, queda 8×4."
+        },
+        {
+          "value": -32,
+          "truth": false,
+          "reason": "El término restante es positivo 8×4=32, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −8×4."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 68 y −68 se cancelan, pero 32 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (17+8)×4 se convierte en 17×4+8×4. Al restar 17×4, los dos términos iguales se cancelan; queda solo 8×4=32. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "c7e273343f7b1e4945fcabf89a5d6a58aec315f3866b98fe2ef49e4607a955ae",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "100−68=32: se cancela únicamente el primer producto. El término restante es positivo 8×4=32, no su opuesto. Los términos 68 y −68 se cancelan, pero 32 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (17+8)×4−17×4. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "content_hash": "49cc90c6fcf9949f44208217e32241004c375fdd372e086de77749affef7a977",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+11)×2−18×2. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "22",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          18,
+          11,
+          2
+        ],
+        "formula": "(18+11)×2−18×2",
+        "value": 22,
+        "intermediate": 11,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 22,
+          "truth": true,
+          "reason": "58−36=22: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 18×2 con su opuesto, queda 11×2."
+        },
+        {
+          "value": -22,
+          "truth": false,
+          "reason": "El término restante es positivo 11×2=22, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −11×2."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 36 y −36 se cancelan, pero 22 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (18+11)×2 se convierte en 18×2+11×2. Al restar 18×2, los dos términos iguales se cancelan; queda solo 11×2=22. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "49cc90c6fcf9949f44208217e32241004c375fdd372e086de77749affef7a977",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "58−36=22: se cancela únicamente el primer producto. El término restante es positivo 11×2=22, no su opuesto. Los términos 36 y −36 se cancelan, pero 22 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+11)×2−18×2. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "content_hash": "2e7330b4e5a7ec5b5426a83fecae309ef95a0322e116e4afafb8539721adba6b",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Distributividad y cancelación de términos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Transformar y verificar equivalencia",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (19+14)×7−19×7. ¿Cuál es su valor?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "98",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          19,
+          14,
+          7
+        ],
+        "formula": "(19+14)×7−19×7",
+        "value": 98,
+        "intermediate": 14,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 98,
+          "truth": true,
+          "reason": "231−133=98: se cancela únicamente el primer producto.",
+          "text": "Al distribuir y cancelar 19×7 con su opuesto, queda 14×7."
+        },
+        {
+          "value": -98,
+          "truth": false,
+          "reason": "El término restante es positivo 14×7=98, no su opuesto.",
+          "text": "Al cancelar el primer producto, queda −14×7."
+        },
+        {
+          "value": 0,
+          "truth": false,
+          "reason": "Los términos 133 y −133 se cancelan, pero 98 permanece.",
+          "text": "Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero."
+        }
+      ],
+      "explicacion": "Aplicamos la propiedad distributiva: (19+14)×7 se convierte en 19×7+14×7. Al restar 19×7, los dos términos iguales se cancelan; queda solo 14×7=98. No es necesario calcular todo el primer producto antes de simplificar.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "family_id": "distributiva-y-cancelacion",
+      "operation": "distributiva-y-cancelacion",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "2e7330b4e5a7ec5b5426a83fecae309ef95a0322e116e4afafb8539721adba6b",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Transformación distributiva y cancelación, objetivo OP-03."
+        },
+        "B": {
+          "score": 4,
+          "reason": "231−133=98: se cancela únicamente el primer producto. El término restante es positivo 14×7=98, no su opuesto. Los términos 133 y −133 se cancelan, pero 98 permanece."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (19+14)×7−19×7. ¿Cuál es su valor?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Una sola identidad repetida con datos positivos; insuficiente para generalizar avanzado a transferencias inéditas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "content_hash": "9eb902bbb5dfcd49cb65e2977e650e6e12ceca7d85d301afe922246a1fd8db32",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "stimulus": "La expresión original es (16+12)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "150",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          16,
+          12,
+          6
+        ],
+        "formula": "(16+14)×5",
+        "value": 150,
+        "intermediate": 30,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 150,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (16+14)×5=150.",
+          "text": "Es válido resolver primero 16+14 y multiplicar su resultado por 5."
+        },
+        {
+          "value": 94,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 80+14=94, no 150.",
+          "text": "Es válido multiplicar solo el primer sumando 16 por 5 y después sumar 14 sin multiplicarlo."
+        },
+        {
+          "value": 35,
+          "truth": false,
+          "reason": "La suma 16+14+5=35 reemplaza indebidamente el producto 150.",
+          "text": "Es válido sumar 16+14+5 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 16+14=30; multiplicar por 5 da 150.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "9eb902bbb5dfcd49cb65e2977e650e6e12ceca7d85d301afe922246a1fd8db32",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (16+14)×5=150. Distribuir requiere multiplicar ambos sumandos; 80+14=94, no 150. La suma 16+14+5=35 reemplaza indebidamente el producto 150."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (16+12)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "content_hash": "9208ef31c594d0d954cfc80f36eb37a69509c7ac803cd88c712ae519c614b7ce",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "stimulus": "La expresión original es (17+15)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "102",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          17,
+          15,
+          4
+        ],
+        "formula": "(17+17)×3",
+        "value": 102,
+        "intermediate": 34,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 102,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (17+17)×3=102.",
+          "text": "Es válido resolver primero 17+17 y multiplicar su resultado por 3."
+        },
+        {
+          "value": 68,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 51+17=68, no 102.",
+          "text": "Es válido multiplicar solo el primer sumando 17 por 3 y después sumar 17 sin multiplicarlo."
+        },
+        {
+          "value": 37,
+          "truth": false,
+          "reason": "La suma 17+17+3=37 reemplaza indebidamente el producto 102.",
+          "text": "Es válido sumar 17+17+3 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 17+17=34; multiplicar por 3 da 102.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "9208ef31c594d0d954cfc80f36eb37a69509c7ac803cd88c712ae519c614b7ce",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (17+17)×3=102. Distribuir requiere multiplicar ambos sumandos; 51+17=68, no 102. La suma 17+17+3=37 reemplaza indebidamente el producto 102."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (17+15)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "content_hash": "bb448d86b22a1069fb3ad2b2128ed7ec026dae086f5474fa371dcd00f52a577b",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "stimulus": "La expresión original es (9+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "162",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          9,
+          16,
+          7
+        ],
+        "formula": "(9+18)×6",
+        "value": 162,
+        "intermediate": 27,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 162,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (9+18)×6=162.",
+          "text": "Es válido resolver primero 9+18 y multiplicar su resultado por 6."
+        },
+        {
+          "value": 72,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 54+18=72, no 162.",
+          "text": "Es válido multiplicar solo el primer sumando 9 por 6 y después sumar 18 sin multiplicarlo."
+        },
+        {
+          "value": 33,
+          "truth": false,
+          "reason": "La suma 9+18+6=33 reemplaza indebidamente el producto 162.",
+          "text": "Es válido sumar 9+18+6 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 9+18=27; multiplicar por 6 da 162.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "bb448d86b22a1069fb3ad2b2128ed7ec026dae086f5474fa371dcd00f52a577b",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (9+18)×6=162. Distribuir requiere multiplicar ambos sumandos; 54+18=72, no 162. La suma 9+18+6=33 reemplaza indebidamente el producto 162."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (9+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "content_hash": "dc29d40016d89249c69a6e41a24a9ed1f95c3aa35d86873d87c09b3856199038",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "stimulus": "La expresión original es (10+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "72",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          10,
+          6,
+          5
+        ],
+        "formula": "(10+8)×4",
+        "value": 72,
+        "intermediate": 18,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 72,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (10+8)×4=72.",
+          "text": "Es válido resolver primero 10+8 y multiplicar su resultado por 4."
+        },
+        {
+          "value": 48,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 40+8=48, no 72.",
+          "text": "Es válido multiplicar solo el primer sumando 10 por 4 y después sumar 8 sin multiplicarlo."
+        },
+        {
+          "value": 22,
+          "truth": false,
+          "reason": "La suma 10+8+4=22 reemplaza indebidamente el producto 72.",
+          "text": "Es válido sumar 10+8+4 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 10+8=18; multiplicar por 4 da 72.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "dc29d40016d89249c69a6e41a24a9ed1f95c3aa35d86873d87c09b3856199038",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (10+8)×4=72. Distribuir requiere multiplicar ambos sumandos; 40+8=48, no 72. La suma 10+8+4=22 reemplaza indebidamente el producto 72."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (10+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "content_hash": "61327d24ea239bf3e370cab5339aad0d1ef74e60d074eb89fadf7c66faa1912a",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "stimulus": "La expresión original es (11+9)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "44",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          11,
+          9,
+          3
+        ],
+        "formula": "(11+11)×2",
+        "value": 44,
+        "intermediate": 22,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 44,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (11+11)×2=44.",
+          "text": "Es válido resolver primero 11+11 y multiplicar su resultado por 2."
+        },
+        {
+          "value": 33,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 22+11=33, no 44.",
+          "text": "Es válido multiplicar solo el primer sumando 11 por 2 y después sumar 11 sin multiplicarlo."
+        },
+        {
+          "value": 24,
+          "truth": false,
+          "reason": "La suma 11+11+2=24 reemplaza indebidamente el producto 44.",
+          "text": "Es válido sumar 11+11+2 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 11+11=22; multiplicar por 2 da 44.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "61327d24ea239bf3e370cab5339aad0d1ef74e60d074eb89fadf7c66faa1912a",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (11+11)×2=44. Distribuir requiere multiplicar ambos sumandos; 22+11=33, no 44. La suma 11+11+2=24 reemplaza indebidamente el producto 44."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (11+9)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_hash": "967c9a04409f74eba4ac50f60eafa28dc2739ad0968cb50ef8fe2497f6090b47",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "stimulus": "La expresión original es (12+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "182",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          12,
+          12,
+          8
+        ],
+        "formula": "(12+14)×7",
+        "value": 182,
+        "intermediate": 26,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 182,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (12+14)×7=182.",
+          "text": "Es válido resolver primero 12+14 y multiplicar su resultado por 7."
+        },
+        {
+          "value": 98,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 84+14=98, no 182.",
+          "text": "Es válido multiplicar solo el primer sumando 12 por 7 y después sumar 14 sin multiplicarlo."
+        },
+        {
+          "value": 33,
+          "truth": false,
+          "reason": "La suma 12+14+7=33 reemplaza indebidamente el producto 182.",
+          "text": "Es válido sumar 12+14+7 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 12+14=26; multiplicar por 7 da 182.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "967c9a04409f74eba4ac50f60eafa28dc2739ad0968cb50ef8fe2497f6090b47",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (12+14)×7=182. Distribuir requiere multiplicar ambos sumandos; 84+14=98, no 182. La suma 12+14+7=33 reemplaza indebidamente el producto 182."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (12+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "content_hash": "219831a4abf3578f810b889f640216220b780e229a6e69393f25334a3330c0d5",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "stimulus": "La expresión original es (13+15)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "150",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          13,
+          15,
+          6
+        ],
+        "formula": "(13+17)×5",
+        "value": 150,
+        "intermediate": 30,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 150,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (13+17)×5=150.",
+          "text": "Es válido resolver primero 13+17 y multiplicar su resultado por 5."
+        },
+        {
+          "value": 82,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 65+17=82, no 150.",
+          "text": "Es válido multiplicar solo el primer sumando 13 por 5 y después sumar 17 sin multiplicarlo."
+        },
+        {
+          "value": 35,
+          "truth": false,
+          "reason": "La suma 13+17+5=35 reemplaza indebidamente el producto 150.",
+          "text": "Es válido sumar 13+17+5 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 13+17=30; multiplicar por 5 da 150.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "219831a4abf3578f810b889f640216220b780e229a6e69393f25334a3330c0d5",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (13+17)×5=150. Distribuir requiere multiplicar ambos sumandos; 65+17=82, no 150. La suma 13+17+5=35 reemplaza indebidamente el producto 150."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (13+15)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "content_hash": "735de9b348f1b4a3a83864f2671e2f3ae4194971fa505577160287768cda60e2",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "stimulus": "La expresión original es (18+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "25",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          18,
+          5,
+          2
+        ],
+        "formula": "(18+7)×1",
+        "value": 25,
+        "intermediate": 25,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 25,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (18+7)×1=25.",
+          "text": "Es válido resolver primero 18+7 y multiplicar su resultado por 1."
+        },
+        {
+          "value": 18,
+          "truth": false,
+          "reason": "Multiplicar por uno conserva ambos sumandos: 18 solo omite 7.",
+          "text": "Es válido omitir el segundo sumando 7 al multiplicar por 1."
+        },
+        {
+          "value": 26,
+          "truth": false,
+          "reason": "La suma 18+7+1=26 reemplaza indebidamente el producto 25.",
+          "text": "Es válido sumar 18+7+1 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 18+7=25; multiplicar por 1 da 25.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "735de9b348f1b4a3a83864f2671e2f3ae4194971fa505577160287768cda60e2",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (18+7)×1=25. Multiplicar por uno conserva ambos sumandos: 18 solo omite 7. La suma 18+7+1=26 reemplaza indebidamente el producto 25."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (18+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "content_hash": "78edf65bc0818b987bbc2d32670c8f2c0be39fc820b1d1fe2b99e85fecfa6365",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "stimulus": "La expresión original es (19+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "174",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          19,
+          8,
+          7
+        ],
+        "formula": "(19+10)×6",
+        "value": 174,
+        "intermediate": 29,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 174,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (19+10)×6=174.",
+          "text": "Es válido resolver primero 19+10 y multiplicar su resultado por 6."
+        },
+        {
+          "value": 124,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 114+10=124, no 174.",
+          "text": "Es válido multiplicar solo el primer sumando 19 por 6 y después sumar 10 sin multiplicarlo."
+        },
+        {
+          "value": 35,
+          "truth": false,
+          "reason": "La suma 19+10+6=35 reemplaza indebidamente el producto 174.",
+          "text": "Es válido sumar 19+10+6 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 19+10=29; multiplicar por 6 da 174.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "78edf65bc0818b987bbc2d32670c8f2c0be39fc820b1d1fe2b99e85fecfa6365",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (19+10)×6=174. Distribuir requiere multiplicar ambos sumandos; 114+10=124, no 174. La suma 19+10+6=35 reemplaza indebidamente el producto 174."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (19+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "content_hash": "ce519c36787a187d8cb19d7760504749e652aa9fcb5d6f28b646ef0cb74e0bc1",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "stimulus": "La expresión original es (20+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "132",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          20,
+          11,
+          5
+        ],
+        "formula": "(20+13)×4",
+        "value": 132,
+        "intermediate": 33,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 132,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (20+13)×4=132.",
+          "text": "Es válido resolver primero 20+13 y multiplicar su resultado por 4."
+        },
+        {
+          "value": 93,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 80+13=93, no 132.",
+          "text": "Es válido multiplicar solo el primer sumando 20 por 4 y después sumar 13 sin multiplicarlo."
+        },
+        {
+          "value": 37,
+          "truth": false,
+          "reason": "La suma 20+13+4=37 reemplaza indebidamente el producto 132.",
+          "text": "Es válido sumar 20+13+4 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 20+13=33; multiplicar por 4 da 132.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "ce519c36787a187d8cb19d7760504749e652aa9fcb5d6f28b646ef0cb74e0bc1",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (20+13)×4=132. Distribuir requiere multiplicar ambos sumandos; 80+13=93, no 132. La suma 20+13+4=37 reemplaza indebidamente el producto 132."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (20+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "content_hash": "7652d1d553ef8a4281009b825387bd760973d9dadde2e44da21ec18775164987",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "stimulus": "La expresión original es (21+14)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "74",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          21,
+          14,
+          3
+        ],
+        "formula": "(21+16)×2",
+        "value": 74,
+        "intermediate": 37,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 74,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (21+16)×2=74.",
+          "text": "Es válido resolver primero 21+16 y multiplicar su resultado por 2."
+        },
+        {
+          "value": 58,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 42+16=58, no 74.",
+          "text": "Es válido multiplicar solo el primer sumando 21 por 2 y después sumar 16 sin multiplicarlo."
+        },
+        {
+          "value": 39,
+          "truth": false,
+          "reason": "La suma 21+16+2=39 reemplaza indebidamente el producto 74.",
+          "text": "Es válido sumar 21+16+2 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 21+16=37; multiplicar por 2 da 74.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "7652d1d553ef8a4281009b825387bd760973d9dadde2e44da21ec18775164987",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (21+16)×2=74. Distribuir requiere multiplicar ambos sumandos; 42+16=58, no 74. La suma 21+16+2=39 reemplaza indebidamente el producto 74."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (21+14)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "content_hash": "a8ce064a003575f103be423870b941459ec3ca2940db2e628654594bef79e595",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Interpretación de cambios de operandos",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar cambios antes de evaluar expresión",
+      "stimulus_id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "stimulus": "La expresión original es (22+17)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 54 y 56 (anclas de cálculo aplicado); correspondencia cualitativa",
+      "respuesta_esperada": "287",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "original_operands": [
+          22,
+          17,
+          8
+        ],
+        "formula": "(22+19)×7",
+        "value": 287,
+        "intermediate": 41,
+        "method": "Evaluación directa desde operandos del estímulo y condiciones; cotejo con CI preflight y prueba de hash."
+      },
+      "distractores": [
+        {
+          "value": 287,
+          "truth": true,
+          "reason": "Se aplican los cambios antes del cálculo: (22+19)×7=287.",
+          "text": "Es válido resolver primero 22+19 y multiplicar su resultado por 7."
+        },
+        {
+          "value": 173,
+          "truth": false,
+          "reason": "Distribuir requiere multiplicar ambos sumandos; 154+19=173, no 287.",
+          "text": "Es válido multiplicar solo el primer sumando 22 por 7 y después sumar 19 sin multiplicarlo."
+        },
+        {
+          "value": 48,
+          "truth": false,
+          "reason": "La suma 22+19+7=48 reemplaza indebidamente el producto 287.",
+          "text": "Es válido sumar 22+19+7 sin respetar el producto indicado."
+        }
+      ],
+      "explicacion": "Después de aplicar las condiciones, el paréntesis vale 22+19=41; multiplicar por 7 da 287.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R3"
+      ],
+      "originalidad": "Generador propio; patrón compartido dentro de la celda; sin equivalencia psicométrica acreditada.",
+      "revision": "P2-01-OP02-03",
+      "riesgos": [
+        "PLANTILLA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA",
+        "FEEDBACK_SUBDECISION_INSUFICIENTE"
+      ],
+      "fecha": "2026-11-25",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "family_id": "modificar-parentesis-y-factor",
+      "operation": "modificar-parentesis-y-factor",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "C_PATRON_PREDECIBLE",
+        "E_FEEDBACK_SUBDECISION"
+      ],
+      "evidence_refs": [
+        "CI 45690836989; expediente preflight 45687045664",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json"
+      ],
+      "reviewed_at": "2026-11-25",
+      "repair_commit": null,
+      "supersedes": "a8ce064a003575f103be423870b941459ec3ca2940db2e628654594bef79e595",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Modificación de dos operandos antes de calcular, OP-02."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Se aplican los cambios antes del cálculo: (22+19)×7=287. Distribuir requiere multiplicar ambos sumandos; 154+19=173, no 287. La suma 22+19+7=48 reemplaza indebidamente el producto 287."
+        },
+        "C": {
+          "score": 2,
+          "reason": "Las tres afirmaciones son matemáticamente decidibles, pero el patrón fijo de exactamente una verdadera permite inferir la última respuesta; no acredita decisiones independientes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito: La expresión original es (22+17)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 2,
+          "reason": "Explicación global correcta pero no identificaba la afirmación concreta marcada erróneamente; reparación UI pendiente de regresión."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Dos modificaciones independientes y cálculo; calibración cualitativa, no medida."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Los registros de la familia repiten estructura y tipo de error; variación numérica no prueba independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Clasificación textual, botones accesibles, sin dependencia de color ni contexto cultural sensible. Pruebas de navegación previas; no se acredita lector de pantalla físico."
+        }
+      }
+    }
+  ]
+}

@@ -32,12 +32,22 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
   }
  }
  // OP-04: report the actual mistaken subdecision before showing the worked solution.
- const subdecisionFeedback=complete&&!correct&&item.oracle.kind==="Operaciones-racionales"
-  ?item.mode==="clasificar"?item.assertions.flatMap((a,i)=>(choices[i]===0)===a.truth?[]:[`Afirmación «${a.text}»: es ${a.truth?"verdadera":"falsa"}. ${item.explanation}`]).join(" ")
+ const operationClaimReason=(text:string,truth:boolean)=>{
+  if(item.oracle.kind!=="Operaciones")return item.explanation;
+  if(truth)return item.explanation;
+  if(text.includes("queda −"))return "El producto que queda conserva su signo positivo; cancelar un término opuesto no cambia el signo de otro.";
+  if(text.includes("también se cancela"))return "Solo se cancelan productos iguales con signos opuestos; el otro producto permanece.";
+  if(text.includes("omitir el segundo sumando"))return "Multiplicar por uno conserva los dos sumandos; omitir uno cambia el valor.";
+  if(text.includes("multiplicar solo el primer sumando"))return "La propiedad distributiva exige multiplicar los dos sumandos por el factor común.";
+  if(text.includes("sin respetar el producto"))return "Sumar el factor como un tercer sumando sustituye una multiplicación por una suma y altera el resultado.";
+  return item.explanation;
+ };
+ const subdecisionFeedback=complete&&!correct&&(item.oracle.kind==="Operaciones-racionales"||item.oracle.kind==="Operaciones")
+  ?item.mode==="clasificar"?item.assertions.flatMap((a,i)=>(choices[i]===0)===a.truth?[]:[`Afirmación «${a.text}»: es ${a.truth?"verdadera":"falsa"}. ${operationClaimReason(a.text,a.truth)}`]).join(" ")
    :item.mode==="construir"?item.steps.flatMap((s,i)=>{
     if(choices[i]===s.answerIndex)return [];
     const chosen=s.choices[choices[i]];
-    return [i===0?`Raíz elegida: ${chosen}. La raíz principal debe ser no negativa y su cuadrado debe coincidir con el radicando; el valor correcto es ${s.choices[s.answerIndex]}.`:`Resultado elegido: ${chosen}. ${item.optionExplanations?.[chosen]??"Comprueba la precedencia y las unidades fraccionarias."}`];
+    return [i===0&&item.oracle.kind==="Operaciones"?`Paso elegido: ${chosen}. ${item.explanation} El valor correcto de este paso es ${s.choices[s.answerIndex]}.`:i===0?`Raíz elegida: ${chosen}. La raíz principal debe ser no negativa y su cuadrado debe coincidir con el radicando; el valor correcto es ${s.choices[s.answerIndex]}.`:`Resultado elegido: ${chosen}. ${item.optionExplanations?.[chosen]??"Comprueba la precedencia y las unidades fraccionarias."}`];
    }).join(" "):""
   :"";
  const selection=item.mode==="construir"?item.steps[choices.length]?.choices:
