@@ -44,6 +44,27 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
      await page.screenshot({path:'m4-browser-evidence/'+engineName+'-'+profile+'.png',fullPage:true,animations:'disabled'});
     }
    }
+   // RDG first vertical slice: verify the actual optional flow on both real engines and viewports.
+   const reviewPath='/?area=matematicas&tema=Aritm%C3%A9tica&subtema=Operaciones&modo=construir&nivel=avanzado';
+   await page.goto(BASE+reviewPath,{waitUntil:'load'});
+   const rdg=page.getByRole('link',{name:/Modo Repaso/});
+   await rdg.focus(); await page.keyboard.press('Enter');
+   await page.getByRole('heading',{name:'Modo Repaso: Operaciones'}).waitFor({state:'visible'});
+   check(await page.getByRole('heading',{name:'Modo Repaso: Operaciones'}).isVisible(),'RDG abre por teclado');
+   await page.getByRole('button',{name:'+6',exact:true}).click();
+   check(await page.getByText('Posición actual: 2',{exact:true}).isVisible(),'RDG recta interactiva');
+   await page.getByRole('button',{name:'−3',exact:true}).click();
+   check(await page.getByText('Posición actual: -1',{exact:true}).isVisible(),'RDG signo y posición');
+   await page.getByRole('button',{name:'−1',exact:true}).click(); await page.getByRole('button',{name:'Comprobar',exact:true}).click();
+   check(await page.getByRole('status').getByText('¡Bien razonado!').isVisible(),'RDG feedback causal');
+   await page.getByRole('button',{name:'Transferencia',exact:true}).click();
+   check(await page.getByRole('button',{name:/pista/i}).count()===0,'RDG transferencia sin ayuda');
+   check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG sin desborde horizontal');
+   await page.screenshot({path:'m4-browser-evidence/rdg-'+engineName+'-'+profile+'.png',fullPage:true,animations:'disabled'});
+   await page.reload({waitUntil:'load'}); await page.getByRole('heading',{name:'Modo Repaso: Operaciones'}).waitFor({state:'visible'});
+   await page.getByRole('link',{name:/Volver a los juegos/}).first().click(); await page.getByRole('heading',{name:/Elige un juego/}).waitFor({state:'visible'});
+   check(await page.getByRole('combobox',{name:'Subtema de estudio'}).inputValue()==='Operaciones','RDG retorno contextual');
+   check(new URL(page.url()).searchParams.get('modo')==='construir'&&new URL(page.url()).searchParams.get('nivel')==='avanzado','RDG preserva modo y nivel');
    // La app guarda historial localmente. Se comprueba persistencia sin enviar datos.
    await page.evaluate(()=>localStorage.setItem('m4-probe','local-only'));
    await page.reload({waitUntil:'load'});
