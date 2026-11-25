@@ -112,3 +112,6 @@ La cobertura total de 90 lotes no sustituye calibración psicométrica, revisió
 `PHUMA_FROZEN_BATCH=/ruta/lote.json node --import ./scripts/ts-resolve.mjs qa/certification/audit-450.mjs` acepta un JSON `{"items":[{"id":"ID real","content_sha256":"huella real"}]}` de 1–450 IDs únicos. Rechaza hashes obsoletos e IDs inexistentes. Sin variable conserva el recorrido histórico de CI; no modifica el cursor ni aprueba semántica.
 
 **v7.6.1 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.
+
+### Verificación de intervención mínima (v7.6.1)
+G-ACTION comprueba que cambios bajo `src/` estén asociados a `interventions[]` con `scope`, `action`, `affected_paths`, `justification`, `finding_ref` y `evidence_ref` referidos a artefactos registrados. `SUSTITUIR`/`CREAR` exigen `why_minimal_insufficient`. Es un control estructural local; no demuestra por sí solo la necesidad pedagógica ni sustituye el oráculo/revisión independiente. Conservar el código válido no exige modificarlo. Se mantienen los criterios y evidencias históricos compatibles.

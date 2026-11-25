@@ -10,6 +10,14 @@ class GuardTests(unittest.TestCase):
         (self.p/'src/x.js').write_text('const x=2;\n');git('add','.');git('commit','-qm','fix');h=git('rev-parse','HEAD')
         (self.p/'result.log').write_text('synthetic fixture result\n');digest=hashlib.sha256((self.p/'result.log').read_bytes()).hexdigest()
         self.r={'base_sha':b,'candidate_sha':h,'checks':[{'command':'fixture','exit_code':0,'sha':h,'artifact':'result.log','artifact_sha256':digest}],'selected_ids':['a'],'examined_ids':['a'],'new_semantic_pass_ids':['a'],'review_ids':[],'fail_ids':[],'items':[{'id':'a','content_hash':'a'*64,'status':'PASS_SEMANTIC','oracle_status':'VERIFIED','evidence_level':'E1','evidence_ref':'result.log'}]}
+        self.r['interventions']=[{'scope':'fixture/a','action':'CORREGIR','finding_ref':'result.log','evidence_ref':'result.log','affected_paths':['src/x.js'],'justification':'synthetic minimal correction'}]
+    def test_unjustified_product_change(self): self.r['interventions']=[];self.assertTrue(any('INTERVENCION' in e for e in validate(self.p,self.r)))
+    def test_creation_requires_minimal_alternative(self): self.r['interventions'][0]['action']='CREAR';self.assertTrue(any('insuficiencia' in e for e in validate(self.p,self.r)))
+    def test_creation_justified(self):
+        self.r['interventions'][0].update(action='CREAR',why_minimal_insufficient='synthetic missing objective');self.assertEqual(validate(self.p,self.r),[])
+    def test_missing_defect_evidence(self): self.r['interventions'][0]['finding_ref']='missing.log';self.assertTrue(any('artefactos' in e for e in validate(self.p,self.r)))
+    def test_conservation_cannot_change_product(self): self.r['interventions'][0]['action']='CONSERVAR';self.assertTrue(any('conservar/verificar' in e for e in validate(self.p,self.r)))
+    def test_unknown_diff_path(self): self.r['interventions'][0]['affected_paths']=['src/absent.js'];self.assertTrue(any('rutas no presentes' in e for e in validate(self.p,self.r)))
     def tearDown(self): self.tmp.cleanup()
     def test_valid_local_fixture(self): self.assertEqual(validate(self.p,self.r),[])
     def test_no_evidence(self): self.r['checks']=[];self.assertTrue(validate(self.p,self.r))

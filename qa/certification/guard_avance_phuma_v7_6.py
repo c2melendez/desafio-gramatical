@@ -28,6 +28,39 @@ def validate(repo, run):
             if c['sha']!=head or not c['command'].strip() or type(c['exit_code']) is not int: raise ValueError()
             artifacts.add(c['artifact'])
         except (KeyError,ValueError,TypeError,AttributeError,OSError): errors.append('E1: artefacto, hash, comando, exit code o SHA inválido')
+    # v7.6.1: student-facing changes require a corrective intervention record.
+    # This is a structural check, not independent verification of pedagogical claims.
+    changed_product={p for p in paths if p.startswith('src/')}
+    justified=set()
+    interventions=run.get('interventions',[])
+    if not isinstance(interventions,list):
+        errors.append('INTERVENCION: registro inválido'); interventions=[]
+    for i in interventions:
+        if not isinstance(i,dict):
+            errors.append('INTERVENCION: ficha inválida'); continue
+        action=i.get('action')
+        affected=i.get('affected_paths',[])
+        scope=i.get('scope')
+        justification=i.get('justification')
+        if action not in ('CONSERVAR','VERIFICAR','CORREGIR','COMPLEMENTAR','SUSTITUIR','CREAR'):
+            errors.append('INTERVENCION: acción inválida'); continue
+        if not isinstance(scope,str) or not scope.strip() or not isinstance(justification,str) or not justification.strip():
+            errors.append('INTERVENCION: alcance y justificación requeridos'); continue
+        if not isinstance(affected,list) or any(not isinstance(p,str) for p in affected):
+            errors.append('INTERVENCION: rutas inválidas'); continue
+        affected=set(affected)
+        if not affected.issubset(set(paths)):
+            errors.append('INTERVENCION: rutas no presentes en diff'); continue
+        if action in ('CONSERVAR','VERIFICAR'):
+            if affected & changed_product: errors.append('INTERVENCION: conservar/verificar no autoriza modificar producto')
+            continue
+        if not affected or i.get('finding_ref') not in artifacts or i.get('evidence_ref') not in artifacts:
+            errors.append('INTERVENCION: requiere defecto/brecha y regresión con artefactos registrados'); continue
+        if action in ('SUSTITUIR','CREAR') and (not isinstance(i.get('why_minimal_insufficient'),str) or not i['why_minimal_insufficient'].strip()):
+            errors.append('INTERVENCION: justificar insuficiencia de corrección/complemento'); continue
+        justified.update(affected)
+    if changed_product - justified:
+        errors.append('INTERVENCION: cambios de producto sin reparación/brecha justificada: '+', '.join(sorted(changed_product-justified)))
     fields=['selected_ids','examined_ids','new_semantic_pass_ids','review_ids','fail_ids']
     sets={}
     for name in fields:
