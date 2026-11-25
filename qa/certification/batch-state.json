@@ -61,7 +61,7 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI lote07 y publicación R8; ampliar las tres familias a Clasificar/Construir con retroalimentación causal y oráculos, registrar sucesores, continuar lote08.",
+    "next_action": "Verificar CI lote08 y R9 publicado; completar lote09, emitir inventario por familia y revisar criterios G/F antes de PASS semántico. Ampliar variantes conceptuales sin perder oráculos, cuotas y trazabilidad.",
     "previous_publication": {
       "sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f",
       "candidate_ci_run": 45697495623,
@@ -116,7 +116,7 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-09.json"
     ],
     "selection_total": 450,
-    "examined_semantic_ids": 350,
+    "examined_semantic_ids": 400,
     "semantic_pass_ids": 0,
     "review_ids": 450,
     "review_evidence": [
@@ -131,7 +131,9 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-07-R8-review.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-07-R8-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-08-R9-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-07-R9-recheck.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-01",
@@ -140,7 +142,8 @@
       "MAT-ARIT-01-04",
       "MAT-ARIT-01-05",
       "MAT-ARIT-01-06",
-      "MAT-ARIT-01-07"
+      "MAT-ARIT-01-07",
+      "MAT-ARIT-01-08"
     ],
     "r4_revision": {
       "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-successors.json",
@@ -231,6 +234,25 @@
       "examined": 50,
       "claims_verified": 96,
       "distractors_verified": 108,
+      "review": 50,
+      "semantic_pass": 0,
+      "runtime_ci": "SUCCESS_45709108878"
+    },
+    "r9_revision": {
+      "candidate_sha": "7b3b10bf8dad56d6c593b6cd8eb693a4997d69db",
+      "candidate_ci": 45709108878,
+      "candidate_ci_status": "SUCCESS",
+      "publication_sha": "065e715386712ce09f1f91e1965d00b3cd68b852",
+      "publication": "MERGED",
+      "changed": 18,
+      "unchanged": 432,
+      "reopened_reexamined": 6,
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R9-successors.json"
+    },
+    "lote08": {
+      "examined": 50,
+      "claims_verified": 36,
+      "distractors_verified": 228,
       "review": 50,
       "semantic_pass": 0,
       "runtime_ci": "PENDING"
