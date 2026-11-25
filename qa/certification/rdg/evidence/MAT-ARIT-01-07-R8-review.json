@@ -1,0 +1,5580 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "batch_id": "MAT-ARIT-01-07",
+  "revision": "R8",
+  "status": "REVIEW_PENDING_RUNTIME",
+  "source_head": "aa72d2a81522a96034107058756050e04b7f571f",
+  "method": "50 selecciones históricas cotejadas con sucesores CI R4/R5; estímulos reconstruidos desde semillas M2/M3 y claves, afirmaciones y alternativas comprobadas por cálculo independiente.",
+  "summary": {
+    "examined": 50,
+    "classification": 32,
+    "quiz": 18,
+    "claims_verified": 96,
+    "distractors_verified": 108,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-2",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "55831cee3e24b233ee9a0069a5fe7d1f302f67de1fe5c08a7489634c64a050bb",
+      "content_sha256": "8084b4d27d353e633506a38a9d9ca6913f56c1b1b731562fce1f025b885ee75e",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (10+11)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "23",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          10,
+          11,
+          2
+        ],
+        "answer": 23,
+        "intermediate": 23
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "23",
+            "-3",
+            "130",
+            "10"
+          ],
+          "correct": "23"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "13",
+            "23",
+            "24",
+            "10"
+          ],
+          "correct": "23"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-3",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "130",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "10",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "13",
+          "reason": "Omitir primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "24",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "10",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-3",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "468d04745770d6f7e37babd69f0af03abb467741bc6839f2d500276cb8cac41b",
+      "content_sha256": "d4750fe2f9814f61ac83267cb633e05ae38614d1bbd9fba9a8921db2905df40a",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (22+16)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "120",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          22,
+          16,
+          4
+        ],
+        "answer": 120,
+        "intermediate": 40
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "4",
+            "396",
+            "22",
+            "40"
+          ],
+          "correct": "40"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "120",
+            "84",
+            "43",
+            "66"
+          ],
+          "correct": "120"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "4",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "396",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "22",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "84",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "43",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "66",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-4",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "33a356959567b0b29106a3ef9e748b2e0767c65b5b7f1750d48f71fc8bc926a6",
+      "content_sha256": "381b1c6c8c41a0ee06754b4f91c33827a194f6b6c1c6324ffe53870c1d49f8bf",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (17+8)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "135",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          17,
+          8,
+          6
+        ],
+        "answer": 135,
+        "intermediate": 27
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "170",
+            "17",
+            "27",
+            "7"
+          ],
+          "correct": "27"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "95",
+            "32",
+            "85",
+            "135"
+          ],
+          "correct": "135"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "170",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "17",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "95",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "32",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "85",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-5",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "3e685dcb9f7fbff9ecb425a0df59d1987b1b9b0393d612849fe73bfcc7611c43",
+      "content_sha256": "54debc19c9a25a7343babeb2f29f5bbc0ebc4a86dda4e1f66060c324575231bd",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (12+13)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "189",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          12,
+          13,
+          8
+        ],
+        "answer": 189,
+        "intermediate": 27
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "12",
+            "27",
+            "-3",
+            "180"
+          ],
+          "correct": "27"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "34",
+            "84",
+            "189",
+            "99"
+          ],
+          "correct": "189"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "12",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "-3",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "180",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "34",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "84",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "99",
+          "reason": "Distribuir solo al primer sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-6",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "a3020ada5a0890d67812c0ad5c7caf820fcc607d03e953f04e4eb9b8d3e2d6e0",
+      "content_sha256": "498f6232ff6f87520d68e5d952504656d1b5fe1ce2a886b4b291641a1556ccc8",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (7+5)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "28",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          7,
+          5,
+          3
+        ],
+        "answer": 28,
+        "intermediate": 14
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "14",
+            "0",
+            "49",
+            "7"
+          ],
+          "correct": "14"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "14",
+            "28",
+            "21",
+            "16"
+          ],
+          "correct": "28"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "0",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "49",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "14",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "21",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "16",
+          "reason": "Sumar factor"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-7",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "4b60a37b37f6b9698c713059130e4a7c3503ab4d3b44252b2f00276693f94bb6",
+      "content_sha256": "4fc767c6a79557e7673329f95fc79272ff8155da7945ebfc9fadb5989bdd4618",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (19+10)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "124",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          19,
+          10,
+          5
+        ],
+        "answer": 124,
+        "intermediate": 31
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "7",
+            "228",
+            "19",
+            "31"
+          ],
+          "correct": "31"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "124",
+            "88",
+            "35",
+            "76"
+          ],
+          "correct": "124"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "7",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "228",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "19",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "88",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "35",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "76",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-8",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "6f150596960694f08cb1e013d8a21dd3d41caa9ff807adb2429696260bfdfb11",
+      "content_sha256": "e1e436cd484a45ab9167a9209bfc2e471f72dc1b2c8744eebb2d46df4b8c8545",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (14+15)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "186",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          14,
+          15,
+          7
+        ],
+        "answer": 186,
+        "intermediate": 31
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "238",
+            "14",
+            "31",
+            "-3"
+          ],
+          "correct": "31"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "101",
+            "37",
+            "84",
+            "186"
+          ],
+          "correct": "186"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "238",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "14",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "-3",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "101",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "37",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "84",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-9",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "d79f0a19bc5256259e304c53d1716b6727a73276639edcd569b2a987dec2b8a7",
+      "content_sha256": "651a557a5582b997064a0667f17466591aee2797f238436eb6cf0b64c0122198",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "quiz",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (9+7)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "18",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          9,
+          7,
+          2
+        ],
+        "answer": 18,
+        "intermediate": 18
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "9",
+            "18",
+            "0",
+            "81"
+          ],
+          "correct": "18"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "9",
+            "0",
+            "18",
+            "19"
+          ],
+          "correct": "18"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "9",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "81",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "9",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "0",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "19",
+          "reason": "Sumar factor"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-0",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "230028fcbff936ba7ebef21b7d61922300031883a130aa02495ab503df2aecd8",
+      "content_sha256": "79d02ae9ff0140807c310b4fbde47b433e4f2480e1b8613ef4f36b2bc7815d73",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (5+15)×3. ¿Cuál es el resultado?",
+      "expected": "60",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          5,
+          15,
+          3
+        ],
+        "answer": 60,
+        "intermediate": 20
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "-10",
+            "75",
+            "5",
+            "20"
+          ],
+          "correct": "20"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "60",
+            "30",
+            "23",
+            "15"
+          ],
+          "correct": "60"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-10",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "75",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "5",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "30",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "23",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "15",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-1",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "a04418d524e7e80f0484eb20a8c36dd3f27f8d0b0892fdd6ca006cb40331159c",
+      "content_sha256": "79db90fa9445a4e079c3e19ad4b3d746d0153c0d60e777292d7426791ca5a624",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (17+7)×5. ¿Cuál es el resultado?",
+      "expected": "120",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          17,
+          7,
+          5
+        ],
+        "answer": 120,
+        "intermediate": 24
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "119",
+            "17",
+            "24",
+            "10"
+          ],
+          "correct": "24"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "92",
+            "29",
+            "85",
+            "120"
+          ],
+          "correct": "120"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "119",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "17",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "10",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "92",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "29",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "85",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-2",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "84952ee6ae815267719617d45868fbc46464c46453156f414d64034fe937d3f0",
+      "content_sha256": "8b515e13a42de2988a39ddea24bf42977d98ebc084e3ebc545062cdbfb4f5529",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (12+12)×7. ¿Cuál es el resultado?",
+      "expected": "168",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          12,
+          12,
+          7
+        ],
+        "answer": 168,
+        "intermediate": 24
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "12",
+            "24",
+            "0",
+            "144"
+          ],
+          "correct": "24"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "31",
+            "84",
+            "168",
+            "96"
+          ],
+          "correct": "168"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "12",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "144",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "31",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "84",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "96",
+          "reason": "Distribuir solo al primer sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-3",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "7d06e90d9d5852a1f34189a293cff64f74a2dec6244d97b6cf1ae09365577a5b",
+      "content_sha256": "cb5124fbfe50fa416e013c4617a01a4afe3617dba455cea14a5e5548bf72fb8a",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (7+4)×2. ¿Cuál es el resultado?",
+      "expected": "22",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          7,
+          4,
+          2
+        ],
+        "answer": 22,
+        "intermediate": 11
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "11",
+            "3",
+            "28",
+            "7"
+          ],
+          "correct": "11"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "14",
+            "22",
+            "18",
+            "13"
+          ],
+          "correct": "22"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "3",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "28",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "7",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "14",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "18",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "13",
+          "reason": "Sumar factor"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-4",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "d84936911bc16adf02199e92d02406f70231d85951175474788d74ff348f46eb",
+      "content_sha256": "550dfa0bc6d313f36cbab740aa0d34676c266d67876bd6d38cbc4bba20d11477",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (19+9)×4. ¿Cuál es el resultado?",
+      "expected": "112",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          19,
+          9,
+          4
+        ],
+        "answer": 112,
+        "intermediate": 28
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "10",
+            "171",
+            "19",
+            "28"
+          ],
+          "correct": "28"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "112",
+            "85",
+            "32",
+            "76"
+          ],
+          "correct": "112"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "10",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "171",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "19",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "85",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "32",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "76",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-5",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "0ec2510fc6b946174fd757aacd83b4d6537199a88989a8ec45634b2a4509b078",
+      "content_sha256": "656478fe8409963a8c2ff85332127ff126b34fefbf8db54f800489f8482e0718",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (14+14)×6. ¿Cuál es el resultado?",
+      "expected": "168",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          14,
+          14,
+          6
+        ],
+        "answer": 168,
+        "intermediate": 28
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "196",
+            "14",
+            "28",
+            "0"
+          ],
+          "correct": "28"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "98",
+            "34",
+            "84",
+            "168"
+          ],
+          "correct": "168"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "196",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "14",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "0",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "98",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "34",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "84",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-6",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "763cc7f77c193c9d42b91aef08bdc5cd3fa90a5d1af3d9e65b3d31d8bc79fe7d",
+      "content_sha256": "d620c72e478a957997af8ccbf5ae61185544f3ce14774b4f17a033b382baa84e",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (9+6)×8. ¿Cuál es el resultado?",
+      "expected": "120",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          9,
+          6,
+          8
+        ],
+        "answer": 120,
+        "intermediate": 15
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "9",
+            "15",
+            "3",
+            "54"
+          ],
+          "correct": "15"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "23",
+            "72",
+            "120",
+            "78"
+          ],
+          "correct": "120"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "9",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "3",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "54",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "23",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "72",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "78",
+          "reason": "Distribuir solo al primer sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-7",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "c175a6bd3e6795fc1a916d5f0818d593fd2fe3f99bfd2d7f0593b1221d6a53a8",
+      "content_sha256": "3192340c6f427b9d4596eb4fdb6d445b4fc53d27eaf7ea261954293bb866571b",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (4+11)×3. ¿Cuál es el resultado?",
+      "expected": "45",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          4,
+          11,
+          3
+        ],
+        "answer": 45,
+        "intermediate": 15
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "15",
+            "-7",
+            "44",
+            "4"
+          ],
+          "correct": "15"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "12",
+            "45",
+            "23",
+            "18"
+          ],
+          "correct": "45"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-7",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "44",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "4",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "12",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "23",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "18",
+          "reason": "Sumar factor"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-8",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "8393566ef06746fb91342d660becda2aa63bf44252c08e6a8f5a2d191c74777b",
+      "content_sha256": "8aa1bcd805f898248e247769723ac12d1ab4d65cef9028e8205ece808c65addd",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (16+3)×5. ¿Cuál es el resultado?",
+      "expected": "95",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          16,
+          3,
+          5
+        ],
+        "answer": 95,
+        "intermediate": 19
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "13",
+            "48",
+            "16",
+            "19"
+          ],
+          "correct": "19"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "95",
+            "83",
+            "24",
+            "80"
+          ],
+          "correct": "95"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "13",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "48",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "16",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 2,
+          "value": "83",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "24",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "80",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "12313661928d39e24b36e868f68bfac85f49974123e2330128d4649bf22cfd4d",
+      "content_sha256": "6d34433fbc90c08cd6fb3d46e9ef7d533d668570503543913162a6e3e2fe9f7e",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "mode": "quiz",
+      "level": "principiante",
+      "stimulus": "Resuelve (11+8)×7. ¿Cuál es el resultado?",
+      "expected": "133",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          11,
+          8,
+          7
+        ],
+        "answer": 133,
+        "intermediate": 19
+      },
+      "assertions": [],
+      "construction": [
+        {
+          "label": "Calcula la suma que queda dentro del paréntesis",
+          "choices": [
+            "88",
+            "11",
+            "19",
+            "3"
+          ],
+          "correct": "19"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "85",
+            "26",
+            "77",
+            "133"
+          ],
+          "correct": "133"
+        }
+      ],
+      "distractors": [
+        {
+          "step": 1,
+          "value": "88",
+          "reason": "Multiplicar sumandos"
+        },
+        {
+          "step": 1,
+          "value": "11",
+          "reason": "Omitir segundo sumando"
+        },
+        {
+          "step": 1,
+          "value": "3",
+          "reason": "Restar sumandos"
+        },
+        {
+          "step": 2,
+          "value": "85",
+          "reason": "Distribuir solo al primer sumando"
+        },
+        {
+          "step": 2,
+          "value": "26",
+          "reason": "Sumar factor"
+        },
+        {
+          "step": 2,
+          "value": "77",
+          "reason": "Omitir segundo sumando"
+        }
+      ],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis alternativas contrastadas con errores calculables; quiz muestra tres finales."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-0",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "52691cce53eb8e6c03df88f7cbf67c1ed3c026c98f011f60338297871eccc04f",
+      "content_sha256": "2fc60c2feb05ae9d6d47bbb4d5f9146106ece4affff94d5f94e03b46463d0bfe",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+18)×6−18×6. ¿Cuál es su valor?",
+      "expected": "108",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          18,
+          18,
+          6
+        ],
+        "answer": 108,
+        "intermediate": 18
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a -18×6.",
+          "truth": false,
+          "value": -108,
+          "correct": 108,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 108; la afirmación representa -108."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 108.",
+          "truth": true,
+          "value": 108,
+          "correct": 108,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 108; la afirmación representa 108."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true,
+          "value": 18,
+          "correct": 18,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 18; la afirmación representa 18."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-1",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "598e1c228aa585e366e1b0a6eb6042f805402cd7092707fd7a5a863e00025427",
+      "content_sha256": "37339f1d55d418131622dd44a991b7cae1281bdcbd1e8e9c676f5dd8f707ac61",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+8)×3−13×3. ¿Cuál es su valor?",
+      "expected": "24",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          13,
+          8,
+          3
+        ],
+        "answer": 24,
+        "intermediate": 8
+      },
+      "assertions": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 8.",
+          "truth": true,
+          "value": 8,
+          "correct": 8,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 8; la afirmación representa 8."
+        },
+        {
+          "text": "La expresión solicitada equivale a -8×3.",
+          "truth": false,
+          "value": -24,
+          "correct": 24,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 24; la afirmación representa -24."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -24.",
+          "truth": false,
+          "value": -24,
+          "correct": 24,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 24; la afirmación representa -24."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-10",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "673413b4ee4507d330178309db42d491421e0e88af796ab16282a88822012c87",
+      "content_sha256": "db50f993578b96b158271fe4d6aa38a99c332d09233d260487997cb786bf7893",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (19+9)×4−19×4. ¿Cuál es su valor?",
+      "expected": "36",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          19,
+          9,
+          4
+        ],
+        "answer": 36,
+        "intermediate": 9
+      },
+      "assertions": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "truth": false,
+          "value": -9,
+          "correct": 9,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 9; la afirmación representa -9."
+        },
+        {
+          "text": "La expresión solicitada equivale a -9×4.",
+          "truth": false,
+          "value": -36,
+          "correct": 36,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 36; la afirmación representa -36."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 36.",
+          "truth": true,
+          "value": 36,
+          "correct": 36,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 36; la afirmación representa 36."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-11",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "ca6ae560eef4263a7fa2198a945c1397cc84de229e2ee65248cc46fcfa99782e",
+      "content_sha256": "62c4a84faac5cbde9bf568ca0c580edd8d44aec3adafd22663d9c7a3f23a2142",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+12)×8−14×8. ¿Cuál es su valor?",
+      "expected": "96",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          14,
+          12,
+          8
+        ],
+        "answer": 96,
+        "intermediate": 12
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es -96.",
+          "truth": false,
+          "value": -96,
+          "correct": 96,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 96; la afirmación representa -96."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 12.",
+          "truth": true,
+          "value": 12,
+          "correct": 12,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 12; la afirmación representa 12."
+        },
+        {
+          "text": "La expresión solicitada equivale a 12×8.",
+          "truth": true,
+          "value": 96,
+          "correct": 96,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 96; la afirmación representa 96."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "e308d58dab4b697151de298eb040104f8046e88295ddaaf17a99b279bfce94ee",
+      "content_sha256": "742f839efcfa043eb91c62949bb028d6a3c4c259f7f57a47a4936e3a60b67d2d",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+15)×5−9×5. ¿Cuál es su valor?",
+      "expected": "75",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          9,
+          15,
+          5
+        ],
+        "answer": 75,
+        "intermediate": 15
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a -15×5.",
+          "truth": false,
+          "value": -75,
+          "correct": 75,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 75; la afirmación representa -75."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 75.",
+          "truth": true,
+          "value": 75,
+          "correct": 75,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 75; la afirmación representa 75."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "truth": true,
+          "value": 15,
+          "correct": 15,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 15; la afirmación representa 15."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "6b777d0e0ceeb113b26d587ed3f189a8884bddee89e6af10710f9d2d757de67a",
+      "content_sha256": "2798b378d88cbb81f5f616be6b8f6e5dc69774f5cbd0f060485951a448260e28",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+18)×2−21×2. ¿Cuál es su valor?",
+      "expected": "36",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          21,
+          18,
+          2
+        ],
+        "answer": 36,
+        "intermediate": 18
+      },
+      "assertions": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true,
+          "value": 18,
+          "correct": 18,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 18; la afirmación representa 18."
+        },
+        {
+          "text": "La expresión solicitada equivale a -18×2.",
+          "truth": false,
+          "value": -36,
+          "correct": 36,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 36; la afirmación representa -36."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -36.",
+          "truth": false,
+          "value": -36,
+          "correct": 36,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 36; la afirmación representa -36."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "db49c71cda3fed5252f68ec7d4b77f974082df4a8f6bd396b1afccaa82c0f1e4",
+      "content_sha256": "a808f5611b30a459ac61f4dd9895a3376f1850833b9432dc79aee9bcbe8a23b1",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+8)×6−16×6. ¿Cuál es su valor?",
+      "expected": "48",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          16,
+          8,
+          6
+        ],
+        "answer": 48,
+        "intermediate": 8
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": true,
+          "value": 48,
+          "correct": 48,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 48; la afirmación representa 48."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -8.",
+          "truth": false,
+          "value": -8,
+          "correct": 8,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 8; la afirmación representa -8."
+        },
+        {
+          "text": "La expresión solicitada equivale a 8×6.",
+          "truth": true,
+          "value": 48,
+          "correct": 48,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 48; la afirmación representa 48."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "a78dd3ea42885fc031e1f490e96ebda46fd21f2248cb18c2af8030d7932d4da4",
+      "content_sha256": "36e9a3acf1a0516618355d20d501d53c9e105301c6466c0bae4d926a048e8755",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+11)×3−11×3. ¿Cuál es su valor?",
+      "expected": "33",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          11,
+          11,
+          3
+        ],
+        "answer": 33,
+        "intermediate": 11
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 11×3.",
+          "truth": true,
+          "value": 33,
+          "correct": 33,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 33; la afirmación representa 33."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -33.",
+          "truth": false,
+          "value": -33,
+          "correct": 33,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 33; la afirmación representa -33."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false,
+          "value": -11,
+          "correct": 11,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 11; la afirmación representa -11."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "51e066882ee7800c53b7977e8b3d7bbaa23b760bb61928339b05cfcffe88607a",
+      "content_sha256": "28da26c75325c54350b61f2422d3f08429593c1d399a6b4f5996dc9c78cca009",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+14)×7−23×7. ¿Cuál es su valor?",
+      "expected": "98",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          23,
+          14,
+          7
+        ],
+        "answer": 98,
+        "intermediate": 14
+      },
+      "assertions": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false,
+          "value": -14,
+          "correct": 14,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 14; la afirmación representa -14."
+        },
+        {
+          "text": "La expresión solicitada equivale a -14×7.",
+          "truth": false,
+          "value": -98,
+          "correct": 98,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 98; la afirmación representa -98."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 98.",
+          "truth": true,
+          "value": 98,
+          "correct": 98,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 98; la afirmación representa 98."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "3293f5f6be8cec4ed39ac108528b0336ea36e62c48cf3aa2eeeea046d1e71133",
+      "content_sha256": "1acff64698404a8cbf4242be0926036169da229bac65ef8bbaf2dbeaad9460a6",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+17)×4−18×4. ¿Cuál es su valor?",
+      "expected": "68",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          18,
+          17,
+          4
+        ],
+        "answer": 68,
+        "intermediate": 17
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es -68.",
+          "truth": false,
+          "value": -68,
+          "correct": 68,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 68; la afirmación representa -68."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "truth": true,
+          "value": 17,
+          "correct": 17,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 17; la afirmación representa 17."
+        },
+        {
+          "text": "La expresión solicitada equivale a 17×4.",
+          "truth": true,
+          "value": 68,
+          "correct": 68,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 68; la afirmación representa 68."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "ae10274f3a442ee74da04a8aa1624aa3a17859d521d95d74c58290f5b051cde4",
+      "content_sha256": "ad4cdd5024b6cfbb3f6dd292bf3287f0fa4dda1186969d8c0ee97885a2445139",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+7)×8−13×8. ¿Cuál es su valor?",
+      "expected": "56",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          13,
+          7,
+          8
+        ],
+        "answer": 56,
+        "intermediate": 7
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a -7×8.",
+          "truth": false,
+          "value": -56,
+          "correct": 56,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 56; la afirmación representa -56."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 56.",
+          "truth": true,
+          "value": 56,
+          "correct": 56,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 56; la afirmación representa 56."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "truth": true,
+          "value": 7,
+          "correct": 7,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 7; la afirmación representa 7."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "77cad720b3aa453db6ee63bb8b705e9357f54264fec06a4397f4f46a2a037584",
+      "content_sha256": "2725714c7ae66961ea5a14638f3b07be398d21910286fd002efe4b107934bb30",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+10)×5−8×5. ¿Cuál es su valor?",
+      "expected": "50",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          8,
+          10,
+          5
+        ],
+        "answer": 50,
+        "intermediate": 10
+      },
+      "assertions": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true,
+          "value": 10,
+          "correct": 10,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 10; la afirmación representa 10."
+        },
+        {
+          "text": "La expresión solicitada equivale a -10×5.",
+          "truth": false,
+          "value": -50,
+          "correct": 50,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 50; la afirmación representa -50."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -50.",
+          "truth": false,
+          "value": -50,
+          "correct": 50,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 50; la afirmación representa -50."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-2",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "81573f11e887fd1dc91a4f4ae9e11bce6d1fac60ebf9633e9d00ec2d778d330b",
+      "content_sha256": "737fa9368103751dcac02e7de43f08fecefda8e7376c7a20e303fa88e88fdc4f",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+11)×7−8×7. ¿Cuál es su valor?",
+      "expected": "77",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          8,
+          11,
+          7
+        ],
+        "answer": 77,
+        "intermediate": 11
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es 77.",
+          "truth": true,
+          "value": 77,
+          "correct": 77,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 77; la afirmación representa 77."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false,
+          "value": -11,
+          "correct": 11,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 11; la afirmación representa -11."
+        },
+        {
+          "text": "La expresión solicitada equivale a 11×7.",
+          "truth": true,
+          "value": 77,
+          "correct": 77,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 77; la afirmación representa 77."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "2e17353cdac926ec115645382c0e7f3ab46e103c3746e862fdc0d3e8c8701c66",
+      "content_sha256": "8d41b417f88e70cf60838ec05cff3370b37dcbd5bffce94df2a479633a059cfe",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+13)×2−20×2. ¿Cuál es su valor?",
+      "expected": "26",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          20,
+          13,
+          2
+        ],
+        "answer": 26,
+        "intermediate": 13
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es 26.",
+          "truth": true,
+          "value": 26,
+          "correct": 26,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 26; la afirmación representa 26."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "truth": false,
+          "value": -13,
+          "correct": 13,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 13; la afirmación representa -13."
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×2.",
+          "truth": true,
+          "value": 26,
+          "correct": 26,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 26; la afirmación representa 26."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "6476fa1ed868dd2c1ca5431d3dd6580c70e3e7cfff715ad7b422f12245c45002",
+      "content_sha256": "b69b5252ffa0485254b17b7b20065266682daa78bb4095a4829e6530677c193e",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+16)×6−15×6. ¿Cuál es su valor?",
+      "expected": "96",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          15,
+          16,
+          6
+        ],
+        "answer": 96,
+        "intermediate": 16
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 16×6.",
+          "truth": true,
+          "value": 96,
+          "correct": 96,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 96; la afirmación representa 96."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -96.",
+          "truth": false,
+          "value": -96,
+          "correct": 96,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 96; la afirmación representa -96."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "truth": false,
+          "value": -16,
+          "correct": 16,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 16; la afirmación representa -16."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-3",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "eb89b3506a8ba1b50f2cc8d210cbf823d6bcc7b7bbeae79b142a0856b323467b",
+      "content_sha256": "ca0913414a0671b19cf449c3f31e845847fd6ce548c181c2b972b9fd0d0a48d8",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+14)×4−20×4. ¿Cuál es su valor?",
+      "expected": "56",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          20,
+          14,
+          4
+        ],
+        "answer": 56,
+        "intermediate": 14
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 14×4.",
+          "truth": true,
+          "value": 56,
+          "correct": 56,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 56; la afirmación representa 56."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -56.",
+          "truth": false,
+          "value": -56,
+          "correct": 56,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 56; la afirmación representa -56."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false,
+          "value": -14,
+          "correct": 14,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 14; la afirmación representa -14."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-4",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "304a3199e71977506212fc6a985464aadee5e3d558d2e16522d30a988939b49c",
+      "content_sha256": "6951a51b66e9707128851c5f8f106a1384477e49c734b41ee6088c31f2e7bdb8",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+17)×8−15×8. ¿Cuál es su valor?",
+      "expected": "136",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          15,
+          17,
+          8
+        ],
+        "answer": 136,
+        "intermediate": 17
+      },
+      "assertions": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -17.",
+          "truth": false,
+          "value": -17,
+          "correct": 17,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 17; la afirmación representa -17."
+        },
+        {
+          "text": "La expresión solicitada equivale a -17×8.",
+          "truth": false,
+          "value": -136,
+          "correct": 136,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 136; la afirmación representa -136."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 136.",
+          "truth": true,
+          "value": 136,
+          "correct": 136,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 136; la afirmación representa 136."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-5",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "c181f7de4eb677d5c6189d776954419970fbf400b3bf87fca099cd12b4179555",
+      "content_sha256": "c459768a564dd38ccc23ebac700f5f792b20536e4eab8cfe30da4c2f95223f8e",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+7)×5−10×5. ¿Cuál es su valor?",
+      "expected": "35",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          10,
+          7,
+          5
+        ],
+        "answer": 35,
+        "intermediate": 7
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es -35.",
+          "truth": false,
+          "value": -35,
+          "correct": 35,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 35; la afirmación representa -35."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "truth": true,
+          "value": 7,
+          "correct": 7,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 7; la afirmación representa 7."
+        },
+        {
+          "text": "La expresión solicitada equivale a 7×5.",
+          "truth": true,
+          "value": 35,
+          "correct": 35,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 35; la afirmación representa 35."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-6",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "8cd3d540e4b81841459636e371c60024c85b5727308aa7afdc30ce9445b1efe0",
+      "content_sha256": "f6646c55cb3367e339e235a1248f5346fe463f9a26f23b0ef4cc7ccbd76e8680",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (22+10)×2−22×2. ¿Cuál es su valor?",
+      "expected": "20",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          22,
+          10,
+          2
+        ],
+        "answer": 20,
+        "intermediate": 10
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a -10×2.",
+          "truth": false,
+          "value": -20,
+          "correct": 20,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 20; la afirmación representa -20."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 20.",
+          "truth": true,
+          "value": 20,
+          "correct": 20,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 20; la afirmación representa 20."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true,
+          "value": 10,
+          "correct": 10,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 10; la afirmación representa 10."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-7",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "658bc304967e9d12caef6620364bcf904d2aa07392164b5e400b9c447ed4cb53",
+      "content_sha256": "83a7b1d6690735f4f989db0e2c1b18e9d7efa2f631543525740fc592642160cd",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (17+13)×6−17×6. ¿Cuál es su valor?",
+      "expected": "78",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          17,
+          13,
+          6
+        ],
+        "answer": 78,
+        "intermediate": 13
+      },
+      "assertions": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 13.",
+          "truth": true,
+          "value": 13,
+          "correct": 13,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 13; la afirmación representa 13."
+        },
+        {
+          "text": "La expresión solicitada equivale a -13×6.",
+          "truth": false,
+          "value": -78,
+          "correct": 78,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 78; la afirmación representa -78."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -78.",
+          "truth": false,
+          "value": -78,
+          "correct": 78,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 78; la afirmación representa -78."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-8",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "437c12adad87b2e9e7558073b1d563713abc61d301d85a7d6c7ba51f6f9bc627",
+      "content_sha256": "c1422155fd031f00b57a4be5bdb67e4e74341d622f62f3c22b140543fe9d4e16",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+16)×3−12×3. ¿Cuál es su valor?",
+      "expected": "48",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          12,
+          16,
+          3
+        ],
+        "answer": 48,
+        "intermediate": 16
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": true,
+          "value": 48,
+          "correct": 48,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 48; la afirmación representa 48."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "truth": false,
+          "value": -16,
+          "correct": 16,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 16; la afirmación representa -16."
+        },
+        {
+          "text": "La expresión solicitada equivale a 16×3.",
+          "truth": true,
+          "value": 48,
+          "correct": 48,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 48; la afirmación representa 48."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-9",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "298aee66b36539a579ce679917e428a60abc8e2cd1a0e9b4313343c42ca5a088",
+      "content_sha256": "132e25baa95a274290d0643c75fc64e15e47835fe13fb323f69b37e05db1950a",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (24+19)×7−24×7. ¿Cuál es su valor?",
+      "expected": "133",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          24,
+          19,
+          7
+        ],
+        "answer": 133,
+        "intermediate": 19
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 19×7.",
+          "truth": true,
+          "value": 133,
+          "correct": 133,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 133; la afirmación representa 133."
+        },
+        {
+          "text": "El valor de la expresión solicitada es -133.",
+          "truth": false,
+          "value": -133,
+          "correct": 133,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 133; la afirmación representa -133."
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "truth": false,
+          "value": -19,
+          "correct": 19,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 19; la afirmación representa -19."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_PROFUNDIDAD_LIMITADA"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 2,
+          "reason": "Cancelación de identidad única, limitada transferencia avanzada."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-0",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "69fa33148e7bd055ce917ba5b7e8df4c55231d14b5383499769bc135d51f2381",
+      "content_sha256": "6b9eb186269b8ba0954e2a0da115431be519dec30f1aa41463b3b953c32785d2",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (21+5)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "112",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          21,
+          5,
+          5
+        ],
+        "answer": 112,
+        "intermediate": 28
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es 112.",
+          "truth": true,
+          "value": 112,
+          "correct": 112,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 112; la afirmación representa 112."
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 28.",
+          "truth": true,
+          "value": 28,
+          "correct": 28,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 28; la afirmación representa 28."
+        },
+        {
+          "text": "La expresión solicitada equivale a 21×4+7×0.",
+          "truth": false,
+          "value": 84,
+          "correct": 112,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 112; la afirmación representa 84."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-1",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "3183be643b66950646db84369820c58f39d59e10b9f6a00c7a602ad5f3b85beb",
+      "content_sha256": "161fd80d1b62f0d0138b5595fb64cfba0a9dffa8a42ff00668ac5064418887e3",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (16+8)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "26",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          16,
+          8,
+          2
+        ],
+        "answer": 26,
+        "intermediate": 26
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 16×1+10×0.",
+          "truth": false,
+          "value": 16,
+          "correct": 26,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 26; la afirmación representa 16."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 16.",
+          "truth": false,
+          "value": 16,
+          "correct": 26,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 26; la afirmación representa 16."
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 26.",
+          "truth": true,
+          "value": 26,
+          "correct": 26,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 26; la afirmación representa 26."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-10",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "4becc51be6c9bdcbdd4e703ddea3c0dd01e0b40c21a49f72c99802a262acf8ba",
+      "content_sha256": "4e37866c28991fff412fd0c889113a027ea23c749915596c4f7b95c1613eefb9",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (22+9)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "66",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          22,
+          9,
+          3
+        ],
+        "answer": 66,
+        "intermediate": 33
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 22×2+11×0.",
+          "truth": false,
+          "value": 44,
+          "correct": 66,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 66; la afirmación representa 44."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 66.",
+          "truth": true,
+          "value": 66,
+          "correct": 66,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 66; la afirmación representa 66."
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 11.",
+          "truth": false,
+          "value": 11,
+          "correct": 33,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 33; la afirmación representa 11."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-11",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "df0b4c0cd1b64ff11579a02853e7d08255c4c9d22babc2d24956303c9ce07030",
+      "content_sha256": "031fcde3a8e64d0d673cc81189cb31e96e34428096d9a80e6012eb531b13e4b9",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (17+12)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "186",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          17,
+          12,
+          7
+        ],
+        "answer": 186,
+        "intermediate": 31
+      },
+      "assertions": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 31.",
+          "truth": true,
+          "value": 31,
+          "correct": 31,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 31; la afirmación representa 31."
+        },
+        {
+          "text": "La expresión solicitada equivale a 17×6+14×6.",
+          "truth": true,
+          "value": 186,
+          "correct": 186,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 186; la afirmación representa 186."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 102.",
+          "truth": false,
+          "value": 102,
+          "correct": 186,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 186; la afirmación representa 102."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-2",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "af0642eca4f03ac2ea0d7c5fe9bbdf958b3cd1c256671d680570a943dc5f8648",
+      "content_sha256": "dadbd268741da2f3e24e7ee51c2dbd30b74bb9435b2945e7a29983d8502beaec",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (11+11)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "120",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          11,
+          11,
+          6
+        ],
+        "answer": 120,
+        "intermediate": 24
+      },
+      "assertions": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -2.",
+          "truth": false,
+          "value": -2,
+          "correct": 24,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 24; la afirmación representa -2."
+        },
+        {
+          "text": "La expresión solicitada equivale a 11×5+13×5.",
+          "truth": true,
+          "value": 120,
+          "correct": 120,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 120; la afirmación representa 120."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 120.",
+          "truth": true,
+          "value": 120,
+          "correct": 120,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 120; la afirmación representa 120."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-3",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "125a626516fe9c6401e72f61a1270a7a6496fa8e1e976b3d738a59a922a6c573",
+      "content_sha256": "a632dfc745636e03abcbf99e03d65c83fe94ed7df6d6e7cb6d3074ffc4594ce8",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (6+14)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "44",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          6,
+          14,
+          3
+        ],
+        "answer": 44,
+        "intermediate": 22
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es 12.",
+          "truth": false,
+          "value": 12,
+          "correct": 44,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 44; la afirmación representa 12."
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -10.",
+          "truth": false,
+          "value": -10,
+          "correct": 22,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 22; la afirmación representa -10."
+        },
+        {
+          "text": "La expresión solicitada equivale a 6×2+16×2.",
+          "truth": true,
+          "value": 44,
+          "correct": 44,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 44; la afirmación representa 44."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-4",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "06b65d700ff056585ff3905ce7f7cc7400837cadc5a4dc19cb5256e698ad271a",
+      "content_sha256": "469959b171a7fe16fa4dd8308754ada11a8971875ba7c32ea446b2417e382a5b",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (18+17)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "222",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          18,
+          17,
+          7
+        ],
+        "answer": 222,
+        "intermediate": 37
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 18×6+19×0.",
+          "truth": false,
+          "value": 108,
+          "correct": 222,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 222; la afirmación representa 108."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 222.",
+          "truth": true,
+          "value": 222,
+          "correct": 222,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 222; la afirmación representa 222."
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -1.",
+          "truth": false,
+          "value": -1,
+          "correct": 37,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 37; la afirmación representa -1."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-5",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "68c13b848588bf7fe62080651b1b598ac397f6b44311528e96f4397ee219e89c",
+      "content_sha256": "582f79760a78d22a117808c748ff4136e46d15b182434d1ad73bc0a9439506a2",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (13+7)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "66",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          13,
+          7,
+          4
+        ],
+        "answer": 66,
+        "intermediate": 22
+      },
+      "assertions": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 22.",
+          "truth": true,
+          "value": 22,
+          "correct": 22,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 22; la afirmación representa 22."
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×3+9×3.",
+          "truth": true,
+          "value": 66,
+          "correct": 66,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 66; la afirmación representa 66."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 39.",
+          "truth": false,
+          "value": 39,
+          "correct": 66,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 66; la afirmación representa 39."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-6",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "00df53ed546b0fb7f4e08d95efda0c1962107a60143105074b03c853e33d8f55",
+      "content_sha256": "d56fe8e4595371c2dd2a01a7626b5bf8cea9ea1de90c42476d9b39c304d44919",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (8+10)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "140",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          8,
+          10,
+          8
+        ],
+        "answer": 140,
+        "intermediate": 20
+      },
+      "assertions": [
+        {
+          "text": "El valor de la expresión solicitada es 140.",
+          "truth": true,
+          "value": 140,
+          "correct": 140,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 140; la afirmación representa 140."
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 20.",
+          "truth": true,
+          "value": 20,
+          "correct": 20,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 20; la afirmación representa 20."
+        },
+        {
+          "text": "La expresión solicitada equivale a 8×7+12×0.",
+          "truth": false,
+          "value": 56,
+          "correct": 140,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 140; la afirmación representa 56."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-7",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "166c82b4d9c70e090c0cdf4ef9f56b8444044de9c89165773d49ffa1a79711d7",
+      "content_sha256": "29167c90ff5ff60e3984181e5441916094c73db4acce32ec0e28be31209a8974",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "La expresión original es (20+13)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "expected": "140",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Sumas repetidas y diferencia de productos desde operandos visibles; contraste con opciones y afirmaciones de CI R4/R5",
+        "operands": [
+          20,
+          13,
+          5
+        ],
+        "answer": 140,
+        "intermediate": 35
+      },
+      "assertions": [
+        {
+          "text": "La expresión solicitada equivale a 20×4+15×0.",
+          "truth": false,
+          "value": 80,
+          "correct": 140,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 140; la afirmación representa 80."
+        },
+        {
+          "text": "El valor de la expresión solicitada es 80.",
+          "truth": false,
+          "value": 80,
+          "correct": 140,
+          "oracle_truth": false,
+          "reason": "La evaluación independiente da 140; la afirmación representa 80."
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 35.",
+          "truth": true,
+          "value": 35,
+          "correct": 35,
+          "oracle_truth": true,
+          "reason": "La evaluación independiente da 35; la afirmación representa 35."
+        }
+      ],
+      "construction": [],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R4/R7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación numérica en estructura repetida; independencia conceptual no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    }
+  ]
+}
