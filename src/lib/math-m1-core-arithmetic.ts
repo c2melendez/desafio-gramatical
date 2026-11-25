@@ -28,12 +28,18 @@ export function arithmeticPedagogy(subtopic:string,level:Level,inputs:number[]):
   else if(stage===2){nextInputs=[a,b+2,c-1];prompt=`La expresión original es (${a}+${b})×${c}. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?`;}
   else {nextInputs=[0,b,c];prompt=`Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (${a}+${b})×${c}−${a}×${c}. ¿Cuál es su valor?`;}
   const [u,v,w]=nextInputs;
-  intermediate=q(u+v);result=q((u+v)*w);label="Calcula la suma que queda dentro del paréntesis";
+  intermediate=q(u+v);result=q((u+v)*w);label=stage===3?"Tras distribuir y cancelar el primer producto, ¿qué sumando queda multiplicado por el factor común?":"Calcula la suma que queda dentro del paréntesis";
   explanation=stage===3?`Aplicamos la propiedad distributiva: (${a}+${b})×${c} se convierte en ${a}×${c}+${b}×${c}. Al restar ${a}×${c}, los dos términos iguales se cancelan; queda solo ${b}×${c}=${fmt(result)}. No es necesario calcular todo el primer producto antes de simplificar.`:`Después de aplicar las condiciones, el paréntesis vale ${u}+${v}=${u+v}; multiplicar por ${w} da ${fmt(result)}.`;
-  formula=`(${u}+${v})×${w}=${fmt(result)}`;
-  correct=`Es válido resolver primero ${u}+${v} y multiplicar su resultado por ${w}.`;
-  incorrect1=`Es válido multiplicar solo el primer sumando ${u} por ${w} y después sumar ${v} sin multiplicarlo.`;
-  incorrect2=`Es válido sumar ${u}+${v}+${w} sin respetar el producto indicado.`;
+  formula=stage===3?`(${a}+${b})×${c}−${a}×${c}=${b}×${c}=${fmt(result)}`:`(${u}+${v})×${w}=${fmt(result)}`;
+  if(stage===3){
+   correct=`Al distribuir y cancelar ${a}×${c} con su opuesto, queda ${b}×${c}.`;
+   incorrect1=`Al cancelar el primer producto, queda −${b}×${c}.`;
+   incorrect2="Al cancelar el primer producto, también se cancela el segundo sumando y el resultado es cero.";
+  }else{
+   correct=`Es válido resolver primero ${u}+${v} y multiplicar su resultado por ${w}.`;
+   incorrect1=w===1?`Es válido omitir el segundo sumando ${v} al multiplicar por 1.`:`Es válido multiplicar solo el primer sumando ${u} por ${w} y después sumar ${v} sin multiplicarlo.`;
+   incorrect2=`Es válido sumar ${u}+${v}+${w} sin respetar el producto indicado.`;
+  }
  }else if(subtopic==="Fracciones"){
   const [x,y,u,v]=inputs;
   if(stage===1){nextInputs=[x,y,u,v];prompt=`Suma y simplifica las fracciones ${x}/${y} y ${u}/${v}.`;}

@@ -1,6 +1,7 @@
 import type {Level,Mode} from "./grammar";
 import {MATH_LEVELS,MATH_MODES,MATH_SUBTOPICS,MATH_LEVEL_COUNT,MATH_TOPICS,mathModel,type MathModel} from "./math-m1";
 import {mathM2Pool,MATH_M2_LEVEL_COUNT} from "./math-m2";
+import {repairRationalOperation} from "./math-operations-rational";
 
 /** Capa M3: solo agrega IDs nuevos al banco M2; no migra ni modifica el progreso anterior. */
 export const MATH_M3_LEVEL_COUNT:Record<Level,number>={principiante:30,intermedio:50,avanzado:70};
@@ -28,6 +29,9 @@ export function mathM3NewPool(topic:string,subtopic:string,level:Level,mode:Mode
    seen.add(key);chosen=candidate;break;
   }
   if(!chosen)throw Error("Variedad insuficiente M3: "+[topic,subtopic,mode,level].join("/"));
+  const slot=i-(MATH_M3_NEW_PER_LEVEL[level]-3);
+  // Corrective substitution only for the last three M3 variants per middle/advanced cell. Preserve IDs and quotas; old achievements are not evidence for revised content.
+  if(subtopic==="Operaciones"&&level!=="principiante"&&slot>=0)chosen=repairRationalOperation(chosen,slot,mi);
   fresh.push({...chosen,id:"math-m3-"+[topic,subtopic,mode,level,i].map(x=>slug(String(x))).join("-"),
    family:"math-m3-"+slug(subtopic)+"-"+(chosen.operation??"original"),reviewStatus:"editorial-draft"});
  }

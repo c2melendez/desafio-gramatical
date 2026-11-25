@@ -31,6 +31,15 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
    onResult(ok,response);
   }
  }
+ // OP-04: report the actual mistaken subdecision before showing the worked solution.
+ const subdecisionFeedback=complete&&!correct&&item.oracle.kind==="Operaciones-racionales"
+  ?item.mode==="clasificar"?item.assertions.flatMap((a,i)=>(choices[i]===0)===a.truth?[]:[`Afirmación «${a.text}»: es ${a.truth?"verdadera":"falsa"}. ${item.explanation}`]).join(" ")
+   :item.mode==="construir"?item.steps.flatMap((s,i)=>{
+    if(choices[i]===s.answerIndex)return [];
+    const chosen=s.choices[choices[i]];
+    return [i===0?`Raíz elegida: ${chosen}. La raíz principal debe ser no negativa y su cuadrado debe coincidir con el radicando; el valor correcto es ${s.choices[s.answerIndex]}.`:`Resultado elegido: ${chosen}. ${item.optionExplanations?.[chosen]??"Comprueba la precedencia y las unidades fraccionarias."}`];
+   }).join(" "):""
+  :"";
  const selection=item.mode==="construir"?item.steps[choices.length]?.choices:
   item.mode==="quiz"?item.options:null;
  return <section className="card-ink bg-card p-5 space-y-4" aria-label="Ejercicio matemático">
@@ -60,7 +69,7 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
   </div>}
   {complete&&<div className="space-y-3">
    <LearningFeedback correct={correct} subtopic={item.subtopic} selected={given} expected={expected}
-    explanation={item.explanation+" Procedimiento comprobable: "+item.formula+"."}/>
+    explanation={(subdecisionFeedback?subdecisionFeedback+" ":"")+(!correct&&item.mode==="quiz"&&item.optionExplanations?.[given]?item.optionExplanations[given]+" ":"")+item.explanation+" Procedimiento comprobable: "+item.formula+"."}/>
    <button type="button" className="tile w-full bg-primary text-primary-foreground" onClick={onNext}>
     {isLast?"Ver resultados":"Continuar"}
    </button>
