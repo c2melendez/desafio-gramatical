@@ -28,3 +28,13 @@ test('accepts documented limited evidence',()=>{const {a,p}=fixture();const r=p.
 test('rejects missing difficulty level',()=>{const {a,p}=fixture();p.route_specs[0].external_research.profiles.pop();assert.throws(()=>validatePlan(p,a,ctx,schemas),/three levels/)});
 test('rejects ungrounded official anchor',()=>{const {a,p}=fixture();p.route_specs[0].external_research.profiles[0].official_anchor_ids=['r1'];assert.throws(()=>validatePlan(p,a,ctx,schemas),/official anchors/)});
 test('rejects external decision for unknown objective',()=>{const {a,p}=fixture();p.route_specs[0].external_research.decisions[0].objective_ids=['other'];assert.throws(()=>validatePlan(p,a,ctx,schemas),/unknown objective/)});
+
+// Validate the actual P0 candidate against the repository catalog and source bytes, not synthetic fixtures.
+import {execFileSync} from 'node:child_process';
+test('P0 actual architecture and MAT-ARIT-01 plan',()=>{
+ for(const path of ['--architecture','qa/certification/rdg/plans/MAT-ARIT-01.json']){
+  const result=JSON.parse(execFileSync(process.execPath,['--import','./scripts/ts-resolve.mjs','qa/certification/rdg/validate.mjs',path],{encoding:'utf8'}));
+  assert.equal(result.status,'PASS_STRUCTURAL');
+  console.log(JSON.stringify(result));
+ }
+});

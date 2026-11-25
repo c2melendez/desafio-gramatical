@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import {OperationsReview} from "@/components/review/OperationsReview";
+import {supportsReview} from "@/lib/rdg/operations";
 import {achievementKey,loadAchievements} from "@/lib/perfect-achievements";
 import {PerfectBadge} from "@/components/games/PerfectBadge";
 import { LEVELS, LEVEL_LABEL, type Level, type Mode } from "@/lib/grammar";
@@ -21,7 +23,8 @@ export const Route = createFileRoute("/")({
   return {area:area.id,tema:selectedTopic.name,
    subtema:selectedTopic.subtopics.includes(search.subtema as string)?search.subtema as string:selectedTopic.subtopics[0],
    modo:GAME_IDS.includes(search.modo as Mode)?search.modo as Mode:DEFAULT_SELECTION.modo,
-   nivel:LEVELS.includes(search.nivel as Level)?search.nivel as Level:DEFAULT_SELECTION.nivel};
+   nivel:LEVELS.includes(search.nivel as Level)?search.nivel as Level:DEFAULT_SELECTION.nivel,
+   ...(search.repaso===true||search.repaso==="true"?{repaso:true as const}:{})};
  },
  head: () => ({
   meta: [
@@ -39,6 +42,7 @@ function Home() {
  const [achievements,setAchievements]=useState<ReturnType<typeof loadAchievements>>({});
  useEffect(()=>{const refresh=()=>setAchievements(loadAchievements());refresh();window.addEventListener("storage",refresh);window.addEventListener("focus",refresh);return()=>{window.removeEventListener("storage",refresh);window.removeEventListener("focus",refresh);};},[]);
  const [selection,setSelection]=useState<StudySelection>(()=>({...selected}));
+ useEffect(()=>{if(selected.repaso)setSelection({area:selected.area,tema:selected.tema,subtema:selected.subtema,modo:selected.modo,nivel:selected.nivel});},[selected.area,selected.tema,selected.subtema,selected.modo,selected.nivel,selected.repaso]);
  const {area:areaId,tema:topic,subtema:subtopic,modo:mode,nivel:level}=selection;
  const mastered=(modo:Mode,nivel:Level)=>!!achievements[achievementKey({...selection,modo,nivel})];
  const selectedArea=AREAS.find(a=>a.id===areaId)??AREAS[0];
@@ -64,6 +68,7 @@ function Home() {
   const target=selectedArea.topics.find(t=>t.name===name)!;
   setSelection(previous=>({...previous,tema:name,subtema:target.subtopics[0],modo:"clasificar"}));
  };
+ if(selected.repaso&&supportsReview(selected.area,selected.tema,selected.subtema))return <OperationsReview back={<Link to="/" search={{area:selected.area,tema:selected.tema,subtema:selected.subtema,modo:selected.modo,nivel:selected.nivel}} className="tile inline-block bg-card">← Volver a los juegos</Link>}/>;
  return (
   <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-4xl px-4 py-7 md:py-10 space-y-7">
    <header className="space-y-3">
@@ -109,6 +114,9 @@ function Home() {
     </p>
    </section>
 
+   <section aria-label="Aprende y repasa" className="space-y-2">
+    {supportsReview(areaId,topic,subtopic)?<Link to="/" search={{...selection,repaso:true}} className="tile block w-full bg-secondary text-secondary-foreground text-center font-bold py-4">📘 Modo Repaso · Aprende y repasa</Link>:<p className="text-sm text-muted-foreground">Modo Repaso: en preparación para este subtema. Puedes practicar con los juegos disponibles.</p>}
+   </section>
    <section aria-labelledby="select-game" className="space-y-3">
     <h2 id="select-game" className="text-2xl font-black">3. Elige un juego</h2>
     <div className="grid gap-3" role="group" aria-label="Tipo de desafío">

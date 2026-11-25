@@ -1,0 +1,646 @@
+{
+  "schema_version": "7.8",
+  "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+  "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+  "components": [
+    {
+      "id": "study-context",
+      "decision": "REUSE",
+      "purpose": "Preservar selección contextual en acceso y retorno de repaso.",
+      "acceptance": "Salir conserva área, tema, subtema, modo y nivel; recarga no rompe selección."
+    },
+    {
+      "id": "index-selection",
+      "decision": "EXTEND",
+      "purpose": "Acceso voluntario antes de juegos; indicar honestamente rutas no disponibles.",
+      "acceptance": "Primera opción por teclado y visual; juegos no bloqueados."
+    },
+    {
+      "id": "learning-feedback",
+      "decision": "REUSE",
+      "purpose": "Reusar identidad visual y feedback causal de LearningFeedback donde el contrato sea compatible, sin marcador.",
+      "acceptance": "Explicación causal accesible y recuperación no punitiva."
+    },
+    {
+      "id": "rdg-renderer",
+      "decision": "CREATE",
+      "purpose": "Composición compartida de actividades, revelación, comparación, secuencia, recta numérica y transferencia; index.tsx carece de acceso RDG y no existe arquitectura.",
+      "acceptance": "Ruta voluntaria, ayudas graduadas, interacción por teclado y equivalentes textuales; no exponer soluciones de juego."
+    }
+  ],
+  "blocks": [
+    {
+      "block_id": "MAT-ARIT-01",
+      "reason": "Corte vertical mínimo: prioridad de operaciones, transformación de condiciones, distributividad y cancelación; fundamento de fracciones, potencias y álgebra.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "matematicas",
+          "topic": "Aritmética",
+          "subtopic": "Operaciones"
+        }
+      ]
+    },
+    {
+      "block_id": "ESPANOL-01",
+      "reason": "Fundamentos y representaciones compartidos de Comprensión lectora; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "espanol",
+          "topic": "Comprensión lectora",
+          "subtopic": "Idea principal"
+        },
+        {
+          "area": "espanol",
+          "topic": "Comprensión lectora",
+          "subtopic": "Inferencias"
+        },
+        {
+          "area": "espanol",
+          "topic": "Comprensión lectora",
+          "subtopic": "Lectura crítica"
+        },
+        {
+          "area": "espanol",
+          "topic": "Comprensión lectora",
+          "subtopic": "Vocabulario en contexto"
+        },
+        {
+          "area": "espanol",
+          "topic": "Comprensión lectora",
+          "subtopic": "Análisis de textos"
+        },
+        {
+          "area": "espanol",
+          "topic": "Comprensión lectora",
+          "subtopic": "Lectura comparada"
+        },
+        {
+          "area": "espanol",
+          "topic": "Comprensión lectora",
+          "subtopic": "Lenguaje figurado"
+        }
+      ]
+    },
+    {
+      "block_id": "ESPANOL-02",
+      "reason": "Fundamentos y representaciones compartidos de Gramática y semántica; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "espanol",
+          "topic": "Gramática y semántica",
+          "subtopic": "Categorías gramaticales"
+        },
+        {
+          "area": "espanol",
+          "topic": "Gramática y semántica",
+          "subtopic": "Sinónimos y antónimos"
+        },
+        {
+          "area": "espanol",
+          "topic": "Gramática y semántica",
+          "subtopic": "Cohesión y coherencia"
+        },
+        {
+          "area": "espanol",
+          "topic": "Gramática y semántica",
+          "subtopic": "Morfosintaxis"
+        },
+        {
+          "area": "espanol",
+          "topic": "Gramática y semántica",
+          "subtopic": "Homonimia y polisemia"
+        },
+        {
+          "area": "espanol",
+          "topic": "Gramática y semántica",
+          "subtopic": "Hiperonimia"
+        },
+        {
+          "area": "espanol",
+          "topic": "Gramática y semántica",
+          "subtopic": "Adecuación y referente"
+        }
+      ]
+    },
+    {
+      "block_id": "ESPANOL-03",
+      "reason": "Fundamentos y representaciones compartidos de Redacción; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "ESPANOL-01",
+        "ESPANOL-02"
+      ],
+      "subtopics": [
+        {
+          "area": "espanol",
+          "topic": "Redacción",
+          "subtopic": "Corrección"
+        },
+        {
+          "area": "espanol",
+          "topic": "Redacción",
+          "subtopic": "Conectores"
+        },
+        {
+          "area": "espanol",
+          "topic": "Redacción",
+          "subtopic": "Organización textual"
+        },
+        {
+          "area": "espanol",
+          "topic": "Redacción",
+          "subtopic": "Elisión y adición"
+        },
+        {
+          "area": "espanol",
+          "topic": "Redacción",
+          "subtopic": "Generalización e integración"
+        }
+      ]
+    },
+    {
+      "block_id": "ESPANOL-04",
+      "reason": "Fundamentos y representaciones compartidos de Literatura; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "ESPANOL-01",
+        "ESPANOL-02"
+      ],
+      "subtopics": [
+        {
+          "area": "espanol",
+          "topic": "Literatura",
+          "subtopic": "Figuras retóricas"
+        },
+        {
+          "area": "espanol",
+          "topic": "Literatura",
+          "subtopic": "Géneros literarios"
+        }
+      ]
+    },
+    {
+      "block_id": "MATEMATICAS-01",
+      "reason": "Fundamentos y representaciones compartidos de Aritmética; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "MAT-ARIT-01"
+      ],
+      "subtopics": [
+        {
+          "area": "matematicas",
+          "topic": "Aritmética",
+          "subtopic": "Fracciones"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Aritmética",
+          "subtopic": "Porcentajes"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Aritmética",
+          "subtopic": "Proporciones"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Aritmética",
+          "subtopic": "Potencias"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Aritmética",
+          "subtopic": "MCD y MCM"
+        }
+      ]
+    },
+    {
+      "block_id": "MATEMATICAS-02",
+      "reason": "Fundamentos y representaciones compartidos de Álgebra; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "MAT-ARIT-01",
+        "MATEMATICAS-01"
+      ],
+      "subtopics": [
+        {
+          "area": "matematicas",
+          "topic": "Álgebra",
+          "subtopic": "Ecuaciones"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Álgebra",
+          "subtopic": "Sistemas de ecuaciones"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Álgebra",
+          "subtopic": "Sucesiones"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Álgebra",
+          "subtopic": "Funciones"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Álgebra",
+          "subtopic": "Ecuaciones cuadráticas"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Álgebra",
+          "subtopic": "Inecuaciones"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Álgebra",
+          "subtopic": "Patrones algebraicos"
+        }
+      ]
+    },
+    {
+      "block_id": "MATEMATICAS-03",
+      "reason": "Fundamentos y representaciones compartidos de Geometría; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "MAT-ARIT-01",
+        "MATEMATICAS-01"
+      ],
+      "subtopics": [
+        {
+          "area": "matematicas",
+          "topic": "Geometría",
+          "subtopic": "Áreas y perímetros"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Geometría",
+          "subtopic": "Ángulos"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Geometría",
+          "subtopic": "Pitágoras"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Geometría",
+          "subtopic": "Sólidos: área y volumen"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Geometría",
+          "subtopic": "Semejanza"
+        }
+      ]
+    },
+    {
+      "block_id": "MATEMATICAS-04",
+      "reason": "Fundamentos y representaciones compartidos de Estadística y probabilidad; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "MAT-ARIT-01",
+        "MATEMATICAS-01"
+      ],
+      "subtopics": [
+        {
+          "area": "matematicas",
+          "topic": "Estadística y probabilidad",
+          "subtopic": "Promedios"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Estadística y probabilidad",
+          "subtopic": "Probabilidad"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Estadística y probabilidad",
+          "subtopic": "Dispersión de datos"
+        },
+        {
+          "area": "matematicas",
+          "topic": "Estadística y probabilidad",
+          "subtopic": "Tablas y gráficas"
+        }
+      ]
+    },
+    {
+      "block_id": "NATURALES-01",
+      "reason": "Fundamentos y representaciones compartidos de Biología; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Célula"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Genética"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Ecología"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Cuerpo humano"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Biomoléculas"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "División celular"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Fotosíntesis"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Método científico"
+        },
+        {
+          "area": "naturales",
+          "topic": "Biología",
+          "subtopic": "Clasificación biológica"
+        }
+      ]
+    },
+    {
+      "block_id": "NATURALES-02",
+      "reason": "Fundamentos y representaciones compartidos de Química; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "naturales",
+          "topic": "Química",
+          "subtopic": "Materia"
+        },
+        {
+          "area": "naturales",
+          "topic": "Química",
+          "subtopic": "Reacciones"
+        },
+        {
+          "area": "naturales",
+          "topic": "Química",
+          "subtopic": "Tabla periódica"
+        },
+        {
+          "area": "naturales",
+          "topic": "Química",
+          "subtopic": "Compuestos inorgánicos"
+        },
+        {
+          "area": "naturales",
+          "topic": "Química",
+          "subtopic": "Contaminación y agroquímicos"
+        }
+      ]
+    },
+    {
+      "block_id": "NATURALES-03",
+      "reason": "Fundamentos y representaciones compartidos de Física; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "MAT-ARIT-01"
+      ],
+      "subtopics": [
+        {
+          "area": "naturales",
+          "topic": "Física",
+          "subtopic": "Movimiento"
+        },
+        {
+          "area": "naturales",
+          "topic": "Física",
+          "subtopic": "Fuerzas y energía"
+        },
+        {
+          "area": "naturales",
+          "topic": "Física",
+          "subtopic": "Magnitudes y conversiones"
+        },
+        {
+          "area": "naturales",
+          "topic": "Física",
+          "subtopic": "Trabajo mecánico"
+        },
+        {
+          "area": "naturales",
+          "topic": "Física",
+          "subtopic": "Fuentes de energía"
+        }
+      ]
+    },
+    {
+      "block_id": "SOCIALES-01",
+      "reason": "Fundamentos y representaciones compartidos de Historia de Honduras; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "sociales",
+          "topic": "Historia de Honduras",
+          "subtopic": "Independencia"
+        },
+        {
+          "area": "sociales",
+          "topic": "Historia de Honduras",
+          "subtopic": "Historia contemporánea"
+        },
+        {
+          "area": "sociales",
+          "topic": "Historia de Honduras",
+          "subtopic": "Culturas hondureñas"
+        },
+        {
+          "area": "sociales",
+          "topic": "Historia de Honduras",
+          "subtopic": "Enclave bananero"
+        },
+        {
+          "area": "sociales",
+          "topic": "Historia de Honduras",
+          "subtopic": "Neoliberalismo"
+        }
+      ]
+    },
+    {
+      "block_id": "SOCIALES-02",
+      "reason": "Fundamentos y representaciones compartidos de Historia universal; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "sociales",
+          "topic": "Historia universal",
+          "subtopic": "Civilizaciones"
+        },
+        {
+          "area": "sociales",
+          "topic": "Historia universal",
+          "subtopic": "Revoluciones"
+        },
+        {
+          "area": "sociales",
+          "topic": "Historia universal",
+          "subtopic": "Conflictos contemporáneos"
+        }
+      ]
+    },
+    {
+      "block_id": "SOCIALES-03",
+      "reason": "Fundamentos y representaciones compartidos de Geografía; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "sociales",
+          "topic": "Geografía",
+          "subtopic": "Geografía humana"
+        },
+        {
+          "area": "sociales",
+          "topic": "Geografía",
+          "subtopic": "Geografía física"
+        },
+        {
+          "area": "sociales",
+          "topic": "Geografía",
+          "subtopic": "Husos horarios"
+        },
+        {
+          "area": "sociales",
+          "topic": "Geografía",
+          "subtopic": "Indicadores sociodemográficos"
+        }
+      ]
+    },
+    {
+      "block_id": "SOCIALES-04",
+      "reason": "Fundamentos y representaciones compartidos de Civismo; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "sociales",
+          "topic": "Civismo",
+          "subtopic": "Constitución y derechos"
+        }
+      ]
+    },
+    {
+      "block_id": "SOCIALES-05",
+      "reason": "Fundamentos y representaciones compartidos de Ciencias sociales; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "sociales",
+          "topic": "Ciencias sociales",
+          "subtopic": "Sociología"
+        },
+        {
+          "area": "sociales",
+          "topic": "Ciencias sociales",
+          "subtopic": "Filosofía"
+        },
+        {
+          "area": "sociales",
+          "topic": "Ciencias sociales",
+          "subtopic": "Antropología"
+        },
+        {
+          "area": "sociales",
+          "topic": "Ciencias sociales",
+          "subtopic": "Estratificación social"
+        },
+        {
+          "area": "sociales",
+          "topic": "Ciencias sociales",
+          "subtopic": "Instituciones sociales"
+        },
+        {
+          "area": "sociales",
+          "topic": "Ciencias sociales",
+          "subtopic": "Sociología política"
+        },
+        {
+          "area": "sociales",
+          "topic": "Ciencias sociales",
+          "subtopic": "Origen humano"
+        }
+      ]
+    },
+    {
+      "block_id": "BLANDAS-01",
+      "reason": "Fundamentos y representaciones compartidos de Toma de decisiones; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [],
+      "subtopics": [
+        {
+          "area": "blandas",
+          "topic": "Toma de decisiones",
+          "subtopic": "Pensamiento crítico"
+        },
+        {
+          "area": "blandas",
+          "topic": "Toma de decisiones",
+          "subtopic": "Resolución de problemas"
+        }
+      ]
+    },
+    {
+      "block_id": "BLANDAS-02",
+      "reason": "Fundamentos y representaciones compartidos de Convivencia; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "BLANDAS-01"
+      ],
+      "subtopics": [
+        {
+          "area": "blandas",
+          "topic": "Convivencia",
+          "subtopic": "Colaboración"
+        },
+        {
+          "area": "blandas",
+          "topic": "Convivencia",
+          "subtopic": "Comunicación asertiva"
+        },
+        {
+          "area": "blandas",
+          "topic": "Convivencia",
+          "subtopic": "Respeto"
+        }
+      ]
+    },
+    {
+      "block_id": "BLANDAS-03",
+      "reason": "Fundamentos y representaciones compartidos de Autogestión; delimitar objetivos PHUMA y complementos en plan específico, sin declarar cobertura oficial por pertenencia al catálogo.",
+      "depends_on": [
+        "BLANDAS-01"
+      ],
+      "subtopics": [
+        {
+          "area": "blandas",
+          "topic": "Autogestión",
+          "subtopic": "Responsabilidad"
+        },
+        {
+          "area": "blandas",
+          "topic": "Autogestión",
+          "subtopic": "Regulación emocional"
+        },
+        {
+          "area": "blandas",
+          "topic": "Autogestión",
+          "subtopic": "Ética"
+        }
+      ]
+    }
+  ]
+}

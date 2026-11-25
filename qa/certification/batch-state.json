@@ -47,15 +47,20 @@
     "legacy_cursor_role": "diagnostic_only_do_not_advance_as_certification"
   },
   "rdg_continuity": {
-    "active_subtopic": null,
-    "status": "PENDIENTE_PLANIFICACION_REAL",
+    "active_subtopic": {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Operaciones"
+    },
+    "status": "CANDIDATO_P1",
     "historical_evidence_preserved": true,
-    "active_block": null,
-    "operational_phase": "P0",
+    "active_block": "MAT-ARIT-01",
+    "operational_phase": "P1",
     "architecture_path": "qa/certification/rdg/architecture.json",
-    "plan_path": null,
-    "plan_sha256": null,
+    "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01.json",
+    "plan_sha256": "79f726777d06c0697dffdd34f24d84cc760abc30a0c8b220a42ecfcb8c107239",
     "external_research_required": true,
-    "research_status": "PENDIENTE_VERIFICACION_REAL"
+    "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
+    "next_action": "Verificar CI del candidato P1, pruebas de navegador y oráculo, revisión independiente de diseño y no contaminación del banco. Si cumple RDG_READY, congelar IDs de Operaciones para P2; no declarar PASS por este registro."
   }
 }
