@@ -1,0 +1,842 @@
+{
+  "revision": "R9",
+  "source_ci": 45709108878,
+  "source_job": 139538615689,
+  "publication_sha": "065e715386712ce09f1f91e1965d00b3cd68b852",
+  "summary": {
+    "changed": 18,
+    "unchanged": 432,
+    "reopened": 6,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-0",
+      "previous_sha256": "e747e651eac4450e7ee416766bd8f4aa6c8fb698787a224ccc087fb3642c2e8a",
+      "content_sha256": "88d17b89eeca246cc598b1e6262243bdf91216b3125e363b96863ffba7a76975",
+      "stimulus": "Calcula 72÷4×3−4. ¿Cuál es el resultado?",
+      "expected": "50",
+      "intermediate": 18,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve primero la división» es 18.",
+          "truth": true
+        },
+        {
+          "text": "El resultado correcto es 54.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la situación o expresión es 50.",
+          "truth": true
+        }
+      ],
+      "steps": [
+        {
+          "label": "Resuelve primero la división",
+          "choices": [
+            "68",
+            "72",
+            "18",
+            "288"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "54",
+            "14",
+            "58",
+            "50"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-1",
+      "previous_sha256": "c0f9c496f911cc5025f42064c1ecbf6558d9a5984c4fc05ade9b318cf22b550f",
+      "content_sha256": "03bc87821b7b9c7e45c0bfbf7a2eea2b5a4e12d4722770294b0d9d691ec0cd37",
+      "stimulus": "Calcula 105÷5×4−5. ¿Cuál es el resultado?",
+      "expected": "79",
+      "intermediate": 21,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El resultado de la situación o expresión es 79.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve primero la división» es 525.",
+          "truth": false
+        },
+        {
+          "text": "El resultado correcto es 84.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Resuelve primero la división",
+          "choices": [
+            "525",
+            "100",
+            "105",
+            "21"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "79",
+            "84",
+            "16",
+            "89"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-2",
+      "previous_sha256": "f18cc4cbb013f3332c5f34bd67eca2707b5a2373574cacf9532df5a674eb84a1",
+      "content_sha256": "76b206ebd0abccbe907f0f80ef21c1f6454c60b6e0aa13f8af2343ac8957fe37",
+      "stimulus": "Calcula 144÷6×5−6. ¿Cuál es el resultado?",
+      "expected": "114",
+      "intermediate": 24,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El resultado correcto es 120.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la situación o expresión es 114.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve primero la división» es 24.",
+          "truth": true
+        }
+      ],
+      "steps": [
+        {
+          "label": "Resuelve primero la división",
+          "choices": [
+            "24",
+            "864",
+            "138",
+            "144"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "126",
+            "114",
+            "120",
+            "18"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-0",
+      "previous_sha256": "5990f3f18b91c9cba729edd30654fdbe5a49ece24d891e1c7f820fade72d5502",
+      "content_sha256": "893fe1630340aef3efd4e463d4b06f6092e6b56528ff28958ea61791243b8715",
+      "stimulus": "Calcula 140÷5×4−5. ¿Cuál es el resultado?",
+      "expected": "107",
+      "intermediate": 28,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale 107.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 112.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 23.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Resuelve primero la división",
+          "choices": [
+            "28",
+            "700",
+            "135",
+            "140"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "117",
+            "107",
+            "112",
+            "23"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-1",
+      "previous_sha256": "1724ec42d89a0e7f573a7ce00ea8c0ab06624e5fe47afe3870e82c56f37eeb25",
+      "content_sha256": "fccbaea2da4c60b333d28e167f6ab4ed6bf17030b42785775fa3327c2e7ff33e",
+      "stimulus": "Calcula 186÷6×5−6. ¿Cuál es el resultado?",
+      "expected": "149",
+      "intermediate": 31,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale 149.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 155.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 25.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Resuelve primero la división",
+          "choices": [
+            "186",
+            "31",
+            "1116",
+            "180"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "25",
+            "161",
+            "149",
+            "155"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-principiante-2",
+      "previous_sha256": "c67ca4e6fa02dea31db1aa97322470a267183c3005fa488b7cdc44100b74dbc6",
+      "content_sha256": "d36764aa377adcbc6eae024e1adb9017d5295daacd82f9d4f16be84deb38ec70",
+      "stimulus": "Calcula 238÷7×6−7. ¿Cuál es el resultado?",
+      "expected": "197",
+      "intermediate": 34,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale 197.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 204.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 27.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Resuelve primero la división",
+          "choices": [
+            "231",
+            "238",
+            "34",
+            "1666"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "204",
+            "27",
+            "211",
+            "197"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-0",
+      "previous_sha256": "6b9eb186269b8ba0954e2a0da115431be519dec30f1aa41463b3b953c32785d2",
+      "content_sha256": "4cf9c894b5bb0a71cf03520e73e8e404a36ac015c1017458fccfb4c01fe67b5c",
+      "stimulus": "Una bodega tiene 18 cajas con 9 piezas cada una. Retira 3 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "165",
+      "intermediate": 15,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El resultado de la situación o expresión es 165.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula cuántas cajas quedan» es 15.",
+          "truth": true
+        },
+        {
+          "text": "El resultado correcto es 198.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "3",
+            "15",
+            "21",
+            "18"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "135",
+            "137",
+            "165",
+            "198"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-1",
+      "previous_sha256": "161fd80d1b62f0d0138b5595fb64cfba0a9dffa8a42ff00668ac5064418887e3",
+      "content_sha256": "c6dde0dd6d71891cfacd74e7d234268f0c3768e7283b341c22a8b56432b2fbec",
+      "stimulus": "Una bodega tiene 21 cajas con 10 piezas cada una. Retira 4 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "204",
+      "intermediate": 17,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El resultado correcto es 252.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la situación o expresión es 204.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula cuántas cajas quedan» es 25.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "21",
+            "4",
+            "17",
+            "25"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "252",
+            "170",
+            "172",
+            "204"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-2",
+      "previous_sha256": "dadbd268741da2f3e24e7ee51c2dbd30b74bb9435b2945e7a29983d8502beaec",
+      "content_sha256": "c25931046a7f473e4ebea40e9c2195aa0c3c2c26d3ca4d645521365e1c628b3b",
+      "stimulus": "Una bodega tiene 24 cajas con 11 piezas cada una. Retira 5 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "247",
+      "intermediate": 19,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula cuántas cajas quedan» es 19.",
+          "truth": true
+        },
+        {
+          "text": "El resultado correcto es 312.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la situación o expresión es 247.",
+          "truth": true
+        }
+      ],
+      "steps": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "29",
+            "24",
+            "5",
+            "19"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "247",
+            "312",
+            "209",
+            "211"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-0",
+      "previous_sha256": "2762f070de6d2159d952ba18b86d80bc512ca3632a54cb0df14b5bf8c1896889",
+      "content_sha256": "86c7bd68a5c01e20af7ab5f185798f922f2a8a0bb3983f605b07287d67c68da3",
+      "stimulus": "Una bodega tiene 28 cajas con 10 piezas cada una. Retira 4 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "288",
+      "intermediate": 24,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale 288.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 336.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 240.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "32",
+            "28",
+            "4",
+            "24"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "288",
+            "336",
+            "240",
+            "242"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-1",
+      "previous_sha256": "e487c3c528b475618b3389ba6246fb5c3d044b5d0f16f983b0c8ed44c630962d",
+      "content_sha256": "a9bef1d91dcd62ea3ab9bc7f50b5b3c838587fe42f31bd30c8eeb8700847acf2",
+      "stimulus": "Una bodega tiene 31 cajas con 11 piezas cada una. Retira 5 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "338",
+      "intermediate": 26,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale 338.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 403.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 286.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "26",
+            "36",
+            "31",
+            "5"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "288",
+            "338",
+            "403",
+            "286"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-2",
+      "previous_sha256": "e1c5d567cc1132dc540740591164c7f98f33b22481d889719ab9f165eeff5665",
+      "content_sha256": "188e096d99b50425e132de880f49d5f39e8f4f7fed377e2efc7ca8ae39c94598",
+      "stimulus": "Una bodega tiene 34 cajas con 12 piezas cada una. Retira 6 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "392",
+      "intermediate": 28,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale 392.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 476.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 336.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "6",
+            "28",
+            "40",
+            "34"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "336",
+            "338",
+            "392",
+            "476"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-0",
+      "previous_sha256": "2fc60c2feb05ae9d6d47bbb4d5f9146106ece4affff94d5f94e03b46463d0bfe",
+      "content_sha256": "0754b4e0c9295958e033d99ab0ad13e76dbf85c565916cac2522377b91d97571",
+      "stimulus": "Simplifica 3×(18−4)−3×18. ¿Qué valor se obtiene?",
+      "expected": "-12",
+      "intermediate": 4,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El resultado correcto es 12.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la situación o expresión es -12.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Identifica el sumando cuyo producto permanece con signo negativo» es 4.",
+          "truth": true
+        }
+      ],
+      "steps": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "4",
+            "18",
+            "14",
+            "0"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "42",
+            "-12",
+            "12",
+            "0"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-1",
+      "previous_sha256": "37339f1d55d418131622dd44a991b7cae1281bdcbd1e8e9c676f5dd8f707ac61",
+      "content_sha256": "0f9787309eb777c9ac13c72c73fcf16099daa635ba016b56b4ad8790b006964a",
+      "stimulus": "Simplifica 4×(21−5)−4×21. ¿Qué valor se obtiene?",
+      "expected": "-20",
+      "intermediate": 5,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Identifica el sumando cuyo producto permanece con signo negativo» es 21.",
+          "truth": false
+        },
+        {
+          "text": "El resultado correcto es 20.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la situación o expresión es -20.",
+          "truth": true
+        }
+      ],
+      "steps": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "0",
+            "5",
+            "21",
+            "16"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "0",
+            "64",
+            "-20",
+            "20"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-2",
+      "previous_sha256": "737fa9368103751dcac02e7de43f08fecefda8e7376c7a20e303fa88e88fdc4f",
+      "content_sha256": "a805d377b8f1766ac9a8b7821ba238931f4e42c7879d5683cfbe48765341aa93",
+      "stimulus": "Simplifica 5×(24−6)−5×24. ¿Qué valor se obtiene?",
+      "expected": "-30",
+      "intermediate": 6,
+      "mode": "clasificar",
+      "assertions": [
+        {
+          "text": "El resultado de la situación o expresión es -30.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Identifica el sumando cuyo producto permanece con signo negativo» es 6.",
+          "truth": true
+        },
+        {
+          "text": "El resultado correcto es 30.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "18",
+            "0",
+            "6",
+            "24"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "30",
+            "0",
+            "90",
+            "-30"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-0",
+      "previous_sha256": "805458a3c8a5e200836bbc3a27826d2ab842db26f0f5423c48b71f44e1ed8741",
+      "content_sha256": "109a0c3c3d650967af7659962accc6e8fffd82233aa19528daa0de206c73c31b",
+      "stimulus": "Simplifica 4×(28−5)−4×28. ¿Qué valor se obtiene?",
+      "expected": "-20",
+      "intermediate": 5,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale -20.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 20.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 0.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "23",
+            "0",
+            "5",
+            "28"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "20",
+            "0",
+            "92",
+            "-20"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-1",
+      "previous_sha256": "7de0e4a40b0a8a9c06e22c129a76a2fbb868525ec7890d792e5e5ebc6ba7cc49",
+      "content_sha256": "af7f8d647d34a5b5066f0668d91ee15010152304002ccfe76712ffa302a61299",
+      "stimulus": "Simplifica 5×(31−6)−5×31. ¿Qué valor se obtiene?",
+      "expected": "-30",
+      "intermediate": 6,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale -30.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 30.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 0.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "31",
+            "25",
+            "0",
+            "6"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-30",
+            "30",
+            "0",
+            "125"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-2",
+      "previous_sha256": "f834aee315649dd0f88ebd8324def2813ba4018dfd8fc680d963e09962175075",
+      "content_sha256": "f131ad69814e0d304629e555fb8011a496f38be9f592406328fa59322089c397",
+      "stimulus": "Simplifica 6×(34−7)−6×34. ¿Qué valor se obtiene?",
+      "expected": "-42",
+      "intermediate": 7,
+      "mode": "construir",
+      "assertions": [
+        {
+          "text": "La expresión solicitada vale -42.",
+          "truth": true
+        },
+        {
+          "text": "El resultado es 42.",
+          "truth": false
+        },
+        {
+          "text": "El resultado es 0.",
+          "truth": false
+        }
+      ],
+      "steps": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "7",
+            "34",
+            "27",
+            "0"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "162",
+            "-42",
+            "42",
+            "0"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "semantic_status": "REVIEW"
+    }
+  ]
+}

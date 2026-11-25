@@ -1,0 +1,767 @@
+{
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "revision": "R9",
+  "status": "REVIEW_PENDING_RUNTIME",
+  "source_head": "065e715386712ce09f1f91e1965d00b3cd68b852",
+  "source_ci": 45709108878,
+  "method": "Cotejo de hashes históricos con logs CI R4/R5/R9; estímulos reconstruidos y decisiones comprobadas independientemente.",
+  "summary": {
+    "examined": 6,
+    "claims_verified": 18,
+    "distractors_verified": 0,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-0",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "52691cce53eb8e6c03df88f7cbf67c1ed3c026c98f011f60338297871eccc04f",
+      "previous_revision_sha256": "2fc60c2feb05ae9d6d47bbb4d5f9146106ece4affff94d5f94e03b46463d0bfe",
+      "content_sha256": "0754b4e0c9295958e033d99ab0ad13e76dbf85c565916cac2522377b91d97571",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Simplifica 3×(18−4)−3×18. ¿Qué valor se obtiene?",
+      "expected": "-12",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Cálculo independiente por sumas repetidas, división por restas, o diferencia de productos; comparación con CI",
+        "operands": [
+          3,
+          18,
+          4,
+          3,
+          18
+        ],
+        "answer": -12,
+        "intermediate": 4
+      },
+      "assertions": [
+        {
+          "text": "El resultado correcto es 12.",
+          "truth": false,
+          "value": 12,
+          "correct": -12,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: -12; valor afirmado 12."
+        },
+        {
+          "text": "El resultado de la situación o expresión es -12.",
+          "truth": true,
+          "value": -12,
+          "correct": -12,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: -12; valor afirmado -12."
+        },
+        {
+          "text": "El valor correcto del paso «Identifica el sumando cuyo producto permanece con signo negativo» es 4.",
+          "truth": true,
+          "value": 4,
+          "correct": 4,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: 4; valor afirmado 4."
+        }
+      ],
+      "construction": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "4",
+            "18",
+            "14",
+            "0"
+          ],
+          "correct": "4"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "42",
+            "-12",
+            "12",
+            "0"
+          ],
+          "correct": "-12"
+        }
+      ],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R7/R9."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Familia nueva o existente con variantes numéricas; independencia conceptual del banco no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-1",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "598e1c228aa585e366e1b0a6eb6042f805402cd7092707fd7a5a863e00025427",
+      "previous_revision_sha256": "37339f1d55d418131622dd44a991b7cae1281bdcbd1e8e9c676f5dd8f707ac61",
+      "content_sha256": "0f9787309eb777c9ac13c72c73fcf16099daa635ba016b56b4ad8790b006964a",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Simplifica 4×(21−5)−4×21. ¿Qué valor se obtiene?",
+      "expected": "-20",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Cálculo independiente por sumas repetidas, división por restas, o diferencia de productos; comparación con CI",
+        "operands": [
+          4,
+          21,
+          5,
+          4,
+          21
+        ],
+        "answer": -20,
+        "intermediate": 5
+      },
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Identifica el sumando cuyo producto permanece con signo negativo» es 21.",
+          "truth": false,
+          "value": 21,
+          "correct": 5,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: 5; valor afirmado 21."
+        },
+        {
+          "text": "El resultado correcto es 20.",
+          "truth": false,
+          "value": 20,
+          "correct": -20,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: -20; valor afirmado 20."
+        },
+        {
+          "text": "El resultado de la situación o expresión es -20.",
+          "truth": true,
+          "value": -20,
+          "correct": -20,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: -20; valor afirmado -20."
+        }
+      ],
+      "construction": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "0",
+            "5",
+            "21",
+            "16"
+          ],
+          "correct": "5"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "0",
+            "64",
+            "-20",
+            "20"
+          ],
+          "correct": "-20"
+        }
+      ],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R7/R9."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Familia nueva o existente con variantes numéricas; independencia conceptual del banco no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-2",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "81573f11e887fd1dc91a4f4ae9e11bce6d1fac60ebf9633e9d00ec2d778d330b",
+      "previous_revision_sha256": "737fa9368103751dcac02e7de43f08fecefda8e7376c7a20e303fa88e88fdc4f",
+      "content_sha256": "a805d377b8f1766ac9a8b7821ba238931f4e42c7879d5683cfbe48765341aa93",
+      "objective_ids": [
+        "OP-03"
+      ],
+      "mode": "clasificar",
+      "level": "avanzado",
+      "stimulus": "Simplifica 5×(24−6)−5×24. ¿Qué valor se obtiene?",
+      "expected": "-30",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Cálculo independiente por sumas repetidas, división por restas, o diferencia de productos; comparación con CI",
+        "operands": [
+          5,
+          24,
+          6,
+          5,
+          24
+        ],
+        "answer": -30,
+        "intermediate": 6
+      },
+      "assertions": [
+        {
+          "text": "El resultado de la situación o expresión es -30.",
+          "truth": true,
+          "value": -30,
+          "correct": -30,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: -30; valor afirmado -30."
+        },
+        {
+          "text": "El valor correcto del paso «Identifica el sumando cuyo producto permanece con signo negativo» es 6.",
+          "truth": true,
+          "value": 6,
+          "correct": 6,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: 6; valor afirmado 6."
+        },
+        {
+          "text": "El resultado correcto es 30.",
+          "truth": false,
+          "value": 30,
+          "correct": -30,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: -30; valor afirmado 30."
+        }
+      ],
+      "construction": [
+        {
+          "label": "Identifica el sumando cuyo producto permanece con signo negativo",
+          "choices": [
+            "18",
+            "0",
+            "6",
+            "24"
+          ],
+          "correct": "6"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "30",
+            "0",
+            "90",
+            "-30"
+          ],
+          "correct": "-30"
+        }
+      ],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R7/R9."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Familia nueva o existente con variantes numéricas; independencia conceptual del banco no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-0",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "69fa33148e7bd055ce917ba5b7e8df4c55231d14b5383499769bc135d51f2381",
+      "previous_revision_sha256": "6b9eb186269b8ba0954e2a0da115431be519dec30f1aa41463b3b953c32785d2",
+      "content_sha256": "4cf9c894b5bb0a71cf03520e73e8e404a36ac015c1017458fccfb4c01fe67b5c",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "Una bodega tiene 18 cajas con 9 piezas cada una. Retira 3 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "165",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Cálculo independiente por sumas repetidas, división por restas, o diferencia de productos; comparación con CI",
+        "operands": [
+          18,
+          9,
+          3,
+          2
+        ],
+        "answer": 165,
+        "intermediate": 15
+      },
+      "assertions": [
+        {
+          "text": "El resultado de la situación o expresión es 165.",
+          "truth": true,
+          "value": 165,
+          "correct": 165,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: 165; valor afirmado 165."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula cuántas cajas quedan» es 15.",
+          "truth": true,
+          "value": 15,
+          "correct": 15,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: 15; valor afirmado 15."
+        },
+        {
+          "text": "El resultado correcto es 198.",
+          "truth": false,
+          "value": 198,
+          "correct": 165,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: 165; valor afirmado 198."
+        }
+      ],
+      "construction": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "3",
+            "15",
+            "21",
+            "18"
+          ],
+          "correct": "15"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "135",
+            "137",
+            "165",
+            "198"
+          ],
+          "correct": "165"
+        }
+      ],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R7/R9."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Familia nueva o existente con variantes numéricas; independencia conceptual del banco no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-1",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "3183be643b66950646db84369820c58f39d59e10b9f6a00c7a602ad5f3b85beb",
+      "previous_revision_sha256": "161fd80d1b62f0d0138b5595fb64cfba0a9dffa8a42ff00668ac5064418887e3",
+      "content_sha256": "c6dde0dd6d71891cfacd74e7d234268f0c3768e7283b341c22a8b56432b2fbec",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "Una bodega tiene 21 cajas con 10 piezas cada una. Retira 4 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "204",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Cálculo independiente por sumas repetidas, división por restas, o diferencia de productos; comparación con CI",
+        "operands": [
+          21,
+          10,
+          4,
+          2
+        ],
+        "answer": 204,
+        "intermediate": 17
+      },
+      "assertions": [
+        {
+          "text": "El resultado correcto es 252.",
+          "truth": false,
+          "value": 252,
+          "correct": 204,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: 204; valor afirmado 252."
+        },
+        {
+          "text": "El resultado de la situación o expresión es 204.",
+          "truth": true,
+          "value": 204,
+          "correct": 204,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: 204; valor afirmado 204."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula cuántas cajas quedan» es 25.",
+          "truth": false,
+          "value": 25,
+          "correct": 17,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: 17; valor afirmado 25."
+        }
+      ],
+      "construction": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "21",
+            "4",
+            "17",
+            "25"
+          ],
+          "correct": "17"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "252",
+            "170",
+            "172",
+            "204"
+          ],
+          "correct": "204"
+        }
+      ],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R7/R9."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Familia nueva o existente con variantes numéricas; independencia conceptual del banco no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-2",
+      "batch_id": "MAT-ARIT-01-07",
+      "previous_sha256": "af0642eca4f03ac2ea0d7c5fe9bbdf958b3cd1c256671d680570a943dc5f8648",
+      "previous_revision_sha256": "dadbd268741da2f3e24e7ee51c2dbd30b74bb9435b2945e7a29983d8502beaec",
+      "content_sha256": "c25931046a7f473e4ebea40e9c2195aa0c3c2c26d3ca4d645521365e1c628b3b",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "mode": "clasificar",
+      "level": "intermedio",
+      "stimulus": "Una bodega tiene 24 cajas con 11 piezas cada una. Retira 5 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?",
+      "expected": "247",
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Cálculo independiente por sumas repetidas, división por restas, o diferencia de productos; comparación con CI",
+        "operands": [
+          24,
+          11,
+          5,
+          2
+        ],
+        "answer": 247,
+        "intermediate": 19
+      },
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula cuántas cajas quedan» es 19.",
+          "truth": true,
+          "value": 19,
+          "correct": 19,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: 19; valor afirmado 19."
+        },
+        {
+          "text": "El resultado correcto es 312.",
+          "truth": false,
+          "value": 312,
+          "correct": 247,
+          "oracle_truth": false,
+          "reason": "Evaluación independiente: 247; valor afirmado 312."
+        },
+        {
+          "text": "El resultado de la situación o expresión es 247.",
+          "truth": true,
+          "value": 247,
+          "correct": 247,
+          "oracle_truth": true,
+          "reason": "Evaluación independiente: 247; valor afirmado 247."
+        }
+      ],
+      "construction": [
+        {
+          "label": "Calcula cuántas cajas quedan",
+          "choices": [
+            "29",
+            "24",
+            "5",
+            "19"
+          ],
+          "correct": "19"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "247",
+            "312",
+            "209",
+            "211"
+          ],
+          "correct": "247"
+        }
+      ],
+      "distractors": [],
+      "source": "PHUMA-UNAH-2026 p. física 7, 54, 56; calibración cualitativa",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PENDING_RUNTIME_RECONCILIATION",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo cubierto por contrato R3."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Clave y decisión comprobadas por cálculo independiente; sucesión hash contrastada con CI."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Afirmaciones contrastadas numéricamente; una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado explícito y datos completos."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Razones causales verificadas en CI R7/R9."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Progresión cualitativa del contrato."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Familia nueva o existente con variantes numéricas; independencia conceptual del banco no demostrada."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto no depende de color; falta validación física."
+        }
+      }
+    }
+  ]
+}
