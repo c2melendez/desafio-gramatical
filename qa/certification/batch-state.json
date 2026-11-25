@@ -52,15 +52,22 @@
       "topic": "Aritmética",
       "subtopic": "Operaciones"
     },
-    "status": "CANDIDATO_P1",
+    "status": "CANDIDATO_P1_R2",
     "historical_evidence_preserved": true,
     "active_block": "MAT-ARIT-01",
     "operational_phase": "P1",
     "architecture_path": "qa/certification/rdg/architecture.json",
     "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01.json",
-    "plan_sha256": "79f726777d06c0697dffdd34f24d84cc760abc30a0c8b220a42ecfcb8c107239",
+    "plan_sha256": "347e12b3b2c6c275f8574ca208dbec75c4b9e500961ad264b8cc6d4ccbce7b9b",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI del candidato P1, pruebas de navegador y oráculo, revisión independiente de diseño y no contaminación del banco. Si cumple RDG_READY, congelar IDs de Operaciones para P2; no declarar PASS por este registro."
+    "next_action": "Reconciliar ejecución CI de R2, evidencia de contraste de 450 IDs y navegador, revisión de suficiencia y no contaminación del examen. Congelar RDG_READY solo si cumple; OP-04 ausente del banco es deuda P2, no ID certificado.",
+    "previous_publication": {
+      "sha": "404305e9a75ec8263b7570f977b4da4776a55f39",
+      "ci_run": 45682422505,
+      "ci": "SUCCESS",
+      "render_deploy": "dep-dc3j4umtlv9c73f196hg",
+      "render": "LIVE"
+    }
   }
 }
