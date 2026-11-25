@@ -199,7 +199,7 @@
     "full_PAA_simulation",
     "full_PHUMA_simulation"
   ],
-  "active_prompt_version": "7.7",
+  "active_prompt_version": "7.8",
   "intervention_policy": {
     "mode": "CORRECTIVE_INCREMENTAL",
     "priority": [
@@ -234,6 +234,19 @@
     "first_button": true,
     "optional_access": true,
     "quota_per_run": null,
-    "max_technical_subbatch": 450
+    "max_technical_subbatch": 450,
+    "operational_unit": "coherent_block",
+    "phases": [
+      "P0_PLANIFICAR",
+      "P1_IMPLEMENTAR",
+      "P2_CERTIFICAR"
+    ],
+    "phase_gates": [
+      "G-DISEÑO",
+      "G-REPASO",
+      "G-CERTIFICACIÓN"
+    ],
+    "planning_counts_as": "design_only_validated_new_artifact",
+    "phase_transitions": "evidence_based_no_artificial_pause"
   }
 }

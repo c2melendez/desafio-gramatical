@@ -1,4 +1,4 @@
-> **ARCHIVO HISTÓRICO — NO EJECUTAR.** Sustituido por [v7.7](Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Se conserva el contenido histórico sin autoridad operativa.
+> **ARCHIVO HISTÓRICO — NO EJECUTAR.** Sustituido por [v7.8](Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Se conserva el contenido histórico sin autoridad operativa.
 
 # Academia PHUMA Play — Sistema de ejecución autónoma por módulos + Certificación PAA/PHUMA
 
@@ -504,4 +504,4 @@ Esta ampliación es **obligatoria para todos los próximos módulos y áreas** d
 
 La política incorpora la revisión adicional del 17 de noviembre de 2026 sobre Comunicación y Español. Se detectaron y abordaron indicios ordinales en construcción M2/M3; las lecturas M3 pasaron de tres bloques anidados de dos textos (seis fuentes en total) a tres textos originales A/B/C con trazabilidad de sus claves. La reducción de carga cognitiva no constituye aprobación docente de las preguntas. Los controles heurísticos no reemplazan una lectura docente caso por caso.
 
-**v7.7 — Prioridad vinculante:** la unidad de avance es el subtema. Fuentes PHUMA → Ruta de Descubrimiento Guiado funcional → contrato RDG_READY → auditoría correctiva de sus IDs → transferencia y paridad. No hay cuota de 450 por corrida; es solo techo técnico de sublote. Los lotes globales legados son diagnóstico, no certificación semántica. Repaso primero, juegos después; conservar lo válido y atender defectos críticos transversales sin inflar avance.
+**v7.8 — Prioridad vinculante:** unidad pedagógica = subtema; unidad operativa = bloque coherente. P0 PLANIFICAR (G-DISEÑO) → P1 IMPLEMENTAR RDG (G-REPASO) → P2 CERTIFICAR juegos e IDs asociados (G-CERTIFICACIÓN). Encadenar fases en el menor número posible de corridas, reutilizar fuentes/planes vigentes y motor común. No hay cuota de 450 por corrida. Solo P0 con artefacto ejecutable nuevo y validación real cuenta como DISEÑO, nunca producto ni certificación. Consultar `qa/certification/rdg/README.md`.

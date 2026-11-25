@@ -1,6 +1,6 @@
 # Certificación académica y funcional — Academia PHUMA Play
 
-> **Sistema maestro vigente:** [Ejecutor v7.7](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Sin cuota de IDs por corrida; los sublotes técnicos admiten hasta 450 IDs asociados. Los controles descritos abajo son implementación histórica salvo verificación actual.
+> **Sistema maestro vigente:** [Ejecutor v7.8](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Sin cuota de IDs por corrida; los sublotes técnicos admiten hasta 450 IDs asociados. Los controles descritos abajo son implementación histórica salvo verificación actual.
 
 ## Fundamento documental y límites
 
@@ -105,18 +105,18 @@ Un lote solo queda **técnicamente entregado** cuando su auditoría y la regresi
 La cobertura total de 90 lotes no sustituye calibración psicométrica, revisión por especialistas ni los simulacros reales PAA/PHUMA separados.
 
 
-## v7.7: controles de ejecución
+## v7.8: controles de ejecución
 `python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py'` comprueba el guard local. `python3 qa/certification/verify_sources.py` comprueba los bytes de los PDF, no su interpretación ni derechos. El control de CI no autentica por sí solo evidencia semántica/docente. El cursor legado se conserva sin promover REVIEW a PASS; seleccionar lotes adaptativos por IDs y hashes bajo v7.6.
 
 ### Selección adaptativa ejecutable
 `PHUMA_FROZEN_BATCH=/ruta/lote.json node --import ./scripts/ts-resolve.mjs qa/certification/audit-450.mjs` acepta un manifiesto RDG_READY del subtema activo, con IDs y objetivos vinculados (hasta 450 por sublote técnico). Rechaza hashes obsoletos e IDs inexistentes. Sin variable conserva el recorrido histórico de CI; no modifica el cursor ni aprueba semántica.
 
-**v7.7 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.
+**v7.8 — Conservación del producto:** certificar el banco existente aplicando §0.1; auditorías compartidas por alcance y hash, revisión individual por ID y corrección inmediata. No reiniciar módulos ni regenerar bancos válidos. El Modo Repaso se conserva o completa según brechas verificadas.
 
-### Verificación de intervención mínima (v7.7)
+### Verificación de intervención mínima (v7.8)
 G-ACTION comprueba que cambios bajo `src/` estén asociados a `interventions[]` con `scope`, `action`, `affected_paths`, `justification`, `finding_ref` y `evidence_ref` referidos a artefactos registrados. `SUSTITUIR`/`CREAR` exigen `why_minimal_insufficient`. Es un control estructural local; no demuestra por sí solo la necesidad pedagógica ni sustituye el oráculo/revisión independiente. Conservar el código válido no exige modificarlo. Se mantienen los criterios y evidencias históricos compatibles.
 
-**v7.7 — Prioridad vinculante:** la unidad de avance es el subtema. Fuentes PHUMA → Ruta de Descubrimiento Guiado funcional → contrato RDG_READY → auditoría correctiva de sus IDs → transferencia y paridad. No hay cuota de 450 por corrida; es solo techo técnico de sublote. Los lotes globales legados son diagnóstico, no certificación semántica. Repaso primero, juegos después; conservar lo válido y atender defectos críticos transversales sin inflar avance.
+**v7.8 — Prioridad vinculante:** unidad pedagógica = subtema; unidad operativa = bloque coherente. P0 PLANIFICAR (G-DISEÑO) → P1 IMPLEMENTAR RDG (G-REPASO) → P2 CERTIFICAR juegos e IDs asociados (G-CERTIFICACIÓN). Encadenar fases en el menor número posible de corridas, reutilizar fuentes/planes vigentes y motor común. No hay cuota de 450 por corrida. Solo P0 con artefacto ejecutable nuevo y validación real cuenta como DISEÑO, nunca producto ni certificación. Consultar `qa/certification/rdg/README.md`.
 
-### Contrato ejecutable v7.7
+### Contrato ejecutable v7.8
 El manifiesto congelado requiere `subtopic_scope:{area,topic,subtopic}`, `rdg_contract:{status:'RDG_READY',subtopic_scope,route_path,route_sha256,objective_ids,evidence_ref}`, `items:[{id,content_sha256,objective_ids}]`. El auditor comprueba coincidencia del subtema y objetivos, hash de ruta en HEAD y del contenido de cada ID. El guard exige fase `CERTIFICACION_ASOCIADA_EN_CURSO`, contrato y vínculo por ID para PASS_SEMANTIC. Estos son controles estructurales; la evidencia de fuente, validez disciplinar, pruebas C09 y aprobación independiente siguen siendo obligatorias. El recorrido por offset sin manifiesto es diagnóstico técnico legado, no autoriza avanzar el cursor pedagógico. No existen rutas READY por el mero hecho de activar esta política.
