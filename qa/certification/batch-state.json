@@ -61,7 +61,7 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Conciliar PR #59/#60 y CI/LIVE. Verificar CI de lote 04 y 44 sucesores R5. Extender corrección de clasificación a M1/M2 sin modificar estímulos válidos; reabrir solo hashes afectados. Ampliar diversidad/profundidad y feedback intermedio. Continuar lote 05.",
+    "next_action": "Verificar CI corregido lote05/R7 y R8/lote06, registrar hashes sucesores y publicación efectiva; ampliar familias por cada juego/nivel, seguir lote07 y reevaluar diversidad cognitiva; sin PASS artificial.",
     "previous_publication": {
       "sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f",
       "candidate_ci_run": 45697495623,
@@ -116,7 +116,7 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-09.json"
     ],
     "selection_total": 450,
-    "examined_semantic_ids": 200,
+    "examined_semantic_ids": 300,
     "semantic_pass_ids": 0,
     "review_ids": 450,
     "review_evidence": [
@@ -127,13 +127,18 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-feedback-recheck.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-03-R4-review-candidate.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-02-R4-recheck.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-04-R5-review.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-04-R5-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-01",
       "MAT-ARIT-01-02",
       "MAT-ARIT-01-03",
-      "MAT-ARIT-01-04"
+      "MAT-ARIT-01-04",
+      "MAT-ARIT-01-05",
+      "MAT-ARIT-01-06"
     ],
     "r4_revision": {
       "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-successors.json",
@@ -161,15 +166,62 @@
       "source_job": 139518528517,
       "candidate_sha": "6200b56fed2f9bbab964a1293096453be80ca48a",
       "candidate_ci": "SUCCESS",
-      "publication": "PENDING"
+      "publication": "MERGED_RENDER_PENDING",
+      "publication_sha": "f42cd6880c4e69745d68dfcda2edc65c4c589061",
+      "publication_ci_candidate": 45704441186,
+      "render_deploy": "dep-dc3l92m0tbcc73c0mlsg"
     },
     "lote04": {
       "examined": 50,
       "claims_verified": 150,
       "review": 50,
       "semantic_pass": 0,
-      "runtime_ci": "PENDING",
+      "runtime_ci": "SUCCESS_45704441186",
       "fixed_pattern_debt": 47
+    },
+    "r6_revision": {
+      "candidate_sha": "372c995c9b5fe45b24c0483adbf1e196a65531de",
+      "candidate_ci": 45705816217,
+      "changed": 100,
+      "unchanged": 350,
+      "claims_verified": 300,
+      "previously_reviewed_reopened_and_reexamined": 92,
+      "new_lote05": 8,
+      "runtime_ci": "PENDING",
+      "publication": "MERGED",
+      "candidate_ci_status": "SUCCESS_45705816217",
+      "publication_sha": "95b1317aa042559f947a81c5f95e18ca0c6ed0d2"
+    },
+    "lote05": {
+      "examined": 50,
+      "classification": 8,
+      "construction": 42,
+      "claims_verified": 24,
+      "distractors_verified": 252,
+      "review": 50,
+      "semantic_pass": 0,
+      "runtime_ci": "PENDING"
+    },
+    "r7_revision": {
+      "specific_suite": "864 decisions + UI passed in 45706139665",
+      "global_ci": "FAIL_ESLINT_LOTE05_FIXED_PENDING_RECHECK",
+      "candidate_sha": "e2102985859f17f34e97977a1c1963ac55a16dbd"
+    },
+    "r8_revision": {
+      "candidate_sha": "3a333aafd1aa8fe0d05d0ffd85e7a140fa05a4f9",
+      "changed": 9,
+      "unchanged": 441,
+      "families": 3,
+      "collision_checks": 54,
+      "ci": "PENDING",
+      "publication": "PENDING"
+    },
+    "lote06": {
+      "examined": 50,
+      "distractors_verified": 300,
+      "review": 50,
+      "semantic_pass": 0,
+      "runtime_ci": "PENDING"
     }
   }
 }

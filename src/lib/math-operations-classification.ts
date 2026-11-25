@@ -31,3 +31,27 @@ export function repairOperationClassification(item:MathModel):MathModel{
  const shift=item.seed%3;
  return {...item,assertions:[...claims.slice(shift),...claims.slice(0,shift)]};
 }
+
+/** Feedback for the revised assertion schema; legacy and rational claims retain their own explanations. */
+export function operationClassificationReason(item:MathModel,text:string):string|undefined{
+ if(item.subtopic!=="Operaciones"||item.oracle.kind!=="Operaciones")return undefined;
+ const [u,v,w]=item.oracle.inputs,answer=item.expected,step=item.oracle.intermediate.n;
+ if(text.startsWith("El valor de la expresión solicitada es ")){
+  const claimed=text.match(/(-?\d+)\.$/)?.[1];
+  if(claimed===undefined)return undefined;
+  const procedure=item.level==="avanzado"?`Al cancelar los productos iguales queda ${v}×${w}=${answer}.`:`Al respetar el paréntesis, (${u}+${v})×${w}=${answer}.`;
+  return procedure+` El valor afirmado es ${claimed}; ${claimed===answer?"coincide":"no coincide"} con el valor correcto.`;
+ }
+ if(text.startsWith("La expresión solicitada equivale a ")){
+  const m=text.match(/a (-?\d+)×(\d+)(?:\+(\d+)×(\d+))?\.$/);
+  if(!m)return undefined;
+  const value=Number(m[1])*Number(m[2])+(m[3]?Number(m[3])*Number(m[4]):0);
+  return `La expresión propuesta vale ${value} y la solicitada vale ${answer}; ${String(value)===answer?"son equivalentes porque conservan":"no son equivalentes porque alteran"} el resultado. `+(item.level==="avanzado"?"Cancelar términos opuestos no cambia el signo del término restante.":"La distributiva exige multiplicar ambos sumandos por el factor común.");
+ }
+ if(text.startsWith("La suma dentro del paréntesis es ")||text.startsWith("Después de los cambios, la suma dentro del paréntesis es ")||text.startsWith("Después de distribuir y cancelar el producto repetido, el sumando restante es ")){
+  const claimed=text.match(/(-?\d+)\.$/)?.[1];
+  if(claimed===undefined)return undefined;
+  return (item.level==="avanzado"?`Solo se cancela el primer producto; el sumando restante es ${step}.`:`Se deben sumar los dos operandos vigentes: ${u}+${v}=${step}.`)+` El valor afirmado es ${claimed}; ${claimed===String(step)?"coincide":"no coincide"} con el paso correcto.`;
+ }
+ return undefined;
+}

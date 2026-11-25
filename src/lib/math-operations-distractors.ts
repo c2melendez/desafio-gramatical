@@ -12,6 +12,30 @@ function choices(correct:number, errors:ErrorChoice[], seed:number){
  return {choices:ordered,answerIndex:ordered.indexOf(String(correct)),reasons:Object.fromEntries(selected.map(([v,r])=>[String(v),r]))};
 }
 
+export function operationStepErrors(item:MathModel):ErrorChoice[]{
+ if(item.oracle.kind!=="Operaciones"||item.subtopic!=="Operaciones")return [];
+ const [u,v]=item.oracle.inputs,advanced=item.level==="avanzado";
+ const match=item.prompt.match(/\((\d+)\+(\d+)\)×(\d+)/);
+ if(!match)return [];
+ const a=Number(match[1]),b=Number(match[2]);
+ return advanced?[
+  [-b,"Cancelar el primer producto no invierte el signo del segundo."],
+  [a+b,"Se conservaron ambos sumandos aunque el primero debe cancelarse."],
+  [0,"Se cancelaron ambos sumandos sin justificación."],
+  [a,"Se retuvo el sumando que debía cancelarse."]
+ ]:[
+  [u-v,"Se restaron los sumandos en vez de sumarlos."],
+  [u*v,"Se multiplicaron los sumandos dentro del paréntesis."],
+  [u,"Se omitió el segundo sumando."],
+  [v,"Se omitió el primer sumando."]
+ ];
+
+}
+export function operationStepReason(item:MathModel,chosen:string):string|undefined{
+ if(chosen===String(item.oracle.intermediate.n))return undefined;
+ return operationStepErrors(item).find(([n])=>String(n)===chosen)?.[1];
+}
+
 /** P2 corrective overlay: preserve original stimulus, ID, seed, oracle and claims.
  * Only the quiz and construction modalities consume numeric alternatives.
  * OP-04 already has misconception-driven final alternatives and is out of scope. */
@@ -36,17 +60,7 @@ export function repairOperationDistractors(item:MathModel):MathModel{
   [(u-v)*w,"Se sustituyó la suma del paréntesis por una resta."],
   ...(item.level==="intermedio"?[[ (a+b)*c,"Se mantuvieron ambos operandos originales sin aplicar los cambios."]] as ErrorChoice[]:[])
  ];
- const stepErrors:ErrorChoice[]=advanced?[
-  [-b,"Cancelar el primer producto no invierte el signo del segundo."],
-  [a+b,"Se conservaron ambos sumandos aunque el primero debe cancelarse."],
-  [0,"Se cancelaron ambos sumandos sin justificación."],
-  [a,"Se retuvo el sumando que debía cancelarse."]
- ]:[
-  [u-v,"Se restaron los sumandos en vez de sumarlos."],
-  [u*v,"Se multiplicaron los sumandos dentro del paréntesis."],
-  [u,"Se omitió el segundo sumando."],
-  [v,"Se omitió el primer sumando."]
- ];
+ const stepErrors=operationStepErrors(item);
  const final=choices(result,finalErrors,item.seed),step=choices(intermediate,stepErrors,item.seed+1);
  return {...item,options:final.choices,answerIndex:final.answerIndex,optionExplanations:final.reasons,
   steps:[{...item.steps[0],choices:step.choices,answerIndex:step.answerIndex},{...item.steps[1],choices:final.choices,answerIndex:final.answerIndex}]};

@@ -4,6 +4,7 @@ import {MATH_M3_LEVEL_COUNT,MATH_M3_NEW_PER_LEVEL,MATH_M3_TOTAL,MATH_M3_NEW_TOTA
 import {selectRotation,emptyRotation,recordRotation} from "../src/lib/rotation.ts";
 import {execFileSync} from "node:child_process";
 import {expectedOperationClassificationTruthCount} from "../src/lib/math-operations-classification.ts";
+import {R8_OPERATIONS} from "../src/lib/math-operations-diversity.ts";
 import {verifyMathM3Cell} from "../src/lib/math-m3-guards.ts";
 const eq=(a,b)=>a.n*b.d===b.n*a.d;
 const ratio=(n,d=1)=>({n,d});
@@ -12,6 +13,7 @@ function independentOracle(kind,values){
  const x=values;
  switch(kind){
  case "Operaciones":return ratio((x[0]+x[1])*x[2]);
+ case "Operaciones-diversidad":{const [a,b,c,d,stage]=x;return ratio(stage===1?a/b*c-d:stage===2?(a-c)*(b+d):c*(a-b)-c*a); }
  case "Operaciones-racionales":{const [p,d,n,m,stage]=x;return stage===3?ratio(2*p+4*n-m,2*d):ratio(p+n-m,d);}
  case "Fracciones":return ratio(x[0]*x[3]+x[2]*x[1],x[1]*x[3]);
  case "Porcentajes":return ratio(x[0]*x[1],100);
@@ -83,7 +85,12 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
  }
  // v7.8.1 requires actual curricular breadth, not one numerical template per cell.
  // Exception is exact and limited to the 3 corrective OP-04 records in each middle/advanced Operaciones cell.
- if(subtopic==="Operaciones"&&level!=="principiante"){
+ if(subtopic==="Operaciones"&&mode==="quiz"){
+  const old=level==="principiante"?"prioridad-de-operaciones":level==="intermedio"?"modificar-parentesis-y-factor":"distributiva-y-cancelacion";
+  const expected=new Set([old,R8_OPERATIONS[level]]);
+  if(level!=="principiante")expected.add(level==="intermedio"?"raiz-racionales-signos":"raiz-producto-racionales-combinados");
+  if(operations.size!==expected.size||[...expected].some(x=>!operations.has(x))||bank.filter(x=>x.operation===R8_OPERATIONS[level]&&x.oracle.kind==="Operaciones-diversidad").length!==3||bank.filter(x=>x.oracle.kind==="Operaciones-racionales").length!==(level==="principiante"?0:3))issues.push(cell+": invalid R8/OP04 exact coverage");
+ }else if(subtopic==="Operaciones"&&level!=="principiante"){
   const old=level==="intermedio"?"modificar-parentesis-y-factor":"distributiva-y-cancelacion";
   const added=level==="intermedio"?"raiz-racionales-signos":"raiz-producto-racionales-combinados";
   if(operations.size!==2||!operations.has(old)||!operations.has(added)||bank.filter(x=>x.operation===added&&x.oracle.kind==="Operaciones-racionales").length!==3)
