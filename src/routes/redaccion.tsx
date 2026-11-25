@@ -1,8 +1,9 @@
 import {createFileRoute,Link} from "@tanstack/react-router";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {studyReturn} from "@/lib/study-context";
-import {useEffect,useState} from "react";
-import {LEVELS,LEVEL_LABEL,pointsFor,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
+import {useEffect,useRef,useState} from "react";
+import {emptyLedger,recordRound,roundResult} from "@/lib/round-ledger";
+import {LEVELS,LEVEL_LABEL,saveHistory,type Level,type Mode,type Mistake} from "@/lib/grammar";
 import {gameNames} from "@/lib/phuma-catalog";
 import {WRITING_SUBTOPICS,writingItems,writingPool,type WritingChallenge,type WritingItem,type WritingSubtopic} from "@/lib/writing";
 import {ErrorHunter,ConnectorGame,ExpertEditor} from "@/components/games/WritingGames";
@@ -49,26 +50,33 @@ function WritingPlay(){
  const [best,setBest]=useState(0);
  const [mistakes,setMistakes]=useState<Mistake[]>([]);
  const [finished,setFinished]=useState(false);
+ const ledger=useRef(emptyLedger());
+ const advanced=useRef(-1);
  useEffect(()=>{
+  ledger.current=emptyLedger();advanced.current=-1;
   setItems(writingItems(nivel,subtema,modo));setIdx(0);setCorrect(0);setTotal(0);
   setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[nivel,subtema,modo,run]);
  const report=(ok:boolean,m?:Mistake)=>{
-  if(items?.[idx]){
-   const key=rotationKey("espanol","Redacción",subtema,modo,nivel);
-   const ids=writingPool(nivel,subtema,modo).map(x=>x.id);
-   const state=readRotation(key,ids);
-   writeRotation(key,recordRotation(state,items[idx].id,ok));
-  }
-  setTotal(t=>t+1);
-  if(ok){setCorrect(c=>c+1);setStreak(s=>{setScore(p=>p+pointsFor(s));setBest(b=>Math.max(b,s+1));return s+1;});}
-  else {setStreak(0);if(m)setMistakes(ms=>[...ms,m])}
+  const item=items?.[idx];
+  if(!item||ledger.current.events.some(e=>e.id===item.id))return;
+  if(!ok&&m)setMistakes(ms=>[...ms,m]);
+  const updated=recordRound(ledger.current,{id:item.id,correct:ok});
+  if(updated===ledger.current)return;
+  ledger.current=updated;
+  const key=rotationKey("espanol","Redacción",subtema,modo,nivel);
+  const ids=writingPool(nivel,subtema,modo).map(q=>q.id);
+  writeRotation(key,recordRotation(readRotation(key,ids),item.id,ok));
+  setTotal(updated.events.length);setCorrect(updated.correct);setScore(updated.score);setStreak(updated.streak);setBest(updated.bestStreak);
  };
  const next=()=>{
-  if(!items)return;
+  if(!items||ledger.current.events.length!==idx+1||advanced.current===idx)return;
+  advanced.current=idx;
   if(idx+1>=items.length){
+   const result=roundResult(ledger.current);
+   if(!result.finished)return;
    setFinished(true);
-   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score,correct,total,bestStreak:best,
+   saveHistory({date:new Date().toISOString(),mode:modo,level:nivel,score:result.score,correct:result.correct,total:result.attempted,bestStreak:ledger.current.bestStreak,
     area:"espanol",topic:"Redacción",subtopic:subtema});
   }else setIdx(i=>i+1);
  };
