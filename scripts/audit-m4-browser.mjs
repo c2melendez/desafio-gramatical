@@ -87,6 +87,21 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    await page.setViewportSize({width:360,height:800});
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG 360px sin desborde');
    await page.setViewportSize(viewport);
+   // R4: each added bridge must be operable on real browsers, not merely data.
+   for(const [title,answer] of [['Deshacer cambios antes de repartir','12'],['Completar una igualdad','42'],['Dividir una diferencia racional','1/8'],['Comparar costos completos','10']]){
+    await page.getByRole('button',{name:'Siguiente',exact:true}).click();
+    check(await page.getByRole('heading',{name:title,exact:true}).isVisible(),'RDG R4 '+title);
+    const bridge=page.getByRole('region',{name:'Organizador de razonamiento'});
+    await bridge.getByRole('button',{name:'Revelar siguiente paso'}).click();
+    await bridge.getByRole('button',{name:'Revelar siguiente paso'}).click();
+    check(await bridge.getByText('3 de 3 pasos visibles',{exact:true}).isVisible(),'RDG R4 pasos '+title);
+    await page.getByRole('group',{name:'Respuestas'}).getByRole('button',{name:answer,exact:true}).click();
+    await page.getByRole('button',{name:'Comprobar',exact:true}).click();
+    check(await page.getByRole('status').getByText('¡Bien razonado!').isVisible(),'RDG R4 feedback '+title);
+   }
+   await page.setViewportSize({width:360,height:800});
+   check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG R4 360px sin desborde');
+   await page.setViewportSize(viewport);
    await page.getByRole('button',{name:'Transferencia',exact:true}).click();
    check(await page.getByRole('button',{name:/pista/i}).count()===0,'RDG transferencia sin ayuda');
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG sin desborde horizontal');
