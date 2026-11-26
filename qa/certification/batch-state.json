@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R15: resolver dos colisiones clave/paso y seis clasificaciones; R12–R14 reevaluar individualmente C/E/G de 92 con CI 45777947507, F de 18 avanzados; R20 reevaluar 59 con feedback explícito y evidencia vigente. Confirmar CI y Render de PR92 y PR de cierre R15, sin repetir hashes sanos.",
+    "next_action": "R21: reconciliar PR96 concurrente, guard, UI y selecciones; R12–R14 PR97 corregir 18 F, 3 G y 1 C; R15 dos G y seis clasificaciones. Conservar 98 PASS por hash y separar aval docente/empírico.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -124,7 +124,7 @@
     ],
     "selection_total": 450,
     "examined_semantic_ids": 450,
-    "semantic_pass_ids": 28,
+    "semantic_pass_ids": 98,
     "review_ids": 59,
     "review_evidence": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
@@ -168,7 +168,9 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-publication-candidates.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-exam-screen.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R20-feedback-causes.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-publication-candidates.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -294,11 +296,15 @@
       "runtime_ci": "SUCCESS_45710370482"
     },
     "current_publication": {
-      "sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
-      "production_ci": 45753039032,
+      "sha": "5a0b29dd3d359cec367370b83e52682419cb9d5c",
+      "production_ci": 45784178814,
       "production_ci_status": "SUCCESS",
-      "render_deploy": "dep-dc3r0agae00c73cqk950",
-      "render": "LIVE"
+      "render_deploy": "dep-dc3utn33t69s739fgufg",
+      "render": "LIVE_WHEN_OBSERVED",
+      "latest_observed_sha": "c38f1205e1c67ce2f7b115c81df1a074cc200ca6",
+      "latest_observed_ci": 45870637120,
+      "latest_observed_ci_status": "PENDING_OBSERVATION",
+      "latest_observed_render": "LIVE"
     },
     "r10_revision": {
       "status": "MERGED_REEXAMINED_REVIEW",
@@ -552,7 +558,8 @@
     },
     "v79_semantic_pass_paths": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json"
     ],
     "r17_selection_paths": [
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R17.json",
@@ -719,7 +726,7 @@
       }
     },
     "r12_r14_v79_review": {
-      "status": "REVIEW_F_G_C_PENDING",
+      "status": "SEMANTIC_PASS_PARTIAL",
       "examined": 92,
       "oracle_discrepancies": 0,
       "depth_review": 18,
@@ -732,12 +739,34 @@
       "ui_cases_verified": 414,
       "ci": 45777947507,
       "job": 139766104456,
-      "merge_sha": "208aaea6b40d8702eb01340c85121a949c840a3d"
+      "merge_sha": "208aaea6b40d8702eb01340c85121a949c840a3d",
+      "semantic_pass": 70,
+      "review_remaining": 22,
+      "candidates_path": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-publication-candidates.json",
+      "pass_path": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json",
+      "provider_observation": {
+        "published_sha": "5a0b29dd3d359cec367370b83e52682419cb9d5c",
+        "production_ci": 45784178814,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 139786677530,
+        "browser_job": 139786677844,
+        "render_deploy": "dep-dc3utn33t69s739fgufg",
+        "render_status": "LIVE_WHEN_OBSERVED",
+        "observed_at": "2026-11-26",
+        "pr_ci": 45784399083,
+        "pr_ci_status": "SUCCESS",
+        "candidate_document_sha": "c38f1205e1c67ce2f7b115c81df1a074cc200ca6",
+        "candidate_document_runtime_diff": "Solo JSON de fichas y test de elegibilidad; no cambia ningún modelo ni componente de UI. Los 92 hashes y filas canónicas coinciden con producción.",
+        "candidate_document_production_ci": 45870637120,
+        "candidate_document_production_ci_status": "PENDING_OBSERVATION"
+      },
+      "tuple_review": 3,
+      "internal_key_step_review": 1
     },
     "v79_individual_accounting": {
       "total": 450,
-      "pass": 28,
-      "not_pass": 422,
+      "pass": 98,
+      "not_pass": 352,
       "source": "union unique PASS_SEMANTIC IDs from v79_semantic_pass_paths; historical counters retained separately",
       "teacher_approved": 0,
       "empirical_evaluated": 0

@@ -37,6 +37,14 @@ it("v7.9 R15 publication: ten additional exact decisions and two retained REVIEW
   else{expect(f.rubric.G.score).toBe(2);expect(f.reason_codes).toContain("G_KEY_STEP_COLLISION");expect(eligible(f,hash(x))).toBe(false);}
  }
  const all=[...evidence.records,...pass];expect(new Set(all.map((f:Decision)=>f.id)).size).toBe(all.length);expect(all).toHaveLength(28);
- expect(state.semantic_pass_ids).toBe(all.length);expect(state.v79_individual_accounting.not_pass).toBe(450-all.length);
+ const union=state.v79_semantic_pass_paths.flatMap((p:string)=>JSON.parse(readFileSync(p,"utf8")).records.filter((f:Decision)=>f.semantic_status==="PASS_SEMANTIC"));expect(new Set(union.map((f:Decision)=>f.id)).size).toBe(union.length);expect(state.semantic_pass_ids).toBe(union.length);expect(state.v79_individual_accounting.not_pass).toBe(450-union.length);
  expect(state.v79_semantic_pass_paths).toContain("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json");
+});
+
+it("v7.9 R12-R14: 70 additional published PASS with exact hashes; 22 REVIEW and unique union",()=>{
+ const data=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json","utf8"));const source=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-publication-candidates.json","utf8"));
+ const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
+ expect(data.provider_observation.production_ci_status).toBe("SUCCESS");expect(data.provider_observation.render_status).toBe("LIVE_WHEN_OBSERVED");expect(data.records).toHaveLength(92);
+ let pass=0,review=0;for(const f of data.records as Decision[]){const actual=hash(bank.find(x=>x.id===f.id)!);expect(actual).toBe(f.content_hash);const original=source.records.find((x:Decision)=>x.id===f.id);expect(original.content_hash).toBe(actual);if(f.semantic_status==="PASS_SEMANTIC"){expect(eligible(f,actual)).toBe(true);expect(original.promotion_candidate).toBe(true);pass++;}else{expect(original.promotion_candidate).toBe(false);expect(eligible(f,actual)).toBe(false);review++;}}expect(pass).toBe(70);expect(review).toBe(22);
+ const all=state.v79_semantic_pass_paths.flatMap((p:string)=>JSON.parse(readFileSync(p,"utf8")).records.filter((f:Decision)=>f.semantic_status==="PASS_SEMANTIC"));expect(new Set(all.map((f:Decision)=>f.id)).size).toBe(all.length);expect(all.length).toBe(state.semantic_pass_ids);expect(all.length).toBeGreaterThanOrEqual(98);console.log("RDG_V79_R12_R14_PUBLISHED "+JSON.stringify({pass,review,total:all.length}));
 });
