@@ -8,6 +8,9 @@ import {repairOperationAdvancedR14} from "./math-operations-advanced-r14";
 import {repairOperationTransferR15} from "./math-operations-decision-r15";
 import {repairOperationClassificationR16} from "./math-operations-classification-r16";
 import {repairOperationRationalClassificationR17} from "./math-operations-rational-r17";
+import {repairOperationClassificationR18} from "./math-operations-classification-r18";
+import {repairOperationClassificationR19} from "./math-operations-classification-r19";
+import {repairOperationClassificationR20} from "./math-operations-classification-r20";
 import {repairOperationTransferR13} from "./math-operations-contrast-r13";
 import {repairOperationTransferR12} from "./math-operations-transfer-r12";
 import {repairOperationMixedR11} from "./math-operations-mixed-r11";
@@ -88,8 +91,17 @@ export function mathM3R15Pool(topic:string,subtopic:string,level:Level,mode:Mode
 export function mathM3R16Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R15Pool(topic,subtopic,level,mode).map(repairOperationClassificationR16);
 }
-export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+export function mathM3R17Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R16Pool(topic,subtopic,level,mode).map(repairOperationRationalClassificationR17);
+}
+export function mathM3R18Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R17Pool(topic,subtopic,level,mode).map(repairOperationClassificationR18);
+}
+export function mathM3R19Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R18Pool(topic,subtopic,level,mode).map(repairOperationClassificationR19);
+}
+export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R19Pool(topic,subtopic,level,mode).map(repairOperationClassificationR20);
 }
 export const MATH_M3_NEW_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(10+15+25);
 export const MATH_M3_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(30+50+70);

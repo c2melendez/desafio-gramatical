@@ -1,0 +1,1315 @@
+{
+  "scope": "MAT-ARIT-01",
+  "revision": "R18",
+  "source_sha": "ef0dc54dd7f228d31e524e86d09e003c4ea93c1e",
+  "source_ci": 45769309612,
+  "summary": {
+    "affected": 59,
+    "principiante": 11,
+    "intermedio": 17,
+    "avanzado": 31,
+    "preserved": 391,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
+      "content_sha256": "35d9ecf81572df6a42928159d0b083140b3e4cd76a5f253f867410fd2bc66599",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "35d9ecf81572df6a42928159d0b083140b3e4cd76a5f253f867410fd2bc66599",
+      "previous_claims": [
+        {
+          "text": "La suma dentro del paréntesis es 16.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 5×8+11×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 128.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-1",
+      "content_sha256": "93bcca01ccde649762076dc741dfcf2d2f9cff35920249e8a0c8a7d6719ae753",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "93bcca01ccde649762076dc741dfcf2d2f9cff35920249e8a0c8a7d6719ae753",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 6×6+14×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 36.",
+          "truth": false
+        },
+        {
+          "text": "La suma dentro del paréntesis es 20.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
+      "content_sha256": "adc853669d4c05c01ce36a3ad47d03817a2ebf41f4f7946ff29fb5c5526c0449",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "adc853669d4c05c01ce36a3ad47d03817a2ebf41f4f7946ff29fb5c5526c0449",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 44.",
+          "truth": true
+        },
+        {
+          "text": "La suma dentro del paréntesis es 3.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 7×4+4×4.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
+      "content_sha256": "e93b5cd41079231ba5be39f81addcc6410cc0e51af02ece4096cf9183370b3c7",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "e93b5cd41079231ba5be39f81addcc6410cc0e51af02ece4096cf9183370b3c7",
+      "previous_claims": [
+        {
+          "text": "La suma dentro del paréntesis es 1.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 8×2+7×2.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 16.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-4",
+      "content_sha256": "36d330b8a86fb95461b2c0be1dc4ac5db8348d5832f1619e81977ecdaae27ad8",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "36d330b8a86fb95461b2c0be1dc4ac5db8348d5832f1619e81977ecdaae27ad8",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 9×7+10×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 133.",
+          "truth": true
+        },
+        {
+          "text": "La suma dentro del paréntesis es -1.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
+      "content_sha256": "3f07dc13945cba52014587cf3b9a6c59cc08b2daecca776eaac6fafaad405567",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "3f07dc13945cba52014587cf3b9a6c59cc08b2daecca776eaac6fafaad405567",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 50.",
+          "truth": false
+        },
+        {
+          "text": "La suma dentro del paréntesis es 23.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 10×5+13×5.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-6",
+      "content_sha256": "ade8a08e445f41e4f6b0773d3b913c18594ca09261ca50a77bb3f55b5f34528e",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "ade8a08e445f41e4f6b0773d3b913c18594ca09261ca50a77bb3f55b5f34528e",
+      "previous_claims": [
+        {
+          "text": "La suma dentro del paréntesis es 14.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 11×3+3×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 42.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-7",
+      "content_sha256": "7406135b08477a54f5328a84127bd98094544ecf699efff6ec39811e16af1f11",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "7406135b08477a54f5328a84127bd98094544ecf699efff6ec39811e16af1f11",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 12×8+6×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 96.",
+          "truth": false
+        },
+        {
+          "text": "La suma dentro del paréntesis es 18.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
+      "content_sha256": "c48fe0587a4648d5f3671d9192767dc192781989906e05d81ee5de25e476007d",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "c48fe0587a4648d5f3671d9192767dc192781989906e05d81ee5de25e476007d",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 132.",
+          "truth": true
+        },
+        {
+          "text": "La suma dentro del paréntesis es 4.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×6+9×6.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-9",
+      "content_sha256": "0a32fbf844c1f5ce8ad3a59bba6e8a0e62d313fc856401729bbfdf7abdf03eef",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "0a32fbf844c1f5ce8ad3a59bba6e8a0e62d313fc856401729bbfdf7abdf03eef",
+      "previous_claims": [
+        {
+          "text": "La suma dentro del paréntesis es 2.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 14×4+12×4.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 56.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
+      "content_sha256": "4ad791172b00ed5c11ea0c5d904f28dcf62e723d69f782f6bd1154c01a693125",
+      "family": "prioridad-de-operaciones",
+      "previous_sha256": "4ad791172b00ed5c11ea0c5d904f28dcf62e723d69f782f6bd1154c01a693125",
+      "previous_claims": [
+        {
+          "text": "La suma dentro del paréntesis es 7.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×5+6×5.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 65.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "content_sha256": "6807bf11777ae84fceab9f159dae166a34b5572d909f7c6aa56860153f1e3bae",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "6807bf11777ae84fceab9f159dae166a34b5572d909f7c6aa56860153f1e3bae",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 16×5+14×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 150.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 30.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "content_sha256": "ae19d22e655f42fe3d99d2d43b9924202fb6e14092c34917df7abea41543b0ab",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "ae19d22e655f42fe3d99d2d43b9924202fb6e14092c34917df7abea41543b0ab",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 51.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 34.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 17×3+17×0.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "content_sha256": "84eadc8477ac72c47c1f88cca216db155ad10fd1413bc61b3458d334e2a8ab5b",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "84eadc8477ac72c47c1f88cca216db155ad10fd1413bc61b3458d334e2a8ab5b",
+      "previous_claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 11.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 18×1+7×1.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 25.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "content_sha256": "1ddc582edf0abc862063c5b3ba2594ab76b1a6faed119af59f350238e2ac0c2f",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "1ddc582edf0abc862063c5b3ba2594ab76b1a6faed119af59f350238e2ac0c2f",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 19×6+10×6.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 114.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 9.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "content_sha256": "528d6b21d5694277ef871b736d195fb0e0e102a88dc56a6b9f7c053fbcde3558",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "528d6b21d5694277ef871b736d195fb0e0e102a88dc56a6b9f7c053fbcde3558",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 132.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 7.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 20×4+13×0.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "content_sha256": "081f3e2a1ecf29c8bef429d2552d65cb7ded372bd95b2fa6334fa0bf20da7b09",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "081f3e2a1ecf29c8bef429d2552d65cb7ded372bd95b2fa6334fa0bf20da7b09",
+      "previous_claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 37.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 21×2+16×2.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 42.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "content_sha256": "8cb56721a1a4161f6a76d5c7aad246668a17faa8bb0eb5d5a76d3170b417389d",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "8cb56721a1a4161f6a76d5c7aad246668a17faa8bb0eb5d5a76d3170b417389d",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 22×7+19×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 287.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 41.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-7",
+      "content_sha256": "e60b2200eb6bddb5dad725c257ccd93bb2b4dfff233e1d1ebea3761c8f29d72e",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "e60b2200eb6bddb5dad725c257ccd93bb2b4dfff233e1d1ebea3761c8f29d72e",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 30.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 15.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 6×5+9×0.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-8",
+      "content_sha256": "774bbbeec4ab00fc3279280487a8189b48318d535ad0347a8aadd3d6aa80f370",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "774bbbeec4ab00fc3279280487a8189b48318d535ad0347a8aadd3d6aa80f370",
+      "previous_claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -5.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 7×3+12×3.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 57.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-9",
+      "content_sha256": "04dd5c8abc96422aed70c54a0df463f9d724009317ee3631ff209fd9f76a9d84",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "04dd5c8abc96422aed70c54a0df463f9d724009317ee3631ff209fd9f76a9d84",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 8×1+15×1.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 8.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -7.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "content_sha256": "f9537d2d96b32ac47f7c5341e1022e3731ad3e2e0a7dde8d1142706f27b7d0c7",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "f9537d2d96b32ac47f7c5341e1022e3731ad3e2e0a7dde8d1142706f27b7d0c7",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 162.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -9.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 9×6+18×0.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "content_sha256": "19758f0b69368b6bef79a55dd9e3c614a52c04b32c644cc7c853cb25ceec68c6",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "19758f0b69368b6bef79a55dd9e3c614a52c04b32c644cc7c853cb25ceec68c6",
+      "previous_claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 18.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 10×4+8×4.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 40.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "content_sha256": "f70bcdbdfadb7baa549a0bbe3857c919118ad7bd0c346716cd52a07db3a97cc1",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "f70bcdbdfadb7baa549a0bbe3857c919118ad7bd0c346716cd52a07db3a97cc1",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 11×2+11×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 44.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 22.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_sha256": "140877fe024bc491054ff0335955fba43af839ec1371ce2c5a13f8ccf7023784",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "140877fe024bc491054ff0335955fba43af839ec1371ce2c5a13f8ccf7023784",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 84.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 26.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 12×7+14×0.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "content_sha256": "b00c9ec9ff3a40927685dd236cbec5bbdfc3487903c287140b9740f22f28e79f",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "b00c9ec9ff3a40927685dd236cbec5bbdfc3487903c287140b9740f22f28e79f",
+      "previous_claims": [
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es -4.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×5+17×5.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 150.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-18",
+      "content_sha256": "7a5c0a15c7c6491e80e6dba51cf396ab5231b7a226e4aaf1ee8fbd29ce8366f6",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "7a5c0a15c7c6491e80e6dba51cf396ab5231b7a226e4aaf1ee8fbd29ce8366f6",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 13×1+16×0.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 29.",
+          "truth": true
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 29.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-19",
+      "content_sha256": "63a78560b21d3f8802776b6059c660fd4f7ce288789d39c701e8c4df302ef7da",
+      "family": "modificar-parentesis-y-factor",
+      "previous_sha256": "63a78560b21d3f8802776b6059c660fd4f7ce288789d39c701e8c4df302ef7da",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 24.",
+          "truth": false
+        },
+        {
+          "text": "Después de los cambios, la suma dentro del paréntesis es 16.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 8×3+8×0.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "content_sha256": "20858ebf55d0bf73f42f69aacec88b092ac6ba6cce67ed053534309c5465689d",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "20858ebf55d0bf73f42f69aacec88b092ac6ba6cce67ed053534309c5465689d",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 52.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 13.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -13×4.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "content_sha256": "9e55f02da2415c0f83cf7bcb3930efff6a62481cbd4502ffdfb65b1656c6b57d",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "9e55f02da2415c0f83cf7bcb3930efff6a62481cbd4502ffdfb65b1656c6b57d",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 16.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -16×2.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -32.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "content_sha256": "a594187e87f66c049f55b1449eaad062447be4d792c6606d0c5aa4b977c6afee",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "a594187e87f66c049f55b1449eaad062447be4d792c6606d0c5aa4b977c6afee",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 19×7.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 133.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "content_sha256": "fbd938f0dd18baa117a3fad00c03298463c07de7c6c5263f080a2ef0512e6cb6",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "fbd938f0dd18baa117a3fad00c03298463c07de7c6c5263f080a2ef0512e6cb6",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es -45.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 9×5.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "content_sha256": "3be0fcb5f1fe93d28575e0931ef6e9d92422b8660dd9ccb4abf53eb6fface80b",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "3be0fcb5f1fe93d28575e0931ef6e9d92422b8660dd9ccb4abf53eb6fface80b",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -12.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a -12×3.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 36.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "content_sha256": "c9b61fb18d26d4eb7fc9f9fdc6ff2ef8fbaafdaeab2e2a1fba026858d0cb8dec",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "c9b61fb18d26d4eb7fc9f9fdc6ff2ef8fbaafdaeab2e2a1fba026858d0cb8dec",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 15×8.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -120.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "content_sha256": "89eb3ad4bdaca0f665d06d591a53099ecb678b71cc588cdd996b724d8a0aebc6",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "89eb3ad4bdaca0f665d06d591a53099ecb678b71cc588cdd996b724d8a0aebc6",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 108.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -18×6.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "content_sha256": "5e5af9896c7ac9b7dcc6b0f091a7f79a255836a9e04cb44fa89cb13760175421",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "5e5af9896c7ac9b7dcc6b0f091a7f79a255836a9e04cb44fa89cb13760175421",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 8.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -8×4.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -32.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "content_sha256": "d1dbc49080178ac269cb3e3c1b7f323da81c8a5a8c6a5fdfe1026286f6d66e0d",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "d1dbc49080178ac269cb3e3c1b7f323da81c8a5a8c6a5fdfe1026286f6d66e0d",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 11×2.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 22.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "content_sha256": "9ecf340d34e0fa6926ead6055d8a29d0fcfe8442075bd813a54cd90fa1325ae1",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "9ecf340d34e0fa6926ead6055d8a29d0fcfe8442075bd813a54cd90fa1325ae1",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es -98.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 14×7.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "content_sha256": "80ec7f416d19f39064c9fe559707c70075d4e8393df5bd62fc9d2e2966305d9d",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "80ec7f416d19f39064c9fe559707c70075d4e8393df5bd62fc9d2e2966305d9d",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -17.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a -17×5.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 85.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "content_sha256": "d66cee48d2dc5cb3098f6cfe67b10714d356f89921ca5ef7008d1893e5a60089",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "d66cee48d2dc5cb3098f6cfe67b10714d356f89921ca5ef7008d1893e5a60089",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 7×3.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -21.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "content_sha256": "66f0d3a4de19c79d6903f50bfa24537ffe2a533b44d4e43db00735eb0093316f",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "66f0d3a4de19c79d6903f50bfa24537ffe2a533b44d4e43db00735eb0093316f",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 80.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -10×8.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "content_sha256": "bdc644e3f820b64d232a31724c31d0a48ea917a73412b13baaeaddab09107557",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "bdc644e3f820b64d232a31724c31d0a48ea917a73412b13baaeaddab09107557",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 13.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -13×6.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -78.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "content_sha256": "5bbe67176463f9fa253321b5fa5eac2badd26869f497ca34c84af47ba8cc37e7",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "5bbe67176463f9fa253321b5fa5eac2badd26869f497ca34c84af47ba8cc37e7",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 16×4.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es 64.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "content_sha256": "f2f1c4252676b39ee37c58bcfed0165a423205b34220d956ca0642e09f3cd95d",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "f2f1c4252676b39ee37c58bcfed0165a423205b34220d956ca0642e09f3cd95d",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es -38.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 19×2.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "content_sha256": "7800cd05899cc16059c69e498f1c1c5d4a171ffdaca1e471c06b80daacb3268a",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "7800cd05899cc16059c69e498f1c1c5d4a171ffdaca1e471c06b80daacb3268a",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a -9×7.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 63.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "content_sha256": "3d672c34f5364d32035c939c8184f6d87784e91665dee7c358edd7311ba95901",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "3d672c34f5364d32035c939c8184f6d87784e91665dee7c358edd7311ba95901",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 12×5.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -60.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 12.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "content_sha256": "be5cccc6f8f45599388b631c3c73f8634cf8add79d586be71bb62d4b3b88df97",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "be5cccc6f8f45599388b631c3c73f8634cf8add79d586be71bb62d4b3b88df97",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 45.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -15×3.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "content_sha256": "1e91574943a68ea2a864f247a7f873ba12281efea6e91fc57962e60fe2f49d6e",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "1e91574943a68ea2a864f247a7f873ba12281efea6e91fc57962e60fe2f49d6e",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -18×8.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -144.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-24",
+      "content_sha256": "fc3fd83eed38aa400f057f8a6fb00263dd95ff324a917c7fdbd48ac3886b7747",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "fc3fd83eed38aa400f057f8a6fb00263dd95ff324a917c7fdbd48ac3886b7747",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 34.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -17×2.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "content_sha256": "742f839efcfa043eb91c62949bb028d6a3c4c259f7f57a47a4936e3a60b67d2d",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "742f839efcfa043eb91c62949bb028d6a3c4c259f7f57a47a4936e3a60b67d2d",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a -15×5.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 75.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "content_sha256": "2798b378d88cbb81f5f616be6b8f6e5dc69774f5cbd0f060485951a448260e28",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "2798b378d88cbb81f5f616be6b8f6e5dc69774f5cbd0f060485951a448260e28",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -18×2.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -36.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "content_sha256": "a808f5611b30a459ac61f4dd9895a3376f1850833b9432dc79aee9bcbe8a23b1",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "a808f5611b30a459ac61f4dd9895a3376f1850833b9432dc79aee9bcbe8a23b1",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 48.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -8.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 8×6.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "content_sha256": "36e9a3acf1a0516618355d20d501d53c9e105301c6466c0bae4d926a048e8755",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "36e9a3acf1a0516618355d20d501d53c9e105301c6466c0bae4d926a048e8755",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 11×3.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -33.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "content_sha256": "28da26c75325c54350b61f2422d3f08429593c1d399a6b4f5996dc9c78cca009",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "28da26c75325c54350b61f2422d3f08429593c1d399a6b4f5996dc9c78cca009",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a -14×7.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 98.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "content_sha256": "1acff64698404a8cbf4242be0926036169da229bac65ef8bbaf2dbeaad9460a6",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "1acff64698404a8cbf4242be0926036169da229bac65ef8bbaf2dbeaad9460a6",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es -68.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a 17×4.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "content_sha256": "ad4cdd5024b6cfbb3f6dd292bf3287f0fa4dda1186969d8c0ee97885a2445139",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "ad4cdd5024b6cfbb3f6dd292bf3287f0fa4dda1186969d8c0ee97885a2445139",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a -7×8.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es 56.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "content_sha256": "2725714c7ae66961ea5a14638f3b07be398d21910286fd002efe4b107934bb30",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "2725714c7ae66961ea5a14638f3b07be398d21910286fd002efe4b107934bb30",
+      "previous_claims": [
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true
+        },
+        {
+          "text": "La expresión solicitada equivale a -10×5.",
+          "truth": false
+        },
+        {
+          "text": "El valor de la expresión solicitada es -50.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "content_sha256": "8d41b417f88e70cf60838ec05cff3370b37dcbd5bffce94df2a479633a059cfe",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "8d41b417f88e70cf60838ec05cff3370b37dcbd5bffce94df2a479633a059cfe",
+      "previous_claims": [
+        {
+          "text": "El valor de la expresión solicitada es 26.",
+          "truth": true
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "truth": false
+        },
+        {
+          "text": "La expresión solicitada equivale a 13×2.",
+          "truth": true
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "content_sha256": "b69b5252ffa0485254b17b7b20065266682daa78bb4095a4829e6530677c193e",
+      "family": "distributiva-y-cancelacion",
+      "previous_sha256": "b69b5252ffa0485254b17b7b20065266682daa78bb4095a4829e6530677c193e",
+      "previous_claims": [
+        {
+          "text": "La expresión solicitada equivale a 16×6.",
+          "truth": true
+        },
+        {
+          "text": "El valor de la expresión solicitada es -96.",
+          "truth": false
+        },
+        {
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "truth": false
+        }
+      ],
+      "source": "qa/certification/rdg/evidence/MAT-ARIT-01-R5-successors.json",
+      "status": "REVIEW"
+    }
+  ],
+  "limits": "Evidence matches all 59 R17 hashes. Runtime successors and new manifests pending CI; C repaired, F/G assessed separately. No semantic promotion."
+}

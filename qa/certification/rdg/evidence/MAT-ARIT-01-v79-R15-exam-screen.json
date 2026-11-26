@@ -1,0 +1,177 @@
+{
+  "scope": "MAT-ARIT-01",
+  "status": "SCREEN_COMPLETE",
+  "exam_repository": "c2melendez/academia-paa-phuma",
+  "exam_head": "5baf93053faef098a73e6c47fb854c1ace2ccf6d",
+  "exam_source_blob": "0fa5ef568a8ddb3c1ded058cbba6c3493b9a2240",
+  "modules": [
+    {
+      "path": "data/mathEngine.js",
+      "blob": "6cde547793334bc0fc6b5e50172bf6266d8cd029"
+    },
+    {
+      "path": "data/spanishEditorialBank.js",
+      "blob": "b132fb9d44d9ff5a59e45135b1dce6c6d32ead1c"
+    },
+    {
+      "path": "data/disciplinaryBank.js",
+      "blob": "174d75c15d31c5e24958ba22a1724b2b8c47242f"
+    },
+    {
+      "path": "data/spanishExplanations.js",
+      "blob": "78d84d9a0681ab140f9453fb45bd566280779900"
+    },
+    {
+      "path": "data/visualBank.js",
+      "blob": "0f4b1c711e9d25b943eba626554eb6e217634465"
+    },
+    {
+      "path": "data/readingBank.js",
+      "blob": "94981c7c92a873c21d618bb575828c65b21b6203"
+    },
+    {
+      "path": "data/precisionBank.js",
+      "blob": "ac982223f6a6dbf67fbf3baa24c4c0f37227473f"
+    },
+    {
+      "path": "data/advancedVisualBank.js",
+      "blob": "630c428f2fa9b70982f33de0ab35bba925adbc82"
+    },
+    {
+      "path": "data/enrichmentBank.js",
+      "blob": "ad60e760f6c21cbde22bf632584484a6114efadd"
+    },
+    {
+      "path": "data/foundationBank.js",
+      "blob": "33d07fb9bc0cac0a1f37ec2624bf65458a53932a"
+    },
+    {
+      "path": "data/gapClosureBank.js",
+      "blob": "567a5789dcf049d7091854dde8be3fb1c956686c"
+    },
+    {
+      "path": "data/curated.js",
+      "blob": "c0164bab87c46689122ee5a8b6b8dc9b26da06d4"
+    },
+    {
+      "path": "src/catalog.js",
+      "blob": "6fa93116f47913bc180d373f69cfe9de49f3dcb0"
+    }
+  ],
+  "bank_count": 989,
+  "math_count": 415,
+  "candidates": 18,
+  "matched": 0,
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+      "hash": "c8276fc6895c72e0fb6a5548334341ffe65c68cdf7dc9c07cb176299a019b62f",
+      "signature": "cost|10|15|20|18|5",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-13",
+      "hash": "7accbec584cbda7da0dadb1175b942802e7567d03c85b6535cf3d2ffbec12a6c",
+      "signature": "cost|11|15|23|18|6",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-14",
+      "hash": "728dab21d1804467db62eed5a7124761167ba2759dd4d19d9b168dd21c8002bb",
+      "signature": "cost|12|15|26|18|7",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+      "hash": "7ac5595fa1b32bb369cae8638bc25b2557d2bfb46a48e0e69a1d00d79b2e818c",
+      "signature": "root|5/9|1/3|3",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-16",
+      "hash": "9b1530f00120bc6e092a9b858a9bc5361c2657160cb2cecdd5a782ce939b397f",
+      "signature": "root|3/5|7/20|4",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+      "hash": "c36e7adaea461f712591ae050d668fa3cd96158343204e970911185ca9a1bf48",
+      "signature": "root|7/11|4/11|5",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-12",
+      "hash": "9a3f14ee466f6a38d80c1b2f8c7f5a9dafb5974f66922c2470ee314e15ca3112",
+      "signature": "cost|8|14|20|17|5",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-13",
+      "hash": "a3cb0d38b89fecc00bd0fcb6e7804e0c819897b0bc9c46f856ee53d983bc6321",
+      "signature": "cost|9|14|23|17|6",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-14",
+      "hash": "c47b926c7a6dba709df865d92cbcb3d512aba2d382d991eaf9a62b8ccc60b265",
+      "signature": "cost|10|14|26|17|7",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-15",
+      "hash": "793ae578508183e0531bd79303a7e227e29a75866f2c5d34db0b8593125f6f12",
+      "signature": "root|4/7|5/14|3",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+      "hash": "f458dc01d824f3657cc29b3c8b5acb2db6aa519f01292922c53ce5434bfb9f76",
+      "signature": "root|5/8|3/8|4",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-17",
+      "hash": "f7b340fe89891a7ffcddbf4755d7b484e9c110902bfc063cf7b3dcfc53af8e55",
+      "signature": "root|2/3|7/18|5",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-12",
+      "hash": "56117c0a8bcb66d9cd20ec7dccca8dd21ef9b96e3c65df225d71d4b3dc8fd363",
+      "signature": "cost|12|16|20|19|5",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-13",
+      "hash": "98a4e32b9d189e14d2826762049f3d4fd29a5021fcec42015930ca82538f531a",
+      "signature": "cost|13|16|23|19|6",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-14",
+      "hash": "ea65203d2881d043d19a64aa94a69f3452b1fa575232057ee54e4da46adc15a8",
+      "signature": "cost|14|16|26|19|7",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-15",
+      "hash": "74658deed611279b61f7ad02784825ccd22ce7729e80ad0aedd7a4f55062eef3",
+      "signature": "root|6/11|7/22|3",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+      "hash": "848035a45ecee31499793ef1763ff2cfbe1ac20a94c056bb4e6767797cd23855",
+      "signature": "root|7/12|1/3|4",
+      "matches": []
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-17",
+      "hash": "2a69bdb4e3a447d3669025dbd989cd6c5c904b512f16eec046fd65fef6fa4ecc",
+      "signature": "root|8/13|9/26|5",
+      "matches": []
+    }
+  ],
+  "method": "Executed pinned questionBank and 13 direct modules; normalized exact prompt and numeric tuple for two R15 families. No universal semantic-equivalence claim.",
+  "limits": "Only current external exam bank; no modification to exam repo. Runtime game/RDG comparison and E UI pending."
+}

@@ -1,0 +1,1176 @@
+{
+  "scope": "MAT-ARIT-01",
+  "revision": "R19",
+  "source_ci": 45773557600,
+  "source_job": 139751688449,
+  "candidate_sha": "f816605a37dcf67b0911a304a771d43301b38997",
+  "source_log": "https://github.com/c2melendez/desafio-gramatical/actions/runs/45773557600/job/139751688449",
+  "summary": {
+    "changed": 34,
+    "preserved": 416,
+    "truthMutants": 102,
+    "oldCollisionDetected": 6,
+    "advancedTransfer": 31,
+    "checked": 102,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "previous_sha256": "f9c1d20746671d4ff9717c19ccdc23f1440033689ff961200ce4d3b19280f420",
+      "content_sha256": "75dbe8517c7dd17ab5c98c69d20a0f66707a3f4ef4ebdb06589720fe0d675cdb",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "decisions": [
+        {
+          "key": "original",
+          "claimed": 50,
+          "correct": 46,
+          "truth": false,
+          "text": "Antes de modificar los datos, el valor de la expresión original es 50.",
+          "feedback": "El valor original conserva los dos sumandos y el factor sin cambios: (18+5)×2=46. El valor afirmado es 50; no coincide con el correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 1,
+          "correct": 1,
+          "truth": true,
+          "text": "El factor después del cambio es 1.",
+          "feedback": "El factor original 2 disminuye una unidad: 2−1=1."
+        },
+        {
+          "key": "answer",
+          "claimed": 25,
+          "correct": 25,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 25.",
+          "feedback": "Al respetar el paréntesis, (18+7)×1=25. El valor afirmado es 25; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-9",
+      "previous_sha256": "ea195cb8d19d3086e5baf23de0590359d9856586cd161b19208b02be51e98d77",
+      "content_sha256": "31ca5c13c996061676b2d98974563f18003e86e2995ac777756cf758f4af519b",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 1,
+          "correct": 1,
+          "truth": true,
+          "text": "El factor después del cambio es 1.",
+          "feedback": "El factor original 2 disminuye una unidad: 2−1=1."
+        },
+        {
+          "key": "answer",
+          "claimed": 8,
+          "correct": 23,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 8.",
+          "feedback": "Al respetar el paréntesis, (8+15)×1=23. El valor afirmado es 8; no coincide con el valor correcto."
+        },
+        {
+          "key": "original",
+          "claimed": 46,
+          "correct": 42,
+          "truth": false,
+          "text": "Antes de modificar los datos, el valor de la expresión original es 46.",
+          "feedback": "El valor original conserva los dos sumandos y el factor sin cambios: (8+13)×2=42. El valor afirmado es 46; no coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-18",
+      "previous_sha256": "c63c65693b737fe9bd1c4f47e98b8fb78798a6d4155a07edef69ab61aedcf692",
+      "content_sha256": "4d352173d8183e231b0dcc7ed10b1a6a50a9f195da88fb7c27b5c08aa5d08e33",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 3,
+          "correct": 1,
+          "truth": false,
+          "text": "El factor después del cambio es 3.",
+          "feedback": "El factor original 2 disminuye una unidad: 2−1=1."
+        },
+        {
+          "key": "answer",
+          "claimed": 29,
+          "correct": 29,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 29.",
+          "feedback": "Al respetar el paréntesis, (13+16)×1=29. El valor afirmado es 29; coincide con el valor correcto."
+        },
+        {
+          "key": "original",
+          "claimed": 54,
+          "correct": 54,
+          "truth": true,
+          "text": "Antes de modificar los datos, el valor de la expresión original es 54.",
+          "feedback": "El valor original conserva los dos sumandos y el factor sin cambios: (13+14)×2=54. El valor afirmado es 54; coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "previous_sha256": "edd5ccd910dc429f6fc32c70101e4db3f0d855e2ee252804b3b9e0e0514d7e83",
+      "content_sha256": "658f07074911b8749e01ae853fd8439d5322304e51d4bf92af0cbb2cf205b8ce",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 52,
+          "correct": 52,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 52.",
+          "feedback": "Al cancelar los productos iguales queda 13×4=52. El valor afirmado es 52; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 13,
+          "correct": 13,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 13.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 13. El valor afirmado es 13; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 48,
+          "correct": 56,
+          "truth": false,
+          "text": "Si en lugar de restar 10×4 se restara 9×4, el resultado sería 48.",
+          "feedback": "Al distribuir, el primer producto se cancela con 10×4. Cambiar el coeficiente restado de 10 a 9 aumenta el resultado en 4: (13+1)×4=56. El valor afirmado es 48; no coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "previous_sha256": "a81ecd86163b0abfb1cfe9c889a424955089cb69d75dd785a6e6c8b01911ad10",
+      "content_sha256": "7c118cc0365b4bb21d209c130ea1b72a2accd97527dfc16d01c4f01b13f8b9d2",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 16.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 16. El valor afirmado es 16; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 34,
+          "correct": 30,
+          "truth": false,
+          "text": "Si en lugar de restar 11×2 se restara 12×2, el resultado sería 34.",
+          "feedback": "Al distribuir, el primer producto se cancela con 11×2. Cambiar el coeficiente restado de 11 a 12 reduce el resultado en 2: (16−1)×2=30. El valor afirmado es 34; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -32,
+          "correct": 32,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -32.",
+          "feedback": "Al cancelar los productos iguales queda 16×2=32. El valor afirmado es -32; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "previous_sha256": "819f2e92b2350ae319aabc6640d7798f1344f79ca66a32399c3511edabb9ad3a",
+      "content_sha256": "339a56c6b4265f4030da97e63658f96fb3070ff356869b3cd028c570855954dc",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 140,
+          "correct": 140,
+          "truth": true,
+          "text": "Si en lugar de restar 12×7 se restara 11×7, el resultado sería 140.",
+          "feedback": "Al distribuir, el primer producto se cancela con 12×7. Cambiar el coeficiente restado de 12 a 11 aumenta el resultado en 7: (19+1)×7=140. El valor afirmado es 140; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 133,
+          "correct": 133,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 133.",
+          "feedback": "Al cancelar los productos iguales queda 19×7=133. El valor afirmado es 133; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -19,
+          "correct": 19,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 19. El valor afirmado es -19; no coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "previous_sha256": "284c600e55e4786f9a5b0af5163d5e084a9f542711766f55713239a76b8f5118",
+      "content_sha256": "15a933ddd40cacc318db4d3e94ba9c63e2668b584ed0ce3ba51a5df0f1cbbcae",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": -45,
+          "correct": 45,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -45.",
+          "feedback": "Al cancelar los productos iguales queda 9×5=45. El valor afirmado es -45; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -9,
+          "correct": 9,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 9. El valor afirmado es -9; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 40,
+          "correct": 40,
+          "truth": true,
+          "text": "Si en lugar de restar 13×5 se restara 14×5, el resultado sería 40.",
+          "feedback": "Al distribuir, el primer producto se cancela con 13×5. Cambiar el coeficiente restado de 13 a 14 reduce el resultado en 5: (9−1)×5=40. El valor afirmado es 40; coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "previous_sha256": "37b6c0c03221d8a70dc8fce496b36f47c78e913f0de9710e51770ef99a1a9a44",
+      "content_sha256": "64ec9d89ef630cd93ea25aa24eca1232df38f2824d00191c235a8bf969462e60",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": -12,
+          "correct": 12,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -12.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 12. El valor afirmado es -12; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 33,
+          "correct": 39,
+          "truth": false,
+          "text": "Si en lugar de restar 14×3 se restara 13×3, el resultado sería 33.",
+          "feedback": "Al distribuir, el primer producto se cancela con 14×3. Cambiar el coeficiente restado de 14 a 13 aumenta el resultado en 3: (12+1)×3=39. El valor afirmado es 33; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 36,
+          "correct": 36,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 36.",
+          "feedback": "Al cancelar los productos iguales queda 12×3=36. El valor afirmado es 36; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "previous_sha256": "85f0a8dcbc1fdad48a31dad4b74d60473c519c6df58e8bd6cd73e0fc23c95322",
+      "content_sha256": "5d6496bb2278e1026d64a1a75abb609a3aa4c096dc919b9d01040b1282a2706d",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 112,
+          "correct": 112,
+          "truth": true,
+          "text": "Si en lugar de restar 15×8 se restara 16×8, el resultado sería 112.",
+          "feedback": "Al distribuir, el primer producto se cancela con 15×8. Cambiar el coeficiente restado de 15 a 16 reduce el resultado en 8: (15−1)×8=112. El valor afirmado es 112; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -120,
+          "correct": 120,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -120.",
+          "feedback": "Al cancelar los productos iguales queda 15×8=120. El valor afirmado es -120; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 15,
+          "correct": 15,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 15. El valor afirmado es 15; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "previous_sha256": "d48f962407e4cbe57b1042d01a7a1f3e400c3fa542737b0cb54be125d6b9c953",
+      "content_sha256": "082106a3747967a623ac36ee95b6c3c0a453deee7125131f076c918ce6f7e33c",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 108,
+          "correct": 108,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 108.",
+          "feedback": "Al cancelar los productos iguales queda 18×6=108. El valor afirmado es 108; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 18,
+          "correct": 18,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 18. El valor afirmado es 18; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 102,
+          "correct": 114,
+          "truth": false,
+          "text": "Si en lugar de restar 16×6 se restara 15×6, el resultado sería 102.",
+          "feedback": "Al distribuir, el primer producto se cancela con 16×6. Cambiar el coeficiente restado de 16 a 15 aumenta el resultado en 6: (18+1)×6=114. El valor afirmado es 102; no coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "previous_sha256": "5b6ee3e7b8b7e403497843eb278f67ec7bea9a30f0d347894cc74e1cb6d3eff4",
+      "content_sha256": "bdb72ad04ebfb77a6ea31148c5344f2415153c9ddcc67079e3d3978a88240a0d",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 8,
+          "correct": 8,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 8.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 8. El valor afirmado es 8; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 36,
+          "correct": 28,
+          "truth": false,
+          "text": "Si en lugar de restar 17×4 se restara 18×4, el resultado sería 36.",
+          "feedback": "Al distribuir, el primer producto se cancela con 17×4. Cambiar el coeficiente restado de 17 a 18 reduce el resultado en 4: (8−1)×4=28. El valor afirmado es 36; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -32,
+          "correct": 32,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -32.",
+          "feedback": "Al cancelar los productos iguales queda 8×4=32. El valor afirmado es -32; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "previous_sha256": "61a588efc60faffd2ad5cb1e61971c7a5b0bcdc0e5f5df98ec81e42371d85a53",
+      "content_sha256": "e5f07e876dcfa814d44c571e74fdce2d0c7a4df8446adf8a44e86625047625b3",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 24,
+          "correct": 24,
+          "truth": true,
+          "text": "Si en lugar de restar 18×2 se restara 17×2, el resultado sería 24.",
+          "feedback": "Al distribuir, el primer producto se cancela con 18×2. Cambiar el coeficiente restado de 18 a 17 aumenta el resultado en 2: (11+1)×2=24. El valor afirmado es 24; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 22,
+          "correct": 22,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 22.",
+          "feedback": "Al cancelar los productos iguales queda 11×2=22. El valor afirmado es 22; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -11,
+          "correct": 11,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 11. El valor afirmado es -11; no coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "previous_sha256": "a744ce65339f122743182577e8491deb8b05262427b9d33aad3b73081779d332",
+      "content_sha256": "1bc3a77b893b8dc8e5e99d0998594d957d32e2860b6f1451d0bc64f1e7280d3c",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": -98,
+          "correct": 98,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -98.",
+          "feedback": "Al cancelar los productos iguales queda 14×7=98. El valor afirmado es -98; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -14,
+          "correct": 14,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 14. El valor afirmado es -14; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 91,
+          "correct": 91,
+          "truth": true,
+          "text": "Si en lugar de restar 19×7 se restara 20×7, el resultado sería 91.",
+          "feedback": "Al distribuir, el primer producto se cancela con 19×7. Cambiar el coeficiente restado de 19 a 20 reduce el resultado en 7: (14−1)×7=91. El valor afirmado es 91; coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "previous_sha256": "b1d6e2c69fd32c602392033d4eabfb53dbabed0923cc6d42226cd305ce8ee239",
+      "content_sha256": "a737bf0a87e8c64483163beb672e9717635704e90d541e2d39e10b139346b3ea",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": -17,
+          "correct": 17,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -17.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 17. El valor afirmado es -17; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 80,
+          "correct": 90,
+          "truth": false,
+          "text": "Si en lugar de restar 20×5 se restara 19×5, el resultado sería 80.",
+          "feedback": "Al distribuir, el primer producto se cancela con 20×5. Cambiar el coeficiente restado de 20 a 19 aumenta el resultado en 5: (17+1)×5=90. El valor afirmado es 80; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 85,
+          "correct": 85,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 85.",
+          "feedback": "Al cancelar los productos iguales queda 17×5=85. El valor afirmado es 85; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "previous_sha256": "a2133ffa534bfb2955a03b0b24b20ff489800775e76fee2c2dbc21c49cd7e1e7",
+      "content_sha256": "27c1fc44dfba9356b004c8d5ebb3b0d0130c1d4deeb559903f899561f67b4e9e",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 18,
+          "correct": 18,
+          "truth": true,
+          "text": "Si en lugar de restar 21×3 se restara 22×3, el resultado sería 18.",
+          "feedback": "Al distribuir, el primer producto se cancela con 21×3. Cambiar el coeficiente restado de 21 a 22 reduce el resultado en 3: (7−1)×3=18. El valor afirmado es 18; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -21,
+          "correct": 21,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -21.",
+          "feedback": "Al cancelar los productos iguales queda 7×3=21. El valor afirmado es -21; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 7,
+          "correct": 7,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 7. El valor afirmado es 7; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "previous_sha256": "8e0ffb3f8d3228b53d34ce1a74a4e1211cc2feaf7b023019aab48ce838d4ffe7",
+      "content_sha256": "40faf402537d8083a0598984763671bf8a6a27266528c716b17a79a0670c6ed2",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 80,
+          "correct": 80,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 80.",
+          "feedback": "Al cancelar los productos iguales queda 10×8=80. El valor afirmado es 80; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 10,
+          "correct": 10,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 10. El valor afirmado es 10; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 72,
+          "correct": 88,
+          "truth": false,
+          "text": "Si en lugar de restar 22×8 se restara 21×8, el resultado sería 72.",
+          "feedback": "Al distribuir, el primer producto se cancela con 22×8. Cambiar el coeficiente restado de 22 a 21 aumenta el resultado en 8: (10+1)×8=88. El valor afirmado es 72; no coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "previous_sha256": "fd5e8a3a29347482f8b85da7fc14af4c0352d1043c5137adc8077c1b1b95c5dc",
+      "content_sha256": "7740ab8e5d0ad0d17d93294f81f53ba50db722e6427724594e3886199ca1ae17",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 13,
+          "correct": 13,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 13.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 13. El valor afirmado es 13; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 84,
+          "correct": 72,
+          "truth": false,
+          "text": "Si en lugar de restar 23×6 se restara 24×6, el resultado sería 84.",
+          "feedback": "Al distribuir, el primer producto se cancela con 23×6. Cambiar el coeficiente restado de 23 a 24 reduce el resultado en 6: (13−1)×6=72. El valor afirmado es 84; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -78,
+          "correct": 78,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -78.",
+          "feedback": "Al cancelar los productos iguales queda 13×6=78. El valor afirmado es -78; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "previous_sha256": "92c5a8ee0793e46ffc6bc77303c6ea67379a71624bddaa8d0f095e0fa0463a3e",
+      "content_sha256": "2aa1798a8f37633f96c996f41502383a39810c8d1d3d718618ba28805cea3fe3",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 68,
+          "correct": 68,
+          "truth": true,
+          "text": "Si en lugar de restar 24×4 se restara 23×4, el resultado sería 68.",
+          "feedback": "Al distribuir, el primer producto se cancela con 24×4. Cambiar el coeficiente restado de 24 a 23 aumenta el resultado en 4: (16+1)×4=68. El valor afirmado es 68; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 64,
+          "correct": 64,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 64.",
+          "feedback": "Al cancelar los productos iguales queda 16×4=64. El valor afirmado es 64; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -16,
+          "correct": 16,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 16. El valor afirmado es -16; no coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "previous_sha256": "e64a5d2dd964210cc8d2757c64b6b575c48be23d92fac0744cd315350cb8b1f1",
+      "content_sha256": "44210c596474a0cb02dd22b24a02e65d02d5dab0ecec42ad85ea2d49344749d3",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": -38,
+          "correct": 38,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -38.",
+          "feedback": "Al cancelar los productos iguales queda 19×2=38. El valor afirmado es -38; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -19,
+          "correct": 19,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 19. El valor afirmado es -19; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 36,
+          "correct": 36,
+          "truth": true,
+          "text": "Si en lugar de restar 8×2 se restara 9×2, el resultado sería 36.",
+          "feedback": "Al distribuir, el primer producto se cancela con 8×2. Cambiar el coeficiente restado de 8 a 9 reduce el resultado en 2: (19−1)×2=36. El valor afirmado es 36; coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "previous_sha256": "8e8691941cccab7d41d9d183a7ffa21f7ec0bf993566c759195b3058c2a1bd5e",
+      "content_sha256": "7177db6c2342870e407027e6d6b8706cabec7bd78ff1ae8c59604023caae1458",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": -9,
+          "correct": 9,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 9. El valor afirmado es -9; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 56,
+          "correct": 70,
+          "truth": false,
+          "text": "Si en lugar de restar 9×7 se restara 8×7, el resultado sería 56.",
+          "feedback": "Al distribuir, el primer producto se cancela con 9×7. Cambiar el coeficiente restado de 9 a 8 aumenta el resultado en 7: (9+1)×7=70. El valor afirmado es 56; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 63,
+          "correct": 63,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 63.",
+          "feedback": "Al cancelar los productos iguales queda 9×7=63. El valor afirmado es 63; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "previous_sha256": "c1a56870a13fd434e9a2881c275ea1fb71be7fcd062b6979955c3c9efeee6895",
+      "content_sha256": "883f13f62d57daa251e8f0424be6092f043256746df37dfac067cc64443c339a",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 55,
+          "correct": 55,
+          "truth": true,
+          "text": "Si en lugar de restar 10×5 se restara 11×5, el resultado sería 55.",
+          "feedback": "Al distribuir, el primer producto se cancela con 10×5. Cambiar el coeficiente restado de 10 a 11 reduce el resultado en 5: (12−1)×5=55. El valor afirmado es 55; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -60,
+          "correct": 60,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -60.",
+          "feedback": "Al cancelar los productos iguales queda 12×5=60. El valor afirmado es -60; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 12,
+          "correct": 12,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 12.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 12. El valor afirmado es 12; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "previous_sha256": "454418514b65a81f86a6b5d637c769ea2bda3c0836ea40de870625716fd14909",
+      "content_sha256": "2edca98b86d00c28bc72b147a22502d4cc85c03c98208ba34a4273d1b807d963",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 45,
+          "correct": 45,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 45.",
+          "feedback": "Al cancelar los productos iguales queda 15×3=45. El valor afirmado es 45; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 15,
+          "correct": 15,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 15. El valor afirmado es 15; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 42,
+          "correct": 48,
+          "truth": false,
+          "text": "Si en lugar de restar 11×3 se restara 10×3, el resultado sería 42.",
+          "feedback": "Al distribuir, el primer producto se cancela con 11×3. Cambiar el coeficiente restado de 11 a 10 aumenta el resultado en 3: (15+1)×3=48. El valor afirmado es 42; no coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "previous_sha256": "e02907478b0f4e7bd7f06428fd7365db4c1c8794824f3d1cdb0b4fedca87b7ce",
+      "content_sha256": "fbc5e629d678819d611f5fc46cd12983698577cdd6b4a54c07eac826ad46c140",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 18,
+          "correct": 18,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 18. El valor afirmado es 18; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 152,
+          "correct": 136,
+          "truth": false,
+          "text": "Si en lugar de restar 12×8 se restara 13×8, el resultado sería 152.",
+          "feedback": "Al distribuir, el primer producto se cancela con 12×8. Cambiar el coeficiente restado de 12 a 13 reduce el resultado en 8: (18−1)×8=136. El valor afirmado es 152; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -144,
+          "correct": 144,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -144.",
+          "feedback": "Al cancelar los productos iguales queda 18×8=144. El valor afirmado es -144; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-24",
+      "previous_sha256": "ee9fd51d2b1576f8f35dde9ce18893f7e1758457fa59224d91d72dbd310c847f",
+      "content_sha256": "1c42fcf4de69dd9178fc74ca3c20b641024904c677927cf461f2ed7b9f2b6145",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 34,
+          "correct": 34,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 34.",
+          "feedback": "Al cancelar los productos iguales queda 17×2=34. El valor afirmado es 34; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 17,
+          "correct": 17,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 17. El valor afirmado es 17; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 32,
+          "correct": 36,
+          "truth": false,
+          "text": "Si en lugar de restar 15×2 se restara 14×2, el resultado sería 32.",
+          "feedback": "Al distribuir, el primer producto se cancela con 15×2. Cambiar el coeficiente restado de 15 a 14 aumenta el resultado en 2: (17+1)×2=36. El valor afirmado es 32; no coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "previous_sha256": "c975d71518f6dd2dde48bbe41e3d1351fe6a65a1f35b9dafc343591ebc1b316c",
+      "content_sha256": "4ed97cd0c8ff6dbf4b53ad00949f67e3d2816591a439282f5919a6acba52d0b6",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 70,
+          "correct": 80,
+          "truth": false,
+          "text": "Si en lugar de restar 9×5 se restara 8×5, el resultado sería 70.",
+          "feedback": "Al distribuir, el primer producto se cancela con 9×5. Cambiar el coeficiente restado de 9 a 8 aumenta el resultado en 5: (15+1)×5=80. El valor afirmado es 70; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 75,
+          "correct": 75,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 75.",
+          "feedback": "Al cancelar los productos iguales queda 15×5=75. El valor afirmado es 75; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 15,
+          "correct": 15,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 15. El valor afirmado es 15; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "previous_sha256": "407c94af4770adcf3623ca0136950ba0481c70b5e46328180098017e299fc7ab",
+      "content_sha256": "15cc7ad8a8949156162e1837f24b6d3b32f0a83b71f19143f1cc068c51f217c4",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 18,
+          "correct": 18,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 18. El valor afirmado es 18; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 38,
+          "correct": 34,
+          "truth": false,
+          "text": "Si en lugar de restar 21×2 se restara 22×2, el resultado sería 38.",
+          "feedback": "Al distribuir, el primer producto se cancela con 21×2. Cambiar el coeficiente restado de 21 a 22 reduce el resultado en 2: (18−1)×2=34. El valor afirmado es 38; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -36,
+          "correct": 36,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -36.",
+          "feedback": "Al cancelar los productos iguales queda 18×2=36. El valor afirmado es -36; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "previous_sha256": "ba7d6190146884b8ded637bd28f88762041bc13ac8802b5f58aa6247b9689c47",
+      "content_sha256": "68738207cd2db5870f2e6df05b7424d0dcb77c9d4bbfa5846dc6b0ea5b974aab",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 48,
+          "correct": 48,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 48.",
+          "feedback": "Al cancelar los productos iguales queda 8×6=48. El valor afirmado es 48; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -8,
+          "correct": 8,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -8.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 8. El valor afirmado es -8; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 54,
+          "correct": 54,
+          "truth": true,
+          "text": "Si en lugar de restar 16×6 se restara 15×6, el resultado sería 54.",
+          "feedback": "Al distribuir, el primer producto se cancela con 16×6. Cambiar el coeficiente restado de 16 a 15 aumenta el resultado en 6: (8+1)×6=54. El valor afirmado es 54; coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "previous_sha256": "e5919d458f02ca676f866cd255fb43ac20cc47cb5064c23f51d40dcab260e551",
+      "content_sha256": "082b884b743cc731dbe2cdbe8ee4143ccad9a516ecf5bc860842ca91aea06d30",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 30,
+          "correct": 30,
+          "truth": true,
+          "text": "Si en lugar de restar 11×3 se restara 12×3, el resultado sería 30.",
+          "feedback": "Al distribuir, el primer producto se cancela con 11×3. Cambiar el coeficiente restado de 11 a 12 reduce el resultado en 3: (11−1)×3=30. El valor afirmado es 30; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -33,
+          "correct": 33,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -33.",
+          "feedback": "Al cancelar los productos iguales queda 11×3=33. El valor afirmado es -33; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -11,
+          "correct": 11,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 11. El valor afirmado es -11; no coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "previous_sha256": "07bdfab8e42595f4564cc6585afa0cafa8963f6ce5c72ea46a1acedae6ba19ba",
+      "content_sha256": "c55a57d67a78704bacd395876330615251d9b247c6a99a29688b1634d7221124",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": -14,
+          "correct": 14,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 14. El valor afirmado es -14; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 91,
+          "correct": 105,
+          "truth": false,
+          "text": "Si en lugar de restar 23×7 se restara 22×7, el resultado sería 91.",
+          "feedback": "Al distribuir, el primer producto se cancela con 23×7. Cambiar el coeficiente restado de 23 a 22 aumenta el resultado en 7: (14+1)×7=105. El valor afirmado es 91; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 98,
+          "correct": 98,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 98.",
+          "feedback": "Al cancelar los productos iguales queda 14×7=98. El valor afirmado es 98; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "previous_sha256": "9810d1a8bde54c92ab419957f7687594d620a18ada2cacbea64c214c37bf0be8",
+      "content_sha256": "1abebab07457e7324ce678df71c6b0668e63024a8002e84d1f261f573400b9d9",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": -68,
+          "correct": 68,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -68.",
+          "feedback": "Al cancelar los productos iguales queda 17×4=68. El valor afirmado es -68; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 17,
+          "correct": 17,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 17. El valor afirmado es 17; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 64,
+          "correct": 64,
+          "truth": true,
+          "text": "Si en lugar de restar 18×4 se restara 19×4, el resultado sería 64.",
+          "feedback": "Al distribuir, el primer producto se cancela con 18×4. Cambiar el coeficiente restado de 18 a 19 reduce el resultado en 4: (17−1)×4=64. El valor afirmado es 64; coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "previous_sha256": "2be835fadbebcb5db45173892c85a4da1b5b57506dd00552cadbe1efd0d04e09",
+      "content_sha256": "56b37a60ec404dee548cb4e546551c6e87ed443b9b209d2551e0bb1fb8240294",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 48,
+          "correct": 64,
+          "truth": false,
+          "text": "Si en lugar de restar 13×8 se restara 12×8, el resultado sería 48.",
+          "feedback": "Al distribuir, el primer producto se cancela con 13×8. Cambiar el coeficiente restado de 13 a 12 aumenta el resultado en 8: (7+1)×8=64. El valor afirmado es 48; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": 56,
+          "correct": 56,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 56.",
+          "feedback": "Al cancelar los productos iguales queda 7×8=56. El valor afirmado es 56; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 7,
+          "correct": 7,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 7. El valor afirmado es 7; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "previous_sha256": "7ab73824521aae2bc0e33334854ae1e85f1bdb7f12688b4e852fdee88e11ad58",
+      "content_sha256": "1e7f2aed6a696d7b94a4ed84e9320da124a8a4bdc19fd928f484822f2f9df5d4",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 10,
+          "correct": 10,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 10. El valor afirmado es 10; coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 55,
+          "correct": 45,
+          "truth": false,
+          "text": "Si en lugar de restar 8×5 se restara 9×5, el resultado sería 55.",
+          "feedback": "Al distribuir, el primer producto se cancela con 8×5. Cambiar el coeficiente restado de 8 a 9 reduce el resultado en 5: (10−1)×5=45. El valor afirmado es 55; no coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -50,
+          "correct": 50,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -50.",
+          "feedback": "Al cancelar los productos iguales queda 10×5=50. El valor afirmado es -50; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "previous_sha256": "6452cd57ec671f0fa1739be04bf78b6c089924de07f779e003b64eb2d6afd7f6",
+      "content_sha256": "c524bc6118fa33894d3cce9922c7d283c609fd9526468f290f256e45f7d1dca8",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 26,
+          "correct": 26,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 26.",
+          "feedback": "Al cancelar los productos iguales queda 13×2=26. El valor afirmado es 26; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -13,
+          "correct": 13,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 13. El valor afirmado es -13; no coincide con el paso correcto."
+        },
+        {
+          "key": "counterfactual",
+          "claimed": 28,
+          "correct": 28,
+          "truth": true,
+          "text": "Si en lugar de restar 20×2 se restara 19×2, el resultado sería 28.",
+          "feedback": "Al distribuir, el primer producto se cancela con 20×2. Cambiar el coeficiente restado de 20 a 19 aumenta el resultado en 2: (13+1)×2=28. El valor afirmado es 28; coincide con el correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "previous_sha256": "1dd0291a0959018b6b350991062ee3f12a71a410a5d38683ea9fa56ad97b1fd5",
+      "content_sha256": "236443179b524a96e48cd7869d8d3e80557426fba157f63af1bc9b812f9a2e14",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "decisions": [
+        {
+          "key": "counterfactual",
+          "claimed": 90,
+          "correct": 90,
+          "truth": true,
+          "text": "Si en lugar de restar 15×6 se restara 16×6, el resultado sería 90.",
+          "feedback": "Al distribuir, el primer producto se cancela con 15×6. Cambiar el coeficiente restado de 15 a 16 reduce el resultado en 6: (16−1)×6=90. El valor afirmado es 90; coincide con el correcto."
+        },
+        {
+          "key": "answer",
+          "claimed": -96,
+          "correct": 96,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es -96.",
+          "feedback": "Al cancelar los productos iguales queda 16×6=96. El valor afirmado es -96; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -16,
+          "correct": 16,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "feedback": "Solo se cancela el primer producto; el sumando restante es 16. El valor afirmado es -16; no coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    }
+  ],
+  "limits": "CI candidata ejecutó la transformación sobre banco R18 real; integración del runtime y verificación de manifiestos R19 en CI siguiente. No PASS_SEMANTIC."
+}

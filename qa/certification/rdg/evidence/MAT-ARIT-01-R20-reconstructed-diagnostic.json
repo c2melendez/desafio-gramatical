@@ -1,0 +1,1988 @@
+{
+  "scope": "MAT-ARIT-01",
+  "revision": "R20",
+  "status": "CANDIDATE_RECONSTRUCTED_DIAGNOSTIC",
+  "predecessor": "854922b1e2e4a30ddd5822dcd18f6f49fbad4e12",
+  "summary": {
+    "scope": 59,
+    "truth": 177,
+    "mutants": 177,
+    "distinct": 59,
+    "maskCounts": {
+      "principiante": {
+        "100": 1,
+        "101": 5,
+        "010": 2,
+        "001": 1,
+        "011": 2
+      },
+      "intermedio": {
+        "100": 6,
+        "101": 3,
+        "110": 4,
+        "001": 1,
+        "010": 1,
+        "011": 2
+      },
+      "avanzado": {
+        "100": 4,
+        "101": 10,
+        "110": 2,
+        "010": 6,
+        "011": 3,
+        "001": 6
+      }
+    }
+  },
+  "method": "Executed exact TS candidate after removing type-only syntax on 59 reconstructed current R18/R19 records; independent repeated-addition oracle for all judgments and flipped-truth negative checks. seed=0 only for order; runtime hashes and guard integration pending.",
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
+      "level": "principiante",
+      "previous_hash": "c42b66966f0c30d1c1248facf327224b6ea6a597af0cc65513e5070d5a884c61",
+      "stimulus": "Resuelve (5+11)×8. ¿Cuál es el resultado?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 93,
+          "correct": 128,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 93.",
+          "feedback": "Los paréntesis se resuelven primero: 5+11=16; después 16×8=128. El valor afirmado es 93; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 16.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 5+11=16. El valor afirmado es 16; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 88,
+          "correct": 40,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 88.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 5×8=40. El valor afirmado es 88; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-1",
+      "level": "principiante",
+      "previous_hash": "518a63c89d08cbef02c7b55ddeb3b76c31f3215c26c071f63a4d09fcb177739e",
+      "stimulus": "Resuelve (6+14)×6. ¿Cuál es el resultado?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 90,
+          "correct": 120,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 90.",
+          "feedback": "Los paréntesis se resuelven primero: 6+14=20; después 20×6=120. El valor afirmado es 90; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -8,
+          "correct": 20,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es -8.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 6+14=20. El valor afirmado es -8; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 36,
+          "correct": 36,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 36.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 6×6=36. El valor afirmado es 36; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
+      "level": "principiante",
+      "previous_hash": "3906facce751dbb96498f62019cdc567c9084bc7c3f8c9123aa822d94e87e75e",
+      "stimulus": "Resuelve (7+4)×4. ¿Cuál es el resultado?",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 23,
+          "correct": 44,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 23.",
+          "feedback": "Los paréntesis se resuelven primero: 7+4=11; después 11×4=44. El valor afirmado es 23; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 11,
+          "correct": 11,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 11.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 7+4=11. El valor afirmado es 11; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 28,
+          "correct": 28,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 28.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 7×4=28. El valor afirmado es 28; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
+      "level": "principiante",
+      "previous_hash": "20b88917d384af30f9e01021c67ae205b6c593f9e5b4035ae1ad16ff7761f4c2",
+      "stimulus": "Resuelve (8+7)×2. ¿Cuál es el resultado?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 30,
+          "correct": 30,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 30.",
+          "feedback": "Los paréntesis se resuelven primero: 8+7=15; después 15×2=30. El valor afirmado es 30; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 1,
+          "correct": 15,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 1.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 8+7=15. El valor afirmado es 1; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 16.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 8×2=16. El valor afirmado es 16; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-4",
+      "level": "principiante",
+      "previous_hash": "7cbaf1f9a5a89ed415b79b1ccd8cf6a166df2147771c613fd7c07721d4d5c49c",
+      "stimulus": "Resuelve (9+10)×7. ¿Cuál es el resultado?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 133,
+          "correct": 133,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 133.",
+          "feedback": "Los paréntesis se resuelven primero: 9+10=19; después 19×7=133. El valor afirmado es 133; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -1,
+          "correct": 19,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es -1.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 9+10=19. El valor afirmado es -1; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 63,
+          "correct": 63,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 63.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 9×7=63. El valor afirmado es 63; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
+      "level": "principiante",
+      "previous_hash": "34612b7a690f9afdb20026bf4b9f0f82fc368b01c83a8a1757069ce59b9e22b0",
+      "stimulus": "Resuelve (10+13)×5. ¿Cuál es el resultado?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 115,
+          "correct": 115,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 115.",
+          "feedback": "Los paréntesis se resuelven primero: 10+13=23; después 23×5=115. El valor afirmado es 115; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -3,
+          "correct": 23,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es -3.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 10+13=23. El valor afirmado es -3; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 65,
+          "correct": 50,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 65.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 10×5=50. El valor afirmado es 65; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-6",
+      "level": "principiante",
+      "previous_hash": "93fd58e38039401bbdcabee6f241e740e09a2561e89f37052719923de22f9f7c",
+      "stimulus": "Resuelve (11+3)×3. ¿Cuál es el resultado?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 42,
+          "correct": 42,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 42.",
+          "feedback": "Los paréntesis se resuelven primero: 11+3=14; después 14×3=42. El valor afirmado es 42; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 8,
+          "correct": 14,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 8.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 11+3=14. El valor afirmado es 8; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 33,
+          "correct": 33,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 33.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 11×3=33. El valor afirmado es 33; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-7",
+      "level": "principiante",
+      "previous_hash": "a376ac885e211da005a5edc4ef79d1415ea055b3b23e56a7d48eb1a229bba893",
+      "stimulus": "Resuelve (12+6)×8. ¿Cuál es el resultado?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 144,
+          "correct": 144,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 144.",
+          "feedback": "Los paréntesis se resuelven primero: 12+6=18; después 18×8=144. El valor afirmado es 144; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 6,
+          "correct": 18,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 6.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 12+6=18. El valor afirmado es 6; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 96,
+          "correct": 96,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 96.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 12×8=96. El valor afirmado es 96; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
+      "level": "principiante",
+      "previous_hash": "a2590cf9c11ab6e0e57fecf5321cf9ca830300ec61b8785b75c5e1b6a66cc37d",
+      "stimulus": "Resuelve (13+9)×6. ¿Cuál es el resultado?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 132,
+          "correct": 132,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 132.",
+          "feedback": "Los paréntesis se resuelven primero: 13+9=22; después 22×6=132. El valor afirmado es 132; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 4,
+          "correct": 22,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 4.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 13+9=22. El valor afirmado es 4; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 78,
+          "correct": 78,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 78.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 13×6=78. El valor afirmado es 78; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-9",
+      "level": "principiante",
+      "previous_hash": "dbbb3d3d14df35b75c0596f0f5129fa3ea989729631121091172c983b1fa46a7",
+      "stimulus": "Resuelve (14+12)×4. ¿Cuál es el resultado?",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 62,
+          "correct": 104,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 62.",
+          "feedback": "Los paréntesis se resuelven primero: 14+12=26; después 26×4=104. El valor afirmado es 62; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 26,
+          "correct": 26,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 26.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 14+12=26. El valor afirmado es 26; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 56,
+          "correct": 56,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 56.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 14×4=56. El valor afirmado es 56; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
+      "level": "principiante",
+      "previous_hash": "669b16be12e579351cddb3035d0bc20048d9e017ae17d91adbf052ecb8b905be",
+      "stimulus": "Resuelve (13+6)×5. ¿Cuál es el resultado?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 43,
+          "correct": 95,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 43.",
+          "feedback": "Los paréntesis se resuelven primero: 13+6=19; después 19×5=95. El valor afirmado es 43; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 19,
+          "correct": 19,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 19.",
+          "feedback": "Dentro del paréntesis se suman ambos operandos: 13+6=19. El valor afirmado es 19; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 30,
+          "correct": 65,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 30.",
+          "feedback": "La distributiva multiplica cada sumando por el mismo factor: 13×5=65. El valor afirmado es 30; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "level": "intermedio",
+      "previous_hash": "4a98d0be1c8e6838c4fd422bd7cc38a9110b5cc6f780d70ef4843f9b6fdf3ebc",
+      "stimulus": "La expresión original es (16+12)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 150,
+          "correct": 150,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 150.",
+          "feedback": "Primero aplica ambos cambios: 12+2=14 y 6−1=5. Luego (16+14)×5=150. El valor afirmado es 150; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 28,
+          "correct": 30,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 28.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 16+(12+2)=30. El valor afirmado es 28; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 7,
+          "correct": 5,
+          "truth": false,
+          "text": "El factor después del cambio es 7.",
+          "feedback": "El factor disminuye una unidad: 6−1=5. El valor afirmado es 7; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "level": "intermedio",
+      "previous_hash": "d1e5a82bfa469ee7b30e89d9479d9701cbc6d31d0c93f7715d1cf51a68e9f31e",
+      "stimulus": "La expresión original es (17+15)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 96,
+          "correct": 102,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 96.",
+          "feedback": "Primero aplica ambos cambios: 15+2=17 y 4−1=3. Luego (17+17)×3=102. El valor afirmado es 96; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 32,
+          "correct": 34,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 32.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 17+(15+2)=34. El valor afirmado es 32; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 3,
+          "correct": 3,
+          "truth": true,
+          "text": "El factor después del cambio es 3.",
+          "feedback": "El factor disminuye una unidad: 4−1=3. El valor afirmado es 3; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "level": "intermedio",
+      "previous_hash": "75dbe8517c7dd17ab5c98c69d20a0f66707a3f4ef4ebdb06589720fe0d675cdb",
+      "stimulus": "La expresión original es (18+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 23,
+          "correct": 25,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 23.",
+          "feedback": "Primero aplica ambos cambios: 5+2=7 y 2−1=1. Luego (18+7)×1=25. El valor afirmado es 23; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 46,
+          "correct": 46,
+          "truth": true,
+          "text": "Antes de modificar los datos, el valor de la expresión original es 46.",
+          "feedback": "Antes de los cambios los operandos conservan sus valores: (18+5)×2=46. El valor afirmado es 46; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 3,
+          "correct": 1,
+          "truth": false,
+          "text": "El factor después del cambio es 3.",
+          "feedback": "El factor disminuye una unidad: 2−1=1. El valor afirmado es 3; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "level": "intermedio",
+      "previous_hash": "e8256d862e81e299ed03f0dc0cb9411ab11911c1c6e2d21edc131dd415032c6e",
+      "stimulus": "La expresión original es (19+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 174,
+          "correct": 174,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 174.",
+          "feedback": "Primero aplica ambos cambios: 8+2=10 y 7−1=6. Luego (19+10)×6=174. El valor afirmado es 174; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 29,
+          "correct": 29,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 29.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 19+(8+2)=29. El valor afirmado es 29; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 8,
+          "correct": 6,
+          "truth": false,
+          "text": "El factor después del cambio es 8.",
+          "feedback": "El factor disminuye una unidad: 7−1=6. El valor afirmado es 8; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "level": "intermedio",
+      "previous_hash": "22d035b9ecb3cf3596849dd608626694d789c5a9c4d6f1e19e60f43bcade2486",
+      "stimulus": "La expresión original es (20+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 132,
+          "correct": 132,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 132.",
+          "feedback": "Primero aplica ambos cambios: 11+2=13 y 5−1=4. Luego (20+13)×4=132. El valor afirmado es 132; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 31,
+          "correct": 33,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 31.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 20+(11+2)=33. El valor afirmado es 31; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 4,
+          "correct": 4,
+          "truth": true,
+          "text": "El factor después del cambio es 4.",
+          "feedback": "El factor disminuye una unidad: 5−1=4. El valor afirmado es 4; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "level": "intermedio",
+      "previous_hash": "82d55ffe7c182b19a9e519be71378119046f2b95a1e58264d0a17dbcd359b36b",
+      "stimulus": "La expresión original es (21+14)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 70,
+          "correct": 74,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 70.",
+          "feedback": "Primero aplica ambos cambios: 14+2=16 y 3−1=2. Luego (21+16)×2=74. El valor afirmado es 70; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 37,
+          "correct": 37,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 37.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 21+(14+2)=37. El valor afirmado es 37; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 2,
+          "correct": 2,
+          "truth": true,
+          "text": "El factor después del cambio es 2.",
+          "feedback": "El factor disminuye una unidad: 3−1=2. El valor afirmado es 2; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "level": "intermedio",
+      "previous_hash": "b3c0959bca81df7354178fe90e6b1d760d73878f9506621f4300a78f5bdb5ef1",
+      "stimulus": "La expresión original es (22+17)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 287,
+          "correct": 287,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 287.",
+          "feedback": "Primero aplica ambos cambios: 17+2=19 y 8−1=7. Luego (22+19)×7=287. El valor afirmado es 287; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 39,
+          "correct": 41,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 39.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 22+(17+2)=41. El valor afirmado es 39; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 9,
+          "correct": 7,
+          "truth": false,
+          "text": "El factor después del cambio es 9.",
+          "feedback": "El factor disminuye una unidad: 8−1=7. El valor afirmado es 9; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-7",
+      "level": "intermedio",
+      "previous_hash": "734003950d8a24b7241a443614bc86b226f12cb1cf9959792e3f8619194bd783",
+      "stimulus": "La expresión original es (6+7)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 75,
+          "correct": 75,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 75.",
+          "feedback": "Primero aplica ambos cambios: 7+2=9 y 6−1=5. Luego (6+9)×5=75. El valor afirmado es 75; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 13,
+          "correct": 15,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 13.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 6+(7+2)=15. El valor afirmado es 13; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 5,
+          "correct": 5,
+          "truth": true,
+          "text": "El factor después del cambio es 5.",
+          "feedback": "El factor disminuye una unidad: 6−1=5. El valor afirmado es 5; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-8",
+      "level": "intermedio",
+      "previous_hash": "25007dcfeea590d0f3d2b19beb950a17efd7f4fb0b1a8ac53a113fa674594a68",
+      "stimulus": "La expresión original es (7+10)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 57,
+          "correct": 57,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 57.",
+          "feedback": "Primero aplica ambos cambios: 10+2=12 y 4−1=3. Luego (7+12)×3=57. El valor afirmado es 57; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 17,
+          "correct": 19,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 17.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 7+(10+2)=19. El valor afirmado es 17; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 5,
+          "correct": 3,
+          "truth": false,
+          "text": "El factor después del cambio es 5.",
+          "feedback": "El factor disminuye una unidad: 4−1=3. El valor afirmado es 5; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-9",
+      "level": "intermedio",
+      "previous_hash": "31ca5c13c996061676b2d98974563f18003e86e2995ac777756cf758f4af519b",
+      "stimulus": "La expresión original es (8+13)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 21,
+          "correct": 23,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 21.",
+          "feedback": "Primero aplica ambos cambios: 13+2=15 y 2−1=1. Luego (8+15)×1=23. El valor afirmado es 21; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 42,
+          "correct": 42,
+          "truth": true,
+          "text": "Antes de modificar los datos, el valor de la expresión original es 42.",
+          "feedback": "Antes de los cambios los operandos conservan sus valores: (8+13)×2=42. El valor afirmado es 42; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 1,
+          "correct": 1,
+          "truth": true,
+          "text": "El factor después del cambio es 1.",
+          "feedback": "El factor disminuye una unidad: 2−1=1. El valor afirmado es 1; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "level": "intermedio",
+      "previous_hash": "d6a7fbd748eaf4f7256b994c95a179b52edce14937b309acde93f6438b950c51",
+      "stimulus": "La expresión original es (9+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 162,
+          "correct": 162,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 162.",
+          "feedback": "Primero aplica ambos cambios: 16+2=18 y 7−1=6. Luego (9+18)×6=162. El valor afirmado es 162; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 25,
+          "correct": 27,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 25.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 9+(16+2)=27. El valor afirmado es 25; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 8,
+          "correct": 6,
+          "truth": false,
+          "text": "El factor después del cambio es 8.",
+          "feedback": "El factor disminuye una unidad: 7−1=6. El valor afirmado es 8; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "level": "intermedio",
+      "previous_hash": "449bdef6f58304de78ca4b206d2ae13ebf740a94e69d477b7fd6fae7ebf4be6d",
+      "stimulus": "La expresión original es (10+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 72,
+          "correct": 72,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 72.",
+          "feedback": "Primero aplica ambos cambios: 6+2=8 y 5−1=4. Luego (10+8)×4=72. El valor afirmado es 72; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 18,
+          "correct": 18,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 18.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 10+(6+2)=18. El valor afirmado es 18; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 6,
+          "correct": 4,
+          "truth": false,
+          "text": "El factor después del cambio es 6.",
+          "feedback": "El factor disminuye una unidad: 5−1=4. El valor afirmado es 6; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "level": "intermedio",
+      "previous_hash": "956d7377cb47b4184f81b60a1070ca7af5bf2e256dde5f2d85accacaf1dd6857",
+      "stimulus": "La expresión original es (11+9)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 44,
+          "correct": 44,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 44.",
+          "feedback": "Primero aplica ambos cambios: 9+2=11 y 3−1=2. Luego (11+11)×2=44. El valor afirmado es 44; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 22,
+          "correct": 22,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 22.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 11+(9+2)=22. El valor afirmado es 22; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 4,
+          "correct": 2,
+          "truth": false,
+          "text": "El factor después del cambio es 4.",
+          "feedback": "El factor disminuye una unidad: 3−1=2. El valor afirmado es 4; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "level": "intermedio",
+      "previous_hash": "5db183fa6a53e7659e09bc874f05aea3aecb6c66871852b01c53a696b8964b45",
+      "stimulus": "La expresión original es (12+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 182,
+          "correct": 182,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 182.",
+          "feedback": "Primero aplica ambos cambios: 12+2=14 y 8−1=7. Luego (12+14)×7=182. El valor afirmado es 182; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 24,
+          "correct": 26,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 24.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 12+(12+2)=26. El valor afirmado es 24; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 9,
+          "correct": 7,
+          "truth": false,
+          "text": "El factor después del cambio es 9.",
+          "feedback": "El factor disminuye una unidad: 8−1=7. El valor afirmado es 9; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "level": "intermedio",
+      "previous_hash": "fe6ca99eddbe87c6a1adb4c3ab061e6189146a319715ea8df038460be955bdb6",
+      "stimulus": "La expresión original es (13+15)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 150,
+          "correct": 150,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 150.",
+          "feedback": "Primero aplica ambos cambios: 15+2=17 y 6−1=5. Luego (13+17)×5=150. El valor afirmado es 150; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 15,
+          "correct": 17,
+          "truth": false,
+          "text": "El segundo sumando después del cambio es 15.",
+          "feedback": "Solo aumenta el segundo sumando: 15+2=17; todavía falta sumar el primero y multiplicar. El valor afirmado es 15; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 7,
+          "correct": 5,
+          "truth": false,
+          "text": "El factor después del cambio es 7.",
+          "feedback": "El factor disminuye una unidad: 6−1=5. El valor afirmado es 7; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-18",
+      "level": "intermedio",
+      "previous_hash": "4d352173d8183e231b0dcc7ed10b1a6a50a9f195da88fb7c27b5c08aa5d08e33",
+      "stimulus": "La expresión original es (13+14)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 29,
+          "correct": 29,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 29.",
+          "feedback": "Primero aplica ambos cambios: 14+2=16 y 2−1=1. Luego (13+16)×1=29. El valor afirmado es 29; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 58,
+          "correct": 54,
+          "truth": false,
+          "text": "Antes de modificar los datos, el valor de la expresión original es 58.",
+          "feedback": "Antes de los cambios los operandos conservan sus valores: (13+14)×2=54. El valor afirmado es 58; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 1,
+          "correct": 1,
+          "truth": true,
+          "text": "El factor después del cambio es 1.",
+          "feedback": "El factor disminuye una unidad: 2−1=1. El valor afirmado es 1; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-19",
+      "level": "intermedio",
+      "previous_hash": "ff46e6e2381362bf4a649336d116b212eb56fb23e1dd5a2924eefcb8f2a062c5",
+      "stimulus": "La expresión original es (8+6)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 48,
+          "correct": 48,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 48.",
+          "feedback": "Primero aplica ambos cambios: 6+2=8 y 4−1=3. Luego (8+8)×3=48. El valor afirmado es 48; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 16.",
+          "feedback": "Se modifica el segundo sumando antes de evaluar: 8+(6+2)=16. El valor afirmado es 16; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 5,
+          "correct": 3,
+          "truth": false,
+          "text": "El factor después del cambio es 5.",
+          "feedback": "El factor disminuye una unidad: 4−1=3. El valor afirmado es 5; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "level": "avanzado",
+      "previous_hash": "658f07074911b8749e01ae853fd8439d5322304e51d4bf92af0cbb2cf205b8ce",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+13)×4−10×4. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 52,
+          "correct": 52,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 52.",
+          "feedback": "Al distribuir y cancelar 10×4 con su opuesto, queda 13×4=52. El valor afirmado es 52; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -13,
+          "correct": 13,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 13 multiplicado por 4. El valor afirmado es -13; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 56,
+          "correct": 56,
+          "truth": true,
+          "text": "Si en lugar de restar 10×4 se restara 9×4, el resultado sería 56.",
+          "feedback": "La diferencia entre los términos restados es -1×4; se resta esa diferencia al resultado original 52: 56. El valor afirmado es 56; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "level": "avanzado",
+      "previous_hash": "7c118cc0365b4bb21d209c130ea1b72a2accd97527dfc16d01c4f01b13f8b9d2",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+16)×2−11×2. ¿Cuál es su valor?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 54,
+          "correct": 32,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 54.",
+          "feedback": "Al distribuir y cancelar 11×2 con su opuesto, queda 16×2=32. El valor afirmado es 54; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 16.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 16 multiplicado por 2. El valor afirmado es 16; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 32,
+          "correct": 30,
+          "truth": false,
+          "text": "Si en lugar de restar 11×2 se restara 12×2, el resultado sería 32.",
+          "feedback": "La diferencia entre los términos restados es 1×2; se resta esa diferencia al resultado original 32: 30. El valor afirmado es 32; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "level": "avanzado",
+      "previous_hash": "339a56c6b4265f4030da97e63658f96fb3070ff356869b3cd028c570855954dc",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+19)×7−12×7. ¿Cuál es su valor?",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 217,
+          "correct": 133,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 217.",
+          "feedback": "Al distribuir y cancelar 12×7 con su opuesto, queda 19×7=133. El valor afirmado es 217; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 19,
+          "correct": 19,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 19.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 19 multiplicado por 7. El valor afirmado es 19; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 140,
+          "correct": 140,
+          "truth": true,
+          "text": "Si en lugar de restar 12×7 se restara 11×7, el resultado sería 140.",
+          "feedback": "La diferencia entre los términos restados es -1×7; se resta esa diferencia al resultado original 133: 140. El valor afirmado es 140; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "level": "avanzado",
+      "previous_hash": "15a933ddd40cacc318db4d3e94ba9c63e2668b584ed0ce3ba51a5df0f1cbbcae",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+9)×5−13×5. ¿Cuál es su valor?",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 110,
+          "correct": 45,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 110.",
+          "feedback": "Al distribuir y cancelar 13×5 con su opuesto, queda 9×5=45. El valor afirmado es 110; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 9,
+          "correct": 9,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 9.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 9 multiplicado por 5. El valor afirmado es 9; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 40,
+          "correct": 40,
+          "truth": true,
+          "text": "Si en lugar de restar 13×5 se restara 14×5, el resultado sería 40.",
+          "feedback": "La diferencia entre los términos restados es 1×5; se resta esa diferencia al resultado original 45: 40. El valor afirmado es 40; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "level": "avanzado",
+      "previous_hash": "64ec9d89ef630cd93ea25aa24eca1232df38f2824d00191c235a8bf969462e60",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+12)×3−14×3. ¿Cuál es su valor?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 36,
+          "correct": 36,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 36.",
+          "feedback": "Al distribuir y cancelar 14×3 con su opuesto, queda 12×3=36. El valor afirmado es 36; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -12,
+          "correct": 12,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -12.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 12 multiplicado por 3. El valor afirmado es -12; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 33,
+          "correct": 39,
+          "truth": false,
+          "text": "Si en lugar de restar 14×3 se restara 13×3, el resultado sería 33.",
+          "feedback": "La diferencia entre los términos restados es -1×3; se resta esa diferencia al resultado original 36: 39. El valor afirmado es 33; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "level": "avanzado",
+      "previous_hash": "5d6496bb2278e1026d64a1a75abb609a3aa4c096dc919b9d01040b1282a2706d",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+15)×8−15×8. ¿Cuál es su valor?",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 120,
+          "correct": 120,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 120.",
+          "feedback": "Al distribuir y cancelar 15×8 con su opuesto, queda 15×8=120. El valor afirmado es 120; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 15,
+          "correct": 15,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 15 multiplicado por 8. El valor afirmado es 15; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 128,
+          "correct": 112,
+          "truth": false,
+          "text": "Si en lugar de restar 15×8 se restara 16×8, el resultado sería 128.",
+          "feedback": "La diferencia entre los términos restados es 1×8; se resta esa diferencia al resultado original 120: 112. El valor afirmado es 128; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "level": "avanzado",
+      "previous_hash": "082106a3747967a623ac36ee95b6c3c0a453deee7125131f076c918ce6f7e33c",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+18)×6−16×6. ¿Cuál es su valor?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 204,
+          "correct": 108,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 204.",
+          "feedback": "Al distribuir y cancelar 16×6 con su opuesto, queda 18×6=108. El valor afirmado es 204; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -18,
+          "correct": 18,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -18.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 18 multiplicado por 6. El valor afirmado es -18; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 114,
+          "correct": 114,
+          "truth": true,
+          "text": "Si en lugar de restar 16×6 se restara 15×6, el resultado sería 114.",
+          "feedback": "La diferencia entre los términos restados es -1×6; se resta esa diferencia al resultado original 108: 114. El valor afirmado es 114; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "level": "avanzado",
+      "previous_hash": "bdb72ad04ebfb77a6ea31148c5344f2415153c9ddcc67079e3d3978a88240a0d",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (17+8)×4−17×4. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 32,
+          "correct": 32,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 32.",
+          "feedback": "Al distribuir y cancelar 17×4 con su opuesto, queda 8×4=32. El valor afirmado es 32; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -8,
+          "correct": 8,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -8.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 8 multiplicado por 4. El valor afirmado es -8; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 28,
+          "correct": 28,
+          "truth": true,
+          "text": "Si en lugar de restar 17×4 se restara 18×4, el resultado sería 28.",
+          "feedback": "La diferencia entre los términos restados es 1×4; se resta esa diferencia al resultado original 32: 28. El valor afirmado es 28; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "level": "avanzado",
+      "previous_hash": "e5f07e876dcfa814d44c571e74fdce2d0c7a4df8446adf8a44e86625047625b3",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+11)×2−18×2. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 22,
+          "correct": 22,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 22.",
+          "feedback": "Al distribuir y cancelar 18×2 con su opuesto, queda 11×2=22. El valor afirmado es 22; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -11,
+          "correct": 11,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 11 multiplicado por 2. El valor afirmado es -11; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 24,
+          "correct": 24,
+          "truth": true,
+          "text": "Si en lugar de restar 18×2 se restara 17×2, el resultado sería 24.",
+          "feedback": "La diferencia entre los términos restados es -1×2; se resta esa diferencia al resultado original 22: 24. El valor afirmado es 24; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "level": "avanzado",
+      "previous_hash": "1bc3a77b893b8dc8e5e99d0998594d957d32e2860b6f1451d0bc64f1e7280d3c",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (19+14)×7−19×7. ¿Cuál es su valor?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 98,
+          "correct": 98,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 98.",
+          "feedback": "Al distribuir y cancelar 19×7 con su opuesto, queda 14×7=98. El valor afirmado es 98; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -14,
+          "correct": 14,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 14 multiplicado por 7. El valor afirmado es -14; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 105,
+          "correct": 91,
+          "truth": false,
+          "text": "Si en lugar de restar 19×7 se restara 20×7, el resultado sería 105.",
+          "feedback": "La diferencia entre los términos restados es 1×7; se resta esa diferencia al resultado original 98: 91. El valor afirmado es 105; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "level": "avanzado",
+      "previous_hash": "a737bf0a87e8c64483163beb672e9717635704e90d541e2d39e10b139346b3ea",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+17)×5−20×5. ¿Cuál es su valor?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 85,
+          "correct": 85,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 85.",
+          "feedback": "Al distribuir y cancelar 20×5 con su opuesto, queda 17×5=85. El valor afirmado es 85; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -17,
+          "correct": 17,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -17.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 17 multiplicado por 5. El valor afirmado es -17; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 80,
+          "correct": 90,
+          "truth": false,
+          "text": "Si en lugar de restar 20×5 se restara 19×5, el resultado sería 80.",
+          "feedback": "La diferencia entre los términos restados es -1×5; se resta esa diferencia al resultado original 85: 90. El valor afirmado es 80; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "level": "avanzado",
+      "previous_hash": "27c1fc44dfba9356b004c8d5ebb3b0d0130c1d4deeb559903f899561f67b4e9e",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+7)×3−21×3. ¿Cuál es su valor?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 84,
+          "correct": 21,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 84.",
+          "feedback": "Al distribuir y cancelar 21×3 con su opuesto, queda 7×3=21. El valor afirmado es 84; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 7,
+          "correct": 7,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 7 multiplicado por 3. El valor afirmado es 7; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 21,
+          "correct": 18,
+          "truth": false,
+          "text": "Si en lugar de restar 21×3 se restara 22×3, el resultado sería 21.",
+          "feedback": "La diferencia entre los términos restados es 1×3; se resta esa diferencia al resultado original 21: 18. El valor afirmado es 21; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "level": "avanzado",
+      "previous_hash": "40faf402537d8083a0598984763671bf8a6a27266528c716b17a79a0670c6ed2",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (22+10)×8−22×8. ¿Cuál es su valor?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 256,
+          "correct": 80,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 256.",
+          "feedback": "Al distribuir y cancelar 22×8 con su opuesto, queda 10×8=80. El valor afirmado es 256; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -10,
+          "correct": 10,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -10.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 10 multiplicado por 8. El valor afirmado es -10; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 88,
+          "correct": 88,
+          "truth": true,
+          "text": "Si en lugar de restar 22×8 se restara 21×8, el resultado sería 88.",
+          "feedback": "La diferencia entre los términos restados es -1×8; se resta esa diferencia al resultado original 80: 88. El valor afirmado es 88; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "level": "avanzado",
+      "previous_hash": "7740ab8e5d0ad0d17d93294f81f53ba50db722e6427724594e3886199ca1ae17",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+13)×6−23×6. ¿Cuál es su valor?",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 216,
+          "correct": 78,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 216.",
+          "feedback": "Al distribuir y cancelar 23×6 con su opuesto, queda 13×6=78. El valor afirmado es 216; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 13,
+          "correct": 13,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 13.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 13 multiplicado por 6. El valor afirmado es 13; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 72,
+          "correct": 72,
+          "truth": true,
+          "text": "Si en lugar de restar 23×6 se restara 24×6, el resultado sería 72.",
+          "feedback": "La diferencia entre los términos restados es 1×6; se resta esa diferencia al resultado original 78: 72. El valor afirmado es 72; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "level": "avanzado",
+      "previous_hash": "2aa1798a8f37633f96c996f41502383a39810c8d1d3d718618ba28805cea3fe3",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (24+16)×4−24×4. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 64,
+          "correct": 64,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 64.",
+          "feedback": "Al distribuir y cancelar 24×4 con su opuesto, queda 16×4=64. El valor afirmado es 64; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -16,
+          "correct": 16,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 16 multiplicado por 4. El valor afirmado es -16; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 68,
+          "correct": 68,
+          "truth": true,
+          "text": "Si en lugar de restar 24×4 se restara 23×4, el resultado sería 68.",
+          "feedback": "La diferencia entre los términos restados es -1×4; se resta esa diferencia al resultado original 64: 68. El valor afirmado es 68; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "level": "avanzado",
+      "previous_hash": "44210c596474a0cb02dd22b24a02e65d02d5dab0ecec42ad85ea2d49344749d3",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+19)×2−8×2. ¿Cuál es su valor?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 54,
+          "correct": 38,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 54.",
+          "feedback": "Al distribuir y cancelar 8×2 con su opuesto, queda 19×2=38. El valor afirmado es 54; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 19,
+          "correct": 19,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 19.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 19 multiplicado por 2. El valor afirmado es 19; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 38,
+          "correct": 36,
+          "truth": false,
+          "text": "Si en lugar de restar 8×2 se restara 9×2, el resultado sería 38.",
+          "feedback": "La diferencia entre los términos restados es 1×2; se resta esa diferencia al resultado original 38: 36. El valor afirmado es 38; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "level": "avanzado",
+      "previous_hash": "7177db6c2342870e407027e6d6b8706cabec7bd78ff1ae8c59604023caae1458",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+9)×7−9×7. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 63,
+          "correct": 63,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 63.",
+          "feedback": "Al distribuir y cancelar 9×7 con su opuesto, queda 9×7=63. El valor afirmado es 63; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -9,
+          "correct": 9,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 9 multiplicado por 7. El valor afirmado es -9; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 70,
+          "correct": 70,
+          "truth": true,
+          "text": "Si en lugar de restar 9×7 se restara 8×7, el resultado sería 70.",
+          "feedback": "La diferencia entre los términos restados es -1×7; se resta esa diferencia al resultado original 63: 70. El valor afirmado es 70; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "level": "avanzado",
+      "previous_hash": "883f13f62d57daa251e8f0424be6092f043256746df37dfac067cc64443c339a",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+12)×5−10×5. ¿Cuál es su valor?",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 60,
+          "correct": 60,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 60.",
+          "feedback": "Al distribuir y cancelar 10×5 con su opuesto, queda 12×5=60. El valor afirmado es 60; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 12,
+          "correct": 12,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 12.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 12 multiplicado por 5. El valor afirmado es 12; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 65,
+          "correct": 55,
+          "truth": false,
+          "text": "Si en lugar de restar 10×5 se restara 11×5, el resultado sería 65.",
+          "feedback": "La diferencia entre los términos restados es 1×5; se resta esa diferencia al resultado original 60: 55. El valor afirmado es 65; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "level": "avanzado",
+      "previous_hash": "2edca98b86d00c28bc72b147a22502d4cc85c03c98208ba34a4273d1b807d963",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+15)×3−11×3. ¿Cuál es su valor?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 78,
+          "correct": 45,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 78.",
+          "feedback": "Al distribuir y cancelar 11×3 con su opuesto, queda 15×3=45. El valor afirmado es 78; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 15,
+          "correct": 15,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 15 multiplicado por 3. El valor afirmado es 15; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 45,
+          "correct": 48,
+          "truth": false,
+          "text": "Si en lugar de restar 11×3 se restara 10×3, el resultado sería 45.",
+          "feedback": "La diferencia entre los términos restados es -1×3; se resta esa diferencia al resultado original 45: 48. El valor afirmado es 45; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "level": "avanzado",
+      "previous_hash": "fbc5e629d678819d611f5fc46cd12983698577cdd6b4a54c07eac826ad46c140",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+18)×8−12×8. ¿Cuál es su valor?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 240,
+          "correct": 144,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 240.",
+          "feedback": "Al distribuir y cancelar 12×8 con su opuesto, queda 18×8=144. El valor afirmado es 240; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -18,
+          "correct": 18,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -18.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 18 multiplicado por 8. El valor afirmado es -18; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 136,
+          "correct": 136,
+          "truth": true,
+          "text": "Si en lugar de restar 12×8 se restara 13×8, el resultado sería 136.",
+          "feedback": "La diferencia entre los términos restados es 1×8; se resta esa diferencia al resultado original 144: 136. El valor afirmado es 136; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-24",
+      "level": "avanzado",
+      "previous_hash": "1c42fcf4de69dd9178fc74ca3c20b641024904c677927cf461f2ed7b9f2b6145",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+17)×2−15×2. ¿Cuál es su valor?",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 34,
+          "correct": 34,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 34.",
+          "feedback": "Al distribuir y cancelar 15×2 con su opuesto, queda 17×2=34. El valor afirmado es 34; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -17,
+          "correct": 17,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -17.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 17 multiplicado por 2. El valor afirmado es -17; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 32,
+          "correct": 36,
+          "truth": false,
+          "text": "Si en lugar de restar 15×2 se restara 14×2, el resultado sería 32.",
+          "feedback": "La diferencia entre los términos restados es -1×2; se resta esa diferencia al resultado original 34: 36. El valor afirmado es 32; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "level": "avanzado",
+      "previous_hash": "4ed97cd0c8ff6dbf4b53ad00949f67e3d2816591a439282f5919a6acba52d0b6",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+15)×5−9×5. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 75,
+          "correct": 75,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 75.",
+          "feedback": "Al distribuir y cancelar 9×5 con su opuesto, queda 15×5=75. El valor afirmado es 75; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -15,
+          "correct": 15,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -15.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 15 multiplicado por 5. El valor afirmado es -15; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 80,
+          "correct": 80,
+          "truth": true,
+          "text": "Si en lugar de restar 9×5 se restara 8×5, el resultado sería 80.",
+          "feedback": "La diferencia entre los términos restados es -1×5; se resta esa diferencia al resultado original 75: 80. El valor afirmado es 80; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "level": "avanzado",
+      "previous_hash": "15cc7ad8a8949156162e1837f24b6d3b32f0a83b71f19143f1cc068c51f217c4",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+18)×2−21×2. ¿Cuál es su valor?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 78,
+          "correct": 36,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 78.",
+          "feedback": "Al distribuir y cancelar 21×2 con su opuesto, queda 18×2=36. El valor afirmado es 78; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -18,
+          "correct": 18,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -18.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 18 multiplicado por 2. El valor afirmado es -18; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 34,
+          "correct": 34,
+          "truth": true,
+          "text": "Si en lugar de restar 21×2 se restara 22×2, el resultado sería 34.",
+          "feedback": "La diferencia entre los términos restados es 1×2; se resta esa diferencia al resultado original 36: 34. El valor afirmado es 34; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "level": "avanzado",
+      "previous_hash": "68738207cd2db5870f2e6df05b7424d0dcb77c9d4bbfa5846dc6b0ea5b974aab",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+8)×6−16×6. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 48,
+          "correct": 48,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 48.",
+          "feedback": "Al distribuir y cancelar 16×6 con su opuesto, queda 8×6=48. El valor afirmado es 48; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -8,
+          "correct": 8,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -8.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 8 multiplicado por 6. El valor afirmado es -8; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 54,
+          "correct": 54,
+          "truth": true,
+          "text": "Si en lugar de restar 16×6 se restara 15×6, el resultado sería 54.",
+          "feedback": "La diferencia entre los términos restados es -1×6; se resta esa diferencia al resultado original 48: 54. El valor afirmado es 54; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "level": "avanzado",
+      "previous_hash": "082b884b743cc731dbe2cdbe8ee4143ccad9a516ecf5bc860842ca91aea06d30",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+11)×3−11×3. ¿Cuál es su valor?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 66,
+          "correct": 33,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 66.",
+          "feedback": "Al distribuir y cancelar 11×3 con su opuesto, queda 11×3=33. El valor afirmado es 66; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -11,
+          "correct": 11,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 11 multiplicado por 3. El valor afirmado es -11; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 30,
+          "correct": 30,
+          "truth": true,
+          "text": "Si en lugar de restar 11×3 se restara 12×3, el resultado sería 30.",
+          "feedback": "La diferencia entre los términos restados es 1×3; se resta esa diferencia al resultado original 33: 30. El valor afirmado es 30; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "level": "avanzado",
+      "previous_hash": "c55a57d67a78704bacd395876330615251d9b247c6a99a29688b1634d7221124",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+14)×7−23×7. ¿Cuál es su valor?",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 259,
+          "correct": 98,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 259.",
+          "feedback": "Al distribuir y cancelar 23×7 con su opuesto, queda 14×7=98. El valor afirmado es 259; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -14,
+          "correct": 14,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 14 multiplicado por 7. El valor afirmado es -14; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 105,
+          "correct": 105,
+          "truth": true,
+          "text": "Si en lugar de restar 23×7 se restara 22×7, el resultado sería 105.",
+          "feedback": "La diferencia entre los términos restados es -1×7; se resta esa diferencia al resultado original 98: 105. El valor afirmado es 105; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "level": "avanzado",
+      "previous_hash": "1abebab07457e7324ce678df71c6b0668e63024a8002e84d1f261f573400b9d9",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+17)×4−18×4. ¿Cuál es su valor?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 140,
+          "correct": 68,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 140.",
+          "feedback": "Al distribuir y cancelar 18×4 con su opuesto, queda 17×4=68. El valor afirmado es 140; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 17,
+          "correct": 17,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 17 multiplicado por 4. El valor afirmado es 17; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 68,
+          "correct": 64,
+          "truth": false,
+          "text": "Si en lugar de restar 18×4 se restara 19×4, el resultado sería 68.",
+          "feedback": "La diferencia entre los términos restados es 1×4; se resta esa diferencia al resultado original 68: 64. El valor afirmado es 68; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "level": "avanzado",
+      "previous_hash": "56b37a60ec404dee548cb4e546551c6e87ed443b9b209d2551e0bb1fb8240294",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+7)×8−13×8. ¿Cuál es su valor?",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 160,
+          "correct": 56,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 160.",
+          "feedback": "Al distribuir y cancelar 13×8 con su opuesto, queda 7×8=56. El valor afirmado es 160; no coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": 7,
+          "correct": 7,
+          "truth": true,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 7 multiplicado por 8. El valor afirmado es 7; coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 56,
+          "correct": 64,
+          "truth": false,
+          "text": "Si en lugar de restar 13×8 se restara 12×8, el resultado sería 56.",
+          "feedback": "La diferencia entre los términos restados es -1×8; se resta esa diferencia al resultado original 56: 64. El valor afirmado es 56; no coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "level": "avanzado",
+      "previous_hash": "1e7f2aed6a696d7b94a4ed84e9320da124a8a4bdc19fd928f484822f2f9df5d4",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+10)×5−8×5. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 50,
+          "correct": 50,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 50.",
+          "feedback": "Al distribuir y cancelar 8×5 con su opuesto, queda 10×5=50. El valor afirmado es 50; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -10,
+          "correct": 10,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -10.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 10 multiplicado por 5. El valor afirmado es -10; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 45,
+          "correct": 45,
+          "truth": true,
+          "text": "Si en lugar de restar 8×5 se restara 9×5, el resultado sería 45.",
+          "feedback": "La diferencia entre los términos restados es 1×5; se resta esa diferencia al resultado original 50: 45. El valor afirmado es 45; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "level": "avanzado",
+      "previous_hash": "c524bc6118fa33894d3cce9922c7d283c609fd9526468f290f256e45f7d1dca8",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+13)×2−20×2. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 26,
+          "correct": 26,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 26.",
+          "feedback": "Al distribuir y cancelar 20×2 con su opuesto, queda 13×2=26. El valor afirmado es 26; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -13,
+          "correct": 13,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 13 multiplicado por 2. El valor afirmado es -13; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 28,
+          "correct": 28,
+          "truth": true,
+          "text": "Si en lugar de restar 20×2 se restara 19×2, el resultado sería 28.",
+          "feedback": "La diferencia entre los términos restados es -1×2; se resta esa diferencia al resultado original 26: 28. El valor afirmado es 28; coincide con el correcto."
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "level": "avanzado",
+      "previous_hash": "236443179b524a96e48cd7869d8d3e80557426fba157f63af1bc9b812f9a2e14",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+16)×6−15×6. ¿Cuál es su valor?",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "claimed": 96,
+          "correct": 96,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 96.",
+          "feedback": "Al distribuir y cancelar 15×6 con su opuesto, queda 16×6=96. El valor afirmado es 96; coincide con el correcto."
+        },
+        {
+          "kind": "step",
+          "claimed": -16,
+          "correct": 16,
+          "truth": false,
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "feedback": "Se cancela únicamente el primer producto; permanece el segundo sumando 16 multiplicado por 6. El valor afirmado es -16; no coincide con el correcto."
+        },
+        {
+          "kind": "auxiliary",
+          "claimed": 90,
+          "correct": 90,
+          "truth": true,
+          "text": "Si en lugar de restar 15×6 se restara 16×6, el resultado sería 90.",
+          "feedback": "La diferencia entre los términos restados es 1×6; se resta esa diferencia al resultado original 96: 90. El valor afirmado es 90; coincide con el correcto."
+        }
+      ]
+    }
+  ],
+  "limits": "No promotion, runtime integration, or CI claim."
+}

@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Reconciliar R18 PR #90 (59 candidatos C, incluido 32 de lote 01); verificar CI y sucesores; certificar F/G compatibles y continuar manifiestos siguientes. 18 PASS semánticos asistidos, cierre global pendiente.",
+    "next_action": "Verificar CI de etiqueta OP04, permutaciones de alternativas y firmas R15; si pasa, cerrar 12 fichas individuales A-H y publicar, verificar main CI + Render; no reexaminar 450 hashes sin cambio.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -112,20 +112,20 @@
       "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
     },
     "selection_paths": [
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R17.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
     ],
     "selection_total": 450,
     "examined_semantic_ids": 450,
     "semantic_pass_ids": 18,
-    "review_ids": 32,
+    "review_ids": 59,
     "review_evidence": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json",
@@ -153,7 +153,17 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-R4-01-OP02-03-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R4-01-OP04-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R18-successors.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R19-successors.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-G-screen.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R20-successors.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R20-reconstructed-diagnostic.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-exam-pattern-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-current-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -470,17 +480,17 @@
       "MAT-ARIT-01-09"
     ],
     "historical_examined_semantic_ids": 450,
-    "examined_current_contract_ids": 50,
+    "examined_current_contract_ids": 77,
     "selection_reconciliation": {
       "baseline_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
       "bank_size": 450,
       "changed_since_r3": 432,
       "objective_links_corrected": 54,
-      "status": "R17_CANDIDATE_CI_SUCCESS_MERGED",
+      "status": "R18_RECONCILED_PENDING_COMBINED_CI",
       "source_matrix": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R5.json",
       "r16_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json",
-      "source_ci": 45765960745,
-      "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+      "source_ci": 45770192698,
+      "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R18-successors.json",
       "reconciliation_ci": 45766894680,
       "merged_sha": "c995f331276df4e37414d06607d3ed4ef54eda05"
     },
@@ -507,8 +517,8 @@
       "reconciliation_ci": 45766894680
     },
     "current_contract_review": {
-      "examined": 50,
-      "review": 32,
+      "examined": 95,
+      "review": 77,
       "semantic_pass": 18,
       "manifests_completed": 1
     },
@@ -537,6 +547,128 @@
     },
     "v79_semantic_pass_paths": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json"
-    ]
+    ],
+    "r17_selection_paths": [
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R17.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+    ],
+    "r18_revision": {
+      "status": "CANDIDATE_CI_SUCCESS_RECONCILED",
+      "candidate_sha": "319bcc77c9c2653832170c2391a66bfdcae1ff4c",
+      "source_ci": 45770192698,
+      "source_job": 139740711018,
+      "changed": 59,
+      "unchanged": 391,
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R18-successors.json",
+      "prior_selection_paths": [
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R17.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-02.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-04.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-07.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-08.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+      ],
+      "review_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+      "examined": 59,
+      "new_current_ids": 27,
+      "promotion_candidates": 25,
+      "coincident_numeric_targets": 6,
+      "advanced_depth_review": 31,
+      "combined_ci": 45773557600,
+      "combined_head": "f816605a37dcf67b0911a304a771d43301b38997"
+    },
+    "r18_selection_paths": [
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R18.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R18.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R18.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R18.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R18.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+    ],
+    "r19_revision": {
+      "status": "INTEGRATION_CI_SUCCESS",
+      "source_ci": 45773557600,
+      "source_job": 139751688449,
+      "candidate_sha": "f816605a37dcf67b0911a304a771d43301b38997",
+      "changed": 34,
+      "unchanged": 416,
+      "coincidences_corrected": 6,
+      "advanced_transfer": 31,
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R19-successors.json",
+      "g_screen": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-G-screen.json",
+      "g_candidates": 25,
+      "g_signals": 4,
+      "semantic_pass": 0,
+      "integration_ci": 45774380070,
+      "integration_sha": "854922b1e2e4a30ddd5822dcd18f6f49fbad4e12"
+    },
+    "r20_revision": {
+      "status": "INTEGRATION_CANDIDATE_PENDING_CI",
+      "predecessor": "854922b1e2e4a30ddd5822dcd18f6f49fbad4e12",
+      "scope": 59,
+      "reconstructed_oracle": {
+        "checked": 177,
+        "mutants_rejected": 177,
+        "distinct_targets": 59,
+        "distinct_displayed": 59
+      },
+      "source": "src/lib/math-operations-classification-r20.ts",
+      "test": "src/test/rdg-operations-classification-r20.test.ts",
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R20-reconstructed-diagnostic.json",
+      "pattern_exam_review": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-exam-pattern-review.json",
+      "semantic_pass": 0,
+      "source_ci": 45775301267,
+      "source_job": 139757396644,
+      "source_candidate": "ceeaba9e8fb16a43655321cce64863e59d0eb80a",
+      "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R20-successors.json",
+      "changed": 59,
+      "preserved": 391,
+      "tuple_signals": 0,
+      "integration_ci": 45775885448,
+      "integration_test_status": "PASS_450_HASHES",
+      "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED"
+    },
+    "r19_selection_paths": [
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R19.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R19.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R19.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R19.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R18.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+    ],
+    "r15_v79_review": {
+      "status": "REVIEW",
+      "examined": 18,
+      "promotion_candidates": 12,
+      "classification_review": 6,
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-current-review.json",
+      "exam_screen": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json",
+      "ui_test": "src/test/rdg-operations-v79-feedback-r15.test.tsx",
+      "ui_fix": "679bacf83e97be2a5ebfcbe00f202750fd9d0731",
+      "candidate_pass_path": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json",
+      "ui_regression_fix": "a7e94f932250877710189336f84891637b4d4e48",
+      "position_fix": "5104ffe47785c6df151657b897b05f2069cc9c55",
+      "source_ci": 45775885448,
+      "source_job": 139759310879,
+      "ui_cases_verified": 54,
+      "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED",
+      "candidate_pass": 0
+    }
   }
 }
