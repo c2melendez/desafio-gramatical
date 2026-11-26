@@ -1,0 +1,90 @@
+{
+  "status": "PASS_TECNICO",
+  "scope": "MAT-ARIT-01",
+  "route_revision": "4",
+  "plan_sha256": "423131b16aaa4cf0ef4cc45f881a48d892fb408f09c62e83f89d449d22fd6bf2",
+  "bank_size": 450,
+  "records": [
+    {
+      "id": "T16",
+      "answer": "8",
+      "task_sha256": "f5fe834d5e32737e7b804b4eedb8bd2aecbd6288d4ddc08617a7be4fefaefc17"
+    },
+    {
+      "id": "T17",
+      "answer": "12",
+      "task_sha256": "c3aed97f3838c91fa425b5b95c57063e32b225ba8942feb9290f5228078cc025"
+    },
+    {
+      "id": "T18",
+      "answer": "24",
+      "task_sha256": "c28e36ddc0e3bb8210d8331e380847c89ab008d85451ce685cbd2e387e79b1a8"
+    },
+    {
+      "id": "T19",
+      "answer": "−1/8",
+      "task_sha256": "dfea2e6abd8d247d97046ad03085fe434f3e4670a69b38f6b6b0c3541569c107"
+    },
+    {
+      "id": "T20",
+      "answer": "−1/20",
+      "task_sha256": "89e656659722040d9ef9e4c6df1645b3322522105a90db4aabd2fc5bc0cde850"
+    }
+  ],
+  "families": {
+    "cociente-con-agrupacion": [
+      "math-m2-aritmetica-operaciones-clasificar-principiante-3",
+      "math-m2-aritmetica-operaciones-clasificar-principiante-4",
+      "math-m2-aritmetica-operaciones-clasificar-principiante-5",
+      "math-m2-aritmetica-operaciones-quiz-principiante-3",
+      "math-m2-aritmetica-operaciones-quiz-principiante-4",
+      "math-m2-aritmetica-operaciones-quiz-principiante-5",
+      "math-m2-aritmetica-operaciones-construir-principiante-3",
+      "math-m2-aritmetica-operaciones-construir-principiante-4",
+      "math-m2-aritmetica-operaciones-construir-principiante-5"
+    ],
+    "cero-dividido-por-no-cero": [
+      "math-m2-aritmetica-operaciones-clasificar-principiante-8",
+      "math-m2-aritmetica-operaciones-clasificar-principiante-9",
+      "math-m2-aritmetica-operaciones-quiz-principiante-8",
+      "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "math-m2-aritmetica-operaciones-construir-principiante-9"
+    ],
+    "factor-comun-diferencia-compuesta": [
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-0",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-1",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-2",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+      "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "math-m2-aritmetica-operaciones-construir-avanzado-2"
+    ],
+    "raiz-racional-resta-agrupada": [
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-18",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-19",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-20",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-18",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-19",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-20",
+      "math-m2-aritmetica-operaciones-construir-avanzado-18",
+      "math-m2-aritmetica-operaciones-construir-avanzado-19",
+      "math-m2-aritmetica-operaciones-construir-avanzado-20"
+    ],
+    "distribuir-sobre-raiz-racional": [
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-21",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-22",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-23",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-21",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-22",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-23",
+      "math-m2-aritmetica-operaciones-construir-avanzado-21",
+      "math-m2-aritmetica-operaciones-construir-avanzado-22",
+      "math-m2-aritmetica-operaciones-construir-avanzado-23"
+    ]
+  },
+  "semantic_certification": "NOT_GRANTED",
+  "limits": "Claves, distractores, ayuda y colisión literal; la suficiencia pedagógica y paridad completa requieren revisión."
+}

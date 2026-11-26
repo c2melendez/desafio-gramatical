@@ -111,7 +111,7 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    await page.getByRole('button',{name:'Siguiente',exact:true}).click();
    check(await page.getByRole('heading',{name:'Cargo con reintegros',exact:true}).isVisible(),'RDG transferencia resta anidada');
    check(await page.getByRole('button',{name:/pista/i}).count()===0,'RDG resta anidada sin ayuda');
-   for(const title of ['Agrupar cuatro productos','Dos productos cruzados','Equilibrar el producto']){
+   for(const title of ['Agrupar cuatro productos','Dos productos cruzados','Equilibrar el producto','Divisor agrupado','Cero como dividendo','Diferencia con factor común','Resta de una diferencia racional','Factor exterior y raíz racional']){
     await page.getByRole('button',{name:'Siguiente',exact:true}).click();
     check(await page.getByRole('heading',{name:title,exact:true}).isVisible(),'RDG transferencia '+title);
     check(await page.getByRole('region',{name:'Organizador de razonamiento'}).count()===0,'RDG transferencia sin organizador '+title);

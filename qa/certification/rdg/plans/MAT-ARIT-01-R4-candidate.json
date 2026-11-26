@@ -465,6 +465,46 @@
           "objective_ids": [
             "OP-03"
           ]
+        },
+        {
+          "prompt": "Calcula 96 ÷ (4 + 8). Opciones: 8, 32, 16, 3",
+          "solution": "El divisor completo es 4 + 8 = 12; después 96 ÷ 12 = 8.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-01"
+          ]
+        },
+        {
+          "prompt": "Calcula (17 − 17) ÷ 5 + 12. Opciones: 12, 0, −12, 17",
+          "solution": "El paréntesis vale 0; 0 ÷ 5 = 0 porque 5 no es cero. Luego 0 + 12 = 12.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-01"
+          ]
+        },
+        {
+          "prompt": "Calcula 26 × 4 − (26 − 6) × 4. Opciones: 24, 104, −24, 80",
+          "solution": "Ambos productos tienen factor 4: [26 − (26 − 6)] × 4 = 6 × 4 = 24.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula √(25/144) − (7/12 − 1/24). Simplifica. Opciones: −1/8, 1/8, −5/24, 5/12",
+          "solution": "La raíz principal es 5/12 = 10/24. El grupo es 14/24 − 1/24 = 13/24. La diferencia es −3/24 = −1/8.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Calcula 3 × (√(9/100) − 7/20) + 1/10. Simplifica. Opciones: −1/20, −3/20, 1/20, 1/12",
+          "solution": "La raíz es 3/10 = 6/20; el grupo vale −1/20. Luego 3 × (−1/20) + 2/20 = −1/20.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-04"
+          ]
         }
       ],
       "games": [
@@ -555,7 +595,8 @@
         "R4: verificar 4 puentes y 4 transferencias añadidas, interacción progresiva, oráculo exacto, ausencia de coincidencia literal con el banco y conservación de R3 como evidencia histórica.",
         "Comprobar dos puentes de signos y dos transferencias nuevas, con oráculo independiente y contraste con los IDs afectados.",
         "Comprobar el puente de resta anidada y la transferencia contextual, con cálculo independiente y contraste con IDs reales.",
-        "Comprobar los tres puentes de factorización y sus transferencias, con oráculos independientes y contraste contra las familias de los juegos."
+        "Comprobar los tres puentes de factorización y sus transferencias, con oráculos independientes y contraste contra las familias de los juegos.",
+        "Comprobar cinco transferencias adicionales de división, cero, factor común y racionales, sin ayudas y contra familias reales."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",
