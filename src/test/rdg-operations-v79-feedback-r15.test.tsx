@@ -69,8 +69,7 @@ it("All explicit operation assertion-feedback families render the mistaken claim
 });
 
 it("R15: presentation independently permutes all choices, preserves original scoring and selected-error identity",()=>{
- const rng=(seed:number)=>()=>((seed=Math.imul(seed,1664525)+1013904223|0)>>>0)/4294967296;
- const permutations=new Set<string>();for(let seed=1;seed<=256;seed++){const order=operationChoiceOrder(4,rng(seed));expect([...order].sort()).toEqual([0,1,2,3]);permutations.add(order.join(""));}
+ const permutations=new Set<string>();for(let a=0;a<4;a++)for(let b=0;b<3;b++)for(let c=0;c<2;c++){const samples=[(a+0.5)/4,(b+0.5)/3,(c+0.5)/2];const order=operationChoiceOrder(4,()=>samples.shift()!);expect([...order].sort()).toEqual([0,1,2,3]);permutations.add(order.join(""));}
  expect(permutations.size).toBe(24);
  let correct=0,errors=0;
  for(const x of candidates.filter(y=>y.mode==="quiz"||y.mode==="construir")){
@@ -89,4 +88,22 @@ it("R15: presentation independently permutes all choices, preserves original sco
   expect(report).toHaveBeenCalledWith(false,[wrong,...options.slice(1).map((o,i)=>o[keys[i+1]])].join(" → "));expect(screen.getByTestId("learning-feedback")).toHaveTextContent((x.mode==="quiz"?x.optionExplanations:x.stepOptionExplanations)![wrong]);cleanup();errors++;expect(hash(x)).toBe(before);
  }
  expect(correct).toBe(24);expect(errors).toBe(12);console.log("RDG_R15_POSITION "+JSON.stringify({permutations:permutations.size,correct,errors,models_unchanged:12}));
+});
+
+function canonical(prompt:string){
+ const s=norm(prompt).replace(/\*/g,"×");
+ const q=s.match(/\(√\((\d+)\/(\d+)\)-(\d+)\/(\d+)\)÷(\d+)/);
+ if(q){const [u,v,c,d,k]=q.slice(1).map(Number),a=Math.sqrt(u),b=Math.sqrt(v);if(Number.isInteger(a)&&Number.isInteger(b))return "root|"+rat(a,b)+"|"+rat(c,d)+"|"+k;}
+ if(/(?:tienda|cobra|cargo|oferta)/.test(s)&&/(?:menos|diferencia)/.test(s)){const nums=(prompt.match(/\d+/g)??[]).map(Number);if(nums.length>=5)return "cost|"+nums.slice(0,5).join("|");}
+ return null;
+}
+it("R15: exact and normalized operands against 450 game items and current RDG, external exam snapshot, individually bound to hashes",()=>{
+ const exam=load("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json");expect(exam.math_count).toBe(415);expect(exam.records).toHaveLength(18);
+ const candidates12=candidates.filter(x=>x.mode!=="clasificar");expect(candidates12).toHaveLength(12);
+ for(const x of candidates12){const o=independent(x),signature=canonical(x.prompt);expect(signature).toBe(o.signature);
+  const collisions=bank.filter(y=>y.id!==x.id&&(norm(y.prompt)===norm(x.prompt)||canonical(y.prompt)===signature));const rdg=tasks.filter(y=>norm(y.prompt)===norm(x.prompt)||canonical(y.prompt)===signature);
+  const f=exam.records.find((y:{id:string})=>y.id===x.id);expect(f.hash).toBe(hash(x));expect(f.matches).toEqual([]);
+  expect(collisions).toEqual([]);expect(rdg).toEqual([]);
+  console.log("RDG_R15_V79_G "+JSON.stringify({id:x.id,hash:hash(x),signature,game_collisions:collisions.length,rdg_collisions:rdg.length,exam_matches:f.matches.length,answer:x.expected,mode:x.mode}));
+ }
 });

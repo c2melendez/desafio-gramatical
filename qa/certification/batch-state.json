@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "CI combinada R20 y feedback transversal: validar 450 hashes, 18 OP04, 18 R15 y UI (54 alternativas); evaluar A-H por ID, especialmente causas de error R20 y patrón R15, promover solo aptos, publicar con CI y Render.",
+    "next_action": "Verificar CI de etiqueta OP04, permutaciones de alternativas y firmas R15; si pasa, cerrar 12 fichas individuales A-H y publicar, verificar main CI + Render; no reexaminar 450 hashes sin cambio.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -162,7 +162,8 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-R20-reconstructed-diagnostic.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-exam-pattern-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-current-review.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -635,7 +636,10 @@
       "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R20-successors.json",
       "changed": 59,
       "preserved": 391,
-      "tuple_signals": 0
+      "tuple_signals": 0,
+      "integration_ci": 45775885448,
+      "integration_test_status": "PASS_450_HASHES",
+      "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED"
     },
     "r19_selection_paths": [
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R19.json",
@@ -656,7 +660,15 @@
       "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-current-review.json",
       "exam_screen": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json",
       "ui_test": "src/test/rdg-operations-v79-feedback-r15.test.tsx",
-      "ui_fix": "679bacf83e97be2a5ebfcbe00f202750fd9d0731"
+      "ui_fix": "679bacf83e97be2a5ebfcbe00f202750fd9d0731",
+      "candidate_pass_path": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json",
+      "ui_regression_fix": "a7e94f932250877710189336f84891637b4d4e48",
+      "position_fix": "5104ffe47785c6df151657b897b05f2069cc9c55",
+      "source_ci": 45775885448,
+      "source_job": 139759310879,
+      "ui_cases_verified": 54,
+      "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED",
+      "candidate_pass": 0
     }
   }
 }
