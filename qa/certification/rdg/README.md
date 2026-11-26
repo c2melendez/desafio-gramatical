@@ -1,4 +1,4 @@
-# RDG — contrato operativo v7.8.1
+# RDG — contrato operativo v7.9
 P0: generar catálogo real mediante `node --import ./scripts/ts-resolve.mjs qa/certification/rdg/validate.mjs --inputs`; consultar fuentes originales y registrar evidencia. Crear architecture.json con el mapa completo, bloques ordenados por dependencias y componentes; crear plans/<block_id>.json según esquemas. No hay archivos vacíos de progreso ni planes sintéticos contabilizados. El primer ejecutor debe generar el mapa real y el primer bloque, no comenzar otro sistema de gobernanza.
 
 Validación desde raíz: `node --import ./scripts/ts-resolve.mjs qa/certification/rdg/validate.mjs --architecture` o `node --import ./scripts/ts-resolve.mjs qa/certification/rdg/validate.mjs qa/certification/rdg/plans/<block_id>.json`. El resultado PASS_STRUCTURAL verifica estructura, catálogo, huellas, páginas declaradas y correspondencias, no acredita lectura, verdad disciplinar ni calidad pedagógica. Registrar salida real, hash y revisión independiente de diseño. Un plan debe incluir especificaciones concretas, no etiquetas genéricas; los esquemas constituyen un mínimo, no el diseño en sí.
@@ -11,3 +11,6 @@ G-ACTION: P0 puede registrar avance de diseño con plan o arquitectura nuevos/ju
 
 ### Contrato de investigación externa v7.8.1
 El esquema de formato conserva `schema_version: "7.8"` y añade el campo requerido `route_specs[].external_research`; la política activa es 7.8.1. `status=LIMITADA` admite carencia legítima de contraste externo con búsqueda, limitaciones y anclas oficiales documentadas; no declara equivalencia. `CALIBRACION_CUALITATIVA` exige al menos dos linajes consultados independientes declarados y vínculo de evidencia a perfiles. El validador verifica correspondencias formales, no navegación, independencia real, calidad ni suficiencia semántica. No se modifican PDF ni manifiesto de fuentes primarias; incorporar URLs en el plan, no en el registro oficial.
+
+### Certificación semántica escalable v7.9
+Aplicar [política normativa y ejecutor](../../../PROMPT_EJECUTOR_REPOSITORIO.md), §§3–8. Consumir RDG_READY y congelar familias y manifiestos por ID/hash; reutilizar evidencia vigente por criterio, comprobar individualmente A–H y distribución G, registrar PASS/REVIEW/FAIL sin promoción masiva. El esquema 7.8 de plan permanece compatible; no modificar fuentes ni reiniciar P0/P1. Aspiración inicial 150 PASS nuevos/corrida, no cuota. Piloto MAT-ARIT-01; reconciliar R17 y reexaminar C/F/G antes de ampliar. Cierre exige C09 y CI/Render mismo SHA.
