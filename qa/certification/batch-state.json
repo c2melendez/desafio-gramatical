@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R21: reconciliar PR96 concurrente, guard, UI y selecciones; R12–R14 PR97 corregir 18 F, 3 G y 1 C; R15 dos G y seis clasificaciones. Conservar 98 PASS por hash y separar aval docente/empírico.",
+    "next_action": "R21: activar y verificar CI/Render exacto; fichas individuales A–H sobre los 59 sucesores, sin promover automáticamente. R22 y R23: reconciliar hashes, guard versionado, selección y UI; mantener 98 PASS vigentes y la deuda global C09.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -112,14 +112,14 @@
       "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
     },
     "selection_paths": [
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R21-candidate.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R21-candidate.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R21-candidate.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R21-candidate.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R21-candidate.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
     ],
     "selection_total": 450,
@@ -770,6 +770,54 @@
       "source": "union unique PASS_SEMANTIC IDs from v79_semantic_pass_paths; historical counters retained separately",
       "teacher_approved": 0,
       "empirical_evaluated": 0
+    },
+    "r20_selection_paths": [
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+    ],
+    "r21_revision": {
+      "status": "ACTIVATION_CANDIDATE_PENDING_CI_AND_DEPLOY",
+      "scope": 59,
+      "predecessor_sha": "0134230bfd2eef537cb59daaaf9cf73c1f2c9531",
+      "source_ci": 45873608604,
+      "source_job": 140095004210,
+      "source_sha": "7eb2a4f7ccb60511c88ee66c4b48730e044c1156",
+      "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+      "selection_index": "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-selection-index.json",
+      "changed": 59,
+      "preserved": 391,
+      "prior_pass_preserved": 98,
+      "variants": 472,
+      "mutants": 177,
+      "ui_decisions": 354,
+      "semantic_pass": 0
+    },
+    "r22_revision": {
+      "status": "CANDIDATE_MERGED_NOT_ACTIVE",
+      "scope": 22,
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "merge_sha": "d532d3f0301b1628e20619eb66ed41186e861d8e",
+      "choices": 132,
+      "mutants": 44,
+      "semantic_pass": 0
+    },
+    "r23_revision": {
+      "status": "CANDIDATE_MERGED_NOT_ACTIVE",
+      "scope": 8,
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "merge_sha": "0134230bfd2eef537cb59daaaf9cf73c1f2c9531",
+      "variants": 48,
+      "mutants": 20,
+      "semantic_pass": 0
     }
   }
 }
