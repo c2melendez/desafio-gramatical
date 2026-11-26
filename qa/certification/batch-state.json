@@ -25,7 +25,7 @@
       "artifact": "academia-certification-batch-450"
     }
   ],
-  "last_verified_ci_run": 45167021720,
+  "last_verified_ci_run": 45753039032,
   "english_excluded": true,
   "active_prompt_version": "7.8.1",
   "batch_policy": {
@@ -57,20 +57,20 @@
     "active_block": "MAT-ARIT-01",
     "operational_phase": "P2",
     "architecture_path": "qa/certification/rdg/architecture.json",
-    "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01.json",
-    "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+    "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json",
+    "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Confirmar producción R15; verificar paridad C09 y discriminación F/G por decisiones y familias, no sustituir por cuota. P0/P1 vigentes salvo brecha demostrada. 450 REVIEW/0 PASS.",
+    "next_action": "Verificar manifiestos R4 contra runtime exacto R16; luego completar fichas A–H por ID conservando evidencias vigentes, comenzando por MAT-ARIT-01-R4-01. 450 REVIEW/0 PASS; no repetir P0/P1 salvo defecto demostrado.",
     "previous_publication": {
-      "sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f",
-      "candidate_ci_run": 45697495623,
-      "candidate_ci": "SUCCESS",
-      "production_ci": "UNOBSERVED",
-      "render_deploy": "dep-dc3kqul9el5s73adpd8g",
+      "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
+      "candidate_ci": 45710370482,
+      "candidate_ci_status": "SUCCESS",
+      "production_ci_status": "UNOBSERVED",
+      "render_deploy": "dep-dc3lsd5bedkc73ciadkg",
       "render": "LIVE"
     },
-    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R3.json",
+    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
     "r3_evidence": {
       "head": "2a063f107a6a5d12521624e2b6adc6ff4d7494eb",
       "ci_run": 45685434338,
@@ -85,35 +85,37 @@
       "render": "LIVE",
       "production_ci": "SUCCESS"
     },
-    "rdg_contract_path": "qa/certification/rdg/contracts/MAT-ARIT-01.json",
+    "rdg_contract_path": "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
     "preflight_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-P2-preflight.json",
     "rdg_gate": {
-      "ci_run": 45689363635,
+      "ci_run": 45753039032,
       "ci": "SUCCESS",
-      "tested_sha": "3d730ec871898e0b8a8424bd1fad4753a8587748",
-      "head_sha": "d70af0278ec0ebf06cfea6fb19a7c22263f8d22e",
+      "tested_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "head_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
       "jobs": [
-        139470401286,
-        139470401112
+        139685084203,
+        139685083911
       ],
-      "browser_artifact": 15058122129,
-      "rdg_browser_checks": 65,
-      "touch": "PASS_CHROMIUM_EMULATED",
+      "browser_artifact": 15086551861,
+      "m4_browser_checks": 561,
+      "vitest_tests": 453,
+      "rdg_tests": 14,
       "dependency_mutations": "PASS",
-      "archived_item_hashes": 450,
-      "item_hash_mutation": "PASS",
-      "limits": "No dispositivo físico, ni lector de pantalla, ni evaluación docente o empírica. Cierre R04/C09 integral permanece en P2."
+      "render_deploy": "dep-dc3r0agae00c73cqk950",
+      "render": "LIVE",
+      "render_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
     },
     "selection_paths": [
-      "qa/certification/rdg/selections/MAT-ARIT-01-01.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-02.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-03.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-04.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-05.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-06.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-07.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-08.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-09.json"
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
     ],
     "selection_total": 450,
     "examined_semantic_ids": 450,
@@ -140,19 +142,10 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-R12-successors.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R13-successors.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R14-successors.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-R15-successors.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R15-successors.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json"
     ],
-    "completed_review_batches": [
-      "MAT-ARIT-01-01",
-      "MAT-ARIT-01-02",
-      "MAT-ARIT-01-03",
-      "MAT-ARIT-01-04",
-      "MAT-ARIT-01-05",
-      "MAT-ARIT-01-06",
-      "MAT-ARIT-01-07",
-      "MAT-ARIT-01-08",
-      "MAT-ARIT-01-09"
-    ],
+    "completed_review_batches": [],
     "r4_revision": {
       "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-successors.json",
       "changed": 288,
@@ -274,11 +267,10 @@
       "runtime_ci": "SUCCESS_45710370482"
     },
     "current_publication": {
-      "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
-      "candidate_ci": 45710370482,
-      "candidate_ci_status": "SUCCESS",
-      "production_ci_status": "UNOBSERVED",
-      "render_deploy": "dep-dc3lsd5bedkc73ciadkg",
+      "sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "production_ci": 45753039032,
+      "production_ci_status": "SUCCESS",
+      "render_deploy": "dep-dc3r0agae00c73cqk950",
       "render": "LIVE"
     },
     "r10_revision": {
@@ -410,6 +402,71 @@
       "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R15-successors.json",
       "dominant_before": 195,
       "dominant_after": 177
+    },
+    "historical_selection_paths": [
+      "qa/certification/rdg/selections/MAT-ARIT-01-01.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-02.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-04.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-05.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-06.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-07.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-08.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-09.json"
+    ],
+    "historical_rdg_contract_path": "qa/certification/rdg/contracts/MAT-ARIT-01.json",
+    "historical_rdg_gate": {
+      "ci_run": 45689363635,
+      "ci": "SUCCESS",
+      "tested_sha": "3d730ec871898e0b8a8424bd1fad4753a8587748",
+      "head_sha": "d70af0278ec0ebf06cfea6fb19a7c22263f8d22e",
+      "jobs": [
+        139470401286,
+        139470401112
+      ],
+      "browser_artifact": 15058122129,
+      "rdg_browser_checks": 65,
+      "touch": "PASS_CHROMIUM_EMULATED",
+      "dependency_mutations": "PASS",
+      "archived_item_hashes": 450,
+      "item_hash_mutation": "PASS",
+      "limits": "No dispositivo físico, ni lector de pantalla, ni evaluación docente o empírica. Cierre R04/C09 integral permanece en P2."
+    },
+    "r16_revision": {
+      "status": "MERGED_REEXAMINED_REVIEW",
+      "changed": 28,
+      "unchanged": 422,
+      "source_ci": 45734416492,
+      "source_job": 139624067231,
+      "candidate_sha": "5d8b59423d8826894bfe8fb8358b7a9e7a799bbf",
+      "publication_sha": "df07302986674e7619d4721d0ca00535acacc8f8",
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json",
+      "semantic_pass": 0,
+      "reconciled_on_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "production_ci": 45753039032,
+      "render_deploy": "dep-dc3r0agae00c73cqk950"
+    },
+    "historical_completed_review_batches": [
+      "MAT-ARIT-01-01",
+      "MAT-ARIT-01-02",
+      "MAT-ARIT-01-03",
+      "MAT-ARIT-01-04",
+      "MAT-ARIT-01-05",
+      "MAT-ARIT-01-06",
+      "MAT-ARIT-01-07",
+      "MAT-ARIT-01-08",
+      "MAT-ARIT-01-09"
+    ],
+    "historical_examined_semantic_ids": 450,
+    "examined_current_contract_ids": 0,
+    "selection_reconciliation": {
+      "baseline_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "bank_size": 450,
+      "changed_since_r3": 432,
+      "objective_links_corrected": 54,
+      "status": "PENDING_CI_RUNTIME_CHECK",
+      "source_matrix": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R5.json",
+      "r16_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json"
     }
   }
 }

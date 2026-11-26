@@ -1,0 +1,419 @@
+{
+  "schema_version": "7.8",
+  "block_id": "MAT-ARIT-01",
+  "batch_id": "MAT-ARIT-01-R4-03",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "rdg_contract": {
+    "schema_version": "7.8",
+    "block_id": "MAT-ARIT-01",
+    "revision": "4",
+    "status": "RDG_READY",
+    "subtopic_scope": {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Operaciones"
+    },
+    "route_path": "src/components/review/OperationsReview.tsx",
+    "route_sha256": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+    "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json",
+    "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+    "data_path": "src/lib/rdg/operations.ts",
+    "data_sha256": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+    "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+    "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+    "dependency_hashes": {
+      "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+      "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+      "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+      "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+    },
+    "objective_ids": [
+      "OP-01",
+      "OP-02",
+      "OP-03",
+      "OP-04"
+    ],
+    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+    "readiness_limit": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2.",
+    "teacher_status": "PENDING",
+    "empirical_status": "NOT_RUN",
+    "gate_evidence": {
+      "ci_run": 45753039032,
+      "ci": "SUCCESS",
+      "tested_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "head_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "jobs": [
+        139685084203,
+        139685083911
+      ],
+      "browser_artifact": 15086551861,
+      "m4_browser_checks": 561,
+      "vitest_tests": 453,
+      "rdg_tests": 14,
+      "dependency_mutations": "PASS",
+      "render_deploy": "dep-dc3r0agae00c73cqk950",
+      "render": "LIVE",
+      "render_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
+    },
+    "supersedes_contract": "qa/certification/rdg/contracts/MAT-ARIT-01.json"
+  },
+  "items": [
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-2",
+      "content_sha256": "0e08068ec3edc3da85073bc48bfd10f3b926fd4baee036d507811112abed8a27",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-3",
+      "content_sha256": "35ea214952abd01bba37d00959fb4c6c266e6c6fc9bfde63a71660b5dae2c71b",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-4",
+      "content_sha256": "0f432497f6710cc4f34893d82fb39485b3e43b722ec90e2ee6b99d9eb055f5bc",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-5",
+      "content_sha256": "17ee3f9afa09094fa2ae34f4120cadbfb7c14035a77262db25e76c7a732545d7",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-6",
+      "content_sha256": "6766449809cdcf50df755e1a324d985ecbbe55d7303f1f11a46e96ff443ac2bb",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-7",
+      "content_sha256": "8aaec2cfda09e24ade0d42279dd5c7bd4af3aecd2597a7f12e7124a3a0226ab1",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-8",
+      "content_sha256": "13308e9a1e16e4343bbf149835855313b868173260948c307995adea28993b03",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-construir-principiante-9",
+      "content_sha256": "efb51b96c03843760ec9852260eb15bacf37b60c7a8039cc227e4f18aedf0894",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-0",
+      "content_sha256": "ed283d9fd83af11fdb57c0bc14d2e6bfd1ed6e3b0b68ff5e832f983ee26caeb0",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-1",
+      "content_sha256": "1614ac913a5d5a637577fe7d0a919f45854b78008fe01e97966f0ffb8b3dbd4d",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-10",
+      "content_sha256": "fce290ee08156f144121ccb6d2e0b0d1c57d39127ffce86acf14aa11fd796ace",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-11",
+      "content_sha256": "30e57049f7b2f623e8dcfa9f26909ccd9dabb9a99e33c675326bc639d5c7c12a",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-12",
+      "content_sha256": "0fc75c8c08e3aa26cd45d1de9506b8de9c3e5b5735ddde3bb8c3785da5a02f20",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-13",
+      "content_sha256": "6fefd28f706a1a55f3481779ea68e5b8b6458bbd9879543b7d9988394531a345",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-14",
+      "content_sha256": "a2f8ec72310465028353904fd411d6c5fde34265ae4e5c36c5ecee6c2fd16578",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-15",
+      "content_sha256": "6ee55f84cf66d7f044c9185cbfa938f8b2f3f30c0f24a3742bce2893895a633e",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-16",
+      "content_sha256": "7152c5e29a41902f4b488278185720dc93c6ecc178a6c1bf94345466349165d4",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-17",
+      "content_sha256": "6611283d4fd79176a0dd154386c4ef44ef56f9be7b215c3a01582c3fb2097a8c",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-18",
+      "content_sha256": "4197276271c1fa7e51983fa1b6588ed35f59a6b1234ab841ddd96c176f916933",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-19",
+      "content_sha256": "937ec10ed3568fc47bc5a8ca85858f42e2b92a555535a649d57a1f413459c9b9",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-2",
+      "content_sha256": "83787f7fa6b58395158b222925c285a76d68b5585d6ba0affad2d592d4ccd490",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-3",
+      "content_sha256": "7ec99f82d46dcfe2bbb390e0429191ff26b3e73f5a0568ad20ac1976192b83e9",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-4",
+      "content_sha256": "31b3edeb5f7d82724342fe5c4c27e44acdec13ccec5fc58b06ba01ba345ddedb",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-5",
+      "content_sha256": "1fb45d8473ff9ebd22f587d892a45ae515b8cef13c70ca563fa8f990484a2357",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-6",
+      "content_sha256": "7caf6b86fcc27d8099503e7968551e90db10e7ea08b077bfa78cca96426bb55d",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-7",
+      "content_sha256": "2eeb7e6526d536116e09c3270fedd735044b6f4ffebcebeef46334f59fe94ecf",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-8",
+      "content_sha256": "77004329aa5afc0f8734e16f7e815dc5f456eff22e8bc10bf7542e9660cd9e0d",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-avanzado-9",
+      "content_sha256": "ef51f1c972de4436db215e33e9b5d2b2a6a88f2f8c0fdeaef6124dafb96e7ae8",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-0",
+      "content_sha256": "798aa01ca2f8909887c6dd4fc9305a4dea1f573c0fc32b9a052c578e6de90c85",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-1",
+      "content_sha256": "7362a6b3b3ad9691e0a0b2d3e0ce8d14ece16a50bdc69a3bfc68e0106fe7044e",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-10",
+      "content_sha256": "f3a6aa9cd9b3987438d4d610a02bb1e3c52b4ab5b39e25f9028a8a2b4be719f1",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-11",
+      "content_sha256": "1aa8327c73790f9ce9938cacc24df442a4d9839f575a7040eff90081714b5e11",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-12",
+      "content_sha256": "8ab4c1ad758823b939914bbe6c97eae53ff57a95f9e09f07abbdc05d76cb4878",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-13",
+      "content_sha256": "b4782169f4b89f1809068b61a8a4ff7f4cf90c9d17c8b0b5919f4a56e0846ec0",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-14",
+      "content_sha256": "1de4d89b2bbd3345fdb0a771da3aae753efdc58daa82c96e89fb9d261271a29b",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-2",
+      "content_sha256": "262e439a8d045716383f8c6c8eb98a244a2922a4060eb5bcf57c17fc533126bb",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-3",
+      "content_sha256": "4f203858c5b210eeada5812a563a55d42e334eea4f4a08ba6d7648a10eb83c31",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-4",
+      "content_sha256": "e5dffa270ff6d59754c50097af232d79509f8449150df832e21bbd5eebf52955",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-5",
+      "content_sha256": "1e3872f6c502dd4e502896667d45ff4a2d5d42c9ce29768283d072095f0faa04",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-6",
+      "content_sha256": "70b70116bf3f60fd3c78c1e86dd5b4e9c414d2c2265aff0831321d169d1f738e",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-7",
+      "content_sha256": "a31d177beef6097a16222cb7a7053432076a0da8fff0ab6c93c1ea7cfd1731a4",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-8",
+      "content_sha256": "68ac357a4eef6effa912e56b0730897dfd9392760c1ece5d31cbc56e10ccbabc",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-intermedio-9",
+      "content_sha256": "137e939c33699e7dbbfdfcc16e0fa3a5a50ffb0028e5c54742c4a7d91a33b103",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-0",
+      "content_sha256": "7abede7bbf37de7085342e4503fb6ba278f551fdd86adb8c01553ed0e940f401",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-1",
+      "content_sha256": "f3db99b75d7cad86eba690a4c35fc0181d912cb0b3b7f4e438011c7de466e8d1",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-2",
+      "content_sha256": "b5776315b75c70679be4735b6c5538e54f63fd9332b191a108c37a5828596333",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-3",
+      "content_sha256": "7cdfc1586fdbd0cf6b72a69a154b3ea51f6eecb9896a454c6eac4d696991ed8e",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-4",
+      "content_sha256": "2d29141bf19a1bb521bd7522fae1f38b7408b1c5a80ea5cbf8620d974dab6435",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-5",
+      "content_sha256": "9eb083b00fac528a8ccf82f0c05ac09e95a932c93ffe5e132e3fa0b4c8d93bb4",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-quiz-principiante-6",
+      "content_sha256": "acd2e55b007ea50f3ea323612028dddd51766f2b71b930931b370f3fbe80c586",
+      "objective_ids": [
+        "OP-01"
+      ]
+    }
+  ],
+  "selection_baseline": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+  "previous_selection": "qa/certification/rdg/selections/MAT-ARIT-01-03.json"
+}

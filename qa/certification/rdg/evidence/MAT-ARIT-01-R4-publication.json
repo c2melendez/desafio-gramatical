@@ -1,0 +1,56 @@
+{
+  "status": "RDG_READY",
+  "scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "revision": "4",
+  "published_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+  "production_gate": {
+    "ci_run": 45753039032,
+    "ci": "SUCCESS",
+    "tested_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+    "head_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+    "jobs": [
+      139685084203,
+      139685083911
+    ],
+    "browser_artifact": 15086551861,
+    "m4_browser_checks": 561,
+    "vitest_tests": 453,
+    "rdg_tests": 14,
+    "dependency_mutations": "PASS",
+    "render_deploy": "dep-dc3r0agae00c73cqk950",
+    "render": "LIVE",
+    "render_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+    "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
+  },
+  "source_contract": "qa/certification/rdg/contracts/MAT-ARIT-01-R4-candidate.json",
+  "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+  "route_sha256": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+  "data_sha256": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+  "design_evidence": [
+    "qa/certification/rdg/evidence/MAT-ARIT-01-R4-sintesis-activa.json",
+    "qa/certification/rdg/evidence/MAT-ARIT-01-R4-transfer-directa.json"
+  ],
+  "route": {
+    "lessons": 20,
+    "transfer": 29,
+    "active_synthesis": 11,
+    "objectives": 4
+  },
+  "selection_reconciliation": {
+    "baseline_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+    "bank_size": 450,
+    "changed_since_r3": 432,
+    "objective_links_corrected": 54,
+    "status": "PENDING_CI_RUNTIME_CHECK",
+    "source_matrix": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R5.json",
+    "r16_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json"
+  },
+  "semantic_pass": 0,
+  "teacher_status": "PENDING",
+  "empirical_status": "NOT_RUN",
+  "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
+}

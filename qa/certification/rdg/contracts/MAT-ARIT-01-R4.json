@@ -1,0 +1,55 @@
+{
+  "schema_version": "7.8",
+  "block_id": "MAT-ARIT-01",
+  "revision": "4",
+  "status": "RDG_READY",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "route_path": "src/components/review/OperationsReview.tsx",
+  "route_sha256": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+  "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json",
+  "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+  "data_path": "src/lib/rdg/operations.ts",
+  "data_sha256": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+  "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+  "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+  "dependency_hashes": {
+    "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+    "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+    "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+    "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+  },
+  "objective_ids": [
+    "OP-01",
+    "OP-02",
+    "OP-03",
+    "OP-04"
+  ],
+  "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+  "readiness_limit": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2.",
+  "teacher_status": "PENDING",
+  "empirical_status": "NOT_RUN",
+  "gate_evidence": {
+    "ci_run": 45753039032,
+    "ci": "SUCCESS",
+    "tested_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+    "head_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+    "jobs": [
+      139685084203,
+      139685083911
+    ],
+    "browser_artifact": 15086551861,
+    "m4_browser_checks": 561,
+    "vitest_tests": 453,
+    "rdg_tests": 14,
+    "dependency_mutations": "PASS",
+    "render_deploy": "dep-dc3r0agae00c73cqk950",
+    "render": "LIVE",
+    "render_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+    "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
+  },
+  "supersedes_contract": "qa/certification/rdg/contracts/MAT-ARIT-01.json"
+}
