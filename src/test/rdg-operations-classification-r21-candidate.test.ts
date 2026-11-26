@@ -5,6 +5,7 @@ import {mathM3R19Pool,mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {buildOperationClassificationR20} from "@/lib/math-operations-classification-r20";
 import {repairOperationClassificationR21Candidate,r21Mask} from "@/lib/math-operations-classification-r21-candidate";
+import {verifyMathM3Record} from "@/lib/math-m3-guards";
 import {operationR20WrongCause} from "@/lib/math-operations-r20-error-cause";
 const sha=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");
 const archive=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-R20-feedback-causes.json","utf8"));
@@ -53,6 +54,7 @@ it("R21 candidate: all eight masks in each level; 59 frozen IDs, all 472 counter
    expect(["answer","step","auxiliary"].map(k=>ds.find(d=>d.kind===k)!.truth)).toEqual(mask);variants++;
   }
   const v=repairOperationClassificationR21Candidate(predecessor),ds=assess(v),mask=["answer","step","auxiliary"].map(k=>Number(ds.find(d=>d.kind===k)!.truth)).join("");
+  expect(v.modeOperation).toBe("evaluar-tres-decisiones-operaciones-r21");expect(verifyMathM3Record(v,v.level)).toEqual([]);
   expect(v.id).toBe(old.id);expect(v.expected).toBe(old.expected);expect(v.prompt).toBe(old.prompt);expect(v.operation).toBe(old.operation);
   expect(v.options).toEqual(old.options);expect(v.steps).toEqual(old.steps);expect(v.oracle).toEqual(old.oracle);
   const c=coverage[v.level]??(coverage[v.level]={});c[mask]=(c[mask]??0)+1;
@@ -60,7 +62,7 @@ it("R21 candidate: all eight masks in each level; 59 frozen IDs, all 472 counter
   if(sha(v)!==sha(old))changed++;
   console.log("RDG_R21_CANDIDATE "+JSON.stringify({id:v.id,previous_sha256:sha(old),content_sha256:sha(v),level:v.level,operation:v.operation,mask,decisions:ds,semantic_status:"REVIEW"}));checked++;
  }
- expect(checked).toBe(59);expect(unchanged).toBe(391);expect(variants).toBe(472);expect(mutants).toBe(177);
+ expect(changed).toBe(59);expect(checked).toBe(59);expect(unchanged).toBe(391);expect(variants).toBe(472);expect(mutants).toBe(177);
  for(const c of Object.values(coverage))expect(Object.keys(c).sort()).toEqual(["000","001","010","011","100","101","110","111"]);
  console.log("RDG_R21_CANDIDATE_SUMMARY "+JSON.stringify({checked,changed,unchanged,variants,mutants,coverage,semantic_pass:0}));
 });
