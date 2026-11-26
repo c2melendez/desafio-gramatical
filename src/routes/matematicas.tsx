@@ -11,6 +11,7 @@ import {studyReturn} from "@/lib/study-context";
 import {GameSessionHeader,ROUNDS_PER_GAME} from "@/components/games/GameSessionHeader";
 import {MathExerciseCard} from "@/components/games/MathExerciseCard";
 import {rotationKey,readRotation,selectRotation,recordRotation,writeRotation} from "@/lib/rotation";
+import {selectOperationsRotation} from "@/lib/operations-rotation";
 
 export const Route=createFileRoute("/matematicas")({
  validateSearch:(s:Record<string,unknown>):{subtema:string;modo:Mode;nivel:Level}=>({
@@ -38,7 +39,8 @@ function MathPlay(){
  const attemptId=useRef("");
  useEffect(()=>{
   const bank=mathM3Pool(topic,subtema,nivel,modo),key=rotationKey("matematicas",topic,subtema,modo,nivel);
-  const chosen=selectRotation(bank,readRotation(key,bank.map(x=>x.id)),ROUNDS_PER_GAME);
+  const rotation=readRotation(key,bank.map(x=>x.id));
+  const chosen=(subtema==="Operaciones"?selectOperationsRotation:selectRotation)(bank,rotation,ROUNDS_PER_GAME);
   ledger.current=emptyLedger();advanced.current=-1;attemptId.current=newAttemptId();
   setItems(chosen);setIndex(0);setCorrect(0);setTotal(0);setScore(0);setStreak(0);setBest(0);setMistakes([]);setFinished(false);
  },[topic,subtema,nivel,modo,run]);

@@ -27,7 +27,7 @@
   ],
   "last_verified_ci_run": 45753039032,
   "english_excluded": true,
-  "active_prompt_version": "7.8.1",
+  "active_prompt_version": "7.9",
   "batch_policy": {
     "mode": "RDG_FIRST_BLOCK_PHASED",
     "max_ids": 450,
@@ -42,9 +42,14 @@
     "legacy_cursor_preserved": true,
     "semantic_approved_from_legacy": 0,
     "requires_frozen_ids_and_hashes": true,
-    "certification_mode": "CORRECTIVE_INCREMENTAL_RDG_FIRST",
-    "adaptive_sizes_role": "legacy technical subbatch capacity only; no target",
-    "legacy_cursor_role": "diagnostic_only_do_not_advance_as_certification"
+    "certification_mode": "SEMANTIC_SCALABLE_FAMILY_ID",
+    "adaptive_sizes_role": "capacidad técnica; encadenar manifiestos, no cuota",
+    "legacy_cursor_role": "diagnostic_only_do_not_advance_as_certification",
+    "semantic_pass_aspiration_per_run": 150,
+    "aspiration_is_not_quota": true,
+    "criteria_revision": "7.9",
+    "family_evidence_reuse": true,
+    "individual_decision_required": true
   },
   "rdg_continuity": {
     "active_subtopic": {
@@ -61,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Confirmar CI de manifiestos R17; corregir 32 clasificaciones con decisiones redundantes de lote 01 y F/G, continuar lote 02 sin repetir oráculos vigentes. 50 fichas R4 examinadas, 0 PASS.",
+    "next_action": "Confirmar CI y Render del selector de familias v7.9; verificar las 18 fichas OP04 y promover únicamente IDs que cumplan A–H; reparar 32 clasificaciones C y F/G por familia, continuar restantes manifiestos.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -469,11 +474,13 @@
       "bank_size": 450,
       "changed_since_r3": 432,
       "objective_links_corrected": 54,
-      "status": "R17_SUCCESSORS_RECONCILED_PENDING_CI",
+      "status": "R17_CANDIDATE_CI_SUCCESS_MERGED",
       "source_matrix": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R5.json",
       "r16_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json",
       "source_ci": 45765960745,
-      "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json"
+      "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+      "reconciliation_ci": 45766894680,
+      "merged_sha": "c995f331276df4e37414d06607d3ed4ef54eda05"
     },
     "r16_selection_paths": [
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-01.json",
@@ -487,19 +494,31 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
     ],
     "r17_revision": {
-      "status": "CI_SUCCESS_SUCCESSORS_RECONCILED",
+      "status": "MERGED_CI_CANDIDATE_SUCCESS",
       "candidate_sha": "54365dc85ecd414b8670cb9125516c14fbd878c0",
       "source_ci": 45765960745,
       "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
       "changed": 6,
       "unchanged": 444,
-      "semantic_pass": 0
+      "semantic_pass": 0,
+      "merge_sha": "c995f331276df4e37414d06607d3ed4ef54eda05",
+      "reconciliation_ci": 45766894680
     },
     "current_contract_review": {
       "examined": 50,
       "review": 50,
       "semantic_pass": 0,
       "manifests_completed": 1
+    },
+    "v79_pilot": {
+      "status": "PENDING_RUNTIME_CI",
+      "distribution_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion.json",
+      "pilot_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-piloto-OP04.json",
+      "ids": 18,
+      "candidate_pass": 18,
+      "semantic_pass": 0,
+      "remaining_32": "C/F/G REVIEW",
+      "baseline_sha": "553125d41d3de0dd8d929cf66c6ab05c9b40e93a"
     }
   }
 }
