@@ -14,7 +14,7 @@ function maskFor(item:MathModel){
  return masks[index%masks.length];
 }
 export function expectedOperationClassificationTruthCount(item:MathModel):number{
- if(item.oracle.kind==="Operaciones-diversidad"&&item.mode==="clasificar")return Number(item.id.split("-").at(-1))%2===0?2:1;
+ if((item.oracle.kind==="Operaciones-diversidad"||item.oracle.kind==="Operaciones-mixtas")&&item.mode==="clasificar")return Number(item.id.split("-").at(-1))%2===0?2:1;
  return isOperationClassificationR5(item)||isOperationClassificationR6(item)?maskFor(item).filter(Boolean).length:1;
 }
 export function repairOperationClassification(item:MathModel):MathModel{
