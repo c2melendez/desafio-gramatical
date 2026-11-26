@@ -89,7 +89,8 @@
         "Contraejemplos de dominio real: 0÷9=0; 9÷0 no está definido. √0=0; √(-9) no tiene valor real; la raíz principal de 9 es 3, no ±3.",
         "Restar un número negativo equivale a sumar su opuesto; el producto de un negativo por un positivo es negativo.",
         "Un signo menos delante de un grupo indica restar el valor completo del grupo, que puede ser negativo.",
-        "La distributividad permite extraer un factor común en dos grupos, cancelar productos cruzados y aislar un factor faltante con la operación inversa."
+        "La distributividad permite extraer un factor común en dos grupos, cancelar productos cruzados y aislar un factor faltante con la operación inversa.",
+        "Modelar estados y movimientos, reparto del resto, comparación orientada y agrupaciones con dos raíces."
       ],
       "bridges": [
         "De desplazamientos y cantidades al símbolo; luego árbol de expresión con subexpresiones y operación raíz.",
@@ -97,7 +98,8 @@
         "R4 candidato C09: reconstruir cantidades por operaciones inversas; representar igualdad como dos valores equilibrados; convertir y dividir racionales; comparar costos completos con diferencia orientada.",
         "Usar operaciones inversas para interpretar la resta de un negativo; representar la multiplicación negativa como suma repetida.",
         "Evaluar agrupación interna, producto y grupo exterior antes de aplicar la resta; enlazar con el opuesto.",
-        "Agrupar productos con signos, distribuir la resta exterior y comprobar una igualdad después de simplificar."
+        "Agrupar productos con signos, distribuir la resta exterior y comprobar una igualdad después de simplificar.",
+        "Separar original/nuevo, invertir entradas y salidas, calcular el resto antes del reparto y evaluar dos agrupaciones antes del producto."
       ],
       "common_errors": [
         "Multiplicar antes de dividir por regla mnemónica mal interpretada; remediar con dos operaciones del mismo rango.",
@@ -107,7 +109,8 @@
         "Interpretar √9 como ±3, sumar denominadores o aplicar la raíz fuera de su alcance; remediar con cuadrado inverso, unidades fraccionarias y límites del radical.",
         "Confundir restar un negativo con restar su magnitud; omitir el signo del producto o cambiar la prioridad.",
         "Aplicar el signo exterior a solo parte del grupo o detenerse en el valor del corchete.",
-        "Omitir un grupo, cambiar mal el signo de un término o tomar el valor completo del lado como factor faltante."
+        "Omitir un grupo, cambiar mal el signo de un término o tomar el valor completo del lado como factor faltante.",
+        "Invertir la comparación, deshacer un solo movimiento, repartir el total inicial u omitir una raíz o la resta final."
       ],
       "activities": [
         {
@@ -333,6 +336,63 @@
           "feedback": "Hallaste el valor del lado izquierdo, pero falta dividirlo entre 3. Omitiste la resta del producto: 6 × (8 + 8) ÷ 3 = 32. Simplificaste solo los términos dentro del paréntesis y omitiste los factores exteriores.",
           "help": "Primero simplifica el lado izquierdo y después deshaz la multiplicación por 3.",
           "acceptance": "Respuesta 16; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A17",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Una expresión vale (10 + 6) × 5. Aumenta el segundo sumando en 2 y reduce el factor en 1. ¿Cuál es el valor nuevo menos el original?",
+          "expected_reasoning": "Original: (10 + 6) × 5 = 80. Nuevo: (10 + 8) × 4 = 72. La diferencia orientada es 72 − 80 = −8.",
+          "feedback": "Invertiste el orden: original menos nuevo es 80 − 72 = 8. Calculaste el valor nuevo, pero falta restar el original. Es el valor original, sin comparar los dos estados.",
+          "help": "Calcula los dos estados por separado y resta nuevo menos original.",
+          "acceptance": "Respuesta −8; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A18",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Un depósito termina con 100 piezas después de recibir 4 cajas de 6 piezas y retirar 9 piezas. ¿Cuántas piezas tenía antes?",
+          "expected_reasoning": "La entrada fue 4 × 6 = 24. Para volver atrás desde 100, deshaz el retiro sumando 9 y deshaz la entrada restando 24: 100 + 9 − 24 = 85. Comprueba 85 + 24 − 9 = 100.",
+          "feedback": "Aplicaste de nuevo la entrada y el retiro: 100 + 24 − 9 = 115. Deshiciste el retiro, pero omitiste deshacer la entrada. Deshiciste la entrada, pero omitiste deshacer el retiro.",
+          "help": "Identifica el total recibido y revierte cada movimiento desde el estado final.",
+          "acceptance": "Respuesta 85; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A19",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Hay 10 cajas con 8 piezas cada una. Se retiran 2 grupos de 5 piezas y el resto se reparte entre 7 personas por igual. ¿Cuántas piezas recibe cada persona?",
+          "expected_reasoning": "Hay 10 × 8 = 80 piezas; se retiran 2 × 5 = 10. Quedan 70, que repartidas entre 7 personas dan 10 por persona.",
+          "feedback": "Calculaste el resto, pero falta dividirlo entre las 7 personas. Calculaste el total inicial, sin retirar ni repartir. Dividiste 80 entre 10 e ignoraste el retiro y el reparto entre 7 personas.",
+          "help": "Calcula total y retiro como productos, resta y después divide el resto.",
+          "acceptance": "Respuesta 10; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A20",
+          "objective_ids": [
+            "OP-01",
+            "OP-04"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Calcula (√64 − 3) × (4 + √9) − 2.",
+          "expected_reasoning": "Las raíces principales son 8 y 3. Los grupos valen 8 − 3 = 5 y 4 + 3 = 7. El resultado es 5 × 7 − 2 = 33.",
+          "feedback": "Calculaste el producto 5 × 7, pero omitiste restar 2. Sumaste los grupos en vez de multiplicarlos: 5 + 7 − 2 = 10. Sumaste 3 en el primer grupo en vez de restarlo: (8 + 3) × 7 − 2 = 75.",
+          "help": "Calcula cada raíz principal, completa ambos grupos y luego multiplícalos.",
+          "acceptance": "Respuesta 33; cuatro alternativas distintas y navegación por teclado."
         }
       ],
       "worked_examples": [
@@ -505,6 +565,39 @@
           "objective_ids": [
             "OP-04"
           ]
+        },
+        {
+          "prompt": "Una expresión vale (8 + 4) × 6. Aumenta el primer sumando en 2 y reduce el factor en 1. Calcula el valor nuevo menos el original. Opciones: −2, 2, 70, 72",
+          "solution": "Original: (8 + 4) × 6 = 72. Nuevo: (10 + 4) × 5 = 70. Nuevo menos original es −2.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Un almacén termina con 91 unidades luego de recibir 5 paquetes de 3 unidades y entregar 8 unidades. ¿Cuántas tenía inicialmente? Opciones: 84, 98, 99, 76",
+          "solution": "La entrada fue 5 × 3 = 15. Al invertir los movimientos: 91 + 8 − 15 = 84; 84 + 15 − 8 = 91.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Hay 12 paquetes de 7 unidades. Se retiran 3 grupos de 4 unidades y se reparte el resto entre 8 personas. ¿Cuántas unidades recibe cada persona? Opciones: 9, 72, 84, 7",
+          "solution": "Total: 12 × 7 = 84; retiro: 3 × 4 = 12. El resto es 72 y 72 ÷ 8 = 9.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Calcula (√81 − 4) × (6 + √16) − 3. Opciones: 47, 50, 12, 127",
+          "solution": "Las raíces son 9 y 4; los grupos son 5 y 10. Así, 5 × 10 − 3 = 47.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-01",
+            "OP-04"
+          ]
         }
       ],
       "games": [
@@ -596,7 +689,8 @@
         "Comprobar dos puentes de signos y dos transferencias nuevas, con oráculo independiente y contraste con los IDs afectados.",
         "Comprobar el puente de resta anidada y la transferencia contextual, con cálculo independiente y contraste con IDs reales.",
         "Comprobar los tres puentes de factorización y sus transferencias, con oráculos independientes y contraste contra las familias de los juegos.",
-        "Comprobar cinco transferencias adicionales de división, cero, factor común y racionales, sin ayudas y contra familias reales."
+        "Comprobar cinco transferencias adicionales de división, cero, factor común y racionales, sin ayudas y contra familias reales.",
+        "Verificar en lote cuatro puentes de estados, inventarios, reparto y raíces, y cuatro transferencias sin ayuda."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",

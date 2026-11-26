@@ -1,0 +1,97 @@
+{
+  "status": "PASS_TECNICO",
+  "scope": "MAT-ARIT-01",
+  "route_revision": "4",
+  "plan_sha256": "2ededaa954e39b2fe9462b8e3315b5cdd47378dc0497dbb49116784997fbdb5b",
+  "bank_size": 450,
+  "records": [
+    {
+      "id": "A17",
+      "answer": "−8",
+      "task_sha256": "2ab9bd65968c1fab8e1ca9ee63f1329bcb35061b7860188bc8cbcdf64054d0fe"
+    },
+    {
+      "id": "A18",
+      "answer": "85",
+      "task_sha256": "0b007c6741635728be01bae48b1e0336d2a0692d4c6452b064e6fc083fb9144a"
+    },
+    {
+      "id": "A19",
+      "answer": "10",
+      "task_sha256": "d0c5e42f6f32108bea85a31a909598f2521d0384507c898aeebf01d151b0ade6"
+    },
+    {
+      "id": "A20",
+      "answer": "33",
+      "task_sha256": "dbe8f729f16b2bf7e0a796768072ace6e7cdf851c96c3f94519c4cc5a50dec93"
+    },
+    {
+      "id": "T21",
+      "answer": "−2",
+      "task_sha256": "96f2a90307b46acecaf06186099c0e655cd2c5a3f6fdbdaf2daf8d4e12e58436"
+    },
+    {
+      "id": "T22",
+      "answer": "84",
+      "task_sha256": "acba71bc8cdcdd5b84e059fe4655b2bfd11e9424d72867f5059ef6a2646b465a"
+    },
+    {
+      "id": "T23",
+      "answer": "9",
+      "task_sha256": "c8a1cd85ee3ba920852b383dbbfc7840cd558e185ba53e7e2fdfd763c1d0d5d5"
+    },
+    {
+      "id": "T24",
+      "answer": "47",
+      "task_sha256": "4433ecb27c9f17bd00191b27188081ad2bb508b8608fab21c8079a4c781bf721"
+    }
+  ],
+  "families": {
+    "comparar-cambios-compensados": [
+      "math-m2-aritmetica-operaciones-clasificar-intermedio-6",
+      "math-m2-aritmetica-operaciones-clasificar-intermedio-7",
+      "math-m2-aritmetica-operaciones-clasificar-intermedio-8",
+      "math-m2-aritmetica-operaciones-quiz-intermedio-6",
+      "math-m2-aritmetica-operaciones-quiz-intermedio-7",
+      "math-m2-aritmetica-operaciones-quiz-intermedio-8",
+      "math-m2-aritmetica-operaciones-construir-intermedio-6",
+      "math-m2-aritmetica-operaciones-construir-intermedio-7",
+      "math-m2-aritmetica-operaciones-construir-intermedio-8"
+    ],
+    "reconstruir-inventario-inicial": [
+      "math-m2-aritmetica-operaciones-clasificar-intermedio-3",
+      "math-m2-aritmetica-operaciones-clasificar-intermedio-4",
+      "math-m2-aritmetica-operaciones-clasificar-intermedio-5",
+      "math-m2-aritmetica-operaciones-quiz-intermedio-3",
+      "math-m2-aritmetica-operaciones-quiz-intermedio-4",
+      "math-m2-aritmetica-operaciones-quiz-intermedio-5",
+      "math-m2-aritmetica-operaciones-construir-intermedio-3",
+      "math-m2-aritmetica-operaciones-construir-intermedio-4",
+      "math-m2-aritmetica-operaciones-construir-intermedio-5"
+    ],
+    "reparto-neto-exacto": [
+      "math-m3-aritmetica-operaciones-clasificar-intermedio-6",
+      "math-m3-aritmetica-operaciones-clasificar-intermedio-7",
+      "math-m3-aritmetica-operaciones-clasificar-intermedio-8",
+      "math-m3-aritmetica-operaciones-quiz-intermedio-6",
+      "math-m3-aritmetica-operaciones-quiz-intermedio-7",
+      "math-m3-aritmetica-operaciones-quiz-intermedio-8",
+      "math-m3-aritmetica-operaciones-construir-intermedio-6",
+      "math-m3-aritmetica-operaciones-construir-intermedio-7",
+      "math-m3-aritmetica-operaciones-construir-intermedio-8"
+    ],
+    "dos-raices-en-producto-agrupado": [
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-9",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-10",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-11",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+      "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "math-m2-aritmetica-operaciones-construir-avanzado-11"
+    ]
+  },
+  "semantic_certification": "NOT_GRANTED",
+  "limits": "Cuatro familias y colisión literal; no acredita suficiencia global ni eficacia empírica."
+}
