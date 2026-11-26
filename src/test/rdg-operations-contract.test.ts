@@ -1,4 +1,5 @@
 import {createHash} from "node:crypto";
+import {execFileSync} from "node:child_process";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
@@ -32,3 +33,8 @@ it("reconciles all 450 archived real preflight records with archived R3 runtime 
  for(const r of evidence.records){const item=map.get(r.id);expect(item,r.id).toBeDefined();check(r,item!);expect(r.semantic_status).toBe("REVIEW");}
  const r=evidence.records[0],x=map.get(r.id)!;expect(()=>check(r,{...x,expected:"99999"})).toThrow("Stale item");
 });
+
+it("R4 candidate plan passes the actual structural validator against catalog and PDF hashes",()=>{
+ const result=JSON.parse(execFileSync(process.execPath,["--import","./scripts/ts-resolve.mjs","qa/certification/rdg/validate.mjs",contract.plan_path],{encoding:"utf8"}));
+ expect(result.status).toBe("PASS_STRUCTURAL");expect(result.sha256).toBe(contract.plan_sha256);expect(result.block_id).toBe("MAT-ARIT-01");
+},30000);
