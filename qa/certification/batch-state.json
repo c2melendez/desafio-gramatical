@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI combinada R18 y 18 PASS preservados. Evaluar 59 sucesores A–H; F avanzada y G saturación se mantienen independientes; no promover por reparación C aislada.",
+    "next_action": "CI combinada: 450 hashes + 18 PASS preservados; verificar feedback y colisiones de 59 sucesores y certificar hasta 25 candidatos con A–H. Reparar seis coincidencias C y 31 F avanzados por familia.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -125,7 +125,7 @@
     "selection_total": 450,
     "examined_semantic_ids": 450,
     "semantic_pass_ids": 18,
-    "review_ids": 32,
+    "review_ids": 59,
     "review_evidence": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json",
@@ -154,7 +154,8 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-R4-01-OP04-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-R18-successors.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R18-successors.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -471,7 +472,7 @@
       "MAT-ARIT-01-09"
     ],
     "historical_examined_semantic_ids": 450,
-    "examined_current_contract_ids": 50,
+    "examined_current_contract_ids": 77,
     "selection_reconciliation": {
       "baseline_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
       "bank_size": 450,
@@ -508,8 +509,8 @@
       "reconciliation_ci": 45766894680
     },
     "current_contract_review": {
-      "examined": 50,
-      "review": 32,
+      "examined": 77,
+      "review": 59,
       "semantic_pass": 18,
       "manifests_completed": 1
     },
@@ -568,7 +569,13 @@
         "qa/certification/rdg/selections/MAT-ARIT-01-R4-07.json",
         "qa/certification/rdg/selections/MAT-ARIT-01-R4-08.json",
         "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
-      ]
+      ],
+      "review_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+      "examined": 59,
+      "new_current_ids": 27,
+      "promotion_candidates": 25,
+      "coincident_numeric_targets": 6,
+      "advanced_depth_review": 31
     }
   }
 }
