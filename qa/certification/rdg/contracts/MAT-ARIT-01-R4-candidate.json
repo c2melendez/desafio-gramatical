@@ -1,0 +1,37 @@
+{
+  "schema_version": "7.8",
+  "block_id": "MAT-ARIT-01",
+  "revision": "4",
+  "status": "RDG_EN_CURSO",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "route_path": "src/components/review/OperationsReview.tsx",
+  "route_sha256": "0f9595c75b5fb22977ed7d3babba45112c962e4f97f47c7416e128f8a718e28f",
+  "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json",
+  "plan_sha256": "9888f0104d936888858fe58ad35a3a5d9c9be861b7c837a1708cebdb04b86dbd",
+  "data_path": "src/lib/rdg/operations.ts",
+  "data_sha256": "3798fe4f1c3e7221312c1d2b3451113c6ed68e28fcbebd1f6a2894ec2cc60fc6",
+  "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+  "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+  "dependency_hashes": {
+    "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "9888f0104d936888858fe58ad35a3a5d9c9be861b7c837a1708cebdb04b86dbd",
+    "src/components/review/OperationsReview.tsx": "0f9595c75b5fb22977ed7d3babba45112c962e4f97f47c7416e128f8a718e28f",
+    "src/lib/rdg/operations.ts": "3798fe4f1c3e7221312c1d2b3451113c6ed68e28fcbebd1f6a2894ec2cc60fc6",
+    "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+  },
+  "objective_ids": [
+    "OP-01",
+    "OP-02",
+    "OP-03",
+    "OP-04"
+  ],
+  "evidence_ref": null,
+  "readiness_limit": "R4 candidate C09; no READY until CI, browser, source/plan validation and exact provider evidence. R3 frozen selections remain historical.",
+  "teacher_status": "PENDING",
+  "empirical_status": "NOT_RUN",
+  "gate_evidence": null,
+  "supersedes_contract": "qa/certification/rdg/contracts/MAT-ARIT-01.json"
+}
