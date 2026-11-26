@@ -164,7 +164,9 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-current-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-current-review.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-current-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-publication-candidates.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-exam-screen.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -669,7 +671,12 @@
       "source_job": 139759310879,
       "ui_cases_verified": 54,
       "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED",
-      "candidate_pass": 0
+      "candidate_pass": 0,
+      "publication_candidates_path": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-publication-candidates.json",
+      "all_AH_ge_3": 10,
+      "g_tuple_review": 2,
+      "combined_test_ci": 45777133478,
+      "combined_test_job": 139763398410
     },
     "r12_r14_v79_review": {
       "status": "REVIEW",
@@ -678,7 +685,10 @@
       "depth_review": 18,
       "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-current-review.json",
       "ui_test": "src/test/rdg-operations-v79-r12-r14.test.tsx",
-      "source_head": "2bb65bb9f1cc3b15a2e4edf34252c5f1c527fd35"
+      "source_head": "2bb65bb9f1cc3b15a2e4edf34252c5f1c527fd35",
+      "exam_screen": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-exam-screen.json",
+      "exam_screen_checked": 92,
+      "exam_screen_signals": 0
     }
   }
 }
