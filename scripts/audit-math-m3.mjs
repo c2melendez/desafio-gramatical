@@ -5,6 +5,7 @@ import {selectRotation,emptyRotation,recordRotation} from "../src/lib/rotation.t
 import {execFileSync} from "node:child_process";
 import {expectedOperationClassificationTruthCount} from "../src/lib/math-operations-classification.ts";
 import {R10_OPERATIONS} from "../src/lib/math-operations-diversity-r10.ts";
+import {R12_OPERATIONS} from "../src/lib/math-operations-transfer-r12.ts";
 import {R11_OPERATIONS} from "../src/lib/math-operations-mixed-r11.ts";
 import {R8_OPERATIONS} from "../src/lib/math-operations-diversity.ts";
 import {verifyMathM3Cell} from "../src/lib/math-m3-guards.ts";
@@ -16,6 +17,7 @@ function independentOracle(kind,values){
  switch(kind){
  case "Operaciones":return ratio((x[0]+x[1])*x[2]);
  case "Operaciones-diversidad":{const [a,b,c,d,stage]=x;switch(stage){case 1:return ratio(a/b*c-d);case 2:return ratio((a-c)*(b+d));case 3:return ratio(c*(a-b)-c*a);case 4:return ratio(-a+b-c);case 5:return ratio(a+b*c);case 6:return ratio(a*b-c*d);case 7:return ratio(2*a-c);case 8:return ratio(a*b-a*c+d*b-d*c);case 9:return ratio(a*b-a*c-d*b-d*c);default:throw Error("Operaciones-diversidad: familia no reconocida");} }
+ case "Operaciones-transferencia":{const [a,b,c,d,e,k]=x;switch(k){case 1:return ratio(a-(-b)-c);case 2:return ratio(a/(b+c));case 3:return ratio(a-b*c-d);case 4:return ratio(a-b*c+d);case 5:return ratio(a*b-(a-c)*b);case 6:return ratio(a-(b-c*(d-e)));default:throw Error("R12 familia desconocida");}}
  case "Operaciones-mixtas":{const [p,a,b,c,d,e,stage]=x;return stage===2?ratio(p+a*b-c):ratio(a-p*b+(c-d)/e);}
  case "Operaciones-racionales":{const [p,d,n,m,stage]=x;return stage===3?ratio(2*p+4*n-m,2*d):ratio(p+n-m,d);}
  case "Fracciones":return ratio(x[0]*x[3]+x[2]*x[1],x[1]*x[3]);
@@ -90,12 +92,13 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
  // Exception is exact and limited to the 3 corrective OP-04 records in each middle/advanced Operaciones cell.
  if(subtopic==="Operaciones"){
   const old=level==="principiante"?"prioridad-de-operaciones":level==="intermedio"?"modificar-parentesis-y-factor":"distributiva-y-cancelacion";
-  const expected=new Set([old,R8_OPERATIONS[level],...R10_OPERATIONS[level]]);
+  const expected=new Set([old,R8_OPERATIONS[level],...R10_OPERATIONS[level],...R12_OPERATIONS[level]]);
   if(level!=="principiante"){
    expected.add(level==="intermedio"?"raiz-racionales-signos":"raiz-producto-racionales-combinados");
    expected.add(R11_OPERATIONS[level]);
    if(bank.filter(x=>x.operation===R11_OPERATIONS[level]&&x.oracle.kind==="Operaciones-mixtas").length!==3)issues.push(cell+": invalid R11 mixed-operation coverage");
   }
+  if(R12_OPERATIONS[level].some(op=>bank.filter(x=>x.operation===op&&x.oracle.kind==="Operaciones-transferencia").length!==3))issues.push(cell+": invalid R12 exact coverage");
   if(operations.size!==expected.size||[...expected].some(x=>!operations.has(x))||bank.filter(x=>x.operation===R8_OPERATIONS[level]&&x.oracle.kind==="Operaciones-diversidad").length!==3||R10_OPERATIONS[level].some(op=>bank.filter(x=>x.operation===op&&x.oracle.kind==="Operaciones-diversidad").length!==3)||bank.filter(x=>x.oracle.kind==="Operaciones-racionales").length!==(level==="principiante"?0:3))issues.push(cell+": invalid R8/R10/OP04 exact coverage");
  }else if(subtopic==="Operaciones"&&level!=="principiante"){
   const old=level==="intermedio"?"modificar-parentesis-y-factor":"distributiva-y-cancelacion";
