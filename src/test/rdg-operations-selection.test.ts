@@ -2,7 +2,7 @@ import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
-import {mathM3HistoricalPool as mathM3Pool,mathM3R16Pool as currentPool,mathM3R17Pool as activePool,mathM3R18Pool as currentR18Pool,mathM3Pool as currentR19Pool} from "@/lib/math-m3";
+import {mathM3HistoricalPool as mathM3Pool,mathM3R16Pool as currentPool,mathM3R17Pool as activePool,mathM3R18Pool as currentR18Pool,mathM3R19Pool as currentR19Pool,mathM3Pool as currentR20Pool} from "@/lib/math-m3";
 // The production frozen-selector is a JS module with no TS declarations.
 // @ts-expect-error JS selector has no TypeScript declaration.
 import {selectFrozen} from "../../qa/certification/select-frozen.mjs";
@@ -66,8 +66,18 @@ it("R19: active 450 hashes reconcile exactly 34 successors, preserve 416 and OP0
  const state=load("qa/certification/batch-state.json").rdg_continuity;
  const order=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>currentR19Pool("Aritmética","Operaciones",level,mode).map(item=>({row:{area:"matematicas",topic:"Aritmética",subtopic:"Operaciones",level,mode},item}))));
  const e=load("qa/certification/rdg/evidence/MAT-ARIT-01-R19-successors.json");const succ=new Map<string,{previous_sha256:string,content_sha256:string}>(e.records.map((x:{id:string,previous_sha256:string,content_sha256:string})=>[x.id,x]));const seen=new Set<string>();let changed=0,preserved=0;
- for(let i=0;i<state.selection_paths.length;i++){const old=load(state.r18_selection_paths[i]),now=load(state.selection_paths[i]);const selected=selectFrozen(order,now,hash);for(let j=0;j<selected.length;j++){const x=now.items[j],y=old.items[j],z=succ.get(x.id);expect(x.id).toBe(y.id);expect(x.objective_ids).toEqual(y.objective_ids);expect(seen.has(x.id)).toBe(false);seen.add(x.id);if(z){expect(y.content_sha256).toBe(z.previous_sha256);expect(x.content_sha256).toBe(z.content_sha256);changed++;}else{expect(x.content_sha256).toBe(y.content_sha256);preserved++;}}}
+ for(let i=0;i<state.r19_selection_paths.length;i++){const old=load(state.r18_selection_paths[i]),now=load(state.r19_selection_paths[i]);const selected=selectFrozen(order,now,hash);for(let j=0;j<selected.length;j++){const x=now.items[j],y=old.items[j],z=succ.get(x.id);expect(x.id).toBe(y.id);expect(x.objective_ids).toEqual(y.objective_ids);expect(seen.has(x.id)).toBe(false);seen.add(x.id);if(z){expect(y.content_sha256).toBe(z.previous_sha256);expect(x.content_sha256).toBe(z.content_sha256);changed++;}else{expect(x.content_sha256).toBe(y.content_sha256);preserved++;}}}
  expect(seen.size).toBe(450);expect(changed).toBe(34);expect(preserved).toBe(416);
  const pass=load("qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json");expect(pass.records).toHaveLength(18);for(const f of pass.records){expect(hash(order.find(x=>x.item.id===f.id)!.item)).toBe(f.content_hash);expect(succ.has(f.id)).toBe(false);}
  console.log("RDG_R19_INTEGRATION "+JSON.stringify({ids:seen.size,changed,preserved,prior_pass_preserved:18,semantic_pass_new:0}));
+});
+
+it("R20: exact runtime successors, 450 frozen selections, 391 unchanged, 18 OP04 retained",()=>{
+ const state=load("qa/certification/batch-state.json").rdg_continuity;
+ const order=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>currentR20Pool("Aritmética","Operaciones",level,mode).map(item=>({row:{area:"matematicas",topic:"Aritmética",subtopic:"Operaciones",level,mode},item}))));
+ const e=load("qa/certification/rdg/evidence/MAT-ARIT-01-R20-successors.json");const succ=new Map<string,{previous_sha256:string,content_sha256:string}>(e.records.map((x:{id:string,previous_sha256:string,content_sha256:string})=>[x.id,x]));const seen=new Set<string>();let changed=0,preserved=0;
+ for(let i=0;i<state.selection_paths.length;i++){const old=load(state.r19_selection_paths[i]),now=load(state.selection_paths[i]);const selected=selectFrozen(order,now,hash);for(let j=0;j<selected.length;j++){const x=now.items[j],y=old.items[j],z=succ.get(x.id);expect(x.id).toBe(y.id);expect(x.objective_ids).toEqual(y.objective_ids);expect(seen.has(x.id)).toBe(false);seen.add(x.id);if(z){expect(y.content_sha256).toBe(z.previous_sha256);expect(x.content_sha256).toBe(z.content_sha256);changed++;}else{expect(x.content_sha256).toBe(y.content_sha256);preserved++;}}}
+ expect(seen.size).toBe(450);expect(changed).toBe(59);expect(preserved).toBe(391);
+ const pass=load("qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json");expect(pass.records).toHaveLength(18);for(const f of pass.records){expect(hash(order.find(x=>x.item.id===f.id)!.item)).toBe(f.content_hash);expect(succ.has(f.id)).toBe(false);}
+ console.log("RDG_R20_INTEGRATION "+JSON.stringify({ids:seen.size,changed,preserved,prior_pass_preserved:18,semantic_pass_new:0}));
 });

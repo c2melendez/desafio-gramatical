@@ -1,7 +1,8 @@
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R19Pool as mathM3Pool,mathM3Pool as activePool} from "@/lib/math-m3";
+import {verifyMathM3Record} from "@/lib/math-m3-guards";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {repairOperationClassificationR20,operationClassificationR20TruthCount} from "@/lib/math-operations-classification-r20";
 const sha=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");
@@ -39,9 +40,10 @@ function assess(x:MathModel){
 it("R20 candidate: 59 live-model successors, independent oracle and unique decision values, preserve remaining 391",()=>{
  const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
  expect(bank).toHaveLength(450);expect(records.size).toBe(59);
+ const active=new Map(MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>activePool("Aritmética","Operaciones",l,m))).map(x=>[x.id,x]));expect(active.size).toBe(450);
  let changed=0,preserved=0,mutants=0;const masks:Record<string,Record<string,number>>={};
  const tuples=new Map<string,string>();
- for(const old of bank){const x=repairOperationClassificationR20(old),f=records.get(old.id);
+ for(const old of bank){const x=repairOperationClassificationR20(old),f=records.get(old.id);expect(sha(active.get(old.id))).toBe(sha(x));expect(verifyMathM3Record(x,x.level)).toEqual([]);
   if(!f){expect(sha(x)).toBe(sha(old));preserved++;continue;}
   expect(sha(old)).toBe(f.previous_hash);expect(sha(x)).not.toBe(sha(old));
   expect(x.id).toBe(old.id);expect(x.prompt).toBe(old.prompt);expect(x.expected).toBe(old.expected);expect(x.operation).toBe(old.operation);

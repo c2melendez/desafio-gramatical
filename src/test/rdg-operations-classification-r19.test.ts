@@ -1,7 +1,7 @@
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
-import {mathM3R18Pool as mathM3Pool,mathM3Pool as activePool} from "@/lib/math-m3";
+import {mathM3R18Pool as mathM3Pool,mathM3R19Pool as activePool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {repairOperationClassificationR19} from "@/lib/math-operations-classification-r19";
 import {operationClassificationReason} from "@/lib/math-operations-classification";
