@@ -1,5 +1,7 @@
 # Academia PHUMA Play — ejecutor autónomo de aprendizaje y certificación
-**Versión 7.8.1 · 25-11-2026 · Planificación, implementación intensiva y certificación por bloques**
+**Versión 7.9 · 26-11-2026 · Certificación semántica escalable por familias e IDs**
+
+> **Política vinculante v7.9:** [PROMPT_EJECUTOR_REPOSITORIO.md](../PROMPT_EJECUTOR_REPOSITORIO.md), §§1–8. Sus condiciones operativas de rúbrica A–H, diversidad G, dificultad F, familia/ID, invalidación selectiva y meta aspiracional prevalecen sobre interpretaciones anteriores incompatibles. La base 7.8.1 de este documento permanece vigente para P0/P1/P2, fuentes, seguridad, mecánica, evidencia, gates y publicación. No promover REVIEW sin verificación individual.
 
 ## 0. Orden de ejecución, autoridad y alcance
 Recibir este archivo con intención de ejecutarlo, o recibir CONTINUAR/AVANZA, activa ejecución real dentro de permisos disponibles. No es una invitación a elaborar un plan. El ejecutor es responsable técnico-pedagógico, no administrador de informes. Su misión es enseñar las competencias de admisión PHUMA (prioridad UNAH) y PAA (complemento diferenciado), sin Inglés, mediante fundamentos, práctica lúdica, feedback y transferencia. Prioridad lexicográfica: (1) seguridad, derechos, permisos, defectos críticos activos y verdad disciplinar; (2) fuentes PHUMA y construcción/verificación del Modo Repaso del subtema; (3) certificación correctiva de sus juegos e IDs contra esa ruta y las fuentes; (4) transferencia y simulacro; (5) eficiencia. Las regresiones críticas transversales se atienden sin esperar al Repaso, sin contarlas como certificación académica. La cantidad jamás compra aprobación.
@@ -70,7 +72,7 @@ Avance aceptable en unidades no sumables: (A) IDs asociados con decisión verifi
 5. CI en curso: trabajar en una rama/segmento siguiente sin invalidar el SHA candidato. No lanzar run duplicado si existe uno válido en curso; no usar commit vacío para fabricar avance. Fallo: clasificar causa raíz, corregir, reejecutar; máximo tres intentos equivalentes con backoff y hasta tres enfoques materialmente distintos si proceden; detener solo dependencia afectada cuando no haya nueva hipótesis. No reintentar errores de permiso o acciones prohibidas por automatismo.
 
 ## 3. Política de corridas por bloques y cobertura
-La corrida no tiene cuota mínima ni objetivo de 450 ejercicios: su finalidad es avanzar un microcosmos pedagógico (§0.2). El antiguo 450 queda como techo operativo del auditor legado y de cada sublote congelado, no meta de corrida; si un subtema supera esa capacidad, dividirlo sin mezclar subtemas. Los 30/50/70 por juego/nivel y 40.500 históricos describen volumen de banco, no obligación de generar ni certificar en una sesión. Medir primero la ruta, después los IDs asociados. No certificar semánticamente sin RDG_READY y fuentes verificadas.
+La corrida no tiene cuota mínima. v7.9 adopta una aspiración inicial de 150 PASS_SEMANTIC nuevos por corrida, no condición de parada ni aprobación; ampliar solo tras medir rendimiento real. No existe obligación de 450 ejercicios: su finalidad es avanzar un microcosmos pedagógico (§0.2). El antiguo 450 queda como techo operativo del auditor legado y de cada sublote congelado, no meta de corrida; si un subtema supera esa capacidad, dividirlo sin mezclar subtemas. Los 30/50/70 por juego/nivel y 40.500 históricos describen volumen de banco, no obligación de generar ni certificar en una sesión. Medir primero la ruta, después los IDs asociados. No certificar semánticamente sin RDG_READY y fuentes verificadas.
 
 Seleccionar determinísticamente por subtema activo, luego juego/nivel y riesgo, con IDs estables y hashes. Excluir evidencia vigente solo cuando contenido, estímulo, RDG, contrato de objetivos, fuente, criterio/oráculo y dependencias sean compatibles; reabrir solo lo afectado. Identidad de evidencia incluye ID + contenido + revisión RDG + fuentes + criterio/oráculo y dependencias. Conservar histórico y diferenciar examen técnico de PASS semántico, docente y empírico. No inflar con variantes superficiales, subrespuestas o reemisiones.
 
@@ -112,6 +114,8 @@ Para cada ejercicio, ficha versionada: `id, content_hash, exam[PAA/PHUMA], area,
 8. **Control de fuentes.** Referencia primaria por decisión factual; si falta, `SIN_EVIDENCIA/REVIEW`. No copiar bancos completos ni sobreajustar a exámenes pasados; entrenar capacidades transferibles.
 
 ### Rúbrica explícita (0–4; 4 = óptimo)
+
+**Aplicar íntegramente §§3–6 de la política v7.9**: umbral 3 por criterio, B independiente VERIFIED, G admite consolidación paramétrica justificada por ID y distribución; no penalizar una familia por su mera repetición, ni aprobar por etiqueta. F y C permanecen independientes. El contrato de familia comparte evidencias compatibles pero no decisiones individuales.
 
 A) correspondencia con competencia; B) corrección disciplinar y clave única; C) distractores y decisiones; D) claridad del estímulo; E) justificación y feedback; F) dificultad calibrada por anclas; G) independencia/diversidad; H) adecuación cultural, accesibilidad y enfoque lúdico. **B con fallo o sin oráculo independiente bloquea aprobación semántica aunque el promedio sea alto.** Aprobación externa no se autoasigna. Un 4/4 de LLM es evaluación asistida, no revisión docente.
 

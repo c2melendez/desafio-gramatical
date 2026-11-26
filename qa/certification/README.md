@@ -1,6 +1,6 @@
 # Certificación académica y funcional — Academia PHUMA Play
 
-> **Sistema maestro vigente:** [Ejecutor v7.8.1](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Sin cuota de IDs por corrida; los sublotes técnicos admiten hasta 450 IDs asociados. Los controles descritos abajo son implementación histórica salvo verificación actual.
+> **Sistema maestro vigente v7.9:** [Prompt ejecutor y política normativa](../../PROMPT_EJECUTOR_REPOSITORIO.md) + [Sistema Maestro completo](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Sin cuota de IDs por corrida; los sublotes técnicos admiten hasta 450 IDs asociados. Los controles descritos abajo son implementación histórica salvo verificación actual.
 
 ## Fundamento documental y límites
 
@@ -122,3 +122,6 @@ G-ACTION comprueba que cambios bajo `src/` estén asociados a `interventions[]` 
 El manifiesto congelado requiere `subtopic_scope:{area,topic,subtopic}`, `rdg_contract:{status:'RDG_READY',subtopic_scope,route_path,route_sha256,objective_ids,evidence_ref}`, `items:[{id,content_sha256,objective_ids}]`. El auditor comprueba coincidencia del subtema y objetivos, hash de ruta en HEAD y del contenido de cada ID. El guard exige fase `CERTIFICACION_ASOCIADA_EN_CURSO`, contrato y vínculo por ID para PASS_SEMANTIC. Estos son controles estructurales; la evidencia de fuente, validez disciplinar, pruebas C09 y aprobación independiente siguen siendo obligatorias. El recorrido por offset sin manifiesto es diagnóstico técnico legado, no autoriza avanzar el cursor pedagógico. No existen rutas READY por el mero hecho de activar esta política.
 
 **v7.8.1 — Investigación y calibración complementaria obligatoria en P0:** aplicar §4.1. Además de los PDF originales, buscar exhaustiva y proporcionalmente guías, apuntes, ejercicios resueltos, cuestionarios, simulacros y videos (Studocu, sitios institucionales y otros recursos legítimos). Contrastar con anclas oficiales; registrar consultas, acceso, linaje, hallazgos, decisiones y perfil cualitativo por nivel. Reutilizar evidencia vigente; no copiar preguntas ni convertir fuentes secundarias en autoridad PHUMA. P1/P2 consumen la calibración congelada. 
+
+## Política v7.9
+La familia pedagógica comparte evidencia verificable, no aprobación. Mantener decisión individual A–H >=3, B VERIFIED, originalidad/variación útil G y dificultad F calibrada. Aspiración inicial 150 PASS nuevos/corrida, no cuota ni garantía. REVIEW heredado se reevalúa con evidencia, no se convierte por etiqueta; el auditor legado sigue siendo diagnóstico técnico. Ver §§3–8 del ejecutor para criterios, mutaciones, invalidación y piloto.
