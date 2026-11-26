@@ -1,6 +1,6 @@
 import {createHash} from "node:crypto";
 import {it,expect} from "vitest";
-import {mathM3Pool,mathM3R11Pool} from "@/lib/math-m3";
+import {mathM3R12Pool as mathM3Pool,mathM3R11Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {verifyMathM3Record} from "@/lib/math-m3-guards";
 const hash=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");

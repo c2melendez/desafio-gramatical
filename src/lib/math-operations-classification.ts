@@ -14,6 +14,7 @@ function maskFor(item:MathModel){
  return masks[index%masks.length];
 }
 export function expectedOperationClassificationTruthCount(item:MathModel):number{
+ if(item.oracle.kind==="Operaciones-contraste")return item.mode==="clasificar"&&Number(item.id.split("-").at(-1))%3===0?2:1;
  if((item.oracle.kind==="Operaciones-diversidad"||item.oracle.kind==="Operaciones-mixtas"||item.oracle.kind==="Operaciones-transferencia")&&item.mode==="clasificar")return Number(item.id.split("-").at(-1))%2===0?2:1;
  return isOperationClassificationR5(item)||isOperationClassificationR6(item)?maskFor(item).filter(Boolean).length:1;
 }
