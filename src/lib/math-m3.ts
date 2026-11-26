@@ -11,6 +11,7 @@ import {repairOperationRationalClassificationR17} from "./math-operations-ration
 import {repairOperationClassificationR18} from "./math-operations-classification-r18";
 import {repairOperationClassificationR19} from "./math-operations-classification-r19";
 import {repairOperationClassificationR20} from "./math-operations-classification-r20";
+import {repairOperationClassificationR21Candidate} from "./math-operations-classification-r21-candidate";
 import {repairOperationTransferR13} from "./math-operations-contrast-r13";
 import {repairOperationTransferR12} from "./math-operations-transfer-r12";
 import {repairOperationMixedR11} from "./math-operations-mixed-r11";
@@ -105,3 +106,8 @@ export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):M
 }
 export const MATH_M3_NEW_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(10+15+25);
 export const MATH_M3_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(30+50+70);
+
+/** R21 selection preview only; production remains R20. */
+export function mathM3R21CandidatePool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R19Pool(topic,subtopic,level,mode).map(repairOperationClassificationR21Candidate);
+}

@@ -4,7 +4,7 @@ import type {MathModel} from "./math-m1";
  * Does not change any canonical exercise model or hash.
  */
 export function operationR20WrongCause(item:MathModel,text:string):string|undefined{
- if(item.modeOperation!=="evaluar-tres-decisiones-operaciones-r20"||item.mode!=="clasificar")return;
+ if(!["evaluar-tres-decisiones-operaciones-r20","evaluar-tres-decisiones-operaciones-r21"].includes(item.modeOperation??"")||item.mode!=="clasificar")return;
  const assertion=item.assertions.find(q=>q.text===text);
  if(!assertion||assertion.truth)return;
  const m=item.prompt.match(/\((\d+)\+(\d+)\)×(\d+)/),n=text.match(/(-?\d+)\.$/);if(!m||!n)return;

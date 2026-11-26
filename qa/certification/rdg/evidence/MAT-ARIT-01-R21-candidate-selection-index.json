@@ -1,0 +1,34 @@
+{
+  "status": "CANDIDATE_NOT_ACTIVE",
+  "candidate_sha": "b3761c9d342903eb91bd499812e00f088bdd384f",
+  "successors": "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+  "previous_selection_paths": [
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+  ],
+  "selection_paths": [
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R21-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R21-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R21-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R21-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R21-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+  ],
+  "summary": {
+    "total": 450,
+    "changed": 59,
+    "preserved": 391,
+    "prior_pass_target": 98
+  },
+  "limits": "Prueba de selección y UI; no activar ni contabilizar PASS nuevos hasta CI y publicación."
+}
