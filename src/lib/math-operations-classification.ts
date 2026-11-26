@@ -1,4 +1,5 @@
 import type {MathModel} from "./math-m1";
+import {r23TruthMask} from "./math-operations-r23-candidate";
 import {r21Mask} from "./math-operations-classification-r21-candidate";
 import {operationClassificationR20TruthCount} from "./math-operations-classification-r20";
 
@@ -16,6 +17,9 @@ function maskFor(item:MathModel){
  return masks[index%masks.length];
 }
 export function expectedOperationClassificationTruthCount(item:MathModel):number{
+ if(item.modeOperation==="contrastar-tres-decisiones-distintas-r23"&&item.oracle.kind==="Operaciones-decision"&&item.mode==="clasificar"){
+  const mask=r23TruthMask(item);return Number.isInteger(mask)&&mask>=0&&mask<=7?Number(Boolean(mask&4))+Number(Boolean(mask&2))+Number(Boolean(mask&1)):-1;
+ }
  if(item.modeOperation==="evaluar-tres-decisiones-operaciones-r21"&&item.oracle.kind==="Operaciones"&&item.mode==="clasificar")return r21Mask(item.id)?.filter(Boolean).length??-1;
  if(item.modeOperation==="evaluar-tres-decisiones-operaciones-r20"&&item.oracle.kind==="Operaciones"&&item.mode==="clasificar")return operationClassificationR20TruthCount(item.id);
  if(item.modeOperation==="evaluar-tres-decisiones-racionales-r17"&&item.oracle.kind==="Operaciones-racionales"&&item.mode==="clasificar"){const slot=Number(item.id.split("-").at(-1))-(item.level==="avanzado"?22:12);return item.level==="avanzado"?slot===0?2:1:slot===1?1:2;}
