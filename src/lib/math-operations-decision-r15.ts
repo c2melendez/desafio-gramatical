@@ -4,7 +4,7 @@ export const R15_OPERATIONS=["comparar-ofertas-con-cargos-fijos","cociente-de-di
 const q=(n:number,d=1):Rational=>{let a=Math.abs(n),b=d;while(b){const t=a%b;a=b;b=t}return {n:n/(a||1),d:d/(a||1)};};
 const fmt=(x:Rational)=>x.d===1?String(x.n):x.n+"/"+x.d;
 function rotate(v:string[],seed:number){const k=seed%v.length;const choices=[...v.slice(k),...v.slice(0,k)];return {choices,answerIndex:choices.indexOf(v[0])};}
-function design(m:number,i:number,g:number){
+function design(m:number,i:number,g:number,rootDelta=0){
  let key:Rational,step:Rational,aux:Rational,auxWrong:Rational,prompt:string,label:string,auxLabel:string,auxReason:string,formula:string,explanation:string,wrong:Alt[],mid:Alt[],inputs:number[];
  if(g===0){
  const n=8+2*m+i,p=14+m,f=20+3*i,v=p+3,h=5+i,A=n*p+f,B=n*v+h;
@@ -15,7 +15,7 @@ function design(m:number,i:number,g:number){
  wrong=[[q(B),"Se tomó el costo de B sin restar el de A."],[q(n*(v-p)),"Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."],[q(A-B),"Se invirtió el orden de la diferencia."]];
  mid=[[q(n*p),"Se omitió el cargo fijo."],[q((n+f)*p),"Se trató el cargo fijo como cantidad de cuadernos."],[q(n+p+f),"Se sumaron cantidad y precio unitario en vez de multiplicarlos."]];inputs=[n,p,f,v,h,1];
  }else{
- const a=4+i+m,b=7+2*m+i,c=a+1,d=3+i;
+ const a=4+i+m,b=7+2*m+i,c=a+1+rootDelta,d=3+i;
  step=q(2*a-c,2*b);key=q(2*a-c,2*b*d);aux=q(a,b);auxWrong=q(-a,b);
  prompt=`Calcula (√(${a*a}/${b*b}) − ${c}/${2*b}) ÷ ${d}. Expresa una fracción simplificada.`;
  label="Resuelve la diferencia dentro del paréntesis";auxLabel="La raíz cuadrada principal es ";auxReason=`La raíz principal es no negativa: ${fmt(aux)}, porque al cuadrarla se obtiene ${a*a}/${b*b}.`;
@@ -28,7 +28,12 @@ function design(m:number,i:number,g:number){
 export function repairOperationTransferR15(base:MathModel):MathModel{
  if(base.subtopic!=="Operaciones"||base.level!=="intermedio"||base.oracle.kind!=="Operaciones"||!base.id.startsWith("math-m2-"))return base;
  const slot=Number(base.id.split("-").at(-1));if(!Number.isInteger(slot)||slot<12||slot>17)return base;
- const g=slot<15?0:1,i=(slot-12)%3,m=["quiz","clasificar","construir"].indexOf(base.mode),x=design(m,i,g);
+ return buildOperationTransferR15(base,0);
+}
+/** Reuse the exact R15 arithmetic contract for targeted successor variants. */
+export function buildOperationTransferR15(base:MathModel,rootDelta:number):MathModel{
+ const slot=Number(base.id.split("-").at(-1));
+ const g=slot<15?0:1,i=(slot-12)%3,m=["quiz","clasificar","construir"].indexOf(base.mode),x=design(m,i,g,rootDelta);
  const answer=fmt(x.key),intermediate=fmt(x.step),opts=rotate([answer,...x.wrong.map(([v])=>fmt(v))],base.seed),inter=rotate([intermediate,...x.mid.map(([v])=>fmt(v))],base.seed+1);
  if(new Set(opts.choices).size!==4||new Set(inter.choices).size!==4)throw Error("R15 alternativas equivalentes "+base.id);
  const mask=base.mode==="clasificar"?slot%3:2;
