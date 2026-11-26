@@ -1,0 +1,946 @@
+{
+  "scope": "MAT-ARIT-01",
+  "status": "CANDIDATE_CI_SUCCESS_NOT_ACTIVE",
+  "source_predecessor": "0134230bfd2eef537cb59daaaf9cf73c1f2c9531",
+  "source_selection_index": "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-selection-index.json",
+  "summary": {
+    "changed": 30,
+    "preserved": 420,
+    "r22": 22,
+    "r23": 8,
+    "semantic_pass": 0
+  },
+  "limits": "Exact successor hashes from source CI. Joint R21/R22/R23 frozen selections and UI are tested separately. No active bank change or semantic promotion.",
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "previous_sha256": "f48ec3d5415cf304f6a3ea6ff71a872fcf2346e9f832daa0cb32de8d8c4a2b20",
+      "content_sha256": "e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd",
+      "operation": "cero-dividido-por-no-cero",
+      "level": "principiante",
+      "mode": "quiz",
+      "stimulus": "Calcula (42 − 42) ÷ 7 + 11. ¿Cuál es el resultado?",
+      "key": 11,
+      "step": 0,
+      "wrong": [
+        17,
+        46,
+        18
+      ],
+      "mid": [
+        42,
+        84,
+        -42
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-3",
+      "previous_sha256": "102ce9bc7601e05e67555d4515638575e9c191df6963ad67a4972b86d0df3b07",
+      "content_sha256": "41c1328ebc68848bf9af53f62bea2f1288164dca072763dcb1735518a10fc86f",
+      "operation": "cociente-con-agrupacion",
+      "level": "principiante",
+      "mode": "construir",
+      "stimulus": "Calcula 252 ÷ (7 + 11). ¿Cuál es el resultado?",
+      "key": 14,
+      "step": 18,
+      "wrong": [
+        47,
+        25,
+        234
+      ],
+      "mid": [
+        77,
+        7,
+        11
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "previous_sha256": "07e5a8971e05f4831083520e9d7f36b6ccb4bb77f312a9c98305d71210a4fff1",
+      "content_sha256": "36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9",
+      "operation": "cero-dividido-por-no-cero",
+      "level": "principiante",
+      "mode": "construir",
+      "stimulus": "Calcula (60 − 60) ÷ 6 + 12. ¿Cuál es el resultado?",
+      "key": 12,
+      "step": 0,
+      "wrong": [
+        22,
+        66,
+        18
+      ],
+      "mid": [
+        60,
+        120,
+        -60
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+      "previous_sha256": "4aeb35d06bc914c8c34bb25d3b8501edbdda4ce892ac039c07266b782326872a",
+      "content_sha256": "6d9d9aaf5ecf1579c44479342b66e6fd541239047733350f5b668163f5c47612",
+      "operation": "factor-comun-diferencia-compuesta",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa 35 × □ − (35 − 6) × □ = 48. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "key": 8,
+      "step": 6,
+      "wrong": [
+        48,
+        -8,
+        54
+      ],
+      "mid": [
+        41,
+        35,
+        -6
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+      "previous_sha256": "9436c43c5ca52a01c2b1320c8862fac01025aaa0c660c74e2fa5c3bde5eeb287",
+      "content_sha256": "24533f05e26bad10465fb86e8dab63f12dd6cb52789b7bc8d920f06d6c4f9dae",
+      "operation": "factor-comun-diferencia-compuesta",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa 39 × □ − (39 − 7) × □ = 70. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "key": 10,
+      "step": 7,
+      "wrong": [
+        70,
+        -10,
+        77
+      ],
+      "mid": [
+        46,
+        39,
+        -7
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+      "previous_sha256": "00ecc4dfe58c868452e093cf25deaf68edf64487ad46a2d102fea044d54be5d3",
+      "content_sha256": "ed1a4ceef4b3e24600caa6afa4f2797f82652195c317521bf29c77098b300348",
+      "operation": "factor-comun-diferencia-compuesta",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa 43 × □ − (43 − 8) × □ = 96. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "key": 12,
+      "step": 8,
+      "wrong": [
+        96,
+        -12,
+        104
+      ],
+      "mid": [
+        51,
+        43,
+        -8
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+      "previous_sha256": "b16aca894bebb8e0016c4a54defde60538cc4b92377d4943d827a901394059ee",
+      "content_sha256": "8cb915d3f09f20377bc2b05d1b5e43ae3bab368a4a4d1796e1b82351218a4adf",
+      "operation": "resta-anidada-distributiva",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa 80 − [12 − □ × (18 − 3)] = 128. ¿Qué entero sustituye □?",
+      "key": 4,
+      "step": 60,
+      "wrong": [
+        60,
+        -4,
+        45
+      ],
+      "mid": [
+        48,
+        -60,
+        196
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+      "previous_sha256": "340303855000b1fba75d518ed667c23fee6b0676e0210751725efb0d44fc6152",
+      "content_sha256": "cc6ba29fe36500dfd46b74d95943c40129e99bd712404bacb039b41ebf7e9e05",
+      "operation": "resta-anidada-distributiva",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa 85 − [13 − □ × (20 − 4)] = 152. ¿Qué entero sustituye □?",
+      "key": 5,
+      "step": 80,
+      "wrong": [
+        80,
+        -5,
+        64
+      ],
+      "mid": [
+        67,
+        -80,
+        224
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+      "previous_sha256": "d8234d34bfe8573f2b39dfe47c44f8c4cb498d54769bfa79eeafa0ad56716f2c",
+      "content_sha256": "f049110d67949469e2a62e1869fe067fc89b4f64392397359534dbbd84675f6e",
+      "operation": "resta-anidada-distributiva",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa 90 − [14 − □ × (22 − 5)] = 178. ¿Qué entero sustituye □?",
+      "key": 6,
+      "step": 102,
+      "wrong": [
+        102,
+        -6,
+        85
+      ],
+      "mid": [
+        88,
+        -102,
+        254
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+      "previous_sha256": "0eef44c9eb3413f8391d229c5933a219180d45a67e3e9a0af12d7c6967a515d4",
+      "content_sha256": "0195d56d5ba79d6964555395b3bd8bc0265f1b402a372c94a4079b67187d8407",
+      "operation": "dos-raices-en-producto-agrupado",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa (√81 − 2) × (□ + √25) − 4 = 101. ¿Qué entero sustituye □?",
+      "key": 10,
+      "step": 15,
+      "wrong": [
+        15,
+        20,
+        -10
+      ],
+      "mid": [
+        105,
+        98,
+        19
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+      "previous_sha256": "8304eb14f4037791a25c24b5e00eddea805bb92013683198ddb7d5824cdb81a1",
+      "content_sha256": "fa7c5dde7ce6f45888576cb2d42d05ca27e1c7ba8179cb568fbfe13aea75bb48",
+      "operation": "dos-raices-en-producto-agrupado",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa (√100 − 3) × (□ + √36) − 5 = 114. ¿Qué entero sustituye □?",
+      "key": 11,
+      "step": 17,
+      "wrong": [
+        17,
+        23,
+        -11
+      ],
+      "mid": [
+        119,
+        112,
+        22
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+      "previous_sha256": "8938c0796cf9d5fe38e780c99692b566020e316b9c3c561cf9c4e2480794810e",
+      "content_sha256": "aa3b724bff1d9984b2426ca494caff452debf129c9b196084e89f112e2b1ca8c",
+      "operation": "dos-raices-en-producto-agrupado",
+      "level": "avanzado",
+      "mode": "quiz",
+      "stimulus": "Completa (√121 − 4) × (□ + √49) − 6 = 127. ¿Qué entero sustituye □?",
+      "key": 12,
+      "step": 19,
+      "wrong": [
+        19,
+        26,
+        -12
+      ],
+      "mid": [
+        133,
+        126,
+        25
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "previous_sha256": "2424a69545ad388cb602301a4772acbba067d62975bb2f72763a59871077c73a",
+      "content_sha256": "12dfbbbf3d67f973b81466e661755a6f1c195f4a51f3e98b330abe4e74b37734",
+      "operation": "factor-comun-diferencia-compuesta",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa 47 × □ − (47 − 9) × □ = 126. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "key": 14,
+      "step": 9,
+      "wrong": [
+        126,
+        -14,
+        135
+      ],
+      "mid": [
+        56,
+        47,
+        -9
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "previous_sha256": "55b6a363d97d3231894f1eb7f4471f44866bda1a0b732af891879987394d1f63",
+      "content_sha256": "9bbe3fd450415ceabfaf8c9d289983122a2867aa8383b99266e5c44063a4882d",
+      "operation": "factor-comun-diferencia-compuesta",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa 51 × □ − (51 − 10) × □ = 160. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "key": 16,
+      "step": 10,
+      "wrong": [
+        160,
+        -16,
+        170
+      ],
+      "mid": [
+        61,
+        51,
+        -10
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+      "previous_sha256": "c71f9afe39de25f3822fe8aa6135f1cac77163e984e91ba9155652d674779473",
+      "content_sha256": "f324d59679b24b61e7e5fdb1c1eb0a03282312cca8c4ebedc0a3a535ae8318e3",
+      "operation": "factor-comun-diferencia-compuesta",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa 55 × □ − (55 − 11) × □ = 198. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "key": 18,
+      "step": 11,
+      "wrong": [
+        198,
+        -18,
+        209
+      ],
+      "mid": [
+        66,
+        55,
+        -11
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+      "previous_sha256": "b04365545109328c34df75e7b79b6b33f6db7b29b292e7e8363a7a72d946ca22",
+      "content_sha256": "c87801812c8fafad59236d3d8232d4b336d00f050a5f6ec7a7f0b042d578c3b7",
+      "operation": "resta-anidada-distributiva",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa 95 − [15 − □ × (24 − 6)] = 206. ¿Qué entero sustituye □?",
+      "key": 7,
+      "step": 126,
+      "wrong": [
+        126,
+        -7,
+        108
+      ],
+      "mid": [
+        111,
+        -126,
+        286
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+      "previous_sha256": "dc36bb0df6e71159982789f6541d45a13477467861f44cb88f1b678c8e3d60f1",
+      "content_sha256": "1598ed5ce131f4639b7b1761595f1e5e7dcb4df5c68316b61be469087a899f42",
+      "operation": "resta-anidada-distributiva",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa 100 − [16 − □ × (26 − 7)] = 236. ¿Qué entero sustituye □?",
+      "key": 8,
+      "step": 152,
+      "wrong": [
+        152,
+        -8,
+        133
+      ],
+      "mid": [
+        136,
+        -152,
+        320
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+      "previous_sha256": "ac3553665ecf646b901fd7634552e64d2d113cb07099f31dd1a8a775e1b384c6",
+      "content_sha256": "be406a05a9c90fbcb3cede74ace29d267832f9110a326c54818ea287fcd2c266",
+      "operation": "resta-anidada-distributiva",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa 105 − [17 − □ × (28 − 8)] = 268. ¿Qué entero sustituye □?",
+      "key": 9,
+      "step": 180,
+      "wrong": [
+        180,
+        -9,
+        160
+      ],
+      "mid": [
+        163,
+        -180,
+        356
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "previous_sha256": "d5faf5c1edf0bcc107fed782c5693a3fe27d2872e84914443490e0eda236378d",
+      "content_sha256": "c24d71e7b8281f7acfd1d5e7b158810adc4bd18e70d5f5bad2e2ea247de824b4",
+      "operation": "dos-raices-en-producto-agrupado",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa (√144 − 2) × (□ + √64) − 7 = 203. ¿Qué entero sustituye □?",
+      "key": 13,
+      "step": 21,
+      "wrong": [
+        21,
+        29,
+        -13
+      ],
+      "mid": [
+        210,
+        200,
+        28
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "previous_sha256": "75a821c39ef0624b6147ca6eb8646b99661d5b822ad1997712b91c8529a9f665",
+      "content_sha256": "4659b1321c3ff860122a8f19dd6e00e623e978f2b9ac04d8fbb03a6bb9d7e0fc",
+      "operation": "dos-raices-en-producto-agrupado",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa (√169 − 3) × (□ + √81) − 8 = 222. ¿Qué entero sustituye □?",
+      "key": 14,
+      "step": 23,
+      "wrong": [
+        23,
+        32,
+        -14
+      ],
+      "mid": [
+        230,
+        220,
+        31
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+      "previous_sha256": "8a9b2928068881356dea06662ab371277c04a680352bd74335d5a0d81cc74bde",
+      "content_sha256": "48fff4582801dc1e487e006e184cad9a44d4381fadc2bee904c1cb25f03c8260",
+      "operation": "dos-raices-en-producto-agrupado",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa (√196 − 4) × (□ + √100) − 9 = 241. ¿Qué entero sustituye □?",
+      "key": 15,
+      "step": 25,
+      "wrong": [
+        25,
+        35,
+        -15
+      ],
+      "mid": [
+        250,
+        240,
+        34
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+      "previous_sha256": "29a31bf05db2fa42b8268d1c2fa7a6ac20a2315155bd15fe370746693a78d668",
+      "content_sha256": "a9e3066f3998d059a1d27ccef9ad050b18c74f1d6e19bd4370c7fe9412f9a04f",
+      "operation": "completar-igualdad-distributiva",
+      "level": "avanzado",
+      "mode": "construir",
+      "stimulus": "Completa la igualdad 15 × (14 − 5) + □ = 15 × (14 + 6). ¿Qué número sustituye □?",
+      "key": 165,
+      "step": 135,
+      "wrong": [
+        300,
+        -15,
+        11
+      ],
+      "mid": [
+        205,
+        285,
+        9
+      ],
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R22",
+      "source_ci": 45871043578,
+      "source_job": 140094040051,
+      "source_sha": "f2102623f11b35eb62629b5fe210d6b2d39e53d3"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+      "previous_sha256": "c8276fc6895c72e0fb6a5548334341ffe65c68cdf7dc9c07cb176299a019b62f",
+      "content_sha256": "d3dbbcd7fa0257e62bc5398ecb827fa07cbff29708f49b066135222a7221a1e9",
+      "stimulus": "Para comprar 10 cuadernos, la tienda A cobra L 15 por cuaderno más L 20 por el pedido; la B cobra L 18 por cuaderno más L 5 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "mode": "clasificar",
+      "mask": 0,
+      "oracle": {
+        "key": "15",
+        "step": "170",
+        "aux": "-15",
+        "ds": [
+          {
+            "kind": "aux",
+            "given": "15",
+            "correct": "-15",
+            "truth": false,
+            "reason": "Se invirtió el orden de la diferencia entre cargos fijos. Los cargos fijos se restan B menos A: 5−20=-15. El valor afirmado es 15; el correcto es -15."
+          },
+          {
+            "kind": "key",
+            "given": "30",
+            "correct": "15",
+            "truth": false,
+            "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos. A cuesta 10×15+20=170; B cuesta 10×18+5=185. Compara los costos completos, no solo el precio unitario. B menos A es 185−170=15 lempiras. El valor afirmado es 30; el correcto es 15."
+          },
+          {
+            "kind": "step",
+            "given": "45",
+            "correct": "170",
+            "truth": false,
+            "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos. A cuesta 10×15+20=170; B cuesta 10×18+5=185. Compara los costos completos, no solo el precio unitario. B menos A es 185−170=15 lempiras. El valor afirmado es 45; el correcto es 170."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-13",
+      "previous_sha256": "7accbec584cbda7da0dadb1175b942802e7567d03c85b6535cf3d2ffbec12a6c",
+      "content_sha256": "f78a66034ca7a32c4b7c697f8827ca4b8eacbc094aae514c9a2ce23c804b21b6",
+      "stimulus": "Para comprar 11 cuadernos, la tienda A cobra L 15 por cuaderno más L 23 por el pedido; la B cobra L 18 por cuaderno más L 6 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "mode": "clasificar",
+      "mask": 5,
+      "oracle": {
+        "key": "16",
+        "step": "188",
+        "aux": "-17",
+        "ds": [
+          {
+            "kind": "key",
+            "given": "16",
+            "correct": "16",
+            "truth": true,
+            "reason": "A cuesta 11×15+23=188; B cuesta 11×18+6=204. Compara los costos completos, no solo el precio unitario. B menos A es 204−188=16 lempiras. El valor afirmado es 16; el correcto es 16."
+          },
+          {
+            "kind": "step",
+            "given": "165",
+            "correct": "188",
+            "truth": false,
+            "reason": "Se omitió el cargo fijo. A cuesta 11×15+23=188; B cuesta 11×18+6=204. Compara los costos completos, no solo el precio unitario. B menos A es 204−188=16 lempiras. El valor afirmado es 165; el correcto es 188."
+          },
+          {
+            "kind": "aux",
+            "given": "-17",
+            "correct": "-17",
+            "truth": true,
+            "reason": "Los cargos fijos se restan B menos A: 6−23=-17. El valor afirmado es -17; el correcto es -17."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-14",
+      "previous_sha256": "728dab21d1804467db62eed5a7124761167ba2759dd4d19d9b168dd21c8002bb",
+      "content_sha256": "ddd7ee990666174a94cbd5be89d9b7643fe34122dd0947ede42828fdc603e35d",
+      "stimulus": "Para comprar 12 cuadernos, la tienda A cobra L 15 por cuaderno más L 26 por el pedido; la B cobra L 18 por cuaderno más L 7 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "mode": "clasificar",
+      "mask": 3,
+      "oracle": {
+        "key": "17",
+        "step": "206",
+        "aux": "-19",
+        "ds": [
+          {
+            "kind": "step",
+            "given": "206",
+            "correct": "206",
+            "truth": true,
+            "reason": "A cuesta 12×15+26=206; B cuesta 12×18+7=223. Compara los costos completos, no solo el precio unitario. B menos A es 223−206=17 lempiras. El valor afirmado es 206; el correcto es 206."
+          },
+          {
+            "kind": "aux",
+            "given": "-19",
+            "correct": "-19",
+            "truth": true,
+            "reason": "Los cargos fijos se restan B menos A: 7−26=-19. El valor afirmado es -19; el correcto es -19."
+          },
+          {
+            "kind": "key",
+            "given": "223",
+            "correct": "17",
+            "truth": false,
+            "reason": "Se tomó el costo de B sin restar el de A. A cuesta 12×15+26=206; B cuesta 12×18+7=223. Compara los costos completos, no solo el precio unitario. B menos A es 223−206=17 lempiras. El valor afirmado es 223; el correcto es 17."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+      "previous_sha256": "7ac5595fa1b32bb369cae8638bc25b2557d2bfb46a48e0e69a1d00d79b2e818c",
+      "content_sha256": "588126d1635f62ee18e4982fdfb778ef0a23423423a9b2c57614255846f7f6f3",
+      "stimulus": "Calcula (√(25/81) − 6/18) ÷ 3. Expresa una fracción simplificada.",
+      "mode": "clasificar",
+      "mask": 7,
+      "oracle": {
+        "key": "2/27",
+        "step": "2/9",
+        "aux": "5/9",
+        "ds": [
+          {
+            "kind": "aux",
+            "given": "5/9",
+            "correct": "5/9",
+            "truth": true,
+            "reason": "La raíz principal es no negativa: 5/9; su cuadrado es 25/81. El valor afirmado es 5/9; el correcto es 5/9."
+          },
+          {
+            "kind": "key",
+            "given": "2/27",
+            "correct": "2/27",
+            "truth": true,
+            "reason": "La raíz principal es 5/9. Con denominador 18, el paréntesis vale 2/9. Dividir por 3 equivale a multiplicar por 1/3; resulta (10−6)/(18×3)=2/27. El valor afirmado es 2/27; el correcto es 2/27."
+          },
+          {
+            "kind": "step",
+            "given": "2/9",
+            "correct": "2/9",
+            "truth": true,
+            "reason": "La raíz principal es 5/9. Con denominador 18, el paréntesis vale 2/9. Dividir por 3 equivale a multiplicar por 1/3; resulta (10−6)/(18×3)=2/27. El valor afirmado es 2/9; el correcto es 2/9."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-16",
+      "previous_sha256": "9b1530f00120bc6e092a9b858a9bc5361c2657160cb2cecdd5a782ce939b397f",
+      "content_sha256": "a09828cffae299085413718c2a096425618197384cab92cf9ce5fec9ccdc031b",
+      "stimulus": "Calcula (√(36/100) − 7/20) ÷ 4. Expresa una fracción simplificada.",
+      "mode": "clasificar",
+      "mask": 4,
+      "oracle": {
+        "key": "1/16",
+        "step": "1/4",
+        "aux": "3/5",
+        "ds": [
+          {
+            "kind": "key",
+            "given": "1/16",
+            "correct": "1/16",
+            "truth": true,
+            "reason": "La raíz principal es 3/5. Con denominador 20, el paréntesis vale 1/4. Dividir por 4 equivale a multiplicar por 1/4; resulta (12−7)/(20×4)=1/16. El valor afirmado es 1/16; el correcto es 1/16."
+          },
+          {
+            "kind": "step",
+            "given": "-1/30",
+            "correct": "1/4",
+            "truth": false,
+            "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes. La raíz principal es 3/5. Con denominador 20, el paréntesis vale 1/4. Dividir por 4 equivale a multiplicar por 1/4; resulta (12−7)/(20×4)=1/16. El valor afirmado es -1/30; el correcto es 1/4."
+          },
+          {
+            "kind": "aux",
+            "given": "-3/5",
+            "correct": "3/5",
+            "truth": false,
+            "reason": "Se eligió la raíz negativa en lugar de la principal. La raíz principal es no negativa: 3/5; su cuadrado es 36/100. El valor afirmado es -3/5; el correcto es 3/5."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+      "previous_sha256": "c36e7adaea461f712591ae050d668fa3cd96158343204e970911185ca9a1bf48",
+      "content_sha256": "56a42f81536dbe0240df6d6c429039347ba218732ea0ac12201ca5f574ec7d2d",
+      "stimulus": "Calcula (√(49/121) − 8/22) ÷ 5. Expresa una fracción simplificada.",
+      "mode": "clasificar",
+      "mask": 2,
+      "oracle": {
+        "key": "3/55",
+        "step": "3/11",
+        "aux": "7/11",
+        "ds": [
+          {
+            "kind": "step",
+            "given": "3/11",
+            "correct": "3/11",
+            "truth": true,
+            "reason": "La raíz principal es 7/11. Con denominador 22, el paréntesis vale 3/11. Dividir por 5 equivale a multiplicar por 1/5; resulta (14−8)/(22×5)=3/55. El valor afirmado es 3/11; el correcto es 3/11."
+          },
+          {
+            "kind": "aux",
+            "given": "-7/11",
+            "correct": "7/11",
+            "truth": false,
+            "reason": "Se eligió la raíz negativa en lugar de la principal. La raíz principal es no negativa: 7/11; su cuadrado es 49/121. El valor afirmado es -7/11; el correcto es 7/11."
+          },
+          {
+            "kind": "key",
+            "given": "-1/5",
+            "correct": "3/55",
+            "truth": false,
+            "reason": "Se eligió la raíz negativa. La raíz principal es 7/11. Con denominador 22, el paréntesis vale 3/11. Dividir por 5 equivale a multiplicar por 1/5; resulta (14−8)/(22×5)=3/55. El valor afirmado es -1/5; el correcto es 3/55."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+      "previous_sha256": "f458dc01d824f3657cc29b3c8b5acb2db6aa519f01292922c53ce5434bfb9f76",
+      "content_sha256": "2d636317237aa786ab0f0292201c87ba168116e80feebe967783bd54b210a81d",
+      "stimulus": "Calcula (√(25/64) − 7/16) ÷ 4. Expresa una fracción simplificada.",
+      "mode": "quiz",
+      "mask": null,
+      "oracle": {
+        "key": "3/64",
+        "step": "3/16",
+        "aux": "5/8",
+        "ds": [
+          {
+            "kind": "step",
+            "given": "17/16",
+            "correct": "3/16",
+            "truth": false,
+            "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 3/16."
+          },
+          {
+            "kind": "aux",
+            "given": "5/8",
+            "correct": "5/8",
+            "truth": true,
+            "reason": "La raíz principal es no negativa: 5/8, porque al cuadrarla se obtiene 25/64."
+          },
+          {
+            "kind": "key",
+            "given": "3/16",
+            "correct": "3/64",
+            "truth": false,
+            "reason": "Se omitió dividir por el último número. El resultado correcto es 3/64."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+      "previous_sha256": "848035a45ecee31499793ef1763ff2cfbe1ac20a94c056bb4e6767797cd23855",
+      "content_sha256": "73ca70653603f898ecef293ff4e4db0e7428927f3354ea837e7a8896617ccd8a",
+      "stimulus": "Calcula (√(49/144) − 9/24) ÷ 4. Expresa una fracción simplificada.",
+      "mode": "construir",
+      "mask": null,
+      "oracle": {
+        "key": "5/96",
+        "step": "5/24",
+        "aux": "7/12",
+        "ds": [
+          {
+            "kind": "aux",
+            "given": "7/12",
+            "correct": "7/12",
+            "truth": true,
+            "reason": "La raíz principal es no negativa: 7/12, porque al cuadrarla se obtiene 49/144."
+          },
+          {
+            "kind": "key",
+            "given": "5/24",
+            "correct": "5/96",
+            "truth": false,
+            "reason": "Se omitió dividir por el último número. El resultado correcto es 5/96."
+          },
+          {
+            "kind": "step",
+            "given": "23/24",
+            "correct": "5/24",
+            "truth": false,
+            "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 5/24."
+          }
+        ]
+      },
+      "signals": [],
+      "semantic_status": "REVIEW",
+      "revision": "R23",
+      "source_ci": 45871258410,
+      "source_job": 140086958177,
+      "source_sha": "08a418e3424aa5ea84b2120eed1e774cac78f503"
+    }
+  ]
+}
