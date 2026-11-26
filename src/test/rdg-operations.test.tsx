@@ -39,7 +39,7 @@ it("does not publish a false review for a different subtopic",async()=>{
 it("independent arithmetic oracle covers all activity and transfer keys, rejects mutated keys",()=>{
  // Independent direct evaluation, not the explanation or selected index. Fractions use integer numerators and common denominators.
  const format=(n:number,d:number)=>{const gcd=(a:number,b:number):number=>b?gcd(b,a%b):Math.abs(a);const g=gcd(n,d);return d/g===1?String(n/g).replace("-","−"):(String(n/g)+"/"+String(d/g)).replace("-","−");};
- const independent:Record<string,string>={A13:String(20-(7-2*(6-1))),T12:String(25-(11-3*5)),A11:String(8-(-3)-2),A12:format(-4*3+2,1),T10:format(-7-(-5),1),T11:format(6*(-3)+4,1),A1:format(-4+6-3,1),A2:[11-3*2,(11-3)*2].join(" y "),A3:String(42/7*3-5),A4:String((31-3+29)*(11+2)),A5:format(7*(12-5)-7*12,1),A6:format(Math.sqrt(9)+2-6,7),T1:String(Array(6).fill(14).reduce((a,b)=>a+b,0)-Array(3).fill(8).reduce((a,b)=>a+b,0)),T2:String((37-4+19)*(11+1)),T3:format(11*(23-8)-11*23,1),T4:format(Math.sqrt(16)-5+3,9),T5:String(14-Math.sqrt(36)+3*5-24/8),A7:String((76+8)/7),A8:String(6*(15+3)-6*(15-4)),A9:format(14-3,22*4),A10:String(11*16+7-(11*13+30)),T6:String((113+17)/5),T7:String(8*(19+2)-8*(19-6)),T8:format(16-5,26*3),T9:format(17*11+3-(17*9+40),1)};
+ const independent:Record<string,string>={A14:String(12*7-12*2+3*7-3*2),A15:String(6*(5-2)-5*(6-3)),A16:String((6*(8+8)-6*8)/3),T13:String(8*6-8+2*6-2),T14:String(9*(4-2)-4*(9-5)),T15:String((5*(9+9)-5*9)/3),A13:String(20-(7-2*(6-1))),T12:String(25-(11-3*5)),A11:String(8-(-3)-2),A12:format(-4*3+2,1),T10:format(-7-(-5),1),T11:format(6*(-3)+4,1),A1:format(-4+6-3,1),A2:[11-3*2,(11-3)*2].join(" y "),A3:String(42/7*3-5),A4:String((31-3+29)*(11+2)),A5:format(7*(12-5)-7*12,1),A6:format(Math.sqrt(9)+2-6,7),T1:String(Array(6).fill(14).reduce((a,b)=>a+b,0)-Array(3).fill(8).reduce((a,b)=>a+b,0)),T2:String((37-4+19)*(11+1)),T3:format(11*(23-8)-11*23,1),T4:format(Math.sqrt(16)-5+3,9),T5:String(14-Math.sqrt(36)+3*5-24/8),A7:String((76+8)/7),A8:String(6*(15+3)-6*(15-4)),A9:format(14-3,22*4),A10:String(11*16+7-(11*13+30)),T6:String((113+17)/5),T7:String(8*(19+2)-8*(19-6)),T8:format(16-5,26*3),T9:format(17*11+3-(17*9+40),1)};
  const tasks=[...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer];expect(Object.keys(independent)).toHaveLength(tasks.length);
  for(const t of tasks){expect(independent[t.id]).toBe(t.answer);expect(new Set(t.options).size).toBe(4);expect(t.options.filter(x=>x===independent[t.id])).toHaveLength(1);for(const wrong of t.options.filter(x=>x!==t.answer)){expect(wrong).not.toBe(independent[t.id]);expect(t.errors[wrong]).toBeTruthy();}}
 });
@@ -98,8 +98,8 @@ it("R02: summary explicitly explains real-domain counterexamples",async()=>{
 });
 
 it("R4 candidate: progressive bridges, independent transfer and preserved R3 tasks",async()=>{
- const added=OPERATIONS_ROUTE.lessons.filter(t=>t.bridge);expect(added).toHaveLength(7);expect(added.every(t=>t.bridge?.length===3)).toBe(true);
- const transfer=OPERATIONS_ROUTE.transfer;expect(transfer).toHaveLength(12);expect(transfer.every(t=>!t.bridge&&!t.hint)).toBe(true);
+ const added=OPERATIONS_ROUTE.lessons.filter(t=>t.bridge);expect(added).toHaveLength(10);expect(added.every(t=>t.bridge?.length===3)).toBe(true);
+ const transfer=OPERATIONS_ROUTE.transfer;expect(transfer).toHaveLength(15);expect(transfer.every(t=>!t.bridge&&!t.hint)).toBe(true);
  const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
  const norm=(s:string)=>s.normalize("NFKC").replace(/\s/g,"").replace(/[−–]/g,"-").toLowerCase();
  for(const task of [...added,...transfer.slice(5)])expect(bank.some(x=>norm(x.prompt)===norm(task.prompt))).toBe(false);

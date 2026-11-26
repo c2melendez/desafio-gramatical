@@ -88,14 +88,16 @@
         "Raíz cuadrada principal: √(a/b)=√a/√b para a≥0, b>0 y raíces exactas; equivalencia de fracciones y denominador común positivo. Enseñar aquí el mínimo indispensable y profundizar en sus subtemas propios.",
         "Contraejemplos de dominio real: 0÷9=0; 9÷0 no está definido. √0=0; √(-9) no tiene valor real; la raíz principal de 9 es 3, no ±3.",
         "Restar un número negativo equivale a sumar su opuesto; el producto de un negativo por un positivo es negativo.",
-        "Un signo menos delante de un grupo indica restar el valor completo del grupo, que puede ser negativo."
+        "Un signo menos delante de un grupo indica restar el valor completo del grupo, que puede ser negativo.",
+        "La distributividad permite extraer un factor común en dos grupos, cancelar productos cruzados y aislar un factor faltante con la operación inversa."
       ],
       "bridges": [
         "De desplazamientos y cantidades al símbolo; luego árbol de expresión con subexpresiones y operación raíz.",
         "Comparar árbol de expresión (muestra dependencia) con recta numérica (muestra signo): usar secuencialmente, no superponer; descartar glosario y arrastre obligatorio.",
         "R4 candidato C09: reconstruir cantidades por operaciones inversas; representar igualdad como dos valores equilibrados; convertir y dividir racionales; comparar costos completos con diferencia orientada.",
         "Usar operaciones inversas para interpretar la resta de un negativo; representar la multiplicación negativa como suma repetida.",
-        "Evaluar agrupación interna, producto y grupo exterior antes de aplicar la resta; enlazar con el opuesto."
+        "Evaluar agrupación interna, producto y grupo exterior antes de aplicar la resta; enlazar con el opuesto.",
+        "Agrupar productos con signos, distribuir la resta exterior y comprobar una igualdad después de simplificar."
       ],
       "common_errors": [
         "Multiplicar antes de dividir por regla mnemónica mal interpretada; remediar con dos operaciones del mismo rango.",
@@ -104,7 +106,8 @@
         "Modificar el resultado en vez de los operandos; distinguir condición original y nueva.",
         "Interpretar √9 como ±3, sumar denominadores o aplicar la raíz fuera de su alcance; remediar con cuadrado inverso, unidades fraccionarias y límites del radical.",
         "Confundir restar un negativo con restar su magnitud; omitir el signo del producto o cambiar la prioridad.",
-        "Aplicar el signo exterior a solo parte del grupo o detenerse en el valor del corchete."
+        "Aplicar el signo exterior a solo parte del grupo o detenerse en el valor del corchete.",
+        "Omitir un grupo, cambiar mal el signo de un término o tomar el valor completo del lado como factor faltante."
       ],
       "activities": [
         {
@@ -288,6 +291,48 @@
           "feedback": "Restaste 7 y también 10: el signo de resta exterior afecta al grupo completo. Omitiste el producto dentro del grupo: 20 − 7 = 13. Calculaste el grupo, pero falta restarlo de 20.",
           "help": "Evalúa el paréntesis, el producto y el corchete antes de aplicar la resta exterior.",
           "acceptance": "Respuesta 23; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A14",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de agrupación y equivalencia",
+          "prompt": "Simplifica 12 × 7 − 12 × 2 + 3 × 7 − 3 × 2.",
+          "expected_reasoning": "Agrupa 12 × (7 − 2) + 3 × (7 − 2). El factor común es (7 − 2); queda (12 + 3) × 5 = 75.",
+          "feedback": "Conservaste solo el primer grupo: 12 × (7 − 2) = 60. Sumaste los términos que debían restarse: 12 × 7 + 12 × 2 + 3 × 7 + 3 × 2 = 135. Omitiste restar 3 × 2: 84 − 24 + 21 = 81.",
+          "help": "Agrupa los dos primeros productos y luego los dos últimos; busca el mismo paréntesis.",
+          "acceptance": "Respuesta 75; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A15",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de agrupación y equivalencia",
+          "prompt": "Simplifica 6 × (5 − 2) − 5 × (6 − 3).",
+          "expected_reasoning": "Distribuye el signo exterior: 6 × 5 − 6 × 2 − 5 × 6 + 5 × 3. Los productos 6 × 5 y −5 × 6 se cancelan; −12 + 15 = 3.",
+          "feedback": "Sumaste los dos productos completos: 18 + 15 = 33, pero el segundo se resta. Distribuiste el menos sin cambiar el signo del último término: 30 − 12 − 30 − 15 = −27. Calculaste solo el primer producto y omitiste restar el segundo.",
+          "help": "Distribuye ambos grupos y aplica el signo menos a cada término del segundo.",
+          "acceptance": "Respuesta 3; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A16",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de agrupación y equivalencia",
+          "prompt": "Completa 6 × (8 + 8) − 6 × 8 = 3 × □. ¿Qué número sustituye el cuadro?",
+          "expected_reasoning": "El lado izquierdo se simplifica a 6 × 8 = 48. Como 3 × □ = 48, el número es 48 ÷ 3 = 16. Verifica 3 × 16 = 48.",
+          "feedback": "Hallaste el valor del lado izquierdo, pero falta dividirlo entre 3. Omitiste la resta del producto: 6 × (8 + 8) ÷ 3 = 32. Simplificaste solo los términos dentro del paréntesis y omitiste los factores exteriores.",
+          "help": "Primero simplifica el lado izquierdo y después deshaz la multiplicación por 3.",
+          "acceptance": "Respuesta 16; cuatro alternativas distintas y navegación por teclado."
         }
       ],
       "worked_examples": [
@@ -396,6 +441,30 @@
             "OP-01",
             "OP-02"
           ]
+        },
+        {
+          "prompt": "Calcula 8 × 6 − 8 × 1 + 2 × 6 − 2 × 1. Opciones: 50, 40, 70, 52",
+          "solution": "Agrupa: (8 + 2) × (6 − 1) = 10 × 5 = 50.",
+          "oracle": "Calcular independientemente los productos visibles y verificar la equivalencia.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula 9 × (4 − 2) − 4 × (9 − 5). Opciones: 2, 34, −38, 18",
+          "solution": "9 × 2 − 4 × 4 = 18 − 16 = 2. Al distribuir, 9 × 4 y −4 × 9 se cancelan.",
+          "oracle": "Calcular independientemente los productos visibles y verificar la equivalencia.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Completa 5 × (9 + 9) − 5 × 9 = 3 × □. Opciones: 15, 45, 30, 9",
+          "solution": "El lado izquierdo vale 5 × 9 = 45. Entonces □ = 45 ÷ 3 = 15.",
+          "oracle": "Calcular independientemente los productos visibles y verificar la equivalencia.",
+          "objective_ids": [
+            "OP-03"
+          ]
         }
       ],
       "games": [
@@ -485,7 +554,8 @@
         "P1: verificar raíz principal, signos, racionales y precedencia integrada. P2: comprobar cobertura de OP-04 en banco completo y documentar déficit antes de sustituir o complementar.",
         "R4: verificar 4 puentes y 4 transferencias añadidas, interacción progresiva, oráculo exacto, ausencia de coincidencia literal con el banco y conservación de R3 como evidencia histórica.",
         "Comprobar dos puentes de signos y dos transferencias nuevas, con oráculo independiente y contraste con los IDs afectados.",
-        "Comprobar el puente de resta anidada y la transferencia contextual, con cálculo independiente y contraste con IDs reales."
+        "Comprobar el puente de resta anidada y la transferencia contextual, con cálculo independiente y contraste con IDs reales.",
+        "Comprobar los tres puentes de factorización y sus transferencias, con oráculos independientes y contraste contra las familias de los juegos."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",

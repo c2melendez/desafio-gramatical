@@ -88,7 +88,7 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG 360px sin desborde');
    await page.setViewportSize(viewport);
    // R4: each added bridge must be operable on real browsers, not merely data.
-   for(const [title,answer] of [['Deshacer cambios antes de repartir','12'],['Completar una igualdad','42'],['Dividir una diferencia racional','1/8'],['Comparar costos completos','10'],['Restar un número negativo','9'],['Producto negativo y suma','−10'],['Restar un grupo negativo','23']]){
+   for(const [title,answer] of [['Deshacer cambios antes de repartir','12'],['Completar una igualdad','42'],['Dividir una diferencia racional','1/8'],['Comparar costos completos','10'],['Restar un número negativo','9'],['Producto negativo y suma','−10'],['Restar un grupo negativo','23'],['Factor común en dos grupos','75'],['Cancelar productos cruzados','3'],['Hallar el factor faltante','16']]){
     await page.getByRole('button',{name:'Siguiente',exact:true}).click();
     check(await page.getByRole('heading',{name:title,exact:true}).isVisible(),'RDG R4 '+title);
     const bridge=page.getByRole('region',{name:'Organizador de razonamiento'});
@@ -111,6 +111,11 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    await page.getByRole('button',{name:'Siguiente',exact:true}).click();
    check(await page.getByRole('heading',{name:'Cargo con reintegros',exact:true}).isVisible(),'RDG transferencia resta anidada');
    check(await page.getByRole('button',{name:/pista/i}).count()===0,'RDG resta anidada sin ayuda');
+   for(const title of ['Agrupar cuatro productos','Dos productos cruzados','Equilibrar el producto']){
+    await page.getByRole('button',{name:'Siguiente',exact:true}).click();
+    check(await page.getByRole('heading',{name:title,exact:true}).isVisible(),'RDG transferencia '+title);
+    check(await page.getByRole('region',{name:'Organizador de razonamiento'}).count()===0,'RDG transferencia sin organizador '+title);
+   }
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG sin desborde horizontal');
    await page.screenshot({path:'m4-browser-evidence/rdg-'+engineName+'-'+profile+'.png',fullPage:true,animations:'disabled'});
    await page.reload({waitUntil:'load'}); await page.getByRole('heading',{name:'Modo Repaso: Operaciones'}).waitFor({state:'visible'});
