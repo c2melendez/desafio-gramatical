@@ -70,5 +70,7 @@ export function r21Mask(id:string):readonly boolean[]|undefined{
  const n=masks[id];return n===undefined?undefined:[Boolean(n&4),Boolean(n&2),Boolean(n&1)];
 }
 export function repairOperationClassificationR21Candidate(item:MathModel):MathModel{
- const mask=r21Mask(item.id);return mask?buildOperationClassificationR20(item,mask):item;
+ const mask=r21Mask(item.id);if(!mask)return item;
+ const revised=buildOperationClassificationR20(item,mask);
+ return {...revised,modeOperation:"evaluar-tres-decisiones-operaciones-r21"};
 }
