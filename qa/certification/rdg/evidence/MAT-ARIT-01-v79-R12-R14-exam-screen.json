@@ -1,0 +1,713 @@
+{
+  "scope": "MAT-ARIT-01",
+  "source_repository": "c2melendez/academia-paa-phuma",
+  "source_sha": "5baf93053faef098a73e6c47fb854c1ace2ccf6d",
+  "questionBank_blob": "0fa5ef568a8ddb3c1ded058cbba6c3493b9a2240",
+  "modules": [
+    {
+      "path": "data/mathEngine.js",
+      "blob": "6cde547793334bc0fc6b5e50172bf6266d8cd029"
+    },
+    {
+      "path": "data/spanishEditorialBank.js",
+      "blob": "b132fb9d44d9ff5a59e45135b1dce6c6d32ead1c"
+    },
+    {
+      "path": "data/disciplinaryBank.js",
+      "blob": "174d75c15d31c5e24958ba22a1724b2b8c47242f"
+    },
+    {
+      "path": "data/spanishExplanations.js",
+      "blob": "78d84d9a0681ab140f9453fb45bd566280779900"
+    },
+    {
+      "path": "data/visualBank.js",
+      "blob": "0f4b1c711e9d25b943eba626554eb6e217634465"
+    },
+    {
+      "path": "data/readingBank.js",
+      "blob": "94981c7c92a873c21d618bb575828c65b21b6203"
+    },
+    {
+      "path": "data/precisionBank.js",
+      "blob": "ac982223f6a6dbf67fbf3baa24c4c0f37227473f"
+    },
+    {
+      "path": "data/advancedVisualBank.js",
+      "blob": "630c428f2fa9b70982f33de0ab35bba925adbc82"
+    },
+    {
+      "path": "data/enrichmentBank.js",
+      "blob": "ad60e760f6c21cbde22bf632584484a6114efadd"
+    },
+    {
+      "path": "data/foundationBank.js",
+      "blob": "33d07fb9bc0cac0a1f37ec2624bf65458a53932a"
+    },
+    {
+      "path": "data/gapClosureBank.js",
+      "blob": "567a5789dcf049d7091854dde8be3fb1c956686c"
+    },
+    {
+      "path": "data/curated.js",
+      "blob": "c0164bab87c46689122ee5a8b6b8dc9b26da06d4"
+    },
+    {
+      "path": "src/catalog.js",
+      "blob": "6fa93116f47913bc180d373f69cfe9de49f3dcb0"
+    }
+  ],
+  "method": "Pinned executable 989-question BANK; compare normalized complete prompt and extracted arithmetic expression across 415 mathematics records. Contextual structural equivalence and universal semantic originality not proven.",
+  "summary": {
+    "bank": 989,
+    "math": 415,
+    "checked": 92,
+    "signals": 0
+  },
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-0",
+      "hash": "4288350a675a379f34c22e58959f862f6b8b31e0aaf8e426d704b676473a1afd",
+      "signature": "resta-de-entero-negativo|23|7|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-1",
+      "hash": "b393722dc4283355e7ea821e136ee1049534dd86d503e71d8df093890dbbf61e",
+      "signature": "resta-de-entero-negativo|24|8|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-2",
+      "hash": "f8bd48c54a9b80fa684d9e3bbb91752cee40e636b50bad4534b54391d0dd26f0",
+      "signature": "resta-de-entero-negativo|25|9|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-3",
+      "hash": "7c120086f92ff5be232513457f96b57a2ad934269409b0de5ddba2d3649e1a3e",
+      "signature": "cociente-con-agrupacion|54|3|6",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-4",
+      "hash": "0e677a1206801dffef07fe97117eecfb0b864c44b9ec9e26f0c3f87f6fc40924",
+      "signature": "cociente-con-agrupacion|80|4|6",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-5",
+      "hash": "69e082ec2dd7475a50d92f853d70419efa0893cc2de617e14254593df496e4ed",
+      "signature": "cociente-con-agrupacion|110|5|6",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-0",
+      "hash": "77ba7368f4816e535ca2b083e90b2c04ce5a757ca883a522dd84a5fafd46cbb0",
+      "signature": "resta-de-entero-negativo|53|7|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-1",
+      "hash": "84b922ada1fcd5ed321986ce17a490048975e3d994500561dd72a0a17f1d1e80",
+      "signature": "resta-de-entero-negativo|54|8|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-2",
+      "hash": "1cc3f656e65fa2fbc3f37b95875043b9823b81fc19b75dc45b125b5f7fc1ac73",
+      "signature": "resta-de-entero-negativo|55|9|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-3",
+      "hash": "102ce9bc7601e05e67555d4515638575e9c191df6963ad67a4972b86d0df3b07",
+      "signature": "cociente-con-agrupacion|132|3|8",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-4",
+      "hash": "376600cf488a1dceed52a7970705a109393d45abb047b4119244aedcc90f53af",
+      "signature": "cociente-con-agrupacion|192|4|8",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-5",
+      "hash": "d3b907963a64eeb4c3e6a87d64dde39999655b17ab09b388a446357a77a842de",
+      "signature": "cociente-con-agrupacion|260|5|8",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-0",
+      "hash": "439b650b1ac36e0d4f28919527df5b506b37514efb5a9da20a4844ed504eb848",
+      "signature": "presupuesto-dos-compras|150|8|5|13",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-1",
+      "hash": "825301667c51a7936aa6cf72a3a075f52f9cb4a400cb663adb740f53768ecce3",
+      "signature": "presupuesto-dos-compras|161|9|5|16",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-2",
+      "hash": "b2982e66275b8c9f919824e3c280a8a706ceac3d5226aacd7f5ac5e1b9dcfd48",
+      "signature": "presupuesto-dos-compras|172|10|5|19",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-3",
+      "hash": "416d634e4bc33da897cb3b4fbff29ee79c3adb6ca24b342259422a81fff7a28a",
+      "signature": "reconstruir-inventario-inicial|90|6|3|11",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-4",
+      "hash": "336590e52c7d45522fcb7a813f80510f2a28c831a4b77c8cfefa2bdc04a6219a",
+      "signature": "reconstruir-inventario-inicial|97|7|3|13",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-5",
+      "hash": "f7173c80a71b3ec5f8e453f55cefe4ffb9a2702424a671471fa9e10a8845ebc1",
+      "signature": "reconstruir-inventario-inicial|104|8|3|15",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-0",
+      "hash": "2c3c62f27d54c13079e71aa91e9b91c332f76d3ace46da488efe35f9a3acbcd1",
+      "signature": "presupuesto-dos-compras|310|8|7|13",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-1",
+      "hash": "521594365440ac99801b87968d9b396060567cf026c3920c6199427eea162971",
+      "signature": "presupuesto-dos-compras|321|9|7|16",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-2",
+      "hash": "44663dec9b565508ceab79ea2bcbbeee3e9ccee29ee322f478381f1da481a31c",
+      "signature": "presupuesto-dos-compras|332|10|7|19",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-3",
+      "hash": "63fbdb029419183d70989de4884e6427fcaf630151b2c423384d9b2b1fdb32c4",
+      "signature": "reconstruir-inventario-inicial|180|6|5|11",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-4",
+      "hash": "4ac80ee205f94ae6b3233830e8fcb274b9a098959eb4bee06d9db1e6f046a375",
+      "signature": "reconstruir-inventario-inicial|187|7|5|13",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-5",
+      "hash": "38f275bcc6a69014cbb4580efbf1141c081b45eca4fde0d370b807203d987794",
+      "signature": "reconstruir-inventario-inicial|194|8|5|15",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+      "hash": "4aeb35d06bc914c8c34bb25d3b8501edbdda4ce892ac039c07266b782326872a",
+      "signature": "factor-comun-diferencia-compuesta|31|4|31|7|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+      "hash": "9436c43c5ca52a01c2b1320c8862fac01025aaa0c660c74e2fa5c3bde5eeb287",
+      "signature": "factor-comun-diferencia-compuesta|36|5|36|8|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+      "hash": "00ecc4dfe58c868452e093cf25deaf68edf64487ad46a2d102fea044d54be5d3",
+      "signature": "factor-comun-diferencia-compuesta|41|6|41|9|6",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+      "hash": "b16aca894bebb8e0016c4a54defde60538cc4b92377d4943d827a901394059ee",
+      "signature": "resta-anidada-distributiva|40|17|3|12|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+      "hash": "340303855000b1fba75d518ed667c23fee6b0676e0210751725efb0d44fc6152",
+      "signature": "resta-anidada-distributiva|45|18|3|13|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+      "hash": "d8234d34bfe8573f2b39dfe47c44f8c4cb498d54769bfa79eeafa0ad56716f2c",
+      "signature": "resta-anidada-distributiva|50|19|3|14|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "hash": "2424a69545ad388cb602301a4772acbba067d62975bb2f72763a59871077c73a",
+      "signature": "factor-comun-diferencia-compuesta|65|6|65|7|6",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "hash": "55b6a363d97d3231894f1eb7f4471f44866bda1a0b732af891879987394d1f63",
+      "signature": "factor-comun-diferencia-compuesta|70|7|70|8|7",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+      "hash": "c71f9afe39de25f3822fe8aa6135f1cac77163e984e91ba9155652d674779473",
+      "signature": "factor-comun-diferencia-compuesta|75|8|75|9|8",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+      "hash": "b04365545109328c34df75e7b79b6b33f6db7b29b292e7e8363a7a72d946ca22",
+      "signature": "resta-anidada-distributiva|74|17|5|14|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+      "hash": "dc36bb0df6e71159982789f6541d45a13477467861f44cb88f1b678c8e3d60f1",
+      "signature": "resta-anidada-distributiva|79|18|5|15|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+      "hash": "ac3553665ecf646b901fd7634552e64d2d113cb07099f31dd1a8a775e1b384c6",
+      "signature": "resta-anidada-distributiva|84|19|5|16|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-6",
+      "hash": "1453df7015f4715f506621284932884425e3f280a3d96aebd9320024403b4afa",
+      "signature": "producto-negativo-y-suma|4|3|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-7",
+      "hash": "73e0d00bf360a6472c8c8702f1a1a139a69b134553f356106a2294ae82b834ee",
+      "signature": "producto-negativo-y-suma|5|4|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-8",
+      "hash": "c1e71ce61c04c1b1579e840e70a284d840fa92b3a10d732f5ac328d0e4cf0c37",
+      "signature": "cero-dividido-por-no-cero|15|15|3|7",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "hash": "f48ec3d5415cf304f6a3ea6ff71a872fcf2346e9f832daa0cb32de8d8c4a2b20",
+      "signature": "cero-dividido-por-no-cero|18|18|3|8",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-6",
+      "hash": "cb813bf78081b16cf38f0a0e0606255e95c4be6ba94f04121ddd4a500ac47430",
+      "signature": "producto-negativo-y-suma|10|3|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-7",
+      "hash": "9da68b1f040d147c93ad9098aa5c513526b6c31b6b127557a30d9638203d4dd8",
+      "signature": "producto-negativo-y-suma|11|4|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "hash": "07e5a8971e05f4831083520e9d7f36b6ccb4bb77f312a9c98305d71210a4fff1",
+      "signature": "cero-dividido-por-no-cero|45|45|5|9",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-9",
+      "hash": "1309c88a789fb248b02c468d6f0721b8a1346f5393bbdc378b37dc3fd398f1b9",
+      "signature": "cero-dividido-por-no-cero|50|50|5|10",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-6",
+      "hash": "0999ca72065e823d4538303d7388e1c740f71189587b5168a353935c629a109b",
+      "signature": "comparar-cambios-compensados|12|7|5|3|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-7",
+      "hash": "dd2d528b223dd33c7267f68186e0c2c1dc6b37ee5eb7c391719362494d795278",
+      "signature": "comparar-cambios-compensados|13|8|5|4|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-8",
+      "hash": "137b98b3baae8b2eaeb0c38faab2da0545a13e14a93a29a28e65b56853f52bec",
+      "signature": "comparar-cambios-compensados|14|9|5|5|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-9",
+      "hash": "a37eede2fbe48fb77402d0904a54e156d557ec92b914dfbc451061d1128e08ad",
+      "signature": "reconstruir-cantidad-por-grupo|4|5|47",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-10",
+      "hash": "eb54d0e57dc00f02dffae02e8dd92f6b0c315f47ff452204ad0d254d2f8c22f4",
+      "signature": "reconstruir-cantidad-por-grupo|5|6|64",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-11",
+      "hash": "88de2dcfb09fbfd774abb0070640ab3bed29b0c4423f47767f6c4f615761a957",
+      "signature": "reconstruir-cantidad-por-grupo|6|7|83",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-6",
+      "hash": "c9186c6a38e7635523ea4d962fc207bd91ef7caaa3da3efa5f4222babdb800d0",
+      "signature": "comparar-cambios-compensados|26|7|7|3|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-7",
+      "hash": "cb00127ee06548beef37b8c5b6918a4498740f7cbc5c9718ff88e52cdacb31d8",
+      "signature": "comparar-cambios-compensados|27|8|7|4|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-8",
+      "hash": "4b8f080cfe5f799cdc462125978c31416279436021730f15e5f45ca9621f7746",
+      "signature": "comparar-cambios-compensados|28|9|7|5|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-9",
+      "hash": "19c7952608b66348e980dc8055bbb39ad093008c1b6eab8092a3ddc008644d54",
+      "signature": "reconstruir-cantidad-por-grupo|6|5|109",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-10",
+      "hash": "140671aa82bc1d407936e58bf7915510dac23c7b79d2204fec3b6f9f473cf4dd",
+      "signature": "reconstruir-cantidad-por-grupo|7|6|134",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-11",
+      "hash": "d817ad767b9d625334c7e5cc69af59690d1269b163d368f9370d752280390e02",
+      "signature": "reconstruir-cantidad-por-grupo|8|7|161",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-6",
+      "hash": "e2b635568cbd428a216aa382ec28d6e32fbda87ede73e36906bf9415b4447e66",
+      "signature": "cancelacion-cruzada-de-productos|17|6|3|6|17|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-7",
+      "hash": "1d890ac0f8df75903dfcf06ab07d3b9b495218772c7f50b9c976cd26f67291f8",
+      "signature": "cancelacion-cruzada-de-productos|18|7|4|7|18|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-8",
+      "hash": "587dbeccd36e6abbd337d809192280440e424fd3a1b3608cc66604ea91e5dcb8",
+      "signature": "cancelacion-cruzada-de-productos|19|8|5|8|19|6",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+      "hash": "0eef44c9eb3413f8391d229c5933a219180d45a67e3e9a0af12d7c6967a515d4",
+      "signature": "dos-raices-en-producto-agrupado|49|2|5|16|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+      "hash": "8304eb14f4037791a25c24b5e00eddea805bb92013683198ddb7d5824cdb81a1",
+      "signature": "dos-raices-en-producto-agrupado|64|3|5|25|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+      "hash": "8938c0796cf9d5fe38e780c99692b566020e316b9c3c561cf9c4e2480794810e",
+      "signature": "dos-raices-en-producto-agrupado|81|4|5|36|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-6",
+      "hash": "d052cc246ef1b31c048b46514a95ef522f661e061169ebd47ba1471efa58b408",
+      "signature": "cancelacion-cruzada-de-productos|31|8|3|8|31|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-7",
+      "hash": "b83a12cf5cb0bff528e4089d8af142ca40c84726664b05954b68f0b57c8d3653",
+      "signature": "cancelacion-cruzada-de-productos|32|9|4|9|32|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-8",
+      "hash": "a2e1387889b59d75844b47e5b0bc8c31507089df7a93b19c100da6c97af2f2e8",
+      "signature": "cancelacion-cruzada-de-productos|33|10|5|10|33|6",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "hash": "d5faf5c1edf0bcc107fed782c5693a3fe27d2872e84914443490e0eda236378d",
+      "signature": "dos-raices-en-producto-agrupado|169|2|7|36|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "hash": "75a821c39ef0624b6147ca6eb8646b99661d5b822ad1997712b91c8529a9f665",
+      "signature": "dos-raices-en-producto-agrupado|196|3|7|49|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+      "hash": "8a9b2928068881356dea06662ab371277c04a680352bd74335d5a0d81cc74bde",
+      "signature": "dos-raices-en-producto-agrupado|225|4|7|64|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-12",
+      "hash": "e4cc1120dceb76eb7f3baf2aa16fcf9d7ebaaa9bba8b1dc23c04c6afebbbdf49",
+      "signature": "completar-igualdad-distributiva|8|13|4|8|13|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-13",
+      "hash": "9cdb2f4f5487ebce2afc64e5f34be8ea09dca6efa24a91133d68d5c7a0e94617",
+      "signature": "completar-igualdad-distributiva|9|14|5|9|14|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-14",
+      "hash": "16516116fd9088fc6c49b4571ca6162f81ce4012adc3f21dde005d65adf4e6f6",
+      "signature": "completar-igualdad-distributiva|10|15|6|10|15|2",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-15",
+      "hash": "80d4cdfdcebed4b69b18fd8a4c162cc29939051a9e2b8586ba147aa13cd28709",
+      "signature": "factor-desconocido-tras-cancelar|9|16|12|9|16|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-16",
+      "hash": "fdc5ace7959c674b355fd86c8f8d8932cae4df673c250602ebfdfa07cee3e6de",
+      "signature": "factor-desconocido-tras-cancelar|10|17|15|10|17|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-17",
+      "hash": "2459179cea418106ee6ab78cdd0fe105edcd43bc9b1233d418478dbf6924b012",
+      "signature": "factor-desconocido-tras-cancelar|11|18|18|11|18|3",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-18",
+      "hash": "6836be4539301174614f02144d8ccd6885c10c006e4e11851fe311428b68374e",
+      "signature": "raiz-racional-resta-agrupada|9|289|7|17|3|34",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-19",
+      "hash": "7e3711d25248e9d9a43067bce1db6e54f7b9f665e6ff3774c22fc6ed12083335",
+      "signature": "raiz-racional-resta-agrupada|16|324|8|18|4|36",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-20",
+      "hash": "abccfef70e3bf93564093e2ff767a456c00a1b16e301004e489f6e3c0887dd2e",
+      "signature": "raiz-racional-resta-agrupada|25|361|9|19|5|38",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-21",
+      "hash": "d5eb81990a720fd78e877e3a4e9c0f3be9c292b5130b250fa1e06e8b8b97d3ef",
+      "signature": "distribuir-sobre-raiz-racional|2|16|361|11|38|5|19",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-22",
+      "hash": "3439b99ec7fa377b1ea8be3a46283a143b381effad9e053275a74fa299330e89",
+      "signature": "distribuir-sobre-raiz-racional|2|25|400|13|40|6|20",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-23",
+      "hash": "da14374061fb5692998997edf72a13885bfc3132cdb854ec8107c77d5e5e7505",
+      "signature": "distribuir-sobre-raiz-racional|2|36|441|15|42|7|21",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-12",
+      "hash": "46e3a49690e7d38d1ba9be3cf7f07bef1c963629fa98afe1f056afe57b45e6e7",
+      "signature": "completar-igualdad-distributiva|14|13|4|14|13|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+      "hash": "29a31bf05db2fa42b8268d1c2fa7a6ac20a2315155bd15fe370746693a78d668",
+      "signature": "completar-igualdad-distributiva|15|14|5|15|14|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-14",
+      "hash": "feced0068d4dbc108a52124eb55759e241f820445a57eb1b7bba18fbbc02f237",
+      "signature": "completar-igualdad-distributiva|16|15|6|16|15|4",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-15",
+      "hash": "c302f51d8f63dfc3a35a4b99fa87fed2328a90da46fc2610413833817bd0a506",
+      "signature": "factor-desconocido-tras-cancelar|17|16|20|17|16|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-16",
+      "hash": "07884d536b31d8a5b0a1acb6aa97bbf4f664d09835b98105e2c065da122aa603",
+      "signature": "factor-desconocido-tras-cancelar|18|17|25|18|17|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-17",
+      "hash": "4d188b5a6a0c641f2bf253c7d773dc3040d48cf4448a77f02f40e7ebbee815ee",
+      "signature": "factor-desconocido-tras-cancelar|19|18|30|19|18|5",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-18",
+      "hash": "ddf3bbcaac36c651218e2684b362f462f39ece085056bf9f82df70f372fc9b1a",
+      "signature": "raiz-racional-resta-agrupada|9|729|7|27|3|54",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-19",
+      "hash": "2709643aabba440205654e0d8e1334d15940a582c74a430a607c7889a0ef2fda",
+      "signature": "raiz-racional-resta-agrupada|16|784|8|28|4|56",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-20",
+      "hash": "19ebeff3d12c200f03b99f82161ceab352eda1c9f8d3dd3e0de53db4e3fdb440",
+      "signature": "raiz-racional-resta-agrupada|25|841|9|29|5|58",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-21",
+      "hash": "01e9ca745fe6c536c05b325462f69b9764fd07938f91067b0a447a4d5faf223c",
+      "signature": "distribuir-sobre-raiz-racional|2|16|961|11|62|5|31",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-22",
+      "hash": "4ef734ab89d0c72bdcbd92b47d7fb8af5efbfa1563f4bd05a218f13ca1eba87b",
+      "signature": "distribuir-sobre-raiz-racional|2|25|1024|13|64|6|32",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-23",
+      "hash": "121933c1fa38d03ad6a749896f5a99982c0da2291f224ccb71359777e9fca2d6",
+      "signature": "distribuir-sobre-raiz-racional|2|36|1089|15|66|7|33",
+      "matches": [],
+      "status": "SCREEN_ONLY"
+    }
+  ]
+}
