@@ -102,6 +102,13 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    await page.setViewportSize({width:360,height:800});
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG R4 360px sin desborde');
    await page.setViewportSize(viewport);
+   await page.getByRole('button',{name:'Síntesis',exact:true}).click();
+   for(const title of ['Divisor agrupado','Saldo con dos compras','Cajas restantes y cambio por caja','Dos flujos independientes','Raíz, producto y resta','Diferencia con factor común','Raíz racional y diferencia agrupada','Factor y raíz racional','Productos distintos','Raíz, producto y cociente agrupado','Raíz y productos racionales']){
+    const summary=page.locator('summary').filter({hasText:title+': ver ejemplo resuelto'});
+    check(await summary.count()===1,'RDG síntesis '+title);
+    await summary.click();
+    check(await summary.locator('..').locator('p').isVisible(),'RDG síntesis desplegable '+title);
+   }
    await page.getByRole('button',{name:'Transferencia',exact:true}).click();
    check(await page.getByRole('button',{name:/pista/i}).count()===0,'RDG transferencia sin ayuda');
    for(let i=0;i<9;i++)await page.getByRole('button',{name:'Siguiente',exact:true}).click();

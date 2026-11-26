@@ -1,0 +1,612 @@
+{
+  "status": "REVIEW",
+  "scope": "MAT-ARIT-01",
+  "plan_sha256": "0a18b1774a0a5c2cc552e5afb3aac81b9a6402357b34ba1e08722c3862b4f38b",
+  "route_data_sha256": "a15a495f16f89cb7a67a01f28e2832cc1949338d6fb7b5b87bbca3178f6487a5",
+  "families": 34,
+  "game_ids": 450,
+  "semantic_pass": 0,
+  "grouped": {
+    "EJEMPLO_GUIADO_DIRECTO": {
+      "families": 23,
+      "ids": 351
+    },
+    "EJEMPLO_RESUELTO_EN_SINTESIS": {
+      "families": 11,
+      "ids": 99
+    }
+  },
+  "rows": [
+    {
+      "family": "prioridad-de-operaciones",
+      "count": 33,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A2 y A3 modelan la prioridad y la igualdad de rango.",
+      "summary_example": null,
+      "task_ids": [
+        "A2",
+        "A3",
+        "T5"
+      ],
+      "game_example": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
+        "prompt": "Resuelve (5+11)×8. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "resta-de-entero-negativo",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A11 muestra el opuesto y T10 aplica la resta orientada.",
+      "summary_example": null,
+      "task_ids": [
+        "A11",
+        "T10"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-principiante-0",
+        "prompt": "Calcula 38 − (−7) − 4. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "cociente-con-agrupacion",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A2 enseña agrupación y A3 división; T16 pide la combinación sin ejemplo guiado equivalente. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Divisor agrupado",
+      "task_ids": [
+        "A2",
+        "A3",
+        "T16"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-principiante-3",
+        "prompt": "Calcula 90 ÷ (3 + 7). ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "producto-negativo-y-suma",
+      "count": 6,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A12 modela el signo del producto y su suma posterior.",
+      "summary_example": null,
+      "task_ids": [
+        "A12",
+        "T11"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-principiante-6",
+        "prompt": "Calcula −7 × 3 + 3. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "cero-dividido-por-no-cero",
+      "count": 6,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "La síntesis muestra 0 ÷ 9 y T17 combina el caso con una suma.",
+      "summary_example": null,
+      "task_ids": [
+        "A3",
+        "T17"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-principiante-8",
+        "prompt": "Calcula (28 − 28) ÷ 4 + 8. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "division-producto-izquierda-derecha",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A3 ordena división y producto de izquierda a derecha.",
+      "summary_example": null,
+      "task_ids": [
+        "A3",
+        "T5"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-principiante-0",
+        "prompt": "Calcula 72÷4×3−4. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "enteros-desplazamiento-signos",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A1 usa posición negativa y desplazamientos.",
+      "summary_example": null,
+      "task_ids": [
+        "A1",
+        "T10"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-principiante-3",
+        "prompt": "Un ascensor parte del nivel −24, sube 7 niveles y baja 2. ¿En qué nivel termina?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "precedencia-sin-parentesis",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A2 contrasta producto sin paréntesis y con paréntesis.",
+      "summary_example": null,
+      "task_ids": [
+        "A2",
+        "A3",
+        "T5"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-principiante-6",
+        "prompt": "Calcula 24+7×2. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "modificar-parentesis-y-factor",
+      "count": 51,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A4 modifica sumando y factor; T2 repite la decisión con otros datos.",
+      "summary_example": null,
+      "task_ids": [
+        "A4",
+        "T2"
+      ],
+      "game_example": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+        "prompt": "La expresión original es (16+12)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "presupuesto-dos-compras",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A10 calcula costos y A13 resta un grupo; falta ejemplo guiado de saldo con dos compras. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Saldo con dos compras",
+      "task_ids": [
+        "A10",
+        "T9"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-0",
+        "prompt": "Una persona tiene L 230. Compra 8 artículos a L 6 cada uno y otro artículo por L 13. ¿Cuánto dinero le queda, en lempiras?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "reconstruir-inventario-inicial",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A18 invierte entrada y retiro; T22 verifica el procedimiento.",
+      "summary_example": null,
+      "task_ids": [
+        "A7",
+        "A18",
+        "T22"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-3",
+        "prompt": "Un depósito termina con 135 unidades tras recibir 6 cajas de 4 unidades y retirar 11 unidades. ¿Cuántas unidades tenía antes de esos movimientos?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "comparar-cambios-compensados",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A17 compara valor nuevo con original; T21 conserva la orientación.",
+      "summary_example": null,
+      "task_ids": [
+        "A4",
+        "A17",
+        "T21"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-6",
+        "prompt": "Una expresión vale (19 + 7) × 6. Se aumenta el primer sumando en 3 y se reduce el factor en 2. ¿Cuál es la diferencia (valor nuevo menos valor original)?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "reconstruir-cantidad-por-grupo",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A7 invierte el retiro y divide por grupos.",
+      "summary_example": null,
+      "task_ids": [
+        "A7",
+        "T6"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-9",
+        "prompt": "Se vaciaron 5 cajas con igual cantidad de piezas. Después de retirar 5 piezas del total, quedan 75. ¿Cuántas piezas tenía cada caja?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A10 suma cada cargo fijo y compara costos completos.",
+      "summary_example": null,
+      "task_ids": [
+        "A10",
+        "T9"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+        "prompt": "Para comprar 10 cuadernos, la tienda A cobra L 15 por cuaderno más L 20 por el pedido; la B cobra L 18 por cuaderno más L 5 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A9 resuelve raíz, resta y división; T8 transfiere el procedimiento.",
+      "summary_example": null,
+      "task_ids": [
+        "A9",
+        "T8"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+        "prompt": "Calcula (√(25/81) − 6/18) ÷ 3. Expresa una fracción simplificada."
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "cambio-contextual-inventario",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A4 cambia operandos y T1 combina flujos; falta guía completa de retirar cajas y aumentar piezas por caja restante. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Cajas restantes y cambio por caja",
+      "task_ids": [
+        "A4",
+        "T1"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-0",
+        "prompt": "Una bodega tiene 18 cajas con 9 piezas cada una. Retira 3 cajas completas y agrega 2 piezas a cada caja restante. ¿Cuántas piezas quedan en total?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "inventario-flujos-independientes",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: T1 resuelve entradas y salidas como transferencia, sin puente guiado específico de dos flujos. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Dos flujos independientes",
+      "task_ids": [
+        "T1"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-3",
+        "prompt": "Entran 24 paquetes de 7 unidades y salen 2 paquetes de 4 unidades. ¿Cuál es el aumento neto de unidades?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "reparto-neto-exacto",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A19 calcula total, retiro y reparto; T23 aplica las tres etapas.",
+      "summary_example": null,
+      "task_ids": [
+        "A7",
+        "A19",
+        "T23"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-6",
+        "prompt": "Hay 24 cajas con 12 piezas cada una. Se retiran 2 grupos de 6 piezas y se reparte el resto entre 6 personas por igual. ¿Cuántas piezas recibe cada persona?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "raiz-producto-suma-resta",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A3 y A6 enseñan precedencia y raíz; T5 integra raíz, producto y cociente sin puente guiado idéntico. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Raíz, producto y resta",
+      "task_ids": [
+        "A6",
+        "T5"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-9",
+        "prompt": "Calcula √49 + 10 × 3 − 17. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "raiz-racionales-signos",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A6 obtiene la raíz y combina fracciones con signo.",
+      "summary_example": null,
+      "task_ids": [
+        "A6",
+        "T4"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
+        "prompt": "Calcula √(9/289) + 7/17 − 12/17."
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "distributiva-y-cancelacion",
+      "count": 93,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A5 distribuye y cancela un producto opuesto.",
+      "summary_example": null,
+      "task_ids": [
+        "A5",
+        "T3"
+      ],
+      "game_example": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+        "prompt": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+13)×4−10×4. ¿Cuál es su valor?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "factor-comun-diferencia-compuesta",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A5 y A14 enseñan distribución y factor; T18 plantea la diferencia sin puente guiado específico. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Diferencia con factor común",
+      "task_ids": [
+        "A5",
+        "A14",
+        "T18"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-0",
+        "prompt": "Simplifica 48 × 5 − (48 − 7) × 5. ¿Cuál es el valor?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "resta-anidada-distributiva",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A13 evalúa agrupaciones y resta el grupo completo.",
+      "summary_example": null,
+      "task_ids": [
+        "A13",
+        "T12"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-3",
+        "prompt": "Calcula 57 − [17 − 4 × (13 − 3)]. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "cancelacion-cruzada-de-productos",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A15 distribuye dos grupos y cancela productos cruzados.",
+      "summary_example": null,
+      "task_ids": [
+        "A15",
+        "T14"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-6",
+        "prompt": "Simplifica 24 × (7 − 3) − 7 × (24 − 4). ¿Cuál es el valor?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "dos-raices-en-producto-agrupado",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A20 calcula dos raíces, dos grupos, producto y resta final.",
+      "summary_example": null,
+      "task_ids": [
+        "A6",
+        "A20",
+        "T24"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-9",
+        "prompt": "Calcula (√100 − 2) × (6 + √25) − 3. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "completar-igualdad-distributiva",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A8 compara ambos lados y recupera el término faltante.",
+      "summary_example": null,
+      "task_ids": [
+        "A8",
+        "T7"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-12",
+        "prompt": "Completa la igualdad 11 × (13 − 4) + □ = 11 × (13 + 3). ¿Qué número sustituye □?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "factor-desconocido-tras-cancelar",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A16 cancela y aísla un factor con división.",
+      "summary_example": null,
+      "task_ids": [
+        "A16",
+        "T15"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-15",
+        "prompt": "Completa la igualdad 13 × (16 + 16) − 13 × 16 = 4 × □. ¿Qué número sustituye □?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "raiz-racional-resta-agrupada",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A6 y A13 cubren raíz y resta de grupo; T19 integra fracciones con denominadores distintos. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Raíz racional y diferencia agrupada",
+      "task_ids": [
+        "A6",
+        "A9",
+        "A13",
+        "T19"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-18",
+        "prompt": "Calcula √(9/484) − (7/22 − 3/44). Expresa una fracción simplificada."
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "distribuir-sobre-raiz-racional",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A5 y A6 cubren distribución y raíz; T20 integra factor exterior y fracciones. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Factor y raíz racional",
+      "task_ids": [
+        "A5",
+        "A6",
+        "A9",
+        "T20"
+      ],
+      "game_example": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-21",
+        "prompt": "Calcula 2 × (√(16/625) − 11/50) + 5/25. Expresa una fracción simplificada."
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "distributiva-signo-negativo",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A5 distribuye una diferencia y conserva el signo negativo.",
+      "summary_example": null,
+      "task_ids": [
+        "A5",
+        "T3"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-0",
+        "prompt": "Simplifica 3×(18−4)−3×18. ¿Qué valor se obtiene?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "factor-comun-dos-grupos",
+      "count": 9,
+      "classification": "EJEMPLO_GUIADO_DIRECTO",
+      "reason": "A14 agrupa cuatro productos y extrae el factor común.",
+      "summary_example": null,
+      "task_ids": [
+        "A14",
+        "T13"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-3",
+        "prompt": "Simplifica 24×11−24×2+4×11−4×2. ¿Cuál es el valor?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "diferencia-productos-no-identicos",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A15 resta dos productos y cancela; debe verificarse transferencia a productos que no se cancelan. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Productos distintos",
+      "task_ids": [
+        "A15",
+        "T14"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-6",
+        "prompt": "Calcula 24×(13−2)−4×(13+2). ¿Cuál es el valor?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "raiz-producto-cociente-agrupado",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A3 y A6 enseñan las piezas; T5 integra precedencia sin agrupar exactamente como el banco. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Raíz, producto y cociente agrupado",
+      "task_ids": [
+        "A3",
+        "A6",
+        "T5"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-9",
+        "prompt": "Calcula 10 − √49 × 3 + (12 − 3) ÷ 3. ¿Cuál es el resultado?"
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    },
+    {
+      "family": "raiz-producto-racionales-combinados",
+      "count": 9,
+      "classification": "EJEMPLO_RESUELTO_EN_SINTESIS",
+      "reason": "Brecha anterior: A6 y A9 enseñan racionales y raíces; T20 integra un factor pero no la misma estructura del banco. Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",
+      "summary_example": "Raíz y productos racionales",
+      "task_ids": [
+        "A6",
+        "A9",
+        "T4"
+      ],
+      "game_example": {
+        "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
+        "prompt": "Calcula √(9/1369) + 2 × (7/37) − 37/74."
+      },
+      "decision": "REVIEW",
+      "limitations": "Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual."
+    }
+  ]
+}

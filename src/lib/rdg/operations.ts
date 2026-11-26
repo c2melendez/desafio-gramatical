@@ -5,7 +5,7 @@ export type ReviewTask = {
  bridge?:readonly {label:string;text:string}[]; hint?:string; visual?: "line"|"tree"|"sequence"|"change"|"distribution"|"fractions";
 };
 export const OPERATIONS_ROUTE = {
- id:"MAT-ARIT-01", revision:"4", planSha256:"2ededaa954e39b2fe9462b8e3315b5cdd47378dc0497dbb49116784997fbdb5b",
+ id:"MAT-ARIT-01", revision:"4", planSha256:"0a18b1774a0a5c2cc552e5afb3aac81b9a6402357b34ba1e08722c3862b4f38b",
  objectives:["OP-01","OP-02","OP-03","OP-04"],
  lessons:[
  {id:"A1",objectiveIds:["OP-01"],title:"Moverse entre números",prompt:"Desde −4 suma 6; después resta 3. ¿Dónde termina?",options:["−1","5","−7","2"],answer:"−1",explanation:"−4 + 6 = 2; 2 − 3 = −1. La posición final no es la distancia recorrida.",errors:{"5":"La segunda acción es restar, no sumar.","−7":"Omitiste sumar 6: −4 − 3 = −7. Primero avanza a 2.","2":"Falta restar 3 desde la posición intermedia."},hint:"Primero avanza seis unidades desde −4; después retrocede tres.",visual:"line"},
@@ -34,7 +34,18 @@ export const OPERATIONS_ROUTE = {
  {title:"Comparación",text:"(19 − 7) × 2 = 24, pero 19 − 7 × 2 = 5. Cambiar la agrupación cambia el orden."},
  {title:"Distributividad",text:"9(8 − 3) − 9 × 8 = −9 × 3 = −27. Comprueba directamente: 45 − 72 = −27."},
  {title:"Racionales",text:"√(25/64) − 1/4 + 3/8 = 5/8 − 2/8 + 3/8 = 3/4. La raíz es positiva y los octavos son unidades iguales."}
- ],
+,
+ {"title":"Divisor agrupado","text":"84 ÷ (5 + 7) = 84 ÷ 12 = 7. El divisor es todo el paréntesis."},
+ {"title":"Saldo con dos compras","text":"Con L 200, comprar 6 artículos a L 7 y otro por L 20 deja 200 − (6 × 7 + 20) = 200 − 62 = L 138."},
+ {"title":"Cajas restantes y cambio por caja","text":"De 12 cajas con 8 piezas se retiran 3 cajas y se agregan 2 piezas a cada caja restante: (12 − 3) × (8 + 2) = 90 piezas."},
+ {"title":"Dos flujos independientes","text":"Entran 4 paquetes de 9 unidades y salen 2 de 5: 4 × 9 − 2 × 5 = 36 − 10 = 26 unidades netas."},
+ {"title":"Raíz, producto y resta","text":"√49 + 4 × 3 − 5 = 7 + 12 − 5 = 14: raíz y producto antes de sumar y restar."},
+ {"title":"Diferencia con factor común","text":"15 × 6 − (15 − 4) × 6 = [15 − (15 − 4)] × 6 = 4 × 6 = 24."},
+ {"title":"Raíz racional y diferencia agrupada","text":"√(4/25) − (3/5 − 1/10) = 2/5 − 1/2 = 4/10 − 5/10 = −1/10."},
+ {"title":"Factor y raíz racional","text":"2 × (√(9/100) − 1/5) + 1/10 = 2 × (3/10 − 2/10) + 1/10 = 3/10."},
+ {"title":"Productos distintos","text":"9 × (4 − 2) − 2 × (4 + 2) = 18 − 12 = 6. Se resta el segundo producto completo."},
+ {"title":"Raíz, producto y cociente agrupado","text":"15 − √25 × 2 + (10 − 4) ÷ 3 = 15 − 10 + 2 = 7."},
+ {"title":"Raíz y productos racionales","text":"√(4/81) + 2 × (1/9) − 5/18 = 2/9 + 2/9 − 5/18 = 3/18 = 1/6."} ],
  transfer:[
  {id:"T1",objectiveIds:["OP-01","OP-02"],title:"Inventario",prompt:"Una bodega recibe 6 cajas de 14 piezas y retira 3 paquetes de 8 piezas. ¿Cuántas piezas se agregan netas?",options:["84","108","60","76"],answer:"60",explanation:"6 × 14 − 3 × 8 = 84 − 24 = 60.",errors:{"84":"Falta retirar los 24 artículos.","108":"El retiro se resta, no se suma.","76":"Restaste un solo paquete: 84 − 8 = 76. Se retiran tres paquetes."}},
  {id:"T2",objectiveIds:["OP-02"],title:"Ajuste de cantidades",prompt:"Una receta usa (37 + 19) × 11 unidades. El primer componente disminuye 4 y el multiplicador aumenta 1. ¿Cuál es el nuevo valor?",options:["616","672","572","624"],answer:"624",explanation:"(33 + 19) × 12 = 52 × 12 = 624.",errors:{"616":"Es el valor sin modificar los operandos.","672":"Se cambió el factor, pero no el primer componente.","572":"Se cambió el primer componente, pero no el factor."}},

@@ -399,7 +399,18 @@
         "Ejemplo original: 27-4(3+2)=27-20=7; representar el paréntesis como nodo previo al producto.",
         "Mismo conjunto de operandos con diferente agrupación: (19-7)×2=24 frente a 19-7×2=5.",
         "Distributividad con signo: 9(8-3)-9×8=-27; comprobar 45-72.",
-        "Ejemplo original: √(25/64)−1/4+3/8=5/8−2/8+3/8=3/4; comprobar denominador común y raíz por cuadrado."
+        "Ejemplo original: √(25/64)−1/4+3/8=5/8−2/8+3/8=3/4; comprobar denominador común y raíz por cuadrado.",
+        "Divisor agrupado: 84 ÷ (5 + 7) = 84 ÷ 12 = 7. El divisor es todo el paréntesis.",
+        "Saldo con dos compras: Con L 200, comprar 6 artículos a L 7 y otro por L 20 deja 200 − (6 × 7 + 20) = 200 − 62 = L 138.",
+        "Cajas restantes y cambio por caja: De 12 cajas con 8 piezas se retiran 3 cajas y se agregan 2 piezas a cada caja restante: (12 − 3) × (8 + 2) = 90 piezas.",
+        "Dos flujos independientes: Entran 4 paquetes de 9 unidades y salen 2 de 5: 4 × 9 − 2 × 5 = 36 − 10 = 26 unidades netas.",
+        "Raíz, producto y resta: √49 + 4 × 3 − 5 = 7 + 12 − 5 = 14: raíz y producto antes de sumar y restar.",
+        "Diferencia con factor común: 15 × 6 − (15 − 4) × 6 = [15 − (15 − 4)] × 6 = 4 × 6 = 24.",
+        "Raíz racional y diferencia agrupada: √(4/25) − (3/5 − 1/10) = 2/5 − 1/2 = 4/10 − 5/10 = −1/10.",
+        "Factor y raíz racional: 2 × (√(9/100) − 1/5) + 1/10 = 2 × (3/10 − 2/10) + 1/10 = 3/10.",
+        "Productos distintos: 9 × (4 − 2) − 2 × (4 + 2) = 18 − 12 = 6. Se resta el segundo producto completo.",
+        "Raíz, producto y cociente agrupado: 15 − √25 × 2 + (10 − 4) ÷ 3 = 15 − 10 + 2 = 7.",
+        "Raíz y productos racionales: √(4/81) + 2 × (1/9) − 5/18 = 2/9 + 2/9 − 5/18 = 3/18 = 1/6."
       ],
       "transfer_tasks": [
         {
@@ -690,7 +701,8 @@
         "Comprobar el puente de resta anidada y la transferencia contextual, con cálculo independiente y contraste con IDs reales.",
         "Comprobar los tres puentes de factorización y sus transferencias, con oráculos independientes y contraste contra las familias de los juegos.",
         "Comprobar cinco transferencias adicionales de división, cero, factor común y racionales, sin ayudas y contra familias reales.",
-        "Verificar en lote cuatro puentes de estados, inventarios, reparto y raíces, y cuatro transferencias sin ayuda."
+        "Verificar en lote cuatro puentes de estados, inventarios, reparto y raíces, y cuatro transferencias sin ayuda.",
+        "Revisar once ejemplos integrados de síntesis contra oráculos independientes, como apoyo complementario a la ruta interactiva y transferencia."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",

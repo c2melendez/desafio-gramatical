@@ -1,0 +1,64 @@
+{
+  "status": "PASS_TECNICO",
+  "scope": "MAT-ARIT-01",
+  "plan_sha256": "0a18b1774a0a5c2cc552e5afb3aac81b9a6402357b34ba1e08722c3862b4f38b",
+  "examples": [
+    {
+      "title": "Divisor agrupado",
+      "answer": "7",
+      "content_sha256": "074176e263b1bb2cd284e4cfc21810bf79afe20f034c37851de497db9e3af726"
+    },
+    {
+      "title": "Saldo con dos compras",
+      "answer": "138",
+      "content_sha256": "bd60c55fb3e10a414583bca0ea7d45c987ae7022f61625ce5301f731fa1cded2"
+    },
+    {
+      "title": "Cajas restantes y cambio por caja",
+      "answer": "90",
+      "content_sha256": "4dc963726f3fa48d32fee04849a40132418c23c34e3b3cf1e9245081f9fb3c90"
+    },
+    {
+      "title": "Dos flujos independientes",
+      "answer": "26",
+      "content_sha256": "2a96b66be89b25b497dc93ddd7f1dc3b341e1860f1169d9e9421c8d7bdbd9934"
+    },
+    {
+      "title": "Raíz, producto y resta",
+      "answer": "14",
+      "content_sha256": "02064ffaaa66d7309014faee5444d24d6ceb70c21c05b36c3e8b7e07948298f7"
+    },
+    {
+      "title": "Diferencia con factor común",
+      "answer": "24",
+      "content_sha256": "dc4c465f49d2861ffafff196e192522f54593ebb788a4155f1e2841dd8a8c469"
+    },
+    {
+      "title": "Raíz racional y diferencia agrupada",
+      "answer": "−1/10",
+      "content_sha256": "a7f7e1f20e798803e581bef10f0a549ec73016c0d1affd06bbec5cc224456ad9"
+    },
+    {
+      "title": "Factor y raíz racional",
+      "answer": "3/10",
+      "content_sha256": "ca59ea536a9b17593ba3a76d3379b7d2d078a141bd1e3212953f2da25aa23a3e"
+    },
+    {
+      "title": "Productos distintos",
+      "answer": "6",
+      "content_sha256": "51b9f262058ca450fc55969b82a16f31ba7dc39ad410ceaa27a511936469c83a"
+    },
+    {
+      "title": "Raíz, producto y cociente agrupado",
+      "answer": "7",
+      "content_sha256": "c9fcfae60461443cb38a1023db2ded35da6a0e820f56649d68a2b01cd77b4425"
+    },
+    {
+      "title": "Raíz y productos racionales",
+      "answer": "1/6",
+      "content_sha256": "6bb63d0a1f93fa174f0f63d559bbb3c4c293f7f8b2c68baefda2f5143e6c2300"
+    }
+  ],
+  "academic_status": "REVIEW",
+  "limitations": "Verifica cálculos y resultados visibles; no verifica semántica individual, suficiencia de la ruta ni eficacia empírica."
+}
