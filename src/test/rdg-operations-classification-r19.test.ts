@@ -1,7 +1,7 @@
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R18Pool as mathM3Pool,mathM3Pool as activePool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {repairOperationClassificationR19} from "@/lib/math-operations-classification-r19";
 import {operationClassificationReason} from "@/lib/math-operations-classification";
@@ -49,9 +49,10 @@ function visible(item:MathModel){
 it("R19 candidate: 34 targeted repairs, 416 unchanged, independent visible-stimulus oracle and negative checks",()=>{
  const before=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
  expect(before).toHaveLength(450);expect(targets.size).toBe(34);
+ const active=new Map(MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>activePool("Aritmética","Operaciones",l,m))).map(x=>[x.id,x]));expect(active.size).toBe(450);
  let changed=0,preserved=0,truthMutants=0,oldCollisionDetected=0,advancedTransfer=0,checked=0;
  for(const old of before){
-  const x=repairOperationClassificationR19(old);
+  const x=repairOperationClassificationR19(old);expect(sha(active.get(old.id))).toBe(sha(x));
   if(!targets.has(old.id)){expect(sha(x)).toBe(sha(old));preserved++;continue;}
   expect(sha(x)).not.toBe(sha(old));expect(x.id).toBe(old.id);expect(x.prompt).toBe(old.prompt);expect(x.expected).toBe(old.expected);
   expect(x.options).toEqual(old.options);expect(x.steps).toEqual(old.steps);expect(x.oracle).toEqual(old.oracle);expect(x.operation).toBe(old.operation);

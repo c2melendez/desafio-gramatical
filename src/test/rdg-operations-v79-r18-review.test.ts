@@ -1,7 +1,7 @@
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R18Pool as mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 import {operationClassificationReason} from "@/lib/math-operations-classification";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";

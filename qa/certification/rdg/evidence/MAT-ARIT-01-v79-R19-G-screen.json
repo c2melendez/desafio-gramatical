@@ -1,0 +1,890 @@
+{
+  "scope": "MAT-ARIT-01",
+  "criteria_revision": "7.9",
+  "source_ci": 45773557600,
+  "source_job": 139751688449,
+  "candidate_sha": "f816605a37dcf67b0911a304a771d43301b38997",
+  "summary": {
+    "checked": 25,
+    "signals": 4,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
+      "hash": "c42b66966f0c30d1c1248facf327224b6ea6a597af0cc65513e5070d5a884c61",
+      "signature": "group|5|11|8",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 16.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 5+11=16. El valor afirmado es 16; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 48,
+          "correct": 40,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 48.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 5×8=40."
+        },
+        {
+          "key": "answer",
+          "claimed": 128,
+          "correct": 128,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 128.",
+          "feedback": "Al respetar el paréntesis, (5+11)×8=128. El valor afirmado es 128; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-1",
+      "hash": "518a63c89d08cbef02c7b55ddeb3b76c31f3215c26c071f63a4d09fcb177739e",
+      "signature": "group|6|14|6",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 42,
+          "correct": 36,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 42.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 6×6=36."
+        },
+        {
+          "key": "answer",
+          "claimed": 36,
+          "correct": 120,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 36.",
+          "feedback": "Al respetar el paréntesis, (6+14)×6=120. El valor afirmado es 36; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 20,
+          "correct": 20,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 20.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 6+14=20. El valor afirmado es 20; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
+      "hash": "3906facce751dbb96498f62019cdc567c9084bc7c3f8c9123aa822d94e87e75e",
+      "signature": "group|4|7|4",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 44,
+          "correct": 44,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 44.",
+          "feedback": "Al respetar el paréntesis, (7+4)×4=44. El valor afirmado es 44; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 3,
+          "correct": 11,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 3.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 7+4=11. El valor afirmado es 3; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 28,
+          "correct": 28,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 28.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 7×4=28."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
+      "hash": "20b88917d384af30f9e01021c67ae205b6c593f9e5b4035ae1ad16ff7761f4c2",
+      "signature": "group|7|8|2",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": true,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 1,
+          "correct": 15,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 1.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 8+7=15. El valor afirmado es 1; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 16.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 8×2=16."
+        },
+        {
+          "key": "answer",
+          "claimed": 16,
+          "correct": 30,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 16.",
+          "feedback": "Al respetar el paréntesis, (8+7)×2=30. El valor afirmado es 16; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-4",
+      "hash": "7cbaf1f9a5a89ed415b79b1ccd8cf6a166df2147771c613fd7c07721d4d5c49c",
+      "signature": "group|9|10|7",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 70,
+          "correct": 63,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 70.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 9×7=63."
+        },
+        {
+          "key": "answer",
+          "claimed": 133,
+          "correct": 133,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 133.",
+          "feedback": "Al respetar el paréntesis, (9+10)×7=133. El valor afirmado es 133; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -1,
+          "correct": 19,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es -1.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 9+10=19. El valor afirmado es -1; no coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
+      "hash": "34612b7a690f9afdb20026bf4b9f0f82fc368b01c83a8a1757069ce59b9e22b0",
+      "signature": "group|10|13|5",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": true,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 50,
+          "correct": 115,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 50.",
+          "feedback": "Al respetar el paréntesis, (10+13)×5=115. El valor afirmado es 50; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 23,
+          "correct": 23,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 23.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 10+13=23. El valor afirmado es 23; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 50,
+          "correct": 50,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 50.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 10×5=50."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-6",
+      "hash": "93fd58e38039401bbdcabee6f241e740e09a2561e89f37052719923de22f9f7c",
+      "signature": "group|3|11|3",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 14,
+          "correct": 14,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 14.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 11+3=14. El valor afirmado es 14; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 36,
+          "correct": 33,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 36.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 11×3=33."
+        },
+        {
+          "key": "answer",
+          "claimed": 42,
+          "correct": 42,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 42.",
+          "feedback": "Al respetar el paréntesis, (11+3)×3=42. El valor afirmado es 42; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-7",
+      "hash": "a376ac885e211da005a5edc4ef79d1415ea055b3b23e56a7d48eb1a229bba893",
+      "signature": "group|6|12|8",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 104,
+          "correct": 96,
+          "truth": false,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 104.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 12×8=96."
+        },
+        {
+          "key": "answer",
+          "claimed": 96,
+          "correct": 144,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 96.",
+          "feedback": "Al respetar el paréntesis, (12+6)×8=144. El valor afirmado es 96; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 18,
+          "correct": 18,
+          "truth": true,
+          "text": "La suma dentro del paréntesis es 18.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 12+6=18. El valor afirmado es 18; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
+      "hash": "a2590cf9c11ab6e0e57fecf5321cf9ca830300ec61b8785b75c5e1b6a66cc37d",
+      "signature": "group|9|13|6",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 132,
+          "correct": 132,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 132.",
+          "feedback": "Al respetar el paréntesis, (13+9)×6=132. El valor afirmado es 132; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 4,
+          "correct": 22,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 4.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 13+9=22. El valor afirmado es 4; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 78,
+          "correct": 78,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 78.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 13×6=78."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-9",
+      "hash": "dbbb3d3d14df35b75c0596f0f5129fa3ea989729631121091172c983b1fa46a7",
+      "signature": "group|12|14|4",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": true,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 2,
+          "correct": 26,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 2.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 14+12=26. El valor afirmado es 2; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 56,
+          "correct": 56,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 56.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 14×4=56."
+        },
+        {
+          "key": "answer",
+          "claimed": 56,
+          "correct": 104,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 56.",
+          "feedback": "Al respetar el paréntesis, (14+12)×4=104. El valor afirmado es 56; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
+      "hash": "669b16be12e579351cddb3035d0bc20048d9e017ae17d91adbf052ecb8b905be",
+      "signature": "group|6|13|5",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": true,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 7,
+          "correct": 19,
+          "truth": false,
+          "text": "La suma dentro del paréntesis es 7.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 13+6=19. El valor afirmado es 7; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 65,
+          "correct": 65,
+          "truth": true,
+          "text": "Al distribuir, el producto del primer sumando por el factor es 65.",
+          "feedback": "Al distribuir, el primer sumando se multiplica por el factor: 13×5=65."
+        },
+        {
+          "key": "answer",
+          "claimed": 65,
+          "correct": 95,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 65.",
+          "feedback": "Al respetar el paréntesis, (13+6)×5=95. El valor afirmado es 65; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "hash": "4a98d0be1c8e6838c4fd422bd7cc38a9110b5cc6f780d70ef4843f9b6fdf3ebc",
+      "signature": "change|16|12|6",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 7,
+          "correct": 5,
+          "truth": false,
+          "text": "El factor después del cambio es 7.",
+          "feedback": "El factor original 6 disminuye una unidad: 6−1=5."
+        },
+        {
+          "key": "answer",
+          "claimed": 150,
+          "correct": 150,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 150.",
+          "feedback": "Al respetar el paréntesis, (16+14)×5=150. El valor afirmado es 150; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 30,
+          "correct": 30,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 30.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 16+14=30. El valor afirmado es 30; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "hash": "d1e5a82bfa469ee7b30e89d9479d9701cbc6d31d0c93f7715d1cf51a68e9f31e",
+      "signature": "change|17|15|4",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 51,
+          "correct": 102,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 51.",
+          "feedback": "Al respetar el paréntesis, (17+17)×3=102. El valor afirmado es 51; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 34,
+          "correct": 34,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 34.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 17+17=34. El valor afirmado es 34; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 5,
+          "correct": 3,
+          "truth": false,
+          "text": "El factor después del cambio es 5.",
+          "feedback": "El factor original 4 disminuye una unidad: 4−1=3."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "hash": "e8256d862e81e299ed03f0dc0cb9411ab11911c1c6e2d21edc131dd415032c6e",
+      "signature": "change|19|8|7",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 6,
+          "correct": 6,
+          "truth": true,
+          "text": "El factor después del cambio es 6.",
+          "feedback": "El factor original 7 disminuye una unidad: 7−1=6."
+        },
+        {
+          "key": "answer",
+          "claimed": 114,
+          "correct": 174,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 114.",
+          "feedback": "Al respetar el paréntesis, (19+10)×6=174. El valor afirmado es 114; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 9,
+          "correct": 29,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 9.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 19+10=29. El valor afirmado es 9; no coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "hash": "22d035b9ecb3cf3596849dd608626694d789c5a9c4d6f1e19e60f43bcade2486",
+      "signature": "change|20|11|5",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 132,
+          "correct": 132,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 132.",
+          "feedback": "Al respetar el paréntesis, (20+13)×4=132. El valor afirmado es 132; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 7,
+          "correct": 33,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 7.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 20+13=33. El valor afirmado es 7; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 6,
+          "correct": 4,
+          "truth": false,
+          "text": "El factor después del cambio es 6.",
+          "feedback": "El factor original 5 disminuye una unidad: 5−1=4."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "hash": "82d55ffe7c182b19a9e519be71378119046f2b95a1e58264d0a17dbcd359b36b",
+      "signature": "change|21|14|3",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 37,
+          "correct": 37,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 37.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 21+16=37. El valor afirmado es 37; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 2,
+          "correct": 2,
+          "truth": true,
+          "text": "El factor después del cambio es 2.",
+          "feedback": "El factor original 3 disminuye una unidad: 3−1=2."
+        },
+        {
+          "key": "answer",
+          "claimed": 42,
+          "correct": 74,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 42.",
+          "feedback": "Al respetar el paréntesis, (21+16)×2=74. El valor afirmado es 42; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "hash": "b3c0959bca81df7354178fe90e6b1d760d73878f9506621f4300a78f5bdb5ef1",
+      "signature": "change|22|17|8",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 9,
+          "correct": 7,
+          "truth": false,
+          "text": "El factor después del cambio es 9.",
+          "feedback": "El factor original 8 disminuye una unidad: 8−1=7."
+        },
+        {
+          "key": "answer",
+          "claimed": 287,
+          "correct": 287,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 287.",
+          "feedback": "Al respetar el paréntesis, (22+19)×7=287. El valor afirmado es 287; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 41,
+          "correct": 41,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 41.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 22+19=41. El valor afirmado es 41; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-7",
+      "hash": "734003950d8a24b7241a443614bc86b226f12cb1cf9959792e3f8619194bd783",
+      "signature": "change|6|7|6",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 30,
+          "correct": 75,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 30.",
+          "feedback": "Al respetar el paréntesis, (6+9)×5=75. El valor afirmado es 30; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 15,
+          "correct": 15,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 15.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 6+9=15. El valor afirmado es 15; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 7,
+          "correct": 5,
+          "truth": false,
+          "text": "El factor después del cambio es 7.",
+          "feedback": "El factor original 6 disminuye una unidad: 6−1=5."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-8",
+      "hash": "25007dcfeea590d0f3d2b19beb950a17efd7f4fb0b1a8ac53a113fa674594a68",
+      "signature": "change|7|10|4",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": -5,
+          "correct": 19,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es -5.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 7+12=19. El valor afirmado es -5; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 3,
+          "correct": 3,
+          "truth": true,
+          "text": "El factor después del cambio es 3.",
+          "feedback": "El factor original 4 disminuye una unidad: 4−1=3."
+        },
+        {
+          "key": "answer",
+          "claimed": 57,
+          "correct": 57,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 57.",
+          "feedback": "Al respetar el paréntesis, (7+12)×3=57. El valor afirmado es 57; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "hash": "d6a7fbd748eaf4f7256b994c95a179b52edce14937b309acde93f6438b950c51",
+      "signature": "change|9|16|7",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 162,
+          "correct": 162,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 162.",
+          "feedback": "Al respetar el paréntesis, (9+18)×6=162. El valor afirmado es 162; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": -9,
+          "correct": 27,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es -9.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 9+18=27. El valor afirmado es -9; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 8,
+          "correct": 6,
+          "truth": false,
+          "text": "El factor después del cambio es 8.",
+          "feedback": "El factor original 7 disminuye una unidad: 7−1=6."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "hash": "449bdef6f58304de78ca4b206d2ae13ebf740a94e69d477b7fd6fae7ebf4be6d",
+      "signature": "change|10|6|5",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": 18,
+          "correct": 18,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 18.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 10+8=18. El valor afirmado es 18; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 4,
+          "correct": 4,
+          "truth": true,
+          "text": "El factor después del cambio es 4.",
+          "feedback": "El factor original 5 disminuye una unidad: 5−1=4."
+        },
+        {
+          "key": "answer",
+          "claimed": 40,
+          "correct": 72,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 40.",
+          "feedback": "Al respetar el paréntesis, (10+8)×4=72. El valor afirmado es 40; no coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "hash": "956d7377cb47b4184f81b60a1070ca7af5bf2e256dde5f2d85accacaf1dd6857",
+      "signature": "change|11|9|3",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "auxiliary",
+          "claimed": 4,
+          "correct": 2,
+          "truth": false,
+          "text": "El factor después del cambio es 4.",
+          "feedback": "El factor original 3 disminuye una unidad: 3−1=2."
+        },
+        {
+          "key": "answer",
+          "claimed": 44,
+          "correct": 44,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 44.",
+          "feedback": "Al respetar el paréntesis, (11+11)×2=44. El valor afirmado es 44; coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 22,
+          "correct": 22,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 22.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 11+11=22. El valor afirmado es 22; coincide con el paso correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "hash": "5db183fa6a53e7659e09bc874f05aea3aecb6c66871852b01c53a696b8964b45",
+      "signature": "change|12|12|8",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 84,
+          "correct": 182,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 84.",
+          "feedback": "Al respetar el paréntesis, (12+14)×7=182. El valor afirmado es 84; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 26,
+          "correct": 26,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 26.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 12+14=26. El valor afirmado es 26; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 9,
+          "correct": 7,
+          "truth": false,
+          "text": "El factor después del cambio es 9.",
+          "feedback": "El factor original 8 disminuye una unidad: 8−1=7."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "hash": "fe6ca99eddbe87c6a1adb4c3ab061e6189146a319715ea8df038460be955bdb6",
+      "signature": "change|13|15|6",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "step",
+          "claimed": -4,
+          "correct": 30,
+          "truth": false,
+          "text": "Después de los cambios, la suma dentro del paréntesis es -4.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 13+17=30. El valor afirmado es -4; no coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 5,
+          "correct": 5,
+          "truth": true,
+          "text": "El factor después del cambio es 5.",
+          "feedback": "El factor original 6 disminuye una unidad: 6−1=5."
+        },
+        {
+          "key": "answer",
+          "claimed": 150,
+          "correct": 150,
+          "truth": true,
+          "text": "El valor de la expresión solicitada es 150.",
+          "feedback": "Al respetar el paréntesis, (13+17)×5=150. El valor afirmado es 150; coincide con el valor correcto."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-19",
+      "hash": "ff46e6e2381362bf4a649336d116b212eb56fb23e1dd5a2924eefcb8f2a062c5",
+      "signature": "change|8|6|4",
+      "matches": [],
+      "rdgMatches": [],
+      "displayedValueRepeats": false,
+      "decisions": [
+        {
+          "key": "answer",
+          "claimed": 24,
+          "correct": 48,
+          "truth": false,
+          "text": "El valor de la expresión solicitada es 24.",
+          "feedback": "Al respetar el paréntesis, (8+8)×3=48. El valor afirmado es 24; no coincide con el valor correcto."
+        },
+        {
+          "key": "step",
+          "claimed": 16,
+          "correct": 16,
+          "truth": true,
+          "text": "Después de los cambios, la suma dentro del paréntesis es 16.",
+          "feedback": "Se deben sumar los dos operandos vigentes: 8+8=16. El valor afirmado es 16; coincide con el paso correcto."
+        },
+        {
+          "key": "auxiliary",
+          "claimed": 5,
+          "correct": 3,
+          "truth": false,
+          "text": "El factor después del cambio es 5.",
+          "feedback": "El factor original 4 disminuye una unidad: 4−1=3."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    }
+  ],
+  "limits": "Filtro de firmas numéricas sobre 450 estímulos del banco y RDG; no demuestra originalidad universal, ausencia de pistas ni revisión integral A-H; conservar REVIEW. Cuatro señales de valores mostrados repetidos."
+}
