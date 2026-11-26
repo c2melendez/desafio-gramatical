@@ -14,6 +14,10 @@ function maskFor(id:string){
 export function operationClassificationR20TruthCount(id:string){return maskFor(id).filter(Boolean).length;}
 type Decision={label:string;correct:number;rule:string;wrong:number[]};
 export function repairOperationClassificationR20(item:MathModel):MathModel{
+ return buildOperationClassificationR20(item,maskFor(item.id));
+}
+/** Reusable decision builder; explicit mask only for certified successor candidates. */
+export function buildOperationClassificationR20(item:MathModel,mask:readonly boolean[]):MathModel{
  if(item.subtopic!=="Operaciones"||item.mode!=="clasificar"||!["evaluar-tres-decisiones-operaciones-r18","evaluar-tres-decisiones-operaciones-r19"].includes(item.modeOperation??""))return item;
  const m=item.prompt.match(/\((\d+)\+(\d+)\)×(\d+)/);if(!m)throw Error("R20 stimulus "+item.id);
  const [a,b,c]=m.slice(1).map(Number);
@@ -44,7 +48,8 @@ export function repairOperationClassificationR20(item:MathModel):MathModel{
   auxiliary={label:"Si en lugar de restar "+a+"×"+c+" se restara "+changed+"×"+c+", el resultado sería ",correct:cf,rule:"La diferencia entre los términos restados es "+delta+"×"+c+"; se resta esa diferencia al resultado original "+total+": "+cf+".",wrong:[total,(b+delta)*c,(a+b)*c,0,-cf]};
  }
  const ds=[answer,step,auxiliary];if(new Set(ds.map(d=>d.correct)).size!==3)throw Error("R20 redundant targets "+item.id);
- const mask=maskFor(item.id),used=new Set(ds.filter((_,i)=>mask[i]).map(d=>d.correct));
+ if(mask.length!==3||mask.some(v=>typeof v!=="boolean"))throw Error("R20 invalid mask");
+ const used=new Set(ds.filter((_,i)=>mask[i]).map(d=>d.correct));
  const reasons:Record<string,string>={};
  const claims=ds.map((d,i)=>{let value=d.correct;if(!mask[i]){const wrong=d.wrong.find(v=>v!==d.correct&&!used.has(v));if(wrong===undefined)throw Error("R20 false value "+item.id);value=wrong;used.add(value);}
   const text=d.label+value+".";reasons[text]=d.rule+" El valor afirmado es "+value+"; "+(mask[i]?"coincide":"no coincide")+" con el correcto.";return {text,truth:mask[i]};});
