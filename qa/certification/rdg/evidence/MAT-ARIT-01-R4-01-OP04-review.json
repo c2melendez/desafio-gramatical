@@ -18,7 +18,7 @@
   "records": [
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
-      "content_hash": "15253bc28e43ba6ca1357fc75ceb9520574f503f487d6aaa3c047a3fa373473d",
+      "content_hash": "b7c19f11778ca9c04bf1ce46d6c3e99fe7d52cb01fecc56d66d1d2fe3a35f796",
       "exam": [
         "PHUMA"
       ],
@@ -69,16 +69,16 @@
       ],
       "assertions": [
         {
-          "text": "La raíz principal es 3/17 y la expresión equivale a (3 + 7 − 12)/17.",
+          "text": "La raíz principal del radical es 3/17.",
           "truth": true
         },
         {
-          "text": "La raíz principal del radical es -3/17.",
+          "text": "El término central, expresado en unidades de 1/17, tiene numerador 8.",
           "truth": false
         },
         {
-          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
-          "truth": false
+          "text": "El resultado de la expresión completa es -2/17.",
+          "truth": true
         }
       ],
       "root_choices": [
@@ -93,7 +93,7 @@
         "MAT-ARIT-01 R4"
       ],
       "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
-      "revision": "P2-R4-01-OP04",
+      "revision": "P2-R4-01-OP04-R17",
       "riesgos": [
         "FAMILIA_PARAMETRICA_REPETIDA",
         "PATRON_UNA_AFIRMACION_VERDADERA"
@@ -120,17 +120,18 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "C_PATRON_PREDECIBLE",
         "G_DIVERSIDAD_INSUFICIENTE"
       ],
       "evidence_refs": [
         "CI 45689363635 job 139470401286, RDG_P2_CELL",
         "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
         "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
       ],
       "reviewed_at": "2026-11-26",
-      "repair_commit": null,
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
       "supersedes": "15253bc28e43ba6ca1357fc75ceb9520574f503f487d6aaa3c047a3fa373473d",
       "rubric": {
         "A": {
@@ -142,8 +143,8 @@
           "reason": "Raíz 3/17; numeradores 3, 7, −12 sobre 17; resultado -2/17; cuatro valores distintos."
         },
         "C": {
-          "score": 2,
-          "reason": "Las tres afirmaciones del hash vigente presentan exactamente una verdadera y dos falsas; dos afirmaciones dependen de la misma raíz. Corrección R17 candidata, no certificada."
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
         },
         "D": {
           "score": 3,
@@ -169,7 +170,7 @@
     },
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-13",
-      "content_hash": "6f693123d3148407cd4c9ccd7ee074a502bcf0a2cc56dee81bf3a2da61002978",
+      "content_hash": "f7df60455c176f12b2d0a716a31fbb7ed5e8b0535aecf7861af2d4f83d03a659",
       "exam": [
         "PHUMA"
       ],
@@ -220,16 +221,16 @@
       ],
       "assertions": [
         {
-          "text": "La raíz principal es 2/9 y la expresión equivale a (4 + 9 − 5)/18.",
-          "truth": true
+          "text": "El resultado de la expresión completa es 13/18.",
+          "truth": false
         },
         {
           "text": "La raíz principal del radical es -2/9.",
           "truth": false
         },
         {
-          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
-          "truth": false
+          "text": "El término central, expresado en unidades de 1/18, tiene numerador 9.",
+          "truth": true
         }
       ],
       "root_choices": [
@@ -244,7 +245,7 @@
         "MAT-ARIT-01 R4"
       ],
       "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
-      "revision": "P2-R4-01-OP04",
+      "revision": "P2-R4-01-OP04-R17",
       "riesgos": [
         "FAMILIA_PARAMETRICA_REPETIDA",
         "PATRON_UNA_AFIRMACION_VERDADERA"
@@ -271,17 +272,18 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "C_PATRON_PREDECIBLE",
         "G_DIVERSIDAD_INSUFICIENTE"
       ],
       "evidence_refs": [
         "CI 45689363635 job 139470401286, RDG_P2_CELL",
         "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
         "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
       ],
       "reviewed_at": "2026-11-26",
-      "repair_commit": null,
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
       "supersedes": "6f693123d3148407cd4c9ccd7ee074a502bcf0a2cc56dee81bf3a2da61002978",
       "rubric": {
         "A": {
@@ -293,8 +295,8 @@
           "reason": "Raíz 2/9; numeradores 4, 9, −5 sobre 18; resultado 4/9; cuatro valores distintos."
         },
         "C": {
-          "score": 2,
-          "reason": "Las tres afirmaciones del hash vigente presentan exactamente una verdadera y dos falsas; dos afirmaciones dependen de la misma raíz. Corrección R17 candidata, no certificada."
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
         },
         "D": {
           "score": 3,
@@ -320,7 +322,7 @@
     },
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-14",
-      "content_hash": "74f2009488494c307bf4753cc6708e815d8d9117425d3ae4c57d58479469f7fd",
+      "content_hash": "99796b8cf7582253f0f3d3d893380419fb89ef96e227069f171b06f9f46f48ff",
       "exam": [
         "PHUMA"
       ],
@@ -371,16 +373,16 @@
       ],
       "assertions": [
         {
-          "text": "La raíz principal es 5/19 y la expresión equivale a (5 + 11 − 20)/19.",
+          "text": "El término central, expresado en unidades de 1/19, tiene numerador 11.",
           "truth": true
         },
         {
-          "text": "La raíz principal del radical es -5/19.",
+          "text": "El resultado de la expresión completa es 16/19.",
           "truth": false
         },
         {
-          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
-          "truth": false
+          "text": "La raíz principal del radical es 5/19.",
+          "truth": true
         }
       ],
       "root_choices": [
@@ -395,7 +397,7 @@
         "MAT-ARIT-01 R4"
       ],
       "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
-      "revision": "P2-R4-01-OP04",
+      "revision": "P2-R4-01-OP04-R17",
       "riesgos": [
         "FAMILIA_PARAMETRICA_REPETIDA",
         "PATRON_UNA_AFIRMACION_VERDADERA"
@@ -422,17 +424,18 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "C_PATRON_PREDECIBLE",
         "G_DIVERSIDAD_INSUFICIENTE"
       ],
       "evidence_refs": [
         "CI 45689363635 job 139470401286, RDG_P2_CELL",
         "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
         "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
       ],
       "reviewed_at": "2026-11-26",
-      "repair_commit": null,
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
       "supersedes": "74f2009488494c307bf4753cc6708e815d8d9117425d3ae4c57d58479469f7fd",
       "rubric": {
         "A": {
@@ -444,8 +447,8 @@
           "reason": "Raíz 5/19; numeradores 5, 11, −20 sobre 19; resultado -4/19; cuatro valores distintos."
         },
         "C": {
-          "score": 2,
-          "reason": "Las tres afirmaciones del hash vigente presentan exactamente una verdadera y dos falsas; dos afirmaciones dependen de la misma raíz. Corrección R17 candidata, no certificada."
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
         },
         "D": {
           "score": 3,
@@ -1365,7 +1368,7 @@
     },
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
-      "content_hash": "71988aba89078a41c6d05d6a5ec308b8926358a5146030ab133511d43cbbb623",
+      "content_hash": "5b325fcea8647f0db425a9480e89a1c8e2a445e46c86f5af9242c012783e577c",
       "exam": [
         "PHUMA"
       ],
@@ -1416,15 +1419,15 @@
       ],
       "assertions": [
         {
-          "text": "La raíz principal es 3/37 y la expresión equivale a (6 + 28 − 37)/74.",
+          "text": "El término central, expresado en unidades de 1/74, tiene numerador 28.",
+          "truth": true
+        },
+        {
+          "text": "El resultado de la expresión completa es -3/74.",
           "truth": true
         },
         {
           "text": "La raíz principal del radical es -3/37.",
-          "truth": false
-        },
-        {
-          "text": "Puede omitirse el factor 2 y conservar el resultado.",
           "truth": false
         }
       ],
@@ -1440,7 +1443,7 @@
         "MAT-ARIT-01 R4"
       ],
       "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
-      "revision": "P2-R4-01-OP04",
+      "revision": "P2-R4-01-OP04-R17",
       "riesgos": [
         "FAMILIA_PARAMETRICA_REPETIDA",
         "PATRON_UNA_AFIRMACION_VERDADERA"
@@ -1467,17 +1470,18 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "C_PATRON_PREDECIBLE",
         "G_DIVERSIDAD_INSUFICIENTE"
       ],
       "evidence_refs": [
         "CI 45689363635 job 139470401286, RDG_P2_CELL",
         "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
         "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
       ],
       "reviewed_at": "2026-11-26",
-      "repair_commit": null,
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
       "supersedes": "71988aba89078a41c6d05d6a5ec308b8926358a5146030ab133511d43cbbb623",
       "rubric": {
         "A": {
@@ -1489,8 +1493,8 @@
           "reason": "Raíz 3/37; numeradores 6, 28, −37 sobre 74; resultado -3/74; cuatro valores distintos."
         },
         "C": {
-          "score": 2,
-          "reason": "Las tres afirmaciones del hash vigente presentan exactamente una verdadera y dos falsas; dos afirmaciones dependen de la misma raíz. Corrección R17 candidata, no certificada."
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
         },
         "D": {
           "score": 3,
@@ -1516,7 +1520,7 @@
     },
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-23",
-      "content_hash": "c1e8298b0fb08d21d95d7477c530c3332e568f0f09f5776ac24e0d50730e45fa",
+      "content_hash": "41d592b8a76c94eae90dcaa1572cc7df75bd986c7f64d6d9708974b6a6b6c6a6",
       "exam": [
         "PHUMA"
       ],
@@ -1567,15 +1571,15 @@
       ],
       "assertions": [
         {
-          "text": "La raíz principal es 2/19 y la expresión equivale a (8 + 36 − 39)/76.",
+          "text": "La raíz principal del radical es 2/19.",
           "truth": true
         },
         {
-          "text": "La raíz principal del radical es -2/19.",
+          "text": "El término central, expresado en unidades de 1/76, tiene numerador 38.",
           "truth": false
         },
         {
-          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "text": "El resultado de la expresión completa es 11/19.",
           "truth": false
         }
       ],
@@ -1591,7 +1595,7 @@
         "MAT-ARIT-01 R4"
       ],
       "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
-      "revision": "P2-R4-01-OP04",
+      "revision": "P2-R4-01-OP04-R17",
       "riesgos": [
         "FAMILIA_PARAMETRICA_REPETIDA",
         "PATRON_UNA_AFIRMACION_VERDADERA"
@@ -1618,17 +1622,18 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "C_PATRON_PREDECIBLE",
         "G_DIVERSIDAD_INSUFICIENTE"
       ],
       "evidence_refs": [
         "CI 45689363635 job 139470401286, RDG_P2_CELL",
         "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
         "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
       ],
       "reviewed_at": "2026-11-26",
-      "repair_commit": null,
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
       "supersedes": "c1e8298b0fb08d21d95d7477c530c3332e568f0f09f5776ac24e0d50730e45fa",
       "rubric": {
         "A": {
@@ -1640,8 +1645,8 @@
           "reason": "Raíz 2/19; numeradores 8, 36, −39 sobre 76; resultado 5/76; cuatro valores distintos."
         },
         "C": {
-          "score": 2,
-          "reason": "Las tres afirmaciones del hash vigente presentan exactamente una verdadera y dos falsas; dos afirmaciones dependen de la misma raíz. Corrección R17 candidata, no certificada."
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
         },
         "D": {
           "score": 3,
@@ -1667,7 +1672,7 @@
     },
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-24",
-      "content_hash": "8c2663d0f6d8ef6604b68eb033632c9357225c35b54b69409c71e6bd0e60cf9d",
+      "content_hash": "c19719cea9ae00a846c264c4d788d8591eb2941bd1f84faa22a7093b2f9e6391",
       "exam": [
         "PHUMA"
       ],
@@ -1718,7 +1723,7 @@
       ],
       "assertions": [
         {
-          "text": "La raíz principal es 5/39 y la expresión equivale a (10 + 44 − 59)/78.",
+          "text": "El resultado de la expresión completa es -5/78.",
           "truth": true
         },
         {
@@ -1726,7 +1731,7 @@
           "truth": false
         },
         {
-          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "text": "El término central, expresado en unidades de 1/78, tiene numerador 46.",
           "truth": false
         }
       ],
@@ -1742,7 +1747,7 @@
         "MAT-ARIT-01 R4"
       ],
       "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
-      "revision": "P2-R4-01-OP04",
+      "revision": "P2-R4-01-OP04-R17",
       "riesgos": [
         "FAMILIA_PARAMETRICA_REPETIDA",
         "PATRON_UNA_AFIRMACION_VERDADERA"
@@ -1769,17 +1774,18 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "C_PATRON_PREDECIBLE",
         "G_DIVERSIDAD_INSUFICIENTE"
       ],
       "evidence_refs": [
         "CI 45689363635 job 139470401286, RDG_P2_CELL",
         "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
         "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
       ],
       "reviewed_at": "2026-11-26",
-      "repair_commit": null,
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
       "supersedes": "8c2663d0f6d8ef6604b68eb033632c9357225c35b54b69409c71e6bd0e60cf9d",
       "rubric": {
         "A": {
@@ -1791,8 +1797,8 @@
           "reason": "Raíz 5/39; numeradores 10, 44, −59 sobre 78; resultado -5/78; cuatro valores distintos."
         },
         "C": {
-          "score": 2,
-          "reason": "Las tres afirmaciones del hash vigente presentan exactamente una verdadera y dos falsas; dos afirmaciones dependen de la misma raíz. Corrección R17 candidata, no certificada."
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
         },
         "D": {
           "score": 3,
@@ -2845,5 +2851,6 @@
       "semantic_status": "REVIEW"
     }
   ],
-  "limits": "Executed independent visible-stimulus arithmetic and exact frozen-hash matching on evidence records; CI must verify R17 runtime successors. G remains 2; no semantic PASS. Original bank snapshots retained."
+  "limits": "Executed independent visible-stimulus arithmetic and exact frozen-hash matching on evidence records; CI must verify R17 runtime successors. G remains 2; no semantic PASS. Original bank snapshots retained.",
+  "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json"
 }
