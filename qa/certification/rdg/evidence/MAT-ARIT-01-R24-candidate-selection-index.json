@@ -1,0 +1,41 @@
+{
+  "status": "CANDIDATE_NOT_ACTIVE",
+  "candidate_sha": "c2d46d1e2a60a9501dc2e8b96f041cd29d05ce15",
+  "successors": "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+  "previous_selection_paths": [
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+  ],
+  "selection_paths": [
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+  ],
+  "summary": {
+    "total": 450,
+    "changed": 89,
+    "preserved": 361,
+    "prior_pass": 98,
+    "counts": [
+      59,
+      22,
+      8
+    ],
+    "signals": [],
+    "semantic_pass": 0
+  },
+  "limits": "No production activation or new semantic PASS; independent guard review pending."
+}
