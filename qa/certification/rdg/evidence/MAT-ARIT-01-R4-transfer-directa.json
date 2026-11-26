@@ -1,0 +1,77 @@
+{
+  "status": "PASS_LOCAL_ORACLE",
+  "scope": "P1, cinco transferencias autónomas inéditas; no certificación del banco",
+  "base_sha": "bfe3a98eb6cbddd4bb85c0ad27f9adccf5c64ff4",
+  "previous_plan_sha256": "fd8ee4fe4e01f54000672dcd8b6ba8e019d4d56940ee74c568560ba0b7e6d2ad",
+  "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+  "previous_data_sha256": "c58c919e07d4243df5b5d6402df2e60e0321bccaee2e7e1babca2328e939a25e",
+  "data_sha256": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+  "records": [
+    {
+      "id": "T25",
+      "family": "presupuesto-dos-compras",
+      "game_ids_associated": 9,
+      "answer": "106",
+      "independent_wrong": [
+        "142",
+        "178",
+        "239"
+      ],
+      "content_sha256": "954b72af5ec6347b3e64f7b32288cb7eabdf367788cfebfaed19dd32094f11a0"
+    },
+    {
+      "id": "T26",
+      "family": "cambio-contextual-inventario",
+      "game_ids_associated": 9,
+      "answer": "323",
+      "independent_wrong": [
+        "251",
+        "247",
+        "459"
+      ],
+      "content_sha256": "3e6925cefaa562562fb2a871ee4b0a1670d6432b29c555cf0e7f86cb70bfa849"
+    },
+    {
+      "id": "T27",
+      "family": "diferencia-productos-no-identicos",
+      "game_ids_associated": 9,
+      "answer": "29",
+      "independent_wrong": [
+        "209",
+        "119",
+        "77"
+      ],
+      "content_sha256": "0184eac475c06876f2ee4bc4e6166461b2ce45dc5341d4a2cd975552b2c51246"
+    },
+    {
+      "id": "T28",
+      "family": "raiz-producto-cociente-agrupado",
+      "game_ids_associated": 9,
+      "answer": "12",
+      "independent_wrong": [
+        "15",
+        "9",
+        "43"
+      ],
+      "content_sha256": "dfeda299c5e9e064047368ce52e07ad42cd0eb0dc86958440c0f44d3ce9d37de"
+    },
+    {
+      "id": "T29",
+      "family": "raiz-producto-racionales-combinados",
+      "game_ids_associated": 9,
+      "answer": "4/7",
+      "independent_wrong": [
+        "0",
+        "17/14",
+        "−1/7"
+      ],
+      "content_sha256": "902bc4b5cc38a950331b6e6ee2f3d8a8174a82ae14278ad944e9619dd6bc19f0"
+    }
+  ],
+  "mutants_rejected": 10,
+  "existing_tasks_preserved": 44,
+  "new_transfer_tasks": 5,
+  "transfer_total": 29,
+  "preliminary_collision_screen": "No matches by numeric signature against 44 previous route tasks and 34 representative family prompts; full 450-bank contrast and browser tests await CI",
+  "limits": "No runtime full bank execution yet; no semantic PASS; all 450 remain REVIEW."
+}

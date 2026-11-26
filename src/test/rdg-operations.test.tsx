@@ -4,6 +4,7 @@ import {afterEach,expect,it} from "vitest";
 import {cleanup,fireEvent,render,screen,waitFor,within} from "@testing-library/react";
 import {routeTree} from "@/routeTree.gen";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
+import {balanceTransferOptions,SYNTHESIS_DECISIONS} from "@/components/review/OperationsReview";
 import {mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 afterEach(cleanup);
@@ -39,7 +40,7 @@ it("does not publish a false review for a different subtopic",async()=>{
 it("independent arithmetic oracle covers all activity and transfer keys, rejects mutated keys",()=>{
  // Independent direct evaluation, not the explanation or selected index. Fractions use integer numerators and common denominators.
  const format=(n:number,d:number)=>{const gcd=(a:number,b:number):number=>b?gcd(b,a%b):Math.abs(a);const g=gcd(n,d);return d/g===1?String(n/g).replace("-","−"):(String(n/g)+"/"+String(d/g)).replace("-","−");};
- const independent:Record<string,string>={A1:format(-4+6-3,1),A2:[11-3*2,(11-3)*2].join(" y "),A3:String(42/7*3-5),A4:String((31-3+29)*(11+2)),A5:format(7*(12-5)-7*12,1),A6:format(Math.sqrt(9)+2-6,7),T1:String(Array(6).fill(14).reduce((a,b)=>a+b,0)-Array(3).fill(8).reduce((a,b)=>a+b,0)),T2:String((37-4+19)*(11+1)),T3:format(11*(23-8)-11*23,1),T4:format(Math.sqrt(16)-5+3,9),T5:String(14-Math.sqrt(36)+3*5-24/8)};
+ const independent:Record<string,string>={T25:String(275-7*19-36),T26:String((27-8)*(13+4)),T27:String(17*(11-4)-6*(11+4)),T28:String(31-Math.sqrt(121)*2+(26-8)/6),T29:format(5+3*4-9,14),A17:format((14+11)*4-(14+8)*6,1),A18:String(100+9-4*6),A19:String((10*8-2*5)/7),A20:String((Math.sqrt(64)-3)*(4+Math.sqrt(9))-2),T21:format((15+5)*4-(13+5)*7,1),T22:String(91+8-5*3),T23:String((12*7-3*4)/8),T24:String((Math.sqrt(81)-4)*(6+Math.sqrt(16))-3),T16:String(96/(4+8)),T17:String((17-17)/5+12),T18:String(26*4-(26-6)*4),T19:format(10-13,24),T20:format(3*(6-7)+2,20),A14:String(12*7-12*2+3*7-3*2),A15:String(6*(5-2)-5*(6-3)),A16:String((6*(8+8)-6*8)/3),T13:String(8*6-8+2*6-2),T14:String(9*(4-2)-4*(9-5)),T15:String((5*(9+9)-5*9)/3),A13:String(20-(7-2*(6-1))),T12:String(25-(11-3*5)),A11:String(8-(-3)-2),A12:format(-6*3+2,1),T10:format(-7-(-5),1),T11:format(6*(-3)+4,1),A1:format(-4+6-3,1),A2:[11-3*2,(11-3)*2].join(" y "),A3:String(42/7*3-5),A4:String((31-3+29)*(11+2)),A5:format(7*(12-5)-7*12,1),A6:format(Math.sqrt(9)+2-6,7),T1:String(Array(6).fill(14).reduce((a,b)=>a+b,0)-Array(3).fill(8).reduce((a,b)=>a+b,0)),T2:String((37-4+19)*(11+1)),T3:format(11*(23-8)-11*23,1),T4:format(Math.sqrt(16)-5+3,9),T5:String(14-Math.sqrt(36)+3*5-24/8),A7:String((76+8)/7),A8:String(6*(15+3)-6*(15-4)),A9:format(14-3,22*4),A10:String(11*16+7-(11*13+30)),T6:String((113+17)/5),T7:String(8*(19+2)-8*(19-6)),T8:format(16-5,26*3),T9:format(17*11+3-(17*9+40),1)};
  const tasks=[...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer];expect(Object.keys(independent)).toHaveLength(tasks.length);
  for(const t of tasks){expect(independent[t.id]).toBe(t.answer);expect(new Set(t.options).size).toBe(4);expect(t.options.filter(x=>x===independent[t.id])).toHaveLength(1);for(const wrong of t.options.filter(x=>x!==t.answer)){expect(wrong).not.toBe(independent[t.id]);expect(t.errors[wrong]).toBeTruthy();}}
 });
@@ -95,4 +96,110 @@ it("R02: summary explicitly explains real-domain counterexamples",async()=>{
  const section=screen.getByRole("region",{name:"Condiciones y contraejemplos"});
  expect(section).toHaveTextContent("9 ÷ 0 no está definido");
  expect(section).toHaveTextContent("√(−9) no tiene valor real");
+});
+
+it("R4 candidate: progressive bridges, independent transfer and preserved R3 tasks",async()=>{
+ const added=OPERATIONS_ROUTE.lessons.filter(t=>t.bridge);expect(added).toHaveLength(14);expect(added.every(t=>t.bridge?.length===3)).toBe(true);
+ const transfer=OPERATIONS_ROUTE.transfer;expect(transfer).toHaveLength(29);expect(transfer.every(t=>!t.bridge&&!t.hint)).toBe(true);
+ const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
+ const norm=(s:string)=>s.normalize("NFKC").replace(/\s/g,"").replace(/[−–]/g,"-").toLowerCase();
+ for(const task of [...added,...transfer.slice(5)])expect(bank.some(x=>norm(x.prompt)===norm(task.prompt))).toBe(false);
+ await mount(path+"&repaso=true");await screen.findByRole("heading",{name:"Modo Repaso: Operaciones"});
+ for(let i=0;i<6;i++)fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ const organizer=screen.getByRole("region",{name:"Organizador de razonamiento"});expect(organizer).toHaveTextContent("1 de 3 pasos visibles");
+ fireEvent.click(within(organizer).getByRole("button",{name:"Revelar siguiente paso"}));expect(organizer).toHaveTextContent("2 de 3 pasos visibles");
+ fireEvent.click(within(organizer).getByRole("button",{name:"Revelar siguiente paso"}));expect(organizer).toHaveTextContent("3 de 3 pasos visibles");
+ fireEvent.click(screen.getByRole("button",{name:"Transferencia",exact:true}));expect(screen.queryByRole("region",{name:"Organizador de razonamiento"})).not.toBeInTheDocument();
+});
+
+it("R4 contrasts visible numeric data of all lessons and transfers against the 450 games",()=>{
+ const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
+ const signature=(s:string)=>(s.match(/\d+/g)??[]).map(Number).sort((a,b)=>a-b).join(",");
+ expect(bank).toHaveLength(450);
+ for(const task of [...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer]){
+  expect(bank.filter(x=>signature(x.prompt)===signature(task.prompt)).map(x=>x.id),task.id).toEqual([]);
+ }
+ expect(bank.some(x=>signature(x.prompt)===signature("Calcula −4 × 3 + 2."))).toBe(true);
+ expect(bank.some(x=>signature(x.prompt)===signature("Una expresión vale (10 + 6) × 5. Aumenta el segundo sumando en 2 y reduce el factor en 1."))).toBe(true);
+});
+
+it("teaches signed subtraction and product, and keeps the new transfers free of hints",async()=>{
+ await mount(path+"&repaso=true");await screen.findByRole("heading",{name:"Modo Repaso: Operaciones"});
+ for(let i=0;i<10;i++)fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ expect(screen.getByRole("heading",{name:"Restar un número negativo"})).toBeInTheDocument();
+ fireEvent.click(within(screen.getByRole("group",{name:"Respuestas"})).getByRole("button",{name:"3",exact:true}));
+ fireEvent.click(screen.getByRole("button",{name:"Comprobar"}));
+ expect(screen.getByRole("status")).toHaveTextContent("restar 3");
+ fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ expect(screen.getByRole("heading",{name:"Producto negativo y suma"})).toBeInTheDocument();
+ fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ expect(screen.getByRole("heading",{name:"Restar un grupo negativo"})).toBeInTheDocument();
+ fireEvent.click(within(screen.getByRole("group",{name:"Respuestas"})).getByRole("button",{name:"3",exact:true}));
+ fireEvent.click(screen.getByRole("button",{name:"Comprobar"}));
+ expect(screen.getByRole("status")).toHaveTextContent("grupo completo");
+ fireEvent.click(screen.getByRole("button",{name:"Transferencia",exact:true}));
+ for(let i=0;i<9;i++)fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ expect(screen.getByRole("heading",{name:"Diferencia entre temperaturas"})).toBeInTheDocument();
+ expect(screen.queryByRole("button",{name:/pista/i})).not.toBeInTheDocument();
+ expect(screen.queryByRole("region",{name:"Organizador de razonamiento"})).not.toBeInTheDocument();
+ fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ expect(screen.getByRole("heading",{name:"Saldo con cambios repetidos"})).toBeInTheDocument();
+ fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
+ expect(screen.getByRole("heading",{name:"Cargo con reintegros"})).toBeInTheDocument();
+ expect(screen.queryByRole("button",{name:/pista/i})).not.toBeInTheDocument();
+});
+
+
+it("R07 transfer answer positions are balanced per session, vary by seed and preserve keys and distractors",()=>{
+ const tasks=OPERATIONS_ROUTE.transfer;
+ const snapshot=JSON.stringify(tasks);
+ const before=[0,0,0,0];for(const t of tasks.slice(0,24))before[t.options.indexOf(t.answer)]++;
+ expect(before).toEqual([14,4,4,2]); // reproduced positional clue in the stored R4 tasks
+ const seedRandom=(seed:number)=>{let state=seed;return ()=>((state=(Math.imul(1664525,state)+1013904223)>>>0)/4294967296);};
+ const first=balanceTransferOptions(tasks,seedRandom(1));
+ for(let seed=1;seed<=256;seed++){
+  const ordered=balanceTransferOptions(tasks,seedRandom(seed));const counts=[0,0,0,0];
+  for(const t of tasks){expect([...ordered[t.id]].sort()).toEqual([...t.options].sort());counts[ordered[t.id].indexOf(t.answer)]++;}
+  expect(counts).toEqual([8,7,7,7]);
+ }
+ expect(balanceTransferOptions(tasks,seedRandom(2))).not.toEqual(first);
+ expect(JSON.stringify(tasks)).toBe(snapshot);
+ expect(()=>balanceTransferOptions([{...tasks[0],answer:"not-present"}])).toThrow();
+ expect(()=>balanceTransferOptions([{...tasks[0],options:[tasks[0].answer,"x","x","y"]}])).toThrow();
+});
+
+
+it("R07 synthesis offers optional active reasoning on every previously added worked example",async()=>{
+ const independent:Record<string,string>={
+  "Divisor agrupado": "5 + 7",
+  "Saldo con dos compras": "200 − (6 × 7 + 20)",
+  "Cajas restantes y cambio por caja": "(12 − 3) × (8 + 2)",
+  "Dos flujos independientes": "4 × 9 − 2 × 5",
+  "Raíz, producto y resta": "7 y 12",
+  "Diferencia con factor común": "[15 − (15 − 4)] × 6",
+  "Raíz racional y diferencia agrupada": "4/10 − (6/10 − 1/10)",
+  "Factor y raíz racional": "1/10",
+  "Productos distintos": "18 − 12",
+  "Raíz, producto y cociente agrupado": "15 − 10 + 2",
+  "Raíz y productos racionales": "4/18 + 4/18 − 5/18"
+};
+ expect(SYNTHESIS_DECISIONS).toHaveLength(11);
+ await mount(path+"&repaso=true");await screen.findByRole("heading",{name:"Modo Repaso: Operaciones"});
+ fireEvent.click(screen.getByRole("button",{name:"Síntesis",exact:true}));
+ for(const decision of SYNTHESIS_DECISIONS){
+  const region=screen.getByRole("region",{name:"Decisión guiada: "+decision.title});
+  expect(within(region).queryByRole("status")).not.toBeInTheDocument();
+  const buttons=within(region).getAllByRole("button");expect(buttons).toHaveLength(3);
+  expect(decision.options[decision.correct]).toBe(independent[decision.title]);
+  for(const option of decision.options.filter(x=>x!==independent[decision.title])){fireEvent.click(within(region).getByRole("button",{name:option,exact:true}));expect(within(region).getByRole("status")).toHaveTextContent("Revisa el procedimiento.");}
+  fireEvent.click(within(region).getByRole("button",{name:independent[decision.title],exact:true}));expect(within(region).getByRole("status")).toHaveTextContent("Correcto.");
+ }
+ fireEvent.click(screen.getByRole("button",{name:"Transferencia",exact:true}));expect(screen.queryByRole("region",{name:/Decisión guiada/})).not.toBeInTheDocument();
+});
+
+
+it("R07 direct transfer for the five previously indirect families has unique exact keys and reproducible error alternatives",()=>{
+ const cases:Record<string,{correct:string,wrong:string[]}>={T25:{correct:String(275-7*19-36),wrong:[275-7*19,275-7*19+36,275-36].map(String)},T26:{correct:String((27-8)*(13+4)),wrong:[(27-8)*13+4,(27-8)*13,27*(13+4)].map(String)},T27:{correct:String(17*(11-4)-6*(11+4)),wrong:[17*(11-4)+6*(11+4),17*(11-4),17*(11-4)-6*(11-4)].map(String)},T28:{correct:String(31-11*2+(26-8)/6),wrong:[31-22+3+3,31-22,(31-11)*2+3].map(String)},T29:{correct:"4/7",wrong:["0","17/14","−1/7"]}};
+ expect((5+3*4-9)/14).toBe(4/7);expect((5+4-9)/14).toBe(0);expect((5+12)/14).toBe(17/14);expect((-5+12-9)/14).toBe(-1/7);
+ for(const [id,o] of Object.entries(cases)){const t=OPERATIONS_ROUTE.transfer.find(t=>t.id===id)!;expect(t.answer).toBe(o.correct);expect(t.options.filter(x=>x!==t.answer).sort()).toEqual(o.wrong.sort());expect(t.hint).toBeUndefined();expect(t.bridge).toBeUndefined();expect(t.visual).toBeUndefined();}
 });

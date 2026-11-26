@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-transfer-lote-20261126",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "16d8af1f1cb3ec021c6dfcaa5b5cf1b1ef0dc335",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "node --import ./scripts/ts-resolve.mjs qa/certification/rdg/audit-r4-transfer-batch.mjs",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-transfer-lote.json",
+      "artifact_sha256": "ccbc3db27b3db733b1c4748ae3cb35a7a24451de3ce27c0ecf79764ef86388df",
+      "scope": "5 transferencias y 42 IDs vinculados; no certifica IDs",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "Operaciones OP-01, OP-03 y OP-04",
+      "action": "COMPLEMENTAR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-transfer-lote.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-transfer-lote.json",
+      "affected_paths": [
+        "src/lib/rdg/operations.ts",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "La matriz detectó cinco familias sin transferencia vinculada; se complementa la ruta existente con cinco casos inéditos, manteniendo sus estados semánticos REVIEW."
+    }
+  ],
+  "next_action": "Esperar CI y navegadores; evaluar suficiencia real de los vínculos y reconciliar contrato/continuidad antes de RDG_READY.",
+  "stop_reason": null
+}

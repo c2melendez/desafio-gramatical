@@ -1,0 +1,47 @@
+{
+  "status": "PASS_TECNICO",
+  "scope": "MAT-ARIT-01",
+  "plan_sha256": "fd8ee4fe4e01f54000672dcd8b6ba8e019d4d56940ee74c568560ba0b7e6d2ad",
+  "bank_size": 450,
+  "route_tasks": 44,
+  "previous_collisions": [
+    {
+      "id": "A12",
+      "candidates": [
+        "math-m2-aritmetica-operaciones-quiz-principiante-6"
+      ]
+    },
+    {
+      "id": "A17",
+      "candidates": [
+        "math-m1-aritmetica-operaciones-clasificar-intermedio-11"
+      ]
+    },
+    {
+      "id": "T21",
+      "candidates": [
+        "math-m2-aritmetica-operaciones-clasificar-intermedio-19"
+      ]
+    }
+  ],
+  "repaired": [
+    {
+      "id": "A12",
+      "answer": "−16",
+      "task_sha256": "e187b1f060156d850c9287ab8053271ef5e26631a81e8ddcbe0b0654d2c39154"
+    },
+    {
+      "id": "A17",
+      "answer": "−32",
+      "task_sha256": "6e5d580fd2d30aa1743cf303fc499d0bf9bc77cf6eb17c3d61fd9214e7e8d504"
+    },
+    {
+      "id": "T21",
+      "answer": "−46",
+      "task_sha256": "fb7b60899de18c60f411294c0e7199d215c966f5d1a96fd6478c75624bc29c47"
+    }
+  ],
+  "remaining_candidates": [],
+  "semantic_pass": 0,
+  "limitations": "Igualdad de conjuntos de cifras es un filtro conservador; no detecta toda equivalencia ni sustituye revisión semántica."
+}

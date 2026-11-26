@@ -87,8 +87,42 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    await page.setViewportSize({width:360,height:800});
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG 360px sin desborde');
    await page.setViewportSize(viewport);
+   // R4: each added bridge must be operable on real browsers, not merely data.
+   for(const [title,answer] of [['Deshacer cambios antes de repartir','12'],['Completar una igualdad','42'],['Dividir una diferencia racional','1/8'],['Comparar costos completos','10'],['Restar un número negativo','9'],['Producto negativo y suma','−16'],['Restar un grupo negativo','23'],['Factor común en dos grupos','75'],['Cancelar productos cruzados','3'],['Hallar el factor faltante','16'],['Comparar antes y después','−32'],['Reconstruir con entradas y salidas','85'],['Calcular el resto y repartirlo','10'],['Dos raíces y dos agrupaciones','33']]){
+    await page.getByRole('button',{name:'Siguiente',exact:true}).click();
+    check(await page.getByRole('heading',{name:title,exact:true}).isVisible(),'RDG R4 '+title);
+    const bridge=page.getByRole('region',{name:'Organizador de razonamiento'});
+    await bridge.getByRole('button',{name:'Revelar siguiente paso'}).click();
+    await bridge.getByRole('button',{name:'Revelar siguiente paso'}).click();
+    check(await bridge.getByText('3 de 3 pasos visibles',{exact:true}).isVisible(),'RDG R4 pasos '+title);
+    await page.getByRole('group',{name:'Respuestas'}).getByRole('button',{name:answer,exact:true}).click();
+    await page.getByRole('button',{name:'Comprobar',exact:true}).click();
+    check(await page.getByRole('status').getByText('¡Bien razonado!').isVisible(),'RDG R4 feedback '+title);
+   }
+   await page.setViewportSize({width:360,height:800});
+   check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG R4 360px sin desborde');
+   await page.setViewportSize(viewport);
+   await page.getByRole('button',{name:'Síntesis',exact:true}).click();
+   for(const title of ['Divisor agrupado','Saldo con dos compras','Cajas restantes y cambio por caja','Dos flujos independientes','Raíz, producto y resta','Diferencia con factor común','Raíz racional y diferencia agrupada','Factor y raíz racional','Productos distintos','Raíz, producto y cociente agrupado','Raíz y productos racionales']){
+    const summary=page.locator('summary').filter({hasText:title+': ver ejemplo resuelto'});
+    check(await summary.count()===1,'RDG síntesis '+title);
+    await summary.click();
+    check(await summary.locator('..').locator('p').isVisible(),'RDG síntesis desplegable '+title);
+   }
    await page.getByRole('button',{name:'Transferencia',exact:true}).click();
    check(await page.getByRole('button',{name:/pista/i}).count()===0,'RDG transferencia sin ayuda');
+   for(let i=0;i<9;i++)await page.getByRole('button',{name:'Siguiente',exact:true}).click();
+   check(await page.getByRole('heading',{name:'Diferencia entre temperaturas',exact:true}).isVisible(),'RDG transferencia signos');
+   check(await page.getByRole('region',{name:'Organizador de razonamiento'}).count()===0,'RDG transferencia signos sin organizador');
+   await page.getByRole('button',{name:'Siguiente',exact:true}).click();
+   await page.getByRole('button',{name:'Siguiente',exact:true}).click();
+   check(await page.getByRole('heading',{name:'Cargo con reintegros',exact:true}).isVisible(),'RDG transferencia resta anidada');
+   check(await page.getByRole('button',{name:/pista/i}).count()===0,'RDG resta anidada sin ayuda');
+   for(const title of ['Agrupar cuatro productos','Dos productos cruzados','Equilibrar el producto','Divisor agrupado','Cero como dividendo','Diferencia con factor común','Resta de una diferencia racional','Factor exterior y raíz racional','Diferencia entre estados','Estado anterior del almacén','Retirar y repartir','Dos grupos con raíces','Presupuesto después de dos compras','Cambios en cajas y contenido','Diferencia de productos independientes','Jerarquía con divisor y raíz','Raíz y fracciones con producto']){
+    await page.getByRole('button',{name:'Siguiente',exact:true}).click();
+    check(await page.getByRole('heading',{name:title,exact:true}).isVisible(),'RDG transferencia '+title);
+    check(await page.getByRole('region',{name:'Organizador de razonamiento'}).count()===0,'RDG transferencia sin organizador '+title);
+   }
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG sin desborde horizontal');
    await page.screenshot({path:'m4-browser-evidence/rdg-'+engineName+'-'+profile+'.png',fullPage:true,animations:'disabled'});
    await page.reload({waitUntil:'load'}); await page.getByRole('heading',{name:'Modo Repaso: Operaciones'}).waitFor({state:'visible'});

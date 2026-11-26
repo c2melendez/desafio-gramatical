@@ -1,4 +1,5 @@
 import {createHash} from "node:crypto";
+import {execFileSync} from "node:child_process";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
@@ -6,12 +7,15 @@ import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {mathM3HistoricalPool as mathM3Pool} from "@/lib/math-m3";
 const load=(path:string)=>JSON.parse(readFileSync(path,"utf8"));
 const sha=(value:Buffer|string)=>createHash("sha256").update(value).digest("hex");
-const contract=load("qa/certification/rdg/contracts/MAT-ARIT-01.json");
+const contract=load("qa/certification/rdg/contracts/MAT-ARIT-01-R4-candidate.json");
+const historical=load("qa/certification/rdg/contracts/MAT-ARIT-01.json");
 const evidence=load("qa/certification/rdg/evidence/MAT-ARIT-01-P2-preflight.json");
 const assertDependencies=(expected:Record<string,string>,read:(p:string)=>Buffer)=>{
  for(const [path,hash] of Object.entries(expected))if(sha(read(path))!==hash)throw Error("RDG dependency changed: "+path);
 };
 it("R05/R06 verifies exact published plan, route, data and source hashes and detects mutations",()=>{
+ expect(historical.status).toBe("RDG_READY");expect(historical.revision).toBe("3");
+ expect(contract.status).toBe("RDG_EN_CURSO");
  assertDependencies(contract.dependency_hashes,p=>readFileSync(p));
  expect(contract.plan_sha256).toBe(OPERATIONS_ROUTE.planSha256);
  expect(contract.revision).toBe(OPERATIONS_ROUTE.revision);
@@ -29,3 +33,8 @@ it("reconciles all 450 archived real preflight records with archived R3 runtime 
  for(const r of evidence.records){const item=map.get(r.id);expect(item,r.id).toBeDefined();check(r,item!);expect(r.semantic_status).toBe("REVIEW");}
  const r=evidence.records[0],x=map.get(r.id)!;expect(()=>check(r,{...x,expected:"99999"})).toThrow("Stale item");
 });
+
+it("R4 candidate plan passes the actual structural validator against catalog and PDF hashes",()=>{
+ const result=JSON.parse(execFileSync(process.execPath,["--import","./scripts/ts-resolve.mjs","qa/certification/rdg/validate.mjs",contract.plan_path],{encoding:"utf8"}));
+ expect(result.status).toBe("PASS_STRUCTURAL");expect(result.sha256).toBe(contract.plan_sha256);expect(result.block_id).toBe("MAT-ARIT-01");
+},30000);

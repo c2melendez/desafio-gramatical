@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-factores-20261126",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "a4da67925cbea9f472db77fde705a240da970a22",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "node --import ./scripts/ts-resolve.mjs qa/certification/rdg/audit-r4-factors.mjs",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-factores.json",
+      "artifact_sha256": "aee9e20b1124f33b11e59a70507fcc92ab6ec35d2e472b54d543b2c20ee850be",
+      "scope": "6 actividades y 27 IDs de familias; no certifica IDs",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "Operaciones OP-03: factorización, cancelación y factor faltante",
+      "action": "COMPLEMENTAR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-factores.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-factores.json",
+      "affected_paths": [
+        "src/lib/rdg/operations.ts",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "La ruta previa no modelaba los procedimientos compuestos de tres familias avanzadas con 27 IDs; se extiende el organizador existente y su transferencia."
+    }
+  ],
+  "next_action": "Ejecutar CI y navegador, evaluar brechas restantes, reconciliar contrato y continuidad antes de RDG_READY.",
+  "stop_reason": null
+}

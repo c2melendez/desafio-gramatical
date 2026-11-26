@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-estimulos-20261126",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "3d280eadc0b73d1e4a363678da8c0bbaa3115ad0",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "node --import ./scripts/ts-resolve.mjs qa/certification/rdg/audit-r4-stimuli.mjs",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-estimulos.json",
+      "artifact_sha256": "7c2a5da12fedbdb19e0b4b191368c834d7892a708b627f7b40376905430b5ba3",
+      "scope": "44 actividades frente a 450 estímulos por multiconjunto de cifras; no certifica IDs",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "R4 A12, A17 y T21: separación de estímulos",
+      "action": "CORREGIR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-estimulos.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-estimulos.json",
+      "affected_paths": [
+        "src/lib/rdg/operations.ts",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "A12 reproducía una operación del banco, A17 compartía datos y cambios; T21 coincidía en cifras reordenadas. Se conservan objetivos y mecánicas, se cambian datos y se verifican opciones y respuestas."
+    }
+  ],
+  "next_action": "CI y navegador; revisar los límites del filtro, suficiencia global y reconciliar contrato/continuidad antes de READY.",
+  "stop_reason": null
+}

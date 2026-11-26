@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-signos-20261126",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "a8061de0b0c446bde1da641048a1409ebcd872a4",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "node --import ./scripts/ts-resolve.mjs qa/certification/rdg/audit-r4-signs.mjs",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-signos.json",
+      "artifact_sha256": "0b1398391169e850e5c56b15eb02364e7ffd8e61dd6e41a27b4d35b070c0c6a2",
+      "scope": "4 actividades de repaso y 15 IDs afectados; no certifica IDs",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "Operaciones OP-01",
+      "action": "COMPLEMENTAR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-signos.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-signos.json",
+      "affected_paths": [
+        "src/lib/rdg/operations.ts",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "La ruta previa no enseñaba explícitamente resta de un negativo ni producto con signos distintos presentes en 15 IDs; se amplía el motor y ruta existentes con dos organizadores y transferencia."
+    }
+  ],
+  "next_action": "Esperar CI de esta revisión; comprobar navegador y paridad de las demás familias; reconciliar contrato y continuidad antes de RDG_READY.",
+  "stop_reason": null
+}

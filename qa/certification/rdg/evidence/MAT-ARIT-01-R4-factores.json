@@ -1,0 +1,76 @@
+{
+  "status": "PASS_TECNICO",
+  "scope": "MAT-ARIT-01",
+  "route_revision": "4",
+  "plan_sha256": "05028fc380493f0faee7b41578a788ca1113f0303edc7f60ccd9b2eeb00fad63",
+  "bank_size": 450,
+  "records": [
+    {
+      "id": "A14",
+      "answer": "75",
+      "task_sha256": "315670933ce4363af11714c55fa21bea7ec2646083da4041c9027228d6c3eed8"
+    },
+    {
+      "id": "A15",
+      "answer": "3",
+      "task_sha256": "f695d4a0d95fd886d6be1186c37ae99558fc948e78178010c873605ee632a530"
+    },
+    {
+      "id": "A16",
+      "answer": "16",
+      "task_sha256": "f96e462c91dbfb45d9784e395abd5007bdd3db53deff6d2aac9c94ee6f6f5ffc"
+    },
+    {
+      "id": "T13",
+      "answer": "50",
+      "task_sha256": "a4269f37dea088e87d886abc38a38e5a276be851a8ea9ff9ec44a33a7684d011"
+    },
+    {
+      "id": "T14",
+      "answer": "2",
+      "task_sha256": "79549c2dc2a4d80e9c9cfe9b142e0c347351762c364648f89a158afce91674b3"
+    },
+    {
+      "id": "T15",
+      "answer": "15",
+      "task_sha256": "cfa06cc5ee0521e4520fbfee918656f90c006f2ebf40dfd06bc41c26e468a57e"
+    }
+  ],
+  "families": {
+    "factor-comun-dos-grupos": [
+      "math-m3-aritmetica-operaciones-clasificar-avanzado-3",
+      "math-m3-aritmetica-operaciones-clasificar-avanzado-4",
+      "math-m3-aritmetica-operaciones-clasificar-avanzado-5",
+      "math-m3-aritmetica-operaciones-quiz-avanzado-3",
+      "math-m3-aritmetica-operaciones-quiz-avanzado-4",
+      "math-m3-aritmetica-operaciones-quiz-avanzado-5",
+      "math-m3-aritmetica-operaciones-construir-avanzado-3",
+      "math-m3-aritmetica-operaciones-construir-avanzado-4",
+      "math-m3-aritmetica-operaciones-construir-avanzado-5"
+    ],
+    "cancelacion-cruzada-de-productos": [
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-6",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-7",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-8",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-6",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-7",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-8",
+      "math-m2-aritmetica-operaciones-construir-avanzado-6",
+      "math-m2-aritmetica-operaciones-construir-avanzado-7",
+      "math-m2-aritmetica-operaciones-construir-avanzado-8"
+    ],
+    "factor-desconocido-tras-cancelar": [
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-15",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-16",
+      "math-m2-aritmetica-operaciones-clasificar-avanzado-17",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-15",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-16",
+      "math-m2-aritmetica-operaciones-quiz-avanzado-17",
+      "math-m2-aritmetica-operaciones-construir-avanzado-15",
+      "math-m2-aritmetica-operaciones-construir-avanzado-16",
+      "math-m2-aritmetica-operaciones-construir-avanzado-17"
+    ]
+  },
+  "semantic_certification": "NOT_GRANTED",
+  "limits": "Tres familias y colisión literal; no prueba paridad completa ni eficacia empírica."
+}

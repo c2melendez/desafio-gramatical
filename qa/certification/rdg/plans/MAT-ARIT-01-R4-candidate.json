@@ -1,0 +1,993 @@
+{
+  "schema_version": "7.8",
+  "block_id": "MAT-ARIT-01",
+  "architecture_sha256": "eb1aa817e7ea491d7014f9666947315b84111c14d3843170977cd052eb37912e",
+  "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+  "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+  "route_specs": [
+    {
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "sources": [
+        {
+          "source_id": "PHUMA-UNAH-2026",
+          "sha256": "cd248afe2a90605b1037f3b2fa6d32f070a6a457a6c4830d24b6c6784eaeabf0",
+          "pages": [
+            7,
+            54,
+            56,
+            58,
+            61
+          ],
+          "finding": "Inspección visual de edición institucional en línea: p. impresa 6 incluye operaciones con reales; pp. impresas 53 y 55 muestran aplicación de cálculo combinado en problemas contextualizados. Son anclas de operación, no evidencia de equivalencia psicométrica ni verificación local de bytes; CI debe cotejar copia original. Además, reactivos 39 y 50 (páginas físicas 58 y 61) muestran combinación de raíz exacta, fracciones con signos y operaciones de diferente prioridad. Se amplía el objetivo sin reproducir reactivos originales."
+        }
+      ],
+      "didactic_evidence": [
+        {
+          "url": "https://educationendowmentfoundation.org.uk/newsletter/improving-mathematics-in-key-stages-2-and-3-email-course-2",
+          "accessed_at": "2026-11-25",
+          "finding": "Usar representaciones con finalidad concreta y retirar el apoyo gradualmente; recta numérica para enteros, no para representar todos los pasos simbólicos simultáneamente.",
+          "limitations": "Guía de enseñanza escolar; extrapolación razonada a aspirantes UNAH, no evidencia de eficacia de esta aplicación."
+        },
+        {
+          "url": "https://ies.ed.gov/ncee/rel/algebra-middle-and-high-school/",
+          "accessed_at": "2026-11-25",
+          "finding": "Contrastar soluciones correctas y erróneas, centrarse en estructura y explicar pasos antes de práctica independiente.",
+          "limitations": "Enfocada en álgebra escolar; aplicable como principio de transición aritmética, no como validación PHUMA."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "OP-01",
+          "statement": "Evaluar expresiones con agrupación y operaciones de igual o diferente prioridad, incluyendo signos.",
+          "operation": "Identificar y aplicar precedencia y asociatividad de evaluación.",
+          "depth": "De un paso visible a dos o tres operaciones sin ayudas; reconocer división por cero como no definida.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "OP-02",
+          "statement": "Traducir condiciones modificadas y problemas breves a expresiones equivalentes antes de calcular.",
+          "operation": "Interpretar cambios, seleccionar operación y comprobar resultado.",
+          "depth": "Modificar términos y factores, distinguir cambios independientes, resolver contextualización sin pistas.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "OP-03",
+          "statement": "Justificar equivalencia mediante distributividad y cancelación de términos iguales.",
+          "operation": "Transformar expresiones y verificar equivalencia por cálculo independiente.",
+          "depth": "Distribuir sobre todos los sumandos, incluyendo signo negativo; no cancelar sumandos que no son idénticos.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "OP-04",
+          "statement": "Resolver expresiones combinadas con racionales, signos y raíces cuadradas exactas.",
+          "operation": "Reconocer el alcance de la raíz, operar racionales con denominador común y aplicar jerarquía.",
+          "depth": "Integrar raíz principal no negativa, fracciones y varias operaciones sin pistas; distinguir errores de signos y precedencia.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        }
+      ],
+      "foundations": [
+        "Recta numérica para orden, opuesto y suma de enteros; multiplicación y división como operaciones inversas; división por cero no definida.",
+        "Paréntesis agrupan; multiplicar/dividir tienen prioridad igual; sumar/restar tienen prioridad igual. En cada grupo igual se opera de izquierda a derecha.",
+        "Propiedad distributiva a(b+c)=ab+ac; aplicar signo de resta a todo el grupo; fracciones y potencias completas se desarrollan en subtemas relacionados.",
+        "Raíz cuadrada principal: √(a/b)=√a/√b para a≥0, b>0 y raíces exactas; equivalencia de fracciones y denominador común positivo. Enseñar aquí el mínimo indispensable y profundizar en sus subtemas propios.",
+        "Contraejemplos de dominio real: 0÷9=0; 9÷0 no está definido. √0=0; √(-9) no tiene valor real; la raíz principal de 9 es 3, no ±3.",
+        "Restar un número negativo equivale a sumar su opuesto; el producto de un negativo por un positivo es negativo.",
+        "Un signo menos delante de un grupo indica restar el valor completo del grupo, que puede ser negativo.",
+        "La distributividad permite extraer un factor común en dos grupos, cancelar productos cruzados y aislar un factor faltante con la operación inversa.",
+        "Modelar estados y movimientos, reparto del resto, comparación orientada y agrupaciones con dos raíces."
+      ],
+      "bridges": [
+        "De desplazamientos y cantidades al símbolo; luego árbol de expresión con subexpresiones y operación raíz.",
+        "Comparar árbol de expresión (muestra dependencia) con recta numérica (muestra signo): usar secuencialmente, no superponer; descartar glosario y arrastre obligatorio.",
+        "R4 candidato C09: reconstruir cantidades por operaciones inversas; representar igualdad como dos valores equilibrados; convertir y dividir racionales; comparar costos completos con diferencia orientada.",
+        "Usar operaciones inversas para interpretar la resta de un negativo; representar la multiplicación negativa como suma repetida.",
+        "Evaluar agrupación interna, producto y grupo exterior antes de aplicar la resta; enlazar con el opuesto.",
+        "Agrupar productos con signos, distribuir la resta exterior y comprobar una igualdad después de simplificar.",
+        "Separar original/nuevo, invertir entradas y salidas, calcular el resto antes del reparto y evaluar dos agrupaciones antes del producto."
+      ],
+      "common_errors": [
+        "Multiplicar antes de dividir por regla mnemónica mal interpretada; remediar con dos operaciones del mismo rango.",
+        "Sumar antes de multiplicar sin agrupación; comparar paréntesis explícitos.",
+        "Aplicar factor solo al primer sumando; sombrear cada rama y validar por evaluación directa.",
+        "Modificar el resultado en vez de los operandos; distinguir condición original y nueva.",
+        "Interpretar √9 como ±3, sumar denominadores o aplicar la raíz fuera de su alcance; remediar con cuadrado inverso, unidades fraccionarias y límites del radical.",
+        "Confundir restar un negativo con restar su magnitud; omitir el signo del producto o cambiar la prioridad.",
+        "Aplicar el signo exterior a solo parte del grupo o detenerse en el valor del corchete.",
+        "Omitir un grupo, cambiar mal el signo de un término o tomar el valor completo del lado como factor faltante.",
+        "Invertir la comparación, deshacer un solo movimiento, repartir el total inicial u omitir una raíz o la resta final."
+      ],
+      "activities": [
+        {
+          "id": "A1",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "ACTIVAR/CONECTAR",
+          "interaction": "Seleccionar dirección y posición por teclado o toque, revelar explicación.",
+          "representation": "Recta numérica con marcas de -10 a 10, punto móvil y lectura textual de posición.",
+          "prompt": "Desde -4 suma 6; después resta 3. ¿Dónde termina?",
+          "expected_reasoning": "-4+6=2; 2-3=-1.",
+          "feedback": "Sumar positivo mueve a la derecha; restar positivo mueve a la izquierda; muestra ambas posiciones.",
+          "help": "Mostrar desplazamiento paso a paso sin castigo.",
+          "acceptance": "Seleccionar -1, distinguir posición de distancia; alternativa textual idéntica."
+        },
+        {
+          "id": "A2",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "PREDECIR/EXPLORAR",
+          "interaction": "Elegir el primer nodo resoluble y comparar dos expresiones.",
+          "representation": "Árbol de dependencias con fichas de operación y resultado intermedio.",
+          "prompt": "Compara 11-3×2 y (11-3)×2.",
+          "expected_reasoning": "Primera: producto 6, resultado 5. Segunda: resta 8, resultado 16.",
+          "feedback": "El paréntesis altera qué operación debe resolverse primero.",
+          "help": "Señalar grupos y resaltar precedencia; retirar en siguiente intento.",
+          "acceptance": "Calcular ambos resultados; una elección incorrecta explica el orden, sin puntaje."
+        },
+        {
+          "id": "A3",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Ordenar pasos con botones subir/bajar; sin depender de drag.",
+          "representation": "Cadena simbólica y pares de operaciones de igual prioridad.",
+          "prompt": "Resuelve 42÷7×3-5; ¿por qué no se multiplica 7×3 primero?",
+          "expected_reasoning": "42÷7=6; 6×3=18; 18-5=13.",
+          "feedback": "División y multiplicación comparten prioridad; de izquierda a derecha.",
+          "help": "Separar niveles de precedencia; mostrar primer paso opcional.",
+          "acceptance": "13; mutantes: 42÷(7×3)-5=-3; 42÷7×(3-5)=-12; omitir resta=18."
+        },
+        {
+          "id": "A4",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "APLICAR",
+          "interaction": "Cambiar dos operandos en una ficha de expresión antes de ejecutar cálculo.",
+          "representation": "Tabla antes/después vinculada a expresión.",
+          "prompt": "Para (31+29)×11, disminuye el primer sumando en 3 y aumenta el factor en 2.",
+          "expected_reasoning": "(28+29)×13=741; se modifican los operandos originales.",
+          "feedback": "No se suma ni se resta el cambio directamente al resultado original.",
+          "help": "Marcar los dos valores a modificar; ocultar resultado.",
+          "acceptance": "Expresión (28+29)×13 y resultado 741; no admitir respuesta original 660."
+        },
+        {
+          "id": "A5",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "EXPLORAR/FORMALIZAR",
+          "interaction": "Seleccionar ramas del factor y cancelar términos idénticos.",
+          "representation": "Diagrama de distribución y cadena de equivalencia con texto.",
+          "prompt": "Simplifica 7(12-5)-7×12 sin evaluar primero el paréntesis.",
+          "expected_reasoning": "7×12-7×5-7×12=-35.",
+          "feedback": "El factor multiplica ambos términos; solo términos opuestos iguales se cancelan.",
+          "help": "Revelar ramas y signos por pasos, no el resultado final.",
+          "acceptance": "-35; comprobar evaluación directa 49-84 y detectar signo invertido."
+        },
+        {
+          "id": "A6",
+          "objective_ids": [
+            "OP-04"
+          ],
+          "function": "EXPLORAR/FORMALIZAR",
+          "interaction": "Elegir raíz exacta y convertir unidades fraccionarias mediante botones, luego combinar signos.",
+          "representation": "Cuadrados de área y banda de fracciones de igual unidad, expresión simbólica sincronizada.",
+          "prompt": "Resuelve √(9/49)+2/7−6/7.",
+          "expected_reasoning": "Raíz principal 3/7; (3+2−6)/7=−1/7.",
+          "feedback": "La raíz principal es no negativa y los denominadores iguales representan la misma unidad; se operan numeradores.",
+          "help": "Comprobar (3/7)²; mostrar banda de séptimos y retirar apoyo.",
+          "acceptance": "Resultado −1/7; rechazar raíz negativa y suma de denominadores."
+        },
+        {
+          "id": "A7",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar paso a paso de forma voluntaria con botones; seleccionar respuesta y recibir feedback causal.",
+          "representation": "Organizador secuencial de tres nodos: Estado final → Invertir el cambio → Recuperar cada grupo",
+          "prompt": "Se vacían 7 bolsas con igual cantidad de fichas. Se retiran 8 fichas del total y quedan 76. ¿Cuántas fichas había en cada bolsa?",
+          "expected_reasoning": "El retiro se invierte sumando: 76 + 8 = 84. Ahora divide 84 entre 7 bolsas: 12. Comprueba 7 × 12 − 8 = 76.",
+          "feedback": "84 es el total original; falta dividirlo entre las 7 bolsas. Volviste a restar el retiro: hay que deshacerlo sumando 8. Dividiste el total posterior al retiro; primero recupera el total anterior.",
+          "help": "Trabaja hacia atrás: deshaz el retiro y después el reparto.",
+          "acceptance": "Respuesta 12; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A8",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar paso a paso de forma voluntaria con botones; seleccionar respuesta y recibir feedback causal.",
+          "representation": "Organizador secuencial de tres nodos: Lado izquierdo conocido → Lado derecho → Mantener equilibrio",
+          "prompt": "Completa 6 × (15 − 4) + □ = 6 × (15 + 3). ¿Qué número sustituye el cuadro?",
+          "expected_reasoning": "El lado conocido de la izquierda vale 66 y el derecho 108. El faltante es 108 − 66 = 42. Comprueba 66 + 42 = 108.",
+          "feedback": "Se restaron los cambios en lugar de sumar 4 y 3 y multiplicar por 6. Encontraste la diferencia entre los paréntesis, pero omitiste el factor 6. 108 es todo el lado derecho; falta restar el producto conocido.",
+          "help": "Una igualdad conserva el mismo valor en los dos lados.",
+          "acceptance": "Respuesta 42; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A9",
+          "objective_ids": [
+            "OP-04"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar paso a paso de forma voluntaria con botones; seleccionar respuesta y recibir feedback causal.",
+          "representation": "Organizador secuencial de tres nodos: Raíz principal → Unidad común → Dividir el grupo",
+          "prompt": "Calcula (√(49/121) − 3/22) ÷ 4. Expresa una fracción simplificada.",
+          "expected_reasoning": "La raíz principal es 7/11 = 14/22. La diferencia vale 11/22 = 1/2. Dividir por 4 equivale a multiplicar por 1/4: 1/8.",
+          "feedback": "Multiplicaste por 4; dividir por 4 significa multiplicar por 1/4. Es el valor dentro del paréntesis; todavía falta dividir por 4. Elegiste la raíz negativa; la raíz cuadrada principal no es negativa.",
+          "help": "Primero resuelve el radical y unifica los denominadores; al final divide.",
+          "acceptance": "Respuesta 1/8; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A10",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar paso a paso de forma voluntaria con botones; seleccionar respuesta y recibir feedback causal.",
+          "representation": "Organizador secuencial de tres nodos: Costo A → Costo B → Comparación orientada",
+          "prompt": "Por 11 entradas, A cobra L 13 por entrada más L 30 de gestión; B cobra L 16 por entrada más L 7 de gestión. ¿Cuánto es el costo de B menos el de A, en lempiras?",
+          "expected_reasoning": "A: 11 × 13 + 30 = 173. B: 11 × 16 + 7 = 183. La diferencia orientada es 183 − 173 = 10. Los cargos fijos se suman una sola vez.",
+          "feedback": "Comparaste solo los precios por entrada; faltan los cargos de gestión. Calculaste el total de B, pero falta restar el de A. Invertiste el orden de la diferencia.",
+          "help": "Construye una expresión completa por alternativa y resta B menos A.",
+          "acceptance": "Respuesta 10; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A11",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar pasos voluntarios y responder con retroalimentación causal.",
+          "representation": "Organizador secuencial de tres pasos",
+          "prompt": "Calcula 8 − (−3) − 2.",
+          "expected_reasoning": "Restar −3 equivale a sumar 3, su opuesto: 8 + 3 − 2 = 9. Comprueba que 11 + (−3) = 8.",
+          "feedback": "Trataste la resta de −3 como si fuera restar 3: 8 − 3 − 2 = 3. Calculaste 8 − (−3), pero omitiste restar 2. Después de sumar 3, sumaste 2 en vez de restarlo.",
+          "help": "Restar una cantidad es sumar su opuesto; después conserva la última resta.",
+          "acceptance": "Respuesta 9; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A12",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar pasos voluntarios y responder con retroalimentación causal.",
+          "representation": "Organizador secuencial de tres pasos",
+          "prompt": "Calcula −6 × 3 + 2.",
+          "expected_reasoning": "Un número negativo por uno positivo da un producto negativo: −6 × 3 = −18. Después −18 + 2 = −16.",
+          "feedback": "Omitiste el signo negativo del producto: 6 × 3 + 2 = 20. Agrupaste 3 + 2 primero: −6 × (3 + 2) = −30, pero no hay paréntesis. Restaste 2 en vez de sumarlo: −18 − 2 = −20.",
+          "help": "Calcula primero el producto y conserva el signo antes de sumar.",
+          "acceptance": "Respuesta −16; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A13",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar pasos voluntarios y responder con retroalimentación causal.",
+          "representation": "Organizador secuencial: operación interna → grupo → resta exterior",
+          "prompt": "Calcula 20 − [7 − 2 × (6 − 1)].",
+          "expected_reasoning": "Primero 6 − 1 = 5 y 2 × 5 = 10. El grupo vale 7 − 10 = −3. Por tanto, 20 − (−3) = 20 + 3 = 23.",
+          "feedback": "Restaste 7 y también 10: el signo de resta exterior afecta al grupo completo. Omitiste el producto dentro del grupo: 20 − 7 = 13. Calculaste el grupo, pero falta restarlo de 20.",
+          "help": "Evalúa el paréntesis, el producto y el corchete antes de aplicar la resta exterior.",
+          "acceptance": "Respuesta 23; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A14",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de agrupación y equivalencia",
+          "prompt": "Simplifica 12 × 7 − 12 × 2 + 3 × 7 − 3 × 2.",
+          "expected_reasoning": "Agrupa 12 × (7 − 2) + 3 × (7 − 2). El factor común es (7 − 2); queda (12 + 3) × 5 = 75.",
+          "feedback": "Conservaste solo el primer grupo: 12 × (7 − 2) = 60. Sumaste los términos que debían restarse: 12 × 7 + 12 × 2 + 3 × 7 + 3 × 2 = 135. Omitiste restar 3 × 2: 84 − 24 + 21 = 81.",
+          "help": "Agrupa los dos primeros productos y luego los dos últimos; busca el mismo paréntesis.",
+          "acceptance": "Respuesta 75; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A15",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de agrupación y equivalencia",
+          "prompt": "Simplifica 6 × (5 − 2) − 5 × (6 − 3).",
+          "expected_reasoning": "Distribuye el signo exterior: 6 × 5 − 6 × 2 − 5 × 6 + 5 × 3. Los productos 6 × 5 y −5 × 6 se cancelan; −12 + 15 = 3.",
+          "feedback": "Sumaste los dos productos completos: 18 + 15 = 33, pero el segundo se resta. Distribuiste el menos sin cambiar el signo del último término: 30 − 12 − 30 − 15 = −27. Calculaste solo el primer producto y omitiste restar el segundo.",
+          "help": "Distribuye ambos grupos y aplica el signo menos a cada término del segundo.",
+          "acceptance": "Respuesta 3; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A16",
+          "objective_ids": [
+            "OP-03"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de agrupación y equivalencia",
+          "prompt": "Completa 6 × (8 + 8) − 6 × 8 = 3 × □. ¿Qué número sustituye el cuadro?",
+          "expected_reasoning": "El lado izquierdo se simplifica a 6 × 8 = 48. Como 3 × □ = 48, el número es 48 ÷ 3 = 16. Verifica 3 × 16 = 48.",
+          "feedback": "Hallaste el valor del lado izquierdo, pero falta dividirlo entre 3. Omitiste la resta del producto: 6 × (8 + 8) ÷ 3 = 32. Simplificaste solo los términos dentro del paréntesis y omitiste los factores exteriores.",
+          "help": "Primero simplifica el lado izquierdo y después deshaz la multiplicación por 3.",
+          "acceptance": "Respuesta 16; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A17",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Una expresión vale (14 + 8) × 6. Aumenta el segundo sumando en 3 y reduce el factor en 2. ¿Cuál es el valor nuevo menos el original?",
+          "expected_reasoning": "Original: (14 + 8) × 6 = 132. Nuevo: (14 + 11) × 4 = 100. La diferencia orientada es 100 − 132 = −32.",
+          "feedback": "Invertiste el orden: original menos nuevo es 132 − 100 = 32. Calculaste el valor nuevo, pero falta restar el original. Es el valor original, sin comparar los dos estados.",
+          "help": "Calcula los dos estados por separado y resta nuevo menos original.",
+          "acceptance": "Respuesta −32; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A18",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Un depósito termina con 100 piezas después de recibir 4 cajas de 6 piezas y retirar 9 piezas. ¿Cuántas piezas tenía antes?",
+          "expected_reasoning": "La entrada fue 4 × 6 = 24. Para volver atrás desde 100, deshaz el retiro sumando 9 y deshaz la entrada restando 24: 100 + 9 − 24 = 85. Comprueba 85 + 24 − 9 = 100.",
+          "feedback": "Aplicaste de nuevo la entrada y el retiro: 100 + 24 − 9 = 115. Deshiciste el retiro, pero omitiste deshacer la entrada. Deshiciste la entrada, pero omitiste deshacer el retiro.",
+          "help": "Identifica el total recibido y revierte cada movimiento desde el estado final.",
+          "acceptance": "Respuesta 85; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A19",
+          "objective_ids": [
+            "OP-02"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Hay 10 cajas con 8 piezas cada una. Se retiran 2 grupos de 5 piezas y el resto se reparte entre 7 personas por igual. ¿Cuántas piezas recibe cada persona?",
+          "expected_reasoning": "Hay 10 × 8 = 80 piezas; se retiran 2 × 5 = 10. Quedan 70, que repartidas entre 7 personas dan 10 por persona.",
+          "feedback": "Calculaste el resto, pero falta dividirlo entre las 7 personas. Calculaste el total inicial, sin retirar ni repartir. Dividiste 80 entre 10 e ignoraste el retiro y el reparto entre 7 personas.",
+          "help": "Calcula total y retiro como productos, resta y después divide el resto.",
+          "acceptance": "Respuesta 10; cuatro alternativas distintas y navegación por teclado."
+        },
+        {
+          "id": "A20",
+          "objective_ids": [
+            "OP-01",
+            "OP-04"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
+          "representation": "Organizador secuencial de datos y operaciones",
+          "prompt": "Calcula (√64 − 3) × (4 + √9) − 2.",
+          "expected_reasoning": "Las raíces principales son 8 y 3. Los grupos valen 8 − 3 = 5 y 4 + 3 = 7. El resultado es 5 × 7 − 2 = 33.",
+          "feedback": "Calculaste el producto 5 × 7, pero omitiste restar 2. Sumaste los grupos en vez de multiplicarlos: 5 + 7 − 2 = 10. Sumaste 3 en el primer grupo en vez de restarlo: (8 + 3) × 7 − 2 = 75.",
+          "help": "Calcula cada raíz principal, completa ambos grupos y luego multiplícalos.",
+          "acceptance": "Respuesta 33; cuatro alternativas distintas y navegación por teclado."
+        }
+      ],
+      "worked_examples": [
+        "Ejemplo original: 27-4(3+2)=27-20=7; representar el paréntesis como nodo previo al producto.",
+        "Mismo conjunto de operandos con diferente agrupación: (19-7)×2=24 frente a 19-7×2=5.",
+        "Distributividad con signo: 9(8-3)-9×8=-27; comprobar 45-72.",
+        "Ejemplo original: √(25/64)−1/4+3/8=5/8−2/8+3/8=3/4; comprobar denominador común y raíz por cuadrado.",
+        "Divisor agrupado: 84 ÷ (5 + 7) = 84 ÷ 12 = 7. El divisor es todo el paréntesis.",
+        "Saldo con dos compras: Con L 200, comprar 6 artículos a L 7 y otro por L 20 deja 200 − (6 × 7 + 20) = 200 − 62 = L 138.",
+        "Cajas restantes y cambio por caja: De 12 cajas con 8 piezas se retiran 3 cajas y se agregan 2 piezas a cada caja restante: (12 − 3) × (8 + 2) = 90 piezas.",
+        "Dos flujos independientes: Entran 4 paquetes de 9 unidades y salen 2 de 5: 4 × 9 − 2 × 5 = 36 − 10 = 26 unidades netas.",
+        "Raíz, producto y resta: √49 + 4 × 3 − 5 = 7 + 12 − 5 = 14: raíz y producto antes de sumar y restar.",
+        "Diferencia con factor común: 15 × 6 − (15 − 4) × 6 = [15 − (15 − 4)] × 6 = 4 × 6 = 24.",
+        "Raíz racional y diferencia agrupada: √(4/25) − (3/5 − 1/10) = 2/5 − 1/2 = 4/10 − 5/10 = −1/10.",
+        "Factor y raíz racional: 2 × (√(9/100) − 1/5) + 1/10 = 2 × (3/10 − 2/10) + 1/10 = 3/10.",
+        "Productos distintos: 9 × (4 − 2) − 2 × (4 + 2) = 18 − 12 = 6. Se resta el segundo producto completo.",
+        "Raíz, producto y cociente agrupado: 15 − √25 × 2 + (10 − 4) ÷ 3 = 15 − 10 + 2 = 7.",
+        "Raíz y productos racionales: √(4/81) + 2 × (1/9) − 5/18 = 2/9 + 2/9 − 5/18 = 3/18 = 1/6."
+      ],
+      "transfer_tasks": [
+        {
+          "prompt": "Una bodega recibe 6 cajas de 14 piezas y retira 3 paquetes de 8 piezas. ¿Cuántas piezas se agregan netas? Opciones 60, 84, 108, 76.",
+          "solution": "6×14-3×8=84-24=60.",
+          "oracle": "Comprobar por sumas repetidas independientes y diferencia; P1 ejecutará oráculo y mutantes.",
+          "objective_ids": [
+            "OP-01",
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Una receta usa (37+19)×11 unidades. El primer componente disminuye 4 y el multiplicador aumenta 1. Selecciona el valor nuevo: 624, 616, 672, 572.",
+          "solution": "(33+19)×12=624.",
+          "oracle": "Sumar doce veces 52; verificar alternativas únicas.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Sin desarrollar todo, simplifica 11(23-8)-11×23. Opciones -88, 88, 165, -253.",
+          "solution": "-11×8=-88.",
+          "oracle": "Evaluación directa 165-253=-88; contraste algebraico y mutación de signo.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula √(16/81)−5/9+1/3. Opciones 2/9, −4/9, 2/27, 4/9.",
+          "solution": "4/9−5/9+3/9=2/9.",
+          "oracle": "Cuadrar 4/9 y verificar 16/81; cálculo racional exacto con denominador 9.",
+          "objective_ids": [
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Calcula 14−√36+3×5−24÷8. Opciones 20, 26, 5, 52.",
+          "solution": "14−6+15−3=20.",
+          "oracle": "Evaluar árbol de expresión con raíz principal y operaciones independientes; comprobar alternativas únicas.",
+          "objective_ids": [
+            "OP-01",
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "De 5 cajas con igual cantidad de botones se vacía todo, se retiran 17 botones y quedan 113. ¿Cuántos botones contenía cada caja? Opciones: 113/5, 26, 130, 96/5",
+          "solution": "113 + 17 = 130; 130 ÷ 5 = 26. Verifica 5 × 26 − 17 = 113.",
+          "oracle": "Evaluación independiente desde datos visibles; comprobar alternativas únicas y ausencia de ayuda reveladora.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Completa 8 × (19 − 6) + □ = 8 × (19 + 2). Opciones: 168, 32, 64, 8",
+          "solution": "El producto izquierdo es 104; el derecho, 168. La diferencia es 64; 104 + 64 = 168.",
+          "oracle": "Evaluación independiente desde datos visibles; comprobar alternativas únicas y ausencia de ayuda reveladora.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula (√(64/169) − 5/26) ÷ 3. Simplifica. Opciones: 11/26, 11/78, 33/26, −7/26",
+          "solution": "√(64/169) = 8/13 = 16/26. Resta 5/26: 11/26. Divide por 3: 11/78.",
+          "oracle": "Evaluación independiente desde datos visibles; comprobar alternativas únicas y ausencia de ayuda reveladora.",
+          "objective_ids": [
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Para 17 viajes, A cobra L 9 por viaje y L 40 de cargo único; B cobra L 11 por viaje y L 3 de cargo único. ¿Cuánto vale B menos A? Opciones: 34, 190, −3, 3",
+          "solution": "A: 17 × 9 + 40 = 193. B: 17 × 11 + 3 = 190. B menos A = −3; B cuesta tres lempiras menos.",
+          "oracle": "Evaluación independiente desde datos visibles; comprobar alternativas únicas y ausencia de ayuda reveladora.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "La temperatura de hoy es −7 °C y la de ayer fue −5 °C. ¿Cuánto es la temperatura de hoy menos la de ayer? Opciones: −12, −2, 2, 12",
+          "solution": "Hoy menos ayer es −7 − (−5) = −7 + 5 = −2 °C.",
+          "oracle": "Evaluar los datos visibles por operaciones inversas o suma repetida y verificar alternativas.",
+          "objective_ids": [
+            "OP-01"
+          ]
+        },
+        {
+          "prompt": "Un saldo cambia −3 puntos cada día durante 6 días y luego aumenta 4 puntos. ¿Cuál es el cambio total? Opciones: −14, −22, 22, 6",
+          "solution": "Los seis cambios suman 6 × (−3) = −18; después −18 + 4 = −14 puntos.",
+          "oracle": "Evaluar los datos visibles por operaciones inversas o suma repetida y verificar alternativas.",
+          "objective_ids": [
+            "OP-01",
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Una cuenta tiene L 25. Se calcula un cargo neto de L 11 menos tres reintegros de L 5 cada uno; ese cargo neto se resta de la cuenta. ¿Cuál es el saldo final en lempiras? Opciones: 29, 14, −1, −4",
+          "solution": "El cargo neto es 11 − 3 × 5 = −4. Al restarlo, 25 − (−4) = 29; un cargo neto negativo aumenta el saldo.",
+          "oracle": "Evaluar primero el cargo neto y restar su valor completo del saldo.",
+          "objective_ids": [
+            "OP-01",
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Calcula 8 × 6 − 8 × 1 + 2 × 6 − 2 × 1. Opciones: 50, 40, 70, 52",
+          "solution": "Agrupa: (8 + 2) × (6 − 1) = 10 × 5 = 50.",
+          "oracle": "Calcular independientemente los productos visibles y verificar la equivalencia.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula 9 × (4 − 2) − 4 × (9 − 5). Opciones: 2, 34, −38, 18",
+          "solution": "9 × 2 − 4 × 4 = 18 − 16 = 2. Al distribuir, 9 × 4 y −4 × 9 se cancelan.",
+          "oracle": "Calcular independientemente los productos visibles y verificar la equivalencia.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Completa 5 × (9 + 9) − 5 × 9 = 3 × □. Opciones: 15, 45, 30, 9",
+          "solution": "El lado izquierdo vale 5 × 9 = 45. Entonces □ = 45 ÷ 3 = 15.",
+          "oracle": "Calcular independientemente los productos visibles y verificar la equivalencia.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula 96 ÷ (4 + 8). Opciones: 8, 32, 16, 3",
+          "solution": "El divisor completo es 4 + 8 = 12; después 96 ÷ 12 = 8.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-01"
+          ]
+        },
+        {
+          "prompt": "Calcula (17 − 17) ÷ 5 + 12. Opciones: 12, 0, −12, 17",
+          "solution": "El paréntesis vale 0; 0 ÷ 5 = 0 porque 5 no es cero. Luego 0 + 12 = 12.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-01"
+          ]
+        },
+        {
+          "prompt": "Calcula 26 × 4 − (26 − 6) × 4. Opciones: 24, 104, −24, 80",
+          "solution": "Ambos productos tienen factor 4: [26 − (26 − 6)] × 4 = 6 × 4 = 24.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula √(25/144) − (7/12 − 1/24). Simplifica. Opciones: −1/8, 1/8, −5/24, 5/12",
+          "solution": "La raíz principal es 5/12 = 10/24. El grupo es 14/24 − 1/24 = 13/24. La diferencia es −3/24 = −1/8.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Calcula 3 × (√(9/100) − 7/20) + 1/10. Simplifica. Opciones: −1/20, −3/20, 1/20, 1/12",
+          "solution": "La raíz es 3/10 = 6/20; el grupo vale −1/20. Luego 3 × (−1/20) + 2/20 = −1/20.",
+          "oracle": "Cálculo independiente con operaciones enteras o fracciones exactas; comprobar los tres errores.",
+          "objective_ids": [
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Una expresión vale (13 + 5) × 7. Aumenta el primer sumando en 2 y reduce el factor en 3. Calcula el valor nuevo menos el original. Opciones: −46, 46, 80, 126",
+          "solution": "Original: (13 + 5) × 7 = 126. Nuevo: (15 + 5) × 4 = 80. Nuevo menos original es −46.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Un almacén termina con 91 unidades luego de recibir 5 paquetes de 3 unidades y entregar 8 unidades. ¿Cuántas tenía inicialmente? Opciones: 84, 98, 99, 76",
+          "solution": "La entrada fue 5 × 3 = 15. Al invertir los movimientos: 91 + 8 − 15 = 84; 84 + 15 − 8 = 91.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Hay 12 paquetes de 7 unidades. Se retiran 3 grupos de 4 unidades y se reparte el resto entre 8 personas. ¿Cuántas unidades recibe cada persona? Opciones: 9, 72, 84, 7",
+          "solution": "Total: 12 × 7 = 84; retiro: 3 × 4 = 12. El resto es 72 y 72 ÷ 8 = 9.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Calcula (√81 − 4) × (6 + √16) − 3. Opciones: 47, 50, 12, 127",
+          "solution": "Las raíces son 9 y 4; los grupos son 5 y 10. Así, 5 × 10 − 3 = 47.",
+          "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
+          "objective_ids": [
+            "OP-01",
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Con L 275 compras 7 cuadernos a L 19 cada uno y una carpeta por L 36. ¿Cuántos lempiras te quedan? Opciones: 106, 142, 178, 239",
+          "solution": "Los cuadernos cuestan 7 × 19 = 133. El gasto total es 133 + 36 = 169. Quedan 275 − 169 = 106 lempiras.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Un taller tiene 27 cajas con 13 piezas en cada una. Retira 8 cajas completas y agrega 4 piezas a cada caja restante. ¿Cuántas piezas quedan? Opciones: 251, 323, 247, 459",
+          "solution": "Quedan 27 − 8 = 19 cajas. Cada una contiene 13 + 4 = 17 piezas. En total quedan 19 × 17 = 323 piezas.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Calcula 17 × (11 − 4) − 6 × (11 + 4). Opciones: 209, 119, 29, 77",
+          "solution": "Los grupos valen 7 y 15. Los productos son 119 y 90; la diferencia es 119 − 90 = 29. Los productos cruzados no son iguales, así que no se cancelan.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-01",
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula 31 − √121 × 2 + (26 − 8) ÷ 6. Opciones: 15, 9, 43, 12",
+          "solution": "√121 = 11; su producto por 2 es 22. El grupo vale 18, y 18 ÷ 6 = 3. Entonces 31 − 22 + 3 = 12.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-01",
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Calcula √(25/196) + 3 × (2/7) − 9/14. Simplifica. Opciones: 4/7, 0, 17/14, −1/7",
+          "solution": "La raíz principal es 5/14. El producto es 6/7 = 12/14. Al combinar, (5 + 12 − 9)/14 = 8/14 = 4/7.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-04"
+          ]
+        }
+      ],
+      "games": [
+        {
+          "mode": "clasificar",
+          "level": "principiante",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "operation": "Evaluar la validez de pasos y afirmaciones; precedencia; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2"
+        },
+        {
+          "mode": "clasificar",
+          "level": "intermedio",
+          "objective_ids": [
+            "OP-02",
+            "OP-04"
+          ],
+          "operation": "Evaluar la validez de pasos y afirmaciones; transformación de operandos; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2; OP-04 es requisito oficial cuya cobertura efectiva debe comprobarse; complementar solo si falta, no presumir cobertura."
+        },
+        {
+          "mode": "clasificar",
+          "level": "avanzado",
+          "objective_ids": [
+            "OP-03",
+            "OP-04"
+          ],
+          "operation": "Evaluar la validez de pasos y afirmaciones; distributividad y cancelación; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2; OP-04 es requisito oficial cuya cobertura efectiva debe comprobarse; complementar solo si falta, no presumir cobertura."
+        },
+        {
+          "mode": "quiz",
+          "level": "principiante",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "operation": "Seleccionar resultado inequívoco; precedencia; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2"
+        },
+        {
+          "mode": "quiz",
+          "level": "intermedio",
+          "objective_ids": [
+            "OP-02",
+            "OP-04"
+          ],
+          "operation": "Seleccionar resultado inequívoco; transformación de operandos; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2; OP-04 es requisito oficial cuya cobertura efectiva debe comprobarse; complementar solo si falta, no presumir cobertura."
+        },
+        {
+          "mode": "quiz",
+          "level": "avanzado",
+          "objective_ids": [
+            "OP-03",
+            "OP-04"
+          ],
+          "operation": "Seleccionar resultado inequívoco; distributividad y cancelación; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2; OP-04 es requisito oficial cuya cobertura efectiva debe comprobarse; complementar solo si falta, no presumir cobertura."
+        },
+        {
+          "mode": "construir",
+          "level": "principiante",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "operation": "Construir secuencia y resultado; precedencia; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2"
+        },
+        {
+          "mode": "construir",
+          "level": "intermedio",
+          "objective_ids": [
+            "OP-02",
+            "OP-04"
+          ],
+          "operation": "Construir secuencia y resultado; transformación de operandos; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2; OP-04 es requisito oficial cuya cobertura efectiva debe comprobarse; complementar solo si falta, no presumir cobertura."
+        },
+        {
+          "mode": "construir",
+          "level": "avanzado",
+          "objective_ids": [
+            "OP-03",
+            "OP-04"
+          ],
+          "operation": "Construir secuencia y resultado; distributividad y cancelación; correspondencia preliminar con arithmeticPedagogy, verificar todos los IDs en P2; OP-04 es requisito oficial cuya cobertura efectiva debe comprobarse; complementar solo si falta, no presumir cobertura."
+        }
+      ],
+      "acceptance": [
+        "P1: ruta navegable voluntaria antes de los tres juegos, regreso contextual, recarga, teclado/táctil, foco y móvil 360/390/1280; sin marcador o pistas de examen.",
+        "Verificar cálculos por oráculo independiente, negativos de orden y signos, transferencia inédita sin ayudas y ausencia de coincidencia con banco.",
+        "P2: auditar 9 celdas de mathM3Pool y todas las familias reales; reparar brechas de reales no cubiertas sin duplicar fracciones/potencias. No marcar RDG_READY por este plan.",
+        "P1: verificar raíz principal, signos, racionales y precedencia integrada. P2: comprobar cobertura de OP-04 en banco completo y documentar déficit antes de sustituir o complementar.",
+        "R4: verificar 4 puentes y 4 transferencias añadidas, interacción progresiva, oráculo exacto, ausencia de coincidencia literal con el banco y conservación de R3 como evidencia histórica.",
+        "Comprobar dos puentes de signos y dos transferencias nuevas, con oráculo independiente y contraste con los IDs afectados.",
+        "Comprobar el puente de resta anidada y la transferencia contextual, con cálculo independiente y contraste con IDs reales.",
+        "Comprobar los tres puentes de factorización y sus transferencias, con oráculos independientes y contraste contra las familias de los juegos.",
+        "Comprobar cinco transferencias adicionales de división, cero, factor común y racionales, sin ayudas y contra familias reales.",
+        "Verificar en lote cuatro puentes de estados, inventarios, reparto y raíces, y cuatro transferencias sin ayuda.",
+        "Revisar once ejemplos integrados de síntesis contra oráculos independientes, como apoyo complementario a la ruta interactiva y transferencia.",
+        "Verificar estímulos de lecciones y transferencia contra los datos visibles del banco y revisar candidatos coincidentes, no solo coincidencia literal.",
+        "R4: cinco transferencias inéditas T25–T29 para brechas de familias de presupuesto, inventario, diferencia de productos no idénticos y dos combinaciones radicales; comprobar oráculos, distractores y separación frente a los 450 IDs."
+      ],
+      "external_research": {
+        "status": "CALIBRACION_CUALITATIVA",
+        "searches": [
+          {
+            "query": "PHUMA UNAH operaciones números reales orden operaciones simulacro matemáticas ejercicios resueltos video",
+            "date": "2026-11-25",
+            "channel": "web",
+            "results_reviewed": 4,
+            "finding": "Simulador, índice de aritmética, video indexado, guía oficial."
+          },
+          {
+            "query": "PHUMA UNAH matemáticas operaciones números reales guía Studocu Docsity Scribd simulacro",
+            "date": "2026-11-25",
+            "channel": "web",
+            "results_reviewed": 3,
+            "finding": "Espejos de la misma guía; buscador directo no accesible; no corroboración independiente."
+          },
+          {
+            "query": "OpenStax prealgebra order of operations integers examples",
+            "date": "2026-11-25",
+            "channel": "web",
+            "results_reviewed": 2,
+            "finding": "Secciones 2.1 y 3.1: precedencia y enteros con ejemplos resueltos."
+          },
+          {
+            "query": "IES worked examples EEF maths representations number line",
+            "date": "2026-11-25",
+            "channel": "web",
+            "results_reviewed": 2,
+            "finding": "Ejemplos resueltos, análisis de errores y recta numérica con apoyos decrecientes."
+          }
+        ],
+        "resources": [
+          {
+            "id": "pronasa",
+            "url": "https://pronasa.dashnexpages.net/simulador-phuma/",
+            "title": "Simulador PHUMA",
+            "producer": "Contadores Profesionales de Honduras",
+            "lineage": "pronasa",
+            "kind": "SIMULACRO",
+            "scope": "PHUMA",
+            "access": "PARCIAL",
+            "locator": "Página visible: primera pregunta de matemáticas y explicación",
+            "finding": "Combina productos, cocientes y sumas/restas, con cuatro opciones; modela cálculo de varios pasos.",
+            "quality": "Tercero, contraste pertinente",
+            "limitations": "El encabezado anuncia 120 y la pantalla 50; distribución también inconsistente. Solo un reactivo visible; no validar fidelidad ni cronometraje.",
+            "decision": "AJUSTA"
+          },
+          {
+            "id": "openstax",
+            "url": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+            "title": "Prealgebra 2e, 2.1",
+            "producer": "OpenStax",
+            "lineage": "openstax",
+            "kind": "EJERCICIOS_RESUELTOS",
+            "scope": "DISCIPLINAR",
+            "access": "CONSULTADO",
+            "locator": "Orden de operaciones, ejemplos 2.8–2.11",
+            "finding": "Comparar expresiones con y sin agrupación; igual prioridad de multiplicación y división, izquierda a derecha; pasos visibles.",
+            "quality": "Texto educativo abierto, autoridad disciplinar de apoyo",
+            "limitations": "No es examen PHUMA ni mide su dificultad.",
+            "decision": "REFUERZA"
+          },
+          {
+            "id": "matphuma",
+            "url": "https://matematicaphuma.wordpress.com/aritmetica/",
+            "title": "Aritmética – Matemática PHUMA",
+            "producer": "Matemática PHUMA",
+            "lineage": "matematicaphuma",
+            "kind": "GUIA",
+            "scope": "PHUMA",
+            "access": "PARCIAL",
+            "locator": "Apartados A.1–A.5",
+            "finding": "Organiza enteros, jerarquía, potencias y fracciones; incluye enlaces a videos.",
+            "quality": "Índice de tercero, útil para contrastar alcance",
+            "limitations": "No todos los videos fueron accesibles; no se verifican sus soluciones; no elevar extensiones a alcance oficial.",
+            "decision": "AMPLIA_APOYO"
+          },
+          {
+            "id": "video",
+            "url": "https://www.youtube.com/watch?v=7Sl9AGOnd5M",
+            "title": "Operaciones con números reales, ejercicio resuelto",
+            "producer": "Canal de matemáticas (identidad no verificada)",
+            "lineage": "video-7Sl9AGOnd5M",
+            "kind": "VIDEO_EXPLICACION",
+            "scope": "DISCIPLINAR",
+            "access": "SIN_ACCESO",
+            "locator": "Intento de apertura directa fallido",
+            "finding": "No se inspeccionó el video ni su explicación audiovisual.",
+            "quality": "No evaluable",
+            "limitations": "Descripción indexada no equivale a reproducción ni revisión.",
+            "decision": "DESCARTA"
+          },
+          {
+            "id": "studocu",
+            "url": "https://www.studocu.com/es/search/Phuma?pages=1%3A250&languages=es&years=2010%3A2027&institutionId=3839",
+            "title": "Búsqueda PHUMA",
+            "producer": "Studocu",
+            "lineage": "studocu-busqueda",
+            "kind": "OTRO",
+            "scope": "PHUMA",
+            "access": "SIN_ACCESO",
+            "locator": "Búsqueda directa no accesible",
+            "finding": "Los resultados indexados incluyen espejos de la guía UNAH; no son corroboración independiente.",
+            "quality": "No evaluable",
+            "limitations": "No se pudo abrir el buscador aportado.",
+            "decision": "DESCARTA"
+          }
+        ],
+        "coverage_note": "Dos linajes útiles independientes (Pronasa y OpenStax), más índice temático de tercero; muestras externas limitadas a contenido visible. Se inspeccionaron muestras visibles de simulacros adicionales; los formatos mixtos y las preguntas de recuerdo no son evidencia de fidelidad PHUMA.",
+        "stop_reason": "Checkpoint parcial de investigación: contrastes pertinentes encontrados; ampliar guías/simulacros específicos y videos accesibles antes de congelar si revisión independiente detecta huecos.",
+        "limitations": "No hubo reproducción de videos, ni evaluación psicométrica, ni verificación local de huellas PDF en esta sesión. Nivel comparable se refiere a operación cognitiva, no dificultad medida. Material audiovisual y ejercicios detrás de acceso restringido no evaluados.",
+        "profiles": [
+          {
+            "level": "principiante",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "openstax",
+              "matphuma"
+            ],
+            "operation": "Aplicar una regla",
+            "reasoning_steps": "1–2 pasos",
+            "prerequisites": "Enteros y símbolos",
+            "representations": "Recta/expresión",
+            "reading_load": "Baja",
+            "distractors": "Orden incorrecto, signo",
+            "format": "Selección única de cuatro alternativas en transferencia; conservar mecánicas de juego.",
+            "autonomy": "Ayuda opcional",
+            "time_basis": "Sin medición; estimación cualitativa, no límite de examen por reactivo.",
+            "phuma_relation": "PREPARATORIO",
+            "original_example": "15-2×4=7",
+            "decision": "Calibración cualitativa, confirmar familias y amplitud de reales en P2."
+          },
+          {
+            "level": "intermedio",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "pronasa",
+              "openstax"
+            ],
+            "operation": "Interpretar y combinar operaciones con enteros, racionales y raíces exactas",
+            "reasoning_steps": "3–5 pasos de cálculo combinado, con o sin contexto",
+            "prerequisites": "Precedencia, signos, raíz principal, fracciones equivalentes",
+            "representations": "Tabla de cambio y expresión",
+            "reading_load": "Enunciado breve",
+            "distractors": "Signo, raíz no principal, denominadores y precedencia",
+            "format": "Selección única de cuatro alternativas en transferencia; conservar mecánicas de juego.",
+            "autonomy": "Sin pista reveladora en transferencia",
+            "time_basis": "Sin medición; estimación cualitativa, no límite de examen por reactivo.",
+            "phuma_relation": "COMPARABLE",
+            "original_example": "14−√36+3×5−24÷8=20",
+            "decision": "COMPARABLE cualitativamente por operación con anclas oficiales 39 y 50; no equivalencia psicométrica."
+          },
+          {
+            "level": "avanzado",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "pronasa",
+              "openstax"
+            ],
+            "operation": "Integrar racionales con raíz y justificar equivalencias; distributividad como ampliación",
+            "reasoning_steps": "3–4 pasos, verificación alternativa",
+            "prerequisites": "Precedencia, equivalencia y signos",
+            "representations": "Expresión y árbol opcional en aprendizaje",
+            "reading_load": "Condiciones múltiples o expresión compuesta",
+            "distractors": "Distribuir solo un término, invertir signo",
+            "format": "Selección única de cuatro alternativas en transferencia; conservar mecánicas de juego.",
+            "autonomy": "Sin ayuda; justificar y comprobar",
+            "time_basis": "Sin medición; estimación cualitativa, no límite de examen por reactivo.",
+            "phuma_relation": "COMPARABLE",
+            "original_example": "√(16/81)−5/9+1/3=2/9",
+            "decision": "Calibración cualitativa, confirmar familias y amplitud de reales en P2."
+          }
+        ],
+        "decisions": [
+          {
+            "objective_ids": [
+              "OP-01",
+              "OP-02",
+              "OP-03"
+            ],
+            "resource_ids": [
+              "openstax",
+              "pronasa"
+            ],
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "action": "REFUERZA",
+            "rationale": "Enseñar orden y aplicación antes de transferencia; separar extensión algebraica y evitar declarar equivalencia medida."
+          },
+          {
+            "objective_ids": [
+              "OP-01"
+            ],
+            "resource_ids": [
+              "matphuma"
+            ],
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "action": "AMPLIA_APOYO",
+            "rationale": "Revisar enteros y signos como fundamentos, derivar fracciones y potencias al bloque siguiente."
+          },
+          {
+            "objective_ids": [
+              "OP-01"
+            ],
+            "resource_ids": [
+              "video",
+              "studocu"
+            ],
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "action": "DESCARTA",
+            "rationale": "Acceso no verificado, no sostienen calibración."
+          },
+          {
+            "objective_ids": [
+              "OP-04"
+            ],
+            "resource_ids": [
+              "openstax",
+              "matphuma"
+            ],
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "action": "AMPLIA_APOYO",
+            "rationale": "Inspección directa de reactivos oficiales 39 y 50 demuestra necesidad de racionales y raíz exacta, además del patrón entero dominante del banco observado."
+          }
+        ]
+      }
+    }
+  ]
+}
