@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI del runtime R19 y 450 hashes, preservar 18 OP04. Reevaluar A-H de 21 candidatos sin señales y resolver cuatro señales restantes; revisar F y G de R19 antes de publicación apta.",
+    "next_action": "Observar CI R19 45774380070; ejecutar pruebas R20 sobre 450 IDs, reconciliar sucesores y guard de conteo histórico sin promover por lote; reevaluar A-H y publicar candidatos aptos.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -605,6 +605,22 @@
       "g_screen": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-G-screen.json",
       "g_candidates": 25,
       "g_signals": 4,
+      "semantic_pass": 0
+    },
+    "r20_revision": {
+      "status": "CANDIDATE_NOT_ACTIVE",
+      "predecessor": "854922b1e2e4a30ddd5822dcd18f6f49fbad4e12",
+      "scope": 59,
+      "reconstructed_oracle": {
+        "checked": 177,
+        "mutants_rejected": 177,
+        "distinct_targets": 59,
+        "distinct_displayed": 59
+      },
+      "source": "src/lib/math-operations-classification-r20.ts",
+      "test": "src/test/rdg-operations-classification-r20.test.ts",
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R20-reconstructed-diagnostic.json",
+      "pattern_exam_review": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-exam-pattern-review.json",
       "semantic_pass": 0
     }
   }
