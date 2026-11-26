@@ -1,0 +1,1287 @@
+{
+  "revision": "R16",
+  "scope": "MAT-ARIT-01",
+  "source_ci": 45734416492,
+  "source_job": 139624067231,
+  "candidate_sha": "5d8b59423d8826894bfe8fb8358b7a9e7a799bbf",
+  "publication_sha": "df07302986674e7619d4721d0ca00535acacc8f8",
+  "summary": {
+    "changed": 28,
+    "preserved": 422,
+    "counts": {
+      "producto-negativo-y-suma": 2,
+      "cero-dividido-por-no-cero": 2,
+      "comparar-cambios-compensados": 3,
+      "reconstruir-cantidad-por-grupo": 3,
+      "cancelacion-cruzada-de-productos": 3,
+      "dos-raices-en-producto-agrupado": 3,
+      "completar-igualdad-distributiva": 3,
+      "factor-desconocido-tras-cancelar": 3,
+      "raiz-racional-resta-agrupada": 3,
+      "distribuir-sobre-raiz-racional": 3
+    }
+  },
+  "limitations": "Resultados técnicos de la prueba; cada registro permanece REVIEW, sin aprobación semántica o docente. El estado de CI/Render del commit publicado debe observarse por separado.",
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-6",
+      "previous_sha256": "c7b29900488fb2a72f1f5664fa124f018998b2026439ed102cb77500a240d3f1",
+      "content_sha256": "c8250f3e80f4f9a3953bbb6c50afc2daebd405638ff019398a55387b8070a029",
+      "level": "principiante",
+      "mode": "clasificar",
+      "family": "producto-negativo-y-suma",
+      "stimulus": "Calcula −7 × 3 + 3. ¿Cuál es el resultado?",
+      "expected": "-18",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto con signo» es -21.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 24.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es -18.",
+          "truth": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto con signo» es -21.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 24.",
+          "truth": false
+        },
+        {
+          "text": "El producto de los valores absolutos de los factores es 21.",
+          "truth": true
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula el producto con signo» es -21.": "Un factor negativo por uno positivo da un producto negativo: −21. El producto va primero; luego suma 3, resultado -18.",
+        "El resultado solicitado es 24.": "Se perdió el signo negativo del producto. El resultado correcto es -18.",
+        "El producto de los valores absolutos de los factores es 21.": "Los valores absolutos son 7 y 3; su producto es 21, no su suma."
+      },
+      "auxiliary_value": 21,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-7",
+      "previous_sha256": "2d345111d0b2811beb74c6bc20ec66cbfaf760d02f7f5cc6db4e866272e313d0",
+      "content_sha256": "c3312ffef2873f48d4fc3f7108327cbac94ebe21135463add77e3bb1e7c72e74",
+      "level": "principiante",
+      "mode": "clasificar",
+      "family": "producto-negativo-y-suma",
+      "stimulus": "Calcula −8 × 4 + 3. ¿Cuál es el resultado?",
+      "expected": "-29",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es -56.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 35.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto con signo» es -32.",
+          "truth": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -56.",
+          "truth": false
+        },
+        {
+          "text": "El producto de los valores absolutos de los factores es 12.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto con signo» es -32.",
+          "truth": true
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula el producto con signo» es -32.": "Un factor negativo por uno positivo da un producto negativo: −32. El producto va primero; luego suma 3, resultado -29.",
+        "El resultado solicitado es -56.": "Se agrupó una suma sin paréntesis. El resultado correcto es -29.",
+        "El producto de los valores absolutos de los factores es 12.": "Los valores absolutos son 8 y 4; su producto es 32, no su suma."
+      },
+      "auxiliary_value": 32,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-8",
+      "previous_sha256": "465f5c9b6993910e77be4161f464f46e58c3527753109c2f95849679dfecc787",
+      "content_sha256": "c236127d5c702a0afd13813858ce08295fae4d6d14db1d475cd7393f92aa40c0",
+      "level": "principiante",
+      "mode": "clasificar",
+      "family": "cero-dividido-por-no-cero",
+      "stimulus": "Calcula (28 − 28) ÷ 4 + 8. ¿Cuál es el resultado?",
+      "expected": "8",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 15.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el numerador agrupado» es 28.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 8.",
+          "truth": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 15.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el numerador agrupado» es 28.",
+          "truth": false
+        },
+        {
+          "text": "El cociente antes de sumar el último término vale 0.",
+          "truth": true
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es 15.": "Se omitió la resta del numerador. El resultado correcto es 8.",
+        "El valor correcto del paso «Calcula el numerador agrupado» es 28.": "Se omitió el segundo término. El paso correcto da 0.",
+        "El cociente antes de sumar el último término vale 0.": "La resta de dos números iguales da cero; 0 ÷ 4=0, porque el divisor no es cero."
+      },
+      "auxiliary_value": 0,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-principiante-9",
+      "previous_sha256": "21ac68a8d1a03ddc11ed69a10a42451a6213d833c6c6b4b33194311acf11b7c8",
+      "content_sha256": "f9bc7537242ea8a0cb69cca712233c051b7127d12d72c4aeb95aa06d63f7ab34",
+      "level": "principiante",
+      "mode": "clasificar",
+      "family": "cero-dividido-por-no-cero",
+      "stimulus": "Calcula (32 − 32) ÷ 4 + 9. ¿Cuál es el resultado?",
+      "expected": "9",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el numerador agrupado» es 0.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 17.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 9.",
+          "truth": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el numerador agrupado» es 0.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 17.",
+          "truth": false
+        },
+        {
+          "text": "El cociente antes de sumar el último término vale 0.",
+          "truth": true
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula el numerador agrupado» es 0.": "La diferencia de números iguales es cero. Cero dividido por 4, que no es cero, da cero. Después suma 9; resultado 9.",
+        "El resultado solicitado es 17.": "Se omitió la resta del numerador. El resultado correcto es 9.",
+        "El cociente antes de sumar el último término vale 0.": "La resta de dos números iguales da cero; 0 ÷ 4=0, porque el divisor no es cero."
+      },
+      "auxiliary_value": 0,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-6",
+      "previous_sha256": "86004203e484311aeb08b4fea1d8684d25c872ad938ab5900947457063ebd552",
+      "content_sha256": "04bba67ebe7720bf5f1d5ead18fb3c57356434cbdb79a7a58bed7c067c13d5c4",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "family": "comparar-cambios-compensados",
+      "stimulus": "Una expresión vale (19 + 7) × 6. Se aumenta el primer sumando en 3 y se reduce el factor en 2. ¿Cuál es la diferencia (valor nuevo menos valor original)?",
+      "expected": "-40",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 40.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es -40.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula la suma de los operandos originales» es 26.",
+          "truth": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 40.",
+          "truth": false
+        },
+        {
+          "text": "El factor después del cambio es 4.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula la suma de los operandos originales» es 26.",
+          "truth": true
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula la suma de los operandos originales» es 26.": "El valor original es 156; el nuevo es 29×4=116. La diferencia pedida es nuevo menos original, -40; un valor negativo significa disminución.",
+        "El resultado solicitado es 40.": "Se invirtió el orden de la diferencia. El resultado correcto es -40.",
+        "El factor después del cambio es 4.": "El factor disminuye en 2: 6−2=4."
+      },
+      "auxiliary_value": 4,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-7",
+      "previous_sha256": "50c3c0b338b91299ae72fdc36ebb3f830c7879a0508be2df94d098d33265a04b",
+      "content_sha256": "c19eac08b4c0ba3565ff96c5a24adb5972f15b67ff1ecd0993c689a10feb8ff5",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "family": "comparar-cambios-compensados",
+      "stimulus": "Una expresión vale (20 + 8) × 6. Se aumenta el primer sumando en 4 y se reduce el factor en 2. ¿Cuál es la diferencia (valor nuevo menos valor original)?",
+      "expected": "-40",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 40.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula la suma de los operandos originales» es 28.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 24.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 40.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula la suma de los operandos originales» es 28.",
+          "truth": true
+        },
+        {
+          "text": "El factor después del cambio es 8.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es 40.": "Se invirtió el orden de la diferencia. El resultado correcto es -40.",
+        "El valor correcto del paso «Calcula la suma de los operandos originales» es 28.": "El valor original es 168; el nuevo es 32×4=128. La diferencia pedida es nuevo menos original, -40; un valor negativo significa disminución.",
+        "El factor después del cambio es 8.": "El factor disminuye en 2: 6−2=4."
+      },
+      "auxiliary_value": 4,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-8",
+      "previous_sha256": "703444dd091a59e13f248f3c35dd8aff8dcd702769d69818ce304fdb55858d5e",
+      "content_sha256": "990bd687ec4ce41b2dd89a2c5123fde9ab8db3cf6020606a57d2be38ccf81e69",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "family": "comparar-cambios-compensados",
+      "stimulus": "Una expresión vale (21 + 9) × 6. Se aumenta el primer sumando en 5 y se reduce el factor en 2. ¿Cuál es la diferencia (valor nuevo menos valor original)?",
+      "expected": "-40",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula la suma de los operandos originales» es 35.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es -40.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 40.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula la suma de los operandos originales» es 35.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es -40.",
+          "truth": true
+        },
+        {
+          "text": "El factor después del cambio es 8.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula la suma de los operandos originales» es 35.": "Se usó el sumando modificado. El paso correcto da 30.",
+        "El resultado solicitado es -40.": "El valor original es 180; el nuevo es 35×4=140. La diferencia pedida es nuevo menos original, -40; un valor negativo significa disminución.",
+        "El factor después del cambio es 8.": "El factor disminuye en 2: 6−2=4."
+      },
+      "auxiliary_value": 4,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-9",
+      "previous_sha256": "966ed9ddc153b31a394975f3360125d525ab7c4d74fc69a3eee6b1c3bccb00f6",
+      "content_sha256": "52f29089acf528359b50dd00b37305b33b1f6ad48c2513dbccb9dca8bf6241dd",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "family": "reconstruir-cantidad-por-grupo",
+      "stimulus": "Se vaciaron 5 cajas con igual cantidad de piezas. Después de retirar 5 piezas del total, quedan 75. ¿Cuántas piezas tenía cada caja?",
+      "expected": "16",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 11.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 16.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Reconstruye el total anterior al retiro» es 80.",
+          "truth": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 11.",
+          "truth": false
+        },
+        {
+          "text": "Para deshacer el retiro se debe agregar al total la cantidad 5.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Reconstruye el total anterior al retiro» es 80.",
+          "truth": true
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Reconstruye el total anterior al retiro» es 80.": "Deshaz el retiro: 75+5=80 piezas en total. Como las 5 cajas tenían la misma cantidad, divide 80÷5=16. Comprueba: 5×16−5=75.",
+        "El resultado solicitado es 11.": "Se restó el retiro a la cantidad por caja. El resultado correcto es 16.",
+        "Para deshacer el retiro se debe agregar al total la cantidad 5.": "Deshacer el retiro significa sumar 5, no volver a restarlo."
+      },
+      "auxiliary_value": 5,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-10",
+      "previous_sha256": "044610ffdc979cf144c646b57d9c2236f2668697c55a1af5735191f439c42478",
+      "content_sha256": "c1148fd3c54d07f84aaa44e40402bdb9b5543665ba3d5feec0cedb6729addb75",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "family": "reconstruir-cantidad-por-grupo",
+      "stimulus": "Se vaciaron 6 cajas con igual cantidad de piezas. Después de retirar 6 piezas del total, quedan 96. ¿Cuántas piezas tenía cada caja?",
+      "expected": "17",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 11.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Reconstruye el total anterior al retiro» es 102.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 102.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 11.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Reconstruye el total anterior al retiro» es 102.",
+          "truth": true
+        },
+        {
+          "text": "Para deshacer el retiro se debe agregar al total la cantidad -6.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es 11.": "Se restó el retiro a la cantidad por caja. El resultado correcto es 17.",
+        "El valor correcto del paso «Reconstruye el total anterior al retiro» es 102.": "Deshaz el retiro: 96+6=102 piezas en total. Como las 6 cajas tenían la misma cantidad, divide 102÷6=17. Comprueba: 6×17−6=96.",
+        "Para deshacer el retiro se debe agregar al total la cantidad -6.": "Deshacer el retiro significa sumar 6, no volver a restarlo."
+      },
+      "auxiliary_value": 6,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-11",
+      "previous_sha256": "04fb691bc6374891b754097528d74aa9ca725e2147dd422317d762c4bc3583d3",
+      "content_sha256": "fb7405927b6822a97e3d583be066e768f8b402924acb4de54d445f33eb485c27",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "family": "reconstruir-cantidad-por-grupo",
+      "stimulus": "Se vaciaron 7 cajas con igual cantidad de piezas. Después de retirar 7 piezas del total, quedan 119. ¿Cuántas piezas tenía cada caja?",
+      "expected": "18",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Reconstruye el total anterior al retiro» es 112.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 18.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 11.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Reconstruye el total anterior al retiro» es 112.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 18.",
+          "truth": true
+        },
+        {
+          "text": "Para deshacer el retiro se debe agregar al total la cantidad -7.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Reconstruye el total anterior al retiro» es 112.": "Se volvió a retirar en lugar de invertir el cambio. El paso correcto da 126.",
+        "El resultado solicitado es 18.": "Deshaz el retiro: 119+7=126 piezas en total. Como las 7 cajas tenían la misma cantidad, divide 126÷7=18. Comprueba: 7×18−7=119.",
+        "Para deshacer el retiro se debe agregar al total la cantidad -7.": "Deshacer el retiro significa sumar 7, no volver a restarlo."
+      },
+      "auxiliary_value": 7,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-6",
+      "previous_sha256": "fdbe8de60aa957986c5346c4b34989cf30b1a550efed1d5bd2eea818dce2ad09",
+      "content_sha256": "8aeca044114afad4b1f575bf2574ccc9ca0a2b3372bed46f7f85816ff7e46344",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "cancelacion-cruzada-de-productos",
+      "stimulus": "Simplifica 24 × (7 − 3) − 7 × (24 − 4). ¿Cuál es el valor?",
+      "expected": "-44",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es -44.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 28.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 100.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -44.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 28.",
+          "truth": true
+        },
+        {
+          "text": "El producto común que se cancela tiene valor 72.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es -44.": "Al distribuir, 24×7−24×3−7×24+7×4. Los productos 24×7 y 7×24 se cancelan por conmutatividad. Queda 28−72=-44.",
+        "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 28.": "Al distribuir, 24×7−24×3−7×24+7×4. Los productos 24×7 y 7×24 se cancelan por conmutatividad. Queda 28−72=-44.",
+        "El producto común que se cancela tiene valor 72.": "Por conmutatividad, 24×7 y 7×24 valen 168; son los términos opuestos que se cancelan."
+      },
+      "auxiliary_value": 168,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-7",
+      "previous_sha256": "060ecae99dadae80f2be45b75d04ec6c410352245731f7d2be3eed352ad01df4",
+      "content_sha256": "88738ead7e06184a36f040b8fefabbe7d77aa8f0750d77c6fca1eccc9540ac64",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "cancelacion-cruzada-de-productos",
+      "stimulus": "Simplifica 25 × (8 − 4) − 8 × (25 − 5). ¿Cuál es el valor?",
+      "expected": "-60",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 40.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -140.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 140.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 40.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -140.",
+          "truth": false
+        },
+        {
+          "text": "El producto común que se cancela tiene valor 100.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 40.": "Al distribuir, 25×8−25×4−8×25+8×5. Los productos 25×8 y 8×25 se cancelan por conmutatividad. Queda 40−100=-60.",
+        "El resultado solicitado es -140.": "No se invirtió el signo del último producto. El resultado correcto es -60.",
+        "El producto común que se cancela tiene valor 100.": "Por conmutatividad, 25×8 y 8×25 valen 200; son los términos opuestos que se cancelan."
+      },
+      "auxiliary_value": 200,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-8",
+      "previous_sha256": "f9f7cf45cfa4c5cdc286cc24ef180f1f7a5eb4235f078304e92173e826a133e6",
+      "content_sha256": "1b067bdd11404effb8b7e6beda3db05c8094432291bb4af44499728ce6c633d4",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "cancelacion-cruzada-de-productos",
+      "stimulus": "Simplifica 26 × (9 − 5) − 9 × (26 − 6). ¿Cuál es el valor?",
+      "expected": "-76",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es -76.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 184.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 15.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -76.",
+          "truth": true
+        },
+        {
+          "text": "El producto común que se cancela tiene valor 130.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 15.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula el producto del segundo factor exterior por el último sustraendo» es 15.": "Se sumaron los factores. El paso correcto da 54.",
+        "El resultado solicitado es -76.": "Al distribuir, 26×9−26×5−9×26+9×6. Los productos 26×9 y 9×26 se cancelan por conmutatividad. Queda 54−130=-76.",
+        "El producto común que se cancela tiene valor 130.": "Por conmutatividad, 26×9 y 9×26 valen 234; son los términos opuestos que se cancelan."
+      },
+      "auxiliary_value": 234,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-9",
+      "previous_sha256": "a1f945e65b0e7a140e6d7e4ea44af4281de8ef97e18727738c180343d8f30523",
+      "content_sha256": "035d386b35a3f6736b8bcc0c0cd591f4d702aca4cd6b165a6195a3f87db9ab0a",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "dos-raices-en-producto-agrupado",
+      "stimulus": "Calcula (√100 − 2) × (6 + √25) − 3. ¿Cuál es el resultado?",
+      "expected": "85",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 85.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 8.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 129.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 85.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 8.",
+          "truth": true
+        },
+        {
+          "text": "El segundo paréntesis vale 1.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es 85.": "Las raíces principales son 10 y 5. Los paréntesis valen 8 y 11; el producto vale 88. Después resta 3: 85.",
+        "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 8.": "Las raíces principales son 10 y 5. Los paréntesis valen 8 y 11; el producto vale 88. Después resta 3: 85.",
+        "El segundo paréntesis vale 1.": "La segunda raíz principal vale 5; por tanto, el segundo paréntesis es 6+5=11."
+      },
+      "auxiliary_value": 11,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-10",
+      "previous_sha256": "98bba51e56b39431c8e9f415cd9af7b6c14ad070e78c76bc5293995f51a0600b",
+      "content_sha256": "0367c3653870e0e130c27e055e2f2dea76b71734275008e5ecb6045c5d55a83a",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "dos-raices-en-producto-agrupado",
+      "stimulus": "Calcula (√121 − 3) × (6 + √36) − 4. ¿Cuál es el resultado?",
+      "expected": "92",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 8.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -4.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 164.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 8.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -4.",
+          "truth": false
+        },
+        {
+          "text": "El segundo paréntesis vale 0.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 8.": "Las raíces principales son 11 y 6. Los paréntesis valen 8 y 12; el producto vale 96. Después resta 4: 92.",
+        "El resultado solicitado es -4.": "Se eligió la raíz negativa del segundo radical. El resultado correcto es 92.",
+        "El segundo paréntesis vale 0.": "La segunda raíz principal vale 6; por tanto, el segundo paréntesis es 6+6=12."
+      },
+      "auxiliary_value": 12,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-11",
+      "previous_sha256": "7f6629971d3a5f85eb48364d2b7481de940222ab9edb1dbceedad64c473d1c7e",
+      "content_sha256": "d6b443f5c558d3075c4fcd1cce9f33fa7e101dfdd9841f5260085e8f2d640395",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "dos-raices-en-producto-agrupado",
+      "stimulus": "Calcula (√144 − 4) × (6 + √49) − 5. ¿Cuál es el resultado?",
+      "expected": "99",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 99.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 203.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 16.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 99.",
+          "truth": true
+        },
+        {
+          "text": "El segundo paréntesis vale -1.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 16.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Resuelve el primer paréntesis con su raíz principal» es 16.": "Se sumó en lugar de restar. El paso correcto da 8.",
+        "El resultado solicitado es 99.": "Las raíces principales son 12 y 7. Los paréntesis valen 8 y 13; el producto vale 104. Después resta 5: 99.",
+        "El segundo paréntesis vale -1.": "La segunda raíz principal vale 7; por tanto, el segundo paréntesis es 6+7=13."
+      },
+      "auxiliary_value": 13,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-12",
+      "previous_sha256": "8de53c160e15c48599b506a5c45eda746d81d9a3cd45daad1fdf8ae7c58f0392",
+      "content_sha256": "1d92348dd8008328205a864ff1c53f42bc1775fd3455abefd8b6d989473bd66c",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "completar-igualdad-distributiva",
+      "stimulus": "Completa la igualdad 11 × (13 − 4) + □ = 11 × (13 + 3). ¿Qué número sustituye □?",
+      "expected": "77",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 77.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 99.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 176.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 77.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 99.",
+          "truth": true
+        },
+        {
+          "text": "El valor completo del lado derecho es 146.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es 77.": "El producto izquierdo vale 99 y el derecho 176. Para conservar la igualdad, el número faltante es su diferencia: 11×(13+3)−11×(13−4)=77. Comprueba sumándolo al producto izquierdo.",
+        "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 99.": "El producto izquierdo vale 99 y el derecho 176. Para conservar la igualdad, el número faltante es su diferencia: 11×(13+3)−11×(13−4)=77. Comprueba sumándolo al producto izquierdo.",
+        "El valor completo del lado derecho es 146.": "El factor 11 multiplica ambos sumandos del lado derecho: 11×(13+3)=176."
+      },
+      "auxiliary_value": 176,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-13",
+      "previous_sha256": "ecdb927a13191950112233f6f6626e879117d7cb9306d867772f3fe81ef0d801",
+      "content_sha256": "6e1a976486e5c377f58ebaad72e8c7c98a6c477a72a9b514a986e16319e1202c",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "completar-igualdad-distributiva",
+      "stimulus": "Completa la igualdad 12 × (14 − 5) + □ = 12 × (14 + 3). ¿Qué número sustituye □?",
+      "expected": "96",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 108.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 24.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 204.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 108.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 24.",
+          "truth": false
+        },
+        {
+          "text": "El valor completo del lado derecho es 171.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 108.": "El producto izquierdo vale 108 y el derecho 204. Para conservar la igualdad, el número faltante es su diferencia: 12×(14+3)−12×(14−5)=96. Comprueba sumándolo al producto izquierdo.",
+        "El resultado solicitado es 24.": "Se restaron los términos que se deben sumar al deshacer la diferencia. El resultado correcto es 96.",
+        "El valor completo del lado derecho es 171.": "El factor 12 multiplica ambos sumandos del lado derecho: 12×(14+3)=204."
+      },
+      "auxiliary_value": 204,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-14",
+      "previous_sha256": "0f29ec5a08344fe45d6a337da44e6e4da7fc06c4e9e0c7517d7297bd8ea296d4",
+      "content_sha256": "5abaa6bcf28766bfd0ede20eb68f4eee39dedda93a467fbcc290a0af5d51f535",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "completar-igualdad-distributiva",
+      "stimulus": "Completa la igualdad 13 × (15 − 6) + □ = 13 × (15 + 3). ¿Qué número sustituye □?",
+      "expected": "117",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 117.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 234.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 189.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 117.",
+          "truth": true
+        },
+        {
+          "text": "El valor completo del lado derecho es 198.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 189.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Calcula el producto conocido del lado izquierdo» es 189.": "Se aplicó el factor solo al primer término. El paso correcto da 117.",
+        "El resultado solicitado es 117.": "El producto izquierdo vale 117 y el derecho 234. Para conservar la igualdad, el número faltante es su diferencia: 13×(15+3)−13×(15−6)=117. Comprueba sumándolo al producto izquierdo.",
+        "El valor completo del lado derecho es 198.": "El factor 13 multiplica ambos sumandos del lado derecho: 13×(15+3)=234."
+      },
+      "auxiliary_value": 234,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-15",
+      "previous_sha256": "83b111ce6b1e58c17bf8eafab1e3b38b7eb25eeabf37428f079388d3ef1f3c4c",
+      "content_sha256": "f79bef2af9bcd7b25d1170da227b1f41532d4b0f5ac60a5fa3b59d77a5345f22",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "factor-desconocido-tras-cancelar",
+      "stimulus": "Completa la igualdad 13 × (16 + 16) − 13 × 16 = 4 × □. ¿Qué número sustituye □?",
+      "expected": "52",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 52.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Simplifica el lado izquierdo» es 208.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 208.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 52.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Simplifica el lado izquierdo» es 208.",
+          "truth": true
+        },
+        {
+          "text": "El producto que aparece con signos opuestos y se cancela vale 416.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es 52.": "Al distribuir se cancelan los productos 13×16. Queda 13×16=208. Como 4×□ debe valer 208, divide por 4: 52.",
+        "El valor correcto del paso «Simplifica el lado izquierdo» es 208.": "Al distribuir se cancelan los productos 13×16. Queda 13×16=208. Como 4×□ debe valer 208, divide por 4: 52.",
+        "El producto que aparece con signos opuestos y se cancela vale 416.": "Al distribuir el lado izquierdo aparecen 13×16 y su opuesto; ambos tienen magnitud 208."
+      },
+      "auxiliary_value": 208,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-16",
+      "previous_sha256": "b372880ac068f085c5a60f94a53e72f26cfcc422852cdb0d77e7364d4bfd2e78",
+      "content_sha256": "4511556f8b24a1c977edf0d95d9f5bc7469d23fc75d1297ed7cb6e62676db7e4",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "factor-desconocido-tras-cancelar",
+      "stimulus": "Completa la igualdad 14 × (17 + 20) − 14 × 17 = 4 × □. ¿Qué número sustituye □?",
+      "expected": "70",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Simplifica el lado izquierdo» es 280.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 5.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 280.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Simplifica el lado izquierdo» es 280.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 5.",
+          "truth": false
+        },
+        {
+          "text": "El producto que aparece con signos opuestos y se cancela vale 518.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Simplifica el lado izquierdo» es 280.": "Al distribuir se cancelan los productos 14×17. Queda 14×20=280. Como 4×□ debe valer 280, divide por 4: 70.",
+        "El resultado solicitado es 5.": "Se dividió el sumando sin conservar el factor común. El resultado correcto es 70.",
+        "El producto que aparece con signos opuestos y se cancela vale 518.": "Al distribuir el lado izquierdo aparecen 14×17 y su opuesto; ambos tienen magnitud 238."
+      },
+      "auxiliary_value": 238,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-17",
+      "previous_sha256": "56e8fe6b2b7e7ca051940f22680dc8e18aedd74e62c5fc6b61a8953ac3d093ee",
+      "content_sha256": "66d01b85387c7a2aacbbb4caaffcf2eddb8743a7e9656a73967efb8f685019c6",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "factor-desconocido-tras-cancelar",
+      "stimulus": "Completa la igualdad 15 × (18 + 24) − 15 × 18 = 4 × □. ¿Qué número sustituye □?",
+      "expected": "90",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 90.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 360.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Simplifica el lado izquierdo» es 630.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 90.",
+          "truth": true
+        },
+        {
+          "text": "El producto que aparece con signos opuestos y se cancela vale 630.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Simplifica el lado izquierdo» es 630.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Simplifica el lado izquierdo» es 630.": "Se omitió la cancelación. El paso correcto da 360.",
+        "El resultado solicitado es 90.": "Al distribuir se cancelan los productos 15×18. Queda 15×24=360. Como 4×□ debe valer 360, divide por 4: 90.",
+        "El producto que aparece con signos opuestos y se cancela vale 630.": "Al distribuir el lado izquierdo aparecen 15×18 y su opuesto; ambos tienen magnitud 270."
+      },
+      "auxiliary_value": 270,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-18",
+      "previous_sha256": "95e9d6ac8a91f0cad65085816f9fbe9c87703e0e3f8c69b0a79852bb78491ce2",
+      "content_sha256": "bba036b839840704a414162300992323fa318ec47a28353e9943d7fcdd030f11",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "raiz-racional-resta-agrupada",
+      "stimulus": "Calcula √(9/484) − (7/22 − 3/44). Expresa una fracción simplificada.",
+      "expected": "-5/44",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es -5/44.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1/4.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -17/44.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -5/44.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1/4.",
+          "truth": true
+        },
+        {
+          "text": "La raíz cuadrada principal del radical es -3/22.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es -5/44.": "La raíz principal es 3/22. El paréntesis vale 1/4 al convertir a denominador 44. La resta exterior invierte los dos signos internos: (6−14+3)/44=-5/44.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1/4.": "La raíz principal es 3/22. El paréntesis vale 1/4 al convertir a denominador 44. La resta exterior invierte los dos signos internos: (6−14+3)/44=-5/44.",
+        "La raíz cuadrada principal del radical es -3/22.": "La raíz principal es no negativa: 3/22, cuyo cuadrado reproduce el radicando."
+      },
+      "auxiliary_value": 0.13636363636363635,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-19",
+      "previous_sha256": "d7cbf6401b9aae8e98a4c2586349856c9cd3ed33fd5545b355b5d30f317c5b5d",
+      "content_sha256": "d8833ee5890c24b9cc17f831a2712d6e1995f3683f83da565b0a53bd84c8bab2",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "raiz-racional-resta-agrupada",
+      "stimulus": "Calcula √(16/529) − (8/23 − 4/46). Expresa una fracción simplificada.",
+      "expected": "-2/23",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 6/23.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -6/23.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es -10/23.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 6/23.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -6/23.",
+          "truth": false
+        },
+        {
+          "text": "La raíz cuadrada principal del radical es -4/23.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 6/23.": "La raíz principal es 4/23. El paréntesis vale 6/23 al convertir a denominador 46. La resta exterior invierte los dos signos internos: (8−16+4)/46=-2/23.",
+        "El resultado solicitado es -6/23.": "No se invirtió el signo del último término al restar el grupo. El resultado correcto es -2/23.",
+        "La raíz cuadrada principal del radical es -4/23.": "La raíz principal es no negativa: 4/23, cuyo cuadrado reproduce el radicando."
+      },
+      "auxiliary_value": 0.17391304347826086,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-20",
+      "previous_sha256": "65ada31acffda78f74633c0926edc405eaf4f1598b0d51d409eb98ed8ac64b9a",
+      "content_sha256": "a9e23c89ed2f8a5690a5dd10aaa659c56ac8bc0c8b525e81e3cdc4a655b3511e",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "raiz-racional-resta-agrupada",
+      "stimulus": "Calcula √(25/576) − (9/24 − 5/48). Expresa una fracción simplificada.",
+      "expected": "-1/16",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es -1/16.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es -23/48.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 23/48.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es -1/16.",
+          "truth": true
+        },
+        {
+          "text": "La raíz cuadrada principal del radical es -5/24.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 23/48.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 23/48.": "Se sumaron los términos del paréntesis. El paso correcto da 13/48.",
+        "El resultado solicitado es -1/16.": "La raíz principal es 5/24. El paréntesis vale 13/48 al convertir a denominador 48. La resta exterior invierte los dos signos internos: (10−18+5)/48=-1/16.",
+        "La raíz cuadrada principal del radical es -5/24.": "La raíz principal es no negativa: 5/24, cuyo cuadrado reproduce el radicando."
+      },
+      "auxiliary_value": 0.20833333333333334,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-21",
+      "previous_sha256": "1389329f264b7956022baa02a727824003ae657d739d93febf1e57854a521aad",
+      "content_sha256": "2dd9705c49ae8c85f4aea4e85ba37952304f2c8204d3abf106246927b83d678e",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "distribuir-sobre-raiz-racional",
+      "stimulus": "Calcula 2 × (√(16/625) − 11/50) + 5/25. Expresa una fracción simplificada.",
+      "expected": "2/25",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 2/25.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es -3/50.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 7/50.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 2/25.",
+          "truth": true
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es -3/50.",
+          "truth": true
+        },
+        {
+          "text": "La raíz cuadrada principal del radical es -4/25.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El resultado solicitado es 2/25.": "La raíz principal es 4/25. El paréntesis vale -3/50. Multiplicarlo por 2 da -3/25; al sumar 5/25 se obtiene (8−11+5)/25=2/25.",
+        "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es -3/50.": "La raíz principal es 4/25. El paréntesis vale -3/50. Multiplicarlo por 2 da -3/25; al sumar 5/25 se obtiene (8−11+5)/25=2/25.",
+        "La raíz cuadrada principal del radical es -4/25.": "La raíz principal es no negativa: 4/25, cuyo cuadrado reproduce el radicando."
+      },
+      "auxiliary_value": 0.16,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-22",
+      "previous_sha256": "74f5b9b9e61850f76c6b76f6ccf520a70fa72bfcb26811c32e11c615310b77ac",
+      "content_sha256": "e19fea8918d4b2ac8387ea62febcb3085b79d21f92397fe57a9dc4043bc70067",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "distribuir-sobre-raiz-racional",
+      "stimulus": "Calcula 2 × (√(25/676) − 13/52) + 6/26. Expresa una fracción simplificada.",
+      "expected": "3/26",
+      "previous_assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es -3/52.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 29/26.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 9/52.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es -3/52.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 29/26.",
+          "truth": false
+        },
+        {
+          "text": "La raíz cuadrada principal del radical es -5/26.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es -3/52.": "La raíz principal es 5/26. El paréntesis vale -3/52. Multiplicarlo por 2 da -3/26; al sumar 6/26 se obtiene (10−13+6)/26=3/26.",
+        "El resultado solicitado es 29/26.": "Se cambió la resta interior por suma. El resultado correcto es 3/26.",
+        "La raíz cuadrada principal del radical es -5/26.": "La raíz principal es no negativa: 5/26, cuyo cuadrado reproduce el radicando."
+      },
+      "auxiliary_value": 0.19230769230769232,
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-23",
+      "previous_sha256": "010d4bd845fa77d2cd51456c5cf9453475373cdc64f44cbfaaf2794411564046",
+      "content_sha256": "a6f9945ca6e7c26da6281ca5e2a64d8db32e976af6c199657972ee9df9983459",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "family": "distribuir-sobre-raiz-racional",
+      "stimulus": "Calcula 2 × (√(36/729) − 15/54) + 7/27. Expresa una fracción simplificada.",
+      "expected": "4/27",
+      "previous_assertions": [
+        {
+          "text": "El resultado solicitado es 4/27.",
+          "truth": true
+        },
+        {
+          "text": "El resultado solicitado es 11/54.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es 1/2.",
+          "truth": false
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 4/27.",
+          "truth": true
+        },
+        {
+          "text": "La raíz cuadrada principal del radical es -2/9.",
+          "truth": false
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es 1/2.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Resuelve el paréntesis antes de multiplicar» es 1/2.": "Se sumó dentro del paréntesis. El paso correcto da -1/18.",
+        "El resultado solicitado es 4/27.": "La raíz principal es 2/9. El paréntesis vale -1/18. Multiplicarlo por 2 da -1/9; al sumar 7/27 se obtiene (12−15+7)/27=4/27.",
+        "La raíz cuadrada principal del radical es -2/9.": "La raíz principal es no negativa: 2/9, cuyo cuadrado reproduce el radicando."
+      },
+      "auxiliary_value": 0.2222222222222222,
+      "semantic_status": "REVIEW"
+    }
+  ]
+}

@@ -1,0 +1,3901 @@
+{
+  "revision": "R15",
+  "scope": "MAT-ARIT-01",
+  "source_ci": 45733078753,
+  "source_job": 139619609634,
+  "candidate_sha": "02b7cecdf6fafcebaa7e4806d3b3e631c805a920",
+  "publication_sha": "925bfcac94f6d947015f853da2225e9ff062fe88",
+  "summary": {
+    "changed": 18,
+    "unchanged": 432,
+    "matched_predecessors": 18,
+    "distractors_verified": 108,
+    "claims_verified": 54,
+    "distinct_decisions_per_item": 3,
+    "additional_families": 2,
+    "review": 18,
+    "semantic_pass": 0
+  },
+  "inventory": {
+    "beforeDominant": 195,
+    "afterDominant": 177,
+    "inventory": [
+      {
+        "level": "principiante",
+        "mode": "clasificar",
+        "count": 30,
+        "families": {
+          "prioridad-de-operaciones": 11,
+          "resta-de-entero-negativo": 3,
+          "cociente-con-agrupacion": 3,
+          "producto-negativo-y-suma": 2,
+          "cero-dividido-por-no-cero": 2,
+          "division-producto-izquierda-derecha": 3,
+          "enteros-desplazamiento-signos": 3,
+          "precedencia-sin-parentesis": 3
+        }
+      },
+      {
+        "level": "principiante",
+        "mode": "quiz",
+        "count": 30,
+        "families": {
+          "prioridad-de-operaciones": 11,
+          "resta-de-entero-negativo": 3,
+          "cociente-con-agrupacion": 3,
+          "producto-negativo-y-suma": 2,
+          "cero-dividido-por-no-cero": 2,
+          "division-producto-izquierda-derecha": 3,
+          "enteros-desplazamiento-signos": 3,
+          "precedencia-sin-parentesis": 3
+        }
+      },
+      {
+        "level": "principiante",
+        "mode": "construir",
+        "count": 30,
+        "families": {
+          "prioridad-de-operaciones": 11,
+          "resta-de-entero-negativo": 3,
+          "cociente-con-agrupacion": 3,
+          "producto-negativo-y-suma": 2,
+          "cero-dividido-por-no-cero": 2,
+          "division-producto-izquierda-derecha": 3,
+          "enteros-desplazamiento-signos": 3,
+          "precedencia-sin-parentesis": 3
+        }
+      },
+      {
+        "level": "intermedio",
+        "mode": "clasificar",
+        "count": 50,
+        "families": {
+          "modificar-parentesis-y-factor": 17,
+          "presupuesto-dos-compras": 3,
+          "reconstruir-inventario-inicial": 3,
+          "comparar-cambios-compensados": 3,
+          "reconstruir-cantidad-por-grupo": 3,
+          "comparar-ofertas-con-cargos-fijos": 3,
+          "cociente-de-diferencia-racional-con-raiz": 3,
+          "cambio-contextual-inventario": 3,
+          "inventario-flujos-independientes": 3,
+          "reparto-neto-exacto": 3,
+          "raiz-producto-suma-resta": 3,
+          "raiz-racionales-signos": 3
+        }
+      },
+      {
+        "level": "intermedio",
+        "mode": "quiz",
+        "count": 50,
+        "families": {
+          "modificar-parentesis-y-factor": 17,
+          "presupuesto-dos-compras": 3,
+          "reconstruir-inventario-inicial": 3,
+          "comparar-cambios-compensados": 3,
+          "reconstruir-cantidad-por-grupo": 3,
+          "comparar-ofertas-con-cargos-fijos": 3,
+          "cociente-de-diferencia-racional-con-raiz": 3,
+          "cambio-contextual-inventario": 3,
+          "inventario-flujos-independientes": 3,
+          "reparto-neto-exacto": 3,
+          "raiz-producto-suma-resta": 3,
+          "raiz-racionales-signos": 3
+        }
+      },
+      {
+        "level": "intermedio",
+        "mode": "construir",
+        "count": 50,
+        "families": {
+          "modificar-parentesis-y-factor": 17,
+          "presupuesto-dos-compras": 3,
+          "reconstruir-inventario-inicial": 3,
+          "comparar-cambios-compensados": 3,
+          "reconstruir-cantidad-por-grupo": 3,
+          "comparar-ofertas-con-cargos-fijos": 3,
+          "cociente-de-diferencia-racional-con-raiz": 3,
+          "cambio-contextual-inventario": 3,
+          "inventario-flujos-independientes": 3,
+          "reparto-neto-exacto": 3,
+          "raiz-producto-suma-resta": 3,
+          "raiz-racionales-signos": 3
+        }
+      },
+      {
+        "level": "avanzado",
+        "mode": "clasificar",
+        "count": 70,
+        "families": {
+          "distributiva-y-cancelacion": 31,
+          "factor-comun-diferencia-compuesta": 3,
+          "resta-anidada-distributiva": 3,
+          "cancelacion-cruzada-de-productos": 3,
+          "dos-raices-en-producto-agrupado": 3,
+          "completar-igualdad-distributiva": 3,
+          "factor-desconocido-tras-cancelar": 3,
+          "raiz-racional-resta-agrupada": 3,
+          "distribuir-sobre-raiz-racional": 3,
+          "distributiva-signo-negativo": 3,
+          "factor-comun-dos-grupos": 3,
+          "diferencia-productos-no-identicos": 3,
+          "raiz-producto-cociente-agrupado": 3,
+          "raiz-producto-racionales-combinados": 3
+        }
+      },
+      {
+        "level": "avanzado",
+        "mode": "quiz",
+        "count": 70,
+        "families": {
+          "distributiva-y-cancelacion": 31,
+          "factor-comun-diferencia-compuesta": 3,
+          "resta-anidada-distributiva": 3,
+          "cancelacion-cruzada-de-productos": 3,
+          "dos-raices-en-producto-agrupado": 3,
+          "completar-igualdad-distributiva": 3,
+          "factor-desconocido-tras-cancelar": 3,
+          "raiz-racional-resta-agrupada": 3,
+          "distribuir-sobre-raiz-racional": 3,
+          "distributiva-signo-negativo": 3,
+          "factor-comun-dos-grupos": 3,
+          "diferencia-productos-no-identicos": 3,
+          "raiz-producto-cociente-agrupado": 3,
+          "raiz-producto-racionales-combinados": 3
+        }
+      },
+      {
+        "level": "avanzado",
+        "mode": "construir",
+        "count": 70,
+        "families": {
+          "distributiva-y-cancelacion": 31,
+          "factor-comun-diferencia-compuesta": 3,
+          "resta-anidada-distributiva": 3,
+          "cancelacion-cruzada-de-productos": 3,
+          "dos-raices-en-producto-agrupado": 3,
+          "completar-igualdad-distributiva": 3,
+          "factor-desconocido-tras-cancelar": 3,
+          "raiz-racional-resta-agrupada": 3,
+          "distribuir-sobre-raiz-racional": 3,
+          "distributiva-signo-negativo": 3,
+          "factor-comun-dos-grupos": 3,
+          "diferencia-productos-no-identicos": 3,
+          "raiz-producto-cociente-agrupado": 3,
+          "raiz-producto-racionales-combinados": 3
+        }
+      }
+    ]
+  },
+  "method": "CI 445 pruebas y M0 PASS; recálculo racional separado de clave, paso, dato auxiliar y cada distractor; 18/18 predecesores.",
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+      "previous_sha256": "959da802199081f6be48f2d0baa1d488df570a5609d439dace21baafaccea049",
+      "content_sha256": "c8276fc6895c72e0fb6a5548334341ffe65c68cdf7dc9c07cb176299a019b62f",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Para comprar 10 cuadernos, la tienda A cobra L 15 por cuaderno más L 20 por el pedido; la B cobra L 18 por cuaderno más L 5 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "15",
+      "intermediate": "170",
+      "auxiliary": "-15",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "45",
+            "170",
+            "150",
+            "450"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "30",
+            "-15",
+            "15",
+            "185"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es 15.",
+          "truth": false,
+          "value": "15",
+          "correct": "-15",
+          "oracle_truth": false,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 5−20=-15."
+        },
+        {
+          "text": "El resultado solicitado es 15.",
+          "truth": true,
+          "value": "15",
+          "correct": "15",
+          "oracle_truth": true,
+          "decision": "key",
+          "reason": "A cuesta 10×15+20=170; B cuesta 10×18+5=185. Compara los costos completos, no solo el precio unitario. B menos A es 185−170=15 lempiras."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 170.",
+          "truth": true,
+          "value": "170",
+          "correct": "170",
+          "oracle_truth": true,
+          "decision": "step",
+          "reason": "A cuesta 10×15+20=170; B cuesta 10×18+5=185. Compara los costos completos, no solo el precio unitario. B menos A es 185−170=15 lempiras."
+        }
+      ],
+      "explanation": "A cuesta 10×15+20=170; B cuesta 10×18+5=185. Compara los costos completos, no solo el precio unitario. B menos A es 185−170=15 lempiras.",
+      "optionExplanations": {
+        "30": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "185": "Se tomó el costo de B sin restar el de A.",
+        "-15": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "45": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "150": "Se omitió el cargo fijo.",
+        "450": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 15.": "A cuesta 10×15+20=170; B cuesta 10×18+5=185. Compara los costos completos, no solo el precio unitario. B menos A es 185−170=15 lempiras.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 170.": "A cuesta 10×15+20=170; B cuesta 10×18+5=185. Compara los costos completos, no solo el precio unitario. B menos A es 185−170=15 lempiras.",
+        "La diferencia de los cargos fijos (B menos A) es 15.": "Los cargos fijos se restan en el orden B menos A: 5−20=-15."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "45",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 1,
+          "value": "150",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 1,
+          "value": "450",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 2,
+          "value": "30",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        },
+        {
+          "step": 2,
+          "value": "-15",
+          "reason": "Se invirtió el orden de la diferencia."
+        },
+        {
+          "step": 2,
+          "value": "185",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "15",
+        "intermediate": "170",
+        "auxiliary": "-15"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "45",
+            "170",
+            "150",
+            "450"
+          ],
+          "correct": "170"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "30",
+            "-15",
+            "15",
+            "185"
+          ],
+          "correct": "15"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+        "sha256": "959da802199081f6be48f2d0baa1d488df570a5609d439dace21baafaccea049",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-13",
+      "previous_sha256": "12ed5d21c8bdd5b0725696c517241f2e2465d8ce39712cc49e8190333a60728d",
+      "content_sha256": "7accbec584cbda7da0dadb1175b942802e7567d03c85b6535cf3d2ffbec12a6c",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Para comprar 11 cuadernos, la tienda A cobra L 15 por cuaderno más L 23 por el pedido; la B cobra L 18 por cuaderno más L 6 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "16",
+      "intermediate": "188",
+      "auxiliary": "-17",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "188",
+            "165",
+            "510",
+            "49"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-16",
+            "16",
+            "204",
+            "33"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 204.",
+          "truth": false,
+          "value": "204",
+          "correct": "16",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 16."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 188.",
+          "truth": true,
+          "value": "188",
+          "correct": "188",
+          "oracle_truth": true,
+          "decision": "step",
+          "reason": "A cuesta 11×15+23=188; B cuesta 11×18+6=204. Compara los costos completos, no solo el precio unitario. B menos A es 204−188=16 lempiras."
+        },
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es 17.",
+          "truth": false,
+          "value": "17",
+          "correct": "-17",
+          "oracle_truth": false,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 6−23=-17."
+        }
+      ],
+      "explanation": "A cuesta 11×15+23=188; B cuesta 11×18+6=204. Compara los costos completos, no solo el precio unitario. B menos A es 204−188=16 lempiras.",
+      "optionExplanations": {
+        "33": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "204": "Se tomó el costo de B sin restar el de A.",
+        "-16": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "49": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "165": "Se omitió el cargo fijo.",
+        "510": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 204.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 16.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 188.": "A cuesta 11×15+23=188; B cuesta 11×18+6=204. Compara los costos completos, no solo el precio unitario. B menos A es 204−188=16 lempiras.",
+        "La diferencia de los cargos fijos (B menos A) es 17.": "Los cargos fijos se restan en el orden B menos A: 6−23=-17."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "165",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 1,
+          "value": "510",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 1,
+          "value": "49",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 2,
+          "value": "-16",
+          "reason": "Se invirtió el orden de la diferencia."
+        },
+        {
+          "step": 2,
+          "value": "204",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        },
+        {
+          "step": 2,
+          "value": "33",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "16",
+        "intermediate": "188",
+        "auxiliary": "-17"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "188",
+            "165",
+            "510",
+            "49"
+          ],
+          "correct": "188"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-16",
+            "16",
+            "204",
+            "33"
+          ],
+          "correct": "16"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-13",
+        "sha256": "12ed5d21c8bdd5b0725696c517241f2e2465d8ce39712cc49e8190333a60728d",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-14",
+      "previous_sha256": "c4690a96a6a424d7a48b7d3e0d22e6fb6cacf0dcd56f4045e194a0e85798fcb3",
+      "content_sha256": "728dab21d1804467db62eed5a7124761167ba2759dd4d19d9b168dd21c8002bb",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Para comprar 12 cuadernos, la tienda A cobra L 15 por cuaderno más L 26 por el pedido; la B cobra L 18 por cuaderno más L 7 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "17",
+      "intermediate": "206",
+      "auxiliary": "-19",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "180",
+            "570",
+            "53",
+            "206"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "17",
+            "223",
+            "36",
+            "-17"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 180.",
+          "truth": false,
+          "value": "180",
+          "correct": "206",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se omitió el cargo fijo. El paso correcto da 206."
+        },
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es -19.",
+          "truth": true,
+          "value": "-19",
+          "correct": "-19",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 7−26=-19."
+        },
+        {
+          "text": "El resultado solicitado es 223.",
+          "truth": false,
+          "value": "223",
+          "correct": "17",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 17."
+        }
+      ],
+      "explanation": "A cuesta 12×15+26=206; B cuesta 12×18+7=223. Compara los costos completos, no solo el precio unitario. B menos A es 223−206=17 lempiras.",
+      "optionExplanations": {
+        "36": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "223": "Se tomó el costo de B sin restar el de A.",
+        "-17": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "53": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "180": "Se omitió el cargo fijo.",
+        "570": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 223.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 17.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 180.": "Se omitió el cargo fijo. El paso correcto da 206.",
+        "La diferencia de los cargos fijos (B menos A) es -19.": "Los cargos fijos se restan en el orden B menos A: 7−26=-19."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "180",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 1,
+          "value": "570",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 1,
+          "value": "53",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 2,
+          "value": "223",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        },
+        {
+          "step": 2,
+          "value": "36",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        },
+        {
+          "step": 2,
+          "value": "-17",
+          "reason": "Se invirtió el orden de la diferencia."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "17",
+        "intermediate": "206",
+        "auxiliary": "-19"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "180",
+            "570",
+            "53",
+            "206"
+          ],
+          "correct": "206"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "17",
+            "223",
+            "36",
+            "-17"
+          ],
+          "correct": "17"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-14",
+        "sha256": "c4690a96a6a424d7a48b7d3e0d22e6fb6cacf0dcd56f4045e194a0e85798fcb3",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+      "previous_sha256": "c36eaed0f514eb92e8d5cc9874da886aa1d249d069ab59e11253eeddd72f8a5a",
+      "content_sha256": "7ac5595fa1b32bb369cae8638bc25b2557d2bfb46a48e0e69a1d00d79b2e818c",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Calcula (√(25/81) − 6/18) ÷ 3. Expresa una fracción simplificada.",
+      "expected": "2/27",
+      "intermediate": "2/9",
+      "auxiliary": "5/9",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-8/9",
+            "-1/27",
+            "2/9",
+            "8/9"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "2/9",
+            "2/3",
+            "-8/27",
+            "2/27"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz cuadrada principal es -5/9.",
+          "truth": false,
+          "value": "-5/9",
+          "correct": "5/9",
+          "oracle_truth": false,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 5/9, porque al cuadrarla se obtiene 25/81."
+        },
+        {
+          "text": "El resultado solicitado es 2/27.",
+          "truth": true,
+          "value": "2/27",
+          "correct": "2/27",
+          "oracle_truth": true,
+          "decision": "key",
+          "reason": "La raíz principal es 5/9. Con denominador 18, el paréntesis vale 2/9. Dividir por 3 equivale a multiplicar por 1/3; resulta (10−6)/(18×3)=2/27."
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 2/9.",
+          "truth": true,
+          "value": "2/9",
+          "correct": "2/9",
+          "oracle_truth": true,
+          "decision": "step",
+          "reason": "La raíz principal es 5/9. Con denominador 18, el paréntesis vale 2/9. Dividir por 3 equivale a multiplicar por 1/3; resulta (10−6)/(18×3)=2/27."
+        }
+      ],
+      "explanation": "La raíz principal es 5/9. Con denominador 18, el paréntesis vale 2/9. Dividir por 3 equivale a multiplicar por 1/3; resulta (10−6)/(18×3)=2/27.",
+      "optionExplanations": {
+        "2/9": "Se omitió dividir por el último número.",
+        "2/3": "Se multiplicó por el divisor en lugar de dividir.",
+        "-8/27": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "8/9": "Se sumaron las fracciones en vez de restarlas.",
+        "-8/9": "Se tomó la raíz negativa.",
+        "-1/27": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 2/27.": "La raíz principal es 5/9. Con denominador 18, el paréntesis vale 2/9. Dividir por 3 equivale a multiplicar por 1/3; resulta (10−6)/(18×3)=2/27.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 2/9.": "La raíz principal es 5/9. Con denominador 18, el paréntesis vale 2/9. Dividir por 3 equivale a multiplicar por 1/3; resulta (10−6)/(18×3)=2/27.",
+        "La raíz cuadrada principal es -5/9.": "La raíz principal es no negativa: 5/9, porque al cuadrarla se obtiene 25/81."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-8/9",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "-1/27",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 1,
+          "value": "8/9",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 2,
+          "value": "2/9",
+          "reason": "Se omitió dividir por el último número."
+        },
+        {
+          "step": 2,
+          "value": "2/3",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        },
+        {
+          "step": 2,
+          "value": "-8/27",
+          "reason": "Se eligió la raíz negativa."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "2/27",
+        "intermediate": "2/9",
+        "auxiliary": "5/9"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-8/9",
+            "-1/27",
+            "2/9",
+            "8/9"
+          ],
+          "correct": "2/9"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "2/9",
+            "2/3",
+            "-8/27",
+            "2/27"
+          ],
+          "correct": "2/27"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+        "sha256": "c36eaed0f514eb92e8d5cc9874da886aa1d249d069ab59e11253eeddd72f8a5a",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-16",
+      "previous_sha256": "571bdb59834641f704615fa7838337fd26af161a0cf8e0b4a426ec7cf2746843",
+      "content_sha256": "9b1530f00120bc6e092a9b858a9bc5361c2657160cb2cecdd5a782ce939b397f",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Calcula (√(36/100) − 7/20) ÷ 4. Expresa una fracción simplificada.",
+      "expected": "1/16",
+      "intermediate": "1/4",
+      "auxiliary": "3/5",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-1/30",
+            "1/4",
+            "19/20",
+            "-19/20"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1",
+            "-19/80",
+            "1/16",
+            "1/4"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 1/4.",
+          "truth": false,
+          "value": "1/4",
+          "correct": "1/16",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 1/16."
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1/4.",
+          "truth": true,
+          "value": "1/4",
+          "correct": "1/4",
+          "oracle_truth": true,
+          "decision": "step",
+          "reason": "La raíz principal es 3/5. Con denominador 20, el paréntesis vale 1/4. Dividir por 4 equivale a multiplicar por 1/4; resulta (12−7)/(20×4)=1/16."
+        },
+        {
+          "text": "La raíz cuadrada principal es -3/5.",
+          "truth": false,
+          "value": "-3/5",
+          "correct": "3/5",
+          "oracle_truth": false,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 3/5, porque al cuadrarla se obtiene 36/100."
+        }
+      ],
+      "explanation": "La raíz principal es 3/5. Con denominador 20, el paréntesis vale 1/4. Dividir por 4 equivale a multiplicar por 1/4; resulta (12−7)/(20×4)=1/16.",
+      "optionExplanations": {
+        "1": "Se multiplicó por el divisor en lugar de dividir.",
+        "1/4": "Se omitió dividir por el último número.",
+        "-19/80": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "19/20": "Se sumaron las fracciones en vez de restarlas.",
+        "-19/20": "Se tomó la raíz negativa.",
+        "-1/30": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 1/4.": "Se omitió dividir por el último número. El resultado correcto es 1/16.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1/4.": "La raíz principal es 3/5. Con denominador 20, el paréntesis vale 1/4. Dividir por 4 equivale a multiplicar por 1/4; resulta (12−7)/(20×4)=1/16.",
+        "La raíz cuadrada principal es -3/5.": "La raíz principal es no negativa: 3/5, porque al cuadrarla se obtiene 36/100."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-1/30",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 1,
+          "value": "19/20",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 1,
+          "value": "-19/20",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "1",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        },
+        {
+          "step": 2,
+          "value": "-19/80",
+          "reason": "Se eligió la raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "1/4",
+          "reason": "Se omitió dividir por el último número."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "1/16",
+        "intermediate": "1/4",
+        "auxiliary": "3/5"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-1/30",
+            "1/4",
+            "19/20",
+            "-19/20"
+          ],
+          "correct": "1/4"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1",
+            "-19/80",
+            "1/16",
+            "1/4"
+          ],
+          "correct": "1/16"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-16",
+        "sha256": "571bdb59834641f704615fa7838337fd26af161a0cf8e0b4a426ec7cf2746843",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+      "previous_sha256": "7b05dc92c4fb16202d4d627aaa6dc36617c56acc27bd4b95387ab38a2b4b73f5",
+      "content_sha256": "c36e7adaea461f712591ae050d668fa3cd96158343204e970911185ca9a1bf48",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "clasificar",
+      "stimulus": "Calcula (√(49/121) − 8/22) ÷ 5. Expresa una fracción simplificada.",
+      "expected": "3/55",
+      "intermediate": "3/11",
+      "auxiliary": "7/11",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "3/11",
+            "1",
+            "-1",
+            "-1/33"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-1/5",
+            "3/55",
+            "3/11",
+            "15/11"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1.",
+          "truth": false,
+          "value": "1",
+          "correct": "3/11",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 3/11."
+        },
+        {
+          "text": "La raíz cuadrada principal es 7/11.",
+          "truth": true,
+          "value": "7/11",
+          "correct": "7/11",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 7/11, porque al cuadrarla se obtiene 49/121."
+        },
+        {
+          "text": "El resultado solicitado es 3/11.",
+          "truth": false,
+          "value": "3/11",
+          "correct": "3/55",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 3/55."
+        }
+      ],
+      "explanation": "La raíz principal es 7/11. Con denominador 22, el paréntesis vale 3/11. Dividir por 5 equivale a multiplicar por 1/5; resulta (14−8)/(22×5)=3/55.",
+      "optionExplanations": {
+        "3/11": "Se omitió dividir por el último número.",
+        "15/11": "Se multiplicó por el divisor en lugar de dividir.",
+        "-1/5": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "1": "Se sumaron las fracciones en vez de restarlas.",
+        "-1": "Se tomó la raíz negativa.",
+        "-1/33": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 3/11.": "Se omitió dividir por el último número. El resultado correcto es 3/55.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1.": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 3/11.",
+        "La raíz cuadrada principal es 7/11.": "La raíz principal es no negativa: 7/11, porque al cuadrarla se obtiene 49/121."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "1",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 1,
+          "value": "-1",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "-1/33",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 2,
+          "value": "-1/5",
+          "reason": "Se eligió la raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "3/11",
+          "reason": "Se omitió dividir por el último número."
+        },
+        {
+          "step": 2,
+          "value": "15/11",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "3/55",
+        "intermediate": "3/11",
+        "auxiliary": "7/11"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "3/11",
+            "1",
+            "-1",
+            "-1/33"
+          ],
+          "correct": "3/11"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-1/5",
+            "3/55",
+            "3/11",
+            "15/11"
+          ],
+          "correct": "3/55"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+        "sha256": "7b05dc92c4fb16202d4d627aaa6dc36617c56acc27bd4b95387ab38a2b4b73f5",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R6-classification-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-12",
+      "previous_sha256": "db1547b41115ab97b39bc076930de17ca4ecdab1884f99bb2f97b4c33704ccf1",
+      "content_sha256": "9a3f14ee466f6a38d80c1b2f8c7f5a9dafb5974f66922c2470ee314e15ca3112",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Para comprar 8 cuadernos, la tienda A cobra L 14 por cuaderno más L 20 por el pedido; la B cobra L 17 por cuaderno más L 5 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "9",
+      "intermediate": "132",
+      "auxiliary": "-15",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "392",
+            "42",
+            "132",
+            "112"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "141",
+            "24",
+            "-9",
+            "9"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 141.",
+          "truth": false,
+          "value": "141",
+          "correct": "9",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 9."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 112.",
+          "truth": false,
+          "value": "112",
+          "correct": "132",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se omitió el cargo fijo. El paso correcto da 132."
+        },
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es -15.",
+          "truth": true,
+          "value": "-15",
+          "correct": "-15",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 5−20=-15."
+        }
+      ],
+      "explanation": "A cuesta 8×14+20=132; B cuesta 8×17+5=141. Compara los costos completos, no solo el precio unitario. B menos A es 141−132=9 lempiras.",
+      "optionExplanations": {
+        "24": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "141": "Se tomó el costo de B sin restar el de A.",
+        "-9": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "42": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "112": "Se omitió el cargo fijo.",
+        "392": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 141.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 9.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 112.": "Se omitió el cargo fijo. El paso correcto da 132.",
+        "La diferencia de los cargos fijos (B menos A) es -15.": "Los cargos fijos se restan en el orden B menos A: 5−20=-15."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "392",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 1,
+          "value": "42",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 1,
+          "value": "112",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 2,
+          "value": "141",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        },
+        {
+          "step": 2,
+          "value": "24",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        },
+        {
+          "step": 2,
+          "value": "-9",
+          "reason": "Se invirtió el orden de la diferencia."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "9",
+        "intermediate": "132",
+        "auxiliary": "-15"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "392",
+            "42",
+            "132",
+            "112"
+          ],
+          "correct": "132"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "141",
+            "24",
+            "-9",
+            "9"
+          ],
+          "correct": "9"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-quiz-intermedio-12",
+        "sha256": "db1547b41115ab97b39bc076930de17ca4ecdab1884f99bb2f97b4c33704ccf1",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-13",
+      "previous_sha256": "51a8b14036054ecac63f8806a6a8cd6e85546fc148bed83bee18bb89e5513ef3",
+      "content_sha256": "a3cb0d38b89fecc00bd0fcb6e7804e0c819897b0bc9c46f856ee53d983bc6321",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Para comprar 9 cuadernos, la tienda A cobra L 14 por cuaderno más L 23 por el pedido; la B cobra L 17 por cuaderno más L 6 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "10",
+      "intermediate": "149",
+      "auxiliary": "-17",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "46",
+            "149",
+            "126",
+            "448"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "27",
+            "-10",
+            "10",
+            "159"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 126.",
+          "truth": false,
+          "value": "126",
+          "correct": "149",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se omitió el cargo fijo. El paso correcto da 149."
+        },
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es -17.",
+          "truth": true,
+          "value": "-17",
+          "correct": "-17",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 6−23=-17."
+        },
+        {
+          "text": "El resultado solicitado es 159.",
+          "truth": false,
+          "value": "159",
+          "correct": "10",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 10."
+        }
+      ],
+      "explanation": "A cuesta 9×14+23=149; B cuesta 9×17+6=159. Compara los costos completos, no solo el precio unitario. B menos A es 159−149=10 lempiras.",
+      "optionExplanations": {
+        "27": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "159": "Se tomó el costo de B sin restar el de A.",
+        "-10": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "46": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "126": "Se omitió el cargo fijo.",
+        "448": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 159.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 10.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 126.": "Se omitió el cargo fijo. El paso correcto da 149.",
+        "La diferencia de los cargos fijos (B menos A) es -17.": "Los cargos fijos se restan en el orden B menos A: 6−23=-17."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "46",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 1,
+          "value": "126",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 1,
+          "value": "448",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 2,
+          "value": "27",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        },
+        {
+          "step": 2,
+          "value": "-10",
+          "reason": "Se invirtió el orden de la diferencia."
+        },
+        {
+          "step": 2,
+          "value": "159",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "10",
+        "intermediate": "149",
+        "auxiliary": "-17"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "46",
+            "149",
+            "126",
+            "448"
+          ],
+          "correct": "149"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "27",
+            "-10",
+            "10",
+            "159"
+          ],
+          "correct": "10"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-quiz-intermedio-13",
+        "sha256": "51a8b14036054ecac63f8806a6a8cd6e85546fc148bed83bee18bb89e5513ef3",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-14",
+      "previous_sha256": "b7a02a4434fcea1148622c97cbee84672a4f56619908b1681afeffc3ab27842d",
+      "content_sha256": "c47b926c7a6dba709df865d92cbcb3d512aba2d382d991eaf9a62b8ccc60b265",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Para comprar 10 cuadernos, la tienda A cobra L 14 por cuaderno más L 26 por el pedido; la B cobra L 17 por cuaderno más L 7 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "11",
+      "intermediate": "166",
+      "auxiliary": "-19",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "166",
+            "140",
+            "504",
+            "50"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-11",
+            "11",
+            "177",
+            "30"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es -19.",
+          "truth": true,
+          "value": "-19",
+          "correct": "-19",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 7−26=-19."
+        },
+        {
+          "text": "El resultado solicitado es 177.",
+          "truth": false,
+          "value": "177",
+          "correct": "11",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 11."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 140.",
+          "truth": false,
+          "value": "140",
+          "correct": "166",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se omitió el cargo fijo. El paso correcto da 166."
+        }
+      ],
+      "explanation": "A cuesta 10×14+26=166; B cuesta 10×17+7=177. Compara los costos completos, no solo el precio unitario. B menos A es 177−166=11 lempiras.",
+      "optionExplanations": {
+        "30": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "177": "Se tomó el costo de B sin restar el de A.",
+        "-11": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "50": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "140": "Se omitió el cargo fijo.",
+        "504": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 177.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 11.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 140.": "Se omitió el cargo fijo. El paso correcto da 166.",
+        "La diferencia de los cargos fijos (B menos A) es -19.": "Los cargos fijos se restan en el orden B menos A: 7−26=-19."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "140",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 1,
+          "value": "504",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 1,
+          "value": "50",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 2,
+          "value": "-11",
+          "reason": "Se invirtió el orden de la diferencia."
+        },
+        {
+          "step": 2,
+          "value": "177",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        },
+        {
+          "step": 2,
+          "value": "30",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "11",
+        "intermediate": "166",
+        "auxiliary": "-19"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "166",
+            "140",
+            "504",
+            "50"
+          ],
+          "correct": "166"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-11",
+            "11",
+            "177",
+            "30"
+          ],
+          "correct": "11"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-quiz-intermedio-14",
+        "sha256": "b7a02a4434fcea1148622c97cbee84672a4f56619908b1681afeffc3ab27842d",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-15",
+      "previous_sha256": "1d2fd4efe4e09ee689b03c6bf722af7ba3e749c34a78a29e74bbe02ea011a39e",
+      "content_sha256": "793ae578508183e0531bd79303a7e227e29a75866f2c5d34db0b8593125f6f12",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Calcula (√(16/49) − 5/14) ÷ 3. Expresa una fracción simplificada.",
+      "expected": "1/14",
+      "intermediate": "3/14",
+      "auxiliary": "4/7",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "13/14",
+            "-13/14",
+            "-1/21",
+            "3/14"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1/14",
+            "3/14",
+            "9/14",
+            "-13/42"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 3/14.",
+          "truth": false,
+          "value": "3/14",
+          "correct": "1/14",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 1/14."
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 13/14.",
+          "truth": false,
+          "value": "13/14",
+          "correct": "3/14",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 3/14."
+        },
+        {
+          "text": "La raíz cuadrada principal es 4/7.",
+          "truth": true,
+          "value": "4/7",
+          "correct": "4/7",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 4/7, porque al cuadrarla se obtiene 16/49."
+        }
+      ],
+      "explanation": "La raíz principal es 4/7. Con denominador 14, el paréntesis vale 3/14. Dividir por 3 equivale a multiplicar por 1/3; resulta (8−5)/(14×3)=1/14.",
+      "optionExplanations": {
+        "3/14": "Se omitió dividir por el último número.",
+        "9/14": "Se multiplicó por el divisor en lugar de dividir.",
+        "-13/42": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "13/14": "Se sumaron las fracciones en vez de restarlas.",
+        "-13/14": "Se tomó la raíz negativa.",
+        "-1/21": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 3/14.": "Se omitió dividir por el último número. El resultado correcto es 1/14.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 13/14.": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 3/14.",
+        "La raíz cuadrada principal es 4/7.": "La raíz principal es no negativa: 4/7, porque al cuadrarla se obtiene 16/49."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "13/14",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 1,
+          "value": "-13/14",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "-1/21",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 2,
+          "value": "3/14",
+          "reason": "Se omitió dividir por el último número."
+        },
+        {
+          "step": 2,
+          "value": "9/14",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        },
+        {
+          "step": 2,
+          "value": "-13/42",
+          "reason": "Se eligió la raíz negativa."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "1/14",
+        "intermediate": "3/14",
+        "auxiliary": "4/7"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "13/14",
+            "-13/14",
+            "-1/21",
+            "3/14"
+          ],
+          "correct": "3/14"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1/14",
+            "3/14",
+            "9/14",
+            "-13/42"
+          ],
+          "correct": "1/14"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-quiz-intermedio-15",
+        "sha256": "1d2fd4efe4e09ee689b03c6bf722af7ba3e749c34a78a29e74bbe02ea011a39e",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+      "previous_sha256": "ef9de5dd2af5a1a481e82171ba89814b40cd4853e9433ea0325de8f1e3944c7c",
+      "content_sha256": "f458dc01d824f3657cc29b3c8b5acb2db6aa519f01292922c53ce5434bfb9f76",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Calcula (√(25/64) − 6/16) ÷ 4. Expresa una fracción simplificada.",
+      "expected": "1/16",
+      "intermediate": "1/4",
+      "auxiliary": "5/8",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-1",
+            "-1/24",
+            "1/4",
+            "1"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1/4",
+            "1",
+            "-1/4",
+            "1/16"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1.",
+          "truth": false,
+          "value": "1",
+          "correct": "1/4",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 1/4."
+        },
+        {
+          "text": "La raíz cuadrada principal es 5/8.",
+          "truth": true,
+          "value": "5/8",
+          "correct": "5/8",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 5/8, porque al cuadrarla se obtiene 25/64."
+        },
+        {
+          "text": "El resultado solicitado es 1/4.",
+          "truth": false,
+          "value": "1/4",
+          "correct": "1/16",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 1/16."
+        }
+      ],
+      "explanation": "La raíz principal es 5/8. Con denominador 16, el paréntesis vale 1/4. Dividir por 4 equivale a multiplicar por 1/4; resulta (10−6)/(16×4)=1/16.",
+      "optionExplanations": {
+        "1": "Se multiplicó por el divisor en lugar de dividir.",
+        "1/4": "Se omitió dividir por el último número.",
+        "-1/4": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "1": "Se sumaron las fracciones en vez de restarlas.",
+        "-1": "Se tomó la raíz negativa.",
+        "-1/24": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 1/4.": "Se omitió dividir por el último número. El resultado correcto es 1/16.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 1.": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 1/4.",
+        "La raíz cuadrada principal es 5/8.": "La raíz principal es no negativa: 5/8, porque al cuadrarla se obtiene 25/64."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-1",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "-1/24",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 1,
+          "value": "1",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 2,
+          "value": "1/4",
+          "reason": "Se omitió dividir por el último número."
+        },
+        {
+          "step": 2,
+          "value": "1",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        },
+        {
+          "step": 2,
+          "value": "-1/4",
+          "reason": "Se eligió la raíz negativa."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "1/16",
+        "intermediate": "1/4",
+        "auxiliary": "5/8"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-1",
+            "-1/24",
+            "1/4",
+            "1"
+          ],
+          "correct": "1/4"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1/4",
+            "1",
+            "-1/4",
+            "1/16"
+          ],
+          "correct": "1/16"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+        "sha256": "ef9de5dd2af5a1a481e82171ba89814b40cd4853e9433ea0325de8f1e3944c7c",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-17",
+      "previous_sha256": "b7e230e47b2f923fea7343bdb911675ef303c846aae018c6f5bc263b2b30d4cf",
+      "content_sha256": "f7b340fe89891a7ffcddbf4755d7b484e9c110902bfc063cf7b3dcfc53af8e55",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "quiz",
+      "stimulus": "Calcula (√(36/81) − 7/18) ÷ 5. Expresa una fracción simplificada.",
+      "expected": "1/18",
+      "intermediate": "5/18",
+      "auxiliary": "2/3",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-1/27",
+            "5/18",
+            "19/18",
+            "-19/18"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "25/18",
+            "-19/90",
+            "1/18",
+            "5/18"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz cuadrada principal es 2/3.",
+          "truth": true,
+          "value": "2/3",
+          "correct": "2/3",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 2/3, porque al cuadrarla se obtiene 36/81."
+        },
+        {
+          "text": "El resultado solicitado es 5/18.",
+          "truth": false,
+          "value": "5/18",
+          "correct": "1/18",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 1/18."
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 19/18.",
+          "truth": false,
+          "value": "19/18",
+          "correct": "5/18",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 5/18."
+        }
+      ],
+      "explanation": "La raíz principal es 2/3. Con denominador 18, el paréntesis vale 5/18. Dividir por 5 equivale a multiplicar por 1/5; resulta (12−7)/(18×5)=1/18.",
+      "optionExplanations": {
+        "5/18": "Se omitió dividir por el último número.",
+        "25/18": "Se multiplicó por el divisor en lugar de dividir.",
+        "-19/90": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "19/18": "Se sumaron las fracciones en vez de restarlas.",
+        "-19/18": "Se tomó la raíz negativa.",
+        "-1/27": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 5/18.": "Se omitió dividir por el último número. El resultado correcto es 1/18.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 19/18.": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 5/18.",
+        "La raíz cuadrada principal es 2/3.": "La raíz principal es no negativa: 2/3, porque al cuadrarla se obtiene 36/81."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-1/27",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 1,
+          "value": "19/18",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 1,
+          "value": "-19/18",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "25/18",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        },
+        {
+          "step": 2,
+          "value": "-19/90",
+          "reason": "Se eligió la raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "5/18",
+          "reason": "Se omitió dividir por el último número."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "1/18",
+        "intermediate": "5/18",
+        "auxiliary": "2/3"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-1/27",
+            "5/18",
+            "19/18",
+            "-19/18"
+          ],
+          "correct": "5/18"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "25/18",
+            "-19/90",
+            "1/18",
+            "5/18"
+          ],
+          "correct": "1/18"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-quiz-intermedio-17",
+        "sha256": "b7e230e47b2f923fea7343bdb911675ef303c846aae018c6f5bc263b2b30d4cf",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-06-R8-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-12",
+      "previous_sha256": "8875acf9cf0b15ac39398b6322181a71b0222859cc08165d7d4ed291b02606fa",
+      "content_sha256": "56117c0a8bcb66d9cd20ec7dccca8dd21ef9b96e3c65df225d71d4b3dc8fd363",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Para comprar 12 cuadernos, la tienda A cobra L 16 por cuaderno más L 20 por el pedido; la B cobra L 19 por cuaderno más L 5 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "21",
+      "intermediate": "212",
+      "auxiliary": "-15",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "192",
+            "512",
+            "48",
+            "212"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "21",
+            "233",
+            "36",
+            "-21"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 192.",
+          "truth": false,
+          "value": "192",
+          "correct": "212",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se omitió el cargo fijo. El paso correcto da 212."
+        },
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es -15.",
+          "truth": true,
+          "value": "-15",
+          "correct": "-15",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 5−20=-15."
+        },
+        {
+          "text": "El resultado solicitado es 233.",
+          "truth": false,
+          "value": "233",
+          "correct": "21",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 21."
+        }
+      ],
+      "explanation": "A cuesta 12×16+20=212; B cuesta 12×19+5=233. Compara los costos completos, no solo el precio unitario. B menos A es 233−212=21 lempiras.",
+      "optionExplanations": {
+        "36": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "233": "Se tomó el costo de B sin restar el de A.",
+        "-21": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "48": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "192": "Se omitió el cargo fijo.",
+        "512": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 233.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 21.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 192.": "Se omitió el cargo fijo. El paso correcto da 212.",
+        "La diferencia de los cargos fijos (B menos A) es -15.": "Los cargos fijos se restan en el orden B menos A: 5−20=-15."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "192",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 1,
+          "value": "512",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 1,
+          "value": "48",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 2,
+          "value": "233",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        },
+        {
+          "step": 2,
+          "value": "36",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        },
+        {
+          "step": 2,
+          "value": "-21",
+          "reason": "Se invirtió el orden de la diferencia."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "21",
+        "intermediate": "212",
+        "auxiliary": "-15"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "192",
+            "512",
+            "48",
+            "212"
+          ],
+          "correct": "212"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "21",
+            "233",
+            "36",
+            "-21"
+          ],
+          "correct": "21"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-construir-intermedio-12",
+        "sha256": "8875acf9cf0b15ac39398b6322181a71b0222859cc08165d7d4ed291b02606fa",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-13",
+      "previous_sha256": "06372d01ae97f84842c9ecb1017e45db21b2e7557c93fafa8581b7d224fdc63d",
+      "content_sha256": "98a4e32b9d189e14d2826762049f3d4fd29a5021fcec42015930ca82538f531a",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Para comprar 13 cuadernos, la tienda A cobra L 16 por cuaderno más L 23 por el pedido; la B cobra L 19 por cuaderno más L 6 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "22",
+      "intermediate": "231",
+      "auxiliary": "-17",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "576",
+            "52",
+            "231",
+            "208"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "253",
+            "39",
+            "-22",
+            "22"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es -17.",
+          "truth": true,
+          "value": "-17",
+          "correct": "-17",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 6−23=-17."
+        },
+        {
+          "text": "El resultado solicitado es 253.",
+          "truth": false,
+          "value": "253",
+          "correct": "22",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 22."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 208.",
+          "truth": false,
+          "value": "208",
+          "correct": "231",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se omitió el cargo fijo. El paso correcto da 231."
+        }
+      ],
+      "explanation": "A cuesta 13×16+23=231; B cuesta 13×19+6=253. Compara los costos completos, no solo el precio unitario. B menos A es 253−231=22 lempiras.",
+      "optionExplanations": {
+        "39": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "253": "Se tomó el costo de B sin restar el de A.",
+        "-22": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "52": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "208": "Se omitió el cargo fijo.",
+        "576": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 253.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 22.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 208.": "Se omitió el cargo fijo. El paso correcto da 231.",
+        "La diferencia de los cargos fijos (B menos A) es -17.": "Los cargos fijos se restan en el orden B menos A: 6−23=-17."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "576",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 1,
+          "value": "52",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 1,
+          "value": "208",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 2,
+          "value": "253",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        },
+        {
+          "step": 2,
+          "value": "39",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        },
+        {
+          "step": 2,
+          "value": "-22",
+          "reason": "Se invirtió el orden de la diferencia."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "22",
+        "intermediate": "231",
+        "auxiliary": "-17"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "576",
+            "52",
+            "231",
+            "208"
+          ],
+          "correct": "231"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "253",
+            "39",
+            "-22",
+            "22"
+          ],
+          "correct": "22"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-construir-intermedio-13",
+        "sha256": "06372d01ae97f84842c9ecb1017e45db21b2e7557c93fafa8581b7d224fdc63d",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-14",
+      "previous_sha256": "d998102844fac0361d9dfadb0bf888f7d0cbd5223ac73fb6ffe757662a12718c",
+      "content_sha256": "ea65203d2881d043d19a64aa94a69f3452b1fa575232057ee54e4da46adc15a8",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Para comprar 14 cuadernos, la tienda A cobra L 16 por cuaderno más L 26 por el pedido; la B cobra L 19 por cuaderno más L 7 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "expected": "23",
+      "intermediate": "250",
+      "auxiliary": "-19",
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "steps": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "56",
+            "250",
+            "224",
+            "640"
+          ],
+          "answerIndex": 1
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "42",
+            "-23",
+            "23",
+            "273"
+          ],
+          "answerIndex": 2
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 273.",
+          "truth": false,
+          "value": "273",
+          "correct": "23",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se tomó el costo de B sin restar el de A. El resultado correcto es 23."
+        },
+        {
+          "text": "El valor correcto del paso «Calcula el costo completo en la tienda A» es 224.",
+          "truth": false,
+          "value": "224",
+          "correct": "250",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se omitió el cargo fijo. El paso correcto da 250."
+        },
+        {
+          "text": "La diferencia de los cargos fijos (B menos A) es -19.",
+          "truth": true,
+          "value": "-19",
+          "correct": "-19",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "Los cargos fijos se restan en el orden B menos A: 7−26=-19."
+        }
+      ],
+      "explanation": "A cuesta 14×16+26=250; B cuesta 14×19+7=273. Compara los costos completos, no solo el precio unitario. B menos A es 273−250=23 lempiras.",
+      "optionExplanations": {
+        "42": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos.",
+        "273": "Se tomó el costo de B sin restar el de A.",
+        "-23": "Se invirtió el orden de la diferencia."
+      },
+      "stepOptionExplanations": {
+        "56": "Se sumaron cantidad y precio unitario en vez de multiplicarlos.",
+        "224": "Se omitió el cargo fijo.",
+        "640": "Se trató el cargo fijo como cantidad de cuadernos."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 273.": "Se tomó el costo de B sin restar el de A. El resultado correcto es 23.",
+        "El valor correcto del paso «Calcula el costo completo en la tienda A» es 224.": "Se omitió el cargo fijo. El paso correcto da 250.",
+        "La diferencia de los cargos fijos (B menos A) es -19.": "Los cargos fijos se restan en el orden B menos A: 7−26=-19."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "56",
+          "reason": "Se sumaron cantidad y precio unitario en vez de multiplicarlos."
+        },
+        {
+          "step": 1,
+          "value": "224",
+          "reason": "Se omitió el cargo fijo."
+        },
+        {
+          "step": 1,
+          "value": "640",
+          "reason": "Se trató el cargo fijo como cantidad de cuadernos."
+        },
+        {
+          "step": 2,
+          "value": "42",
+          "reason": "Se comparó solo el precio por cuaderno y se omitieron ambos cargos fijos."
+        },
+        {
+          "step": 2,
+          "value": "-23",
+          "reason": "Se invirtió el orden de la diferencia."
+        },
+        {
+          "step": 2,
+          "value": "273",
+          "reason": "Se tomó el costo de B sin restar el de A."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "23",
+        "intermediate": "250",
+        "auxiliary": "-19"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Calcula el costo completo en la tienda A",
+          "choices": [
+            "56",
+            "250",
+            "224",
+            "640"
+          ],
+          "correct": "250"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "42",
+            "-23",
+            "23",
+            "273"
+          ],
+          "correct": "23"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-construir-intermedio-14",
+        "sha256": "d998102844fac0361d9dfadb0bf888f7d0cbd5223ac73fb6ffe757662a12718c",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-02 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-15",
+      "previous_sha256": "08b7213794b6aa23822f8b1e09bceb5a8025a79b2287e045c3038e1b0f271512",
+      "content_sha256": "74658deed611279b61f7ad02784825ccd22ce7729e80ad0aedd7a4f55062eef3",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Calcula (√(36/121) − 7/22) ÷ 3. Expresa una fracción simplificada.",
+      "expected": "5/66",
+      "intermediate": "5/22",
+      "auxiliary": "6/11",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "5/22",
+            "19/22",
+            "-19/22",
+            "-1/33"
+          ],
+          "answerIndex": 0
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-19/66",
+            "5/66",
+            "5/22",
+            "15/22"
+          ],
+          "answerIndex": 1
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 19/22.",
+          "truth": false,
+          "value": "19/22",
+          "correct": "5/22",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 5/22."
+        },
+        {
+          "text": "La raíz cuadrada principal es 6/11.",
+          "truth": true,
+          "value": "6/11",
+          "correct": "6/11",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 6/11, porque al cuadrarla se obtiene 36/121."
+        },
+        {
+          "text": "El resultado solicitado es 5/22.",
+          "truth": false,
+          "value": "5/22",
+          "correct": "5/66",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 5/66."
+        }
+      ],
+      "explanation": "La raíz principal es 6/11. Con denominador 22, el paréntesis vale 5/22. Dividir por 3 equivale a multiplicar por 1/3; resulta (12−7)/(22×3)=5/66.",
+      "optionExplanations": {
+        "5/22": "Se omitió dividir por el último número.",
+        "15/22": "Se multiplicó por el divisor en lugar de dividir.",
+        "-19/66": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "19/22": "Se sumaron las fracciones en vez de restarlas.",
+        "-19/22": "Se tomó la raíz negativa.",
+        "-1/33": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 5/22.": "Se omitió dividir por el último número. El resultado correcto es 5/66.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 19/22.": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 5/22.",
+        "La raíz cuadrada principal es 6/11.": "La raíz principal es no negativa: 6/11, porque al cuadrarla se obtiene 36/121."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "19/22",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 1,
+          "value": "-19/22",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "-1/33",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 2,
+          "value": "-19/66",
+          "reason": "Se eligió la raíz negativa."
+        },
+        {
+          "step": 2,
+          "value": "5/22",
+          "reason": "Se omitió dividir por el último número."
+        },
+        {
+          "step": 2,
+          "value": "15/22",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "5/66",
+        "intermediate": "5/22",
+        "auxiliary": "6/11"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "5/22",
+            "19/22",
+            "-19/22",
+            "-1/33"
+          ],
+          "correct": "5/22"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "-19/66",
+            "5/66",
+            "5/22",
+            "15/22"
+          ],
+          "correct": "5/66"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-construir-intermedio-15",
+        "sha256": "08b7213794b6aa23822f8b1e09bceb5a8025a79b2287e045c3038e1b0f271512",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+      "previous_sha256": "bcbacdd15ada8e420df731ec8c6534cbf740a806c27872ccc92674832e3586b5",
+      "content_sha256": "848035a45ecee31499793ef1763ff2cfbe1ac20a94c056bb4e6767797cd23855",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Calcula (√(49/144) − 8/24) ÷ 4. Expresa una fracción simplificada.",
+      "expected": "1/16",
+      "intermediate": "1/4",
+      "auxiliary": "7/12",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "11/12",
+            "-11/12",
+            "-1/36",
+            "1/4"
+          ],
+          "answerIndex": 3
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1/16",
+            "1/4",
+            "1",
+            "-11/48"
+          ],
+          "answerIndex": 0
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz cuadrada principal es 7/12.",
+          "truth": true,
+          "value": "7/12",
+          "correct": "7/12",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 7/12, porque al cuadrarla se obtiene 49/144."
+        },
+        {
+          "text": "El resultado solicitado es 1/4.",
+          "truth": false,
+          "value": "1/4",
+          "correct": "1/16",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 1/16."
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 11/12.",
+          "truth": false,
+          "value": "11/12",
+          "correct": "1/4",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 1/4."
+        }
+      ],
+      "explanation": "La raíz principal es 7/12. Con denominador 24, el paréntesis vale 1/4. Dividir por 4 equivale a multiplicar por 1/4; resulta (14−8)/(24×4)=1/16.",
+      "optionExplanations": {
+        "1": "Se multiplicó por el divisor en lugar de dividir.",
+        "1/4": "Se omitió dividir por el último número.",
+        "-11/48": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "11/12": "Se sumaron las fracciones en vez de restarlas.",
+        "-11/12": "Se tomó la raíz negativa.",
+        "-1/36": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 1/4.": "Se omitió dividir por el último número. El resultado correcto es 1/16.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 11/12.": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 1/4.",
+        "La raíz cuadrada principal es 7/12.": "La raíz principal es no negativa: 7/12, porque al cuadrarla se obtiene 49/144."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "11/12",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 1,
+          "value": "-11/12",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "-1/36",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 2,
+          "value": "1/4",
+          "reason": "Se omitió dividir por el último número."
+        },
+        {
+          "step": 2,
+          "value": "1",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        },
+        {
+          "step": 2,
+          "value": "-11/48",
+          "reason": "Se eligió la raíz negativa."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "1/16",
+        "intermediate": "1/4",
+        "auxiliary": "7/12"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "11/12",
+            "-11/12",
+            "-1/36",
+            "1/4"
+          ],
+          "correct": "1/4"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "1/16",
+            "1/4",
+            "1",
+            "-11/48"
+          ],
+          "correct": "1/16"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+        "sha256": "bcbacdd15ada8e420df731ec8c6534cbf740a806c27872ccc92674832e3586b5",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-17",
+      "previous_sha256": "868ecd1d144d4aa57f8b6f3f498d0dc652a0546f84c6e4a916d3e8a26207575f",
+      "content_sha256": "2a69bdb4e3a447d3669025dbd989cd6c5c904b512f16eec046fd65fef6fa4ecc",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "level": "intermedio",
+      "mode": "construir",
+      "stimulus": "Calcula (√(64/169) − 9/26) ÷ 5. Expresa una fracción simplificada.",
+      "expected": "7/130",
+      "intermediate": "7/26",
+      "auxiliary": "8/13",
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "steps": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-25/26",
+            "-1/39",
+            "7/26",
+            "25/26"
+          ],
+          "answerIndex": 2
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "7/26",
+            "35/26",
+            "-5/26",
+            "7/130"
+          ],
+          "answerIndex": 3
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado solicitado es 7/26.",
+          "truth": false,
+          "value": "7/26",
+          "correct": "7/130",
+          "oracle_truth": false,
+          "decision": "key",
+          "reason": "Se omitió dividir por el último número. El resultado correcto es 7/130."
+        },
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 25/26.",
+          "truth": false,
+          "value": "25/26",
+          "correct": "7/26",
+          "oracle_truth": false,
+          "decision": "step",
+          "reason": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 7/26."
+        },
+        {
+          "text": "La raíz cuadrada principal es 8/13.",
+          "truth": true,
+          "value": "8/13",
+          "correct": "8/13",
+          "oracle_truth": true,
+          "decision": "aux",
+          "reason": "La raíz principal es no negativa: 8/13, porque al cuadrarla se obtiene 64/169."
+        }
+      ],
+      "explanation": "La raíz principal es 8/13. Con denominador 26, el paréntesis vale 7/26. Dividir por 5 equivale a multiplicar por 1/5; resulta (16−9)/(26×5)=7/130.",
+      "optionExplanations": {
+        "7/26": "Se omitió dividir por el último número.",
+        "35/26": "Se multiplicó por el divisor en lugar de dividir.",
+        "-5/26": "Se eligió la raíz negativa."
+      },
+      "stepOptionExplanations": {
+        "25/26": "Se sumaron las fracciones en vez de restarlas.",
+        "-25/26": "Se tomó la raíz negativa.",
+        "-1/39": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+      },
+      "assertionExplanations": {
+        "El resultado solicitado es 7/26.": "Se omitió dividir por el último número. El resultado correcto es 7/130.",
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 25/26.": "Se sumaron las fracciones en vez de restarlas. El paso correcto da 7/26.",
+        "La raíz cuadrada principal es 8/13.": "La raíz principal es no negativa: 8/13, porque al cuadrarla se obtiene 64/169."
+      },
+      "semantic_status": "REVIEW",
+      "distractors": [
+        {
+          "step": 1,
+          "value": "-25/26",
+          "reason": "Se tomó la raíz negativa."
+        },
+        {
+          "step": 1,
+          "value": "-1/39",
+          "reason": "Se restaron numeradores y se sumaron denominadores sin convertir a unidades comunes."
+        },
+        {
+          "step": 1,
+          "value": "25/26",
+          "reason": "Se sumaron las fracciones en vez de restarlas."
+        },
+        {
+          "step": 2,
+          "value": "7/26",
+          "reason": "Se omitió dividir por el último número."
+        },
+        {
+          "step": 2,
+          "value": "35/26",
+          "reason": "Se multiplicó por el divisor en lugar de dividir."
+        },
+        {
+          "step": 2,
+          "value": "-5/26",
+          "reason": "Se eligió la raíz negativa."
+        }
+      ],
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "oracle": {
+        "status": "VERIFIED",
+        "method": "Recálculo exacto desde estímulo visible, seis distractores correspondientes a procedimientos erróneos y tres decisiones distintas, cotejo de predecesor.",
+        "answer": "7/130",
+        "intermediate": "7/26",
+        "auxiliary": "8/13"
+      },
+      "source": "Plan MAT-ARIT-01 y contrato R3, PHUMA-UNAH-2026 pp físicas 7,54,56,58,61; calibración cualitativa.",
+      "criteria_revision": "7.8.1",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01.json": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
+        "src/components/review/OperationsReview.tsx": "88233675fb621af64dbc431dba817cc5d7a139add4b3914feb5e1e559192c21f",
+        "src/lib/rdg/operations.ts": "ef144748194fe9e9025e576fd907a6b3b08484e73419ea303daa61cd93668c46",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "construction": [
+        {
+          "label": "Resuelve la diferencia dentro del paréntesis",
+          "choices": [
+            "-25/26",
+            "-1/39",
+            "7/26",
+            "25/26"
+          ],
+          "correct": "7/26"
+        },
+        {
+          "label": "Resultado final",
+          "choices": [
+            "7/26",
+            "35/26",
+            "-5/26",
+            "7/130"
+          ],
+          "correct": "7/130"
+        }
+      ],
+      "supersedes": {
+        "id": "math-m2-aritmetica-operaciones-construir-intermedio-17",
+        "sha256": "868ecd1d144d4aa57f8b6f3f498d0dc652a0546f84c6e4a916d3e8a26207575f",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-05-R6-review.json"
+      },
+      "evidence_refs": [
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45733078753/job/139619609634"
+      ],
+      "technical_status": "PASS_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE",
+        "F_CALIBRACION_CUALITATIVA_PENDIENTE_REVISION"
+      ],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Objetivo OP-04 dentro del contrato."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Oráculo racional independiente y alternativas no equivalentes."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Seis distractores calculados desde errores y tres decisiones diferentes."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Pregunta y condiciones explícitas."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Explicaciones causales por decisión, verificadas numéricamente."
+        },
+        "F": {
+          "score": 2,
+          "reason": "3–5 operaciones o comparación contextual; pendiente contraste cualitativo de exigencia y autonomía global."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Variación de procedimientos, pero variantes con misma estructura y deuda global sin resolver."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Texto independiente del color; navegador CI, dispositivo físico no probado."
+        }
+      }
+    }
+  ]
+}
