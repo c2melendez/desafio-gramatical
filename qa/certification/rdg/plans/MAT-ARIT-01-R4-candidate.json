@@ -87,13 +87,15 @@
         "Propiedad distributiva a(b+c)=ab+ac; aplicar signo de resta a todo el grupo; fracciones y potencias completas se desarrollan en subtemas relacionados.",
         "Raíz cuadrada principal: √(a/b)=√a/√b para a≥0, b>0 y raíces exactas; equivalencia de fracciones y denominador común positivo. Enseñar aquí el mínimo indispensable y profundizar en sus subtemas propios.",
         "Contraejemplos de dominio real: 0÷9=0; 9÷0 no está definido. √0=0; √(-9) no tiene valor real; la raíz principal de 9 es 3, no ±3.",
-        "Restar un número negativo equivale a sumar su opuesto; el producto de un negativo por un positivo es negativo."
+        "Restar un número negativo equivale a sumar su opuesto; el producto de un negativo por un positivo es negativo.",
+        "Un signo menos delante de un grupo indica restar el valor completo del grupo, que puede ser negativo."
       ],
       "bridges": [
         "De desplazamientos y cantidades al símbolo; luego árbol de expresión con subexpresiones y operación raíz.",
         "Comparar árbol de expresión (muestra dependencia) con recta numérica (muestra signo): usar secuencialmente, no superponer; descartar glosario y arrastre obligatorio.",
         "R4 candidato C09: reconstruir cantidades por operaciones inversas; representar igualdad como dos valores equilibrados; convertir y dividir racionales; comparar costos completos con diferencia orientada.",
-        "Usar operaciones inversas para interpretar la resta de un negativo; representar la multiplicación negativa como suma repetida."
+        "Usar operaciones inversas para interpretar la resta de un negativo; representar la multiplicación negativa como suma repetida.",
+        "Evaluar agrupación interna, producto y grupo exterior antes de aplicar la resta; enlazar con el opuesto."
       ],
       "common_errors": [
         "Multiplicar antes de dividir por regla mnemónica mal interpretada; remediar con dos operaciones del mismo rango.",
@@ -101,7 +103,8 @@
         "Aplicar factor solo al primer sumando; sombrear cada rama y validar por evaluación directa.",
         "Modificar el resultado en vez de los operandos; distinguir condición original y nueva.",
         "Interpretar √9 como ±3, sumar denominadores o aplicar la raíz fuera de su alcance; remediar con cuadrado inverso, unidades fraccionarias y límites del radical.",
-        "Confundir restar un negativo con restar su magnitud; omitir el signo del producto o cambiar la prioridad."
+        "Confundir restar un negativo con restar su magnitud; omitir el signo del producto o cambiar la prioridad.",
+        "Aplicar el signo exterior a solo parte del grupo o detenerse en el valor del corchete."
       ],
       "activities": [
         {
@@ -271,6 +274,20 @@
           "feedback": "Omitiste el signo negativo del producto: 4 × 3 + 2 = 14. Agrupaste 3 + 2 primero: −4 × (3 + 2) = −20, pero no hay paréntesis. Restaste 2 en vez de sumarlo: −12 − 2 = −14.",
           "help": "Calcula primero el producto y conserva el signo antes de sumar.",
           "acceptance": "Respuesta −10; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A13",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar pasos voluntarios y responder con retroalimentación causal.",
+          "representation": "Organizador secuencial: operación interna → grupo → resta exterior",
+          "prompt": "Calcula 20 − [7 − 2 × (6 − 1)].",
+          "expected_reasoning": "Primero 6 − 1 = 5 y 2 × 5 = 10. El grupo vale 7 − 10 = −3. Por tanto, 20 − (−3) = 20 + 3 = 23.",
+          "feedback": "Restaste 7 y también 10: el signo de resta exterior afecta al grupo completo. Omitiste el producto dentro del grupo: 20 − 7 = 13. Calculaste el grupo, pero falta restarlo de 20.",
+          "help": "Evalúa el paréntesis, el producto y el corchete antes de aplicar la resta exterior.",
+          "acceptance": "Respuesta 23; cuatro alternativas distintas y progresión por teclado."
         }
       ],
       "worked_examples": [
@@ -370,6 +387,15 @@
             "OP-01",
             "OP-02"
           ]
+        },
+        {
+          "prompt": "Una cuenta tiene L 25. Se calcula un cargo neto de L 11 menos tres reintegros de L 5 cada uno; ese cargo neto se resta de la cuenta. ¿Cuál es el saldo final en lempiras? Opciones: 29, 14, −1, −4",
+          "solution": "El cargo neto es 11 − 3 × 5 = −4. Al restarlo, 25 − (−4) = 29; un cargo neto negativo aumenta el saldo.",
+          "oracle": "Evaluar primero el cargo neto y restar su valor completo del saldo.",
+          "objective_ids": [
+            "OP-01",
+            "OP-02"
+          ]
         }
       ],
       "games": [
@@ -458,7 +484,8 @@
         "P2: auditar 9 celdas de mathM3Pool y todas las familias reales; reparar brechas de reales no cubiertas sin duplicar fracciones/potencias. No marcar RDG_READY por este plan.",
         "P1: verificar raíz principal, signos, racionales y precedencia integrada. P2: comprobar cobertura de OP-04 en banco completo y documentar déficit antes de sustituir o complementar.",
         "R4: verificar 4 puentes y 4 transferencias añadidas, interacción progresiva, oráculo exacto, ausencia de coincidencia literal con el banco y conservación de R3 como evidencia histórica.",
-        "Comprobar dos puentes de signos y dos transferencias nuevas, con oráculo independiente y contraste con los IDs afectados."
+        "Comprobar dos puentes de signos y dos transferencias nuevas, con oráculo independiente y contraste con los IDs afectados.",
+        "Comprobar el puente de resta anidada y la transferencia contextual, con cálculo independiente y contraste con IDs reales."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",

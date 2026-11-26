@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-anidada-20261126",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "d72be641fb3a4d9bf84109518e85988ae6fd0e7e",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "node --import ./scripts/ts-resolve.mjs qa/certification/rdg/audit-r4-nested.mjs",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-anidada.json",
+      "artifact_sha256": "862c852252846867bf9d71caeeba9d1c1e14ffe8ff0dff6389ebeb689042fa9b",
+      "scope": "2 actividades RDG y 9 IDs de familia; no certifica IDs",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "Operaciones OP-01: resta anidada",
+      "action": "COMPLEMENTAR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-anidada.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-anidada.json",
+      "affected_paths": [
+        "src/lib/rdg/operations.ts",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "La ruta carecía de un puente que evaluara un grupo negativo antes de la resta exterior, operación requerida en nueve IDs avanzados. Se reutiliza el organizador existente y se complementa la transferencia."
+    }
+  ],
+  "next_action": "Ejecutar CI y navegador del candidato; evaluar las restantes familias y reconciliar contrato/continuidad antes de RDG_READY.",
+  "stop_reason": null
+}

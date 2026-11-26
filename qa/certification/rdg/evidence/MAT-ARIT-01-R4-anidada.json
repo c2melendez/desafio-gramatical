@@ -1,0 +1,33 @@
+{
+  "status": "PASS_TECNICO",
+  "scope": "MAT-ARIT-01",
+  "route_revision": "4",
+  "plan_sha256": "7a7da79b9f4e8bad0e8ec221af87eda40b078f74abe67aa91fc92f7f695c445f",
+  "bank_size": 450,
+  "records": [
+    {
+      "id": "A13",
+      "answer": "23",
+      "task_sha256": "1ea2884088c52e33bb0450ee1997d5609b924989a619c6eb42989624a77a1642"
+    },
+    {
+      "id": "T12",
+      "answer": "29",
+      "task_sha256": "30cb536781faef678e678107a59aebcec2542a628f4624b6767e957a434ad4ef"
+    }
+  ],
+  "family": "resta-anidada-distributiva",
+  "ids": [
+    "math-m2-aritmetica-operaciones-clasificar-avanzado-3",
+    "math-m2-aritmetica-operaciones-clasificar-avanzado-4",
+    "math-m2-aritmetica-operaciones-clasificar-avanzado-5",
+    "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+    "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+    "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+    "math-m2-aritmetica-operaciones-construir-avanzado-3",
+    "math-m2-aritmetica-operaciones-construir-avanzado-4",
+    "math-m2-aritmetica-operaciones-construir-avanzado-5"
+  ],
+  "semantic_certification": "NOT_GRANTED",
+  "limits": "Revisa esta familia y colisión literal; no prueba paridad completa ni eficacia empírica."
+}
