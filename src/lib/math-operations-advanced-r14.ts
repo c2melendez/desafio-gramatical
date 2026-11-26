@@ -4,7 +4,7 @@ export const R14_OPERATIONS=["completar-igualdad-distributiva","factor-desconoci
 // Correct only dominant advanced M2 variants; OP-03/04, existing R3 plan. Exact rational keys.
 function design(m:number,i:number,g:number){
  let a:number,b:number,c:number,d:number,e:number,step:Rational,key:Rational,prompt:string,label:string,formula:string,explanation:string,wrong:Alt[],mid:Alt[],inputs:number[],operation:string;
- const q=(n:number,d=1)=>{let a=Math.abs(n),b=d;while(b){let t=a%b;a=b;b=t}return {n:n/(a||1),d:d/(a||1)}};
+ const q=(n:number,d=1)=>{let a=Math.abs(n),b=d;while(b){const t=a%b;a=b;b=t}return {n:n/(a||1),d:d/(a||1)}};
  const fmt=(x:Rational)=>x.d===1?String(x.n):x.n+"/"+x.d;
  if(g===0){
  a=8+3*m+i;b=13+i;c=4+i;d=2+m;step=q(a*(b-c));key=q(a*(c+d));operation="completar-igualdad-distributiva";
