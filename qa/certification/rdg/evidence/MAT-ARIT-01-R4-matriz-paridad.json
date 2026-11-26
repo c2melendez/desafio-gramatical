@@ -1,0 +1,2223 @@
+{
+  "status": "INVENTARIO_REVIEW",
+  "scope": "MAT-ARIT-01",
+  "route_revision": "4",
+  "plan_sha256": "05028fc380493f0faee7b41578a788ca1113f0303edc7f60ccd9b2eeb00fad63",
+  "families": 34,
+  "game_ids": 450,
+  "semantic_pass": 0,
+  "rows": [
+    {
+      "family": "prioridad-de-operaciones",
+      "count": 33,
+      "task_ids": [
+        "A2",
+        "A3",
+        "T5"
+      ],
+      "game_records": [
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
+          "content_sha256": "35d9ecf81572df6a42928159d0b083140b3e4cd76a5f253f867410fd2bc66599"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-1",
+          "content_sha256": "93bcca01ccde649762076dc741dfcf2d2f9cff35920249e8a0c8a7d6719ae753"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
+          "content_sha256": "adc853669d4c05c01ce36a3ad47d03817a2ebf41f4f7946ff29fb5c5526c0449"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
+          "content_sha256": "e93b5cd41079231ba5be39f81addcc6410cc0e51af02ece4096cf9183370b3c7"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-4",
+          "content_sha256": "36d330b8a86fb95461b2c0be1dc4ac5db8348d5832f1619e81977ecdaae27ad8"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
+          "content_sha256": "3f07dc13945cba52014587cf3b9a6c59cc08b2daecca776eaac6fafaad405567"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-6",
+          "content_sha256": "ade8a08e445f41e4f6b0773d3b913c18594ca09261ca50a77bb3f55b5f34528e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-7",
+          "content_sha256": "7406135b08477a54f5328a84127bd98094544ecf699efff6ec39811e16af1f11"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
+          "content_sha256": "c48fe0587a4648d5f3671d9192767dc192781989906e05d81ee5de25e476007d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-principiante-9",
+          "content_sha256": "0a32fbf844c1f5ce8ad3a59bba6e8a0e62d313fc856401729bbfdf7abdf03eef"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
+          "content_sha256": "4ad791172b00ed5c11ea0c5d904f28dcf62e723d69f782f6bd1154c01a693125"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-0",
+          "content_sha256": "7abede7bbf37de7085342e4503fb6ba278f551fdd86adb8c01553ed0e940f401"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-1",
+          "content_sha256": "f3db99b75d7cad86eba690a4c35fc0181d912cb0b3b7f4e438011c7de466e8d1"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-2",
+          "content_sha256": "b5776315b75c70679be4735b6c5538e54f63fd9332b191a108c37a5828596333"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-3",
+          "content_sha256": "7cdfc1586fdbd0cf6b72a69a154b3ea51f6eecb9896a454c6eac4d696991ed8e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-4",
+          "content_sha256": "2d29141bf19a1bb521bd7522fae1f38b7408b1c5a80ea5cbf8620d974dab6435"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-5",
+          "content_sha256": "9eb083b00fac528a8ccf82f0c05ac09e95a932c93ffe5e132e3fa0b4c8d93bb4"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-6",
+          "content_sha256": "acd2e55b007ea50f3ea323612028dddd51766f2b71b930931b370f3fbe80c586"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-7",
+          "content_sha256": "cd4e0613d73d8fccc5453575b2fb315fc83c109db10b1364e32c21c62bf52b91"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-8",
+          "content_sha256": "de2e90fbdc97075027b88cb60643bd70abd9f01c2558b271eeadce3d4be172d9"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-principiante-9",
+          "content_sha256": "cc38be71ea1ecad8ffda41a644138a610f201dbd002efe404ce81284fa1ee906"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-9",
+          "content_sha256": "f5c7693c56e1b02cb177cb4912ff53f7106328644fb80369a6271b171073efc6"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-0",
+          "content_sha256": "d29ca193cafef6faf98d834893687f253cd4d9f1441ebc9fe1864f8a26bc96e2"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-1",
+          "content_sha256": "5828a99b7d49c91cf5d669f5a4ae46d59c4e474229dddfd32798537c56a94eb0"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-2",
+          "content_sha256": "0e08068ec3edc3da85073bc48bfd10f3b926fd4baee036d507811112abed8a27"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-3",
+          "content_sha256": "35ea214952abd01bba37d00959fb4c6c266e6c6fc9bfde63a71660b5dae2c71b"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-4",
+          "content_sha256": "0f432497f6710cc4f34893d82fb39485b3e43b722ec90e2ee6b99d9eb055f5bc"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-5",
+          "content_sha256": "17ee3f9afa09094fa2ae34f4120cadbfb7c14035a77262db25e76c7a732545d7"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-6",
+          "content_sha256": "6766449809cdcf50df755e1a324d985ecbbe55d7303f1f11a46e96ff443ac2bb"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-7",
+          "content_sha256": "8aaec2cfda09e24ade0d42279dd5c7bd4af3aecd2597a7f12e7124a3a0226ab1"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-8",
+          "content_sha256": "13308e9a1e16e4343bbf149835855313b868173260948c307995adea28993b03"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-principiante-9",
+          "content_sha256": "efb51b96c03843760ec9852260eb15bacf37b60c7a8039cc227e4f18aedf0894"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-9",
+          "content_sha256": "06a44b41c0893ae5f0446a9e6ca87cbc4c38fa83de37b8bc749f737d277052eb"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "resta-de-entero-negativo",
+      "count": 9,
+      "task_ids": [
+        "A11",
+        "T10"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-0",
+          "content_sha256": "f51a90779fcf85364a182b2ea7659ac846c1b58bff3f23aba7c86bc64e4d5148"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-1",
+          "content_sha256": "3fbe9791f20020443eb97e277447e78e96a898c10898a776f0e5234c0a50f13b"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-2",
+          "content_sha256": "07035075b2206b915766850feab59728b76d647c6e2fbf9abeedaebb4baa0fa2"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-0",
+          "content_sha256": "4288350a675a379f34c22e58959f862f6b8b31e0aaf8e426d704b676473a1afd"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-1",
+          "content_sha256": "b393722dc4283355e7ea821e136ee1049534dd86d503e71d8df093890dbbf61e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-2",
+          "content_sha256": "f8bd48c54a9b80fa684d9e3bbb91752cee40e636b50bad4534b54391d0dd26f0"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-0",
+          "content_sha256": "77ba7368f4816e535ca2b083e90b2c04ce5a757ca883a522dd84a5fafd46cbb0"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-1",
+          "content_sha256": "84b922ada1fcd5ed321986ce17a490048975e3d994500561dd72a0a17f1d1e80"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-2",
+          "content_sha256": "1cc3f656e65fa2fbc3f37b95875043b9823b81fc19b75dc45b125b5f7fc1ac73"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "cociente-con-agrupacion",
+      "count": 9,
+      "task_ids": [
+        "A2",
+        "A3"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-3",
+          "content_sha256": "ca511875282bcfbc0fd5688acb880fbfe08509ab171cf70f4cf4775b0103c569"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-4",
+          "content_sha256": "485f903f57d96bf1da5b1c236bf8a8bc5ee3e5183db33394a7be1f5aadb7b5d8"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-5",
+          "content_sha256": "547953c352c312dfc01648651848d188d02bb0c18924662fdb7a410b47ca840a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-3",
+          "content_sha256": "7c120086f92ff5be232513457f96b57a2ad934269409b0de5ddba2d3649e1a3e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-4",
+          "content_sha256": "0e677a1206801dffef07fe97117eecfb0b864c44b9ec9e26f0c3f87f6fc40924"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-5",
+          "content_sha256": "69e082ec2dd7475a50d92f853d70419efa0893cc2de617e14254593df496e4ed"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-3",
+          "content_sha256": "102ce9bc7601e05e67555d4515638575e9c191df6963ad67a4972b86d0df3b07"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-4",
+          "content_sha256": "376600cf488a1dceed52a7970705a109393d45abb047b4119244aedcc90f53af"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-5",
+          "content_sha256": "d3b907963a64eeb4c3e6a87d64dde39999655b17ab09b388a446357a77a842de"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "producto-negativo-y-suma",
+      "count": 6,
+      "task_ids": [
+        "A12",
+        "T11"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-6",
+          "content_sha256": "c8250f3e80f4f9a3953bbb6c50afc2daebd405638ff019398a55387b8070a029"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-7",
+          "content_sha256": "c3312ffef2873f48d4fc3f7108327cbac94ebe21135463add77e3bb1e7c72e74"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-6",
+          "content_sha256": "1453df7015f4715f506621284932884425e3f280a3d96aebd9320024403b4afa"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-7",
+          "content_sha256": "73e0d00bf360a6472c8c8702f1a1a139a69b134553f356106a2294ae82b834ee"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-6",
+          "content_sha256": "cb813bf78081b16cf38f0a0e0606255e95c4be6ba94f04121ddd4a500ac47430"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-7",
+          "content_sha256": "9da68b1f040d147c93ad9098aa5c513526b6c31b6b127557a30d9638203d4dd8"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "cero-dividido-por-no-cero",
+      "count": 6,
+      "task_ids": [
+        "A3"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-8",
+          "content_sha256": "c236127d5c702a0afd13813858ce08295fae4d6d14db1d475cd7393f92aa40c0"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-principiante-9",
+          "content_sha256": "f9bc7537242ea8a0cb69cca712233c051b7127d12d72c4aeb95aa06d63f7ab34"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-8",
+          "content_sha256": "c1e71ce61c04c1b1579e840e70a284d840fa92b3a10d732f5ac328d0e4cf0c37"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+          "content_sha256": "f48ec3d5415cf304f6a3ea6ff71a872fcf2346e9f832daa0cb32de8d8c4a2b20"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+          "content_sha256": "07e5a8971e05f4831083520e9d7f36b6ccb4bb77f312a9c98305d71210a4fff1"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-principiante-9",
+          "content_sha256": "1309c88a789fb248b02c468d6f0721b8a1346f5393bbdc378b37dc3fd398f1b9"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "division-producto-izquierda-derecha",
+      "count": 9,
+      "task_ids": [
+        "A3",
+        "T5"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-0",
+          "content_sha256": "88d17b89eeca246cc598b1e6262243bdf91216b3125e363b96863ffba7a76975"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-1",
+          "content_sha256": "03bc87821b7b9c7e45c0bfbf7a2eea2b5a4e12d4722770294b0d9d691ec0cd37"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-2",
+          "content_sha256": "76b206ebd0abccbe907f0f80ef21c1f6454c60b6e0aa13f8af2343ac8957fe37"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-0",
+          "content_sha256": "9e3cc886670943b439a58245de1852e9d5923318585cc984ce72b6364b7a5bf8"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-1",
+          "content_sha256": "0b41ea5d4a8a31e2c6c9df477d947fd2109c87a044520cf9b2254282c1f5863a"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-2",
+          "content_sha256": "b1ace4d0d34a0bb4226869e13ef90cf39eb21bbbd80829ec853596056f3c269c"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-0",
+          "content_sha256": "893fe1630340aef3efd4e463d4b06f6092e6b56528ff28958ea61791243b8715"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-1",
+          "content_sha256": "fccbaea2da4c60b333d28e167f6ab4ed6bf17030b42785775fa3327c2e7ff33e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-2",
+          "content_sha256": "d36764aa377adcbc6eae024e1adb9017d5295daacd82f9d4f16be84deb38ec70"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "enteros-desplazamiento-signos",
+      "count": 9,
+      "task_ids": [
+        "A1",
+        "T10"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-3",
+          "content_sha256": "d924d631d3ab2b399d4b8830afee71c4dc24a6f163b43654db558a5c446454b5"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-4",
+          "content_sha256": "09a66b5bdcc459e869e86e90315b5336254f3c97971b48301e24a2fbfe5396c3"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-5",
+          "content_sha256": "ed02d0402084936a767ebc1aeff7813c35993a619bb11e425eeaedb001a31304"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-3",
+          "content_sha256": "fe521cfe0bf16ba03e0a0c54c17a798cd46c479b489c6fffd82e1622e9278aa3"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-4",
+          "content_sha256": "57ac95ec179f05bd6aeadd2fcddb439d84e9181509fa10d027b6cb1f6701bdeb"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-5",
+          "content_sha256": "d6b973e1bd7af7c8c8fa4a35ee74d133e8f8564e9d737e3e91c520c79f3adab6"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-3",
+          "content_sha256": "d9592f6200ab838fd92a0148feb67aa88f37f3da057f64551506aa0cf7183162"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-4",
+          "content_sha256": "0cdf83db554ea0e1b03449b89f8d0d9de286b25e53a77905fdbacfb076a0081f"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-5",
+          "content_sha256": "a23e77ca9c36e581348853d57036a16bc3ff6bc60f4dbd575661b55dee9f5ca9"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "precedencia-sin-parentesis",
+      "count": 9,
+      "task_ids": [
+        "A2",
+        "A3",
+        "T5"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-6",
+          "content_sha256": "a459d7d1bfa0c4787f55507bc5a0dc62a2b499e493c99af1b8d46d634bc0d067"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-7",
+          "content_sha256": "2e6ddfcc041e866f64c2171b3bb05b8dd162588b80edd9215235840f8b17d000"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-principiante-8",
+          "content_sha256": "37658b2a83c5ebc24e50e2caca391194064cb18b5ef97aac8bff79dec1b0b604"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-6",
+          "content_sha256": "bd409db05c5dbf339686e935f342304d441352cfbdfd3f1b1aeb30a0f8bb79da"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-7",
+          "content_sha256": "007003d05a2ab204d8f0d550933f6372f6a395154db6107085445690f25c5d9f"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-principiante-8",
+          "content_sha256": "04421c9c588c1f4281437e0dea0f2d5ff9f2d29a384c979839bb1a7f39132755"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-6",
+          "content_sha256": "a342632e6928e79666001903520701cd8b9bab25cda37384dd7fcfafcb7e40ea"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-7",
+          "content_sha256": "1a42ecebb2ab10c8bc0c02cd6039d5b217e88a54117bf52b5a076ab1b9e50b5b"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-principiante-8",
+          "content_sha256": "3d78c7e13994c447ae8a1b6ddad9fba61e73e5e31dc3271aa34abaa4e6eccc3a"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "modificar-parentesis-y-factor",
+      "count": 51,
+      "task_ids": [
+        "A4",
+        "T2"
+      ],
+      "game_records": [
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+          "content_sha256": "6807bf11777ae84fceab9f159dae166a34b5572d909f7c6aa56860153f1e3bae"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+          "content_sha256": "ae19d22e655f42fe3d99d2d43b9924202fb6e14092c34917df7abea41543b0ab"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+          "content_sha256": "84eadc8477ac72c47c1f88cca216db155ad10fd1413bc61b3458d334e2a8ab5b"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+          "content_sha256": "1ddc582edf0abc862063c5b3ba2594ab76b1a6faed119af59f350238e2ac0c2f"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+          "content_sha256": "528d6b21d5694277ef871b736d195fb0e0e102a88dc56a6b9f7c053fbcde3558"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+          "content_sha256": "081f3e2a1ecf29c8bef429d2552d65cb7ded372bd95b2fa6334fa0bf20da7b09"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+          "content_sha256": "8cb56721a1a4161f6a76d5c7aad246668a17faa8bb0eb5d5a76d3170b417389d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-7",
+          "content_sha256": "e60b2200eb6bddb5dad725c257ccd93bb2b4dfff233e1d1ebea3761c8f29d72e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-8",
+          "content_sha256": "774bbbeec4ab00fc3279280487a8189b48318d535ad0347a8aadd3d6aa80f370"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-9",
+          "content_sha256": "04dd5c8abc96422aed70c54a0df463f9d724009317ee3631ff209fd9f76a9d84"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+          "content_sha256": "f9537d2d96b32ac47f7c5341e1022e3731ad3e2e0a7dde8d1142706f27b7d0c7"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+          "content_sha256": "19758f0b69368b6bef79a55dd9e3c614a52c04b32c644cc7c853cb25ceec68c6"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+          "content_sha256": "f70bcdbdfadb7baa549a0bbe3857c919118ad7bd0c346716cd52a07db3a97cc1"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+          "content_sha256": "140877fe024bc491054ff0335955fba43af839ec1371ce2c5a13f8ccf7023784"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+          "content_sha256": "b00c9ec9ff3a40927685dd236cbec5bbdfc3487903c287140b9740f22f28e79f"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-18",
+          "content_sha256": "7a5c0a15c7c6491e80e6dba51cf396ab5231b7a226e4aaf1ee8fbd29ce8366f6"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-19",
+          "content_sha256": "63a78560b21d3f8802776b6059c660fd4f7ce288789d39c701e8c4df302ef7da"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-0",
+          "content_sha256": "798aa01ca2f8909887c6dd4fc9305a4dea1f573c0fc32b9a052c578e6de90c85"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-1",
+          "content_sha256": "7362a6b3b3ad9691e0a0b2d3e0ce8d14ece16a50bdc69a3bfc68e0106fe7044e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-2",
+          "content_sha256": "262e439a8d045716383f8c6c8eb98a244a2922a4060eb5bcf57c17fc533126bb"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-3",
+          "content_sha256": "4f203858c5b210eeada5812a563a55d42e334eea4f4a08ba6d7648a10eb83c31"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-4",
+          "content_sha256": "e5dffa270ff6d59754c50097af232d79509f8449150df832e21bbd5eebf52955"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-5",
+          "content_sha256": "1e3872f6c502dd4e502896667d45ff4a2d5d42c9ce29768283d072095f0faa04"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-6",
+          "content_sha256": "70b70116bf3f60fd3c78c1e86dd5b4e9c414d2c2265aff0831321d169d1f738e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-7",
+          "content_sha256": "a31d177beef6097a16222cb7a7053432076a0da8fff0ab6c93c1ea7cfd1731a4"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-8",
+          "content_sha256": "68ac357a4eef6effa912e56b0730897dfd9392760c1ece5d31cbc56e10ccbabc"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-9",
+          "content_sha256": "137e939c33699e7dbbfdfcc16e0fa3a5a50ffb0028e5c54742c4a7d91a33b103"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-10",
+          "content_sha256": "f3a6aa9cd9b3987438d4d610a02bb1e3c52b4ab5b39e25f9028a8a2b4be719f1"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-11",
+          "content_sha256": "1aa8327c73790f9ce9938cacc24df442a4d9839f575a7040eff90081714b5e11"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-12",
+          "content_sha256": "8ab4c1ad758823b939914bbe6c97eae53ff57a95f9e09f07abbdc05d76cb4878"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-13",
+          "content_sha256": "b4782169f4b89f1809068b61a8a4ff7f4cf90c9d17c8b0b5919f4a56e0846ec0"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-intermedio-14",
+          "content_sha256": "1de4d89b2bbd3345fdb0a771da3aae753efdc58daa82c96e89fb9d261271a29b"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-18",
+          "content_sha256": "50f35d09634470140fda627a05c365691e65645020f5a12ebc1018ef43a035c6"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-19",
+          "content_sha256": "3fdda5fea6f9beaeb7603b183ce7d3df5e52b350fc7dafbb3d0bb49484cc872a"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-0",
+          "content_sha256": "ad692bd7435629d5fa43e03f35234d78d590b9cfcf00262bdb2cdd941bb33e61"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-1",
+          "content_sha256": "d58f37e15dd537df532de46726d8f87e29df62cd10167dbf2d89a45ff2175595"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-2",
+          "content_sha256": "b9274137ebbb5d9765fe645928b8ec1dcdf3c1442149b955a91040467454fcfb"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-3",
+          "content_sha256": "a535140f3798b40d47119dfde8402adc6a114ca512b239092e3086c753e1c3b9"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-4",
+          "content_sha256": "1dea88ab3259b34e7a5a435cb08213729eba89acac339eeaecfcc7faf016002c"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-5",
+          "content_sha256": "a175b724b89217f9b44aaf13211c3470a5058cf979a5f016f0df2e3b5b001551"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-6",
+          "content_sha256": "d7bba6231d590764478f79d6753bbf5ba867cb60f56798e3d9c17909a7f9a272"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-7",
+          "content_sha256": "67569ff1cb2a74d149bcf510840058446372c5d5a72dc81d43b9021d84a2ce4d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-8",
+          "content_sha256": "544cbff323de815342b0177466cbaaa905afced3ac7f7ccef6d32f38a39290e4"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-9",
+          "content_sha256": "07b89c48712b6fa39dbd4e7995464cb1f96f4314e8f18f965b7091b7ce74e8b1"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-10",
+          "content_sha256": "c51c2e212de58d6722f2fff773344e4c106fe1e2f6700dea44e0f0ac0dbeb246"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-11",
+          "content_sha256": "710832be872b488d76635277e89ec532d9fbefcf0a36bc163bbf29fd1db13a71"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-12",
+          "content_sha256": "26a6a0fcb5d4000c0fb50930af9eebf7efc7b8db82c97b0d212b4265cd6a269e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-13",
+          "content_sha256": "0c17f3e897c0de27e2d8fdab42a20df9537a58eb65ea77855ba79df2ecbaf485"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-intermedio-14",
+          "content_sha256": "196d256bfbe21d10efe8a1f021fd99cd2922243f46ff6ef9731720305da4fd45"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-18",
+          "content_sha256": "bad9bb8274ec123c0f639f3c9119031bae3f38d6e60af8d61d27138c51dd0a88"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-19",
+          "content_sha256": "3d90e62dc2f923a019fffca15dc75f58b903afca84476580f4bbdf3bc697f870"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "presupuesto-dos-compras",
+      "count": 9,
+      "task_ids": [
+        "A10",
+        "T9"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-0",
+          "content_sha256": "a712f7e3f855f8f3269f8c4784b48c4d26130492b8d7bc88919a1d6342534c63"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-1",
+          "content_sha256": "264521002248eba225a4070acf28f47c3ada5b511de39c946b9fbb10bc3cca18"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-2",
+          "content_sha256": "e0cdb368aac9bc64cb67303762400504b5ceeaf56903008d615b4786efdec733"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-0",
+          "content_sha256": "439b650b1ac36e0d4f28919527df5b506b37514efb5a9da20a4844ed504eb848"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-1",
+          "content_sha256": "825301667c51a7936aa6cf72a3a075f52f9cb4a400cb663adb740f53768ecce3"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-2",
+          "content_sha256": "b2982e66275b8c9f919824e3c280a8a706ceac3d5226aacd7f5ac5e1b9dcfd48"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-0",
+          "content_sha256": "2c3c62f27d54c13079e71aa91e9b91c332f76d3ace46da488efe35f9a3acbcd1"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-1",
+          "content_sha256": "521594365440ac99801b87968d9b396060567cf026c3920c6199427eea162971"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-2",
+          "content_sha256": "44663dec9b565508ceab79ea2bcbbeee3e9ccee29ee322f478381f1da481a31c"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "reconstruir-inventario-inicial",
+      "count": 9,
+      "task_ids": [
+        "A7",
+        "T6"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-3",
+          "content_sha256": "3b547992f8faeef088645e5291a9e7fbd1c12584c72ffe7e934544049bdefea5"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-4",
+          "content_sha256": "7e47239d63677b2b208d9fa8bb6e271d286dd6facbe13a874b10291a4ddcf81b"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-5",
+          "content_sha256": "e7d1dbb240bcaf50d0975993234ab007ca6aa08ecde68ba02ad757582215e092"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-3",
+          "content_sha256": "416d634e4bc33da897cb3b4fbff29ee79c3adb6ca24b342259422a81fff7a28a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-4",
+          "content_sha256": "336590e52c7d45522fcb7a813f80510f2a28c831a4b77c8cfefa2bdc04a6219a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-5",
+          "content_sha256": "f7173c80a71b3ec5f8e453f55cefe4ffb9a2702424a671471fa9e10a8845ebc1"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-3",
+          "content_sha256": "63fbdb029419183d70989de4884e6427fcaf630151b2c423384d9b2b1fdb32c4"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-4",
+          "content_sha256": "4ac80ee205f94ae6b3233830e8fcb274b9a098959eb4bee06d9db1e6f046a375"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-5",
+          "content_sha256": "38f275bcc6a69014cbb4580efbf1141c081b45eca4fde0d370b807203d987794"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "comparar-cambios-compensados",
+      "count": 9,
+      "task_ids": [
+        "A4",
+        "T2"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-6",
+          "content_sha256": "04bba67ebe7720bf5f1d5ead18fb3c57356434cbdb79a7a58bed7c067c13d5c4"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-7",
+          "content_sha256": "c19eac08b4c0ba3565ff96c5a24adb5972f15b67ff1ecd0993c689a10feb8ff5"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-8",
+          "content_sha256": "990bd687ec4ce41b2dd89a2c5123fde9ab8db3cf6020606a57d2be38ccf81e69"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-6",
+          "content_sha256": "0999ca72065e823d4538303d7388e1c740f71189587b5168a353935c629a109b"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-7",
+          "content_sha256": "dd2d528b223dd33c7267f68186e0c2c1dc6b37ee5eb7c391719362494d795278"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-8",
+          "content_sha256": "137b98b3baae8b2eaeb0c38faab2da0545a13e14a93a29a28e65b56853f52bec"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-6",
+          "content_sha256": "c9186c6a38e7635523ea4d962fc207bd91ef7caaa3da3efa5f4222babdb800d0"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-7",
+          "content_sha256": "cb00127ee06548beef37b8c5b6918a4498740f7cbc5c9718ff88e52cdacb31d8"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-8",
+          "content_sha256": "4b8f080cfe5f799cdc462125978c31416279436021730f15e5f45ca9621f7746"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "reconstruir-cantidad-por-grupo",
+      "count": 9,
+      "task_ids": [
+        "A7",
+        "T6"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-9",
+          "content_sha256": "52f29089acf528359b50dd00b37305b33b1f6ad48c2513dbccb9dca8bf6241dd"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-10",
+          "content_sha256": "c1148fd3c54d07f84aaa44e40402bdb9b5543665ba3d5feec0cedb6729addb75"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-11",
+          "content_sha256": "fb7405927b6822a97e3d583be066e768f8b402924acb4de54d445f33eb485c27"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-9",
+          "content_sha256": "a37eede2fbe48fb77402d0904a54e156d557ec92b914dfbc451061d1128e08ad"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-10",
+          "content_sha256": "eb54d0e57dc00f02dffae02e8dd92f6b0c315f47ff452204ad0d254d2f8c22f4"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-11",
+          "content_sha256": "88de2dcfb09fbfd774abb0070640ab3bed29b0c4423f47767f6c4f615761a957"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-9",
+          "content_sha256": "19c7952608b66348e980dc8055bbb39ad093008c1b6eab8092a3ddc008644d54"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-10",
+          "content_sha256": "140671aa82bc1d407936e58bf7915510dac23c7b79d2204fec3b6f9f473cf4dd"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-11",
+          "content_sha256": "d817ad767b9d625334c7e5cc69af59690d1269b163d368f9370d752280390e02"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "comparar-ofertas-con-cargos-fijos",
+      "count": 9,
+      "task_ids": [
+        "A10",
+        "T9"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+          "content_sha256": "c8276fc6895c72e0fb6a5548334341ffe65c68cdf7dc9c07cb176299a019b62f"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-13",
+          "content_sha256": "7accbec584cbda7da0dadb1175b942802e7567d03c85b6535cf3d2ffbec12a6c"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-14",
+          "content_sha256": "728dab21d1804467db62eed5a7124761167ba2759dd4d19d9b168dd21c8002bb"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-12",
+          "content_sha256": "9a3f14ee466f6a38d80c1b2f8c7f5a9dafb5974f66922c2470ee314e15ca3112"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-13",
+          "content_sha256": "a3cb0d38b89fecc00bd0fcb6e7804e0c819897b0bc9c46f856ee53d983bc6321"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-14",
+          "content_sha256": "c47b926c7a6dba709df865d92cbcb3d512aba2d382d991eaf9a62b8ccc60b265"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-12",
+          "content_sha256": "56117c0a8bcb66d9cd20ec7dccca8dd21ef9b96e3c65df225d71d4b3dc8fd363"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-13",
+          "content_sha256": "98a4e32b9d189e14d2826762049f3d4fd29a5021fcec42015930ca82538f531a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-14",
+          "content_sha256": "ea65203d2881d043d19a64aa94a69f3452b1fa575232057ee54e4da46adc15a8"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "cociente-de-diferencia-racional-con-raiz",
+      "count": 9,
+      "task_ids": [
+        "A9",
+        "T8"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+          "content_sha256": "7ac5595fa1b32bb369cae8638bc25b2557d2bfb46a48e0e69a1d00d79b2e818c"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-16",
+          "content_sha256": "9b1530f00120bc6e092a9b858a9bc5361c2657160cb2cecdd5a782ce939b397f"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+          "content_sha256": "c36e7adaea461f712591ae050d668fa3cd96158343204e970911185ca9a1bf48"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-15",
+          "content_sha256": "793ae578508183e0531bd79303a7e227e29a75866f2c5d34db0b8593125f6f12"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+          "content_sha256": "f458dc01d824f3657cc29b3c8b5acb2db6aa519f01292922c53ce5434bfb9f76"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-intermedio-17",
+          "content_sha256": "f7b340fe89891a7ffcddbf4755d7b484e9c110902bfc063cf7b3dcfc53af8e55"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-15",
+          "content_sha256": "74658deed611279b61f7ad02784825ccd22ce7729e80ad0aedd7a4f55062eef3"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+          "content_sha256": "848035a45ecee31499793ef1763ff2cfbe1ac20a94c056bb4e6767797cd23855"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-intermedio-17",
+          "content_sha256": "2a69bdb4e3a447d3669025dbd989cd6c5c904b512f16eec046fd65fef6fa4ecc"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "cambio-contextual-inventario",
+      "count": 9,
+      "task_ids": [
+        "A4",
+        "T1"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-0",
+          "content_sha256": "4cf9c894b5bb0a71cf03520e73e8e404a36ac015c1017458fccfb4c01fe67b5c"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-1",
+          "content_sha256": "c6dde0dd6d71891cfacd74e7d234268f0c3768e7283b341c22a8b56432b2fbec"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-2",
+          "content_sha256": "c25931046a7f473e4ebea40e9c2195aa0c3c2c26d3ca4d645521365e1c628b3b"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-0",
+          "content_sha256": "911c58088ab023664dbb73950adb0f4941398ef9a69e696460154a2fcbbb8e55"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-1",
+          "content_sha256": "c71358f67f3fb979dfe200611edf7c2801ca921e28aced63f545eec52546bd2e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-2",
+          "content_sha256": "e9ec7d223ed2f686373b55ffd67869ffc1ee209e7d225f5725af5863df9e9f30"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-0",
+          "content_sha256": "86c7bd68a5c01e20af7ab5f185798f922f2a8a0bb3983f605b07287d67c68da3"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-1",
+          "content_sha256": "a9bef1d91dcd62ea3ab9bc7f50b5b3c838587fe42f31bd30c8eeb8700847acf2"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-2",
+          "content_sha256": "188e096d99b50425e132de880f49d5f39e8f4f7fed377e2efc7ca8ae39c94598"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "inventario-flujos-independientes",
+      "count": 9,
+      "task_ids": [
+        "T1"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-3",
+          "content_sha256": "35c414d8775c16d328b92fb22d3e43a89d1e2826d6fbee98d29d5b0c6e704553"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-4",
+          "content_sha256": "b2fc18bab9d487b31daf9a0fb6bd2335fddda0e4f73f072116053109bdbfabbe"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-5",
+          "content_sha256": "e99efa76ec1848d15425788e5f76214e688c069dc7bb09c8db66eb36c60b2882"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-3",
+          "content_sha256": "03ff84c08981874d66f9929d637864f754c9fc46098e591ec35557430c2251e2"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-4",
+          "content_sha256": "17da74ddef79f6f9a184b794d787f0db26ba7400536eca2d2f5e18d24a4b180c"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-5",
+          "content_sha256": "bf2f9d53e5bfd3d5d6468419bc2febb2da52c4172bc1a3b925309809606c5b3f"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-3",
+          "content_sha256": "933bb8c884a8f751320871ef1a3eef8baba100d481a23c99102e742663c369e6"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-4",
+          "content_sha256": "ef5e048332b9381123b74a9c43d84a93146b0322870ac73521a3ca6e8973e6e4"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-5",
+          "content_sha256": "8984246c420e51f11bc45d2bbc686bad52dd737a42a4a1807e7d13cb8ca7f7e3"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "reparto-neto-exacto",
+      "count": 9,
+      "task_ids": [
+        "A7",
+        "T6"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-6",
+          "content_sha256": "fc21321666c34c115e93dfc5d0fdb4417043f9f2be376ebb3eada102675a7ddf"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-7",
+          "content_sha256": "334346eb2b253340f77668713ee78cecb62c5f09ffb9d8a0e7ca654c69478ed3"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-8",
+          "content_sha256": "14d908120137adea11a0d10a133d2c9f59a24ba32821b147fd654ddac0106366"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-6",
+          "content_sha256": "63cd4f4036f3d3a34b01bba0e334870169fdcbb5dcd704dc3452923752e48976"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-7",
+          "content_sha256": "c52c0cf057a852eae42907905d35ed2847c59353922cdf7074118335908e4ace"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-8",
+          "content_sha256": "767b1e352746d97887ab2934615483422959370c5138fb9b3060ab912e730ea9"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-6",
+          "content_sha256": "c48537cecc2f3924c92a04219cdd3cd3a993556890b00403ce1c82a1991f899d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-7",
+          "content_sha256": "5319540bf79ec7de14b65d660e14c5a45491ce34dc6f9b44c1e3f1519a3ddd9d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-8",
+          "content_sha256": "d26faacda6049002a52b74a24c1e42fb1c666ae598860aaa0349f4940f27264f"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "raiz-producto-suma-resta",
+      "count": 9,
+      "task_ids": [
+        "A6",
+        "T5"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-9",
+          "content_sha256": "3b0f0ab39a0d1691654e67f6eebc317881480fef2ad90e98dd57b7f5a316a974"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-10",
+          "content_sha256": "f34676362420ab0e90bd68b499f4050834d344cac1b719975c82fc3157bfaba3"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-11",
+          "content_sha256": "acfcf01eba1e00fe819186f7381644693d198cac98e0a77d17f16452197455aa"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-9",
+          "content_sha256": "94caf05c6fd9f1c32241877f8d6c3a9366d951d9b7797971b41d0446f9bb59de"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-10",
+          "content_sha256": "2bd91d08c6669da084f9dae5764a046ac8670ef8d9a73434dd4c5ccf4aae5141"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-11",
+          "content_sha256": "1cb8559cf71b6d5aaaf48a33e468656a695debcc1dadd57566341d690db921aa"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-9",
+          "content_sha256": "e52029e9e04ae3fbe7bcbde5e26f5c7baafdca036fd2a8c789dab63472a8351d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-10",
+          "content_sha256": "0bcf6e011629f6561e507ddaaa891dbb99127db59468f0ffb2c3e194c4565bb7"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-11",
+          "content_sha256": "fc86c24a8fb25911776d28d375f274a8afe896a029c90ca5e7e35b8903c10b39"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "raiz-racionales-signos",
+      "count": 9,
+      "task_ids": [
+        "A6",
+        "T4"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
+          "content_sha256": "15253bc28e43ba6ca1357fc75ceb9520574f503f487d6aaa3c047a3fa373473d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-13",
+          "content_sha256": "6f693123d3148407cd4c9ccd7ee074a502bcf0a2cc56dee81bf3a2da61002978"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-14",
+          "content_sha256": "74f2009488494c307bf4753cc6708e815d8d9117425d3ae4c57d58479469f7fd"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-12",
+          "content_sha256": "6a6e52a0b8523a25b10c7b40bd829a9c9237dfb2a8d43f09bab86ca241523152"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-13",
+          "content_sha256": "1392294147890cee774b0d0cd6ebd83b98344d3f8a7d680a650b2a8608e90eb0"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-intermedio-14",
+          "content_sha256": "f4a062f537a8c354032add4c32119175dc84f092c9c842cb3a2f303e8a467e10"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-12",
+          "content_sha256": "a44f109a129741f075338e7a2cb311f524446be9a371cf7a3ae4b5e5681ce955"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-13",
+          "content_sha256": "14cd80d99f3bcc2a48035215285a8a41b7057464699cb999231f0b0407ab66cb"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-intermedio-14",
+          "content_sha256": "6288ec586e16b171e3f9f98929d5d114c22f2c46ceb57d4e2cf049883bada12b"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "distributiva-y-cancelacion",
+      "count": 93,
+      "task_ids": [
+        "A5",
+        "T3"
+      ],
+      "game_records": [
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+          "content_sha256": "20858ebf55d0bf73f42f69aacec88b092ac6ba6cce67ed053534309c5465689d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+          "content_sha256": "9e55f02da2415c0f83cf7bcb3930efff6a62481cbd4502ffdfb65b1656c6b57d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+          "content_sha256": "a594187e87f66c049f55b1449eaad062447be4d792c6606d0c5aa4b977c6afee"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+          "content_sha256": "fbd938f0dd18baa117a3fad00c03298463c07de7c6c5263f080a2ef0512e6cb6"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+          "content_sha256": "3be0fcb5f1fe93d28575e0931ef6e9d92422b8660dd9ccb4abf53eb6fface80b"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+          "content_sha256": "c9b61fb18d26d4eb7fc9f9fdc6ff2ef8fbaafdaeab2e2a1fba026858d0cb8dec"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+          "content_sha256": "89eb3ad4bdaca0f665d06d591a53099ecb678b71cc588cdd996b724d8a0aebc6"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+          "content_sha256": "5e5af9896c7ac9b7dcc6b0f091a7f79a255836a9e04cb44fa89cb13760175421"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+          "content_sha256": "d1dbc49080178ac269cb3e3c1b7f323da81c8a5a8c6a5fdfe1026286f6d66e0d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+          "content_sha256": "9ecf340d34e0fa6926ead6055d8a29d0fcfe8442075bd813a54cd90fa1325ae1"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+          "content_sha256": "80ec7f416d19f39064c9fe559707c70075d4e8393df5bd62fc9d2e2966305d9d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+          "content_sha256": "d66cee48d2dc5cb3098f6cfe67b10714d356f89921ca5ef7008d1893e5a60089"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+          "content_sha256": "66f0d3a4de19c79d6903f50bfa24537ffe2a533b44d4e43db00735eb0093316f"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+          "content_sha256": "bdc644e3f820b64d232a31724c31d0a48ea917a73412b13baaeaddab09107557"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+          "content_sha256": "5bbe67176463f9fa253321b5fa5eac2badd26869f497ca34c84af47ba8cc37e7"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+          "content_sha256": "f2f1c4252676b39ee37c58bcfed0165a423205b34220d956ca0642e09f3cd95d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+          "content_sha256": "7800cd05899cc16059c69e498f1c1c5d4a171ffdaca1e471c06b80daacb3268a"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+          "content_sha256": "3d672c34f5364d32035c939c8184f6d87784e91665dee7c358edd7311ba95901"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+          "content_sha256": "be5cccc6f8f45599388b631c3c73f8634cf8add79d586be71bb62d4b3b88df97"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+          "content_sha256": "1e91574943a68ea2a864f247a7f873ba12281efea6e91fc57962e60fe2f49d6e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-24",
+          "content_sha256": "fc3fd83eed38aa400f057f8a6fb00263dd95ff324a917c7fdbd48ac3886b7747"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+          "content_sha256": "742f839efcfa043eb91c62949bb028d6a3c4c259f7f57a47a4936e3a60b67d2d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+          "content_sha256": "2798b378d88cbb81f5f616be6b8f6e5dc69774f5cbd0f060485951a448260e28"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+          "content_sha256": "a808f5611b30a459ac61f4dd9895a3376f1850833b9432dc79aee9bcbe8a23b1"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+          "content_sha256": "36e9a3acf1a0516618355d20d501d53c9e105301c6466c0bae4d926a048e8755"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+          "content_sha256": "28da26c75325c54350b61f2422d3f08429593c1d399a6b4f5996dc9c78cca009"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+          "content_sha256": "1acff64698404a8cbf4242be0926036169da229bac65ef8bbaf2dbeaad9460a6"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+          "content_sha256": "ad4cdd5024b6cfbb3f6dd292bf3287f0fa4dda1186969d8c0ee97885a2445139"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+          "content_sha256": "2725714c7ae66961ea5a14638f3b07be398d21910286fd002efe4b107934bb30"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+          "content_sha256": "8d41b417f88e70cf60838ec05cff3370b37dcbd5bffce94df2a479633a059cfe"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+          "content_sha256": "b69b5252ffa0485254b17b7b20065266682daa78bb4095a4829e6530677c193e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-0",
+          "content_sha256": "ed283d9fd83af11fdb57c0bc14d2e6bfd1ed6e3b0b68ff5e832f983ee26caeb0"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-1",
+          "content_sha256": "1614ac913a5d5a637577fe7d0a919f45854b78008fe01e97966f0ffb8b3dbd4d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-2",
+          "content_sha256": "83787f7fa6b58395158b222925c285a76d68b5585d6ba0affad2d592d4ccd490"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-3",
+          "content_sha256": "7ec99f82d46dcfe2bbb390e0429191ff26b3e73f5a0568ad20ac1976192b83e9"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-4",
+          "content_sha256": "31b3edeb5f7d82724342fe5c4c27e44acdec13ccec5fc58b06ba01ba345ddedb"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-5",
+          "content_sha256": "1fb45d8473ff9ebd22f587d892a45ae515b8cef13c70ca563fa8f990484a2357"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-6",
+          "content_sha256": "7caf6b86fcc27d8099503e7968551e90db10e7ea08b077bfa78cca96426bb55d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-7",
+          "content_sha256": "2eeb7e6526d536116e09c3270fedd735044b6f4ffebcebeef46334f59fe94ecf"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-8",
+          "content_sha256": "77004329aa5afc0f8734e16f7e815dc5f456eff22e8bc10bf7542e9660cd9e0d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-9",
+          "content_sha256": "ef51f1c972de4436db215e33e9b5d2b2a6a88f2f8c0fdeaef6124dafb96e7ae8"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-10",
+          "content_sha256": "fce290ee08156f144121ccb6d2e0b0d1c57d39127ffce86acf14aa11fd796ace"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-11",
+          "content_sha256": "30e57049f7b2f623e8dcfa9f26909ccd9dabb9a99e33c675326bc639d5c7c12a"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-12",
+          "content_sha256": "0fc75c8c08e3aa26cd45d1de9506b8de9c3e5b5735ddde3bb8c3785da5a02f20"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-13",
+          "content_sha256": "6fefd28f706a1a55f3481779ea68e5b8b6458bbd9879543b7d9988394531a345"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-14",
+          "content_sha256": "a2f8ec72310465028353904fd411d6c5fde34265ae4e5c36c5ecee6c2fd16578"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-15",
+          "content_sha256": "6ee55f84cf66d7f044c9185cbfa938f8b2f3f30c0f24a3742bce2893895a633e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-16",
+          "content_sha256": "7152c5e29a41902f4b488278185720dc93c6ecc178a6c1bf94345466349165d4"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-17",
+          "content_sha256": "6611283d4fd79176a0dd154386c4ef44ef56f9be7b215c3a01582c3fb2097a8c"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-18",
+          "content_sha256": "4197276271c1fa7e51983fa1b6588ed35f59a6b1234ab841ddd96c176f916933"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-quiz-avanzado-19",
+          "content_sha256": "937ec10ed3568fc47bc5a8ca85858f42e2b92a555535a649d57a1f413459c9b9"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-24",
+          "content_sha256": "0584f755035ca7c7c672416f557566f892145c2d00183e3793437289e13e899d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-12",
+          "content_sha256": "83035882c41536f4df2419dbd431a34ccdd29760996d933356d8b8f908a40f5c"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-13",
+          "content_sha256": "81131664658c9f928c9ea7babbbe4602babc3e5445b7ead33ce693964c5dcc9f"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-14",
+          "content_sha256": "135dd8ebb6a6e611d1052003b0243db19983156f9c88d14d5cd406e43aaed75e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-15",
+          "content_sha256": "0e863b5df98cae9a10b99e5d3c271a71e8c9f3e1ec1f11fdca5de37b01d8ddfd"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-16",
+          "content_sha256": "569fe86e41f8ee51e71557e648fa37012eb16911a6f033cf8438015c62afa2e1"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-17",
+          "content_sha256": "23114013c44ad981b03b7812a3ef02532dbd286d7ff0dcf868bb397df023275d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-18",
+          "content_sha256": "8457931f404dece2d733d469e86182484f2d7a4440387ddb7366dff1c881f039"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-19",
+          "content_sha256": "8014e7f12d2dc5fa6a4413b87fa2b02abe516e9307da00057931b275be0ef248"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-20",
+          "content_sha256": "405182492219c2fafd30fc0347c6ba70cde101e9c560e5d65af0b40a712fb857"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-21",
+          "content_sha256": "e82a572faa7158f9c7442f680820194a98f629235f5a65e3b21c9921438f9fd9"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-0",
+          "content_sha256": "587b47dbe6bda5aeb44f948bfb06bdc2430d022caf35cdc95fbf566bc5713a93"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-1",
+          "content_sha256": "bfaf027ab7aff6f4164b5d027a5298da44450bdf6ad54f9a8230e290368f7505"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-2",
+          "content_sha256": "db9a53253246378173ec6163e623b29531a954ca1ba0d8d10fbd064faba2e396"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-3",
+          "content_sha256": "6089811eb8e07e2bf013e46a5f83fb6ca3497ff80a681c12f91ac847769f98ac"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-4",
+          "content_sha256": "31d3aba56dc7d37c878cf4517982e8277804bdcd54fab258eeef5b77d65ef735"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-5",
+          "content_sha256": "97e273d9daedb05a89529aaea9e7fca302cf35dfc79e4388c879a0aa41e3a59c"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-6",
+          "content_sha256": "ee2470371f8526bec232291407faffe321e9c1755b5678c699554267a2a11307"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-7",
+          "content_sha256": "639d9177f347ba7d166da603347d206a2691db77540d625686370001f2f97bc9"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-8",
+          "content_sha256": "b620132ffe50547078fc12241f128a5c2bd335628485df65ef0d4f37944fad47"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-9",
+          "content_sha256": "dc315cabdcc417fab352b1d75c301c34aa359f5460745647ec312afb35868a2e"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-10",
+          "content_sha256": "9c72022788079a06d769ced9ee41c01a9fa5aac19d79325ab7b5770e6f49d1e9"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-11",
+          "content_sha256": "54907cd3882d3266a9c67aa9e375c1a72afc48a21b7f4b8408dbb2e5fb8bf68b"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-12",
+          "content_sha256": "318c730423bfd82ac2d5f891a8ca8a09c7332f15d6c31c8dd31b1c563f25c16b"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-13",
+          "content_sha256": "2124795627d093180a2ed4e93ec97705616ff3111765d5beeb720542d8ff5d0d"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-14",
+          "content_sha256": "686aeeba41b2258a16ec2289a69bccaadd41291a60658fd209f7ff89410ca624"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-15",
+          "content_sha256": "b7b9504580020781ddc24926b04e003f2348510528a4413f67c69fd84eb7e479"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-16",
+          "content_sha256": "bf34425a7e22e9afa3cd41ab3a3a33649c2e31344df3290cc2826700e5800719"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-17",
+          "content_sha256": "669398a2becaaefacbf6b0c9aedcc5255d42bed4cf19d4e470f2c4d6bdadb7ac"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-18",
+          "content_sha256": "c1f80b09a38f23eb71969f8dfabe82a40f7545a2744a1b927ec8c698c49e97e1"
+        },
+        {
+          "id": "math-m1-aritmetica-operaciones-construir-avanzado-19",
+          "content_sha256": "3f2e2045ba7d9e529c8a66e819d2f451594db0c5e474bc32917026c5a0124935"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-24",
+          "content_sha256": "e741671374761252d9fb2b57aa74c71a9f32848ebf9ec20190d09a199ef09cee"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-12",
+          "content_sha256": "ca5af24d4e2b556378d46c6a5420292e8aa43464fbd1d14c255fe50232b65794"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-13",
+          "content_sha256": "a2e1b7a5575034bed57822c2c9436fe6a44db0270d9bf360031226c5760ac1e9"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-14",
+          "content_sha256": "b672090ebe6e2ca91595c159b200d01178987c494b2f7d4b70f7d39d45f4005a"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-15",
+          "content_sha256": "7e2af034f8947ada9d4df2ffd05f3bd66f080982c5f573b3dca823e89fbafc3e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-16",
+          "content_sha256": "eaaa02a5a58c76cf3ab18c5a2465c2278ba66a7cc5ecc6df6f57f1095780a908"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-17",
+          "content_sha256": "40ea8f2be28550b22fdc55053e7d8c9582a7dbdac6c60289000c693203c6e017"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-18",
+          "content_sha256": "bda57c5caf377ccc3949bd0ccd3c598911e35531f37857cbe2793f06a243730a"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-19",
+          "content_sha256": "06fdc0b2879b76e072c465625cb73908717fdb9ba1d4289fda60613b5d02033e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-20",
+          "content_sha256": "a71923756455bf56a72a7f399f524f9872ebea866878dbcdccedca15a7fb04d7"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-21",
+          "content_sha256": "624718fbfffafe8e3d32daf763c3bc6ba2360793cd2af51094121f5422bbdd11"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "factor-comun-diferencia-compuesta",
+      "count": 9,
+      "task_ids": [
+        "A5",
+        "A14"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-0",
+          "content_sha256": "6d5b8eaffeab3211cee6ebb50b04983e5ef29c553095aa46b404c1b80b4fd4b2"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-1",
+          "content_sha256": "966cc78248ee8bef0cc086bff8bd153947fb2b6e00261a7f722a2d94146074e1"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-2",
+          "content_sha256": "176820cc9465fee3567008f1b5961ac20dddc5e6d6f031942522b814c9674be7"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+          "content_sha256": "4aeb35d06bc914c8c34bb25d3b8501edbdda4ce892ac039c07266b782326872a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+          "content_sha256": "9436c43c5ca52a01c2b1320c8862fac01025aaa0c660c74e2fa5c3bde5eeb287"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+          "content_sha256": "00ecc4dfe58c868452e093cf25deaf68edf64487ad46a2d102fea044d54be5d3"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+          "content_sha256": "2424a69545ad388cb602301a4772acbba067d62975bb2f72763a59871077c73a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+          "content_sha256": "55b6a363d97d3231894f1eb7f4471f44866bda1a0b732af891879987394d1f63"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+          "content_sha256": "c71f9afe39de25f3822fe8aa6135f1cac77163e984e91ba9155652d674779473"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "resta-anidada-distributiva",
+      "count": 9,
+      "task_ids": [
+        "A13",
+        "T12"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-3",
+          "content_sha256": "bfe8eb8ac47b2bf1a8ea5f6ad6b13b6a54953812e3f312ecbf22ae0c666905d0"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-4",
+          "content_sha256": "e79c6d246eec67455f2ec3e2858c83808fa6bfcc2f88c1864f72c42e34285fde"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-5",
+          "content_sha256": "d63c70df1f41b15d0e4127bf0bc6e1fd5b609f7f2130b79f220cbd6ad492a9a7"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+          "content_sha256": "b16aca894bebb8e0016c4a54defde60538cc4b92377d4943d827a901394059ee"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+          "content_sha256": "340303855000b1fba75d518ed667c23fee6b0676e0210751725efb0d44fc6152"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+          "content_sha256": "d8234d34bfe8573f2b39dfe47c44f8c4cb498d54769bfa79eeafa0ad56716f2c"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+          "content_sha256": "b04365545109328c34df75e7b79b6b33f6db7b29b292e7e8363a7a72d946ca22"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+          "content_sha256": "dc36bb0df6e71159982789f6541d45a13477467861f44cb88f1b678c8e3d60f1"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+          "content_sha256": "ac3553665ecf646b901fd7634552e64d2d113cb07099f31dd1a8a775e1b384c6"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "cancelacion-cruzada-de-productos",
+      "count": 9,
+      "task_ids": [
+        "A15",
+        "T14"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-6",
+          "content_sha256": "8aeca044114afad4b1f575bf2574ccc9ca0a2b3372bed46f7f85816ff7e46344"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-7",
+          "content_sha256": "88738ead7e06184a36f040b8fefabbe7d77aa8f0750d77c6fca1eccc9540ac64"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-8",
+          "content_sha256": "1b067bdd11404effb8b7e6beda3db05c8094432291bb4af44499728ce6c633d4"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-6",
+          "content_sha256": "e2b635568cbd428a216aa382ec28d6e32fbda87ede73e36906bf9415b4447e66"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-7",
+          "content_sha256": "1d890ac0f8df75903dfcf06ab07d3b9b495218772c7f50b9c976cd26f67291f8"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-8",
+          "content_sha256": "587dbeccd36e6abbd337d809192280440e424fd3a1b3608cc66604ea91e5dcb8"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-6",
+          "content_sha256": "d052cc246ef1b31c048b46514a95ef522f661e061169ebd47ba1471efa58b408"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-7",
+          "content_sha256": "b83a12cf5cb0bff528e4089d8af142ca40c84726664b05954b68f0b57c8d3653"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-8",
+          "content_sha256": "a2e1387889b59d75844b47e5b0bc8c31507089df7a93b19c100da6c97af2f2e8"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "dos-raices-en-producto-agrupado",
+      "count": 9,
+      "task_ids": [
+        "A6",
+        "T5"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-9",
+          "content_sha256": "035d386b35a3f6736b8bcc0c0cd591f4d702aca4cd6b165a6195a3f87db9ab0a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-10",
+          "content_sha256": "0367c3653870e0e130c27e055e2f2dea76b71734275008e5ecb6045c5d55a83a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-11",
+          "content_sha256": "d6b443f5c558d3075c4fcd1cce9f33fa7e101dfdd9841f5260085e8f2d640395"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+          "content_sha256": "0eef44c9eb3413f8391d229c5933a219180d45a67e3e9a0af12d7c6967a515d4"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+          "content_sha256": "8304eb14f4037791a25c24b5e00eddea805bb92013683198ddb7d5824cdb81a1"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+          "content_sha256": "8938c0796cf9d5fe38e780c99692b566020e316b9c3c561cf9c4e2480794810e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+          "content_sha256": "d5faf5c1edf0bcc107fed782c5693a3fe27d2872e84914443490e0eda236378d"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+          "content_sha256": "75a821c39ef0624b6147ca6eb8646b99661d5b822ad1997712b91c8529a9f665"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+          "content_sha256": "8a9b2928068881356dea06662ab371277c04a680352bd74335d5a0d81cc74bde"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "completar-igualdad-distributiva",
+      "count": 9,
+      "task_ids": [
+        "A8",
+        "T7"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-12",
+          "content_sha256": "1d92348dd8008328205a864ff1c53f42bc1775fd3455abefd8b6d989473bd66c"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-13",
+          "content_sha256": "6e1a976486e5c377f58ebaad72e8c7c98a6c477a72a9b514a986e16319e1202c"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-14",
+          "content_sha256": "5abaa6bcf28766bfd0ede20eb68f4eee39dedda93a467fbcc290a0af5d51f535"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-12",
+          "content_sha256": "e4cc1120dceb76eb7f3baf2aa16fcf9d7ebaaa9bba8b1dc23c04c6afebbbdf49"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-13",
+          "content_sha256": "9cdb2f4f5487ebce2afc64e5f34be8ea09dca6efa24a91133d68d5c7a0e94617"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-14",
+          "content_sha256": "16516116fd9088fc6c49b4571ca6162f81ce4012adc3f21dde005d65adf4e6f6"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-12",
+          "content_sha256": "46e3a49690e7d38d1ba9be3cf7f07bef1c963629fa98afe1f056afe57b45e6e7"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+          "content_sha256": "29a31bf05db2fa42b8268d1c2fa7a6ac20a2315155bd15fe370746693a78d668"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-14",
+          "content_sha256": "feced0068d4dbc108a52124eb55759e241f820445a57eb1b7bba18fbbc02f237"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "factor-desconocido-tras-cancelar",
+      "count": 9,
+      "task_ids": [
+        "A16",
+        "T15"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-15",
+          "content_sha256": "f79bef2af9bcd7b25d1170da227b1f41532d4b0f5ac60a5fa3b59d77a5345f22"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-16",
+          "content_sha256": "4511556f8b24a1c977edf0d95d9f5bc7469d23fc75d1297ed7cb6e62676db7e4"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-17",
+          "content_sha256": "66d01b85387c7a2aacbbb4caaffcf2eddb8743a7e9656a73967efb8f685019c6"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-15",
+          "content_sha256": "80d4cdfdcebed4b69b18fd8a4c162cc29939051a9e2b8586ba147aa13cd28709"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-16",
+          "content_sha256": "fdc5ace7959c674b355fd86c8f8d8932cae4df673c250602ebfdfa07cee3e6de"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-17",
+          "content_sha256": "2459179cea418106ee6ab78cdd0fe105edcd43bc9b1233d418478dbf6924b012"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-15",
+          "content_sha256": "c302f51d8f63dfc3a35a4b99fa87fed2328a90da46fc2610413833817bd0a506"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-16",
+          "content_sha256": "07884d536b31d8a5b0a1acb6aa97bbf4f664d09835b98105e2c065da122aa603"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-17",
+          "content_sha256": "4d188b5a6a0c641f2bf253c7d773dc3040d48cf4448a77f02f40e7ebbee815ee"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "raiz-racional-resta-agrupada",
+      "count": 9,
+      "task_ids": [
+        "A6",
+        "A9",
+        "A13"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-18",
+          "content_sha256": "bba036b839840704a414162300992323fa318ec47a28353e9943d7fcdd030f11"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-19",
+          "content_sha256": "d8833ee5890c24b9cc17f831a2712d6e1995f3683f83da565b0a53bd84c8bab2"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-20",
+          "content_sha256": "a9e23c89ed2f8a5690a5dd10aaa659c56ac8bc0c8b525e81e3cdc4a655b3511e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-18",
+          "content_sha256": "6836be4539301174614f02144d8ccd6885c10c006e4e11851fe311428b68374e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-19",
+          "content_sha256": "7e3711d25248e9d9a43067bce1db6e54f7b9f665e6ff3774c22fc6ed12083335"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-20",
+          "content_sha256": "abccfef70e3bf93564093e2ff767a456c00a1b16e301004e489f6e3c0887dd2e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-18",
+          "content_sha256": "ddf3bbcaac36c651218e2684b362f462f39ece085056bf9f82df70f372fc9b1a"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-19",
+          "content_sha256": "2709643aabba440205654e0d8e1334d15940a582c74a430a607c7889a0ef2fda"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-20",
+          "content_sha256": "19ebeff3d12c200f03b99f82161ceab352eda1c9f8d3dd3e0de53db4e3fdb440"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "distribuir-sobre-raiz-racional",
+      "count": 9,
+      "task_ids": [
+        "A5",
+        "A6",
+        "A9"
+      ],
+      "game_records": [
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-21",
+          "content_sha256": "2dd9705c49ae8c85f4aea4e85ba37952304f2c8204d3abf106246927b83d678e"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-22",
+          "content_sha256": "e19fea8918d4b2ac8387ea62febcb3085b79d21f92397fe57a9dc4043bc70067"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-23",
+          "content_sha256": "a6f9945ca6e7c26da6281ca5e2a64d8db32e976af6c199657972ee9df9983459"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-21",
+          "content_sha256": "d5eb81990a720fd78e877e3a4e9c0f3be9c292b5130b250fa1e06e8b8b97d3ef"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-22",
+          "content_sha256": "3439b99ec7fa377b1ea8be3a46283a143b381effad9e053275a74fa299330e89"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-quiz-avanzado-23",
+          "content_sha256": "da14374061fb5692998997edf72a13885bfc3132cdb854ec8107c77d5e5e7505"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-21",
+          "content_sha256": "01e9ca745fe6c536c05b325462f69b9764fd07938f91067b0a447a4d5faf223c"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-22",
+          "content_sha256": "4ef734ab89d0c72bdcbd92b47d7fb8af5efbfa1563f4bd05a218f13ca1eba87b"
+        },
+        {
+          "id": "math-m2-aritmetica-operaciones-construir-avanzado-23",
+          "content_sha256": "121933c1fa38d03ad6a749896f5a99982c0da2291f224ccb71359777e9fca2d6"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "distributiva-signo-negativo",
+      "count": 9,
+      "task_ids": [
+        "A5",
+        "T3"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-0",
+          "content_sha256": "0754b4e0c9295958e033d99ab0ad13e76dbf85c565916cac2522377b91d97571"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-1",
+          "content_sha256": "0f9787309eb777c9ac13c72c73fcf16099daa635ba016b56b4ad8790b006964a"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-2",
+          "content_sha256": "a805d377b8f1766ac9a8b7821ba238931f4e42c7879d5683cfbe48765341aa93"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-0",
+          "content_sha256": "96789485279beaac201f7081a2b01b23b55f0003f06dca4bcb5cb85f53882cd5"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-1",
+          "content_sha256": "b2fd40d8b064ac54fa34584c6d1f3e4f88186eae04428a095d56bc7713fd47cc"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-2",
+          "content_sha256": "e96ce72af51f3fb33ed5964003a886053bcf66b92246da0c4092f5232d9edfc8"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-0",
+          "content_sha256": "109a0c3c3d650967af7659962accc6e8fffd82233aa19528daa0de206c73c31b"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-1",
+          "content_sha256": "af7f8d647d34a5b5066f0668d91ee15010152304002ccfe76712ffa302a61299"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-2",
+          "content_sha256": "f131ad69814e0d304629e555fb8011a496f38be9f592406328fa59322089c397"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "factor-comun-dos-grupos",
+      "count": 9,
+      "task_ids": [
+        "A14",
+        "T13"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-3",
+          "content_sha256": "ef7ecd2f5a1dc3c35858a38c535107d15cf31b957abf0d92f26e690db0c28ec3"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-4",
+          "content_sha256": "ae2960a8c31073c83aab3e8c3c1cc3b6d2c98b014284ccb95d2abe1bdf53ff09"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-5",
+          "content_sha256": "51084954ad13e65c070a6f3b0ecd4cc71fa29378fa06e3b18a2d71c7eb917c9a"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-3",
+          "content_sha256": "c4f8f76ea71d62bdcc7c971b5c75edc1a666fd76826b82b33e89e6eb96028be1"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-4",
+          "content_sha256": "038d6bdfd354f5bb849260d20c3e74c53a7ed93b9c05e2ff915a489cd924d421"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-5",
+          "content_sha256": "923cdc282759099686fd27a7feba32c81bba6c6d3a7419313aa2e664da0e049c"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-3",
+          "content_sha256": "60cd2e76c4f77eafb2af5c2745011be5982634160454eec6196b7de3b5d498d2"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-4",
+          "content_sha256": "1c7d8cd95b63642cee18273736d47d119c1a5aed4f51f41c866a2b927edcccfe"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-5",
+          "content_sha256": "357bcdf18c33588c307805aa0afeaff8d147861834b2640433d50a5fe27309fa"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "diferencia-productos-no-identicos",
+      "count": 9,
+      "task_ids": [
+        "A15",
+        "T14"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-6",
+          "content_sha256": "bc187489932ebdf98cf2a9fa4d7c38b2068eb5af12f9efcd652975292a74497e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-7",
+          "content_sha256": "1ab8025f80f353b7e4161495825639f4b985d729ae689193732a927c6da749ca"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-8",
+          "content_sha256": "92527f11f0e60b13d6bb2e024a5af59e0ea3dde5fb00700a225a80a5b740231a"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-6",
+          "content_sha256": "60187a684127c2332467e708660f1b68fdf22a0975d87c37771aeb220103928e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-7",
+          "content_sha256": "834fd738b960573f24a8d260511c219c3d76c22c89f76664117e0cc1e01eb8df"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-8",
+          "content_sha256": "9a3b0520c23232ca2f3285ac51b9de64ec63c69b659f89d3496d2f6cd384f515"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-6",
+          "content_sha256": "b27af3b164d9a38a43db4f317c18146d7ee307d6b9437560cbe3462562ebf2fa"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-7",
+          "content_sha256": "60b599896f68146512e57111f861b569d260b0d8bf92651bf4204fd01e4fd3f5"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-8",
+          "content_sha256": "d12159c53a9ab3b05258be4099b12d392ca8ea8d6e30fd2ead443b1fd3ab4941"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "raiz-producto-cociente-agrupado",
+      "count": 9,
+      "task_ids": [
+        "A3",
+        "A6",
+        "T5"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-9",
+          "content_sha256": "d3624ca4821d982ad58990831f504dbe6a575b701a08bdc729a139c8a04a7d96"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-10",
+          "content_sha256": "6eb8edf96e82145332df73ec547b357aedb9301f2e20b70276ce2dff03761253"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-11",
+          "content_sha256": "031854ac450de7e49c69e0688e16fcfe850322970778674ecb7b69033a69a855"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-9",
+          "content_sha256": "cb627420eb94af6c54e9265615a9e68590b1974c82b573e911e2102ebccbe38c"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-10",
+          "content_sha256": "bf91d632a65ac50d8b8459bcad6fabce986919c53cc1585e3f8a19b7e359f14f"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-11",
+          "content_sha256": "f9fabcf5a364e65fbd0fa276c88ff3f5ee6060b7443936a7e279c2cc7f84c2cf"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-9",
+          "content_sha256": "a5cb5795c5724a6a0627b38c12d30daab9dd267f8e8d20e0fe55674f4568ce3d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-10",
+          "content_sha256": "a8ab24c25d5318f2e4d6e3bb65a73fcc98f54d8f69fd56664b67ba10a6122261"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-11",
+          "content_sha256": "485f2d4d3e780a463a44afe3a72f7f83b35051478eddba12fadb13339b301a4d"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    },
+    {
+      "family": "raiz-producto-racionales-combinados",
+      "count": 9,
+      "task_ids": [
+        "A6",
+        "A9",
+        "T4"
+      ],
+      "game_records": [
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
+          "content_sha256": "71988aba89078a41c6d05d6a5ec308b8926358a5146030ab133511d43cbbb623"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-23",
+          "content_sha256": "c1e8298b0fb08d21d95d7477c530c3332e568f0f09f5776ac24e0d50730e45fa"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-24",
+          "content_sha256": "8c2663d0f6d8ef6604b68eb033632c9357225c35b54b69409c71e6bd0e60cf9d"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-22",
+          "content_sha256": "08b2dc2b080c49f7d11d5ea06022b3eab502efdadfea54d9b8f0160b25d96d92"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-23",
+          "content_sha256": "ed1a51e5c0eccdb1f4e711f58ddd03979b47f155069523ca893c07fc4d0db53f"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-quiz-avanzado-24",
+          "content_sha256": "de7fa0df1747d4a50b2b7b45ccec58a1c5e323649d1a5c3b0723e1e23d94370e"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-22",
+          "content_sha256": "161816de0110f38c059702905d11d590c5658a18a503cfa13f88384e2f6111e1"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-23",
+          "content_sha256": "5e0114a4326defb069ed7f65dfb081615c5887c4e768e8d81a176d7015802b90"
+        },
+        {
+          "id": "math-m3-aritmetica-operaciones-construir-avanzado-24",
+          "content_sha256": "09e2b4ae3e1d9199fb69f8eb4f03f2bb197851bb72cadc08eb0ce22f7b20861f"
+        }
+      ],
+      "status": "REVIEW",
+      "note": "Relación propuesta; suficiencia, distractores y decisiones de cada ID requieren revisión independiente."
+    }
+  ]
+}

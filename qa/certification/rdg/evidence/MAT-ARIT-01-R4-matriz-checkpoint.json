@@ -1,0 +1,31 @@
+{
+  "run_id": "MAT-ARIT-01-R4-paridad-20261126",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "958c61091173e47f3217a178d5c357d02d245300",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "node --import ./scripts/ts-resolve.mjs qa/certification/rdg/audit-r4-parity.mjs",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad.json",
+      "artifact_sha256": "095ac3202e2dd532bfd6f90ea70469d1654d4b9c47684b735e174bde190286a0",
+      "scope": "34 familias y 450 hashes; relaciones propuestas para revisión, no certificación",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [],
+  "next_action": "Revisar suficiencia de vínculos para todas las familias en bloque; resolver brechas reales y verificar contrato R4 y continuidad. No atribuir PASS a la matriz.",
+  "stop_reason": null
+}
