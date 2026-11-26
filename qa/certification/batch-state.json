@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Verificar CI de etiqueta OP04, permutaciones de alternativas y firmas R15; si pasa, cerrar 12 fichas individuales A-H y publicar, verificar main CI + Render; no reexaminar 450 hashes sin cambio.",
+    "next_action": "Consolidar R15 12 decisiones después de CI SUCCESS y Render LIVE del SHA exacto. Integrar lote R12–R14, ejecutar 414 casos de interfaz, cotejo de banco/RDG/simulacro y resolver C/F/G por ID.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -163,7 +163,8 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R19-exam-pattern-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-current-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-exam-screen.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-current-review.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -517,8 +518,8 @@
       "reconciliation_ci": 45766894680
     },
     "current_contract_review": {
-      "examined": 95,
-      "review": 77,
+      "examined": 187,
+      "review": 169,
       "semantic_pass": 18,
       "manifests_completed": 1
     },
@@ -669,6 +670,15 @@
       "ui_cases_verified": 54,
       "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED",
       "candidate_pass": 0
+    },
+    "r12_r14_v79_review": {
+      "status": "REVIEW",
+      "examined": 92,
+      "oracle_discrepancies": 0,
+      "depth_review": 18,
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-current-review.json",
+      "ui_test": "src/test/rdg-operations-v79-r12-r14.test.tsx",
+      "source_head": "2bb65bb9f1cc3b15a2e4edf34252c5f1c527fd35"
     }
   }
 }
