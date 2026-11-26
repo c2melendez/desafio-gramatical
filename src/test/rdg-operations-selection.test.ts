@@ -2,7 +2,7 @@ import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
-import {mathM3HistoricalPool as mathM3Pool,mathM3R16Pool as currentPool,mathM3Pool as activePool} from "@/lib/math-m3";
+import {mathM3HistoricalPool as mathM3Pool,mathM3R16Pool as currentPool,mathM3R17Pool as activePool} from "@/lib/math-m3";
 // The production frozen-selector is a JS module with no TS declarations.
 // @ts-expect-error JS selector has no TypeScript declaration.
 import {selectFrozen} from "../../qa/certification/select-frozen.mjs";
@@ -43,7 +43,7 @@ it("G-REPASO R4: verifies 450 exact frozen R16 hashes and objective mappings; hi
  const manifest=load(state.r16_selection_paths[0]);const bad={...manifest,items:[{...manifest.items[0],content_sha256:"0".repeat(64)},...manifest.items.slice(1)]};expect(()=>selectFrozen(order,bad,hash)).toThrow("Hash obsoleto");
 });
 
-it("R17: active frozen selections match all 450 runtime hashes and six exact successors",()=>{
+it("R17: historical frozen selections match all 450 runtime hashes and six exact successors",()=>{
  const state=load("qa/certification/batch-state.json").rdg_continuity;
  const order=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>activePool("Aritmética","Operaciones",level,mode).map(item=>({row:{area:"matematicas",topic:"Aritmética",subtopic:"Operaciones",level,mode},item}))));
  const e=load("qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json");const successors=new Map<string,{previous_sha256:string,content_sha256:string}>(e.records.map((x:{id:string,previous_sha256:string,content_sha256:string})=>[x.id,x]));
