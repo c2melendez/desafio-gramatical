@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Confirmar CI y Render del selector de familias v7.9; verificar las 18 fichas OP04 y promover únicamente IDs que cumplan A–H; reparar 32 clasificaciones C y F/G por familia, continuar restantes manifiestos.",
+    "next_action": "Reconciliar R18 PR #90 (59 candidatos C, incluido 32 de lote 01); verificar CI y sucesores; certificar F/G compatibles y continuar manifiestos siguientes. 18 PASS semánticos asistidos, cierre global pendiente.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -124,8 +124,8 @@
     ],
     "selection_total": 450,
     "examined_semantic_ids": 450,
-    "semantic_pass_ids": 0,
-    "review_ids": 450,
+    "semantic_pass_ids": 18,
+    "review_ids": 32,
     "review_evidence": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP02-03-review.json",
@@ -151,7 +151,9 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R4-01-OP02-03-review.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-R4-01-OP04-review.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R4-01-OP04-review.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -506,19 +508,35 @@
     },
     "current_contract_review": {
       "examined": 50,
-      "review": 50,
-      "semantic_pass": 0,
+      "review": 32,
+      "semantic_pass": 18,
       "manifests_completed": 1
     },
     "v79_pilot": {
-      "status": "PENDING_RUNTIME_CI",
-      "distribution_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion.json",
-      "pilot_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-piloto-OP04.json",
+      "status": "SEMANTIC_PASS_PARTIAL",
+      "distribution_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "pilot_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
       "ids": 18,
-      "candidate_pass": 18,
-      "semantic_pass": 0,
+      "candidate_pass": 0,
+      "semantic_pass": 18,
       "remaining_32": "C/F/G REVIEW",
-      "baseline_sha": "553125d41d3de0dd8d929cf66c6ab05c9b40e93a"
-    }
+      "baseline_sha": "553125d41d3de0dd8d929cf66c6ab05c9b40e93a",
+      "provider_observation": {
+        "pr_ci": 45769309612,
+        "pr_ci_status": "SUCCESS",
+        "pr_job": 139737833005,
+        "tested_merge_preview_sha": "41ed05fdd59c3133302b81a1ea404d08606a0fb7",
+        "tested_tree": "d4466ee7568d19d4dcd5d3022510848a727de9ab",
+        "published_sha": "ef0dc54dd7f228d31e524e86d09e003c4ea93c1e",
+        "render_deploy": "dep-dc3t9dutlv9c73fe5t6g",
+        "render_status": "live",
+        "production_ci": 45769998139,
+        "production_ci_status": "in_progress",
+        "production_ci_conclusion": null
+      }
+    },
+    "v79_semantic_pass_paths": [
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json"
+    ]
   }
 }
