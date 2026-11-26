@@ -1,0 +1,425 @@
+{
+  "schema_version": "7.8",
+  "block_id": "MAT-ARIT-01",
+  "batch_id": "MAT-ARIT-01-R4-07",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "rdg_contract": {
+    "schema_version": "7.8",
+    "block_id": "MAT-ARIT-01",
+    "revision": "4",
+    "status": "RDG_READY",
+    "subtopic_scope": {
+      "area": "matematicas",
+      "topic": "Aritmética",
+      "subtopic": "Operaciones"
+    },
+    "route_path": "src/components/review/OperationsReview.tsx",
+    "route_sha256": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+    "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json",
+    "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+    "data_path": "src/lib/rdg/operations.ts",
+    "data_sha256": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+    "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+    "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+    "dependency_hashes": {
+      "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+      "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+      "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+      "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+    },
+    "objective_ids": [
+      "OP-01",
+      "OP-02",
+      "OP-03",
+      "OP-04"
+    ],
+    "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+    "readiness_limit": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2.",
+    "teacher_status": "PENDING",
+    "empirical_status": "NOT_RUN",
+    "gate_evidence": {
+      "ci_run": 45753039032,
+      "ci": "SUCCESS",
+      "tested_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "head_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "jobs": [
+        139685084203,
+        139685083911
+      ],
+      "browser_artifact": 15086551861,
+      "m4_browser_checks": 561,
+      "vitest_tests": 453,
+      "rdg_tests": 14,
+      "dependency_mutations": "PASS",
+      "render_deploy": "dep-dc3r0agae00c73cqk950",
+      "render": "LIVE",
+      "render_sha": "90be30a2c082416883d5485ebc48f9f4d8fda220",
+      "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
+    },
+    "supersedes_contract": "qa/certification/rdg/contracts/MAT-ARIT-01.json"
+  },
+  "items": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-2",
+      "content_sha256": "b2982e66275b8c9f919824e3c280a8a706ceac3d5226aacd7f5ac5e1b9dcfd48",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-3",
+      "content_sha256": "416d634e4bc33da897cb3b4fbff29ee79c3adb6ca24b342259422a81fff7a28a",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-4",
+      "content_sha256": "336590e52c7d45522fcb7a813f80510f2a28c831a4b77c8cfefa2bdc04a6219a",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-5",
+      "content_sha256": "f7173c80a71b3ec5f8e453f55cefe4ffb9a2702424a671471fa9e10a8845ebc1",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-6",
+      "content_sha256": "0999ca72065e823d4538303d7388e1c740f71189587b5168a353935c629a109b",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-7",
+      "content_sha256": "dd2d528b223dd33c7267f68186e0c2c1dc6b37ee5eb7c391719362494d795278",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-8",
+      "content_sha256": "137b98b3baae8b2eaeb0c38faab2da0545a13e14a93a29a28e65b56853f52bec",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-9",
+      "content_sha256": "a37eede2fbe48fb77402d0904a54e156d557ec92b914dfbc451061d1128e08ad",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-0",
+      "content_sha256": "4288350a675a379f34c22e58959f862f6b8b31e0aaf8e426d704b676473a1afd",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-1",
+      "content_sha256": "b393722dc4283355e7ea821e136ee1049534dd86d503e71d8df093890dbbf61e",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-2",
+      "content_sha256": "f8bd48c54a9b80fa684d9e3bbb91752cee40e636b50bad4534b54391d0dd26f0",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-3",
+      "content_sha256": "7c120086f92ff5be232513457f96b57a2ad934269409b0de5ddba2d3649e1a3e",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-4",
+      "content_sha256": "0e677a1206801dffef07fe97117eecfb0b864c44b9ec9e26f0c3f87f6fc40924",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-5",
+      "content_sha256": "69e082ec2dd7475a50d92f853d70419efa0893cc2de617e14254593df496e4ed",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-6",
+      "content_sha256": "1453df7015f4715f506621284932884425e3f280a3d96aebd9320024403b4afa",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-7",
+      "content_sha256": "73e0d00bf360a6472c8c8702f1a1a139a69b134553f356106a2294ae82b834ee",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-8",
+      "content_sha256": "c1e71ce61c04c1b1579e840e70a284d840fa92b3a10d732f5ac328d0e4cf0c37",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "content_sha256": "f48ec3d5415cf304f6a3ea6ff71a872fcf2346e9f832daa0cb32de8d8c4a2b20",
+      "objective_ids": [
+        "OP-01"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-0",
+      "content_sha256": "0754b4e0c9295958e033d99ab0ad13e76dbf85c565916cac2522377b91d97571",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-1",
+      "content_sha256": "0f9787309eb777c9ac13c72c73fcf16099daa635ba016b56b4ad8790b006964a",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-10",
+      "content_sha256": "6eb8edf96e82145332df73ec547b357aedb9301f2e20b70276ce2dff03761253",
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-11",
+      "content_sha256": "031854ac450de7e49c69e0688e16fcfe850322970778674ecb7b69033a69a855",
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "content_sha256": "7cf3cf2aa32bd2e79f71c43b0f61f94a4fa33f60e95344e438c7f40564dbf761",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "content_sha256": "d872af71999443d4d91be0ea3ec193ed31de011db9d5daf350f9b6ce6e456602",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "content_sha256": "6983ad19fe0a190de36d7dc9bd411adb5a870cf71a5bc44fac6aab8400330355",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "content_sha256": "a5c5fecbd6281661a21723fbc580ffaad3ba8a583f5edbcb3a061222d4df25ff",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "content_sha256": "daf5239aa8912bccd8a4274d14ca56a943c18b8f1cd278894ae9ea5dab4a55e0",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "content_sha256": "e547c71adc90c83b4df64d498752f5c38fc0bf5a449e282e31ef50ddf15a40bd",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "content_sha256": "0185828fd91ab05cf529691a14904a6912d9a265f283ce2e46d587acdcc7a33e",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "content_sha256": "3f04edeb33d1c05dba757f80a1306e81c3070ab4703f346aa4c8b24528688350",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-2",
+      "content_sha256": "a805d377b8f1766ac9a8b7821ba238931f4e42c7879d5683cfbe48765341aa93",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "content_sha256": "c81d976f947a0c9c62c13fa13e7e21e593f552917532b5809ecec8aa7718c30c",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "content_sha256": "e7b61aa5229f4ca92826d04a172671ce35d82207361f44d0d9c9a46942c3edb0",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-3",
+      "content_sha256": "ef7ecd2f5a1dc3c35858a38c535107d15cf31b957abf0d92f26e690db0c28ec3",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-4",
+      "content_sha256": "ae2960a8c31073c83aab3e8c3c1cc3b6d2c98b014284ccb95d2abe1bdf53ff09",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-5",
+      "content_sha256": "51084954ad13e65c070a6f3b0ecd4cc71fa29378fa06e3b18a2d71c7eb917c9a",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-6",
+      "content_sha256": "bc187489932ebdf98cf2a9fa4d7c38b2068eb5af12f9efcd652975292a74497e",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-7",
+      "content_sha256": "1ab8025f80f353b7e4161495825639f4b985d729ae689193732a927c6da749ca",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-8",
+      "content_sha256": "92527f11f0e60b13d6bb2e024a5af59e0ea3dde5fb00700a225a80a5b740231a",
+      "objective_ids": [
+        "OP-03"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-9",
+      "content_sha256": "d3624ca4821d982ad58990831f504dbe6a575b701a08bdc729a139c8a04a7d96",
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-0",
+      "content_sha256": "4cf9c894b5bb0a71cf03520e73e8e404a36ac015c1017458fccfb4c01fe67b5c",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-1",
+      "content_sha256": "c6dde0dd6d71891cfacd74e7d234268f0c3768e7283b341c22a8b56432b2fbec",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-10",
+      "content_sha256": "f34676362420ab0e90bd68b499f4050834d344cac1b719975c82fc3157bfaba3",
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-11",
+      "content_sha256": "acfcf01eba1e00fe819186f7381644693d198cac98e0a77d17f16452197455aa",
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-2",
+      "content_sha256": "c25931046a7f473e4ebea40e9c2195aa0c3c2c26d3ca4d645521365e1c628b3b",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-3",
+      "content_sha256": "35c414d8775c16d328b92fb22d3e43a89d1e2826d6fbee98d29d5b0c6e704553",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-4",
+      "content_sha256": "b2fc18bab9d487b31daf9a0fb6bd2335fddda0e4f73f072116053109bdbfabbe",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-5",
+      "content_sha256": "e99efa76ec1848d15425788e5f76214e688c069dc7bb09c8db66eb36c60b2882",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-6",
+      "content_sha256": "fc21321666c34c115e93dfc5d0fdb4417043f9f2be376ebb3eada102675a7ddf",
+      "objective_ids": [
+        "OP-02"
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-7",
+      "content_sha256": "334346eb2b253340f77668713ee78cecb62c5f09ffb9d8a0e7ca654c69478ed3",
+      "objective_ids": [
+        "OP-02"
+      ]
+    }
+  ],
+  "selection_baseline": "b3761c9d342903eb91bd499812e00f088bdd384f",
+  "previous_selection": "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+  "status": "R21_CANDIDATE_NOT_ACTIVE"
+}
