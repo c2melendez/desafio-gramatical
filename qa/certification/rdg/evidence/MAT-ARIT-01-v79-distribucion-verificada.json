@@ -1,0 +1,204 @@
+{
+  "criteria_revision": "7.9",
+  "scope": "MAT-ARIT-01",
+  "baseline_sha": "553125d41d3de0dd8d929cf66c6ab05c9b40e93a",
+  "source_matrix": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R5.json",
+  "status": "VERIFIED_RUNTIME_E1",
+  "family_count": 34,
+  "ids": 450,
+  "policy": {
+    "rounds": 10,
+    "per_family_cap": 3,
+    "min_families": 4,
+    "justification": "Cap local de Operaciones, no cuota global: deja al menos siete rondas fuera de una sola plantilla; 8, 12 y 14 familias por celda permiten cumplirlo. Mantiene prioridad del historial dentro de cada familia. No sustituye F ni originalidad individual.",
+    "limits": "La distribución no acredita profundidad avanzada ni diversidad psicométrica. Selección puede posponer exposición a familias dominantes; conserva historial y errores, no promete ver todo el banco en número fijo de sesiones."
+  },
+  "cells": {
+    "principiante/clasificar": {
+      "pool": 30,
+      "families": {
+        "prioridad-de-operaciones": 11,
+        "resta-de-entero-negativo": 3,
+        "cociente-con-agrupacion": 3,
+        "producto-negativo-y-suma": 2,
+        "cero-dividido-por-no-cero": 2,
+        "division-producto-izquierda-derecha": 3,
+        "enteros-desplazamiento-signos": 3,
+        "precedencia-sin-parentesis": 3
+      }
+    },
+    "principiante/quiz": {
+      "pool": 30,
+      "families": {
+        "prioridad-de-operaciones": 11,
+        "resta-de-entero-negativo": 3,
+        "cociente-con-agrupacion": 3,
+        "producto-negativo-y-suma": 2,
+        "cero-dividido-por-no-cero": 2,
+        "division-producto-izquierda-derecha": 3,
+        "enteros-desplazamiento-signos": 3,
+        "precedencia-sin-parentesis": 3
+      }
+    },
+    "principiante/construir": {
+      "pool": 30,
+      "families": {
+        "prioridad-de-operaciones": 11,
+        "resta-de-entero-negativo": 3,
+        "cociente-con-agrupacion": 3,
+        "producto-negativo-y-suma": 2,
+        "cero-dividido-por-no-cero": 2,
+        "division-producto-izquierda-derecha": 3,
+        "enteros-desplazamiento-signos": 3,
+        "precedencia-sin-parentesis": 3
+      }
+    },
+    "intermedio/clasificar": {
+      "pool": 50,
+      "families": {
+        "modificar-parentesis-y-factor": 17,
+        "presupuesto-dos-compras": 3,
+        "reconstruir-inventario-inicial": 3,
+        "comparar-cambios-compensados": 3,
+        "reconstruir-cantidad-por-grupo": 3,
+        "comparar-ofertas-con-cargos-fijos": 3,
+        "cociente-de-diferencia-racional-con-raiz": 3,
+        "cambio-contextual-inventario": 3,
+        "inventario-flujos-independientes": 3,
+        "reparto-neto-exacto": 3,
+        "raiz-producto-suma-resta": 3,
+        "raiz-racionales-signos": 3
+      }
+    },
+    "intermedio/quiz": {
+      "pool": 50,
+      "families": {
+        "modificar-parentesis-y-factor": 17,
+        "presupuesto-dos-compras": 3,
+        "reconstruir-inventario-inicial": 3,
+        "comparar-cambios-compensados": 3,
+        "reconstruir-cantidad-por-grupo": 3,
+        "comparar-ofertas-con-cargos-fijos": 3,
+        "cociente-de-diferencia-racional-con-raiz": 3,
+        "cambio-contextual-inventario": 3,
+        "inventario-flujos-independientes": 3,
+        "reparto-neto-exacto": 3,
+        "raiz-producto-suma-resta": 3,
+        "raiz-racionales-signos": 3
+      }
+    },
+    "intermedio/construir": {
+      "pool": 50,
+      "families": {
+        "modificar-parentesis-y-factor": 17,
+        "presupuesto-dos-compras": 3,
+        "reconstruir-inventario-inicial": 3,
+        "comparar-cambios-compensados": 3,
+        "reconstruir-cantidad-por-grupo": 3,
+        "comparar-ofertas-con-cargos-fijos": 3,
+        "cociente-de-diferencia-racional-con-raiz": 3,
+        "cambio-contextual-inventario": 3,
+        "inventario-flujos-independientes": 3,
+        "reparto-neto-exacto": 3,
+        "raiz-producto-suma-resta": 3,
+        "raiz-racionales-signos": 3
+      }
+    },
+    "avanzado/clasificar": {
+      "pool": 70,
+      "families": {
+        "distributiva-y-cancelacion": 31,
+        "factor-comun-diferencia-compuesta": 3,
+        "resta-anidada-distributiva": 3,
+        "cancelacion-cruzada-de-productos": 3,
+        "dos-raices-en-producto-agrupado": 3,
+        "completar-igualdad-distributiva": 3,
+        "factor-desconocido-tras-cancelar": 3,
+        "raiz-racional-resta-agrupada": 3,
+        "distribuir-sobre-raiz-racional": 3,
+        "distributiva-signo-negativo": 3,
+        "factor-comun-dos-grupos": 3,
+        "diferencia-productos-no-identicos": 3,
+        "raiz-producto-cociente-agrupado": 3,
+        "raiz-producto-racionales-combinados": 3
+      }
+    },
+    "avanzado/quiz": {
+      "pool": 70,
+      "families": {
+        "distributiva-y-cancelacion": 31,
+        "factor-comun-diferencia-compuesta": 3,
+        "resta-anidada-distributiva": 3,
+        "cancelacion-cruzada-de-productos": 3,
+        "dos-raices-en-producto-agrupado": 3,
+        "completar-igualdad-distributiva": 3,
+        "factor-desconocido-tras-cancelar": 3,
+        "raiz-racional-resta-agrupada": 3,
+        "distribuir-sobre-raiz-racional": 3,
+        "distributiva-signo-negativo": 3,
+        "factor-comun-dos-grupos": 3,
+        "diferencia-productos-no-identicos": 3,
+        "raiz-producto-cociente-agrupado": 3,
+        "raiz-producto-racionales-combinados": 3
+      }
+    },
+    "avanzado/construir": {
+      "pool": 70,
+      "families": {
+        "distributiva-y-cancelacion": 31,
+        "factor-comun-diferencia-compuesta": 3,
+        "resta-anidada-distributiva": 3,
+        "cancelacion-cruzada-de-productos": 3,
+        "dos-raices-en-producto-agrupado": 3,
+        "completar-igualdad-distributiva": 3,
+        "factor-desconocido-tras-cancelar": 3,
+        "raiz-racional-resta-agrupada": 3,
+        "distribuir-sobre-raiz-racional": 3,
+        "distributiva-signo-negativo": 3,
+        "factor-comun-dos-grupos": 3,
+        "diferencia-productos-no-identicos": 3,
+        "raiz-producto-cociente-agrupado": 3,
+        "raiz-producto-racionales-combinados": 3
+      }
+    }
+  },
+  "simulation": {
+    "source": "Ejecución JS independiente sobre inventario congelado R16/R17 (mismos IDs/familias); no runtime desplegado",
+    "seeds": 256,
+    "history_states": 2,
+    "scenarios": 4608,
+    "legacy_over_cap": 2253,
+    "candidate_over_cap": 0,
+    "candidate_max": 3,
+    "within_family_priority_checks": 46080
+  },
+  "pending": [
+    "C09 paridad bidireccional completa",
+    "contraste con simulacro externo",
+    "evaluación docente y empírica",
+    "CI de producción exacta aún no concluida; no cerrar subtema"
+  ],
+  "provider_observation": {
+    "pr_ci": 45769309612,
+    "pr_ci_status": "SUCCESS",
+    "pr_job": 139737833005,
+    "tested_merge_preview_sha": "41ed05fdd59c3133302b81a1ea404d08606a0fb7",
+    "tested_tree": "d4466ee7568d19d4dcd5d3022510848a727de9ab",
+    "published_sha": "ef0dc54dd7f228d31e524e86d09e003c4ea93c1e",
+    "render_deploy": "dep-dc3t9dutlv9c73fe5t6g",
+    "render_status": "live",
+    "production_ci": 45769998139,
+    "production_ci_status": "in_progress",
+    "production_ci_conclusion": null
+  },
+  "runtime_evidence": {
+    "scenarios": 4608,
+    "legacy_over_cap": 2499,
+    "candidate_over_cap": 0,
+    "candidate_max": 3,
+    "tests": 458,
+    "files": 118,
+    "exact_prompt_collisions": 0,
+    "scope": "450 bank IDs; 18 OP04 candidates"
+  }
+}
