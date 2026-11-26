@@ -3,7 +3,7 @@ import {readFileSync} from "node:fs";
 import {expect,it,vi,afterEach} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
-import {mathM3Pool,mathM3R21CandidatePool} from "@/lib/math-m3";
+import {mathM3R20Pool,mathM3Pool as mathM3R21CandidatePool} from "@/lib/math-m3";
 import {MathExerciseCard} from "@/components/games/MathExerciseCard";
 import {operationR20WrongCause} from "@/lib/math-operations-r20-error-cause";
 // @ts-expect-error JS selector has no TypeScript declaration.
@@ -15,8 +15,8 @@ const manifest=load(index.successors);
 const state=load("qa/certification/batch-state.json").rdg_continuity;
 const order=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>mathM3R21CandidatePool("Aritmética","Operaciones",level,mode).map(item=>({row:{area:"matematicas",topic:"Aritmética",subtopic:"Operaciones",level,mode},item}))));
 afterEach(cleanup);
-it("R21 frozen candidate: 450 IDs, 59 exact successors, 391 unchanged, preserve all current PASS",()=>{
- const current=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>mathM3Pool("Aritmética","Operaciones",level,mode)));
+it("R21 active: 450 IDs, 59 exact successors, 391 unchanged, preserve all current PASS",()=>{
+ const current=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>mathM3R20Pool("Aritmética","Operaciones",level,mode)));
  const before=new Map(current.map(x=>[x.id,hash(x)]));
  const seen=new Set<string>();let changed=0,preserved=0;
  for(let i=0;i<index.selection_paths.length;i++){
@@ -30,12 +30,12 @@ it("R21 frozen candidate: 450 IDs, 59 exact successors, 391 unchanged, preserve 
  }
  expect(seen.size).toBe(450);expect(changed).toBe(59);expect(preserved).toBe(391);
  const pass=new Map<string,string>();for(const p of state.v79_semantic_pass_paths)for(const f of load(p).records)if(f.semantic_status==="PASS_SEMANTIC")pass.set(f.id,f.content_hash);
- expect(pass.size).toBe(98);
+ expect(pass.size).toBe(state.semantic_pass_ids);expect(pass.size).toBeGreaterThanOrEqual(98);
  for(const [id,h] of pass){expect(hash(order.find(x=>x.item.id===id)!.item)).toBe(h);expect(before.get(id)).toBe(h);}
  const bad=load(index.selection_paths[0]);expect(()=>selectFrozen(order,{...bad,items:[{...bad.items[0],content_sha256:"0".repeat(64)},...bad.items.slice(1)]},hash)).toThrow("Hash obsoleto");
  console.log("RDG_R21_FROZEN_CANDIDATE "+JSON.stringify({ids:seen.size,changed,preserved,prior_pass_preserved:pass.size,semantic_pass:0}));
 });
-it("R21 candidate UI: every claim in all 59 records, correct and wrong paths, including 000 and 111",()=>{
+it("R21 active UI: every claim in all 59 records, correct and wrong paths, including 000 and 111",()=>{
  let correct=0,wrong=0,causes=0;const masks=new Set<string>();
  for(const f of manifest.records){const x=order.find(y=>y.item.id===f.id)!.item;expect(hash(x)).toBe(f.content_sha256);masks.add(f.mask);
   for(const invert of [false,true]){

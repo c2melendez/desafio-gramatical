@@ -101,13 +101,18 @@ export function mathM3R18Pool(topic:string,subtopic:string,level:Level,mode:Mode
 export function mathM3R19Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R18Pool(topic,subtopic,level,mode).map(repairOperationClassificationR19);
 }
-export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+export function mathM3R20Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R19Pool(topic,subtopic,level,mode).map(repairOperationClassificationR20);
 }
 export const MATH_M3_NEW_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(10+15+25);
 export const MATH_M3_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(30+50+70);
 
-/** R21 selection preview only; production remains R20. */
+/** R21 reproducible successor pool. */
 export function mathM3R21CandidatePool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R19Pool(topic,subtopic,level,mode).map(repairOperationClassificationR21Candidate);
+}
+
+/** Active bank: R21 truth masks; historical R20 remains reproducible. */
+export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R21CandidatePool(topic,subtopic,level,mode);
 }
