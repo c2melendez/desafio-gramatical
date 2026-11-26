@@ -1,0 +1,52 @@
+{
+  "status": "PASS_TECNICO",
+  "scope": "MAT-ARIT-01",
+  "route_revision": "4",
+  "plan_sha256": "86d409990c9c56fb447ada5531f2d61abc6771f381a70de00e6b6c8233001891",
+  "bank_size": 450,
+  "records": [
+    {
+      "id": "A11",
+      "answer": "9",
+      "task_sha256": "19869dc4f4edcd3592054b586219d0aa93eea74f65ee2f35a45eaf972fb2a030"
+    },
+    {
+      "id": "A12",
+      "answer": "−10",
+      "task_sha256": "51b8606cfa13730f05e02e9f070dffad727f7d88b222b76d98d0eb547d2ee4ea"
+    },
+    {
+      "id": "T10",
+      "answer": "−2",
+      "task_sha256": "db57f833f3076a0b138bf80795a777461d3d90fff575192977a622482f3dd146"
+    },
+    {
+      "id": "T11",
+      "answer": "−14",
+      "task_sha256": "4b49b791d6ded9bd6cf645d89743af3d2aa5a7e17dd90c91a096f6ac477db95c"
+    }
+  ],
+  "families": {
+    "resta-de-entero-negativo": [
+      "math-m2-aritmetica-operaciones-clasificar-principiante-0",
+      "math-m2-aritmetica-operaciones-clasificar-principiante-1",
+      "math-m2-aritmetica-operaciones-clasificar-principiante-2",
+      "math-m2-aritmetica-operaciones-quiz-principiante-0",
+      "math-m2-aritmetica-operaciones-quiz-principiante-1",
+      "math-m2-aritmetica-operaciones-quiz-principiante-2",
+      "math-m2-aritmetica-operaciones-construir-principiante-0",
+      "math-m2-aritmetica-operaciones-construir-principiante-1",
+      "math-m2-aritmetica-operaciones-construir-principiante-2"
+    ],
+    "producto-negativo-y-suma": [
+      "math-m2-aritmetica-operaciones-clasificar-principiante-6",
+      "math-m2-aritmetica-operaciones-clasificar-principiante-7",
+      "math-m2-aritmetica-operaciones-quiz-principiante-6",
+      "math-m2-aritmetica-operaciones-quiz-principiante-7",
+      "math-m2-aritmetica-operaciones-construir-principiante-6",
+      "math-m2-aritmetica-operaciones-construir-principiante-7"
+    ]
+  },
+  "semantic_certification": "NOT_GRANTED",
+  "limits": "Comprobación de las dos brechas y colisión literal; no prueba paridad completa ni eficacia empírica."
+}

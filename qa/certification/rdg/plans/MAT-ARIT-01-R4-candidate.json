@@ -86,19 +86,22 @@
         "Paréntesis agrupan; multiplicar/dividir tienen prioridad igual; sumar/restar tienen prioridad igual. En cada grupo igual se opera de izquierda a derecha.",
         "Propiedad distributiva a(b+c)=ab+ac; aplicar signo de resta a todo el grupo; fracciones y potencias completas se desarrollan en subtemas relacionados.",
         "Raíz cuadrada principal: √(a/b)=√a/√b para a≥0, b>0 y raíces exactas; equivalencia de fracciones y denominador común positivo. Enseñar aquí el mínimo indispensable y profundizar en sus subtemas propios.",
-        "Contraejemplos de dominio real: 0÷9=0; 9÷0 no está definido. √0=0; √(-9) no tiene valor real; la raíz principal de 9 es 3, no ±3."
+        "Contraejemplos de dominio real: 0÷9=0; 9÷0 no está definido. √0=0; √(-9) no tiene valor real; la raíz principal de 9 es 3, no ±3.",
+        "Restar un número negativo equivale a sumar su opuesto; el producto de un negativo por un positivo es negativo."
       ],
       "bridges": [
         "De desplazamientos y cantidades al símbolo; luego árbol de expresión con subexpresiones y operación raíz.",
         "Comparar árbol de expresión (muestra dependencia) con recta numérica (muestra signo): usar secuencialmente, no superponer; descartar glosario y arrastre obligatorio.",
-        "R4 candidato C09: reconstruir cantidades por operaciones inversas; representar igualdad como dos valores equilibrados; convertir y dividir racionales; comparar costos completos con diferencia orientada."
+        "R4 candidato C09: reconstruir cantidades por operaciones inversas; representar igualdad como dos valores equilibrados; convertir y dividir racionales; comparar costos completos con diferencia orientada.",
+        "Usar operaciones inversas para interpretar la resta de un negativo; representar la multiplicación negativa como suma repetida."
       ],
       "common_errors": [
         "Multiplicar antes de dividir por regla mnemónica mal interpretada; remediar con dos operaciones del mismo rango.",
         "Sumar antes de multiplicar sin agrupación; comparar paréntesis explícitos.",
         "Aplicar factor solo al primer sumando; sombrear cada rama y validar por evaluación directa.",
         "Modificar el resultado en vez de los operandos; distinguir condición original y nueva.",
-        "Interpretar √9 como ±3, sumar denominadores o aplicar la raíz fuera de su alcance; remediar con cuadrado inverso, unidades fraccionarias y límites del radical."
+        "Interpretar √9 como ±3, sumar denominadores o aplicar la raíz fuera de su alcance; remediar con cuadrado inverso, unidades fraccionarias y límites del radical.",
+        "Confundir restar un negativo con restar su magnitud; omitir el signo del producto o cambiar la prioridad."
       ],
       "activities": [
         {
@@ -240,6 +243,34 @@
           "feedback": "Comparaste solo los precios por entrada; faltan los cargos de gestión. Calculaste el total de B, pero falta restar el de A. Invertiste el orden de la diferencia.",
           "help": "Construye una expresión completa por alternativa y resta B menos A.",
           "acceptance": "Respuesta 10; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A11",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar pasos voluntarios y responder con retroalimentación causal.",
+          "representation": "Organizador secuencial de tres pasos",
+          "prompt": "Calcula 8 − (−3) − 2.",
+          "expected_reasoning": "Restar −3 equivale a sumar 3, su opuesto: 8 + 3 − 2 = 9. Comprueba que 11 + (−3) = 8.",
+          "feedback": "Trataste la resta de −3 como si fuera restar 3: 8 − 3 − 2 = 3. Calculaste 8 − (−3), pero omitiste restar 2. Después de sumar 3, sumaste 2 en vez de restarlo.",
+          "help": "Restar una cantidad es sumar su opuesto; después conserva la última resta.",
+          "acceptance": "Respuesta 9; cuatro alternativas distintas y progresión por teclado."
+        },
+        {
+          "id": "A12",
+          "objective_ids": [
+            "OP-01"
+          ],
+          "function": "COMPRENDER/APLICAR",
+          "interaction": "Revelar pasos voluntarios y responder con retroalimentación causal.",
+          "representation": "Organizador secuencial de tres pasos",
+          "prompt": "Calcula −4 × 3 + 2.",
+          "expected_reasoning": "Un número negativo por uno positivo da un producto negativo: −4 × 3 = −12. Después −12 + 2 = −10.",
+          "feedback": "Omitiste el signo negativo del producto: 4 × 3 + 2 = 14. Agrupaste 3 + 2 primero: −4 × (3 + 2) = −20, pero no hay paréntesis. Restaste 2 en vez de sumarlo: −12 − 2 = −14.",
+          "help": "Calcula primero el producto y conserva el signo antes de sumar.",
+          "acceptance": "Respuesta −10; cuatro alternativas distintas y progresión por teclado."
         }
       ],
       "worked_examples": [
@@ -320,6 +351,23 @@
           "solution": "A: 17 × 9 + 40 = 193. B: 17 × 11 + 3 = 190. B menos A = −3; B cuesta tres lempiras menos.",
           "oracle": "Evaluación independiente desde datos visibles; comprobar alternativas únicas y ausencia de ayuda reveladora.",
           "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "La temperatura de hoy es −7 °C y la de ayer fue −5 °C. ¿Cuánto es la temperatura de hoy menos la de ayer? Opciones: −12, −2, 2, 12",
+          "solution": "Hoy menos ayer es −7 − (−5) = −7 + 5 = −2 °C.",
+          "oracle": "Evaluar los datos visibles por operaciones inversas o suma repetida y verificar alternativas.",
+          "objective_ids": [
+            "OP-01"
+          ]
+        },
+        {
+          "prompt": "Un saldo cambia −3 puntos cada día durante 6 días y luego aumenta 4 puntos. ¿Cuál es el cambio total? Opciones: −14, −22, 22, 6",
+          "solution": "Los seis cambios suman 6 × (−3) = −18; después −18 + 4 = −14 puntos.",
+          "oracle": "Evaluar los datos visibles por operaciones inversas o suma repetida y verificar alternativas.",
+          "objective_ids": [
+            "OP-01",
             "OP-02"
           ]
         }
@@ -409,7 +457,8 @@
         "Verificar cálculos por oráculo independiente, negativos de orden y signos, transferencia inédita sin ayudas y ausencia de coincidencia con banco.",
         "P2: auditar 9 celdas de mathM3Pool y todas las familias reales; reparar brechas de reales no cubiertas sin duplicar fracciones/potencias. No marcar RDG_READY por este plan.",
         "P1: verificar raíz principal, signos, racionales y precedencia integrada. P2: comprobar cobertura de OP-04 en banco completo y documentar déficit antes de sustituir o complementar.",
-        "R4: verificar 4 puentes y 4 transferencias añadidas, interacción progresiva, oráculo exacto, ausencia de coincidencia literal con el banco y conservación de R3 como evidencia histórica."
+        "R4: verificar 4 puentes y 4 transferencias añadidas, interacción progresiva, oráculo exacto, ausencia de coincidencia literal con el banco y conservación de R3 como evidencia histórica.",
+        "Comprobar dos puentes de signos y dos transferencias nuevas, con oráculo independiente y contraste con los IDs afectados."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",
