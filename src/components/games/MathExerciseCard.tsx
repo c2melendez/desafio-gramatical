@@ -9,6 +9,7 @@ export function operationChoiceOrder(length:number,random:()=>number=Math.random
 import type {MathModel} from "@/lib/math-m1";
 import {operationStepReason} from "@/lib/math-operations-distractors";
 import {operationClassificationReason} from "@/lib/math-operations-classification";
+import {operationR20WrongCause} from "@/lib/math-operations-r20-error-cause";
 import {LearningFeedback} from "./LearningFeedback";
 import {MathVisualStimulus} from "./MathVisualStimulus";
 
@@ -44,7 +45,10 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
  }
  // OP-04: report the actual mistaken subdecision before showing the worked solution.
  const operationClaimReason=(text:string,truth:boolean)=>{
-  if(item.assertionExplanations?.[text])return item.assertionExplanations[text];
+  if(item.assertionExplanations?.[text]){
+   const cause=operationR20WrongCause(item,text);
+   return (cause?cause+" ":"")+item.assertionExplanations[text];
+  }
   if(item.oracle.kind!=="Operaciones")return item.explanation;
   const revisedReason=operationClassificationReason(item,text);
   if(revisedReason)return revisedReason;
