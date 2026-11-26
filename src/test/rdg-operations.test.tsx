@@ -4,7 +4,7 @@ import {afterEach,expect,it} from "vitest";
 import {cleanup,fireEvent,render,screen,waitFor,within} from "@testing-library/react";
 import {routeTree} from "@/routeTree.gen";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
-import {balanceTransferOptions} from "@/components/review/OperationsReview";
+import {balanceTransferOptions,SYNTHESIS_DECISIONS} from "@/components/review/OperationsReview";
 import {mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 afterEach(cleanup);
@@ -166,4 +166,33 @@ it("R07 transfer answer positions are balanced per session, vary by seed and pre
  expect(JSON.stringify(tasks)).toBe(snapshot);
  expect(()=>balanceTransferOptions([{...tasks[0],answer:"not-present"}])).toThrow();
  expect(()=>balanceTransferOptions([{...tasks[0],options:[tasks[0].answer,"x","x","y"]}])).toThrow();
+});
+
+
+it("R07 synthesis offers optional active reasoning on every previously added worked example",async()=>{
+ const independent:Record<string,string>={
+  "Divisor agrupado": "5 + 7",
+  "Saldo con dos compras": "200 − (6 × 7 + 20)",
+  "Cajas restantes y cambio por caja": "(12 − 3) × (8 + 2)",
+  "Dos flujos independientes": "4 × 9 − 2 × 5",
+  "Raíz, producto y resta": "7 y 12",
+  "Diferencia con factor común": "[15 − (15 − 4)] × 6",
+  "Raíz racional y diferencia agrupada": "4/10 − (6/10 − 1/10)",
+  "Factor y raíz racional": "1/10",
+  "Productos distintos": "18 − 12",
+  "Raíz, producto y cociente agrupado": "15 − 10 + 2",
+  "Raíz y productos racionales": "4/18 + 4/18 − 5/18"
+};
+ expect(SYNTHESIS_DECISIONS).toHaveLength(11);
+ await mount(path+"&repaso=true");await screen.findByRole("heading",{name:"Modo Repaso: Operaciones"});
+ fireEvent.click(screen.getByRole("button",{name:"Síntesis",exact:true}));
+ for(const decision of SYNTHESIS_DECISIONS){
+  const region=screen.getByRole("region",{name:"Decisión guiada: "+decision.title});
+  expect(within(region).queryByRole("status")).not.toBeInTheDocument();
+  const buttons=within(region).getAllByRole("button");expect(buttons).toHaveLength(3);
+  expect(decision.options[decision.correct]).toBe(independent[decision.title]);
+  for(const option of decision.options.filter(x=>x!==independent[decision.title])){fireEvent.click(within(region).getByRole("button",{name:option,exact:true}));expect(within(region).getByRole("status")).toHaveTextContent("Revisa el procedimiento.");}
+  fireEvent.click(within(region).getByRole("button",{name:independent[decision.title],exact:true}));expect(within(region).getByRole("status")).toHaveTextContent("Correcto.");
+ }
+ fireEvent.click(screen.getByRole("button",{name:"Transferencia",exact:true}));expect(screen.queryByRole("region",{name:/Decisión guiada/})).not.toBeInTheDocument();
 });

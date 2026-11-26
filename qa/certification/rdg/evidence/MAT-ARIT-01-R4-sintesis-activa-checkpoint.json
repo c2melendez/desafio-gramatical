@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-sintesis-activa",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "86185de9322203b43dfa518660bdc2191b0438ed",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "JavaScript Code Mode: verify exact title coverage and worked arithmetic, unique options and feedback",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-sintesis-activa.json",
+      "artifact_sha256": "d999d9773925ea4fc3f01cf88d8227e24882f4f87af8752ce0947ea1da75abbf",
+      "scope": "11 guided decisions; no UI execution",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "Existing synthesis examples",
+      "action": "COMPLEMENTAR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-revision-familias-R2.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-sintesis-activa.json",
+      "affected_paths": [
+        "src/components/review/OperationsReview.tsx",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "Existing examples are passive; add optional reasoning decisions and causal feedback before reading full solutions, preserving original route and bank."
+    }
+  ],
+  "next_action": "Verify exact CI/browser; assess synthesis and transfer for every family; freeze readiness evidence and publish if gates meet.",
+  "stop_reason": null
+}

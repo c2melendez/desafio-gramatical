@@ -1,0 +1,137 @@
+{
+  "status": "PASS_LOCAL_CONTENT_CHECK",
+  "scope": "P1 active synthesis; no semantic certification",
+  "base_sha": "86185de9322203b43dfa518660bdc2191b0438ed",
+  "previous_ci": 45751259552,
+  "previous_route_sha256": "5a87cd83ae65258f384b432adc4bc6ebb0c7132fde14b03288610e4972532db8",
+  "candidate_route_sha256": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+  "source_data_sha256": "c58c919e07d4243df5b5d6402df2e60e0321bccaee2e7e1babca2328e939a25e",
+  "decisions": [
+    {
+      "title": "Divisor agrupado",
+      "correct_choice": "5 + 7",
+      "worked_result": "7",
+      "linked_families": [
+        {
+          "family": "cociente-con-agrupacion",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Saldo con dos compras",
+      "correct_choice": "200 − (6 × 7 + 20)",
+      "worked_result": "138",
+      "linked_families": [
+        {
+          "family": "presupuesto-dos-compras",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Cajas restantes y cambio por caja",
+      "correct_choice": "(12 − 3) × (8 + 2)",
+      "worked_result": "90",
+      "linked_families": [
+        {
+          "family": "cambio-contextual-inventario",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Dos flujos independientes",
+      "correct_choice": "4 × 9 − 2 × 5",
+      "worked_result": "26",
+      "linked_families": [
+        {
+          "family": "inventario-flujos-independientes",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Raíz, producto y resta",
+      "correct_choice": "7 y 12",
+      "worked_result": "14",
+      "linked_families": [
+        {
+          "family": "raiz-producto-suma-resta",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Diferencia con factor común",
+      "correct_choice": "[15 − (15 − 4)] × 6",
+      "worked_result": "24",
+      "linked_families": [
+        {
+          "family": "factor-comun-diferencia-compuesta",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Raíz racional y diferencia agrupada",
+      "correct_choice": "4/10 − (6/10 − 1/10)",
+      "worked_result": "-1/10",
+      "linked_families": [
+        {
+          "family": "raiz-racional-resta-agrupada",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Factor y raíz racional",
+      "correct_choice": "1/10",
+      "worked_result": "3/10",
+      "linked_families": [
+        {
+          "family": "distribuir-sobre-raiz-racional",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Productos distintos",
+      "correct_choice": "18 − 12",
+      "worked_result": "6",
+      "linked_families": [
+        {
+          "family": "diferencia-productos-no-identicos",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Raíz, producto y cociente agrupado",
+      "correct_choice": "15 − 10 + 2",
+      "worked_result": "7",
+      "linked_families": [
+        {
+          "family": "raiz-producto-cociente-agrupado",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "title": "Raíz y productos racionales",
+      "correct_choice": "4/18 + 4/18 − 5/18",
+      "worked_result": "3/18",
+      "linked_families": [
+        {
+          "family": "raiz-producto-racionales-combinados",
+          "count": 9
+        }
+      ]
+    }
+  ],
+  "decision_count": 11,
+  "linked_families": 11,
+  "linked_game_ids": 99,
+  "checks": "Executed JS arithmetic, exact title coverage against candidate source and family evidence, unique option and feedback structural checks; browser/UI not yet executed.",
+  "limits": "Original examples retained; decisions are guided practice, not new transfer or semantic ID passes. Independent curricular and individual bank review remains pending."
+}

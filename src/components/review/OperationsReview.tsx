@@ -56,6 +56,183 @@ function Bridge({steps}:{steps:NonNullable<ReviewTask["bridge"]>}){
  const [visible,setVisible]=useState(1);
  return <section aria-label="Organizador de razonamiento" className="space-y-2"><p>Conecta los pasos del procedimiento.</p><ol className="space-y-2">{steps.map((s,i)=><li key={s.label} className="rounded-lg border border-foreground p-3"><strong>{i+1}. {s.label}</strong>{i<visible?<p className="mt-1">{s.text}</p>:<p className="text-sm text-muted-foreground">Paso por explorar</p>}</li>)}</ol><button className={tile} disabled={visible>=steps.length} onClick={()=>setVisible(n=>Math.min(steps.length,n+1))}>Revelar siguiente paso</button><p aria-live="polite" className="text-sm">{visible} de {steps.length} pasos visibles</p></section>;
 }
+// Guided retrieval of the decision behind the existing worked examples; optional, unscored.
+export const SYNTHESIS_DECISIONS = [
+  {
+    "title": "Divisor agrupado",
+    "question": "En 84 ÷ (5 + 7), ¿qué representa el divisor completo?",
+    "options": [
+      "5",
+      "5 + 7",
+      "84 + 7"
+    ],
+    "correct": 1,
+    "feedback": [
+      "El 5 es solo una parte del divisor.",
+      "El paréntesis completo es el divisor: primero suma 5 y 7, luego divide.",
+      "84 es el dividendo, no parte del divisor."
+    ]
+  },
+  {
+    "title": "Saldo con dos compras",
+    "question": "Tienes L 200; compras seis artículos a L 7 y otro por L 20. ¿Qué expresión representa lo que queda?",
+    "options": [
+      "200 − 6 × 7 + 20",
+      "(200 − 6) × 7 − 20",
+      "200 − (6 × 7 + 20)"
+    ],
+    "correct": 2,
+    "feedback": [
+      "El último gasto también reduce el saldo.",
+      "Seis es la cantidad de artículos, no un gasto en lempiras.",
+      "Suma los dos gastos y resta el total del saldo inicial."
+    ]
+  },
+  {
+    "title": "Cajas restantes y cambio por caja",
+    "question": "De 12 cajas con 8 piezas, retiras 3 cajas y agregas 2 piezas por caja restante. ¿Qué expresión modela el nuevo total?",
+    "options": [
+      "(12 − 3) × (8 + 2)",
+      "12 × 8 − 3 + 2",
+      "(12 − 3) × 8 + 2"
+    ],
+    "correct": 0,
+    "feedback": [
+      "Primero cambia la cantidad de cajas y luego las piezas de cada caja.",
+      "Mezclas cajas con piezas; las unidades deben conservarse.",
+      "Solo agregas dos piezas en total, pero el aumento es por cada caja."
+    ]
+  },
+  {
+    "title": "Dos flujos independientes",
+    "question": "Entran 4 paquetes de 9 unidades y salen 2 de 5. ¿Cómo representas el cambio neto?",
+    "options": [
+      "(4 − 2) × (9 − 5)",
+      "4 × 9 − 2 × 5",
+      "4 × 9 + 2 × 5"
+    ],
+    "correct": 1,
+    "feedback": [
+      "Los paquetes de entrada y salida tienen tamaños distintos: calcula cada flujo por separado.",
+      "Multiplica cada flujo y resta el total que sale.",
+      "La salida se resta, no se suma."
+    ]
+  },
+  {
+    "title": "Raíz, producto y resta",
+    "question": "En √49 + 4 × 3 − 5, ¿qué valores debes obtener antes de sumar y restar?",
+    "options": [
+      "49 y 12",
+      "7 y 7",
+      "7 y 12"
+    ],
+    "correct": 2,
+    "feedback": [
+      "√49 no es 49: busca su raíz principal.",
+      "4 × 3 es 12, no 4 + 3.",
+      "La raíz principal y el producto tienen prioridad sobre suma y resta."
+    ]
+  },
+  {
+    "title": "Diferencia con factor común",
+    "question": "¿Qué expresión conserva 15 × 6 − (15 − 4) × 6 al extraer el factor común?",
+    "options": [
+      "[15 − (15 − 4)] × 6",
+      "(15 − 15 − 4) × 6",
+      "15 − (15 − 4)"
+    ],
+    "correct": 0,
+    "feedback": [
+      "El factor 6 multiplica la diferencia de ambos términos completos.",
+      "Al quitar el paréntesis precedido por menos, cambia también el signo de −4.",
+      "Falta mantener el factor 6."
+    ]
+  },
+  {
+    "title": "Raíz racional y diferencia agrupada",
+    "question": "En √(4/25) − (3/5 − 1/10), ¿cuál es el paso equivalente en décimos?",
+    "options": [
+      "4/10 − 6/10 − 1/10",
+      "4/10 − (6/10 − 1/10)",
+      "2/10 − (3/10 − 1/10)"
+    ],
+    "correct": 1,
+    "feedback": [
+      "Al distribuir la resta externa, el último término pasa a positivo.",
+      "Convierte la raíz a 2/5 y conserva la agrupación al pasar a décimos.",
+      "Cambiar solo el denominador altera el valor de la fracción."
+    ]
+  },
+  {
+    "title": "Factor y raíz racional",
+    "question": "En 2 × (√(9/100) − 1/5) + 1/10, ¿cuál es el valor del paréntesis?",
+    "options": [
+      "2/10",
+      "4/10",
+      "1/10"
+    ],
+    "correct": 2,
+    "feedback": [
+      "2/10 es el sustraendo equivalente, no la diferencia.",
+      "No sumes ni dupliques el grupo antes de resolverlo.",
+      "La raíz es 3/10 y 1/5 equivale a 2/10; la diferencia es 1/10."
+    ]
+  },
+  {
+    "title": "Productos distintos",
+    "question": "Para 9 × (4 − 2) − 2 × (4 + 2), ¿cuál es el paso correcto tras resolver los paréntesis?",
+    "options": [
+      "18 − 12",
+      "18 + 12",
+      "18 − 8 + 4"
+    ],
+    "correct": 0,
+    "feedback": [
+      "Los productos son 18 y 12; se resta el segundo completo.",
+      "El signo entre los productos es una resta.",
+      "Al distribuir el signo exterior, también se resta 2 × 2."
+    ]
+  },
+  {
+    "title": "Raíz, producto y cociente agrupado",
+    "question": "En 15 − √25 × 2 + (10 − 4) ÷ 3, ¿cuál es el paso tras resolver raíz, grupo, producto y cociente?",
+    "options": [
+      "(15 − 5) × 2 + 2",
+      "15 − 10 + 2",
+      "15 − 10 + 6"
+    ],
+    "correct": 1,
+    "feedback": [
+      "No agrupes 15 − 5 antes del producto.",
+      "√25 × 2 vale 10 y (10 − 4) ÷ 3 vale 2.",
+      "Falta dividir el grupo entre 3."
+    ]
+  },
+  {
+    "title": "Raíz y productos racionales",
+    "question": "En √(4/81) + 2 × (1/9) − 5/18, ¿qué expresión usa dieciochavos correctamente?",
+    "options": [
+      "2/18 + 2/18 − 5/18",
+      "4/18 + 2/18 − 5/18",
+      "4/18 + 4/18 − 5/18"
+    ],
+    "correct": 2,
+    "feedback": [
+      "Convertir novenos a dieciochavos requiere multiplicar numerador y denominador por 2.",
+      "El producto 2 × 1/9 también equivale a 4/18.",
+      "La raíz y el producto valen ambos 2/9, equivalentes a 4/18."
+    ]
+  }
+] as const;
+function SynthesisDecision({decision}:{decision:typeof SYNTHESIS_DECISIONS[number]}){
+ const [chosen,setChosen]=useState<number|null>(null);
+ return <section aria-label={"Decisión guiada: "+decision.title} className="rounded-lg border border-foreground p-3 space-y-2">
+  <p className="font-bold">{decision.question}</p>
+  <div role="group" aria-label="Elige el paso correcto" className="grid gap-2">{decision.options.map((option,i)=><button key={option} className={tile} aria-pressed={chosen===i} onClick={()=>setChosen(i)}>{option}</button>)}</div>
+  {chosen!==null&&<p role="status" className="text-sm">{chosen===decision.correct?"Correcto. ":"Revisa el procedimiento. "}{decision.feedback[chosen]}</p>}
+  <p className="text-xs text-muted-foreground">Puedes probar otra opción o consultar el ejemplo completo sin penalización.</p>
+ </section>;
+}
 function Task({task,transfer=false,options=task.options}:{task:ReviewTask;transfer?:boolean;options?:readonly string[]}){
  const [choice,setChoice]=useState("");
  const [checked,setChecked]=useState(false);
@@ -82,7 +259,7 @@ export function OperationsReview({back}:{back:React.ReactNode}){
  return <main id="contenido-principal" tabIndex={-1} className="mx-auto max-w-3xl px-4 py-6 space-y-5">
   <div>{back}</div><header className="space-y-2"><p className="text-sm font-bold text-primary">Matemáticas · Aritmética</p><h1 ref={heading} tabIndex={-1} className="text-3xl font-black">Modo Repaso: Operaciones</h1><p>Aprende a decidir qué calcular primero, cambiar datos, distribuir factores y combinar raíces y fracciones. Sin puntaje ni tiempo límite.</p></header>
   <nav aria-label="Etapas de aprendizaje" className="flex flex-wrap gap-2">{[{label:"Fundamentos",n:0},{label:"Procedimientos",n:2},{label:"Síntesis",n:summary},{label:"Transferencia",n:firstTransfer}].map(x=><button key={x.label} className={tile} aria-current={stage===x.n?"step":undefined} onClick={()=>change(x.n)}>{x.label}</button>)}</nav>
-  {stage<summary?<Task key={lessons[stage].id} task={lessons[stage]}/>:stage===summary?<section className="card-ink bg-card p-4 space-y-4"><h2 className="text-2xl font-black">Conecta las reglas</h2><ol className="space-y-2"><li>1. Agrupaciones: resuelve primero el contenido agrupado.</li><li>2. Potencias y raíces: respeta el alcance de cada operador.</li><li>3. Productos y divisiones: de izquierda a derecha.</li><li>4. Sumas y restas: de izquierda a derecha.</li></ol><p>Los signos se conservan. Los denominadores deben ser compatibles antes de sumar o restar.</p><section aria-label="Condiciones y contraejemplos" className="rounded-lg border border-foreground p-3 space-y-2"><h3 className="font-bold">Comprueba los límites de las reglas</h3><p>0 ÷ 9 = 0, pero 9 ÷ 0 no está definido: ningún número multiplicado por cero da nueve.</p><p>√0 = 0. √(−9) no tiene valor real porque ningún cuadrado real es negativo. √9 = 3: la raíz principal no es ±3.</p><p>Si los denominadores son distintos, transforma primero a fracciones equivalentes con denominador común.</p></section>{OPERATIONS_ROUTE.workedExamples.map(e=><details key={e.title} className="border border-foreground rounded p-3"><summary className="font-bold cursor-pointer">{e.title}: ver ejemplo resuelto</summary><p className="mt-2">{e.text}</p></details>)}<p>Ahora prueba casos nuevos sin ayudas reveladoras.</p></section>:<Task key={transfer[stage-firstTransfer].id} task={transfer[stage-firstTransfer]} options={transferOptions[transfer[stage-firstTransfer].id]} transfer/>}
+  {stage<summary?<Task key={lessons[stage].id} task={lessons[stage]}/>:stage===summary?<section className="card-ink bg-card p-4 space-y-4"><h2 className="text-2xl font-black">Conecta las reglas</h2><ol className="space-y-2"><li>1. Agrupaciones: resuelve primero el contenido agrupado.</li><li>2. Potencias y raíces: respeta el alcance de cada operador.</li><li>3. Productos y divisiones: de izquierda a derecha.</li><li>4. Sumas y restas: de izquierda a derecha.</li></ol><p>Los signos se conservan. Los denominadores deben ser compatibles antes de sumar o restar.</p><section aria-label="Condiciones y contraejemplos" className="rounded-lg border border-foreground p-3 space-y-2"><h3 className="font-bold">Comprueba los límites de las reglas</h3><p>0 ÷ 9 = 0, pero 9 ÷ 0 no está definido: ningún número multiplicado por cero da nueve.</p><p>√0 = 0. √(−9) no tiene valor real porque ningún cuadrado real es negativo. √9 = 3: la raíz principal no es ±3.</p><p>Si los denominadores son distintos, transforma primero a fracciones equivalentes con denominador común.</p></section>{OPERATIONS_ROUTE.workedExamples.map(e=>{const decision=SYNTHESIS_DECISIONS.find(d=>d.title===e.title);return <div key={e.title} className="space-y-2">{decision&&<SynthesisDecision decision={decision}/>}<details className="border border-foreground rounded p-3"><summary className="font-bold cursor-pointer">{e.title}: ver ejemplo resuelto</summary><p className="mt-2">{e.text}</p></details></div>;})}<p>Ahora prueba casos nuevos sin ayudas reveladoras.</p></section>:<Task key={transfer[stage-firstTransfer].id} task={transfer[stage-firstTransfer]} options={transferOptions[transfer[stage-firstTransfer].id]} transfer/>}
   <div className="flex items-center justify-between flex-wrap gap-3"><button className={tile} onClick={()=>change(stage-1)} disabled={stage===0}>Anterior</button><span aria-live="polite" className="text-sm">{stage+1} de {total} · {stage>=firstTransfer?"Transferencia":"Aprendizaje"}</span>{stage<total-1?<button className="tile bg-primary text-primary-foreground" onClick={()=>change(stage+1)}>Siguiente</button>:back}</div>
   <p className="text-xs text-muted-foreground">Puedes volver a los juegos en cualquier momento. El repaso no altera tu historial ni acredita dominio.</p>
  </main>;
