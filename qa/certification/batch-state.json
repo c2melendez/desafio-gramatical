@@ -61,7 +61,7 @@
     "plan_sha256": "c927479cca9e16b225e712796a1504b55091f8243942b68f80f3a66adfacaacc",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Confirmar CI/Render del SHA R12; inventario de familias real por celda y cotejo de las 54 fichas R12. Continuar P2 con reparación selectiva de independencia G y dificultad F, particularmente tareas avanzadas de transferencia y diversidad de decisiones de clasificar/construir. Mantener 450 REVIEW, 0 PASS. P0/P1 vigentes.",
+    "next_action": "Confirmar CI/Render R13; resolver F/G con prioridad en avanzado (43/70 dominantes por juego), luego revisar individualmente diversidad y profundidad sin usar porcentajes como umbral de aprobación. P0/P1 vigentes; 450 REVIEW/0 PASS.",
     "previous_publication": {
       "sha": "8b10849c35fbd635c75b85b117dc0f40f1112a5f",
       "candidate_ci_run": 45697495623,
@@ -137,7 +137,8 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-09-R9-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R10-successors.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-R11-successors.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-R12-successors.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R12-successors.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R13-successors.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-01",
@@ -337,9 +338,32 @@
       "candidate_sha": "a9aa7afdfc686344a6f7005f11733718a3d00db8",
       "candidate_ci_status": "SUCCESS",
       "publication_sha": "0e1fc8669ed6315fc84d1da3a176ebdf284dadbe",
+      "production_ci_status": "SUCCESS",
+      "render": "LIVE_WHEN_OBSERVED",
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R12-successors.json",
+      "production_ci": 45728384927,
+      "render_deploy": "dep-dc3nnv8ae00c73cn5ai0",
+      "evidence_integration_sha": "3829110060d74632d80781cea0214af466d409b6"
+    },
+    "r13_revision": {
+      "status": "MERGED_REEXAMINED_REVIEW",
+      "changed": 48,
+      "unchanged": 402,
+      "reexamined": 48,
+      "claims_verified": 144,
+      "distractors_verified": 288,
+      "additional_families": 6,
+      "semantic_pass": 0,
+      "source_ci": 45728655850,
+      "source_job": 139604836762,
+      "candidate_sha": "3b67086bd6464d790c9c154791acd62856c3fe30",
+      "candidate_ci_status": "SUCCESS",
+      "publication_sha": "ffa94a2047f89a6b72962a95916da8687d7548b0",
       "production_ci_status": "PENDING_OBSERVATION",
       "render": "PENDING_OBSERVATION",
-      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R12-successors.json"
+      "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R13-successors.json",
+      "dominant_before": 279,
+      "dominant_after": 231
     }
   }
 }
