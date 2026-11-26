@@ -1,4 +1,11 @@
 import {useState} from "react";
+
+// Fisher–Yates over original indices: presentation does not mutate the model or its hash.
+export function operationChoiceOrder(length:number,random:()=>number=Math.random):number[]{
+ const order=Array.from({length},(_,i)=>i);
+ for(let i=order.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}
+ return order;
+}
 import type {MathModel} from "@/lib/math-m1";
 import {operationStepReason} from "@/lib/math-operations-distractors";
 import {operationClassificationReason} from "@/lib/math-operations-classification";
@@ -9,6 +16,8 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
  item:MathModel;onResult:(correct:boolean,given:string)=>void;onNext:()=>void;isLast:boolean;
 }){
  const [choices,setChoices]=useState<number[]>([]);
+ // New order for each mounted round; separate permutations for each construction step.
+ const [orders]=useState(()=>item.subtopic==="Operaciones"?(item.mode==="construir"?item.steps.map(s=>operationChoiceOrder(s.choices.length)):item.mode==="quiz"?[operationChoiceOrder(item.options.length)]:[]):[]);
  const complete=item.mode==="clasificar"?choices.length===item.assertions.length:
   item.mode==="construir"?choices.length===item.steps.length:choices.length===1;
  const expected=item.mode==="clasificar"?item.assertions.map(x=>x.truth?"Verdadero":"Falso").join(" · "):
@@ -63,6 +72,7 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
   :"";
  const selection=item.mode==="construir"?item.steps[choices.length]?.choices:
   item.mode==="quiz"?item.options:null;
+ const presented=selection?(orders[item.mode==="construir"?choices.length:0]??selection.map((_,i)=>i)).map(index=>({index,value:selection[index]})):[];
  return <section className="card-ink bg-card p-5 space-y-4" aria-label="Ejercicio matemático">
   <p className="text-xs font-bold uppercase tracking-wide text-primary">{item.subtopic} · {item.mode==="quiz"?"Selección":item.mode==="clasificar"?"Clasificación":"Construcción"}</p>
   <h2 className="text-xl font-black leading-relaxed">{item.prompt}</h2>
@@ -80,13 +90,13 @@ export function MathExerciseCard({item,onResult,onNext,isLast}:{
    <p className="text-sm text-muted-foreground">Completa dos decisiones del procedimiento. Ambas deben ser correctas para acertar la ronda.</p>
    <h3 className="font-bold">{item.steps[choices.length].label} · paso {choices.length+1} de 2</h3>
    <div className="grid grid-cols-2 gap-2">
-    {selection?.map((option,i)=><button key={i} onClick={()=>answer(i)} className="tile bg-card text-center">{option}</button>)}
+    {presented.map(({value,index})=><button key={index} onClick={()=>answer(index)} className="tile bg-card text-center">{value}</button>)}
    </div>
   </div>}
   {item.mode==="quiz"&&!complete&&<div className="space-y-3">
    <p className="text-sm text-muted-foreground">Elige el resultado que satisface el enunciado.</p>
-   <div className="grid grid-cols-2 gap-2">{selection?.map((option,i)=>
-    <button key={i} onClick={()=>answer(i)} className="tile bg-card">{option}</button>)}</div>
+   <div className="grid grid-cols-2 gap-2">{presented.map(({value,index})=>
+    <button key={index} onClick={()=>answer(index)} className="tile bg-card">{value}</button>)}</div>
   </div>}
   {complete&&<div className="space-y-3">
    <LearningFeedback correct={correct} subtopic={item.subtopic} selected={given} expected={expected}

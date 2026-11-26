@@ -2,7 +2,7 @@ import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it,vi,afterEach} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
-import {MathExerciseCard} from "@/components/games/MathExerciseCard";
+import {MathExerciseCard,operationChoiceOrder} from "@/components/games/MathExerciseCard";
 import {mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
@@ -66,4 +66,27 @@ it("All explicit operation assertion-feedback families render the mistaken claim
  let count=0;
  for(const x of families.values()){card(x);for(const a of x.assertions)fireEvent.click(screen.getByRole("button",{name:a.truth?"Falso":"Verdadero",exact:true}));for(const a of x.assertions){expect(screen.getByTestId("learning-feedback")).toHaveTextContent(a.text);expect(screen.getByTestId("learning-feedback")).toHaveTextContent(x.assertionExplanations![a.text]);count++;}cleanup();}
  console.log("RDG_OPERATION_UI_FAMILIES "+JSON.stringify({kinds:[...families.keys()],assertion_errors:count}));
+});
+
+it("R15: presentation independently permutes all choices, preserves original scoring and selected-error identity",()=>{
+ const rng=(seed:number)=>()=>((seed=Math.imul(seed,1664525)+1013904223|0)>>>0)/4294967296;
+ const permutations=new Set<string>();for(let seed=1;seed<=256;seed++){const order=operationChoiceOrder(4,rng(seed));expect([...order].sort()).toEqual([0,1,2,3]);permutations.add(order.join(""));}
+ expect(permutations.size).toBe(24);
+ let correct=0,errors=0;
+ for(const x of candidates.filter(y=>y.mode==="quiz"||y.mode==="construir")){
+  const before=hash(x);const options=x.mode==="quiz"?[x.options]:x.steps.map(s=>s.choices);const keys=x.mode==="quiz"?[x.answerIndex]:x.steps.map(s=>s.answerIndex);
+  const orderSignatures=new Set<string>();
+  for(const random of [0,0.999999]){
+   const spy=vi.spyOn(Math,"random").mockReturnValue(random);const report=vi.fn();
+   try{render(<MathExerciseCard item={x} onResult={report} onNext={vi.fn()} isLast={false}/>);}finally{spy.mockRestore();}
+   const signatures:string[]=[];for(let i=0;i<options.length;i++){const displayed=screen.getAllByRole("button").map(b=>b.textContent!);expect([...displayed].sort()).toEqual([...options[i]].sort());signatures.push(displayed.join("|"));fireEvent.click(screen.getByRole("button",{name:options[i][keys[i]],exact:true}));}
+   expect(report).toHaveBeenCalledWith(true,options.map((o,i)=>o[keys[i]]).join(" → "));orderSignatures.add(signatures.join(";"));cleanup();correct++;
+  }
+  expect(orderSignatures.size).toBe(2);
+  const report=vi.fn();render(<MathExerciseCard item={x} onResult={report} onNext={vi.fn()} isLast={false}/>);
+  const wrong=options[0].find((_,i)=>i!==keys[0])!;
+  for(let i=0;i<options.length;i++)fireEvent.click(screen.getByRole("button",{name:i===0?wrong:options[i][keys[i]],exact:true}));
+  expect(report).toHaveBeenCalledWith(false,[wrong,...options.slice(1).map((o,i)=>o[keys[i+1]])].join(" → "));expect(screen.getByTestId("learning-feedback")).toHaveTextContent((x.mode==="quiz"?x.optionExplanations:x.stepOptionExplanations)![wrong]);cleanup();errors++;expect(hash(x)).toBe(before);
+ }
+ expect(correct).toBe(24);expect(errors).toBe(12);console.log("RDG_R15_POSITION "+JSON.stringify({permutations:permutations.size,correct,errors,models_unchanged:12}));
 });
