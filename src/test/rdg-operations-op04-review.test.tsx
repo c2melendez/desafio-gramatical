@@ -2,7 +2,7 @@ import {readFileSync} from "node:fs";
 import {createHash} from "node:crypto";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
 import {afterEach,expect,it,vi} from "vitest";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R16Pool as mathM3Pool} from "@/lib/math-m3";
 import {MathExerciseCard} from "@/components/games/MathExerciseCard";
 import type {MathModel} from "@/lib/math-m1";
 afterEach(cleanup);

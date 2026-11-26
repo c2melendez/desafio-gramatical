@@ -2,7 +2,7 @@ import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
-import {mathM3HistoricalPool as mathM3Pool,mathM3Pool as currentPool} from "@/lib/math-m3";
+import {mathM3HistoricalPool as mathM3Pool,mathM3R16Pool as currentPool} from "@/lib/math-m3";
 // The production frozen-selector is a JS module with no TS declarations.
 // @ts-expect-error JS selector has no TypeScript declaration.
 import {selectFrozen} from "../../qa/certification/select-frozen.mjs";
@@ -28,7 +28,7 @@ it("G-REPASO: consume exact READY contract and reconcile every frozen P2 selecti
  expect(()=>selectFrozen(order,{...manifest,rdg_contract:{...ready,status:"REVIEW"}},hash)).toThrow();
 });
 
-it("G-REPASO R4: verifies 450 exact current hashes and objective mappings; historical selections remain intact",()=>{
+it("G-REPASO R4: verifies 450 exact frozen R16 hashes and objective mappings; historical selections remain intact",()=>{
  const state=load("qa/certification/batch-state.json").rdg_continuity;
  const ready=load(state.rdg_contract_path);
  expect(ready.revision).toBe("4");expect(ready.status).toBe("RDG_READY");expect(ready.gate_evidence.tested_sha).toBe(ready.gate_evidence.render_sha);

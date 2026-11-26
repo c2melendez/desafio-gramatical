@@ -14,6 +14,7 @@ function maskFor(item:MathModel){
  return masks[index%masks.length];
 }
 export function expectedOperationClassificationTruthCount(item:MathModel):number{
+ if(item.modeOperation==="evaluar-tres-decisiones-racionales-r17"&&item.oracle.kind==="Operaciones-racionales"&&item.mode==="clasificar"){const slot=Number(item.id.split("-").at(-1))-(item.level==="avanzado"?22:12);return item.level==="avanzado"?slot===0?2:1:slot===1?1:2;}
  if(item.oracle.kind==="Operaciones-contraste"||item.oracle.kind==="Operaciones-avanzadas"||item.oracle.kind==="Operaciones-decision")return item.mode==="clasificar"&&Number(item.id.split("-").at(-1))%3===0?2:1;
  if((item.oracle.kind==="Operaciones-diversidad"||item.oracle.kind==="Operaciones-mixtas"||item.oracle.kind==="Operaciones-transferencia")&&item.mode==="clasificar")return Number(item.id.split("-").at(-1))%2===0?2:1;
  return isOperationClassificationR5(item)||isOperationClassificationR6(item)?maskFor(item).filter(Boolean).length:1;
