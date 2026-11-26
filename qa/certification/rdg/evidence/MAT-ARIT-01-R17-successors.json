@@ -1,0 +1,136 @@
+{
+  "revision": "R17",
+  "scope": "MAT-ARIT-01",
+  "source_ci": 45765960745,
+  "source_job": 139726809906,
+  "candidate_sha": "54365dc85ecd414b8670cb9125516c14fbd878c0",
+  "summary": {
+    "changed": 6,
+    "preserved": 444,
+    "claims_verified": 18,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
+      "previous_sha256": "15253bc28e43ba6ca1357fc75ceb9520574f503f487d6aaa3c047a3fa373473d",
+      "content_sha256": "b7c19f11778ca9c04bf1ce46d6c3e99fe7d52cb01fecc56d66d1d2fe3a35f796",
+      "semantic_status": "REVIEW",
+      "assertions": [
+        {
+          "text": "La raíz principal del radical es 3/17.",
+          "truth": true
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/17, tiene numerador 8.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la expresión completa es -2/17.",
+          "truth": true
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-13",
+      "previous_sha256": "6f693123d3148407cd4c9ccd7ee074a502bcf0a2cc56dee81bf3a2da61002978",
+      "content_sha256": "f7df60455c176f12b2d0a716a31fbb7ed5e8b0535aecf7861af2d4f83d03a659",
+      "semantic_status": "REVIEW",
+      "assertions": [
+        {
+          "text": "El resultado de la expresión completa es 13/18.",
+          "truth": false
+        },
+        {
+          "text": "La raíz principal del radical es -2/9.",
+          "truth": false
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/18, tiene numerador 9.",
+          "truth": true
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-14",
+      "previous_sha256": "74f2009488494c307bf4753cc6708e815d8d9117425d3ae4c57d58479469f7fd",
+      "content_sha256": "99796b8cf7582253f0f3d3d893380419fb89ef96e227069f171b06f9f46f48ff",
+      "semantic_status": "REVIEW",
+      "assertions": [
+        {
+          "text": "El término central, expresado en unidades de 1/19, tiene numerador 11.",
+          "truth": true
+        },
+        {
+          "text": "El resultado de la expresión completa es 16/19.",
+          "truth": false
+        },
+        {
+          "text": "La raíz principal del radical es 5/19.",
+          "truth": true
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
+      "previous_sha256": "71988aba89078a41c6d05d6a5ec308b8926358a5146030ab133511d43cbbb623",
+      "content_sha256": "5b325fcea8647f0db425a9480e89a1c8e2a445e46c86f5af9242c012783e577c",
+      "semantic_status": "REVIEW",
+      "assertions": [
+        {
+          "text": "El término central, expresado en unidades de 1/74, tiene numerador 28.",
+          "truth": true
+        },
+        {
+          "text": "El resultado de la expresión completa es -3/74.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -3/37.",
+          "truth": false
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-23",
+      "previous_sha256": "c1e8298b0fb08d21d95d7477c530c3332e568f0f09f5776ac24e0d50730e45fa",
+      "content_sha256": "41d592b8a76c94eae90dcaa1572cc7df75bd986c7f64d6d9708974b6a6b6c6a6",
+      "semantic_status": "REVIEW",
+      "assertions": [
+        {
+          "text": "La raíz principal del radical es 2/19.",
+          "truth": true
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/76, tiene numerador 38.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la expresión completa es 11/19.",
+          "truth": false
+        }
+      ]
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-24",
+      "previous_sha256": "8c2663d0f6d8ef6604b68eb033632c9357225c35b54b69409c71e6bd0e60cf9d",
+      "content_sha256": "c19719cea9ae00a846c264c4d788d8591eb2941bd1f84faa22a7093b2f9e6391",
+      "semantic_status": "REVIEW",
+      "assertions": [
+        {
+          "text": "El resultado de la expresión completa es -5/78.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -5/39.",
+          "truth": false
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/78, tiene numerador 46.",
+          "truth": false
+        }
+      ]
+    }
+  ],
+  "limits": "CI candidata aprobada; publicación pendiente. No PASS semántico."
+}

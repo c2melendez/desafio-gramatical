@@ -1,6 +1,6 @@
 import {readFileSync} from "node:fs";
 import {createHash} from "node:crypto";
-import {mathM3Pool,mathM3R15Pool} from "../../../src/lib/math-m3.ts";
+import {mathM3R16Pool as mathM3Pool,mathM3R15Pool} from "../../../src/lib/math-m3.ts";
 import {MATH_LEVELS,MATH_MODES} from "../../../src/lib/math-m1.ts";
 const evidence=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-R16-successors.json"));
 const hash=x=>createHash("sha256").update(JSON.stringify(x)).digest("hex");

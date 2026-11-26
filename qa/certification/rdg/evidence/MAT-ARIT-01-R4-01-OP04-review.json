@@ -1,0 +1,2856 @@
+{
+  "scope": "MAT-ARIT-01",
+  "batch_id": "MAT-ARIT-01-R4-01",
+  "status": "REVIEW",
+  "revision": "P2-R4-01-OP04",
+  "source_sha": "bf5cedf0de60ed2abfa3df6d5787ebb76be0c1d7",
+  "source_ci": 45765027724,
+  "source_contract": "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+  "summary": {
+    "examined": 18,
+    "verified_keys": 18,
+    "verified_distractors": 54,
+    "rejected_mutants": 36,
+    "review": 18,
+    "semantic_pass": 0,
+    "classification_repair_candidate": 6
+  },
+  "records": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
+      "content_hash": "b7c19f11778ca9c04bf1ce46d6c3e99fe7d52cb01fecc56d66d1d2fe3a35f796",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
+      "stimulus": "Calcula √(9/289) + 7/17 − 12/17.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-2/17",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "3/17",
+        "common_denominator": 17,
+        "numerator_terms": [
+          3,
+          7,
+          -12
+        ],
+        "result": "-2/17"
+      },
+      "distractores": [
+        {
+          "value": "-8/17",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 3/17.",
+          "distinct": true
+        },
+        {
+          "value": "-2/51",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "10/17",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 12/17.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal del radical es 3/17.",
+          "truth": true
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/17, tiene numerador 8.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la expresión completa es -2/17.",
+          "truth": true
+        }
+      ],
+      "root_choices": [
+        "-3/17",
+        "4/17",
+        "1/6",
+        "3/17"
+      ],
+      "explicacion": "La raíz principal es 3/17 porque su cuadrado es 9/289 y es positiva. Los denominadores ya coinciden. (3 + 7 − 12)/17 = -2/17.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04-R17",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
+      "supersedes": "15253bc28e43ba6ca1357fc75ceb9520574f503f487d6aaa3c047a3fa373473d",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 9/289, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 3/17; numeradores 3, 7, −12 sobre 17; resultado -2/17; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(9/289) + 7/17 − 12/17.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica clasificar, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_hash": "f7df60455c176f12b2d0a716a31fbb7ed5e8b0535aecf7861af2d4f83d03a659",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-clasificar-intermedio-13",
+      "stimulus": "Calcula √(16/324) + 9/18 − 5/18.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "4/9",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "2/9",
+        "common_denominator": 18,
+        "numerator_terms": [
+          4,
+          9,
+          -5
+        ],
+        "result": "4/9"
+      },
+      "distractores": [
+        {
+          "value": "0",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 2/9.",
+          "distinct": true
+        },
+        {
+          "value": "4/27",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "13/18",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 5/18.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado de la expresión completa es 13/18.",
+          "truth": false
+        },
+        {
+          "text": "La raíz principal del radical es -2/9.",
+          "truth": false
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/18, tiene numerador 9.",
+          "truth": true
+        }
+      ],
+      "root_choices": [
+        "-2/9",
+        "5/18",
+        "4/19",
+        "2/9"
+      ],
+      "explicacion": "La raíz principal es 2/9 porque su cuadrado es 16/324 y es positiva. Los denominadores ya coinciden. (4 + 9 − 5)/18 = 4/9.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04-R17",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
+      "supersedes": "6f693123d3148407cd4c9ccd7ee074a502bcf0a2cc56dee81bf3a2da61002978",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 16/324, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 2/9; numeradores 4, 9, −5 sobre 18; resultado 4/9; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(16/324) + 9/18 − 5/18.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica clasificar, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-14",
+      "content_hash": "99796b8cf7582253f0f3d3d893380419fb89ef96e227069f171b06f9f46f48ff",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-clasificar-intermedio-14",
+      "stimulus": "Calcula √(25/361) + 11/19 − 20/19.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-4/19",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "5/19",
+        "common_denominator": 19,
+        "numerator_terms": [
+          5,
+          11,
+          -20
+        ],
+        "result": "-4/19"
+      },
+      "distractores": [
+        {
+          "value": "-14/19",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 5/19.",
+          "distinct": true
+        },
+        {
+          "value": "-4/57",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "16/19",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 20/19.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El término central, expresado en unidades de 1/19, tiene numerador 11.",
+          "truth": true
+        },
+        {
+          "text": "El resultado de la expresión completa es 16/19.",
+          "truth": false
+        },
+        {
+          "text": "La raíz principal del radical es 5/19.",
+          "truth": true
+        }
+      ],
+      "root_choices": [
+        "-5/19",
+        "6/19",
+        "1/4",
+        "5/19"
+      ],
+      "explicacion": "La raíz principal es 5/19 porque su cuadrado es 25/361 y es positiva. Los denominadores ya coinciden. (5 + 11 − 20)/19 = -4/19.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04-R17",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
+      "supersedes": "74f2009488494c307bf4753cc6708e815d8d9117425d3ae4c57d58479469f7fd",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 25/361, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 5/19; numeradores 5, 11, −20 sobre 19; resultado -4/19; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(25/361) + 11/19 − 20/19.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica clasificar, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-12",
+      "content_hash": "6a6e52a0b8523a25b10c7b40bd829a9c9237dfb2a8d43f09bab86ca241523152",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-quiz-intermedio-12",
+      "stimulus": "Calcula √(9/529) + 7/23 − 12/23.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-2/23",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "3/23",
+        "common_denominator": 23,
+        "numerator_terms": [
+          3,
+          7,
+          -12
+        ],
+        "result": "-2/23"
+      },
+      "distractores": [
+        {
+          "value": "-8/23",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 3/23.",
+          "distinct": true
+        },
+        {
+          "value": "-2/69",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "10/23",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 12/23.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 3/23 y la expresión equivale a (3 + 7 − 12)/23.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -3/23.",
+          "truth": false
+        },
+        {
+          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-3/23",
+        "4/23",
+        "1/8",
+        "3/23"
+      ],
+      "explicacion": "La raíz principal es 3/23 porque su cuadrado es 9/529 y es positiva. Los denominadores ya coinciden. (3 + 7 − 12)/23 = -2/23.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "6a6e52a0b8523a25b10c7b40bd829a9c9237dfb2a8d43f09bab86ca241523152",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 9/529, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 3/23; numeradores 3, 7, −12 sobre 23; resultado -2/23; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -2/69, -8/23, 10/23 reproducen errores concretos de signo, denominadores y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(9/529) + 7/23 − 12/23.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica quiz, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-13",
+      "content_hash": "1392294147890cee774b0d0cd6ebd83b98344d3f8a7d680a650b2a8608e90eb0",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-quiz-intermedio-13",
+      "stimulus": "Calcula √(16/576) + 9/24 − 5/24.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "1/3",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "1/6",
+        "common_denominator": 24,
+        "numerator_terms": [
+          4,
+          9,
+          -5
+        ],
+        "result": "1/3"
+      },
+      "distractores": [
+        {
+          "value": "0",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 1/6.",
+          "distinct": true
+        },
+        {
+          "value": "1/9",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "13/24",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 5/24.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 1/6 y la expresión equivale a (4 + 9 − 5)/24.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -1/6.",
+          "truth": false
+        },
+        {
+          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-1/6",
+        "5/24",
+        "4/25",
+        "1/6"
+      ],
+      "explicacion": "La raíz principal es 1/6 porque su cuadrado es 16/576 y es positiva. Los denominadores ya coinciden. (4 + 9 − 5)/24 = 1/3.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "1392294147890cee774b0d0cd6ebd83b98344d3f8a7d680a650b2a8608e90eb0",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 16/576, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 1/6; numeradores 4, 9, −5 sobre 24; resultado 1/3; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores 0, 1/9, 13/24 reproducen errores concretos de signo, denominadores y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(16/576) + 9/24 − 5/24.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica quiz, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-intermedio-14",
+      "content_hash": "f4a062f537a8c354032add4c32119175dc84f092c9c842cb3a2f303e8a467e10",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-quiz-intermedio-14",
+      "stimulus": "Calcula √(25/625) + 11/25 − 20/25.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-4/25",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "1/5",
+        "common_denominator": 25,
+        "numerator_terms": [
+          5,
+          11,
+          -20
+        ],
+        "result": "-4/25"
+      },
+      "distractores": [
+        {
+          "value": "-14/25",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 1/5.",
+          "distinct": true
+        },
+        {
+          "value": "-4/75",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "16/25",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 20/25.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 1/5 y la expresión equivale a (5 + 11 − 20)/25.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -1/5.",
+          "truth": false
+        },
+        {
+          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-1/5",
+        "6/25",
+        "5/26",
+        "1/5"
+      ],
+      "explicacion": "La raíz principal es 1/5 porque su cuadrado es 25/625 y es positiva. Los denominadores ya coinciden. (5 + 11 − 20)/25 = -4/25.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "f4a062f537a8c354032add4c32119175dc84f092c9c842cb3a2f303e8a467e10",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 25/625, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 1/5; numeradores 5, 11, −20 sobre 25; resultado -4/25; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -14/25, -4/75, 16/25 reproducen errores concretos de signo, denominadores y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(25/625) + 11/25 − 20/25.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica quiz, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-12",
+      "content_hash": "a44f109a129741f075338e7a2cb311f524446be9a371cf7a3ae4b5e5681ce955",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-construir-intermedio-12",
+      "stimulus": "Calcula √(9/841) + 7/29 − 12/29.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-2/29",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "3/29",
+        "common_denominator": 29,
+        "numerator_terms": [
+          3,
+          7,
+          -12
+        ],
+        "result": "-2/29"
+      },
+      "distractores": [
+        {
+          "value": "-8/29",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 3/29.",
+          "distinct": true
+        },
+        {
+          "value": "-2/87",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "10/29",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 12/29.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 3/29 y la expresión equivale a (3 + 7 − 12)/29.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -3/29.",
+          "truth": false
+        },
+        {
+          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-3/29",
+        "4/29",
+        "1/10",
+        "3/29"
+      ],
+      "explicacion": "La raíz principal es 3/29 porque su cuadrado es 9/841 y es positiva. Los denominadores ya coinciden. (3 + 7 − 12)/29 = -2/29.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "a44f109a129741f075338e7a2cb311f524446be9a371cf7a3ae4b5e5681ce955",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 9/841, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 3/29; numeradores 3, 7, −12 sobre 29; resultado -2/29; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -2/87, -8/29, 10/29 reproducen errores concretos de signo, denominadores y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(9/841) + 7/29 − 12/29.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica construir, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-13",
+      "content_hash": "14cd80d99f3bcc2a48035215285a8a41b7057464699cb999231f0b0407ab66cb",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-construir-intermedio-13",
+      "stimulus": "Calcula √(16/900) + 9/30 − 5/30.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "4/15",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "2/15",
+        "common_denominator": 30,
+        "numerator_terms": [
+          4,
+          9,
+          -5
+        ],
+        "result": "4/15"
+      },
+      "distractores": [
+        {
+          "value": "0",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 2/15.",
+          "distinct": true
+        },
+        {
+          "value": "4/45",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "13/30",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 5/30.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 2/15 y la expresión equivale a (4 + 9 − 5)/30.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -2/15.",
+          "truth": false
+        },
+        {
+          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-2/15",
+        "1/6",
+        "4/31",
+        "2/15"
+      ],
+      "explicacion": "La raíz principal es 2/15 porque su cuadrado es 16/900 y es positiva. Los denominadores ya coinciden. (4 + 9 − 5)/30 = 4/15.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "14cd80d99f3bcc2a48035215285a8a41b7057464699cb999231f0b0407ab66cb",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 16/900, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 2/15; numeradores 4, 9, −5 sobre 30; resultado 4/15; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores 0, 13/30, 4/45 reproducen errores concretos de signo, denominadores y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(16/900) + 9/30 − 5/30.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica construir, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-intermedio-14",
+      "content_hash": "6288ec586e16b171e3f9f98929d5d114c22f2c46ceb57d4e2cf049883bada12b",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "intermedio",
+      "tipo_cognitivo": "Aplicar raíz principal y signos con denominador común",
+      "stimulus_id": "math-m3-aritmetica-operaciones-construir-intermedio-14",
+      "stimulus": "Calcula √(25/961) + 11/31 − 20/31.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-4/31",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "5/31",
+        "common_denominator": 31,
+        "numerator_terms": [
+          5,
+          11,
+          -20
+        ],
+        "result": "-4/31"
+      },
+      "distractores": [
+        {
+          "value": "-14/31",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 5/31.",
+          "distinct": true
+        },
+        {
+          "value": "-4/93",
+          "error": "sumar denominadores iguales",
+          "explanation": "Se sumaron los denominadores pese a que representan la misma unidad.",
+          "distinct": true
+        },
+        {
+          "value": "16/31",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 20/31.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 5/31 y la expresión equivale a (5 + 11 − 20)/31.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -5/31.",
+          "truth": false
+        },
+        {
+          "text": "Para sumar y restar las fracciones de igual denominador, deben sumarse también los tres denominadores.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-5/31",
+        "6/31",
+        "5/32",
+        "5/31"
+      ],
+      "explicacion": "La raíz principal es 5/31 porque su cuadrado es 25/961 y es positiva. Los denominadores ya coinciden. (5 + 11 − 20)/31 = -4/31.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-racionales-signos",
+      "operation": "raiz-racionales-signos",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "6288ec586e16b171e3f9f98929d5d114c22f2c46ceb57d4e2cf049883bada12b",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 25/961, combinación de racionales y unidad común; OP-04 enseñado en A6 y T4 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 5/31; numeradores 5, 11, −20 sobre 31; resultado -4/31; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -14/31, -4/93, 16/31 reproducen errores concretos de signo, denominadores y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(25/961) + 11/31 − 20/31.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, unidad común y signos; transferencia de dos reglas, calibración cualitativa."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-racionales-signos conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica construir, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
+      "content_hash": "5b325fcea8647f0db425a9480e89a1c8e2a445e46c86f5af9242c012783e577c",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
+      "stimulus": "Calcula √(9/1369) + 2 × (7/37) − 37/74.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-3/74",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "3/37",
+        "common_denominator": 74,
+        "numerator_terms": [
+          6,
+          28,
+          -37
+        ],
+        "result": "-3/74"
+      },
+      "distractores": [
+        {
+          "value": "-15/74",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 3/37.",
+          "distinct": true
+        },
+        {
+          "value": "-17/74",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 7/37.",
+          "distinct": true
+        },
+        {
+          "value": "17/37",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 37/74.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El término central, expresado en unidades de 1/74, tiene numerador 28.",
+          "truth": true
+        },
+        {
+          "text": "El resultado de la expresión completa es -3/74.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -3/37.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-3/37",
+        "4/37",
+        "3/38",
+        "3/37"
+      ],
+      "explicacion": "La raíz principal es 3/37 porque su cuadrado es 9/1369 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/74. (6 + 28 − 37)/74 = -3/74.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04-R17",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
+      "supersedes": "71988aba89078a41c6d05d6a5ec308b8926358a5146030ab133511d43cbbb623",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 9/1369, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 3/37; numeradores 6, 28, −37 sobre 74; resultado -3/74; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(9/1369) + 2 × (7/37) − 37/74.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica clasificar, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-23",
+      "content_hash": "41d592b8a76c94eae90dcaa1572cc7df75bd986c7f64d6d9708974b6a6b6c6a6",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-clasificar-avanzado-23",
+      "stimulus": "Calcula √(16/1444) + 2 × (9/38) − 39/76.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "5/76",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "2/19",
+        "common_denominator": 76,
+        "numerator_terms": [
+          8,
+          36,
+          -39
+        ],
+        "result": "5/76"
+      },
+      "distractores": [
+        {
+          "value": "-11/76",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 2/19.",
+          "distinct": true
+        },
+        {
+          "value": "-13/76",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 9/38.",
+          "distinct": true
+        },
+        {
+          "value": "11/19",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 39/76.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal del radical es 2/19.",
+          "truth": true
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/76, tiene numerador 38.",
+          "truth": false
+        },
+        {
+          "text": "El resultado de la expresión completa es 11/19.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-2/19",
+        "5/38",
+        "4/39",
+        "2/19"
+      ],
+      "explicacion": "La raíz principal es 2/19 porque su cuadrado es 16/1444 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/76. (8 + 36 − 39)/76 = 5/76.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04-R17",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
+      "supersedes": "c1e8298b0fb08d21d95d7477c530c3332e568f0f09f5776ac24e0d50730e45fa",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 16/1444, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 2/19; numeradores 8, 36, −39 sobre 76; resultado 5/76; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(16/1444) + 2 × (9/38) − 39/76.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica clasificar, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-24",
+      "content_hash": "c19719cea9ae00a846c264c4d788d8591eb2941bd1f84faa22a7093b2f9e6391",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-clasificar-avanzado-24",
+      "stimulus": "Calcula √(25/1521) + 2 × (11/39) − 59/78.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-5/78",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "5/39",
+        "common_denominator": 78,
+        "numerator_terms": [
+          10,
+          44,
+          -59
+        ],
+        "result": "-5/78"
+      },
+      "distractores": [
+        {
+          "value": "-25/78",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 5/39.",
+          "distinct": true
+        },
+        {
+          "value": "-9/26",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 11/39.",
+          "distinct": true
+        },
+        {
+          "value": "9/13",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 59/78.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "El resultado de la expresión completa es -5/78.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -5/39.",
+          "truth": false
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/78, tiene numerador 46.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-5/39",
+        "2/13",
+        "1/8",
+        "5/39"
+      ],
+      "explicacion": "La raíz principal es 5/39 porque su cuadrado es 25/1521 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/78. (10 + 44 − 59)/78 = -5/78.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04-R17",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA",
+        "PATRON_UNA_AFIRMACION_VERDADERA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json",
+        "CI 45765960745 job 139726809906"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": "54365dc85ecd414b8670cb9125516c14fbd878c0",
+      "supersedes": "8c2663d0f6d8ef6604b68eb033632c9357225c35b54b69409c71e6bd0e60cf9d",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 25/1521, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 5/39; numeradores 10, 44, −59 sobre 78; resultado -5/78; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "CI 45765960745 verifica tres decisiones distintas: raíz, término central y resultado, con una o dos verdaderas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(25/1521) + 2 × (11/39) − 59/78.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica clasificar, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-22",
+      "content_hash": "08b2dc2b080c49f7d11d5ea06022b3eab502efdadfea54d9b8f0160b25d96d92",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-quiz-avanzado-22",
+      "stimulus": "Calcula √(9/1849) + 2 × (7/43) − 37/86.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-3/86",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "3/43",
+        "common_denominator": 86,
+        "numerator_terms": [
+          6,
+          28,
+          -37
+        ],
+        "result": "-3/86"
+      },
+      "distractores": [
+        {
+          "value": "-15/86",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 3/43.",
+          "distinct": true
+        },
+        {
+          "value": "-17/86",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 7/43.",
+          "distinct": true
+        },
+        {
+          "value": "17/43",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 37/86.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 3/43 y la expresión equivale a (6 + 28 − 37)/86.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -3/43.",
+          "truth": false
+        },
+        {
+          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-3/43",
+        "4/43",
+        "3/44",
+        "3/43"
+      ],
+      "explicacion": "La raíz principal es 3/43 porque su cuadrado es 9/1849 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/86. (6 + 28 − 37)/86 = -3/86.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "08b2dc2b080c49f7d11d5ea06022b3eab502efdadfea54d9b8f0160b25d96d92",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 9/1849, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 3/43; numeradores 6, 28, −37 sobre 86; resultado -3/86; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -15/86, -17/86, 17/43 reproducen errores concretos de signo, factor y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(9/1849) + 2 × (7/43) − 37/86.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica quiz, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-23",
+      "content_hash": "ed1a51e5c0eccdb1f4e711f58ddd03979b47f155069523ca893c07fc4d0db53f",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-quiz-avanzado-23",
+      "stimulus": "Calcula √(16/1936) + 2 × (9/44) − 39/88.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "5/88",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "1/11",
+        "common_denominator": 88,
+        "numerator_terms": [
+          8,
+          36,
+          -39
+        ],
+        "result": "5/88"
+      },
+      "distractores": [
+        {
+          "value": "-1/8",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 1/11.",
+          "distinct": true
+        },
+        {
+          "value": "-13/88",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 9/44.",
+          "distinct": true
+        },
+        {
+          "value": "1/2",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 39/88.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 1/11 y la expresión equivale a (8 + 36 − 39)/88.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -1/11.",
+          "truth": false
+        },
+        {
+          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-1/11",
+        "5/44",
+        "4/45",
+        "1/11"
+      ],
+      "explicacion": "La raíz principal es 1/11 porque su cuadrado es 16/1936 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/88. (8 + 36 − 39)/88 = 5/88.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "ed1a51e5c0eccdb1f4e711f58ddd03979b47f155069523ca893c07fc4d0db53f",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 16/1936, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 1/11; numeradores 8, 36, −39 sobre 88; resultado 5/88; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -1/8, -13/88, 1/2 reproducen errores concretos de signo, factor y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(16/1936) + 2 × (9/44) − 39/88.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica quiz, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-quiz-avanzado-24",
+      "content_hash": "de7fa0df1747d4a50b2b7b45ccec58a1c5e323649d1a5c3b0723e1e23d94370e",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-quiz-avanzado-24",
+      "stimulus": "Calcula √(25/2025) + 2 × (11/45) − 59/90.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-1/18",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "1/9",
+        "common_denominator": 90,
+        "numerator_terms": [
+          10,
+          44,
+          -59
+        ],
+        "result": "-1/18"
+      },
+      "distractores": [
+        {
+          "value": "-5/18",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 1/9.",
+          "distinct": true
+        },
+        {
+          "value": "-3/10",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 11/45.",
+          "distinct": true
+        },
+        {
+          "value": "3/5",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 59/90.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 1/9 y la expresión equivale a (10 + 44 − 59)/90.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -1/9.",
+          "truth": false
+        },
+        {
+          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-1/9",
+        "2/15",
+        "5/46",
+        "1/9"
+      ],
+      "explicacion": "La raíz principal es 1/9 porque su cuadrado es 25/2025 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/90. (10 + 44 − 59)/90 = -1/18.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "de7fa0df1747d4a50b2b7b45ccec58a1c5e323649d1a5c3b0723e1e23d94370e",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 25/2025, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 1/9; numeradores 10, 44, −59 sobre 90; resultado -1/18; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -3/10, -5/18, 3/5 reproducen errores concretos de signo, factor y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(25/2025) + 2 × (11/45) − 59/90.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica quiz, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-22",
+      "content_hash": "161816de0110f38c059702905d11d590c5658a18a503cfa13f88384e2f6111e1",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-construir-avanzado-22",
+      "stimulus": "Calcula √(9/2401) + 2 × (7/49) − 37/98.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-3/98",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "3/49",
+        "common_denominator": 98,
+        "numerator_terms": [
+          6,
+          28,
+          -37
+        ],
+        "result": "-3/98"
+      },
+      "distractores": [
+        {
+          "value": "-15/98",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 3/49.",
+          "distinct": true
+        },
+        {
+          "value": "-17/98",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 7/49.",
+          "distinct": true
+        },
+        {
+          "value": "17/49",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 37/98.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 3/49 y la expresión equivale a (6 + 28 − 37)/98.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -3/49.",
+          "truth": false
+        },
+        {
+          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-3/49",
+        "4/49",
+        "3/50",
+        "3/49"
+      ],
+      "explicacion": "La raíz principal es 3/49 porque su cuadrado es 9/2401 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/98. (6 + 28 − 37)/98 = -3/98.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "161816de0110f38c059702905d11d590c5658a18a503cfa13f88384e2f6111e1",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 9/2401, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 3/49; numeradores 6, 28, −37 sobre 98; resultado -3/98; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -15/98, -17/98, 17/49 reproducen errores concretos de signo, factor y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(9/2401) + 2 × (7/49) − 37/98.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica construir, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-23",
+      "content_hash": "5e0114a4326defb069ed7f65dfb081615c5887c4e768e8d81a176d7015802b90",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-construir-avanzado-23",
+      "stimulus": "Calcula √(16/2500) + 2 × (9/50) − 39/100.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "1/20",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "2/25",
+        "common_denominator": 100,
+        "numerator_terms": [
+          8,
+          36,
+          -39
+        ],
+        "result": "1/20"
+      },
+      "distractores": [
+        {
+          "value": "-11/100",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 2/25.",
+          "distinct": true
+        },
+        {
+          "value": "-13/100",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 9/50.",
+          "distinct": true
+        },
+        {
+          "value": "11/25",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 39/100.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 2/25 y la expresión equivale a (8 + 36 − 39)/100.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -2/25.",
+          "truth": false
+        },
+        {
+          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-2/25",
+        "1/10",
+        "4/51",
+        "2/25"
+      ],
+      "explicacion": "La raíz principal es 2/25 porque su cuadrado es 16/2500 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/100. (8 + 36 − 39)/100 = 1/20.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "5e0114a4326defb069ed7f65dfb081615c5887c4e768e8d81a176d7015802b90",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 16/2500, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 2/25; numeradores 8, 36, −39 sobre 100; resultado 1/20; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -11/100, -13/100, 11/25 reproducen errores concretos de signo, factor y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(16/2500) + 2 × (9/50) − 39/100.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica construir, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-construir-avanzado-24",
+      "content_hash": "09e2b4ae3e1d9199fb69f8eb4f03f2bb197851bb72cadc08eb0ce22f7b20861f",
+      "exam": [
+        "PHUMA"
+      ],
+      "area": "matematicas",
+      "competencia": "Operaciones con números reales",
+      "subcompetencia": "Raíz principal y operaciones racionales combinadas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "tipo_cognitivo": "Aplicar prioridad y convertir denominadores",
+      "stimulus_id": "math-m3-aritmetica-operaciones-construir-avanzado-24",
+      "stimulus": "Calcula √(25/2601) + 2 × (11/51) − 59/102.",
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7 (temario), 58 y 61 (anclas 39 y 50)",
+      "respuesta_esperada": "-5/102",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Parseo independiente de estímulo visible con cálculo entero exacto, sin oracle.inputs del generador.",
+        "root": "5/51",
+        "common_denominator": 102,
+        "numerator_terms": [
+          10,
+          44,
+          -59
+        ],
+        "result": "-5/102"
+      },
+      "distractores": [
+        {
+          "value": "-25/102",
+          "error": "raíz con signo negativo",
+          "explanation": "Se usó la raíz negativa; la raíz principal es 5/51.",
+          "distinct": true
+        },
+        {
+          "value": "-9/34",
+          "error": "omitir multiplicación por 2",
+          "explanation": "Se omitió el factor 2 que multiplica 11/51.",
+          "distinct": true
+        },
+        {
+          "value": "9/17",
+          "error": "omitir resta final",
+          "explanation": "Se omitió restar 59/102.",
+          "distinct": true
+        }
+      ],
+      "assertions": [
+        {
+          "text": "La raíz principal es 5/51 y la expresión equivale a (10 + 44 − 59)/102.",
+          "truth": true
+        },
+        {
+          "text": "La raíz principal del radical es -5/51.",
+          "truth": false
+        },
+        {
+          "text": "Puede omitirse el factor 2 y conservar el resultado.",
+          "truth": false
+        }
+      ],
+      "root_choices": [
+        "-5/51",
+        "2/17",
+        "5/52",
+        "5/51"
+      ],
+      "explicacion": "La raíz principal es 5/51 porque su cuadrado es 25/2601 y es positiva. Primero multiplica por 2 y expresa todo en unidades de 1/102. (10 + 44 − 59)/102 = -5/102.",
+      "dependencias_fuente": [
+        "PHUMA-UNAH-2026",
+        "MAT-ARIT-01 R4"
+      ],
+      "originalidad": "Ejercicio generado en el repositorio, no copia detectada en las firmas contrastadas; no se acredita diversidad semántica por cambio numérico.",
+      "revision": "P2-R4-01-OP04",
+      "riesgos": [
+        "FAMILIA_PARAMETRICA_REPETIDA"
+      ],
+      "fecha": "2026-11-26",
+      "modelo_revisor": "Revisión asistida con oráculo aritmético independiente",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "family_id": "raiz-producto-racionales-combinados",
+      "operation": "raiz-producto-racionales-combinados",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "criteria_revision": "7.8.1",
+      "source_authority": "PHUMA_ANCLA_EJEMPLO",
+      "oracle_status": "VERIFIED",
+      "evidence_level": "E1",
+      "technical_status": "PASS",
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "G_DIVERSIDAD_INSUFICIENTE"
+      ],
+      "evidence_refs": [
+        "CI 45689363635 job 139470401286, RDG_P2_CELL",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
+        "CI 45765027724: 450 hashes R16; CI 45753039032: revisión R4",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R4-publication.json"
+      ],
+      "reviewed_at": "2026-11-26",
+      "repair_commit": null,
+      "supersedes": "09e2b4ae3e1d9199fb69f8eb4f03f2bb197851bb72cadc08eb0ce22f7b20861f",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "Raíz exacta 25/2601, combinación de racionales y producto y conversión; OP-04 enseñado en A6 y T29 de R4."
+        },
+        "B": {
+          "score": 4,
+          "reason": "Raíz 5/51; numeradores 10, 44, −59 sobre 102; resultado -5/102; cuatro valores distintos."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Los distractores -25/102, -9/34, 9/17 reproducen errores concretos de signo, factor y omisión de resta."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Estímulo explícito Calcula √(25/2601) + 2 × (11/51) − 59/102.; denominadores positivos y alcance de raíz delimitado."
+        },
+        "E": {
+          "score": 3,
+          "reason": "Revisión de feedback previa confirmada; explicación exacta preservada, pruebas UI de producción vigentes."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Raíz, producto, conversión al denominador doble y resta; varios pasos, comparable cualitativamente a las anclas."
+        },
+        "G": {
+          "score": 2,
+          "reason": "La familia raiz-producto-racionales-combinados conserva estructura paramétrica entre tres estímulos y tres juegos; cambiar números no acredita independencia conceptual."
+        },
+        "H": {
+          "score": 3,
+          "reason": "Mecánica construir, estímulo textual sin dependencia de color, sin contexto cultural sensible; navegación y diez rondas verificadas en CI. No lector de pantalla físico."
+        }
+      }
+    }
+  ],
+  "proposed_repairs": [
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-12",
+      "previous_sha256": "15253bc28e43ba6ca1357fc75ceb9520574f503f487d6aaa3c047a3fa373473d",
+      "claims": [
+        {
+          "text": "La raíz principal del radical es 3/17.",
+          "truth": true,
+          "reason": "La raíz principal es 3/17, no negativa; su cuadrado es el radicando."
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/17, tiene numerador 8.",
+          "truth": false,
+          "reason": "El término central vale 1 × 7/17 = 7/17; se conserva su valor al cambiar de unidad."
+        },
+        {
+          "text": "El resultado de la expresión completa es -2/17.",
+          "truth": true,
+          "reason": "En unidades de 1/17: (3 + 7 − 12)/17 = -2/17."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-13",
+      "previous_sha256": "6f693123d3148407cd4c9ccd7ee074a502bcf0a2cc56dee81bf3a2da61002978",
+      "claims": [
+        {
+          "text": "La raíz principal del radical es -2/9.",
+          "truth": false,
+          "reason": "La raíz principal es 2/9, no negativa; su cuadrado es el radicando."
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/18, tiene numerador 9.",
+          "truth": true,
+          "reason": "El término central vale 1 × 9/18 = 9/18; se conserva su valor al cambiar de unidad."
+        },
+        {
+          "text": "El resultado de la expresión completa es 13/18.",
+          "truth": false,
+          "reason": "En unidades de 1/18: (4 + 9 − 5)/18 = 4/9."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-intermedio-14",
+      "previous_sha256": "74f2009488494c307bf4753cc6708e815d8d9117425d3ae4c57d58479469f7fd",
+      "claims": [
+        {
+          "text": "La raíz principal del radical es 5/19.",
+          "truth": true,
+          "reason": "La raíz principal es 5/19, no negativa; su cuadrado es el radicando."
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/19, tiene numerador 11.",
+          "truth": true,
+          "reason": "El término central vale 1 × 11/19 = 11/19; se conserva su valor al cambiar de unidad."
+        },
+        {
+          "text": "El resultado de la expresión completa es 16/19.",
+          "truth": false,
+          "reason": "En unidades de 1/19: (5 + 11 − 20)/19 = -4/19."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-22",
+      "previous_sha256": "71988aba89078a41c6d05d6a5ec308b8926358a5146030ab133511d43cbbb623",
+      "claims": [
+        {
+          "text": "La raíz principal del radical es -3/37.",
+          "truth": false,
+          "reason": "La raíz principal es 3/37, no negativa; su cuadrado es el radicando."
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/74, tiene numerador 28.",
+          "truth": true,
+          "reason": "El término central vale 2 × 7/37 = 28/74; se conserva su valor al cambiar de unidad."
+        },
+        {
+          "text": "El resultado de la expresión completa es -3/74.",
+          "truth": true,
+          "reason": "En unidades de 1/74: (6 + 28 − 37)/74 = -3/74."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-23",
+      "previous_sha256": "c1e8298b0fb08d21d95d7477c530c3332e568f0f09f5776ac24e0d50730e45fa",
+      "claims": [
+        {
+          "text": "La raíz principal del radical es 2/19.",
+          "truth": true,
+          "reason": "La raíz principal es 2/19, no negativa; su cuadrado es el radicando."
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/76, tiene numerador 38.",
+          "truth": false,
+          "reason": "El término central vale 2 × 9/38 = 36/76; se conserva su valor al cambiar de unidad."
+        },
+        {
+          "text": "El resultado de la expresión completa es 11/19.",
+          "truth": false,
+          "reason": "En unidades de 1/76: (8 + 36 − 39)/76 = 5/76."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-24",
+      "previous_sha256": "8c2663d0f6d8ef6604b68eb033632c9357225c35b54b69409c71e6bd0e60cf9d",
+      "claims": [
+        {
+          "text": "La raíz principal del radical es -5/39.",
+          "truth": false,
+          "reason": "La raíz principal es 5/39, no negativa; su cuadrado es el radicando."
+        },
+        {
+          "text": "El término central, expresado en unidades de 1/78, tiene numerador 46.",
+          "truth": false,
+          "reason": "El término central vale 2 × 11/39 = 44/78; se conserva su valor al cambiar de unidad."
+        },
+        {
+          "text": "El resultado de la expresión completa es -5/78.",
+          "truth": true,
+          "reason": "En unidades de 1/78: (10 + 44 − 59)/78 = -5/78."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    }
+  ],
+  "limits": "Executed independent visible-stimulus arithmetic and exact frozen-hash matching on evidence records; CI must verify R17 runtime successors. G remains 2; no semantic PASS. Original bank snapshots retained.",
+  "successor_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R17-successors.json"
+}
