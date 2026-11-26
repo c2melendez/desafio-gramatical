@@ -4,6 +4,7 @@ import {mathM2Pool,MATH_M2_LEVEL_COUNT} from "./math-m2";
 import {repairRationalOperation} from "./math-operations-rational";
 import {repairOperationDiversityR10} from "./math-operations-diversity-r10";
 import {repairOperationDiversity,repairOperationDiversityR9} from "./math-operations-diversity";
+import {repairOperationTransferR13} from "./math-operations-contrast-r13";
 import {repairOperationTransferR12} from "./math-operations-transfer-r12";
 import {repairOperationMixedR11} from "./math-operations-mixed-r11";
 import {repairOperationDistractors} from "./math-operations-distractors";
@@ -68,8 +69,11 @@ export function mathM3R10Pool(topic:string,subtopic:string,level:Level,mode:Mode
 export function mathM3R11Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R10Pool(topic,subtopic,level,mode).map(repairOperationMixedR11);
 }
-export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+export function mathM3R12Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R11Pool(topic,subtopic,level,mode).map(repairOperationTransferR12);
+}
+export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R12Pool(topic,subtopic,level,mode).map(repairOperationTransferR13);
 }
 export const MATH_M3_NEW_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(10+15+25);
 export const MATH_M3_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(30+50+70);
