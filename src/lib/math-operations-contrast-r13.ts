@@ -2,7 +2,7 @@ import type {MathModel} from "./math-m1";
 type Alt=[number,string];
 export const R13_OPERATIONS={principiante:["producto-negativo-y-suma","cero-dividido-por-no-cero"],intermedio:["comparar-cambios-compensados","reconstruir-cantidad-por-grupo"],avanzado:["cancelacion-cruzada-de-productos","dos-raices-en-producto-agrupado"]} as const;
 // Target only redundant original M2 records. R3 plan OP-01/02/03/04, no curricular expansion.
-export function repairOperationTransferR13(base:MathModel):MathModel{
+export function repairOperationTransferR13(base:MathModel,override?:{zeroAddend:number}):MathModel{
  if(base.subtopic!=="Operaciones"||base.oracle.kind!=="Operaciones"||!base.id.startsWith("math-m2-"))return base;
  const slot=Number(base.id.split("-").at(-1)),basic=base.level==="principiante";
  if(!Number.isInteger(slot)||slot<6||slot>=(basic?10:12))return base;
@@ -13,7 +13,7 @@ export function repairOperationTransferR13(base:MathModel):MathModel{
  prompt=`Calcula −${a} × ${b} + ${c}. ¿Cuál es el resultado?`;label="Calcula el producto con signo";formula=`−${a*b}+${c}=${key}`;explanation=`Un factor negativo por uno positivo da un producto negativo: −${a*b}. El producto va primero; luego suma ${c}, resultado ${key}.`;
  wrong=[[a*b+c,"Se perdió el signo negativo del producto."],[-a*(b+c),"Se agrupó una suma sin paréntesis."],[step-c,"Se restó el último sumando."]];mid=[[a*b,"Se ignoró el signo negativo."],[-a-b,"Se restaron los factores."],[-a,"Se omitió el segundo factor."]];inputs=[a,b,c,0,0,1];evidence=["signo-del-producto","precedencia-y-suma"];
  }else if(basic){
- b=3+m;c=7+i+m;a=b*(5+i+2*m);step=0;key=c;
+ b=3+m;c=override?.zeroAddend??7+i+m;a=b*(5+i+2*m);step=0;key=c;
  prompt=`Calcula (${a} − ${a}) ÷ ${b} + ${c}. ¿Cuál es el resultado?`;label="Calcula el numerador agrupado";formula=`0÷${b}+${c}=${key}`;explanation=`La diferencia de números iguales es cero. Cero dividido por ${b}, que no es cero, da cero. Después suma ${c}; resultado ${key}.`;
  wrong=[[a/b+c,"Se omitió la resta del numerador."],[a-b+c,"Se omitió el segundo término y se sustituyó división por resta."],[c+b,"Se confundió el divisor con un sumando."]];mid=[[a,"Se omitió el segundo término."],[2*a,"Se sumaron los términos."],[-a,"Se omitió el primer término."]];inputs=[a,b,c,0,0,2];evidence=["cancelar-iguales","dividir-cero-por-no-cero","sumar"];
  }else if(base.level==="intermedio"&&g===0){

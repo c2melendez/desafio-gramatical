@@ -2,7 +2,7 @@ import type {MathModel} from "./math-m1";
 type Alt=[number,string];
 export const R12_OPERATIONS={"principiante":["resta-de-entero-negativo","cociente-con-agrupacion"],"intermedio":["presupuesto-dos-compras","reconstruir-inventario-inicial"],"avanzado":["factor-comun-diferencia-compuesta","resta-anidada-distributiva"]} as const;
 // Replace only redundant M2 original variants at the cumulative boundary. OP-01/02/03, contract R3, plan MAT-ARIT-01.
-function design(level:MathModel['level'],mode:number,slot:number){
+function design(level:MathModel['level'],mode:number,slot:number,override?:{divisorSecond:number;quotient:number}){
  const i=slot%3,g=slot<3?0:1,m=mode;
  let a:number,b:number,c:number,d:number,e:number,step:number,key:number,prompt:string,label:string,formula:string,explanation:string,wrong:Alt[],mid:Alt[],operation:string,evidence:string[],inputs:number[],kind:number;
  if(level==="principiante"&&g===0){
@@ -10,7 +10,7 @@ function design(level:MathModel['level'],mode:number,slot:number){
  prompt=`Calcula ${a} − (−${b}) − ${c}. ¿Cuál es el resultado?`;label="Calcula la resta del entero negativo";formula=`${a}+${b}−${c}=${key}`;explanation=`Restar un entero negativo equivale a sumar su opuesto: ${a}+${b}=${step}. Después resta ${c}; resultado ${key}.`;
  wrong=[[a-b-c,"Se restó un positivo en vez de un negativo."],[step+c,"Se sumó el último término."],[step,"Se omitió la última resta."]];mid=[[a-b,"Se ignoró el signo negativo."],[-a+b,"Se cambió el signo del primer término."],[a,"Se omitió la resta del negativo."]];inputs=[a,b,c,0,0,kind];evidence=["restar-opuesto","aplicar-resta-final"];
  }else if(level==="principiante"){
- kind=2;b=3+i;c=6+m;d=b*(2+m);a=(b+c)*d;step=b+c;key=d;operation="cociente-con-agrupacion";
+ kind=2;b=3+i;c=override?.divisorSecond??6+m;d=override?.quotient??b*(2+m);a=(b+c)*d;step=b+c;key=d;operation="cociente-con-agrupacion";
  prompt=`Calcula ${a} ÷ (${b} + ${c}). ¿Cuál es el resultado?`;label="Suma los términos del divisor";formula=`${a}÷${step}=${key}`;explanation=`El divisor completo es ${b}+${c}=${step}. Divide ${a} entre ${step}: resultado ${key}. No se puede dividir solo por el primer sumando.`;
  wrong=[[a/b+c,"Se dividió antes de resolver el paréntesis."],[d+c,"Se volvió a sumar un término ya incluido en el divisor."],[a-b-c,"Se sustituyó el cociente por restas."]];mid=[[b*c,"Se multiplicaron los sumandos."],[b,"Se omitió el segundo sumando."],[c,"Se omitió el primero."]];inputs=[a,b,c,0,0,kind];evidence=["identificar-divisor-completo","resolver-cociente"];
  }else if(level==="intermedio"&&g===0){
@@ -33,11 +33,11 @@ function design(level:MathModel['level'],mode:number,slot:number){
  return {step,key,prompt,label,formula,explanation,wrong,mid,operation,evidence,inputs};
 }
 function rotate(values:string[],seed:number){const k=seed%values.length;const choices=[...values.slice(k),...values.slice(0,k)];return {choices,answerIndex:choices.indexOf(values[0])};}
-export function repairOperationTransferR12(base:MathModel):MathModel{
+export function repairOperationTransferR12(base:MathModel,override?:{divisorSecond:number;quotient:number}):MathModel{
  if(base.subtopic!=="Operaciones"||base.oracle.kind!=="Operaciones"||!base.id.startsWith("math-m2-"))return base;
  const slot=Number(base.id.split("-").at(-1));if(!Number.isInteger(slot)||slot<0||slot>5)return base;
  const mode=["quiz","clasificar","construir"].indexOf(base.mode);
- const x=design(base.level,mode,slot),{key,step,label,explanation,wrong,mid}=x;
+ const x=design(base.level,mode,slot,override),{key,step,label,explanation,wrong,mid}=x;
  const opts=rotate([String(key),...wrong.map(([v])=>String(v))],base.seed),inter=rotate([String(step),...mid.map(([v])=>String(v))],base.seed+1);
  if(new Set(opts.choices).size!==4||new Set(inter.choices).size!==4)throw Error("R12: alternativas equivalentes "+base.id);
  const t=base.mode==="clasificar"&&slot%2===0;

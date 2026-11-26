@@ -77,13 +77,13 @@ export function mathM3R11Pool(topic:string,subtopic:string,level:Level,mode:Mode
  return mathM3R10Pool(topic,subtopic,level,mode).map(repairOperationMixedR11);
 }
 export function mathM3R12Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
- return mathM3R11Pool(topic,subtopic,level,mode).map(repairOperationTransferR12);
+ return mathM3R11Pool(topic,subtopic,level,mode).map(x=>repairOperationTransferR12(x));
 }
 export function mathM3R13Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
- return mathM3R12Pool(topic,subtopic,level,mode).map(repairOperationTransferR13);
+ return mathM3R12Pool(topic,subtopic,level,mode).map(x=>repairOperationTransferR13(x));
 }
 export function mathM3R14Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
- return mathM3R13Pool(topic,subtopic,level,mode).map(repairOperationAdvancedR14);
+ return mathM3R13Pool(topic,subtopic,level,mode).map(x=>repairOperationAdvancedR14(x));
 }
 export function mathM3R15Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R14Pool(topic,subtopic,level,mode).map(repairOperationTransferR15);
