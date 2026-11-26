@@ -88,7 +88,7 @@ for(const [engineName,engine] of [['chromium',chromium],['firefox',firefox]]){
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'RDG 360px sin desborde');
    await page.setViewportSize(viewport);
    // R4: each added bridge must be operable on real browsers, not merely data.
-   for(const [title,answer] of [['Deshacer cambios antes de repartir','12'],['Completar una igualdad','42'],['Dividir una diferencia racional','1/8'],['Comparar costos completos','10'],['Restar un número negativo','9'],['Producto negativo y suma','−10'],['Restar un grupo negativo','23'],['Factor común en dos grupos','75'],['Cancelar productos cruzados','3'],['Hallar el factor faltante','16'],['Comparar antes y después','−8'],['Reconstruir con entradas y salidas','85'],['Calcular el resto y repartirlo','10'],['Dos raíces y dos agrupaciones','33']]){
+   for(const [title,answer] of [['Deshacer cambios antes de repartir','12'],['Completar una igualdad','42'],['Dividir una diferencia racional','1/8'],['Comparar costos completos','10'],['Restar un número negativo','9'],['Producto negativo y suma','−16'],['Restar un grupo negativo','23'],['Factor común en dos grupos','75'],['Cancelar productos cruzados','3'],['Hallar el factor faltante','16'],['Comparar antes y después','−32'],['Reconstruir con entradas y salidas','85'],['Calcular el resto y repartirlo','10'],['Dos raíces y dos agrupaciones','33']]){
     await page.getByRole('button',{name:'Siguiente',exact:true}).click();
     check(await page.getByRole('heading',{name:title,exact:true}).isVisible(),'RDG R4 '+title);
     const bridge=page.getByRole('region',{name:'Organizador de razonamiento'});

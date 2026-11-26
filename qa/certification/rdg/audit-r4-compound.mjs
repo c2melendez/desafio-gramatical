@@ -4,11 +4,11 @@ import {mathM3Pool} from '../../../src/lib/math-m3.ts';
 import {MATH_LEVELS,MATH_MODES} from '../../../src/lib/math-m1.ts';
 const assert=(c,m)=>{if(!c)throw Error(m)},fmt=n=>String(n).replace('-','−');
 const oracle={
- A17:{answer:(10+8)*4-(10+6)*5,wrong:[(10+6)*5-(10+8)*4,(10+8)*4,(10+6)*5]},
+ A17:{answer:(14+11)*4-(14+8)*6,wrong:[(14+8)*6-(14+11)*4,(14+11)*4,(14+8)*6]},
  A18:{answer:100+9-4*6,wrong:[100+4*6-9,100+9,100-4*6]},
  A19:{answer:(10*8-2*5)/7,wrong:[10*8-2*5,10*8,10*8/10]},
  A20:{answer:(Math.sqrt(64)-3)*(4+Math.sqrt(9))-2,wrong:[5*7,5+7-2,(8+3)*7-2]},
- T21:{answer:(10+4)*5-(8+4)*6,wrong:[(8+4)*6-(10+4)*5,(10+4)*5,(8+4)*6]},
+ T21:{answer:(15+5)*4-(13+5)*7,wrong:[(13+5)*7-(15+5)*4,(15+5)*4,(13+5)*7]},
  T22:{answer:91+8-5*3,wrong:[91+5*3-8,91+8,91-5*3]},
  T23:{answer:(12*7-3*4)/8,wrong:[12*7-3*4,12*7,12*7/12]},
  T24:{answer:(Math.sqrt(81)-4)*(6+Math.sqrt(16))-3,wrong:[5*10,5+10-3,(9+4)*10-3]},

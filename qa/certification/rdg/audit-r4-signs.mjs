@@ -7,7 +7,7 @@ const format=x=>String(x).replace('-', '−');
 // Oráculos y errores derivados por separado de los textos de respuesta.
 const independent={
  A11:{answer:8-(-3)-2,wrong:[8-3-2,8+3+2,8-(-3)]},
- A12:{answer:-4*3+2,wrong:[4*3+2,-4*(3+2),-4*3-2]},
+ A12:{answer:-6*3+2,wrong:[6*3+2,-6*(3+2),-6*3-2]},
  T10:{answer:-7-(-5),wrong:[-7+(-5),-5-(-7),7+5]},
  T11:{answer:6*(-3)+4,wrong:[6*(-3)-4,6*3+4,6*(-3+4)]},
 };

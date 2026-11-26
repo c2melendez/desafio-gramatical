@@ -4,7 +4,7 @@ import {OPERATIONS_ROUTE} from '../../../src/lib/rdg/operations.ts';
 import {mathM3Pool} from '../../../src/lib/math-m3.ts';
 import {MATH_LEVELS,MATH_MODES} from '../../../src/lib/math-m1.ts';
 const sha=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
-const matrix=JSON.parse(readFileSync('qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R4.json','utf8'));
+const matrix=JSON.parse(readFileSync('qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R5.json','utf8'));
 const tasks=new Map([...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer].map(x=>[x.id,x]));
 const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool('Aritmética','Operaciones',l,m)));
 const byId=new Map(bank.map(x=>[x.id,x]));

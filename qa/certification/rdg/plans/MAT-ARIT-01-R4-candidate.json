@@ -275,11 +275,11 @@
           "function": "COMPRENDER/APLICAR",
           "interaction": "Revelar pasos voluntarios y responder con retroalimentación causal.",
           "representation": "Organizador secuencial de tres pasos",
-          "prompt": "Calcula −4 × 3 + 2.",
-          "expected_reasoning": "Un número negativo por uno positivo da un producto negativo: −4 × 3 = −12. Después −12 + 2 = −10.",
-          "feedback": "Omitiste el signo negativo del producto: 4 × 3 + 2 = 14. Agrupaste 3 + 2 primero: −4 × (3 + 2) = −20, pero no hay paréntesis. Restaste 2 en vez de sumarlo: −12 − 2 = −14.",
+          "prompt": "Calcula −6 × 3 + 2.",
+          "expected_reasoning": "Un número negativo por uno positivo da un producto negativo: −6 × 3 = −18. Después −18 + 2 = −16.",
+          "feedback": "Omitiste el signo negativo del producto: 6 × 3 + 2 = 20. Agrupaste 3 + 2 primero: −6 × (3 + 2) = −30, pero no hay paréntesis. Restaste 2 en vez de sumarlo: −18 − 2 = −20.",
           "help": "Calcula primero el producto y conserva el signo antes de sumar.",
-          "acceptance": "Respuesta −10; cuatro alternativas distintas y progresión por teclado."
+          "acceptance": "Respuesta −16; cuatro alternativas distintas y progresión por teclado."
         },
         {
           "id": "A13",
@@ -345,11 +345,11 @@
           "function": "COMPRENDER/APLICAR",
           "interaction": "Revelación voluntaria de pasos, selección y retroalimentación causal.",
           "representation": "Organizador secuencial de datos y operaciones",
-          "prompt": "Una expresión vale (10 + 6) × 5. Aumenta el segundo sumando en 2 y reduce el factor en 1. ¿Cuál es el valor nuevo menos el original?",
-          "expected_reasoning": "Original: (10 + 6) × 5 = 80. Nuevo: (10 + 8) × 4 = 72. La diferencia orientada es 72 − 80 = −8.",
-          "feedback": "Invertiste el orden: original menos nuevo es 80 − 72 = 8. Calculaste el valor nuevo, pero falta restar el original. Es el valor original, sin comparar los dos estados.",
+          "prompt": "Una expresión vale (14 + 8) × 6. Aumenta el segundo sumando en 3 y reduce el factor en 2. ¿Cuál es el valor nuevo menos el original?",
+          "expected_reasoning": "Original: (14 + 8) × 6 = 132. Nuevo: (14 + 11) × 4 = 100. La diferencia orientada es 100 − 132 = −32.",
+          "feedback": "Invertiste el orden: original menos nuevo es 132 − 100 = 32. Calculaste el valor nuevo, pero falta restar el original. Es el valor original, sin comparar los dos estados.",
           "help": "Calcula los dos estados por separado y resta nuevo menos original.",
-          "acceptance": "Respuesta −8; cuatro alternativas distintas y navegación por teclado."
+          "acceptance": "Respuesta −32; cuatro alternativas distintas y progresión por teclado."
         },
         {
           "id": "A18",
@@ -578,8 +578,8 @@
           ]
         },
         {
-          "prompt": "Una expresión vale (8 + 4) × 6. Aumenta el primer sumando en 2 y reduce el factor en 1. Calcula el valor nuevo menos el original. Opciones: −2, 2, 70, 72",
-          "solution": "Original: (8 + 4) × 6 = 72. Nuevo: (10 + 4) × 5 = 70. Nuevo menos original es −2.",
+          "prompt": "Una expresión vale (13 + 5) × 7. Aumenta el primer sumando en 2 y reduce el factor en 3. Calcula el valor nuevo menos el original. Opciones: −46, 46, 80, 126",
+          "solution": "Original: (13 + 5) × 7 = 126. Nuevo: (15 + 5) × 4 = 80. Nuevo menos original es −46.",
           "oracle": "Calcular independientemente los datos visibles y verificar alternativa y errores.",
           "objective_ids": [
             "OP-02"
@@ -702,7 +702,8 @@
         "Comprobar los tres puentes de factorización y sus transferencias, con oráculos independientes y contraste contra las familias de los juegos.",
         "Comprobar cinco transferencias adicionales de división, cero, factor común y racionales, sin ayudas y contra familias reales.",
         "Verificar en lote cuatro puentes de estados, inventarios, reparto y raíces, y cuatro transferencias sin ayuda.",
-        "Revisar once ejemplos integrados de síntesis contra oráculos independientes, como apoyo complementario a la ruta interactiva y transferencia."
+        "Revisar once ejemplos integrados de síntesis contra oráculos independientes, como apoyo complementario a la ruta interactiva y transferencia.",
+        "Verificar estímulos de lecciones y transferencia contra los datos visibles del banco y revisar candidatos coincidentes, no solo coincidencia literal."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",
