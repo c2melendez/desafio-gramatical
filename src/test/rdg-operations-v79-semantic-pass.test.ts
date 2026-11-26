@@ -21,3 +21,22 @@ it("v7.9 first 18 assisted semantic decisions bind real IDs/hashes and A-H; stal
  expect(eligible({...f,family_evidence_ref:"fake"},actualHash)).toBe(false);
  }
 });
+
+it("v7.9 R15 publication: ten additional exact decisions and two retained REVIEW; union accounting",()=>{
+ const r15=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json","utf8"));
+ const candidates=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-publication-candidates.json","utf8"));
+ const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
+ expect(r15.records).toHaveLength(12);
+ const pass=r15.records.filter((f:Decision)=>f.semantic_status==="PASS_SEMANTIC");
+ const review=r15.records.filter((f:Decision)=>f.semantic_status==="REVIEW");
+ expect(pass).toHaveLength(10);expect(review).toHaveLength(2);
+ expect(r15.provider_observation.production_ci_status).toBe("SUCCESS");
+ expect(r15.provider_observation.render_status).toBe("LIVE_WHEN_OBSERVED");
+ for(const f of r15.records){const x=bank.find(y=>y.id===f.id)!;const original=candidates.records.find((y:Decision)=>y.id===f.id);expect(hash(x)).toBe(f.content_hash);expect(f.content_hash).toBe(original.content_hash);
+  if(f.semantic_status==="PASS_SEMANTIC"){expect(eligible(f,hash(x))).toBe(true);expect(original.candidate_status).toBe("PASS_SEMANTIC_CANDIDATE_PENDING_PUBLICATION");expect(eligible({...f,rubric:{...f.rubric,G:{score:2,reason:"collision"}}},hash(x))).toBe(false);}
+  else{expect(f.rubric.G.score).toBe(2);expect(f.reason_codes).toContain("G_KEY_STEP_COLLISION");expect(eligible(f,hash(x))).toBe(false);}
+ }
+ const all=[...evidence.records,...pass];expect(new Set(all.map((f:Decision)=>f.id)).size).toBe(all.length);expect(all).toHaveLength(28);
+ expect(state.semantic_pass_ids).toBe(all.length);expect(state.v79_individual_accounting.not_pass).toBe(450-all.length);
+ expect(state.v79_semantic_pass_paths).toContain("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json");
+});
