@@ -1,0 +1,2292 @@
+{
+  "scope": "MAT-ARIT-01",
+  "status": "CANDIDATE_CI_SUCCESS_NOT_ACTIVE",
+  "source_ci": 45784558390,
+  "source_job": 139787939623,
+  "source_sha": "581f6b46727d8dac1c9af1227a54c5c4a88d1967",
+  "summary": {
+    "checked": 59,
+    "changed": 52,
+    "unchanged": 391,
+    "variants": 472,
+    "mutants": 177,
+    "coverage": {
+      "principiante": {
+        "100": 1,
+        "101": 1,
+        "110": 1,
+        "111": 1,
+        "001": 2,
+        "010": 2,
+        "011": 1,
+        "000": 2
+      },
+      "intermedio": {
+        "100": 2,
+        "101": 2,
+        "110": 2,
+        "111": 2,
+        "001": 2,
+        "011": 2,
+        "010": 2,
+        "000": 3
+      },
+      "avanzado": {
+        "100": 4,
+        "101": 4,
+        "110": 4,
+        "111": 3,
+        "001": 4,
+        "000": 4,
+        "011": 4,
+        "010": 4
+      }
+    },
+    "semantic_pass": 0
+  },
+  "limits": "No activo en banco. 52 cambios y siete identidades dentro del alcance; 391 fuera del alcance preservados. No certificación semántica; integrar guard y selecciones, cotejar UI y publicación.",
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
+      "previous_sha256": "60eb7cbb59a443f4bcc2693bc955033069017e457f05a2f69a4682ff4d42c4f8",
+      "content_sha256": "3fb0461deec32ddd42a80a37a6c0440139231cdfa68d3ba674582486b3756fb9",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es -6.",
+          "truth": false,
+          "given": -6,
+          "value": 16,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 5+11=16. El valor afirmado es -6; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se resta el segundo sumando al primero."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 40.",
+          "truth": true,
+          "given": 40,
+          "value": 40,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 5×8=40. El valor afirmado es 40; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 93.",
+          "truth": false,
+          "given": 93,
+          "value": 128,
+          "reason": "Los paréntesis se resuelven primero: 5+11=16; después 16×8=128. El valor afirmado es 93; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 5+11×8."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-1",
+      "previous_sha256": "db5b6bb415b7c91f4b1de61a665aaea951ed0c54ebe01aa2749f5e9f225318ca",
+      "content_sha256": "4fc60c2ee3092d536808bd3d0f33e6a570c89f809c73289c96e6110ae970270f",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 84.",
+          "truth": false,
+          "given": 84,
+          "value": 36,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 6×6=36. El valor afirmado es 84; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 120.",
+          "truth": true,
+          "given": 120,
+          "value": 120,
+          "reason": "Los paréntesis se resuelven primero: 6+14=20; después 20×6=120. El valor afirmado es 120; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 20.",
+          "truth": true,
+          "given": 20,
+          "value": 20,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 6+14=20. El valor afirmado es 20; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
+      "previous_sha256": "5c4e7f051764d11a3052acd6005e17fcc04b6551be5372b5248147249e31c6be",
+      "content_sha256": "802b3ae68f94c31696713e08940805bfbbf9c010835c18c3503a9f022ebf30cd",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "111",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 44.",
+          "truth": true,
+          "given": 44,
+          "value": 44,
+          "reason": "Los paréntesis se resuelven primero: 7+4=11; después 11×4=44. El valor afirmado es 44; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 11.",
+          "truth": true,
+          "given": 11,
+          "value": 11,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 7+4=11. El valor afirmado es 11; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 28.",
+          "truth": true,
+          "given": 28,
+          "value": 28,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 7×4=28. El valor afirmado es 28; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
+      "previous_sha256": "4411163a39f652bf3dac2548af3d842a16d8abb6a198a4e0ecd4a6b0b05b2b3f",
+      "content_sha256": "2385201ced6ea48d2f787448bffe09fd0d91fb3879110288638880c4e33006f8",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 15.",
+          "truth": true,
+          "given": 15,
+          "value": 15,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 8+7=15. El valor afirmado es 15; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 14.",
+          "truth": false,
+          "given": 14,
+          "value": 16,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 8×2=16. El valor afirmado es 14; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 22.",
+          "truth": false,
+          "given": 22,
+          "value": 30,
+          "reason": "Los paréntesis se resuelven primero: 8+7=15; después 15×2=30. El valor afirmado es 22; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 8+7×2."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-4",
+      "previous_sha256": "adc5a9f4686e8e6354a51c112259fe3dc2ec2da00d3f70e3294e7bff07b7a403",
+      "content_sha256": "adc5a9f4686e8e6354a51c112259fe3dc2ec2da00d3f70e3294e7bff07b7a403",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 63.",
+          "truth": true,
+          "given": 63,
+          "value": 63,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 9×7=63. El valor afirmado es 63; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 133.",
+          "truth": true,
+          "given": 133,
+          "value": 133,
+          "reason": "Los paréntesis se resuelven primero: 9+10=19; después 19×7=133. El valor afirmado es 133; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es -1.",
+          "truth": false,
+          "given": -1,
+          "value": 19,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 9+10=19. El valor afirmado es -1; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se resta el segundo sumando al primero."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
+      "previous_sha256": "3112879ef9a0e22cc89d6c96b60ddd3d3e50aecf0e7648f293334fe59fe87b5d",
+      "content_sha256": "13ca599339891f969002ea2cb9c9ecb4636c02422c8f1554a2263dcb07ddf580",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 75.",
+          "truth": false,
+          "given": 75,
+          "value": 115,
+          "reason": "Los paréntesis se resuelven primero: 10+13=23; después 23×5=115. El valor afirmado es 75; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 10+13×5."
+        },
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es -3.",
+          "truth": false,
+          "given": -3,
+          "value": 23,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 10+13=23. El valor afirmado es -3; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se resta el segundo sumando al primero."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 50.",
+          "truth": true,
+          "given": 50,
+          "value": 50,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 10×5=50. El valor afirmado es 50; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-6",
+      "previous_sha256": "88932fcfae3e8d986fe7a8011ef43d27f26ad0221ccf90914ebc96366238d6e7",
+      "content_sha256": "0cf0a4c50df929e99f465168bccba0077d3022a76a7f555184bce4603a68e216",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 8.",
+          "truth": false,
+          "given": 8,
+          "value": 14,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 11+3=14. El valor afirmado es 8; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se resta el segundo sumando al primero."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 9.",
+          "truth": false,
+          "given": 9,
+          "value": 33,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 11×3=33. El valor afirmado es 9; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 42.",
+          "truth": true,
+          "given": 42,
+          "value": 42,
+          "reason": "Los paréntesis se resuelven primero: 11+3=14; después 14×3=42. El valor afirmado es 42; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-7",
+      "previous_sha256": "f60b7df014026717cc4363217ebb61be7cdf3bc84054c6b6ace5d85a5bb09bf9",
+      "content_sha256": "c77644918ce6ea2441e7b3fda1b71e53f95bd1b5b0a5078054878ec232b503c3",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 96.",
+          "truth": true,
+          "given": 96,
+          "value": 96,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 12×8=96. El valor afirmado es 96; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 60.",
+          "truth": false,
+          "given": 60,
+          "value": 144,
+          "reason": "Los paréntesis se resuelven primero: 12+6=18; después 18×8=144. El valor afirmado es 60; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 12+6×8."
+        },
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 18.",
+          "truth": true,
+          "given": 18,
+          "value": 18,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 12+6=18. El valor afirmado es 18; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
+      "previous_sha256": "31d3d99bd428e5750d6d0a23899830a06d8fd4a804ac70510902a04175e0d492",
+      "content_sha256": "7faf23feccd80f07396a2861e9f7899351f9e25bfaff442aa374439ae841a24e",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 67.",
+          "truth": false,
+          "given": 67,
+          "value": 132,
+          "reason": "Los paréntesis se resuelven primero: 13+9=22; después 22×6=132. El valor afirmado es 67; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 13+9×6."
+        },
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 4.",
+          "truth": false,
+          "given": 4,
+          "value": 22,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 13+9=22. El valor afirmado es 4; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se resta el segundo sumando al primero."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 54.",
+          "truth": false,
+          "given": 54,
+          "value": 78,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 13×6=78. El valor afirmado es 54; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-9",
+      "previous_sha256": "4a0e92549eac7d8b225151bfad79c77a8e29183770b21966523c2af2be6281e8",
+      "content_sha256": "5c92250b6e22a663998749e9a5d76a448fddc48e2aa74ebf2ece7cf2ab95e04a",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 26.",
+          "truth": true,
+          "given": 26,
+          "value": 26,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 14+12=26. El valor afirmado es 26; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 48.",
+          "truth": false,
+          "given": 48,
+          "value": 56,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 14×4=56. El valor afirmado es 48; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 62.",
+          "truth": false,
+          "given": 62,
+          "value": 104,
+          "reason": "Los paréntesis se resuelven primero: 14+12=26; después 26×4=104. El valor afirmado es 62; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 14+12×4."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
+      "previous_sha256": "0e94e25375f106233dbca057f383dcfcb5257e4003b77108fb6ebd265d3d3517",
+      "content_sha256": "7fff0fa55c1188e3bec9fe2e9f09930417b4ecbe4cd7d66e2c275bce6e1d3b47",
+      "level": "principiante",
+      "operation": "prioridad-de-operaciones",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "La suma dentro del paréntesis es 7.",
+          "truth": false,
+          "given": 7,
+          "value": 19,
+          "reason": "Dentro del paréntesis se suman ambos operandos: 13+6=19. El valor afirmado es 7; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se resta el segundo sumando al primero."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Al distribuir, el producto del primer sumando por el factor es 30.",
+          "truth": false,
+          "given": 30,
+          "value": 65,
+          "reason": "La distributiva multiplica cada sumando por el mismo factor: 13×5=65. El valor afirmado es 30; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 43.",
+          "truth": false,
+          "given": 43,
+          "value": 95,
+          "reason": "Los paréntesis se resuelven primero: 13+6=19; después 19×5=95. El valor afirmado es 43; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 13+6×5."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "previous_sha256": "3427391461355ad3615aa37bf9edf4803862b8a2d7a151ba6d58aab927aa295a",
+      "content_sha256": "6b4817bf80ef73ca5e8e9369397f0a96134623a1ac5a42b7b7d47b0bf603375e",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "111",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 5.",
+          "truth": true,
+          "given": 5,
+          "value": 5,
+          "reason": "El factor disminuye una unidad: 6−1=5. El valor afirmado es 5; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 150.",
+          "truth": true,
+          "given": 150,
+          "value": 150,
+          "reason": "Primero aplica ambos cambios: 12+2=14 y 6−1=5. Luego (16+14)×5=150. El valor afirmado es 150; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 30.",
+          "truth": true,
+          "given": 30,
+          "value": 30,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 16+(12+2)=30. El valor afirmado es 30; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "previous_sha256": "774a39b2d904e76862f0869bd86152cba5102196c125a523d6873245b01bfc39",
+      "content_sha256": "774a39b2d904e76862f0869bd86152cba5102196c125a523d6873245b01bfc39",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 96.",
+          "truth": false,
+          "given": 96,
+          "value": 102,
+          "reason": "Primero aplica ambos cambios: 15+2=17 y 4−1=3. Luego (17+17)×3=102. El valor afirmado es 96; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 32.",
+          "truth": false,
+          "given": 32,
+          "value": 34,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 17+(15+2)=34. El valor afirmado es 32; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 3.",
+          "truth": true,
+          "given": 3,
+          "value": 3,
+          "reason": "El factor disminuye una unidad: 4−1=3. El valor afirmado es 3; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "previous_sha256": "01f920658c1166d4794ff83ca915a25e58b746db2f215b517ecda768ec4bdfde",
+      "content_sha256": "e4706f1cb13ce02103cdb66e7ab42b158889d2838e0d931382ec97dd9f1bcb2b",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Antes de modificar los datos, el valor de la expresión original es 46.",
+          "truth": true,
+          "given": 46,
+          "value": 46,
+          "reason": "Antes de los cambios los operandos conservan sus valores: (18+5)×2=46. El valor afirmado es 46; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 1.",
+          "truth": true,
+          "given": 1,
+          "value": 1,
+          "reason": "El factor disminuye una unidad: 2−1=1. El valor afirmado es 1; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 23.",
+          "truth": false,
+          "given": 23,
+          "value": 25,
+          "reason": "Primero aplica ambos cambios: 5+2=7 y 2−1=1. Luego (18+7)×1=25. El valor afirmado es 23; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "previous_sha256": "6670de329bff92118aa310bdaa45a21c796f0e3ae90b88195b6636c5dc758d09",
+      "content_sha256": "baaa5bc475814cff50d820b97912ff7726c4909f0e3f9ff18d860654f94ee778",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 8.",
+          "truth": false,
+          "given": 8,
+          "value": 6,
+          "reason": "El factor disminuye una unidad: 7−1=6. El valor afirmado es 8; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 162.",
+          "truth": false,
+          "given": 162,
+          "value": 174,
+          "reason": "Primero aplica ambos cambios: 8+2=10 y 7−1=6. Luego (19+10)×6=174. El valor afirmado es 162; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 29.",
+          "truth": true,
+          "given": 29,
+          "value": 29,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 19+(8+2)=29. El valor afirmado es 29; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "previous_sha256": "a044697e674a1154ecd4976e6543ac0b3245dffd5690161200c546225b02199e",
+      "content_sha256": "0d8b963781b6ef1e84c8cad724e1b19007798fc7e1de38118d06808703ab1cd2",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 132.",
+          "truth": true,
+          "given": 132,
+          "value": 132,
+          "reason": "Primero aplica ambos cambios: 11+2=13 y 5−1=4. Luego (20+13)×4=132. El valor afirmado es 132; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 31.",
+          "truth": false,
+          "given": 31,
+          "value": 33,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 20+(11+2)=33. El valor afirmado es 31; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 6.",
+          "truth": false,
+          "given": 6,
+          "value": 4,
+          "reason": "El factor disminuye una unidad: 5−1=4. El valor afirmado es 6; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "previous_sha256": "8822e3a907f335a0557b8a45c903631fd7a619b58c4ae7d89f0fc4fa3a439a29",
+      "content_sha256": "11307fd16cc3e829ce4cac7092ebca7a1c846468c535df028c60e18ef7117920",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 35.",
+          "truth": false,
+          "given": 35,
+          "value": 37,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 21+(14+2)=37. El valor afirmado es 35; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 4.",
+          "truth": false,
+          "given": 4,
+          "value": 2,
+          "reason": "El factor disminuye una unidad: 3−1=2. El valor afirmado es 4; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 70.",
+          "truth": false,
+          "given": 70,
+          "value": 74,
+          "reason": "Primero aplica ambos cambios: 14+2=16 y 3−1=2. Luego (21+16)×2=74. El valor afirmado es 70; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "previous_sha256": "1121cd56f9767747fcb20ce08d700f31a5af1f82769e688680d223881363aa2a",
+      "content_sha256": "9be60909c3e4244ba26fee7cd29eaa748d9a2c16c9c87d832fc7a52ade682257",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 9.",
+          "truth": false,
+          "given": 9,
+          "value": 7,
+          "reason": "El factor disminuye una unidad: 8−1=7. El valor afirmado es 9; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 273.",
+          "truth": false,
+          "given": 273,
+          "value": 287,
+          "reason": "Primero aplica ambos cambios: 17+2=19 y 8−1=7. Luego (22+19)×7=287. El valor afirmado es 273; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 39.",
+          "truth": false,
+          "given": 39,
+          "value": 41,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 22+(17+2)=41. El valor afirmado es 39; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-7",
+      "previous_sha256": "5cf079db4723eabd97dbbea0636d9cd99117ccb64e3843655d036ec0cd576076",
+      "content_sha256": "fc0b8c2e65fb64be5f73e5d39ec740ef2fb1d4550649e9a7b80cf488c2e70d9c",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 75.",
+          "truth": true,
+          "given": 75,
+          "value": 75,
+          "reason": "Primero aplica ambos cambios: 7+2=9 y 6−1=5. Luego (6+9)×5=75. El valor afirmado es 75; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 15.",
+          "truth": true,
+          "given": 15,
+          "value": 15,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 6+(7+2)=15. El valor afirmado es 15; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 7.",
+          "truth": false,
+          "given": 7,
+          "value": 5,
+          "reason": "El factor disminuye una unidad: 6−1=5. El valor afirmado es 7; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-8",
+      "previous_sha256": "d6ff3d19a9b390ea9393452609046b0db787ade8c43ed0e6245f3e701a50227a",
+      "content_sha256": "de5b349bf114295fddf11cba4da2107c9d0340ea50019ad699415046cae4826b",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "111",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 19.",
+          "truth": true,
+          "given": 19,
+          "value": 19,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 7+(10+2)=19. El valor afirmado es 19; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 3.",
+          "truth": true,
+          "given": 3,
+          "value": 3,
+          "reason": "El factor disminuye una unidad: 4−1=3. El valor afirmado es 3; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 57.",
+          "truth": true,
+          "given": 57,
+          "value": 57,
+          "reason": "Primero aplica ambos cambios: 10+2=12 y 4−1=3. Luego (7+12)×3=57. El valor afirmado es 57; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-9",
+      "previous_sha256": "6e6d14c3bcb827b9e7c3f6063d8da73788b5d57096291bb5bae52068bc4247b3",
+      "content_sha256": "f931fd4917a6b1073ccf52a8455e8f1f8a7ba054198629ad156fdac6f0094850",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 1.",
+          "truth": true,
+          "given": 1,
+          "value": 1,
+          "reason": "El factor disminuye una unidad: 2−1=1. El valor afirmado es 1; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 23.",
+          "truth": true,
+          "given": 23,
+          "value": 23,
+          "reason": "Primero aplica ambos cambios: 13+2=15 y 2−1=1. Luego (8+15)×1=23. El valor afirmado es 23; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Antes de modificar los datos, el valor de la expresión original es 46.",
+          "truth": false,
+          "given": 46,
+          "value": 42,
+          "reason": "Antes de los cambios los operandos conservan sus valores: (8+13)×2=42. El valor afirmado es 46; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica el aumento al sumando antes de calcular el valor original."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "previous_sha256": "1e09f16b190834e4d02c13aca51286898cc8c464d3fb8c69cb929ef58a95ad52",
+      "content_sha256": "1e09f16b190834e4d02c13aca51286898cc8c464d3fb8c69cb929ef58a95ad52",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 162.",
+          "truth": true,
+          "given": 162,
+          "value": 162,
+          "reason": "Primero aplica ambos cambios: 16+2=18 y 7−1=6. Luego (9+18)×6=162. El valor afirmado es 162; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 25.",
+          "truth": false,
+          "given": 25,
+          "value": 27,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 9+(16+2)=27. El valor afirmado es 25; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 8.",
+          "truth": false,
+          "given": 8,
+          "value": 6,
+          "reason": "El factor disminuye una unidad: 7−1=6. El valor afirmado es 8; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "previous_sha256": "093012a648fcb097642ed640ae5b70ea429a0e5ee077f7dfe78b9487bdd5848b",
+      "content_sha256": "7c3531fd0488fcf68f24d9c5f998b97853412fe6a631a9200353db59d8d2f518",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 18.",
+          "truth": true,
+          "given": 18,
+          "value": 18,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 10+(6+2)=18. El valor afirmado es 18; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 6.",
+          "truth": false,
+          "given": 6,
+          "value": 4,
+          "reason": "El factor disminuye una unidad: 5−1=4. El valor afirmado es 6; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 64.",
+          "truth": false,
+          "given": 64,
+          "value": 72,
+          "reason": "Primero aplica ambos cambios: 6+2=8 y 5−1=4. Luego (10+8)×4=72. El valor afirmado es 64; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "previous_sha256": "b5313286afa33059f3c5e2a754ba18330f1569e5e443f4ff3d87855f62053b83",
+      "content_sha256": "67723d4446f55472c20664b4f2ce9bb6a635fad83c7ebae5037deabec90c0cb3",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 2.",
+          "truth": true,
+          "given": 2,
+          "value": 2,
+          "reason": "El factor disminuye una unidad: 3−1=2. El valor afirmado es 2; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 44.",
+          "truth": true,
+          "given": 44,
+          "value": 44,
+          "reason": "Primero aplica ambos cambios: 9+2=11 y 3−1=2. Luego (11+11)×2=44. El valor afirmado es 44; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 20.",
+          "truth": false,
+          "given": 20,
+          "value": 22,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 11+(9+2)=22. El valor afirmado es 20; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "previous_sha256": "530a5f527b21d9c19d173587d277400cc5dd177e7e18f6b5a5c236bdf25b2ae6",
+      "content_sha256": "193539b2e6b24475cc64aa2bfe5cfbcb216786675147c68b6ec7342dec4a5f8b",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 168.",
+          "truth": false,
+          "given": 168,
+          "value": 182,
+          "reason": "Primero aplica ambos cambios: 12+2=14 y 8−1=7. Luego (12+14)×7=182. El valor afirmado es 168; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 26.",
+          "truth": true,
+          "given": 26,
+          "value": 26,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 12+(12+2)=26. El valor afirmado es 26; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 7.",
+          "truth": true,
+          "given": 7,
+          "value": 7,
+          "reason": "El factor disminuye una unidad: 8−1=7. El valor afirmado es 7; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "previous_sha256": "6460775dec0ebc6adc501eadb3e2457382b20e1f3478f30852fe52fb683107c6",
+      "content_sha256": "04763341753aa693c5c7c252d847d09a10db988faedf751961950361721dbefd",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "El segundo sumando después del cambio es 15.",
+          "truth": false,
+          "given": 15,
+          "value": 17,
+          "reason": "Solo aumenta el segundo sumando: 15+2=17; todavía falta sumar el primero y multiplicar. El valor afirmado es 15; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite el aumento del segundo sumando."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 5.",
+          "truth": true,
+          "given": 5,
+          "value": 5,
+          "reason": "El factor disminuye una unidad: 6−1=5. El valor afirmado es 5; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 140.",
+          "truth": false,
+          "given": 140,
+          "value": 150,
+          "reason": "Primero aplica ambos cambios: 15+2=17 y 6−1=5. Luego (13+17)×5=150. El valor afirmado es 140; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-18",
+      "previous_sha256": "ada635446ea63c7f54f16080b4f32bc0c91e941c6efb14d577c39681516495db",
+      "content_sha256": "b2f844c62562ab070cde2c56325b6bf028b8787516485ac981e10ee5ac9e7e48",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 3.",
+          "truth": false,
+          "given": 3,
+          "value": 1,
+          "reason": "El factor disminuye una unidad: 2−1=1. El valor afirmado es 3; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 29.",
+          "truth": true,
+          "given": 29,
+          "value": 29,
+          "reason": "Primero aplica ambos cambios: 14+2=16 y 2−1=1. Luego (13+16)×1=29. El valor afirmado es 29; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Antes de modificar los datos, el valor de la expresión original es 54.",
+          "truth": true,
+          "given": 54,
+          "value": 54,
+          "reason": "Antes de los cambios los operandos conservan sus valores: (13+14)×2=54. El valor afirmado es 54; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-19",
+      "previous_sha256": "644acedd636eaa0314062ac7d585b5c2001890687df8fbb525c64b96783f6b75",
+      "content_sha256": "2e8020edd5a1f0a92cbd2f6032ada01028044e2bb190650a5cbbc006d6e82c75",
+      "level": "intermedio",
+      "operation": "modificar-parentesis-y-factor",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 42.",
+          "truth": false,
+          "given": 42,
+          "value": 48,
+          "reason": "Primero aplica ambos cambios: 6+2=8 y 4−1=3. Luego (8+8)×3=48. El valor afirmado es 42; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 14.",
+          "truth": false,
+          "given": 14,
+          "value": 16,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 8+(6+2)=16. El valor afirmado es 14; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 5.",
+          "truth": false,
+          "given": 5,
+          "value": 3,
+          "reason": "El factor disminuye una unidad: 4−1=3. El valor afirmado es 5; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "previous_sha256": "aa093142a86b8ade88755e741a2093dda23b90aedd3d3f58cdde8945a4917f92",
+      "content_sha256": "602ff596b5e5ff4b5c517c6b0bfe1521531d431e6b2fed8ad836dba0d5a4fc0f",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 92.",
+          "truth": false,
+          "given": 92,
+          "value": 52,
+          "reason": "Al distribuir y cancelar 10×4 con su opuesto, queda 13×4=52. El valor afirmado es 92; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "truth": false,
+          "given": -13,
+          "value": 13,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 13 multiplicado por 4. El valor afirmado es -13; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 10×4 se restara 9×4, el resultado sería 56.",
+          "truth": true,
+          "given": 56,
+          "value": 56,
+          "reason": "La diferencia entre los términos restados es -1×4; se resta esa diferencia al resultado original 52: 56. El valor afirmado es 56; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "previous_sha256": "09ccc6cd21e256c7271c7b988531e95ddc70f89e7cbbd867683fb382a12a8274",
+      "content_sha256": "79c5f4202874d64945b13808515fa90fa07463ea96f82395222758f0e15bbcbb",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "111",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 16.",
+          "truth": true,
+          "given": 16,
+          "value": 16,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 16 multiplicado por 2. El valor afirmado es 16; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 11×2 se restara 12×2, el resultado sería 30.",
+          "truth": true,
+          "given": 30,
+          "value": 30,
+          "reason": "La diferencia entre los términos restados es 1×2; se resta esa diferencia al resultado original 32: 30. El valor afirmado es 30; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 32.",
+          "truth": true,
+          "given": 32,
+          "value": 32,
+          "reason": "Al distribuir y cancelar 11×2 con su opuesto, queda 16×2=32. El valor afirmado es 32; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "previous_sha256": "e1a3bf3447709251cadbe5f724e10c70c6daf147ea27541b0df9b0298cf72dc9",
+      "content_sha256": "1164d3326a45048a50eef486b15e9b37b268e866bf77a57eb8788fc181ef0d8d",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 12×7 se restara 11×7, el resultado sería 140.",
+          "truth": true,
+          "given": 140,
+          "value": 140,
+          "reason": "La diferencia entre los términos restados es -1×7; se resta esa diferencia al resultado original 133: 140. El valor afirmado es 140; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 217.",
+          "truth": false,
+          "given": 217,
+          "value": 133,
+          "reason": "Al distribuir y cancelar 12×7 con su opuesto, queda 19×7=133. El valor afirmado es 217; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "truth": false,
+          "given": -19,
+          "value": 19,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 19 multiplicado por 7. El valor afirmado es -19; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "previous_sha256": "958e01e1b1b2962d7e856d6e04d40ca4a26f2eeac049103a07359358683e86c4",
+      "content_sha256": "3d8bbf11af9ce07507cc298154a7373c3f3fb1aeb42405a3af3dd462e88d7639",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 45.",
+          "truth": true,
+          "given": 45,
+          "value": 45,
+          "reason": "Al distribuir y cancelar 13×5 con su opuesto, queda 9×5=45. El valor afirmado es 45; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -9.",
+          "truth": false,
+          "given": -9,
+          "value": 9,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 9 multiplicado por 5. El valor afirmado es -9; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 13×5 se restara 14×5, el resultado sería 40.",
+          "truth": true,
+          "given": 40,
+          "value": 40,
+          "reason": "La diferencia entre los términos restados es 1×5; se resta esa diferencia al resultado original 45: 40. El valor afirmado es 40; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "previous_sha256": "4ea90a0ce2831772cdb255d37e2b7161eef32c06ab883c25a7963d635fad6aff",
+      "content_sha256": "60305afaef557a0f7e841be94a0b88c96726b75b52682f617027f4f527fd9eff",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "111",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 12.",
+          "truth": true,
+          "given": 12,
+          "value": 12,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 12 multiplicado por 3. El valor afirmado es 12; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 14×3 se restara 13×3, el resultado sería 39.",
+          "truth": true,
+          "given": 39,
+          "value": 39,
+          "reason": "La diferencia entre los términos restados es -1×3; se resta esa diferencia al resultado original 36: 39. El valor afirmado es 39; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 36.",
+          "truth": true,
+          "given": 36,
+          "value": 36,
+          "reason": "Al distribuir y cancelar 14×3 con su opuesto, queda 12×3=36. El valor afirmado es 36; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "previous_sha256": "7fbae3b58a022a58f91e4dfc8efc21f1a1fd4462280dad0a39cebf1dfe83b6c5",
+      "content_sha256": "831004639ddd75693f5666867ada52e0c3ddd2e0dae32de745dc591692794c91",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 15×8 se restara 16×8, el resultado sería 112.",
+          "truth": true,
+          "given": 112,
+          "value": 112,
+          "reason": "La diferencia entre los términos restados es 1×8; se resta esa diferencia al resultado original 120: 112. El valor afirmado es 112; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 120.",
+          "truth": true,
+          "given": 120,
+          "value": 120,
+          "reason": "Al distribuir y cancelar 15×8 con su opuesto, queda 15×8=120. El valor afirmado es 120; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -15.",
+          "truth": false,
+          "given": -15,
+          "value": 15,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 15 multiplicado por 8. El valor afirmado es -15; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "previous_sha256": "d9ba1aa463c1806223f7036fcaddc3001e74d14f93eb9596c602e7f7f1836037",
+      "content_sha256": "4da557e971e1e08ac5cd37c1f93347db45052dadf1ae4dde18fae3734cfaa094",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 204.",
+          "truth": false,
+          "given": 204,
+          "value": 108,
+          "reason": "Al distribuir y cancelar 16×6 con su opuesto, queda 18×6=108. El valor afirmado es 204; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -18.",
+          "truth": false,
+          "given": -18,
+          "value": 18,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 18 multiplicado por 6. El valor afirmado es -18; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 16×6 se restara 15×6, el resultado sería 108.",
+          "truth": false,
+          "given": 108,
+          "value": 114,
+          "reason": "La diferencia entre los términos restados es -1×6; se resta esa diferencia al resultado original 108: 114. El valor afirmado es 108; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "previous_sha256": "3db44be7f154e61f48de7979c577b0fd66061747be46f836d4e2f176643509a3",
+      "content_sha256": "462f15f3ef5aa1ec0d0a0e3051cecae0cb0e09e58f9552651648f0a79e38f278",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 8.",
+          "truth": true,
+          "given": 8,
+          "value": 8,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 8 multiplicado por 4. El valor afirmado es 8; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 17×4 se restara 18×4, el resultado sería 28.",
+          "truth": true,
+          "given": 28,
+          "value": 28,
+          "reason": "La diferencia entre los términos restados es 1×4; se resta esa diferencia al resultado original 32: 28. El valor afirmado es 28; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 100.",
+          "truth": false,
+          "given": 100,
+          "value": 32,
+          "reason": "Al distribuir y cancelar 17×4 con su opuesto, queda 8×4=32. El valor afirmado es 100; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "previous_sha256": "3af7f397ad5ef3ff111f4674853b138796df471e3045bc1d55318a1d5ba1a53b",
+      "content_sha256": "3af7f397ad5ef3ff111f4674853b138796df471e3045bc1d55318a1d5ba1a53b",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 18×2 se restara 17×2, el resultado sería 24.",
+          "truth": true,
+          "given": 24,
+          "value": 24,
+          "reason": "La diferencia entre los términos restados es -1×2; se resta esa diferencia al resultado original 22: 24. El valor afirmado es 24; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 22.",
+          "truth": true,
+          "given": 22,
+          "value": 22,
+          "reason": "Al distribuir y cancelar 18×2 con su opuesto, queda 11×2=22. El valor afirmado es 22; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false,
+          "given": -11,
+          "value": 11,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 11 multiplicado por 2. El valor afirmado es -11; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "previous_sha256": "27ab27301cd560bdc90df16613275dad27ea2307e099bda4136bde46e4676d00",
+      "content_sha256": "9d4fb19379e1f4f9f8c0b4a0a5075885d94f43149d44f2b4598b8dd20217c34b",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 231.",
+          "truth": false,
+          "given": 231,
+          "value": 98,
+          "reason": "Al distribuir y cancelar 19×7 con su opuesto, queda 14×7=98. El valor afirmado es 231; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false,
+          "given": -14,
+          "value": 14,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 14 multiplicado por 7. El valor afirmado es -14; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 19×7 se restara 20×7, el resultado sería 98.",
+          "truth": false,
+          "given": 98,
+          "value": 91,
+          "reason": "La diferencia entre los términos restados es 1×7; se resta esa diferencia al resultado original 98: 91. El valor afirmado es 98; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "previous_sha256": "86808155c5689d226dcf131ebe808b25f40987858677bfc590e37272a5ad85ef",
+      "content_sha256": "e890adadadd68bb1bff4677c70e48d8d37572d929b17fa98359b81da96fd4cd6",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "111",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "truth": true,
+          "given": 17,
+          "value": 17,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 17 multiplicado por 5. El valor afirmado es 17; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 20×5 se restara 19×5, el resultado sería 90.",
+          "truth": true,
+          "given": 90,
+          "value": 90,
+          "reason": "La diferencia entre los términos restados es -1×5; se resta esa diferencia al resultado original 85: 90. El valor afirmado es 90; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 85.",
+          "truth": true,
+          "given": 85,
+          "value": 85,
+          "reason": "Al distribuir y cancelar 20×5 con su opuesto, queda 17×5=85. El valor afirmado es 85; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "previous_sha256": "2483dd54f1b097b7eb09a37ffe8ef98c74490e56e0c37192803c5dd1338934a7",
+      "content_sha256": "9f39eb0f5f1b75a3800d1da913f9d47643329f6b4e9697199247490a48ab5160",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "101",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 21×3 se restara 22×3, el resultado sería 18.",
+          "truth": true,
+          "given": 18,
+          "value": 18,
+          "reason": "La diferencia entre los términos restados es 1×3; se resta esa diferencia al resultado original 21: 18. El valor afirmado es 18; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 21.",
+          "truth": true,
+          "given": 21,
+          "value": 21,
+          "reason": "Al distribuir y cancelar 21×3 con su opuesto, queda 7×3=21. El valor afirmado es 21; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -7.",
+          "truth": false,
+          "given": -7,
+          "value": 7,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 7 multiplicado por 3. El valor afirmado es -7; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "previous_sha256": "381f7e67ec133ddebfbfd70cc5f33e8661e6d647094d60922f6b92fbc6150ee1",
+      "content_sha256": "fb039629d82b3b77ab70ea9e5da95c7e6f300bae6eabbdd3fa9773926c6a8fa1",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 256.",
+          "truth": false,
+          "given": 256,
+          "value": 80,
+          "reason": "Al distribuir y cancelar 22×8 con su opuesto, queda 10×8=80. El valor afirmado es 256; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true,
+          "given": 10,
+          "value": 10,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 10 multiplicado por 8. El valor afirmado es 10; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 22×8 se restara 21×8, el resultado sería 80.",
+          "truth": false,
+          "given": 80,
+          "value": 88,
+          "reason": "La diferencia entre los términos restados es -1×8; se resta esa diferencia al resultado original 80: 88. El valor afirmado es 80; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "previous_sha256": "3ec9b591787931943cc8b55a324ed3b02455e226b829bd797e97e7506e5d9b0a",
+      "content_sha256": "3904067ff374fa6b2c024cf835b30c4e8ff8da74d51e5e400807163aecc895ac",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "truth": false,
+          "given": -13,
+          "value": 13,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 13 multiplicado por 6. El valor afirmado es -13; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 23×6 se restara 24×6, el resultado sería 84.",
+          "truth": false,
+          "given": 84,
+          "value": 72,
+          "reason": "La diferencia entre los términos restados es 1×6; se resta esa diferencia al resultado original 78: 72. El valor afirmado es 84; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 78.",
+          "truth": true,
+          "given": 78,
+          "value": 78,
+          "reason": "Al distribuir y cancelar 23×6 con su opuesto, queda 13×6=78. El valor afirmado es 78; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "previous_sha256": "5ebe6879263a25969147bf26818789adb9117eaedba6d94a6c27c259734bfdff",
+      "content_sha256": "3d891508b422e006e94cc418a8d1f5925ea2af4de39a3742d58cebba8655fa86",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 24×4 se restara 23×4, el resultado sería 60.",
+          "truth": false,
+          "given": 60,
+          "value": 68,
+          "reason": "La diferencia entre los términos restados es -1×4; se resta esa diferencia al resultado original 64: 68. El valor afirmado es 60; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 64.",
+          "truth": true,
+          "given": 64,
+          "value": 64,
+          "reason": "Al distribuir y cancelar 24×4 con su opuesto, queda 16×4=64. El valor afirmado es 64; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -16.",
+          "truth": false,
+          "given": -16,
+          "value": 16,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 16 multiplicado por 4. El valor afirmado es -16; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "previous_sha256": "8a3d954e3039c986bd09711b9350af87896e405bcb47f14134689a37388395e0",
+      "content_sha256": "396d3ea578d75e545e2eacb8d9433828f276cdf103140e85776cd83115a7a9bd",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 54.",
+          "truth": false,
+          "given": 54,
+          "value": 38,
+          "reason": "Al distribuir y cancelar 8×2 con su opuesto, queda 19×2=38. El valor afirmado es 54; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -19.",
+          "truth": false,
+          "given": -19,
+          "value": 19,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 19 multiplicado por 2. El valor afirmado es -19; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 8×2 se restara 9×2, el resultado sería 38.",
+          "truth": false,
+          "given": 38,
+          "value": 36,
+          "reason": "La diferencia entre los términos restados es 1×2; se resta esa diferencia al resultado original 38: 36. El valor afirmado es 38; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "previous_sha256": "98970d801a45370b5ced60923c07dfee84c2fbafdd2ab3af220e4e5ea4ee9eb6",
+      "content_sha256": "01490e48da0786a00b52359734680c34ca3a6f61df3aafdcbdf7a686b8f414c2",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 9.",
+          "truth": true,
+          "given": 9,
+          "value": 9,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 9 multiplicado por 7. El valor afirmado es 9; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 9×7 se restara 8×7, el resultado sería 63.",
+          "truth": false,
+          "given": 63,
+          "value": 70,
+          "reason": "La diferencia entre los términos restados es -1×7; se resta esa diferencia al resultado original 63: 70. El valor afirmado es 63; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 126.",
+          "truth": false,
+          "given": 126,
+          "value": 63,
+          "reason": "Al distribuir y cancelar 9×7 con su opuesto, queda 9×7=63. El valor afirmado es 126; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "previous_sha256": "e5e82a01bf97482df5f42a1df3ec4184d810b7f1d6891bff77058b4d091622a7",
+      "content_sha256": "2ae82347a5be700de4fc9d78f591b8910902ae5ad09b0fac6911544dbc0bce3f",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 10×5 se restara 11×5, el resultado sería 65.",
+          "truth": false,
+          "given": 65,
+          "value": 55,
+          "reason": "La diferencia entre los términos restados es 1×5; se resta esa diferencia al resultado original 60: 55. El valor afirmado es 65; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 60.",
+          "truth": true,
+          "given": 60,
+          "value": 60,
+          "reason": "Al distribuir y cancelar 10×5 con su opuesto, queda 12×5=60. El valor afirmado es 60; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -12.",
+          "truth": false,
+          "given": -12,
+          "value": 12,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 12 multiplicado por 5. El valor afirmado es -12; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "previous_sha256": "0968e8ed0eb902594fdcf3066221ddb94524b268ad9892cc960286a084a8b9d7",
+      "content_sha256": "260ce065915e51e5015af3bbb2dfc4a79bb475957b3e3c99c621a3915ed40dbf",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "000",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 78.",
+          "truth": false,
+          "given": 78,
+          "value": 45,
+          "reason": "Al distribuir y cancelar 11×3 con su opuesto, queda 15×3=45. El valor afirmado es 78; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -15.",
+          "truth": false,
+          "given": -15,
+          "value": 15,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 15 multiplicado por 3. El valor afirmado es -15; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 11×3 se restara 10×3, el resultado sería 45.",
+          "truth": false,
+          "given": 45,
+          "value": 48,
+          "reason": "La diferencia entre los términos restados es -1×3; se resta esa diferencia al resultado original 45: 48. El valor afirmado es 45; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "previous_sha256": "15498dfc7eb7a8d928faeb746c8d6cc65c3e45d83af45ce993a5c77d498b5c9a",
+      "content_sha256": "e281aada13d2edc0087122de4d3cff530797e3aeb7b551f9b3981bebb6922ae1",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true,
+          "given": 18,
+          "value": 18,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 18 multiplicado por 8. El valor afirmado es 18; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 12×8 se restara 13×8, el resultado sería 136.",
+          "truth": true,
+          "given": 136,
+          "value": 136,
+          "reason": "La diferencia entre los términos restados es 1×8; se resta esa diferencia al resultado original 144: 136. El valor afirmado es 136; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 240.",
+          "truth": false,
+          "given": 240,
+          "value": 144,
+          "reason": "Al distribuir y cancelar 12×8 con su opuesto, queda 18×8=144. El valor afirmado es 240; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-24",
+      "previous_sha256": "e0adddf2f5ec8c4c68d5e00aa70a20121e406b2a46c7b6f973371e29d3645d35",
+      "content_sha256": "9f2dde8f9139eef01b1f329422213ce34fc743e7449197992ceab4565c174da4",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 34.",
+          "truth": true,
+          "given": 34,
+          "value": 34,
+          "reason": "Al distribuir y cancelar 15×2 con su opuesto, queda 17×2=34. El valor afirmado es 34; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "truth": true,
+          "given": 17,
+          "value": 17,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 17 multiplicado por 2. El valor afirmado es 17; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 15×2 se restara 14×2, el resultado sería 32.",
+          "truth": false,
+          "given": 32,
+          "value": 36,
+          "reason": "La diferencia entre los términos restados es -1×2; se resta esa diferencia al resultado original 34: 36. El valor afirmado es 32; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "previous_sha256": "2c867f1633a2f8051d45dfc7d3a3ec7a54d9a9ad26f9e476c5bc607166f3fa84",
+      "content_sha256": "ab0ac06e8b58e39478b6333a3e2117328a899bf9d4d3509fb34fde5b1f331dee",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 9×5 se restara 8×5, el resultado sería 70.",
+          "truth": false,
+          "given": 70,
+          "value": 80,
+          "reason": "La diferencia entre los términos restados es -1×5; se resta esa diferencia al resultado original 75: 80. El valor afirmado es 70; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 75.",
+          "truth": true,
+          "given": 75,
+          "value": 75,
+          "reason": "Al distribuir y cancelar 9×5 con su opuesto, queda 15×5=75. El valor afirmado es 75; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 15.",
+          "truth": true,
+          "given": 15,
+          "value": 15,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 15 multiplicado por 5. El valor afirmado es 15; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "previous_sha256": "c694fa484be95331a34addf6d5e455822ea9bad27a36a85b4c093e3539fc4ffc",
+      "content_sha256": "fd63dc80d8b585a91962d6914196ec3b316c5a062b14945ba15c5fc03788ec7c",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 18.",
+          "truth": true,
+          "given": 18,
+          "value": 18,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 18 multiplicado por 2. El valor afirmado es 18; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 21×2 se restara 22×2, el resultado sería 34.",
+          "truth": true,
+          "given": 34,
+          "value": 34,
+          "reason": "La diferencia entre los términos restados es 1×2; se resta esa diferencia al resultado original 36: 34. El valor afirmado es 34; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 78.",
+          "truth": false,
+          "given": 78,
+          "value": 36,
+          "reason": "Al distribuir y cancelar 21×2 con su opuesto, queda 18×2=36. El valor afirmado es 78; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "previous_sha256": "83a09ea1fe0a6ba1e50f13a3352e14bf9c04c14b8977466af551bd9d9386f5d1",
+      "content_sha256": "68e9cfba2fd71a31849767dd70aa39de4057dfa25838ffb7d8a133ba696205d6",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 144.",
+          "truth": false,
+          "given": 144,
+          "value": 48,
+          "reason": "Al distribuir y cancelar 16×6 con su opuesto, queda 8×6=48. El valor afirmado es 144; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 8.",
+          "truth": true,
+          "given": 8,
+          "value": 8,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 8 multiplicado por 6. El valor afirmado es 8; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 16×6 se restara 15×6, el resultado sería 48.",
+          "truth": false,
+          "given": 48,
+          "value": 54,
+          "reason": "La diferencia entre los términos restados es -1×6; se resta esa diferencia al resultado original 48: 54. El valor afirmado es 48; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "previous_sha256": "54110a12bbf14f64a84f9ed09ee3c0ee667453c7b4c5a15e488ebc2a315f5a88",
+      "content_sha256": "54110a12bbf14f64a84f9ed09ee3c0ee667453c7b4c5a15e488ebc2a315f5a88",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 11×3 se restara 12×3, el resultado sería 30.",
+          "truth": true,
+          "given": 30,
+          "value": 30,
+          "reason": "La diferencia entre los términos restados es 1×3; se resta esa diferencia al resultado original 33: 30. El valor afirmado es 30; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 66.",
+          "truth": false,
+          "given": 66,
+          "value": 33,
+          "reason": "Al distribuir y cancelar 11×3 con su opuesto, queda 11×3=33. El valor afirmado es 66; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -11.",
+          "truth": false,
+          "given": -11,
+          "value": 11,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 11 multiplicado por 3. El valor afirmado es -11; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "previous_sha256": "76407a12efaf5cf5f608a0357991e34de2bf6e19e9bd01fe7d93e7071597afa9",
+      "content_sha256": "76407a12efaf5cf5f608a0357991e34de2bf6e19e9bd01fe7d93e7071597afa9",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "001",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -14.",
+          "truth": false,
+          "given": -14,
+          "value": 14,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 14 multiplicado por 7. El valor afirmado es -14; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 23×7 se restara 22×7, el resultado sería 105.",
+          "truth": true,
+          "given": 105,
+          "value": 105,
+          "reason": "La diferencia entre los términos restados es -1×7; se resta esa diferencia al resultado original 98: 105. El valor afirmado es 105; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 259.",
+          "truth": false,
+          "given": 259,
+          "value": 98,
+          "reason": "Al distribuir y cancelar 23×7 con su opuesto, queda 14×7=98. El valor afirmado es 259; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "previous_sha256": "4d3e8d9dfae3a2f77e97abdf4f54ba91619c428ca41e0d324a43293ac4a0a041",
+      "content_sha256": "0f34f49ebddf8912235f764306ce819eb4f8f8c3fa9a52c94f6a25e51aa49d26",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "011",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 140.",
+          "truth": false,
+          "given": 140,
+          "value": 68,
+          "reason": "Al distribuir y cancelar 18×4 con su opuesto, queda 17×4=68. El valor afirmado es 140; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 17.",
+          "truth": true,
+          "given": 17,
+          "value": 17,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 17 multiplicado por 4. El valor afirmado es 17; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 18×4 se restara 19×4, el resultado sería 64.",
+          "truth": true,
+          "given": 64,
+          "value": 64,
+          "reason": "La diferencia entre los términos restados es 1×4; se resta esa diferencia al resultado original 68: 64. El valor afirmado es 64; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "previous_sha256": "0f652b9afaa1e6def6c45318370d0470567d70a6b4b214f0ccd6586cb35f1b24",
+      "content_sha256": "0f652b9afaa1e6def6c45318370d0470567d70a6b4b214f0ccd6586cb35f1b24",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "010",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 13×8 se restara 12×8, el resultado sería 56.",
+          "truth": false,
+          "given": 56,
+          "value": 64,
+          "reason": "La diferencia entre los términos restados es -1×8; se resta esa diferencia al resultado original 56: 64. El valor afirmado es 56; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el resultado original sin aplicar el cambio en el producto restado."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 160.",
+          "truth": false,
+          "given": 160,
+          "value": 56,
+          "reason": "Al distribuir y cancelar 13×8 con su opuesto, queda 7×8=56. El valor afirmado es 160; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite restar el producto repetido."
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 7.",
+          "truth": true,
+          "given": 7,
+          "value": 7,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 7 multiplicado por 8. El valor afirmado es 7; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "previous_sha256": "6a54da356fdb760a408a1c38c0b6c501ed7f051a1fabed463262f71b5b179f38",
+      "content_sha256": "0b452974490556497f542e23b1d61f56434091e3c7e8f32bfeac1e4c9f491b31",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 10.",
+          "truth": true,
+          "given": 10,
+          "value": 10,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 10 multiplicado por 5. El valor afirmado es 10; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 8×5 se restara 9×5, el resultado sería 55.",
+          "truth": false,
+          "given": 55,
+          "value": 45,
+          "reason": "La diferencia entre los términos restados es 1×5; se resta esa diferencia al resultado original 50: 45. El valor afirmado es 55; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 50.",
+          "truth": true,
+          "given": 50,
+          "value": 50,
+          "reason": "Al distribuir y cancelar 8×5 con su opuesto, queda 10×5=50. El valor afirmado es 50; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "previous_sha256": "ff3ef5215ca022661ce2b0b26b5d0b117fc8646a138bdf3f422e5fccea6d5bcc",
+      "content_sha256": "5ceb6ec53b769983ed03e1890cc0f5d1de466a178a10030c66ed9079e1d6e0f0",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "100",
+      "decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 26.",
+          "truth": true,
+          "given": 26,
+          "value": 26,
+          "reason": "Al distribuir y cancelar 20×2 con su opuesto, queda 13×2=26. El valor afirmado es 26; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es -13.",
+          "truth": false,
+          "given": -13,
+          "value": 13,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 13 multiplicado por 2. El valor afirmado es -13; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se cambia el signo del sumando que permanece."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 20×2 se restara 19×2, el resultado sería 24.",
+          "truth": false,
+          "given": 24,
+          "value": 28,
+          "reason": "La diferencia entre los términos restados es -1×2; se resta esa diferencia al resultado original 26: 28. El valor afirmado es 24; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        }
+      ],
+      "semantic_status": "REVIEW"
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "previous_sha256": "4faf78b7aba242090c3455f967206b52ca6f7be87ca6257b47ad603c415ddb1a",
+      "content_sha256": "bb77c81a2eeab5549e26ee2512e2bcb04849bed9df5b12e6132c2c98e65bc453",
+      "level": "avanzado",
+      "operation": "distributiva-y-cancelacion",
+      "mask": "110",
+      "decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "Si en lugar de restar 15×6 se restara 16×6, el resultado sería 102.",
+          "truth": false,
+          "given": 102,
+          "value": 90,
+          "reason": "La diferencia entre los términos restados es 1×6; se resta esa diferencia al resultado original 96: 90. El valor afirmado es 102; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aplica la diferencia con signo contrario."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 96.",
+          "truth": true,
+          "given": 96,
+          "value": 96,
+          "reason": "Al distribuir y cancelar 15×6 con su opuesto, queda 16×6=96. El valor afirmado es 96; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de distribuir y cancelar el producto repetido, el sumando restante es 16.",
+          "truth": true,
+          "given": 16,
+          "value": 16,
+          "reason": "Se cancela únicamente el primer producto; permanece el segundo sumando 16 multiplicado por 6. El valor afirmado es 16; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "semantic_status": "REVIEW"
+    }
+  ]
+}
