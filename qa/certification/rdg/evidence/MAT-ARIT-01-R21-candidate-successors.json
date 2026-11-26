@@ -1,12 +1,12 @@
 {
   "scope": "MAT-ARIT-01",
   "status": "CANDIDATE_CI_SUCCESS_NOT_ACTIVE",
-  "source_ci": 45784558390,
-  "source_job": 139787939623,
-  "source_sha": "581f6b46727d8dac1c9af1227a54c5c4a88d1967",
+  "source_ci": 45870793729,
+  "source_job": 140085367467,
+  "source_sha": "7799905971597215830c9345e21ceaabcf373abf",
   "summary": {
     "checked": 59,
-    "changed": 52,
+    "changed": 59,
     "unchanged": 391,
     "variants": 472,
     "mutants": 177,
@@ -44,12 +44,12 @@
     },
     "semantic_pass": 0
   },
-  "limits": "No activo en banco. 52 cambios y siete identidades dentro del alcance; 391 fuera del alcance preservados. No certificación semántica; integrar guard y selecciones, cotejar UI y publicación.",
+  "limits": "No activo en banco. 59 sucesores de R20 por cambio de versión modeOperation; 391 fuera del alcance preservados. Se conserva el manifiesto histórico en Git. No certificación semántica; requiere activación auditada, selección, UI y publicación.",
   "records": [
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
       "previous_sha256": "60eb7cbb59a443f4bcc2693bc955033069017e457f05a2f69a4682ff4d42c4f8",
-      "content_sha256": "3fb0461deec32ddd42a80a37a6c0440139231cdfa68d3ba674582486b3756fb9",
+      "content_sha256": "95e41a943ce6cab5c275257a81be23da691148a659fd40212e7b018165a56296",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "001",
@@ -87,7 +87,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-1",
       "previous_sha256": "db5b6bb415b7c91f4b1de61a665aaea951ed0c54ebe01aa2749f5e9f225318ca",
-      "content_sha256": "4fc60c2ee3092d536808bd3d0f33e6a570c89f809c73289c96e6110ae970270f",
+      "content_sha256": "b1840222926634c700b8262a06d64432dada56dc7baff9042753d21062681a58",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "110",
@@ -125,7 +125,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
       "previous_sha256": "5c4e7f051764d11a3052acd6005e17fcc04b6551be5372b5248147249e31c6be",
-      "content_sha256": "802b3ae68f94c31696713e08940805bfbbf9c010835c18c3503a9f022ebf30cd",
+      "content_sha256": "84364a2ebc42c5ba2e4de0abc0eef1015948be463ed2ea6b8a5972d9615e8f8c",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "111",
@@ -163,7 +163,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
       "previous_sha256": "4411163a39f652bf3dac2548af3d842a16d8abb6a198a4e0ecd4a6b0b05b2b3f",
-      "content_sha256": "2385201ced6ea48d2f787448bffe09fd0d91fb3879110288638880c4e33006f8",
+      "content_sha256": "219f6b125d0d73246b62c47292d34f04dd86444f12166738fc26f4ba3267d914",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "010",
@@ -201,7 +201,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-4",
       "previous_sha256": "adc5a9f4686e8e6354a51c112259fe3dc2ec2da00d3f70e3294e7bff07b7a403",
-      "content_sha256": "adc5a9f4686e8e6354a51c112259fe3dc2ec2da00d3f70e3294e7bff07b7a403",
+      "content_sha256": "0f0a1ea07792192a3cd3a040d2b3806e1e61713f30dffca6db055825695a6495",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "101",
@@ -239,7 +239,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
       "previous_sha256": "3112879ef9a0e22cc89d6c96b60ddd3d3e50aecf0e7648f293334fe59fe87b5d",
-      "content_sha256": "13ca599339891f969002ea2cb9c9ecb4636c02422c8f1554a2263dcb07ddf580",
+      "content_sha256": "5d8e78f84d6881aac946a8a3da12a7f6e36724aa49834cc7391dfd920bae1c5d",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "001",
@@ -277,7 +277,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-6",
       "previous_sha256": "88932fcfae3e8d986fe7a8011ef43d27f26ad0221ccf90914ebc96366238d6e7",
-      "content_sha256": "0cf0a4c50df929e99f465168bccba0077d3022a76a7f555184bce4603a68e216",
+      "content_sha256": "4c45220aacdab55de892cc8e31cf1235959f709c97fbb2f8ced7435c68d1d4bd",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "100",
@@ -315,7 +315,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-7",
       "previous_sha256": "f60b7df014026717cc4363217ebb61be7cdf3bc84054c6b6ace5d85a5bb09bf9",
-      "content_sha256": "c77644918ce6ea2441e7b3fda1b71e53f95bd1b5b0a5078054878ec232b503c3",
+      "content_sha256": "f1a9c4a397a5b8be3238e036a6cc947a6f657639e0be6e5104d50fb4b8bdb120",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "011",
@@ -353,7 +353,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
       "previous_sha256": "31d3d99bd428e5750d6d0a23899830a06d8fd4a804ac70510902a04175e0d492",
-      "content_sha256": "7faf23feccd80f07396a2861e9f7899351f9e25bfaff442aa374439ae841a24e",
+      "content_sha256": "347806c0ba8f6a1e79a08b3fc3f74b2876f3a1966cd73984a0d7e440be3c3007",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "000",
@@ -391,7 +391,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-9",
       "previous_sha256": "4a0e92549eac7d8b225151bfad79c77a8e29183770b21966523c2af2be6281e8",
-      "content_sha256": "5c92250b6e22a663998749e9a5d76a448fddc48e2aa74ebf2ece7cf2ab95e04a",
+      "content_sha256": "779a118493cd8040dcfdd9d091341b1d7137d97fd9c8f4a93e5d124109dfb16d",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "010",
@@ -429,7 +429,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
       "previous_sha256": "0e94e25375f106233dbca057f383dcfcb5257e4003b77108fb6ebd265d3d3517",
-      "content_sha256": "7fff0fa55c1188e3bec9fe2e9f09930417b4ecbe4cd7d66e2c275bce6e1d3b47",
+      "content_sha256": "533a5b942ea0d840b9ad19dd6f0296d1a359ac5d2b723da2810e6a6b79894fdb",
       "level": "principiante",
       "operation": "prioridad-de-operaciones",
       "mask": "000",
@@ -467,7 +467,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
       "previous_sha256": "3427391461355ad3615aa37bf9edf4803862b8a2d7a151ba6d58aab927aa295a",
-      "content_sha256": "6b4817bf80ef73ca5e8e9369397f0a96134623a1ac5a42b7b7d47b0bf603375e",
+      "content_sha256": "f0a1e2d18397f16f9ee2ff66910051c39184b4ec68a90b87982fcc75c0a94725",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "111",
@@ -505,7 +505,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
       "previous_sha256": "774a39b2d904e76862f0869bd86152cba5102196c125a523d6873245b01bfc39",
-      "content_sha256": "774a39b2d904e76862f0869bd86152cba5102196c125a523d6873245b01bfc39",
+      "content_sha256": "7fc995cbb8d44d19d77b04674273f343128699fbdfb93744e70a74bde1ced245",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "001",
@@ -543,7 +543,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
       "previous_sha256": "01f920658c1166d4794ff83ca915a25e58b746db2f215b517ecda768ec4bdfde",
-      "content_sha256": "e4706f1cb13ce02103cdb66e7ab42b158889d2838e0d931382ec97dd9f1bcb2b",
+      "content_sha256": "5a40bd57b08647b04ad5de6d5f185b9f49315a085c3ec09a63c2079bbfde4a3a",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "011",
@@ -581,7 +581,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
       "previous_sha256": "6670de329bff92118aa310bdaa45a21c796f0e3ae90b88195b6636c5dc758d09",
-      "content_sha256": "baaa5bc475814cff50d820b97912ff7726c4909f0e3f9ff18d860654f94ee778",
+      "content_sha256": "8be443b16fcba68711a3af73db0a216dd9185636553ea4cc1fc18ccbf87f4efa",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "010",
@@ -619,7 +619,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
       "previous_sha256": "a044697e674a1154ecd4976e6543ac0b3245dffd5690161200c546225b02199e",
-      "content_sha256": "0d8b963781b6ef1e84c8cad724e1b19007798fc7e1de38118d06808703ab1cd2",
+      "content_sha256": "42c682438356474480c1cee80daf133b04405bcc31fd186795925e24217cfec8",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "100",
@@ -657,7 +657,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
       "previous_sha256": "8822e3a907f335a0557b8a45c903631fd7a619b58c4ae7d89f0fc4fa3a439a29",
-      "content_sha256": "11307fd16cc3e829ce4cac7092ebca7a1c846468c535df028c60e18ef7117920",
+      "content_sha256": "c1950af24efa6ed2654ec76fa9db05f2f04588d6698de0bfd5d29f5fb9abc1d3",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "000",
@@ -695,7 +695,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
       "previous_sha256": "1121cd56f9767747fcb20ce08d700f31a5af1f82769e688680d223881363aa2a",
-      "content_sha256": "9be60909c3e4244ba26fee7cd29eaa748d9a2c16c9c87d832fc7a52ade682257",
+      "content_sha256": "b8ed46f76a8a4d0d362be7e72a55b0949fb7d1b55dd3283c0ae65d674da8b37e",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "000",
@@ -733,7 +733,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-7",
       "previous_sha256": "5cf079db4723eabd97dbbea0636d9cd99117ccb64e3843655d036ec0cd576076",
-      "content_sha256": "fc0b8c2e65fb64be5f73e5d39ec740ef2fb1d4550649e9a7b80cf488c2e70d9c",
+      "content_sha256": "df70b544eec51e710116dbb3af997b9b841ba463b47a7a7a8cee3b599797f997",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "110",
@@ -771,7 +771,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-8",
       "previous_sha256": "d6ff3d19a9b390ea9393452609046b0db787ade8c43ed0e6245f3e701a50227a",
-      "content_sha256": "de5b349bf114295fddf11cba4da2107c9d0340ea50019ad699415046cae4826b",
+      "content_sha256": "7a4e9728bd059a9008190040e0527c19ce3e59d8d4eb90367ad6bf74f92d7f93",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "111",
@@ -809,7 +809,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-9",
       "previous_sha256": "6e6d14c3bcb827b9e7c3f6063d8da73788b5d57096291bb5bae52068bc4247b3",
-      "content_sha256": "f931fd4917a6b1073ccf52a8455e8f1f8a7ba054198629ad156fdac6f0094850",
+      "content_sha256": "39d7a3a96d6e6531dd1bdbae3c3904a89b7ddb45d0f50b78d0127d135f434260",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "101",
@@ -847,7 +847,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
       "previous_sha256": "1e09f16b190834e4d02c13aca51286898cc8c464d3fb8c69cb929ef58a95ad52",
-      "content_sha256": "1e09f16b190834e4d02c13aca51286898cc8c464d3fb8c69cb929ef58a95ad52",
+      "content_sha256": "2a669cd2e82a421bb09523dab9b0a12e1cd44286031c62da8c2831def032833e",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "100",
@@ -885,7 +885,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
       "previous_sha256": "093012a648fcb097642ed640ae5b70ea429a0e5ee077f7dfe78b9487bdd5848b",
-      "content_sha256": "7c3531fd0488fcf68f24d9c5f998b97853412fe6a631a9200353db59d8d2f518",
+      "content_sha256": "b50f1ab0f38fb3d2fe9edfe87e7103a2a263648e9594d8937c0bd6c7b0b1d72d",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "010",
@@ -923,7 +923,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
       "previous_sha256": "b5313286afa33059f3c5e2a754ba18330f1569e5e443f4ff3d87855f62053b83",
-      "content_sha256": "67723d4446f55472c20664b4f2ce9bb6a635fad83c7ebae5037deabec90c0cb3",
+      "content_sha256": "9ad821552caaab7c628931591c52acab84d15d7e0ef2718f012c9f1cd8775e30",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "101",
@@ -961,7 +961,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
       "previous_sha256": "530a5f527b21d9c19d173587d277400cc5dd177e7e18f6b5a5c236bdf25b2ae6",
-      "content_sha256": "193539b2e6b24475cc64aa2bfe5cfbcb216786675147c68b6ec7342dec4a5f8b",
+      "content_sha256": "2b5475d620af5edfdf433596f6ac041b30a51e0483c1fc7f5d45ae18909a7e80",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "011",
@@ -999,7 +999,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
       "previous_sha256": "6460775dec0ebc6adc501eadb3e2457382b20e1f3478f30852fe52fb683107c6",
-      "content_sha256": "04763341753aa693c5c7c252d847d09a10db988faedf751961950361721dbefd",
+      "content_sha256": "faa6ec16700c07c30dffec288df75d3ccb2a960f78ed804c529c626be41302ca",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "001",
@@ -1037,7 +1037,7 @@
     {
       "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-18",
       "previous_sha256": "ada635446ea63c7f54f16080b4f32bc0c91e941c6efb14d577c39681516495db",
-      "content_sha256": "b2f844c62562ab070cde2c56325b6bf028b8787516485ac981e10ee5ac9e7e48",
+      "content_sha256": "650f71b5f21ced927b92a89ab5d2724532f8f62a39f4a1f4e2e086c8c8b89203",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "110",
@@ -1075,7 +1075,7 @@
     {
       "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-19",
       "previous_sha256": "644acedd636eaa0314062ac7d585b5c2001890687df8fbb525c64b96783f6b75",
-      "content_sha256": "2e8020edd5a1f0a92cbd2f6032ada01028044e2bb190650a5cbbc006d6e82c75",
+      "content_sha256": "dcf4255b5bdbadf725fc8590d161539f33cf2e98d87c26697b70e34529fc0bdb",
       "level": "intermedio",
       "operation": "modificar-parentesis-y-factor",
       "mask": "000",
@@ -1113,7 +1113,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
       "previous_sha256": "aa093142a86b8ade88755e741a2093dda23b90aedd3d3f58cdde8945a4917f92",
-      "content_sha256": "602ff596b5e5ff4b5c517c6b0bfe1521531d431e6b2fed8ad836dba0d5a4fc0f",
+      "content_sha256": "b8ddd7a264b0f07877629a4eb98227064479d7970b1c3f062efc8d9191de45e6",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "001",
@@ -1151,7 +1151,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
       "previous_sha256": "09ccc6cd21e256c7271c7b988531e95ddc70f89e7cbbd867683fb382a12a8274",
-      "content_sha256": "79c5f4202874d64945b13808515fa90fa07463ea96f82395222758f0e15bbcbb",
+      "content_sha256": "c2f50e173c876d89caf71f112a45f9873b05badc650f75364714c4b0bb1b51e3",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "111",
@@ -1189,7 +1189,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
       "previous_sha256": "e1a3bf3447709251cadbe5f724e10c70c6daf147ea27541b0df9b0298cf72dc9",
-      "content_sha256": "1164d3326a45048a50eef486b15e9b37b268e866bf77a57eb8788fc181ef0d8d",
+      "content_sha256": "db3907805471c0a7dfcf303a0aeac065da71ceebce506435921662557a2c06e4",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "001",
@@ -1227,7 +1227,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
       "previous_sha256": "958e01e1b1b2962d7e856d6e04d40ca4a26f2eeac049103a07359358683e86c4",
-      "content_sha256": "3d8bbf11af9ce07507cc298154a7373c3f3fb1aeb42405a3af3dd462e88d7639",
+      "content_sha256": "43eaba1cf875aa957f11e0558d6abb00e1030111729a66bcfa5b22c80cec7d2c",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "101",
@@ -1265,7 +1265,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
       "previous_sha256": "4ea90a0ce2831772cdb255d37e2b7161eef32c06ab883c25a7963d635fad6aff",
-      "content_sha256": "60305afaef557a0f7e841be94a0b88c96726b75b52682f617027f4f527fd9eff",
+      "content_sha256": "3159d00e3ff50a7940001de31975956ab5129f91acaff5837a2230628153ae2c",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "111",
@@ -1303,7 +1303,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
       "previous_sha256": "7fbae3b58a022a58f91e4dfc8efc21f1a1fd4462280dad0a39cebf1dfe83b6c5",
-      "content_sha256": "831004639ddd75693f5666867ada52e0c3ddd2e0dae32de745dc591692794c91",
+      "content_sha256": "1be1ad4fe8fd593ceeb412d687b45f3216225892ef994181c813cdec3b03ede0",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "101",
@@ -1341,7 +1341,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
       "previous_sha256": "d9ba1aa463c1806223f7036fcaddc3001e74d14f93eb9596c602e7f7f1836037",
-      "content_sha256": "4da557e971e1e08ac5cd37c1f93347db45052dadf1ae4dde18fae3734cfaa094",
+      "content_sha256": "500e49ba85d63ae4c0ffb84e9d6bc99c353202a3a2db99a67fdea70bf43082fa",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "000",
@@ -1379,7 +1379,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
       "previous_sha256": "3db44be7f154e61f48de7979c577b0fd66061747be46f836d4e2f176643509a3",
-      "content_sha256": "462f15f3ef5aa1ec0d0a0e3051cecae0cb0e09e58f9552651648f0a79e38f278",
+      "content_sha256": "ca01e25c61f18474bd9540b3bb785675a1e20e8773b50a5eeaf309e2140df691",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "011",
@@ -1417,7 +1417,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
       "previous_sha256": "3af7f397ad5ef3ff111f4674853b138796df471e3045bc1d55318a1d5ba1a53b",
-      "content_sha256": "3af7f397ad5ef3ff111f4674853b138796df471e3045bc1d55318a1d5ba1a53b",
+      "content_sha256": "fc69be8d219ee1f109b97342faaf7f59e498407e831e2cd755d91696716e2593",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "101",
@@ -1455,7 +1455,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
       "previous_sha256": "27ab27301cd560bdc90df16613275dad27ea2307e099bda4136bde46e4676d00",
-      "content_sha256": "9d4fb19379e1f4f9f8c0b4a0a5075885d94f43149d44f2b4598b8dd20217c34b",
+      "content_sha256": "803efa54e79b571d63e91bf04340966ae45ffc10882b2ee5bc92fcfbc59e016e",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "000",
@@ -1493,7 +1493,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
       "previous_sha256": "86808155c5689d226dcf131ebe808b25f40987858677bfc590e37272a5ad85ef",
-      "content_sha256": "e890adadadd68bb1bff4677c70e48d8d37572d929b17fa98359b81da96fd4cd6",
+      "content_sha256": "3b9d7716b65b90da5dbdbc0e860c95884c5eb3f26f934b358a5184a6cd34c223",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "111",
@@ -1531,7 +1531,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
       "previous_sha256": "2483dd54f1b097b7eb09a37ffe8ef98c74490e56e0c37192803c5dd1338934a7",
-      "content_sha256": "9f39eb0f5f1b75a3800d1da913f9d47643329f6b4e9697199247490a48ab5160",
+      "content_sha256": "242756779f10ac14d4064316aa3d0c59a2ebd236af364a8ef3587478832029f4",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "101",
@@ -1569,7 +1569,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
       "previous_sha256": "381f7e67ec133ddebfbfd70cc5f33e8661e6d647094d60922f6b92fbc6150ee1",
-      "content_sha256": "fb039629d82b3b77ab70ea9e5da95c7e6f300bae6eabbdd3fa9773926c6a8fa1",
+      "content_sha256": "61f040ee02b67bd7d47ea8ed3240d220920ac406a0e012b501a71dfb794c4c3d",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "010",
@@ -1607,7 +1607,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
       "previous_sha256": "3ec9b591787931943cc8b55a324ed3b02455e226b829bd797e97e7506e5d9b0a",
-      "content_sha256": "3904067ff374fa6b2c024cf835b30c4e8ff8da74d51e5e400807163aecc895ac",
+      "content_sha256": "4488061cc91c2d9e26e1d74f09c20d046168d6693b3a95c2c53fd6a4e422a96c",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "100",
@@ -1645,7 +1645,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
       "previous_sha256": "5ebe6879263a25969147bf26818789adb9117eaedba6d94a6c27c259734bfdff",
-      "content_sha256": "3d891508b422e006e94cc418a8d1f5925ea2af4de39a3742d58cebba8655fa86",
+      "content_sha256": "768494f9ea9aeef8c04c419ba4c5fe79c9f70c7438a953d73045de2a5e1fd508",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "100",
@@ -1683,7 +1683,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
       "previous_sha256": "8a3d954e3039c986bd09711b9350af87896e405bcb47f14134689a37388395e0",
-      "content_sha256": "396d3ea578d75e545e2eacb8d9433828f276cdf103140e85776cd83115a7a9bd",
+      "content_sha256": "249f2c99bea2b1766bc7555f678210974bc39f5ba20482d506d5911a7195c66d",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "000",
@@ -1721,7 +1721,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
       "previous_sha256": "98970d801a45370b5ced60923c07dfee84c2fbafdd2ab3af220e4e5ea4ee9eb6",
-      "content_sha256": "01490e48da0786a00b52359734680c34ca3a6f61df3aafdcbdf7a686b8f414c2",
+      "content_sha256": "abe7cb54704bb3b745f5fcf2d976a94f45ae258b3f52cc0d639ca4f1d72603b6",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "010",
@@ -1759,7 +1759,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
       "previous_sha256": "e5e82a01bf97482df5f42a1df3ec4184d810b7f1d6891bff77058b4d091622a7",
-      "content_sha256": "2ae82347a5be700de4fc9d78f591b8910902ae5ad09b0fac6911544dbc0bce3f",
+      "content_sha256": "36a84acd89132af7730e94ab04f8952d29100fb2e2c47dc26b6d5fcbfb072d1f",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "100",
@@ -1797,7 +1797,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
       "previous_sha256": "0968e8ed0eb902594fdcf3066221ddb94524b268ad9892cc960286a084a8b9d7",
-      "content_sha256": "260ce065915e51e5015af3bbb2dfc4a79bb475957b3e3c99c621a3915ed40dbf",
+      "content_sha256": "d2431de0305d1028d5220415856b89688a25bf82184d0f9abc277f7b1646c66a",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "000",
@@ -1835,7 +1835,7 @@
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
       "previous_sha256": "15498dfc7eb7a8d928faeb746c8d6cc65c3e45d83af45ce993a5c77d498b5c9a",
-      "content_sha256": "e281aada13d2edc0087122de4d3cff530797e3aeb7b551f9b3981bebb6922ae1",
+      "content_sha256": "a13d4d174ce3b083ebf46dac5cca8966b7dbd58588fdd7116248b855c2708141",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "011",
@@ -1873,7 +1873,7 @@
     {
       "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-24",
       "previous_sha256": "e0adddf2f5ec8c4c68d5e00aa70a20121e406b2a46c7b6f973371e29d3645d35",
-      "content_sha256": "9f2dde8f9139eef01b1f329422213ce34fc743e7449197992ceab4565c174da4",
+      "content_sha256": "be7948310091b88f43a820609e17498d127b24ff8a72a8a988ca18f27992819f",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "110",
@@ -1911,7 +1911,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
       "previous_sha256": "2c867f1633a2f8051d45dfc7d3a3ec7a54d9a9ad26f9e476c5bc607166f3fa84",
-      "content_sha256": "ab0ac06e8b58e39478b6333a3e2117328a899bf9d4d3509fb34fde5b1f331dee",
+      "content_sha256": "7cf3cf2aa32bd2e79f71c43b0f61f94a4fa33f60e95344e438c7f40564dbf761",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "110",
@@ -1949,7 +1949,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
       "previous_sha256": "c694fa484be95331a34addf6d5e455822ea9bad27a36a85b4c093e3539fc4ffc",
-      "content_sha256": "fd63dc80d8b585a91962d6914196ec3b316c5a062b14945ba15c5fc03788ec7c",
+      "content_sha256": "d872af71999443d4d91be0ea3ec193ed31de011db9d5daf350f9b6ce6e456602",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "011",
@@ -1987,7 +1987,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
       "previous_sha256": "83a09ea1fe0a6ba1e50f13a3352e14bf9c04c14b8977466af551bd9d9386f5d1",
-      "content_sha256": "68e9cfba2fd71a31849767dd70aa39de4057dfa25838ffb7d8a133ba696205d6",
+      "content_sha256": "6983ad19fe0a190de36d7dc9bd411adb5a870cf71a5bc44fac6aab8400330355",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "010",
@@ -2025,7 +2025,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
       "previous_sha256": "54110a12bbf14f64a84f9ed09ee3c0ee667453c7b4c5a15e488ebc2a315f5a88",
-      "content_sha256": "54110a12bbf14f64a84f9ed09ee3c0ee667453c7b4c5a15e488ebc2a315f5a88",
+      "content_sha256": "a5c5fecbd6281661a21723fbc580ffaad3ba8a583f5edbcb3a061222d4df25ff",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "001",
@@ -2063,7 +2063,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
       "previous_sha256": "76407a12efaf5cf5f608a0357991e34de2bf6e19e9bd01fe7d93e7071597afa9",
-      "content_sha256": "76407a12efaf5cf5f608a0357991e34de2bf6e19e9bd01fe7d93e7071597afa9",
+      "content_sha256": "daf5239aa8912bccd8a4274d14ca56a943c18b8f1cd278894ae9ea5dab4a55e0",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "001",
@@ -2101,7 +2101,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
       "previous_sha256": "4d3e8d9dfae3a2f77e97abdf4f54ba91619c428ca41e0d324a43293ac4a0a041",
-      "content_sha256": "0f34f49ebddf8912235f764306ce819eb4f8f8c3fa9a52c94f6a25e51aa49d26",
+      "content_sha256": "e547c71adc90c83b4df64d498752f5c38fc0bf5a449e282e31ef50ddf15a40bd",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "011",
@@ -2139,7 +2139,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
       "previous_sha256": "0f652b9afaa1e6def6c45318370d0470567d70a6b4b214f0ccd6586cb35f1b24",
-      "content_sha256": "0f652b9afaa1e6def6c45318370d0470567d70a6b4b214f0ccd6586cb35f1b24",
+      "content_sha256": "0185828fd91ab05cf529691a14904a6912d9a265f283ce2e46d587acdcc7a33e",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "010",
@@ -2177,7 +2177,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
       "previous_sha256": "6a54da356fdb760a408a1c38c0b6c501ed7f051a1fabed463262f71b5b179f38",
-      "content_sha256": "0b452974490556497f542e23b1d61f56434091e3c7e8f32bfeac1e4c9f491b31",
+      "content_sha256": "3f04edeb33d1c05dba757f80a1306e81c3070ab4703f346aa4c8b24528688350",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "110",
@@ -2215,7 +2215,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
       "previous_sha256": "ff3ef5215ca022661ce2b0b26b5d0b117fc8646a138bdf3f422e5fccea6d5bcc",
-      "content_sha256": "5ceb6ec53b769983ed03e1890cc0f5d1de466a178a10030c66ed9079e1d6e0f0",
+      "content_sha256": "c81d976f947a0c9c62c13fa13e7e21e593f552917532b5809ecec8aa7718c30c",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "100",
@@ -2253,7 +2253,7 @@
     {
       "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
       "previous_sha256": "4faf78b7aba242090c3455f967206b52ca6f7be87ca6257b47ad603c415ddb1a",
-      "content_sha256": "bb77c81a2eeab5549e26ee2512e2bcb04849bed9df5b12e6132c2c98e65bc453",
+      "content_sha256": "e7b61aa5229f4ca92826d04a172671ce35d82207361f44d0d9c9a46942c3edb0",
       "level": "avanzado",
       "operation": "distributiva-y-cancelacion",
       "mask": "110",
