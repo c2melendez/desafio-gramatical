@@ -16,13 +16,13 @@ const links={
  'enteros-desplazamiento-signos':['A1','T10'],
  'precedencia-sin-parentesis':['A2','A3','T5'],
  'modificar-parentesis-y-factor':['A4','T2'],
- 'presupuesto-dos-compras':['A10','T9'],
+ 'presupuesto-dos-compras':['A10','T9','T25'],
  'reconstruir-inventario-inicial':['A7','A18','T22'],
  'comparar-cambios-compensados':['A4','A17','T21'],
  'reconstruir-cantidad-por-grupo':['A7','T6'],
  'comparar-ofertas-con-cargos-fijos':['A10','T9'],
  'cociente-de-diferencia-racional-con-raiz':['A9','T8'],
- 'cambio-contextual-inventario':['A4','T1'],
+ 'cambio-contextual-inventario':['A4','T1','T26'],
  'inventario-flujos-independientes':['T1'],
  'reparto-neto-exacto':['A7','A19','T23'],
  'raiz-producto-suma-resta':['A6','T5'],
@@ -38,9 +38,9 @@ const links={
  'distribuir-sobre-raiz-racional':['A5','A6','A9','T20'],
  'distributiva-signo-negativo':['A5','T3'],
  'factor-comun-dos-grupos':['A14','T13'],
- 'diferencia-productos-no-identicos':['A15','T14'],
- 'raiz-producto-cociente-agrupado':['A3','A6','T5'],
- 'raiz-producto-racionales-combinados':['A6','A9','T4'],
+ 'diferencia-productos-no-identicos':['A15','T14','T27'],
+ 'raiz-producto-cociente-agrupado':['A3','A6','T5','T28'],
+ 'raiz-producto-racionales-combinados':['A6','A9','T4','T29'],
 };
 if(bank.length!==450||new Set(bank.map(x=>x.id)).size!==450)throw Error('inventario');
 const operations=new Set(bank.map(x=>x.operation));

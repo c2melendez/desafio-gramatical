@@ -1,10 +1,11 @@
 import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {OPERATIONS_ROUTE} from '../../../src/lib/rdg/operations.ts';
 import {mathM3Pool} from '../../../src/lib/math-m3.ts';
 import {MATH_LEVELS,MATH_MODES} from '../../../src/lib/math-m1.ts';
 const sha=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
-const matrix=JSON.parse(readFileSync('qa/certification/rdg/evidence/MAT-ARIT-01-R4-matriz-paridad-R5.json','utf8'));
+const matrix=JSON.parse(execFileSync(process.execPath,['--import','./scripts/ts-resolve.mjs','qa/certification/rdg/audit-r4-parity.mjs'],{encoding:'utf8'}));
 const tasks=new Map([...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer].map(x=>[x.id,x]));
 const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool('Aritmética','Operaciones',l,m)));
 const byId=new Map(bank.map(x=>[x.id,x]));
@@ -71,7 +72,7 @@ const rows=matrix.rows.map(row=>{
  const exampleTitle=directCase?null:exampleByFamily[row.family];
  if(!directCase&&!OPERATIONS_ROUTE.workedExamples.some(x=>x.title===exampleTitle))throw Error('síntesis ausente '+row.family);
  const example=byId.get(row.game_records[0].id);
- return {family:row.family,count:row.count,classification:directCase?'EJEMPLO_GUIADO_DIRECTO':'EJEMPLO_RESUELTO_EN_SINTESIS',reason:directCase?direct[row.family]:"Brecha anterior: "+compound[row.family]+" Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",summary_example:exampleTitle,task_ids:row.task_ids,game_example:{id:example.id,prompt:example.prompt},decision:'REVIEW',limitations:'Los ejemplos de síntesis son desplegables, no una interacción guiada. Juicio de diseño; no acredita clave, distractores ni semántica individual.'};
+ return {family:row.family,count:row.count,classification:directCase?'EJEMPLO_GUIADO_DIRECTO':'EJEMPLO_RESUELTO_EN_SINTESIS',reason:directCase?direct[row.family]:"Brecha anterior: "+compound[row.family]+" Ahora existe un ejemplo desplegable en síntesis; su suficiencia requiere revisión.",summary_example:exampleTitle,task_ids:row.task_ids,game_example:{id:example.id,prompt:example.prompt},decision:'REVIEW',limitations:'La suficiencia pedagógica de la síntesis y las transferencias debe verificarse. Juicio de diseño; no acredita clave, distractores ni semántica individual.'};
 });
 const grouped=Object.fromEntries(['EJEMPLO_GUIADO_DIRECTO','EJEMPLO_RESUELTO_EN_SINTESIS'].map(k=>[k,{families:rows.filter(x=>x.classification===k).length,ids:rows.filter(x=>x.classification===k).reduce((n,x)=>n+x.count,0)}]));
 console.log(JSON.stringify({status:'REVIEW',scope:'MAT-ARIT-01',plan_sha256:matrix.plan_sha256,route_data_sha256:createHash('sha256').update(readFileSync('src/lib/rdg/operations.ts')).digest('hex'),families:34,game_ids:450,semantic_pass:0,grouped,rows},null,2));

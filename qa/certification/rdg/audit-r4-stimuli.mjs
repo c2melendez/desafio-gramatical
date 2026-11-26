@@ -6,7 +6,7 @@ const assert=(x,m)=>{if(!x)throw Error(m)},fmt=n=>String(n).replace('-','−');
 const signature=s=>(s.match(/\d+/g)||[]).map(Number).sort((a,b)=>a-b).join(',');
 const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool('Aritmética','Operaciones',l,m)));
 const tasks=[...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer];
-assert(bank.length===450&&new Set(bank.map(x=>x.id)).size===450&&tasks.length===44,'alcance');
+assert(bank.length===450&&new Set(bank.map(x=>x.id)).size===450&&tasks.length===49,'alcance');
 const original=[{id:'A12',prompt:'Calcula −4 × 3 + 2.'},{id:'A17',prompt:'Una expresión vale (10 + 6) × 5. Aumenta el segundo sumando en 2 y reduce el factor en 1.'},{id:'T21',prompt:'Una expresión vale (8 + 4) × 6. Aumenta el primer sumando en 2 y reduce el factor en 1.'}];
 const previous=original.map(x=>({id:x.id,candidates:bank.filter(b=>signature(b.prompt)===signature(x.prompt)).map(b=>b.id)}));
 assert(previous.every(x=>x.candidates.length>0),'mutación no reproduce coincidencias anteriores');

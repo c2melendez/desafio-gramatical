@@ -11,15 +11,15 @@
   "route_path": "src/components/review/OperationsReview.tsx",
   "route_sha256": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
   "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json",
-  "plan_sha256": "fd8ee4fe4e01f54000672dcd8b6ba8e019d4d56940ee74c568560ba0b7e6d2ad",
+  "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
   "data_path": "src/lib/rdg/operations.ts",
-  "data_sha256": "c58c919e07d4243df5b5d6402df2e60e0321bccaee2e7e1babca2328e939a25e",
+  "data_sha256": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
   "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
   "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
   "dependency_hashes": {
-    "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "fd8ee4fe4e01f54000672dcd8b6ba8e019d4d56940ee74c568560ba0b7e6d2ad",
+    "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
-    "src/lib/rdg/operations.ts": "c58c919e07d4243df5b5d6402df2e60e0321bccaee2e7e1babca2328e939a25e",
+    "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
     "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
   },
   "objective_ids": [

@@ -609,6 +609,48 @@
             "OP-01",
             "OP-04"
           ]
+        },
+        {
+          "prompt": "Con L 275 compras 7 cuadernos a L 19 cada uno y una carpeta por L 36. ¿Cuántos lempiras te quedan? Opciones: 106, 142, 178, 239",
+          "solution": "Los cuadernos cuestan 7 × 19 = 133. El gasto total es 133 + 36 = 169. Quedan 275 − 169 = 106 lempiras.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Un taller tiene 27 cajas con 13 piezas en cada una. Retira 8 cajas completas y agrega 4 piezas a cada caja restante. ¿Cuántas piezas quedan? Opciones: 251, 323, 247, 459",
+          "solution": "Quedan 27 − 8 = 19 cajas. Cada una contiene 13 + 4 = 17 piezas. En total quedan 19 × 17 = 323 piezas.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-02"
+          ]
+        },
+        {
+          "prompt": "Calcula 17 × (11 − 4) − 6 × (11 + 4). Opciones: 209, 119, 29, 77",
+          "solution": "Los grupos valen 7 y 15. Los productos son 119 y 90; la diferencia es 119 − 90 = 29. Los productos cruzados no son iguales, así que no se cancelan.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-01",
+            "OP-03"
+          ]
+        },
+        {
+          "prompt": "Calcula 31 − √121 × 2 + (26 − 8) ÷ 6. Opciones: 15, 9, 43, 12",
+          "solution": "√121 = 11; su producto por 2 es 22. El grupo vale 18, y 18 ÷ 6 = 3. Entonces 31 − 22 + 3 = 12.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-01",
+            "OP-04"
+          ]
+        },
+        {
+          "prompt": "Calcula √(25/196) + 3 × (2/7) − 9/14. Simplifica. Opciones: 4/7, 0, 17/14, −1/7",
+          "solution": "La raíz principal es 5/14. El producto es 6/7 = 12/14. Al combinar, (5 + 12 − 9)/14 = 8/14 = 4/7.",
+          "oracle": "Evaluar expresión y distractores independientemente; verificar unicidad y ausencia de ayudas.",
+          "objective_ids": [
+            "OP-04"
+          ]
         }
       ],
       "games": [
@@ -703,7 +745,8 @@
         "Comprobar cinco transferencias adicionales de división, cero, factor común y racionales, sin ayudas y contra familias reales.",
         "Verificar en lote cuatro puentes de estados, inventarios, reparto y raíces, y cuatro transferencias sin ayuda.",
         "Revisar once ejemplos integrados de síntesis contra oráculos independientes, como apoyo complementario a la ruta interactiva y transferencia.",
-        "Verificar estímulos de lecciones y transferencia contra los datos visibles del banco y revisar candidatos coincidentes, no solo coincidencia literal."
+        "Verificar estímulos de lecciones y transferencia contra los datos visibles del banco y revisar candidatos coincidentes, no solo coincidencia literal.",
+        "R4: cinco transferencias inéditas T25–T29 para brechas de familias de presupuesto, inventario, diferencia de productos no idénticos y dos combinaciones radicales; comprobar oráculos, distractores y separación frente a los 450 IDs."
       ],
       "external_research": {
         "status": "CALIBRACION_CUALITATIVA",

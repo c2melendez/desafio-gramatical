@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-transfer-directa",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "bfe3a98eb6cbddd4bb85c0ad27f9adccf5c64ff4",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "Code Mode JS exact arithmetic and option mutation tests on T25–T29",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-transfer-directa.json",
+      "artifact_sha256": "fd374ebda764c17563bfdc5586bb954bafe1f855a81abe3cef0f826a3e64e29e",
+      "scope": "5 keys, 15 wrong answers, 10 mutants; representative collision screen",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "Five families requiring direct transfer",
+      "action": "COMPLEMENTAR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-revision-familias-R2.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-transfer-directa.json",
+      "affected_paths": [
+        "src/lib/rdg/operations.ts",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "Previous transfer covered only component skills; add direct integrated cases without altering bank or prior activities."
+    }
+  ],
+  "next_action": "Verify CI and browser on exact candidate and complete C09 readiness review; reconcile production once merge is eligible.",
+  "stop_reason": null
+}
