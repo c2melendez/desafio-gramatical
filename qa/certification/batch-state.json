@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "Consolidar R15 12 decisiones después de CI SUCCESS y Render LIVE del SHA exacto. Integrar lote R12–R14, ejecutar 414 casos de interfaz, cotejo de banco/RDG/simulacro y resolver C/F/G por ID.",
+    "next_action": "Confirmar CI main a984a42 y Render LIVE exactos; promover 10 candidatos R15 con A–H aprobados y sin colisión, conservar 2 REVIEW. Ejecutar suite de 414 decisiones R12–R14 y 177 de R20; reevaluar G/F por ID sin repetir hashes.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -166,7 +166,8 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-12-candidates.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-current-review.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-publication-candidates.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-exam-screen.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-exam-screen.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R20-feedback-causes.json"
     ],
     "completed_review_batches": [
       "MAT-ARIT-01-R4-01"
@@ -619,7 +620,7 @@
       "integration_sha": "854922b1e2e4a30ddd5822dcd18f6f49fbad4e12"
     },
     "r20_revision": {
-      "status": "INTEGRATION_CANDIDATE_PENDING_CI",
+      "status": "MERGED_MAIN_PENDING_PRODUCTION_CI_RENDER",
       "predecessor": "854922b1e2e4a30ddd5822dcd18f6f49fbad4e12",
       "scope": 59,
       "reconstructed_oracle": {
@@ -642,7 +643,24 @@
       "tuple_signals": 0,
       "integration_ci": 45775885448,
       "integration_test_status": "PASS_450_HASHES",
-      "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED"
+      "global_ci_status": "FAILURE_OP04_LABEL_REPAIRED",
+      "published_sha": "a984a42ad35c367aa68891cd2f5990564db50467",
+      "pr": 90,
+      "pr_ci": 45777133478,
+      "pr_ci_status": "SUCCESS",
+      "tested_tree": "b5560554b5b25d53283d6ea421a164aa401ce696",
+      "production_deploy": "dep-dc3u7q8473hc738qn0mg",
+      "production_deploy_status": "build_in_progress",
+      "explicit_feedback": {
+        "status": "CANDIDATE_RUNTIME_UI_PENDING",
+        "source": "src/lib/math-operations-r20-error-cause.ts",
+        "evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R20-feedback-causes.json",
+        "test": "src/test/rdg-operations-r20-feedback-causes.test.tsx",
+        "ids": 59,
+        "false_claims": 87,
+        "missing_causes": 0,
+        "models_changed": 0
+      }
     },
     "r19_selection_paths": [
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R19.json",

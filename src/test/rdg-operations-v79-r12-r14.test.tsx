@@ -9,13 +9,14 @@ import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
 afterEach(cleanup);
 const hash=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");
 const evidence=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-current-review.json","utf8"));
+const exam=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-exam-screen.json","utf8"));
 const bank=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m)));
 const rdg=[...OPERATIONS_ROUTE.lessons,...OPERATIONS_ROUTE.transfer];
 const norm=(s:string)=>s.normalize("NFKC").toLowerCase().replace(/[−–]/g,"-").replace(/\s+/g,"");
 function expr(s:string){const m=s.normalize("NFKC").replace(/[−–]/g,"-").match(/(?:Calcula|Simplifica|Completa la igualdad)\s+([^.?]+)/i);if(!m)return null;return m[1].split(/\. |Expresa|Simplifica|Opciones/)[0].replace(/\s+/g,"").replace(/\*/g,"×");}
 it("R12–R14: 92 exact runtime hashes, verified options, original prompt screen and family-specific evidence",()=>{
- expect(bank).toHaveLength(450);expect(evidence.records).toHaveLength(92);const seen=new Set<string>();
- for(const f of evidence.records){const x=bank.find(y=>y.id===f.id)!;expect(hash(x)).toBe(f.content_hash);expect(x.prompt).toBe(f.stimulus);expect(x.expected).toBe(f.respuesta_esperada);expect(x.operation).toBe(f.family_id);expect(seen.has(x.id)).toBe(false);seen.add(x.id);
+ expect(bank).toHaveLength(450);expect(evidence.records).toHaveLength(92);expect(exam.summary.math).toBe(415);expect(exam.records).toHaveLength(92);const seen=new Set<string>();
+ for(const f of evidence.records){const x=bank.find(y=>y.id===f.id)!;expect(hash(x)).toBe(f.content_hash);expect(x.prompt).toBe(f.stimulus);expect(x.expected).toBe(f.respuesta_esperada);expect(x.operation).toBe(f.family_id);expect(seen.has(x.id)).toBe(false);seen.add(x.id);const external=exam.records.find((y:{id:string})=>y.id===x.id);expect(external.hash).toBe(f.content_hash);expect(external.matches).toEqual([]);
  const o=f.oraculo_independiente;expect(x.options[x.answerIndex]).toBe(o.key);expect(x.steps[0].choices[x.steps[0].answerIndex]).toBe(o.step);
  expect(x.options.filter((_,i)=>i!==x.answerIndex).sort()).toEqual(o.wrong);expect(x.steps[0].choices.filter((_,i)=>i!==x.steps[0].answerIndex).sort()).toEqual(o.mid);
  for(const d of f.distractores)expect(x.optionExplanations?.[d.value]).toBe(d.reason);
@@ -37,4 +38,4 @@ it("R12–R14: each actual wrong choice returns its own cause, including both co
  }
  }
  expect(checked).toBe(414);console.log("RDG_R12_R14_UI "+JSON.stringify({checked,ids:92}));
-});
+},60000);
