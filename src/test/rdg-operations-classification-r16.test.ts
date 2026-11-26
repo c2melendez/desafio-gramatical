@@ -9,7 +9,7 @@ function auxiliaryVisible(item:MathModel){
  const n=(item.prompt.match(/\d+/g)??[]).map(Number);
  switch(item.operation){
  case "producto-negativo-y-suma":return n[0]*n[1];
- case "cero-dividido-por-no-cero":return n[2];
+ case "cero-dividido-por-no-cero":return (n[0]-n[1])/n[2];
  case "comparar-cambios-compensados":return n[2]-n[4];
  case "reconstruir-cantidad-por-grupo":return n[1];
  case "cancelacion-cruzada-de-productos":return n[0]*n[1];
