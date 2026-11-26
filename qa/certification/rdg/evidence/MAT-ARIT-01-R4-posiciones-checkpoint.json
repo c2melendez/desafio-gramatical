@@ -1,0 +1,43 @@
+{
+  "run_id": "MAT-ARIT-01-R4-posiciones-20261126",
+  "block_id": "MAT-ARIT-01",
+  "operational_phase": "P1",
+  "subtopic_scope": {
+    "area": "matematicas",
+    "topic": "Aritmética",
+    "subtopic": "Operaciones"
+  },
+  "base_sha": "64f5d60f62b278a6f0f1e02f819243ecd66f3d9e",
+  "candidate_sha": null,
+  "status": "RDG_EN_CURSO",
+  "selected_ids": [],
+  "examined_ids": [],
+  "new_semantic_pass_ids": [],
+  "review_ids": [],
+  "fail_ids": [],
+  "checks": [
+    {
+      "command": "Code Mode JavaScript: balanceTransferOptions against 24 exact R4 tasks, 256 seeded executions and 3 invalid-input mutations",
+      "exit_code": 0,
+      "artifact": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-posiciones-transferencia.json",
+      "artifact_sha256": "6d1062f4e5a871411e44a64da9b1fee67e87eec6e130e392877e9c107142084c",
+      "scope": "Transferencia R07; helper, not browser",
+      "evidence_level": "E1_LOCAL"
+    }
+  ],
+  "interventions": [
+    {
+      "scope": "Transferencia R4 T1–T24",
+      "action": "CORREGIR",
+      "finding_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-posiciones-transferencia.json",
+      "evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-R4-posiciones-transferencia.json",
+      "affected_paths": [
+        "src/components/review/OperationsReview.tsx",
+        "src/test/rdg-operations.test.tsx"
+      ],
+      "justification": "14 respuestas correctas en posición 1 y T11–T24 consecutivas permiten acertar por posición. Balancear aleatoriamente por sesión sin alterar contenido, claves, distractores ni ID."
+    }
+  ],
+  "next_action": "Confirmar CI exacto, prueba de navegación y paridad; conservar RDG_EN_CURSO hasta gates R01–R07 pertinentes y publicación.",
+  "stop_reason": null
+}

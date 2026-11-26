@@ -4,6 +4,7 @@ import {afterEach,expect,it} from "vitest";
 import {cleanup,fireEvent,render,screen,waitFor,within} from "@testing-library/react";
 import {routeTree} from "@/routeTree.gen";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";
+import {balanceTransferOptions} from "@/components/review/OperationsReview";
 import {mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 afterEach(cleanup);
@@ -146,4 +147,23 @@ it("teaches signed subtraction and product, and keeps the new transfers free of 
  fireEvent.click(screen.getByRole("button",{name:"Siguiente",exact:true}));
  expect(screen.getByRole("heading",{name:"Cargo con reintegros"})).toBeInTheDocument();
  expect(screen.queryByRole("button",{name:/pista/i})).not.toBeInTheDocument();
+});
+
+
+it("R07 transfer answer positions are balanced per session, vary by seed and preserve keys and distractors",()=>{
+ const tasks=OPERATIONS_ROUTE.transfer;
+ const snapshot=JSON.stringify(tasks);
+ const before=[0,0,0,0];for(const t of tasks)before[t.options.indexOf(t.answer)]++;
+ expect(before).toEqual([14,4,4,2]); // reproduced positional clue in the stored R4 tasks
+ const seedRandom=(seed:number)=>{let state=seed;return ()=>((state=(Math.imul(1664525,state)+1013904223)>>>0)/4294967296);};
+ const first=balanceTransferOptions(tasks,seedRandom(1));
+ for(let seed=1;seed<=256;seed++){
+  const ordered=balanceTransferOptions(tasks,seedRandom(seed));const counts=[0,0,0,0];
+  for(const t of tasks){expect([...ordered[t.id]].sort()).toEqual([...t.options].sort());counts[ordered[t.id].indexOf(t.answer)]++;}
+  expect(counts).toEqual([6,6,6,6]);
+ }
+ expect(balanceTransferOptions(tasks,seedRandom(2))).not.toEqual(first);
+ expect(JSON.stringify(tasks)).toBe(snapshot);
+ expect(()=>balanceTransferOptions([{...tasks[0],answer:"not-present"}])).toThrow();
+ expect(()=>balanceTransferOptions([{...tasks[0],options:[tasks[0].answer,"x","x","y"]}])).toThrow();
 });

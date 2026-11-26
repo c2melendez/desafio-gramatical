@@ -9,7 +9,7 @@
     "subtopic": "Operaciones"
   },
   "route_path": "src/components/review/OperationsReview.tsx",
-  "route_sha256": "0f9595c75b5fb22977ed7d3babba45112c962e4f97f47c7416e128f8a718e28f",
+  "route_sha256": "5a87cd83ae65258f384b432adc4bc6ebb0c7132fde14b03288610e4972532db8",
   "plan_path": "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json",
   "plan_sha256": "fd8ee4fe4e01f54000672dcd8b6ba8e019d4d56940ee74c568560ba0b7e6d2ad",
   "data_path": "src/lib/rdg/operations.ts",
@@ -18,7 +18,7 @@
   "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
   "dependency_hashes": {
     "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "fd8ee4fe4e01f54000672dcd8b6ba8e019d4d56940ee74c568560ba0b7e6d2ad",
-    "src/components/review/OperationsReview.tsx": "0f9595c75b5fb22977ed7d3babba45112c962e4f97f47c7416e128f8a718e28f",
+    "src/components/review/OperationsReview.tsx": "5a87cd83ae65258f384b432adc4bc6ebb0c7132fde14b03288610e4972532db8",
     "src/lib/rdg/operations.ts": "c58c919e07d4243df5b5d6402df2e60e0321bccaee2e7e1babca2328e939a25e",
     "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
   },

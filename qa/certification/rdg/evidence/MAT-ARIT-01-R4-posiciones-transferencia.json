@@ -1,0 +1,32 @@
+{
+  "status": "PASS_HELPER_E1",
+  "scope": "R4 transferencia T1–T24; no certifica IDs",
+  "base_sha": "64f5d60f62b278a6f0f1e02f819243ecd66f3d9e",
+  "source_data_sha256": "c58c919e07d4243df5b5d6402df2e60e0321bccaee2e7e1babca2328e939a25e",
+  "previous_route_sha256": "0f9595c75b5fb22977ed7d3babba45112c962e4f97f47c7416e128f8a718e28f",
+  "candidate_route_sha256": "5a87cd83ae65258f384b432adc4bc6ebb0c7132fde14b03288610e4972532db8",
+  "previous_correct_positions": [
+    14,
+    4,
+    4,
+    2
+  ],
+  "always_first_correct": 14,
+  "consecutive_first": [
+    "T11",
+    "T24"
+  ],
+  "verified_seeds": 256,
+  "per_seed_position_counts": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "options_preserved": 24,
+  "mutants_rejected": 3,
+  "source_immutable": true,
+  "helper_sha256": "cab918519162695c64d271e4af9e8f14842826530099a39d2ea28890f0c4e229",
+  "execution": "JavaScript Code Mode; same helper logic executed against 24 tasks read from immutable GitHub SHA",
+  "limits": "No full React/browser run yet; candidate remains RDG_EN_CURSO; CI and Render not yet observed for this change."
+}
