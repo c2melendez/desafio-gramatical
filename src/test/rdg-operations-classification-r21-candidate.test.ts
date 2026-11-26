@@ -9,6 +9,7 @@ import {verifyMathM3Record} from "@/lib/math-m3-guards";
 import {operationR20WrongCause} from "@/lib/math-operations-r20-error-cause";
 const sha=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");
 const archive=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-R20-feedback-causes.json","utf8"));
+const manifest=JSON.parse(readFileSync("qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json","utf8"));
 const scope=new Set<string>(archive.records.map((x:{id:string})=>x.id));
 const add=(x:number,n:number)=>Array.from({length:n},()=>x).reduce((a,b)=>a+b,0);
 function assess(x:MathModel){
@@ -43,7 +44,7 @@ function assess(x:MathModel){
 it("R21 candidate: all eight masks in each level; 59 frozen IDs, all 472 counterfactual masks tested independently",()=>{
  const prev=MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3R19Pool("Aritmética","Operaciones",l,m)));
  const live=new Map(MATH_LEVELS.flatMap(l=>MATH_MODES.flatMap(m=>mathM3Pool("Aritmética","Operaciones",l,m))).map(x=>[x.id,x]));
- expect(live.size).toBe(450);expect(scope.size).toBe(59);
+ expect(live.size).toBe(450);expect(scope.size).toBe(59);expect(manifest.records).toHaveLength(59);expect(new Set(manifest.records.map((x:{id:string})=>x.id)).size).toBe(59);
  let checked=0,unchanged=0,changed=0,variants=0,mutants=0;const coverage:Record<string,Record<string,number>>={};
  for(const predecessor of prev){
   const old=live.get(predecessor.id)!;
@@ -59,6 +60,7 @@ it("R21 candidate: all eight masks in each level; 59 frozen IDs, all 472 counter
   expect(v.options).toEqual(old.options);expect(v.steps).toEqual(old.steps);expect(v.oracle).toEqual(old.oracle);
   const c=coverage[v.level]??(coverage[v.level]={});c[mask]=(c[mask]??0)+1;
   for(let i=0;i<3;i++){expect(()=>assess({...v,assertions:v.assertions.map((d,j)=>j===i?{...d,truth:!d.truth}:d)})).toThrow("truth");mutants++;}
+  const row=manifest.records.find((x:{id:string})=>x.id===v.id);expect(row.previous_sha256).toBe(sha(old));expect(row.content_sha256).toBe(sha(v));expect(row.decisions).toEqual(ds);expect(row.mask).toBe(mask);
   if(sha(v)!==sha(old))changed++;
   console.log("RDG_R21_CANDIDATE "+JSON.stringify({id:v.id,previous_sha256:sha(old),content_sha256:sha(v),level:v.level,operation:v.operation,mask,decisions:ds,semantic_status:"REVIEW"}));checked++;
  }
