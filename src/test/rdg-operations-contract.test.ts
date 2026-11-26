@@ -6,12 +6,15 @@ import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
 import {mathM3HistoricalPool as mathM3Pool} from "@/lib/math-m3";
 const load=(path:string)=>JSON.parse(readFileSync(path,"utf8"));
 const sha=(value:Buffer|string)=>createHash("sha256").update(value).digest("hex");
-const contract=load("qa/certification/rdg/contracts/MAT-ARIT-01.json");
+const contract=load("qa/certification/rdg/contracts/MAT-ARIT-01-R4-candidate.json");
+const historical=load("qa/certification/rdg/contracts/MAT-ARIT-01.json");
 const evidence=load("qa/certification/rdg/evidence/MAT-ARIT-01-P2-preflight.json");
 const assertDependencies=(expected:Record<string,string>,read:(p:string)=>Buffer)=>{
  for(const [path,hash] of Object.entries(expected))if(sha(read(path))!==hash)throw Error("RDG dependency changed: "+path);
 };
 it("R05/R06 verifies exact published plan, route, data and source hashes and detects mutations",()=>{
+ expect(historical.status).toBe("RDG_READY");expect(historical.revision).toBe("3");
+ expect(contract.status).toBe("RDG_EN_CURSO");
  assertDependencies(contract.dependency_hashes,p=>readFileSync(p));
  expect(contract.plan_sha256).toBe(OPERATIONS_ROUTE.planSha256);
  expect(contract.revision).toBe(OPERATIONS_ROUTE.revision);
