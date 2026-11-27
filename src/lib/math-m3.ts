@@ -1,3 +1,5 @@
+import {repairOperationR22Candidate} from "./math-operations-r22-candidate";
+import {repairOperationR23Candidate} from "./math-operations-r23-candidate";
 import type {Level,Mode} from "./grammar";
 import {MATH_LEVELS,MATH_MODES,MATH_SUBTOPICS,MATH_LEVEL_COUNT,MATH_TOPICS,mathModel,type MathModel} from "./math-m1";
 import {mathM2Pool,MATH_M2_LEVEL_COUNT} from "./math-m2";
@@ -101,13 +103,19 @@ export function mathM3R18Pool(topic:string,subtopic:string,level:Level,mode:Mode
 export function mathM3R19Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R18Pool(topic,subtopic,level,mode).map(repairOperationClassificationR19);
 }
-export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+/** R20 frozen baseline, retained for historical regression and evidence. */
+export function mathM3R20Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R19Pool(topic,subtopic,level,mode).map(repairOperationClassificationR20);
 }
 export const MATH_M3_NEW_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(10+15+25);
 export const MATH_M3_TOTAL=MATH_SUBTOPICS.length*MATH_MODES.length*(30+50+70);
 
-/** R21 selection preview only; production remains R20. */
+/** R21 selection preview only; production uses selective R26 successor layer. */
 export function mathM3R21CandidatePool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R19Pool(topic,subtopic,level,mode).map(repairOperationClassificationR21Candidate);
+}
+
+/** R26: activate only 30 R22/R23 successors after reviewed preflight; R21 stays separate. */
+export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R20Pool(topic,subtopic,level,mode).map(repairOperationR22Candidate).map(repairOperationR23Candidate);
 }

@@ -1,8 +1,9 @@
+// Historical R20 evidence: keep exact baseline; active R26 has a separate full-bank regression.
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R20Pool as mathM3Pool} from "@/lib/math-m3";
 import {verifyMathM3Record} from "@/lib/math-m3-guards";
 import {repairOperationR22Candidate} from "@/lib/math-operations-r22-candidate";
 const hash=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");

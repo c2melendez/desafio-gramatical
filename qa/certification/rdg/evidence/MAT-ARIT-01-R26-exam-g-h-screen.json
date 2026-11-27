@@ -1,0 +1,2935 @@
+{
+  "scope": "MAT-ARIT-01",
+  "revision": "7.9",
+  "status": "REVIEW",
+  "source": {
+    "r25_pr": 104,
+    "sha": "7861ece2a05b5faa1ccea260e066204ee973c2a9",
+    "merge_preview": "d2d2195f5e4503a3bfc9803c89c38a20692838bf",
+    "run": 45946255176,
+    "job": 140331527353,
+    "ci": "SUCCESS",
+    "r24_production_sha": "3a49d3903c775c7a3923569ca6181d3fa1b2ace9",
+    "r24_production_ci": 45946102180,
+    "r24_render": "dep-dc4hadbrjlhs73fr9m0g",
+    "r24_status": "SUCCESS_AND_LIVE_WHEN_OBSERVED"
+  },
+  "exam": {
+    "repository": "c2melendez/academia-paa-phuma",
+    "sha": "5baf93053faef098a73e6c47fb854c1ace2ccf6d",
+    "modules": [
+      {
+        "path": "data/mathEngine.js",
+        "blob": "6cde547793334bc0fc6b5e50172bf6266d8cd029"
+      },
+      {
+        "path": "data/spanishEditorialBank.js",
+        "blob": "b132fb9d44d9ff5a59e45135b1dce6c6d32ead1c"
+      },
+      {
+        "path": "data/disciplinaryBank.js",
+        "blob": "174d75c15d31c5e24958ba22a1724b2b8c47242f"
+      },
+      {
+        "path": "data/spanishExplanations.js",
+        "blob": "78d84d9a0681ab140f9453fb45bd566280779900"
+      },
+      {
+        "path": "data/visualBank.js",
+        "blob": "0f4b1c711e9d25b943eba626554eb6e217634465"
+      },
+      {
+        "path": "data/readingBank.js",
+        "blob": "94981c7c92a873c21d618bb575828c65b21b6203"
+      },
+      {
+        "path": "data/precisionBank.js",
+        "blob": "ac982223f6a6dbf67fbf3baa24c4c0f37227473f"
+      },
+      {
+        "path": "data/advancedVisualBank.js",
+        "blob": "630c428f2fa9b70982f33de0ab35bba925adbc82"
+      },
+      {
+        "path": "data/enrichmentBank.js",
+        "blob": "ad60e760f6c21cbde22bf632584484a6114efadd"
+      },
+      {
+        "path": "data/foundationBank.js",
+        "blob": "33d07fb9bc0cac0a1f37ec2624bf65458a53932a"
+      },
+      {
+        "path": "data/gapClosureBank.js",
+        "blob": "567a5789dcf049d7091854dde8be3fb1c956686c"
+      },
+      {
+        "path": "data/curated.js",
+        "blob": "c0164bab87c46689122ee5a8b6b8dc9b26da06d4"
+      },
+      {
+        "path": "src/catalog.js",
+        "blob": "6fa93116f47913bc180d373f69cfe9de49f3dcb0"
+      },
+      {
+        "path": "data/questionBank.js",
+        "blob": "0fa5ef568a8ddb3c1ded058cbba6c3493b9a2240"
+      }
+    ],
+    "method": "Ejecutar módulos JS originales en ámbito aislado adaptando únicamente declaraciones ESM import/export; comparar 89 estímulos con 415 prompts matemáticos mediante texto normalizado, expresiones reducidas, tupla de costos, raíces racionales y agrupaciones con suma conmutativa. Señales requieren adjudicación; no acredita equivalencia universal, contenido gráfico ni eficacia empírica."
+  },
+  "summary": {
+    "ids": 89,
+    "exam_bank": 989,
+    "exam_math": 415,
+    "changed_stimuli": 24,
+    "exam_signal_ids": 0,
+    "game_signal_ids": 0,
+    "rdg_signal_ids": 0,
+    "tuple_signal_ids": 27,
+    "screen_clear_ids": 62,
+    "H_dom_ids": 89,
+    "H_steps": 232,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-0",
+      "content_hash": "95e41a943ce6cab5c275257a81be23da691148a659fd40212e7b018165a56296",
+      "previous_hash": "60eb7cbb59a443f4bcc2693bc955033069017e457f05a2f69a4682ff4d42c4f8",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (5+11)×8. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(5+11)*8",
+        "group|5|11|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-1",
+      "content_hash": "b1840222926634c700b8262a06d64432dada56dc7baff9042753d21062681a58",
+      "previous_hash": "db5b6bb415b7c91f4b1de61a665aaea951ed0c54ebe01aa2749f5e9f225318ca",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (6+14)×6. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(6+14)*6",
+        "group|6|14|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
+      "content_hash": "84364a2ebc42c5ba2e4de0abc0eef1015948be463ed2ea6b8a5972d9615e8f8c",
+      "previous_hash": "5c4e7f051764d11a3052acd6005e17fcc04b6551be5372b5248147249e31c6be",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (7+4)×4. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(7+4)*4",
+        "group|4|7|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
+      "content_hash": "219f6b125d0d73246b62c47292d34f04dd86444f12166738fc26f4ba3267d914",
+      "previous_hash": "4411163a39f652bf3dac2548af3d842a16d8abb6a198a4e0ecd4a6b0b05b2b3f",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (8+7)×2. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(8+7)*2",
+        "group|7|8|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-4",
+      "content_hash": "0f0a1ea07792192a3cd3a040d2b3806e1e61713f30dffca6db055825695a6495",
+      "previous_hash": "adc5a9f4686e8e6354a51c112259fe3dc2ec2da00d3f70e3294e7bff07b7a403",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (9+10)×7. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(9+10)*7",
+        "group|9|10|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
+      "content_hash": "5d8e78f84d6881aac946a8a3da12a7f6e36724aa49834cc7391dfd920bae1c5d",
+      "previous_hash": "3112879ef9a0e22cc89d6c96b60ddd3d3e50aecf0e7648f293334fe59fe87b5d",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (10+13)×5. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(10+13)*5",
+        "group|10|13|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-6",
+      "content_hash": "4c45220aacdab55de892cc8e31cf1235959f709c97fbb2f8ced7435c68d1d4bd",
+      "previous_hash": "88932fcfae3e8d986fe7a8011ef43d27f26ad0221ccf90914ebc96366238d6e7",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (11+3)×3. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(11+3)*3",
+        "group|3|11|3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-7",
+      "content_hash": "f1a9c4a397a5b8be3238e036a6cc947a6f657639e0be6e5104d50fb4b8bdb120",
+      "previous_hash": "f60b7df014026717cc4363217ebb61be7cdf3bc84054c6b6ace5d85a5bb09bf9",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (12+6)×8. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(12+6)*8",
+        "group|6|12|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
+      "content_hash": "347806c0ba8f6a1e79a08b3fc3f74b2876f3a1966cd73984a0d7e440be3c3007",
+      "previous_hash": "31d3d99bd428e5750d6d0a23899830a06d8fd4a804ac70510902a04175e0d492",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (13+9)×6. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(13+9)*6",
+        "group|9|13|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-principiante-9",
+      "content_hash": "779a118493cd8040dcfdd9d091341b1d7137d97fd9c8f4a93e5d124109dfb16d",
+      "previous_hash": "4a0e92549eac7d8b225151bfad79c77a8e29183770b21966523c2af2be6281e8",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (14+12)×4. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(14+12)*4",
+        "group|12|14|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-principiante-9",
+      "content_hash": "533a5b942ea0d840b9ad19dd6f0296d1a359ac5d2b723da2810e6a6b79894fdb",
+      "previous_hash": "0e94e25375f106233dbca057f383dcfcb5257e4003b77108fb6ebd265d3d3517",
+      "level": "principiante",
+      "mode": "clasificar",
+      "operation": "prioridad-de-operaciones",
+      "stimulus": "Resuelve (13+6)×5. ¿Cuál es el resultado?",
+      "stimulus_changed": false,
+      "signatures": [
+        "expr|(13+6)*5",
+        "group|6|13|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 11,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "content_hash": "e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd",
+      "previous_hash": "f48ec3d5415cf304f6a3ea6ff71a872fcf2346e9f832daa0cb32de8d8c4a2b20",
+      "level": "principiante",
+      "mode": "quiz",
+      "operation": "cero-dividido-por-no-cero",
+      "stimulus": "Calcula (42 − 42) ÷ 7 + 11. ¿Cuál es el resultado?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(42-42)÷7+11"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 2,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-3",
+      "content_hash": "41c1328ebc68848bf9af53f62bea2f1288164dca072763dcb1735518a10fc86f",
+      "previous_hash": "102ce9bc7601e05e67555d4515638575e9c191df6963ad67a4972b86d0df3b07",
+      "level": "principiante",
+      "mode": "construir",
+      "operation": "cociente-con-agrupacion",
+      "stimulus": "Calcula 252 ÷ (7 + 11). ¿Cuál es el resultado?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|252÷(7+11)"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "content_hash": "36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9",
+      "previous_hash": "07e5a8971e05f4831083520e9d7f36b6ccb4bb77f312a9c98305d71210a4fff1",
+      "level": "principiante",
+      "mode": "construir",
+      "operation": "cero-dividido-por-no-cero",
+      "stimulus": "Calcula (60 − 60) ÷ 6 + 12. ¿Cuál es el resultado?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(60-60)÷6+12"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 2,
+      "cell_count": 30,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+      "content_hash": "f0a1e2d18397f16f9ee2ff66910051c39184b4ec68a90b87982fcc75c0a94725",
+      "previous_hash": "3427391461355ad3615aa37bf9edf4803862b8a2d7a151ba6d58aab927aa295a",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (16+12)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|12|16|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+        "math-m2-aritmetica-operaciones-quiz-intermedio-18"
+      ],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante de cambios de operandos; revisar utilidad individual."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-1",
+      "content_hash": "7fc995cbb8d44d19d77b04674273f343128699fbdfb93744e70a74bde1ced245",
+      "previous_hash": "774a39b2d904e76862f0869bd86152cba5102196c125a523d6873245b01bfc39",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (17+15)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|15|17|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "content_hash": "5a40bd57b08647b04ad5de6d5f185b9f49315a085c3ec09a63c2079bbfde4a3a",
+      "previous_hash": "01f920658c1166d4794ff83ca915a25e58b746db2f215b517ecda768ec4bdfde",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (18+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|5|18|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "content_hash": "8be443b16fcba68711a3af73db0a216dd9185636553ea4cc1fc18ccbf87f4efa",
+      "previous_hash": "6670de329bff92118aa310bdaa45a21c796f0e3ae90b88195b6636c5dc758d09",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (19+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|8|19|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "content_hash": "42c682438356474480c1cee80daf133b04405bcc31fd186795925e24217cfec8",
+      "previous_hash": "a044697e674a1154ecd4976e6543ac0b3245dffd5690161200c546225b02199e",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (20+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|11|20|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-5",
+      "content_hash": "c1950af24efa6ed2654ec76fa9db05f2f04588d6698de0bfd5d29f5fb9abc1d3",
+      "previous_hash": "8822e3a907f335a0557b8a45c903631fd7a619b58c4ae7d89f0fc4fa3a439a29",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (21+14)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|14|21|3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-6",
+      "content_hash": "b8ed46f76a8a4d0d362be7e72a55b0949fb7d1b55dd3283c0ae65d674da8b37e",
+      "previous_hash": "1121cd56f9767747fcb20ce08d700f31a5af1f82769e688680d223881363aa2a",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (22+17)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|17|22|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-7",
+      "content_hash": "df70b544eec51e710116dbb3af997b9b841ba463b47a7a7a8cee3b599797f997",
+      "previous_hash": "5cf079db4723eabd97dbbea0636d9cd99117ccb64e3843655d036ec0cd576076",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (6+7)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|6|7|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-8",
+      "content_hash": "7a4e9728bd059a9008190040e0527c19ce3e59d8d4eb90367ad6bf74f92d7f93",
+      "previous_hash": "d6ff3d19a9b390ea9393452609046b0db787ade8c43ed0e6245f3e701a50227a",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (7+10)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|7|10|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-9",
+      "content_hash": "39d7a3a96d6e6531dd1bdbae3c3904a89b7ddb45d0f50b78d0127d135f434260",
+      "previous_hash": "6e6d14c3bcb827b9e7c3f6063d8da73788b5d57096291bb5bae52068bc4247b3",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (8+13)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|8|13|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "content_hash": "2a669cd2e82a421bb09523dab9b0a12e1cd44286031c62da8c2831def032833e",
+      "previous_hash": "1e09f16b190834e4d02c13aca51286898cc8c464d3fb8c69cb929ef58a95ad52",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (9+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|9|16|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "content_hash": "b50f1ab0f38fb3d2fe9edfe87e7103a2a263648e9594d8937c0bd6c7b0b1d72d",
+      "previous_hash": "093012a648fcb097642ed640ae5b70ea429a0e5ee077f7dfe78b9487bdd5848b",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (10+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|6|10|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-12",
+      "content_hash": "9ad821552caaab7c628931591c52acab84d15d7e0ef2718f012c9f1cd8775e30",
+      "previous_hash": "b5313286afa33059f3c5e2a754ba18330f1569e5e443f4ff3d87855f62053b83",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (11+9)×3. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|9|11|3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_hash": "2b5475d620af5edfdf433596f6ac041b30a51e0483c1fc7f5d45ae18909a7e80",
+      "previous_hash": "530a5f527b21d9c19d173587d277400cc5dd177e7e18f6b5a5c236bdf25b2ae6",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (12+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|12|12|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-14",
+      "content_hash": "faa6ec16700c07c30dffec288df75d3ccb2a960f78ed804c529c626be41302ca",
+      "previous_hash": "6460775dec0ebc6adc501eadb3e2457382b20e1f3478f30852fe52fb683107c6",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (13+15)×6. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|13|15|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-clasificar-intermedio-0",
+        "math-m2-aritmetica-operaciones-quiz-intermedio-18"
+      ],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante de cambios de operandos; revisar utilidad individual."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+      "content_hash": "d3dbbcd7fa0257e62bc5398ecb827fa07cbff29708f49b066135222a7221a1e9",
+      "previous_hash": "c8276fc6895c72e0fb6a5548334341ffe65c68cdf7dc9c07cb176299a019b62f",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "comparar-ofertas-con-cargos-fijos",
+      "stimulus": "Para comprar 10 cuadernos, la tienda A cobra L 15 por cuaderno más L 20 por el pedido; la B cobra L 18 por cuaderno más L 5 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "stimulus_changed": false,
+      "signatures": [
+        "cost|10|15|20|18|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_hash": "f78a66034ca7a32c4b7c697f8827ca4b8eacbc094aae514c9a2ce23c804b21b6",
+      "previous_hash": "7accbec584cbda7da0dadb1175b942802e7567d03c85b6535cf3d2ffbec12a6c",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "comparar-ofertas-con-cargos-fijos",
+      "stimulus": "Para comprar 11 cuadernos, la tienda A cobra L 15 por cuaderno más L 23 por el pedido; la B cobra L 18 por cuaderno más L 6 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "stimulus_changed": false,
+      "signatures": [
+        "cost|11|15|23|18|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-14",
+      "content_hash": "ddd7ee990666174a94cbd5be89d9b7643fe34122dd0947ede42828fdc603e35d",
+      "previous_hash": "728dab21d1804467db62eed5a7124761167ba2759dd4d19d9b168dd21c8002bb",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "comparar-ofertas-con-cargos-fijos",
+      "stimulus": "Para comprar 12 cuadernos, la tienda A cobra L 15 por cuaderno más L 26 por el pedido; la B cobra L 18 por cuaderno más L 7 por el pedido. ¿Cuál es el costo de B menos el costo de A, en lempiras?",
+      "stimulus_changed": false,
+      "signatures": [
+        "cost|12|15|26|18|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+      "content_hash": "588126d1635f62ee18e4982fdfb778ef0a23423423a9b2c57614255846f7f6f3",
+      "previous_hash": "7ac5595fa1b32bb369cae8638bc25b2557d2bfb46a48e0e69a1d00d79b2e818c",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "cociente-de-diferencia-racional-con-raiz",
+      "stimulus": "Calcula (√(25/81) − 6/18) ÷ 3. Expresa una fracción simplificada.",
+      "stimulus_changed": false,
+      "signatures": [
+        "root|5/9|1/3|3",
+        "expr|(√(25/81)-1/3)÷3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-16",
+      "content_hash": "a09828cffae299085413718c2a096425618197384cab92cf9ce5fec9ccdc031b",
+      "previous_hash": "9b1530f00120bc6e092a9b858a9bc5361c2657160cb2cecdd5a782ce939b397f",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "cociente-de-diferencia-racional-con-raiz",
+      "stimulus": "Calcula (√(36/100) − 7/20) ÷ 4. Expresa una fracción simplificada.",
+      "stimulus_changed": false,
+      "signatures": [
+        "root|3/5|7/20|4",
+        "expr|(√(9/25)-7/20)÷4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+      "content_hash": "56a42f81536dbe0240df6d6c429039347ba218732ea0ac12201ca5f574ec7d2d",
+      "previous_hash": "c36e7adaea461f712591ae050d668fa3cd96158343204e970911185ca9a1bf48",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "cociente-de-diferencia-racional-con-raiz",
+      "stimulus": "Calcula (√(49/121) − 8/22) ÷ 5. Expresa una fracción simplificada.",
+      "stimulus_changed": false,
+      "signatures": [
+        "root|7/11|4/11|5",
+        "expr|(√(49/121)-4/11)÷5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-18",
+      "content_hash": "650f71b5f21ced927b92a89ab5d2724532f8f62a39f4a1f4e2e086c8c8b89203",
+      "previous_hash": "ada635446ea63c7f54f16080b4f32bc0c91e941c6efb14d577c39681516495db",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (13+14)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|13|14|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-19",
+      "content_hash": "dcf4255b5bdbadf725fc8590d161539f33cf2e98d87c26697b70e34529fc0bdb",
+      "previous_hash": "644acedd636eaa0314062ac7d585b5c2001890687df8fbb525c64b96783f6b75",
+      "level": "intermedio",
+      "mode": "clasificar",
+      "operation": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (8+6)×4. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|6|8|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 17,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+      "content_hash": "2d636317237aa786ab0f0292201c87ba168116e80feebe967783bd54b210a81d",
+      "previous_hash": "f458dc01d824f3657cc29b3c8b5acb2db6aa519f01292922c53ce5434bfb9f76",
+      "level": "intermedio",
+      "mode": "quiz",
+      "operation": "cociente-de-diferencia-racional-con-raiz",
+      "stimulus": "Calcula (√(25/64) − 7/16) ÷ 4. Expresa una fracción simplificada.",
+      "stimulus_changed": true,
+      "signatures": [
+        "root|5/8|7/16|4",
+        "expr|(√(25/64)-7/16)÷4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+      "content_hash": "73ca70653603f898ecef293ff4e4db0e7428927f3354ea837e7a8896617ccd8a",
+      "previous_hash": "848035a45ecee31499793ef1763ff2cfbe1ac20a94c056bb4e6767797cd23855",
+      "level": "intermedio",
+      "mode": "construir",
+      "operation": "cociente-de-diferencia-racional-con-raiz",
+      "stimulus": "Calcula (√(49/144) − 9/24) ÷ 4. Expresa una fracción simplificada.",
+      "stimulus_changed": true,
+      "signatures": [
+        "root|7/12|3/8|4",
+        "expr|(√(49/144)-3/8)÷4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 50,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-0",
+      "content_hash": "b8ddd7a264b0f07877629a4eb98227064479d7970b1c3f062efc8d9191de45e6",
+      "previous_hash": "aa093142a86b8ade88755e741a2093dda23b90aedd3d3f58cdde8945a4917f92",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+13)×4−10×4. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|10|13|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m3-aritmetica-operaciones-construir-avanzado-19"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-1",
+      "content_hash": "c2f50e173c876d89caf71f112a45f9873b05badc650f75364714c4b0bb1b51e3",
+      "previous_hash": "09ccc6cd21e256c7271c7b988531e95ddc70f89e7cbbd867683fb382a12a8274",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+16)×2−11×2. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|11|16|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m3-aritmetica-operaciones-quiz-avanzado-13",
+        "math-m1-aritmetica-operaciones-construir-avanzado-0"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-2",
+      "content_hash": "db3907805471c0a7dfcf303a0aeac065da71ceebce506435921662557a2c06e4",
+      "previous_hash": "e1a3bf3447709251cadbe5f724e10c70c6daf147ea27541b0df9b0298cf72dc9",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+19)×7−12×7. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|12|19|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-1"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-3",
+      "content_hash": "43eaba1cf875aa957f11e0558d6abb00e1030111729a66bcfa5b22c80cec7d2c",
+      "previous_hash": "958e01e1b1b2962d7e856d6e04d40ca4a26f2eeac049103a07359358683e86c4",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+9)×5−13×5. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|9|13|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-2"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-4",
+      "content_hash": "3159d00e3ff50a7940001de31975956ab5129f91acaff5837a2230628153ae2c",
+      "previous_hash": "4ea90a0ce2831772cdb255d37e2b7161eef32c06ab883c25a7963d635fad6aff",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (14+12)×3−14×3. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|12|14|3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-3"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-5",
+      "content_hash": "1be1ad4fe8fd593ceeb412d687b45f3216225892ef994181c813cdec3b03ede0",
+      "previous_hash": "7fbae3b58a022a58f91e4dfc8efc21f1a1fd4462280dad0a39cebf1dfe83b6c5",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+15)×8−15×8. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|15|15|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-4"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-6",
+      "content_hash": "500e49ba85d63ae4c0ffb84e9d6bc99c353202a3a2db99a67fdea70bf43082fa",
+      "previous_hash": "d9ba1aa463c1806223f7036fcaddc3001e74d14f93eb9596c602e7f7f1836037",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+18)×6−16×6. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|16|18|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-5"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-7",
+      "content_hash": "ca01e25c61f18474bd9540b3bb785675a1e20e8773b50a5eeaf309e2140df691",
+      "previous_hash": "3db44be7f154e61f48de7979c577b0fd66061747be46f836d4e2f176643509a3",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (17+8)×4−17×4. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|8|17|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-6"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-8",
+      "content_hash": "fc69be8d219ee1f109b97342faaf7f59e498407e831e2cd755d91696716e2593",
+      "previous_hash": "3af7f397ad5ef3ff111f4674853b138796df471e3045bc1d55318a1d5ba1a53b",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+11)×2−18×2. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|11|18|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m3-aritmetica-operaciones-quiz-avanzado-20",
+        "math-m1-aritmetica-operaciones-construir-avanzado-7"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+      "content_hash": "803efa54e79b571d63e91bf04340966ae45ffc10882b2ee5bc92fcfbc59e016e",
+      "previous_hash": "27ab27301cd560bdc90df16613275dad27ea2307e099bda4136bde46e4676d00",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (19+14)×7−19×7. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|14|19|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+        "math-m1-aritmetica-operaciones-construir-avanzado-8"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-10",
+      "content_hash": "3b9d7716b65b90da5dbdbc0e860c95884c5eb3f26f934b358a5184a6cd34c223",
+      "previous_hash": "86808155c5689d226dcf131ebe808b25f40987858677bfc590e37272a5ad85ef",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+17)×5−20×5. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|17|20|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-9"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-11",
+      "content_hash": "242756779f10ac14d4064316aa3d0c59a2ebd236af364a8ef3587478832029f4",
+      "previous_hash": "2483dd54f1b097b7eb09a37ffe8ef98c74490e56e0c37192803c5dd1338934a7",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+7)×3−21×3. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|7|21|3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-10",
+        "math-m3-aritmetica-operaciones-construir-avanzado-17"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-12",
+      "content_hash": "61f040ee02b67bd7d47ea8ed3240d220920ac406a0e012b501a71dfb794c4c3d",
+      "previous_hash": "381f7e67ec133ddebfbfd70cc5f33e8661e6d647094d60922f6b92fbc6150ee1",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (22+10)×8−22×8. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|10|22|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-11"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-13",
+      "content_hash": "4488061cc91c2d9e26e1d74f09c20d046168d6693b3a95c2c53fd6a4e422a96c",
+      "previous_hash": "3ec9b591787931943cc8b55a324ed3b02455e226b829bd797e97e7506e5d9b0a",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+13)×6−23×6. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|13|23|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-12"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-14",
+      "content_hash": "768494f9ea9aeef8c04c419ba4c5fe79c9f70c7438a953d73045de2a5e1fd508",
+      "previous_hash": "5ebe6879263a25969147bf26818789adb9117eaedba6d94a6c27c259734bfdff",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (24+16)×4−24×4. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|16|24|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-13"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-15",
+      "content_hash": "249f2c99bea2b1766bc7555f678210974bc39f5ba20482d506d5911a7195c66d",
+      "previous_hash": "8a3d954e3039c986bd09711b9350af87896e405bcb47f14134689a37388395e0",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+19)×2−8×2. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|8|19|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-14"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-16",
+      "content_hash": "abe7cb54704bb3b745f5fcf2d976a94f45ae258b3f52cc0d639ca4f1d72603b6",
+      "previous_hash": "98970d801a45370b5ced60923c07dfee84c2fbafdd2ab3af220e4e5ea4ee9eb6",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+9)×7−9×7. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|9|9|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-15"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-17",
+      "content_hash": "36a84acd89132af7730e94ab04f8952d29100fb2e2c47dc26b6d5fcbfb072d1f",
+      "previous_hash": "e5e82a01bf97482df5f42a1df3ec4184d810b7f1d6891bff77058b4d091622a7",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (10+12)×5−10×5. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|10|12|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-16"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-18",
+      "content_hash": "d2431de0305d1028d5220415856b89688a25bf82184d0f9abc277f7b1646c66a",
+      "previous_hash": "0968e8ed0eb902594fdcf3066221ddb94524b268ad9892cc960286a084a8b9d7",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+15)×3−11×3. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|11|15|3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-17",
+        "math-m2-aritmetica-operaciones-construir-avanzado-24"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-avanzado-19",
+      "content_hash": "a13d4d174ce3b083ebf46dac5cca8966b7dbd58588fdd7116248b855c2708141",
+      "previous_hash": "15498dfc7eb7a8d928faeb746c8d6cc65c3e45d83af45ce993a5c77d498b5c9a",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (12+18)×8−12×8. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|12|18|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m3-aritmetica-operaciones-quiz-avanzado-18",
+        "math-m1-aritmetica-operaciones-construir-avanzado-18"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-avanzado-24",
+      "content_hash": "be7948310091b88f43a820609e17498d127b24ff8a72a8a988ca18f27992819f",
+      "previous_hash": "e0adddf2f5ec8c4c68d5e00aa70a20121e406b2a46c7b6f973371e29d3645d35",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+17)×2−15×2. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|15|17|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-12",
+      "content_hash": "7cf3cf2aa32bd2e79f71c43b0f61f94a4fa33f60e95344e438c7f40564dbf761",
+      "previous_hash": "2c867f1633a2f8051d45dfc7d3a3ec7a54d9a9ad26f9e476c5bc607166f3fa84",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (9+15)×5−9×5. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|9|15|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-13",
+      "content_hash": "d872af71999443d4d91be0ea3ec193ed31de011db9d5daf350f9b6ce6e456602",
+      "previous_hash": "c694fa484be95331a34addf6d5e455822ea9bad27a36a85b4c093e3539fc4ffc",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (21+18)×2−21×2. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|18|21|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-14",
+      "content_hash": "6983ad19fe0a190de36d7dc9bd411adb5a870cf71a5bc44fac6aab8400330355",
+      "previous_hash": "83a09ea1fe0a6ba1e50f13a3352e14bf9c04c14b8977466af551bd9d9386f5d1",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (16+8)×6−16×6. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|8|16|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-construir-avanzado-19"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-15",
+      "content_hash": "a5c5fecbd6281661a21723fbc580ffaad3ba8a583f5edbcb3a061222d4df25ff",
+      "previous_hash": "54110a12bbf14f64a84f9ed09ee3c0ee667453c7b4c5a15e488ebc2a315f5a88",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (11+11)×3−11×3. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|11|11|3"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-quiz-avanzado-14"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-16",
+      "content_hash": "daf5239aa8912bccd8a4274d14ca56a943c18b8f1cd278894ae9ea5dab4a55e0",
+      "previous_hash": "76407a12efaf5cf5f608a0357991e34de2bf6e19e9bd01fe7d93e7071597afa9",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (23+14)×7−23×7. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|14|23|7"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-clasificar-avanzado-9",
+        "math-m1-aritmetica-operaciones-construir-avanzado-8"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-17",
+      "content_hash": "e547c71adc90c83b4df64d498752f5c38fc0bf5a449e282e31ef50ddf15a40bd",
+      "previous_hash": "4d3e8d9dfae3a2f77e97abdf4f54ba91619c428ca41e0d324a43293ac4a0a041",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (18+17)×4−18×4. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|17|18|4"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m1-aritmetica-operaciones-quiz-avanzado-3"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-18",
+      "content_hash": "0185828fd91ab05cf529691a14904a6912d9a265f283ce2e46d587acdcc7a33e",
+      "previous_hash": "0f652b9afaa1e6def6c45318370d0470567d70a6b4b214f0ccd6586cb35f1b24",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (13+7)×8−13×8. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|7|13|8"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-19",
+      "content_hash": "3f04edeb33d1c05dba757f80a1306e81c3070ab4703f346aa4c8b24528688350",
+      "previous_hash": "6a54da356fdb760a408a1c38c0b6c501ed7f051a1fabed463262f71b5b179f38",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (8+10)×5−8×5. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|8|10|5"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-20",
+      "content_hash": "c81d976f947a0c9c62c13fa13e7e21e593f552917532b5809ecec8aa7718c30c",
+      "previous_hash": "ff3ef5215ca022661ce2b0b26b5d0b117fc8646a138bdf3f422e5fccea6d5bcc",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (20+13)×2−20×2. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|13|20|2"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m3-aritmetica-operaciones-clasificar-avanzado-21",
+      "content_hash": "e7b61aa5229f4ca92826d04a172671ce35d82207361f44d0d9c9a46942c3edb0",
+      "previous_hash": "4faf78b7aba242090c3455f967206b52ca6f7be87ca6257b47ad603c415ddb1a",
+      "level": "avanzado",
+      "mode": "clasificar",
+      "operation": "distributiva-y-cancelacion",
+      "stimulus": "Sin calcular por separado los dos productos, usa la propiedad distributiva para simplificar (15+16)×6−15×6. ¿Cuál es su valor?",
+      "stimulus_changed": false,
+      "signatures": [
+        "group|15|16|6"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [
+        "math-m2-aritmetica-operaciones-quiz-avanzado-24"
+      ],
+      "family_count": 31,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 3
+      },
+      "decision": "REVIEW",
+      "G_screen": "ADJUDICATE_SIGNAL",
+      "reason": "Coincidencia de resultado y paso con otra variante; revisar reducción efectiva a producto directo y profundidad F antes de promover."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+      "content_hash": "6d9d9aaf5ecf1579c44479342b66e6fd541239047733350f5b668163f5c47612",
+      "previous_hash": "4aeb35d06bc914c8c34bb25d3b8501edbdda4ce892ac039c07266b782326872a",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "factor-comun-diferencia-compuesta",
+      "stimulus": "Completa 35 × □ − (35 − 6) × □ = 48. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|35*□-(35-6)*□=48"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+      "content_hash": "24533f05e26bad10465fb86e8dab63f12dd6cb52789b7bc8d920f06d6c4f9dae",
+      "previous_hash": "9436c43c5ca52a01c2b1320c8862fac01025aaa0c660c74e2fa5c3bde5eeb287",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "factor-comun-diferencia-compuesta",
+      "stimulus": "Completa 39 × □ − (39 − 7) × □ = 70. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|39*□-(39-7)*□=70"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+      "content_hash": "ed1a4ceef4b3e24600caa6afa4f2797f82652195c317521bf29c77098b300348",
+      "previous_hash": "00ecc4dfe58c868452e093cf25deaf68edf64487ad46a2d102fea044d54be5d3",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "factor-comun-diferencia-compuesta",
+      "stimulus": "Completa 43 × □ − (43 − 8) × □ = 96. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|43*□-(43-8)*□=96"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+      "content_hash": "8cb915d3f09f20377bc2b05d1b5e43ae3bab368a4a4d1796e1b82351218a4adf",
+      "previous_hash": "b16aca894bebb8e0016c4a54defde60538cc4b92377d4943d827a901394059ee",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "resta-anidada-distributiva",
+      "stimulus": "Completa 80 − [12 − □ × (18 − 3)] = 128. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|80-[12-□*(18-3)]=128"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+      "content_hash": "cc6ba29fe36500dfd46b74d95943c40129e99bd712404bacb039b41ebf7e9e05",
+      "previous_hash": "340303855000b1fba75d518ed667c23fee6b0676e0210751725efb0d44fc6152",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "resta-anidada-distributiva",
+      "stimulus": "Completa 85 − [13 − □ × (20 − 4)] = 152. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|85-[13-□*(20-4)]=152"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+      "content_hash": "f049110d67949469e2a62e1869fe067fc89b4f64392397359534dbbd84675f6e",
+      "previous_hash": "d8234d34bfe8573f2b39dfe47c44f8c4cb498d54769bfa79eeafa0ad56716f2c",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "resta-anidada-distributiva",
+      "stimulus": "Completa 90 − [14 − □ × (22 − 5)] = 178. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|90-[14-□*(22-5)]=178"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+      "content_hash": "0195d56d5ba79d6964555395b3bd8bc0265f1b402a372c94a4079b67187d8407",
+      "previous_hash": "0eef44c9eb3413f8391d229c5933a219180d45a67e3e9a0af12d7c6967a515d4",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "dos-raices-en-producto-agrupado",
+      "stimulus": "Completa (√81 − 2) × (□ + √25) − 4 = 101. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(√81-2)*(□+√25)-4=101"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+      "content_hash": "fa7c5dde7ce6f45888576cb2d42d05ca27e1c7ba8179cb568fbfe13aea75bb48",
+      "previous_hash": "8304eb14f4037791a25c24b5e00eddea805bb92013683198ddb7d5824cdb81a1",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "dos-raices-en-producto-agrupado",
+      "stimulus": "Completa (√100 − 3) × (□ + √36) − 5 = 114. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(√100-3)*(□+√36)-5=114"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+      "content_hash": "aa3b724bff1d9984b2426ca494caff452debf129c9b196084e89f112e2b1ca8c",
+      "previous_hash": "8938c0796cf9d5fe38e780c99692b566020e316b9c3c561cf9c4e2480794810e",
+      "level": "avanzado",
+      "mode": "quiz",
+      "operation": "dos-raices-en-producto-agrupado",
+      "stimulus": "Completa (√121 − 4) × (□ + √49) − 6 = 127. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(√121-4)*(□+√49)-6=127"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 1
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "content_hash": "12dfbbbf3d67f973b81466e661755a6f1c195f4a51f3e98b330abe4e74b37734",
+      "previous_hash": "2424a69545ad388cb602301a4772acbba067d62975bb2f72763a59871077c73a",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "factor-comun-diferencia-compuesta",
+      "stimulus": "Completa 47 × □ − (47 − 9) × □ = 126. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|47*□-(47-9)*□=126"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "content_hash": "9bbe3fd450415ceabfaf8c9d289983122a2867aa8383b99266e5c44063a4882d",
+      "previous_hash": "55b6a363d97d3231894f1eb7f4471f44866bda1a0b732af891879987394d1f63",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "factor-comun-diferencia-compuesta",
+      "stimulus": "Completa 51 × □ − (51 − 10) × □ = 160. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|51*□-(51-10)*□=160"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+      "content_hash": "f324d59679b24b61e7e5fdb1c1eb0a03282312cca8c4ebedc0a3a535ae8318e3",
+      "previous_hash": "c71f9afe39de25f3822fe8aa6135f1cac77163e984e91ba9155652d674779473",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "factor-comun-diferencia-compuesta",
+      "stimulus": "Completa 55 × □ − (55 − 11) × □ = 198. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|55*□-(55-11)*□=198"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+      "content_hash": "c87801812c8fafad59236d3d8232d4b336d00f050a5f6ec7a7f0b042d578c3b7",
+      "previous_hash": "b04365545109328c34df75e7b79b6b33f6db7b29b292e7e8363a7a72d946ca22",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "resta-anidada-distributiva",
+      "stimulus": "Completa 95 − [15 − □ × (24 − 6)] = 206. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|95-[15-□*(24-6)]=206"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+      "content_hash": "1598ed5ce131f4639b7b1761595f1e5e7dcb4df5c68316b61be469087a899f42",
+      "previous_hash": "dc36bb0df6e71159982789f6541d45a13477467861f44cb88f1b678c8e3d60f1",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "resta-anidada-distributiva",
+      "stimulus": "Completa 100 − [16 − □ × (26 − 7)] = 236. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|100-[16-□*(26-7)]=236"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+      "content_hash": "be406a05a9c90fbcb3cede74ace29d267832f9110a326c54818ea287fcd2c266",
+      "previous_hash": "ac3553665ecf646b901fd7634552e64d2d113cb07099f31dd1a8a775e1b384c6",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "resta-anidada-distributiva",
+      "stimulus": "Completa 105 − [17 − □ × (28 − 8)] = 268. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|105-[17-□*(28-8)]=268"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "content_hash": "c24d71e7b8281f7acfd1d5e7b158810adc4bd18e70d5f5bad2e2ea247de824b4",
+      "previous_hash": "d5faf5c1edf0bcc107fed782c5693a3fe27d2872e84914443490e0eda236378d",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "dos-raices-en-producto-agrupado",
+      "stimulus": "Completa (√144 − 2) × (□ + √64) − 7 = 203. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(√144-2)*(□+√64)-7=203"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "content_hash": "4659b1321c3ff860122a8f19dd6e00e623e978f2b9ac04d8fbb03a6bb9d7e0fc",
+      "previous_hash": "75a821c39ef0624b6147ca6eb8646b99661d5b822ad1997712b91c8529a9f665",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "dos-raices-en-producto-agrupado",
+      "stimulus": "Completa (√169 − 3) × (□ + √81) − 8 = 222. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(√169-3)*(□+√81)-8=222"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+      "content_hash": "48fff4582801dc1e487e006e184cad9a44d4381fadc2bee904c1cb25f03c8260",
+      "previous_hash": "8a9b2928068881356dea06662ab371277c04a680352bd74335d5a0d81cc74bde",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "dos-raices-en-producto-agrupado",
+      "stimulus": "Completa (√196 − 4) × (□ + √100) − 9 = 241. ¿Qué entero sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|(√196-4)*(□+√100)-9=241"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+      "content_hash": "b09926afe513a150a0a1c75f430bdee669048ab56ee566849a93a3655ce6bf73",
+      "previous_hash": "29a31bf05db2fa42b8268d1c2fa7a6ac20a2315155bd15fe370746693a78d668",
+      "level": "avanzado",
+      "mode": "construir",
+      "operation": "completar-igualdad-distributiva",
+      "stimulus": "Completa la igualdad 15 × (14 − 5) + □ = 15 × (14 + 6). ¿Qué número sustituye □?",
+      "stimulus_changed": true,
+      "signatures": [
+        "expr|15*(14-5)+□=15*(14+6)"
+      ],
+      "exam_matches": [],
+      "game_signals": [],
+      "rdg_signals": [],
+      "tuple_signals": [],
+      "family_count": 3,
+      "cell_count": 70,
+      "H": {
+        "scope": "JSDOM_NOT_PHYSICAL_OR_SCREEN_READER",
+        "nativeButtons": true,
+        "focus": true,
+        "textFeedback": true,
+        "liveRegion": true,
+        "nextAction": true,
+        "steps": 2
+      },
+      "decision": "REVIEW",
+      "G_screen": "NO_SIGNAL_IN_BOUNDED_SCREEN",
+      "reason": "Sin señales en cribado; falta decisión individual completa y publicación."
+    }
+  ],
+  "limits": "E1 sobre banco de simulacro y logs R25; H es DOM, no dispositivo físico/lector de pantalla. Sin promoción, sin modificación de banco de examen, sin activación. A-H individuales y producción exigidas."
+}

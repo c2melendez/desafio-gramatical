@@ -1,7 +1,8 @@
+// Historical R20 evidence: keep exact baseline; active R26 has a separate full-bank regression.
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R20Pool as mathM3Pool} from "@/lib/math-m3";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
 const load=(path:string)=>JSON.parse(readFileSync(path,"utf8"));
 const e=load("qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-publication-candidates.json");
