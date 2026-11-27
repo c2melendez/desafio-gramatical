@@ -1,6 +1,6 @@
 # Certificación académica y funcional — Academia PHUMA Play
 
-> **Sistema maestro vigente v7.9:** [Prompt ejecutor y política normativa](../../PROMPT_EJECUTOR_REPOSITORIO.md) + [Sistema Maestro completo](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Sin cuota de IDs por corrida; los sublotes técnicos admiten hasta 450 IDs asociados. Los controles descritos abajo son implementación histórica salvo verificación actual.
+> **Sistema maestro vigente v8.0:** [Prompt ejecutor y política normativa](../../PROMPT_EJECUTOR_REPOSITORIO.md) + [Sistema Maestro completo](../../docs/Sistema_modulos_Academia_PHUMA_Play_v7_6.md). Los PDF originales están en [PDF/](PDF/); consultar el [registro actualizado](../../docs/fuentes_certificacion_paa_phuma_v6.json). Sin cuota de aprobación por corrida; los manifiestos técnicos admiten hasta 450 IDs de un subtema. Se encadenan varios manifiestos independientes con evidencia por criterio e ID. [Transición y reutilización RDG](../../docs/certificacion-masiva-v8_0.md). Los controles descritos abajo son implementación histórica salvo verificación actual.
 
 ## Fundamento documental y límites
 
