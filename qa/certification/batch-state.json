@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R21: reconciliar PR96 concurrente, guard, UI y selecciones; R12–R14 PR97 corregir 18 F, 3 G y 1 C; R15 dos G y seis clasificaciones. Conservar 98 PASS por hash y separar aval docente/empírico.",
+    "next_action": "R25: ejecutar controles G/H sobre 89 sucesores R24, conservar selección activa R20 y 98 PASS; resolver señales y contraste de examen; preparar activación con pruebas históricas fijadas a R20 y selección R24. PR102 no fusionar sin reconciliar; conservar rama e historial. No promover sin A–H y publicación.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -770,6 +770,34 @@
       "source": "union unique PASS_SEMANTIC IDs from v79_semantic_pass_paths; historical counters retained separately",
       "teacher_approved": 0,
       "empirical_evaluated": 0
+    },
+    "r24_revision": {
+      "status": "PREFLIGHT_MERGED_NOT_ACTIVE",
+      "preflight_pr": 103,
+      "preflight_head": "568a6169d3e438169640337f2c1bbfe6410980b9",
+      "preflight_ci": 45945498178,
+      "preflight_job": 140329137375,
+      "preflight_ci_status": "SUCCESS",
+      "publication_sha": "3a49d3903c775c7a3923569ca6181d3fa1b2ace9",
+      "production_ci": 45946102180,
+      "production_ci_status": "PENDING_OBSERVATION",
+      "render_deploy": "dep-dc4hadbrjlhs73fr9m0g",
+      "render_status": "PENDING_OBSERVATION",
+      "candidate_ids": 89,
+      "preserved_ids": 361,
+      "prior_pass_hashes": 98,
+      "new_semantic_pass": 0,
+      "selection_index": "qa/certification/rdg/evidence/MAT-ARIT-01-R24-candidate-selection-index.json",
+      "guard_mutants_rejected": 66,
+      "ui_correct": 30,
+      "ui_errors": 129,
+      "review_pending": [
+        "G_CANONICAL_AND_FAMILY_REVIEW",
+        "H_ACCESSIBILITY",
+        "EXAM_SCREEN_CHANGED_STIMULI",
+        "ACTIVATION_HISTORICAL_REGRESSION",
+        "C09"
+      ]
     }
   }
 }
