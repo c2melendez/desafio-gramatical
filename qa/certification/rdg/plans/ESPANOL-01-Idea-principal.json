@@ -1,0 +1,405 @@
+{
+  "schema_version": "7.8",
+  "block_id": "ESPANOL-01",
+  "architecture_sha256": "eb1aa817e7ea491d7014f9666947315b84111c14d3843170977cd052eb37912e",
+  "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+  "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+  "route_scope": {
+    "area": "espanol",
+    "topic": "Comprensión lectora",
+    "subtopic": "Idea principal"
+  },
+  "route_specs": [
+    {
+      "scope": {
+        "area": "espanol",
+        "topic": "Comprensión lectora",
+        "subtopic": "Idea principal"
+      },
+      "sources": [
+        {
+          "source_id": "PHUMA-UNAH-2026",
+          "sha256": "cd248afe2a90605b1037f3b2fa6d32f070a6a457a6c4830d24b6c6784eaeabf0",
+          "pages": [
+            6,
+            68
+          ],
+          "finding": "P. física 6: comprensión literal/inferencial/criterial e ideas explícitas e implícitas; p. 68 reactivo 70 contrasta formulaciones que sintetizan el texto frente a detalles."
+        },
+        {
+          "source_id": "PAA-CB-GUIA",
+          "sha256": "6bcb3efc6c4074e0a7b1272d67b50bd8835cfb3e486411020039ba84b932e1fc",
+          "pages": [
+            11
+          ],
+          "finding": "P. 11: recomienda no confundir afirmaciones verdaderas secundarias con la idea principal; complemento PAA, no autoridad PHUMA."
+        }
+      ],
+      "didactic_evidence": [
+        {
+          "url": "https://descargas.intef.es/recursos_educativos/It_didac/Leng_Pri/6/05/La_comprensin_de_los_textos/lectura_comprensiva_y_actividades.html",
+          "accessed_at": "2026-11-27",
+          "finding": "Lectura global, nueva lectura y distinción entre información central y secundaria mediante notas; práctica con retroalimentación.",
+          "limitations": "Recurso de primaria; equipara tema e idea central en algunos pasajes, distinción explícita requerida aquí."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "IP-01",
+          "statement": "Distinguir tema, idea principal explícita y detalle.",
+          "operation": "Identificar proposición que engloba el texto, no solo palabra temática.",
+          "depth": "Literal, oración central frente a ejemplos.",
+          "source_refs": [
+            "PHUMA-UNAH-2026",
+            "PAA-CB-GUIA"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "IP-02",
+          "statement": "Formular idea implícita a partir de evidencias de todo el texto.",
+          "operation": "Integrar proposiciones y descartar generalizaciones no sustentadas.",
+          "depth": "Inferencial, varios indicios.",
+          "source_refs": [
+            "PHUMA-UNAH-2026",
+            "PAA-CB-GUIA"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "IP-03",
+          "statement": "Comparar títulos y síntesis por cobertura y fidelidad.",
+          "operation": "Justificar la mejor síntesis sin incorporar hechos ajenos.",
+          "depth": "Criterial, texto con contraste y distractores plausibles.",
+          "source_refs": [
+            "PHUMA-UNAH-2026",
+            "PAA-CB-GUIA"
+          ],
+          "classification": "PHUMA"
+        }
+      ],
+      "foundations": [
+        "Tema = asunto; idea principal = lo que el texto sostiene sobre ese asunto; detalle = evidencia, ejemplo o precisión.",
+        "Distinguir afirmación textual de opinión propia; comparar cobertura global y precisión."
+      ],
+      "bridges": [
+        "Mapa tema → proposición central → detalles con enlaces de apoyo; no decidir por posición de oración.",
+        "Revelar evidencias por párrafo y condensar sin introducir hechos.",
+        "Probar si la síntesis mantiene contraste, causa y alcance."
+      ],
+      "common_errors": [
+        "Seleccionar un detalle verdadero pero estrecho.",
+        "Confundir palabra temática con proposición completa.",
+        "Elegir una generalización más amplia de lo que prueba el texto.",
+        "Tomar primera oración o título por regla fija."
+      ],
+      "activities": [
+        {
+          "id": "IP-A1",
+          "objective_ids": [
+            "IP-01"
+          ],
+          "function": "Fundamentos",
+          "interaction": "Task + tarjetas enlazadas",
+          "representation": "Mapa tema–idea–detalles",
+          "prompt": "El vivero escolar guarda semillas de especies locales. Las etiqueta y conserva en envases secos para sembrarlas durante el siguiente curso. ¿Qué idea engloba ambas acciones?",
+          "expected_reasoning": "Conservación de semillas locales para la próxima siembra; etiquetas/envases son medios.",
+          "feedback": "Si selecciona envases, explica que es un medio y no el propósito; si selecciona vivero, explica que solo nombra el tema.",
+          "help": "Pregunta qué acción y finalidad se repiten.",
+          "acceptance": "Cuatro opciones: conservación para próxima siembra; envases secos; vivero escolar; venta de semillas. Una clave, error específico para cada opción."
+        },
+        {
+          "id": "IP-A2",
+          "objective_ids": [
+            "IP-02"
+          ],
+          "function": "Procedimiento guiado",
+          "interaction": "Bridge de evidencias + Task",
+          "representation": "Dos tarjetas de evidencia que convergen",
+          "prompt": "El mercado redujo el uso de bolsas desechables. Los clientes empezaron a llevar recipientes y los puestos ofrecen bolsas reutilizables. ¿Qué conclusión común se sostiene?",
+          "expected_reasoning": "Ambas acciones favorecen reducir desechables; no se afirma que ya desaparecieron.",
+          "feedback": "Distinguir propósito común, acción aislada y exageración.",
+          "help": "Une lo que hacen clientes y vendedores.",
+          "acceptance": "No mostrar la síntesis hasta comprobar; clave y tres distractores contrastables."
+        },
+        {
+          "id": "IP-A3",
+          "objective_ids": [
+            "IP-03"
+          ],
+          "function": "Síntesis",
+          "interaction": "Decisión guiada y comparación",
+          "representation": "Matriz cobertura/fidelidad",
+          "prompt": "Una biblioteca abre más horas los sábados para estudiantes que trabajan entre semana; durante el resto de días conserva su horario. ¿Qué título representa el cambio sin exagerar?",
+          "expected_reasoning": "Horario sabatino ampliado para facilitar acceso; no toda la semana ni todos los usuarios necesariamente.",
+          "feedback": "Distinguir alcance temporal y propósito explícito.",
+          "help": "Separa cambio de lo que permanece igual.",
+          "acceptance": "Comparar títulos de distinto alcance; mostrar por qué los detalles apoyan el correcto."
+        }
+      ],
+      "worked_examples": [
+        "Un texto sobre reparación comunitaria de bicicletas enumera préstamos de herramientas y talleres. Mapa: tema bicicletas; idea central colaboración para facilitar reparación; detalles préstamos y talleres. Rechazar síntesis de solo herramientas."
+      ],
+      "transfer_tasks": [
+        {
+          "prompt": "Un grupo recoge agua de lluvia para regar un huerto. Usa depósitos cerrados y riega al amanecer. ¿Qué idea central sintetiza el párrafo?",
+          "solution": "El grupo aprovecha agua de lluvia para regar el huerto.",
+          "oracle": "Evidencia directa de propósito; depósitos y horario son detalles, no afirmaciones nuevas.",
+          "objective_ids": [
+            "IP-01"
+          ]
+        },
+        {
+          "prompt": "En una feria algunos puestos muestran precios por unidad y otros por peso. Una guía propone convertirlos a la misma unidad antes de elegir. ¿Qué recomendación integra el texto?",
+          "solution": "Comparar precios utilizando una unidad común.",
+          "oracle": "Contrastar las dos formas de precio con la recomendación final; no afirmar que un tipo siempre es más barato.",
+          "objective_ids": [
+            "IP-02"
+          ]
+        },
+        {
+          "prompt": "Un taller enseña a conservar fotografías familiares; aconseja mantenerlas secas y ordenarlas por fecha. Propón el título más fiel.",
+          "solution": "Cómo conservar y organizar fotografías familiares.",
+          "oracle": "Incluye ambas acciones, no inventa digitalización ni compra.",
+          "objective_ids": [
+            "IP-03"
+          ]
+        }
+      ],
+      "games": [
+        {
+          "mode": "clasificar",
+          "level": "principiante",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Evaluar afirmaciones y distinguir evidencias válidas. Distinguir proposición explícita de detalle. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "quiz",
+          "level": "principiante",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Seleccionar una respuesta justificada entre alternativas. Distinguir proposición explícita de detalle. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "construir",
+          "level": "principiante",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Construir o seleccionar pasos y relaciones que sostienen una conclusión. Distinguir proposición explícita de detalle. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "clasificar",
+          "level": "intermedio",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Evaluar afirmaciones y distinguir evidencias válidas. Integrar indicios y construir síntesis. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "quiz",
+          "level": "intermedio",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Seleccionar una respuesta justificada entre alternativas. Integrar indicios y construir síntesis. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "construir",
+          "level": "intermedio",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Construir o seleccionar pasos y relaciones que sostienen una conclusión. Integrar indicios y construir síntesis. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "clasificar",
+          "level": "avanzado",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Evaluar afirmaciones y distinguir evidencias válidas. Justificar alcance y fidelidad ante alternativas parciales. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "quiz",
+          "level": "avanzado",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Seleccionar una respuesta justificada entre alternativas. Justificar alcance y fidelidad ante alternativas parciales. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "construir",
+          "level": "avanzado",
+          "objective_ids": [
+            "IP-01",
+            "IP-02",
+            "IP-03"
+          ],
+          "operation": "Construir o seleccionar pasos y relaciones que sostienen una conclusión. Justificar alcance y fidelidad ante alternativas parciales. Mapeo previsto, cotejar IDs reales en P2."
+        }
+      ],
+      "acceptance": [
+        "Acceso voluntario, retorno contextual y sin alteración del historial; sin puntaje ni racha del Repaso.",
+        "Reutilizar navegación y Task/Bridge del piloto solo mediante extracción con regresión y dependencias reconciliadas.",
+        "Comprobar cada decisión desde estímulo, opciones no equivalentes, feedback causal por error, foco y teclado; alternativa textual de organizadores.",
+        "Verificar transferencia nueva frente a banco real, Repaso y simulacro; C09 permanece abierto hasta P2."
+      ],
+      "external_research": {
+        "status": "LIMITADA",
+        "searches": [
+          {
+            "query": "estrategia idea principal texto comprensión lectora tema idea principal recursos ejercicios educativo",
+            "date": "2026-11-27",
+            "channel": "web",
+            "results_reviewed": 2,
+            "finding": "INTEF consultado; intento de CNB devuelve 403."
+          },
+          {
+            "query": "PHUMA UNAH idea principal comprensión lectora biología célula simulacro guía ejercicios preparación video",
+            "date": "2026-11-27",
+            "channel": "web",
+            "results_reviewed": 0,
+            "finding": "Sin muestra específica verificable de simulacro/video en los resultados inspeccionados."
+          }
+        ],
+        "resources": [
+          {
+            "id": "intef",
+            "url": "https://descargas.intef.es/recursos_educativos/It_didac/Leng_Pri/6/05/La_comprensin_de_los_textos/lectura_comprensiva_y_actividades.html",
+            "title": "Lectura comprensiva y actividades",
+            "producer": "INTEF",
+            "lineage": "intef",
+            "kind": "EJERCICIOS_RESUELTOS",
+            "scope": "DIDACTICO",
+            "access": "CONSULTADO",
+            "locator": "Ideas principales/secundarias y actividad de ordenar pasos",
+            "finding": "Lectura global y relectura para jerarquizar información.",
+            "quality": "Contraste complementario; no sustituye guía oficial",
+            "limitations": "Nivel primaria; no calibración de admisión.",
+            "decision": "REFUERZA"
+          },
+          {
+            "id": "cnb",
+            "url": "https://www.cnbguatemala.org/wiki/Ense%C3%B1anza_de_la_comprensi%C3%B3n_lectora/Fichas_de_estrategias_de_comprensi%C3%B3n_lectora/Identificar_o_construir_la_idea_principal",
+            "title": "Identificar o construir la idea principal",
+            "producer": "CNB Guatemala",
+            "lineage": "cnb",
+            "kind": "GUIA",
+            "scope": "DIDACTICO",
+            "access": "SIN_ACCESO",
+            "locator": "HTTP 403",
+            "finding": "No se pudo inspeccionar página.",
+            "quality": "Contraste complementario; no sustituye guía oficial",
+            "limitations": "No sostiene decisiones.",
+            "decision": "DESCARTA"
+          }
+        ],
+        "coverage_note": "Guía oficial p. 68 y PAA p. 11 inspeccionadas; un linaje externo accesible.",
+        "stop_reason": "Checkpoint de diseño: ampliar guías/simulacros y videos específicos accesibles antes de congelar P0.",
+        "limitations": "No equivalencia psicométrica, no videos reproducidos, no verificación de banco por ID.",
+        "profiles": [
+          {
+            "level": "principiante",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "intef"
+            ],
+            "operation": "Distinguir tema y oración central",
+            "reasoning_steps": "Localizar y comprobar cobertura",
+            "prerequisites": "Comprensión literal",
+            "representations": "Mapa de tarjetas",
+            "reading_load": "Breve",
+            "distractors": "Detalle verdadero",
+            "format": "Cuatro opciones en transferencia; juegos mantienen modalidad.",
+            "autonomy": "Ayudas graduadas en aprendizaje",
+            "time_basis": "Sin medición, calibración cualitativa.",
+            "phuma_relation": "PREPARATORIO",
+            "original_example": "Vivero: conservar semillas para sembrar",
+            "decision": "Preparar distinción"
+          },
+          {
+            "level": "intermedio",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "intef"
+            ],
+            "operation": "Integrar idea central implícita",
+            "reasoning_steps": "Cruzar indicios y excluir exageraciones",
+            "prerequisites": "Distinguir detalle",
+            "representations": "Organizador de evidencias",
+            "reading_load": "Dos párrafos breves",
+            "distractors": "Verdad parcial y alcance",
+            "format": "Cuatro opciones en transferencia; juegos mantienen modalidad.",
+            "autonomy": "Sin pista reveladora en transferencia",
+            "time_basis": "Sin medición, calibración cualitativa.",
+            "phuma_relation": "COMPARABLE",
+            "original_example": "Mercado: disminuir bolsas desechables",
+            "decision": "Comparación cualitativa por operación de síntesis con reactivo 70"
+          },
+          {
+            "level": "avanzado",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "intef"
+            ],
+            "operation": "Evaluar síntesis y títulos",
+            "reasoning_steps": "Comparar cobertura, precisión y contraste",
+            "prerequisites": "Inferencia textual",
+            "representations": "Matriz de cobertura",
+            "reading_load": "Texto con contraste",
+            "distractors": "Generalización y omisión de condición",
+            "format": "Cuatro opciones en transferencia; juegos mantienen modalidad.",
+            "autonomy": "Sin pista reveladora en transferencia",
+            "time_basis": "Sin medición, calibración cualitativa.",
+            "phuma_relation": "AMPLIACION",
+            "original_example": "Biblioteca: ampliar sábados, no todos los días",
+            "decision": "Profundización, no dificultad medida"
+          }
+        ],
+        "decisions": [
+          {
+            "objective_ids": [
+              "IP-01",
+              "IP-02",
+              "IP-03"
+            ],
+            "resource_ids": [
+              "intef"
+            ],
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "action": "REFUERZA",
+            "rationale": "Modelar jerarquía y relectura, distinguir tema de proposición central."
+          }
+        ]
+      }
+    }
+  ]
+}

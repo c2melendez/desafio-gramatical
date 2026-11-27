@@ -694,6 +694,30 @@
         },
         "additionalProperties": false
       }
+    },
+    "route_scope": {
+      "description": "Explicit independent subtopic plan; absence retains exact full-block validation. Never means entire block complete.",
+      "type": "object",
+      "required": [
+        "area",
+        "topic",
+        "subtopic"
+      ],
+      "properties": {
+        "area": {
+          "type": "string",
+          "minLength": 1
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subtopic": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

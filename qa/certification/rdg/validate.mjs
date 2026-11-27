@@ -34,7 +34,10 @@ export function validatePlan(p,a,ctx,schemas){
  validateArchitecture(a,ctx,schemas);shape(p,schemas.plan);
  need(p.architecture_sha256===ctx.archHash&&p.catalog_sha256===ctx.catalogHash&&p.source_manifest_sha256===ctx.sourceHash,'stale plan inputs');
  const block=a.blocks.find(b=>b.block_id===p.block_id);need(block,'unknown block');
- need(equalSets(unique(p.route_specs.map(r=>key(r.scope)),'route scope'),new Set(block.subtopics.map(key))),'plan must cover block exactly');
+ const blockKeys=new Set(block.subtopics.map(key));
+ const expected=p.route_scope?new Set([key(p.route_scope)]):blockKeys;
+ if(p.route_scope)need(blockKeys.has(key(p.route_scope)),'independent route outside block');
+ need(equalSets(unique(p.route_specs.map(r=>key(r.scope)),'route scope'),expected),p.route_scope?'plan must cover declared independent route exactly':'plan must cover block exactly');
  const docs=new Map(ctx.documents.map(d=>[d.id,d]));
  for(const r of p.route_specs){
   const refs=unique(r.sources.map(d=>d.source_id),'source');
@@ -92,6 +95,6 @@ async function main(){
  const archBytes=readFileSync(dir+'architecture.json'),a=JSON.parse(archBytes),ctx={rows,documents,catalogHash,sourceHash,archHash:sha(archBytes)};
  if(path==='--architecture'){validateArchitecture(a,ctx,schemas);console.log(JSON.stringify({status:'PASS_STRUCTURAL',path:dir+'architecture.json',sha256:ctx.archHash,scope:'architecture only; no route implemented'}));return;}
  const bytes=readFileSync(path),p=JSON.parse(bytes);validatePlan(p,a,ctx,schemas);
- console.log(JSON.stringify({status:'PASS_STRUCTURAL',path,sha256:sha(bytes),block_id:p.block_id,subtopics:p.route_specs.length,scope:'design only; no route or academic certification'}));
+ console.log(JSON.stringify({status:'PASS_STRUCTURAL',path,sha256:sha(bytes),block_id:p.block_id,subtopics:p.route_specs.length,scope:p.route_scope?'independent subtopic design only; block not certified':'design only; no route or academic certification'}));
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href)main().catch(e=>{console.error(e.message);process.exitCode=1;});
