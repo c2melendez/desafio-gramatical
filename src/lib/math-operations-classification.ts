@@ -17,7 +17,13 @@ function maskFor(item:MathModel){
  return masks[index%masks.length];
 }
 export function expectedOperationClassificationTruthCount(item:MathModel):number{
- if(item.modeOperation==="contrastar-tres-decisiones-distintas-r23"&&item.oracle.kind==="Operaciones-decision"&&item.mode==="clasificar"){
+ // R23 is a structural schedule, not an oracle of mathematical truth. Reject a misplaced
+ // revision marker rather than allowing it to fall through to a legacy truth-count rule.
+ if(item.modeOperation==="contrastar-tres-decisiones-distintas-r23"){
+  const match=/^math-m2-aritmetica-operaciones-clasificar-intermedio-(1[2-7])$/.exec(item.id);
+  if(!match||item.subtopic!=="Operaciones"||item.level!=="intermedio"||item.mode!=="clasificar"||item.oracle.kind!=="Operaciones-decision")return -1;
+  const expectedOperation=Number(match[1])<=14?"comparar-ofertas-con-cargos-fijos":"cociente-de-diferencia-racional-con-raiz";
+  if(item.operation!==expectedOperation)return -1;
   const mask=r23TruthMask(item);return Number.isInteger(mask)&&mask>=0&&mask<=7?Number(Boolean(mask&4))+Number(Boolean(mask&2))+Number(Boolean(mask&1)):-1;
  }
  if(item.modeOperation==="evaluar-tres-decisiones-operaciones-r21"&&item.oracle.kind==="Operaciones"&&item.mode==="clasificar")return r21Mask(item.id)?.filter(Boolean).length??-1;
