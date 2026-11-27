@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R25: ejecutar controles G/H sobre 89 sucesores R24, conservar selección activa R20 y 98 PASS; resolver señales y contraste de examen; preparar activación con pruebas históricas fijadas a R20 y selección R24. PR102 no fusionar sin reconciliar; conservar rama e historial. No promover sin A–H y publicación.",
+    "next_action": "R26: verificar activación selectiva R22/R23 de 30 IDs, CI y Render del SHA exacto; adjudicar fichas individuales y conservar 98 PASS. R21 59 en candidato, 27 señales G/F; no promover por lote.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -115,10 +115,10 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
     ],
@@ -780,9 +780,9 @@
       "preflight_ci_status": "SUCCESS",
       "publication_sha": "3a49d3903c775c7a3923569ca6181d3fa1b2ace9",
       "production_ci": 45946102180,
-      "production_ci_status": "PENDING_OBSERVATION",
+      "production_ci_status": "SUCCESS",
       "render_deploy": "dep-dc4hadbrjlhs73fr9m0g",
-      "render_status": "PENDING_OBSERVATION",
+      "render_status": "LIVE_WHEN_OBSERVED",
       "candidate_ids": 89,
       "preserved_ids": 361,
       "prior_pass_hashes": 98,
@@ -798,6 +798,54 @@
         "ACTIVATION_HISTORICAL_REGRESSION",
         "C09"
       ]
+    },
+    "r20_selection_paths": [
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+    ],
+    "r25_revision": {
+      "status": "MERGED_CI_SUCCESS_PRODUCTION_PENDING_OBSERVATION",
+      "pr": 104,
+      "sha": "a1064be0f5109624036587d8dd350e8f2f14aa63",
+      "candidate_ci": 45946255176,
+      "production_ci": 46038219994,
+      "render_deploy": "dep-dc4re2etlv9c738l91h0",
+      "render_status": "LIVE_WHEN_OBSERVED",
+      "G_ids": 89,
+      "H_ids": 89,
+      "tuple_signals": 27,
+      "new_semantic_pass": 0
+    },
+    "r26_revision": {
+      "status": "ACTIVATION_CANDIDATE_30_NOT_YET_MERGED",
+      "source_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
+      "reviewed": 89,
+      "exam_screened": 89,
+      "exam_signals": 0,
+      "selected_successors": 30,
+      "preserved": 420,
+      "held_R21": 59,
+      "held_tuple_signals": 27,
+      "active_selection_paths_proposed": [
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+      ],
+      "semantic_pass": 0,
+      "remaining": "CI and exact production SHA observation; individual G/H adjudication, remaining R21, C09"
     }
   }
 }
