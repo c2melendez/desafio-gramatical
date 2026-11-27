@@ -326,6 +326,13 @@
             "channel": "web",
             "results_reviewed": 0,
             "finding": "Sin muestra específica de célula PHUMA inspeccionada."
+          },
+          {
+            "query": "UNAM CCH estructuras organelos y OpenStax 4.2/4.3",
+            "date": "2026-11-27",
+            "channel": "web",
+            "results_reviewed": 4,
+            "finding": "Dos linajes disciplinarios contrastados; guía docente CCH propone comparaciones y modelos."
           }
         ],
         "resources": [
@@ -337,11 +344,11 @@
             "lineage": "openstax",
             "kind": "GUIA",
             "scope": "DISCIPLINAR",
-            "access": "PARCIAL",
-            "locator": "Extracto indexado sección 4.2",
+            "access": "CONSULTADO",
+            "locator": "Texto de sección y descripciones de figuras consultados",
             "finding": "Rasgos compartidos y organización procariota.",
             "quality": "Contraste complementario; no sustituye guía oficial",
-            "limitations": "No se inspeccionaron figuras completas.",
+            "limitations": "No inspección gráfica completa ni calibración de examen.",
             "decision": "REFUERZA"
           },
           {
@@ -352,11 +359,11 @@
             "lineage": "openstax",
             "kind": "GUIA",
             "scope": "DISCIPLINAR",
-            "access": "PARCIAL",
-            "locator": "Extracto indexado sección 4.3",
+            "access": "CONSULTADO",
+            "locator": "Texto de sección y descripciones de figuras consultados",
             "finding": "Contraste eucariota y diferencias animal/vegetal.",
             "quality": "Contraste complementario; no sustituye guía oficial",
-            "limitations": "Mismo linaje que 4.2; no fuente independiente.",
+            "limitations": "No inspección gráfica completa ni calibración de examen.",
             "decision": "REFUERZA"
           },
           {
@@ -373,9 +380,24 @@
             "quality": "Contraste complementario; no sustituye guía oficial",
             "limitations": "No sostiene decisiones.",
             "decision": "DESCARTA"
+          },
+          {
+            "id": "unam-cch",
+            "url": "https://e1.portalacademico.cch.unam.mx/alumno/biologia1/unidad1/estructuraseucariotas/estructurasorganelos",
+            "title": "Estructuras y organelos",
+            "producer": "UNAM CCH",
+            "lineage": "unam-cch",
+            "kind": "GUIA",
+            "scope": "DISCIPLINAR",
+            "access": "CONSULTADO",
+            "locator": "Membrana, núcleo, RER, ribosomas, Golgi y mitocondrias",
+            "finding": "Contraste de estructuras y funciones; distinguir síntesis, modificación y ATP.",
+            "quality": "Recurso académico disciplinar",
+            "limitations": "No prueba dificultad PHUMA ni eficacia de una ruta digital.",
+            "decision": "REFUERZA"
           }
         ],
-        "coverage_note": "Guía oficial p. 8 inspeccionada; un linaje externo parcial. P. 28 y 73 anclan tipo de operación, no dificultad de Célula.",
+        "coverage_note": "Guía oficial p. 8 inspeccionada; un linaje externo parcial. P. 28 y 73 anclan tipo de operación, no dificultad de Célula. Contraste ampliado a OpenStax y UNAM CCH, sin ancla específica de dificultad PHUMA.",
         "stop_reason": "Checkpoint parcial: revisar fuentes completas, videos y ejercicios de célula y comprobar banco antes de congelar P0.",
         "limitations": "Sin reactivo oficial específico de célula observado, ni equivalencia psicométrica ni reproducción audiovisual. Comparabilidad de operación es provisional.",
         "profiles": [
@@ -461,6 +483,23 @@
             ],
             "action": "REFUERZA",
             "rationale": "Organizadores de comparación y estructura-función; ampliar fuentes antes de congelación."
+          },
+          {
+            "objective_ids": [
+              "CE-02",
+              "CE-03",
+              "CE-04"
+            ],
+            "resource_ids": [
+              "os42",
+              "os43",
+              "unam-cch"
+            ],
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "action": "REFUERZA",
+            "rationale": "Contrastar estructura-función y evitar generalizaciones sobre tipos celulares."
           }
         ]
       }
