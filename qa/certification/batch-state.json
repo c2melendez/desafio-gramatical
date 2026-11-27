@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R27: CI de fichas corregidas; promover solo 27 elegibles por ID/hash; R28 dos pistas de cero y nueva deuda C/E de clasificación 17. R21/C09 pendientes.",
+    "next_action": "R29: integrar acta R27 de 27 PASS por hash tras CI del registro; R28 tres candidatos CI SUCCESS, activar tras reconciliar hashes y auditor M3; R21 y C09 pendientes.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -124,7 +124,7 @@
     ],
     "selection_total": 450,
     "examined_semantic_ids": 450,
-    "semantic_pass_ids": 98,
+    "semantic_pass_ids": 125,
     "review_ids": 59,
     "review_evidence": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
@@ -559,7 +559,8 @@
     "v79_semantic_pass_paths": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json"
     ],
     "r17_selection_paths": [
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R17.json",
@@ -765,8 +766,8 @@
     },
     "v79_individual_accounting": {
       "total": 450,
-      "pass": 98,
-      "not_pass": 352,
+      "pass": 125,
+      "not_pass": 325,
       "source": "union unique PASS_SEMANTIC IDs from v79_semantic_pass_paths; historical counters retained separately",
       "teacher_approved": 0,
       "empirical_evaluated": 0
@@ -854,14 +855,23 @@
       "render_status": "LIVE_WHEN_OBSERVED"
     },
     "r27_revision": {
-      "status": "REVIEW_PENDING_PUBLICATION_AND_RUNTIME_CHECK",
+      "status": "INDIVIDUAL_DECISIONS_PENDING_LEDGER_MERGE",
       "evidence_path": "qa/certification/rdg/evidence/MAT-ARIT-01-R27-individual-review.json",
       "reviewed": 30,
       "eligible_pending_publication": 27,
       "held": 3,
-      "new_semantic_pass": 0,
+      "new_semantic_pass": 27,
       "prior_ci_failure": 46042931116,
-      "reason": "C/E rubric score 2 conflicts with promotion_candidate for clasificar-intermedio-17; retained REVIEW, no criterion relaxed."
-    }
+      "reason": "C/E rubric score 2 conflicts with promotion_candidate for clasificar-intermedio-17; retained REVIEW, no criterion relaxed.",
+      "review_ci": 46043548313,
+      "review_ci_status": "SUCCESS",
+      "published_content_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
+      "publication_path": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json"
+    },
+    "r26_prior_pass_paths": [
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json"
+    ]
   }
 }
