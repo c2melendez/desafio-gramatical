@@ -66,7 +66,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R26: verificar activación selectiva R22/R23 de 30 IDs, CI y Render del SHA exacto; adjudicar fichas individuales y conservar 98 PASS. R21 59 en candidato, 27 señales G/F; no promover por lote.",
+    "next_action": "R27: CI de fichas corregidas; promover solo 27 elegibles por ID/hash; R28 dos pistas de cero y nueva deuda C/E de clasificación 17. R21/C09 pendientes.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -811,7 +811,7 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
     ],
     "r25_revision": {
-      "status": "MERGED_CI_SUCCESS_PRODUCTION_PENDING_OBSERVATION",
+      "status": "MERGED_CI_SUCCESS_AND_LIVE_WHEN_OBSERVED",
       "pr": 104,
       "sha": "a1064be0f5109624036587d8dd350e8f2f14aa63",
       "candidate_ci": 45946255176,
@@ -821,10 +821,11 @@
       "G_ids": 89,
       "H_ids": 89,
       "tuple_signals": 27,
-      "new_semantic_pass": 0
+      "new_semantic_pass": 0,
+      "production_ci_status": "SUCCESS"
     },
     "r26_revision": {
-      "status": "ACTIVATION_CANDIDATE_30_NOT_YET_MERGED",
+      "status": "ACTIVATED_CI_SUCCESS_RENDER_LIVE",
       "source_evidence": "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
       "reviewed": 89,
       "exam_screened": 89,
@@ -845,7 +846,22 @@
         "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
       ],
       "semantic_pass": 0,
-      "remaining": "CI and exact production SHA observation; individual G/H adjudication, remaining R21, C09"
+      "remaining": "CI and exact production SHA observation; individual G/H adjudication, remaining R21, C09",
+      "publication_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
+      "production_ci": 46042581216,
+      "production_ci_status": "SUCCESS",
+      "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
+      "render_status": "LIVE_WHEN_OBSERVED"
+    },
+    "r27_revision": {
+      "status": "REVIEW_PENDING_PUBLICATION_AND_RUNTIME_CHECK",
+      "evidence_path": "qa/certification/rdg/evidence/MAT-ARIT-01-R27-individual-review.json",
+      "reviewed": 30,
+      "eligible_pending_publication": 27,
+      "held": 3,
+      "new_semantic_pass": 0,
+      "prior_ci_failure": 46042931116,
+      "reason": "C/E rubric score 2 conflicts with promotion_candidate for clasificar-intermedio-17; retained REVIEW, no criterion relaxed."
     }
   }
 }
