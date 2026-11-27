@@ -38,3 +38,23 @@ test('P0 actual architecture and MAT-ARIT-01 plan',()=>{
   console.log(JSON.stringify(result));
  }
 });
+
+test('independent route does not weaken legacy full-block validation',()=>{
+ const {a,p}=fixture(),other={...scope,subtopic:'other'},context={...ctx,rows:[...ctx.rows,{...other,mode:'quiz',level:'principiante'}]};
+ a.blocks[0].subtopics.push(other);
+ assert.throws(()=>validatePlan(p,a,context,schemas),/cover block exactly/);
+ p.route_scope=scope;assert.equal(validatePlan(p,a,context,schemas),true);
+ p.route_scope=other;assert.throws(()=>validatePlan(p,a,context,schemas),/declared independent route exactly/);
+ p.route_scope={...scope,subtopic:'outside'};assert.throws(()=>validatePlan(p,a,context,schemas),/outside block/);
+ p.route_scope=scope;p.route_specs.push({...p.route_specs[0],scope:other});
+ assert.throws(()=>validatePlan(p,a,context,schemas),/declared independent route exactly/);
+ p.route_specs.pop();p.route_specs[0].games=[];
+ assert.throws(()=>validatePlan(p,a,context,schemas));
+});
+test('P0 actual two independent subtopic candidates; no block completion claim',()=>{
+ for(const path of ['qa/certification/rdg/plans/ESPANOL-01-Idea-principal.json','qa/certification/rdg/plans/NATURALES-01-Celula.json']){
+  const result=JSON.parse(execFileSync(process.execPath,['--import','./scripts/ts-resolve.mjs','qa/certification/rdg/validate.mjs',path],{encoding:'utf8'}));
+  assert.equal(result.status,'PASS_STRUCTURAL');assert.equal(result.subtopics,1);
+  assert.match(result.scope,/block not certified/);console.log(JSON.stringify(result));
+ }
+});

@@ -1,0 +1,469 @@
+{
+  "schema_version": "7.8",
+  "block_id": "NATURALES-01",
+  "architecture_sha256": "eb1aa817e7ea491d7014f9666947315b84111c14d3843170977cd052eb37912e",
+  "catalog_sha256": "10d215e1fb23265040e9af5959770fb04621ce7194cfbdb42727cd6e7703cf8c",
+  "source_manifest_sha256": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+  "route_scope": {
+    "area": "naturales",
+    "topic": "Biología",
+    "subtopic": "Célula"
+  },
+  "route_specs": [
+    {
+      "scope": {
+        "area": "naturales",
+        "topic": "Biología",
+        "subtopic": "Célula"
+      },
+      "sources": [
+        {
+          "source_id": "PHUMA-UNAH-2026",
+          "sha256": "cd248afe2a90605b1037f3b2fa6d32f070a6a457a6c4830d24b6c6784eaeabf0",
+          "pages": [
+            8,
+            28,
+            73
+          ],
+          "finding": "P. física 8: teoría celular, estructura y función, procariota/eucariota, animal/vegetal y virus. P. 28 y 73 ilustran explicación causal y clasificación en biología, no reactivo de estructura celular; calibración limitada. División, tejidos y fotosíntesis se abordan en rutas correspondientes según catálogo."
+        }
+      ],
+      "didactic_evidence": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+          "accessed_at": "2026-11-27",
+          "finding": "Sección 4.2: estructuras comunes y organización procariota, contraste de núcleo.",
+          "limitations": "Consulta del extracto indexado; no examen PHUMA."
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+          "accessed_at": "2026-11-27",
+          "finding": "Sección 4.3: funciones de organelos, comparación animal/vegetal.",
+          "limitations": "Consulta del extracto indexado; no calibración psicométrica."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "CE-01",
+          "statement": "Explicar teoría celular y distinguir células de entidades acelulares.",
+          "operation": "Reconocer unidad estructural y funcional y límites del modelo.",
+          "depth": "Conceptual y clasificación.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "CE-02",
+          "statement": "Comparar organización procariota/eucariota.",
+          "operation": "Clasificar a partir de membrana, ADN, ribosomas y núcleo delimitado.",
+          "depth": "Interpretar evidencia estructural sin depender del tamaño.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "CE-03",
+          "statement": "Relacionar estructuras celulares con su función.",
+          "operation": "Inferir consecuencias de una alteración específica bajo condiciones explícitas.",
+          "depth": "Relaciones estructura-función.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        },
+        {
+          "id": "CE-04",
+          "statement": "Comparar células animales y vegetales típicas.",
+          "operation": "Justificar por rasgos diagnósticos y compartidos.",
+          "depth": "Comparar diagramas, reconocer excepciones.",
+          "source_refs": [
+            "PHUMA-UNAH-2026"
+          ],
+          "classification": "PHUMA"
+        }
+      ],
+      "foundations": [
+        "La célula es unidad estructural y funcional de los seres vivos; células provienen de células preexistentes. Virus son acelulares y requieren hospedero para replicarse.",
+        "Modelos típicos comparten membrana, citoplasma, material genético y ribosomas; procariotas no tienen núcleo delimitado por membrana.",
+        "Núcleo, ribosomas, mitocondrias, retículo, Golgi, membrana, pared, cloroplastos y vacuolas: estructura y función; no atribuir todos los organelos a toda célula.",
+        "Célula vegetal típica fotosintética: pared de celulosa y cloroplastos; células animales carecen de ambos; no toda célula vegetal tiene cloroplastos."
+      ],
+      "bridges": [
+        "Organizador de teoría → componentes → tipos → función, con descripción textual equivalente.",
+        "Comparar modelos típicos con etiquetas seleccionables, no solo color.",
+        "Enlazar organelo → proceso → consecuencia; distinguir ATP, proteína y material genético."
+      ],
+      "common_errors": [
+        "Confundir virus con célula procariota.",
+        "Afirmar que ausencia de núcleo significa ausencia de ADN.",
+        "Confundir ribosoma con mitocondria o Golgi.",
+        "Asumir que toda célula vegetal fotosintetiza o que mitocondrias son exclusivas de animales."
+      ],
+      "activities": [
+        {
+          "id": "CE-A1",
+          "objective_ids": [
+            "CE-01"
+          ],
+          "function": "Fundamentos",
+          "interaction": "Task + mapa revelable",
+          "representation": "Mapa célula/virus",
+          "prompt": "Una partícula acelular necesita entrar en una célula para multiplicarse. ¿Por qué no se clasifica como célula?",
+          "expected_reasoning": "Carece de organización celular y de replicación autónoma.",
+          "feedback": "No basta tener material genético; tampoco el tamaño define célula.",
+          "help": "Identifica organización y dependencia del hospedero.",
+          "acceptance": "Cuatro opciones sin equivalencias; explicar diferencias de cada elección."
+        },
+        {
+          "id": "CE-A2",
+          "objective_ids": [
+            "CE-02"
+          ],
+          "function": "Comparación",
+          "interaction": "Bridge + Task",
+          "representation": "Dos esquemas accesibles, A con ADN sin envoltura, B con ADN en núcleo",
+          "prompt": "A tiene ribosomas, membrana y ADN en región no delimitada; B tiene núcleo y organelos membranosos. ¿Cómo clasificas los modelos típicos?",
+          "expected_reasoning": "A procariota; B eucariota por envoltura nuclear.",
+          "feedback": "Ambas tienen ADN y ribosomas; invertir tipos confunde núcleo.",
+          "help": "Busca la envoltura del material genético.",
+          "acceptance": "Mostrar equivalente textual íntegro, no inferir por tamaño o color."
+        },
+        {
+          "id": "CE-A3",
+          "objective_ids": [
+            "CE-03"
+          ],
+          "function": "Causa y efecto",
+          "interaction": "Bridge de proceso + Task",
+          "representation": "Diagrama ribosoma → síntesis proteica",
+          "prompt": "En una célula se inhibe específicamente la actividad de sus ribosomas. ¿Qué proceso directo disminuye?",
+          "expected_reasoning": "Síntesis de proteínas, con otras condiciones constantes.",
+          "feedback": "ATP, replicación de ADN y transporte vesicular no son la función directa de ribosomas.",
+          "help": "Identifica estructura que traduce información a proteína.",
+          "acceptance": "Diferenciar efecto directo y efectos secundarios; no atribuir exclusividad de síntesis a retículo."
+        },
+        {
+          "id": "CE-A4",
+          "objective_ids": [
+            "CE-04"
+          ],
+          "function": "Síntesis",
+          "interaction": "Comparación y decisión guiada",
+          "representation": "Tabla animal/vegetal con marcas textuales",
+          "prompt": "Un modelo de célula de hoja presenta pared de celulosa, cloroplastos y núcleo. Otro modelo tiene núcleo y mitocondrias sin pared. ¿Cuál rasgo distingue el primero?",
+          "expected_reasoning": "Pared de celulosa y cloroplastos del modelo de hoja; ambos pueden tener mitocondrias.",
+          "feedback": "No usar núcleo como diferencia; no generalizar a todas las células vegetales.",
+          "help": "Busca rasgos del modelo fotosintético, no compartidos.",
+          "acceptance": "Comparar modelos típicos y aclarar excepciones."
+        }
+      ],
+      "worked_examples": [
+        "Célula glandular que sintetiza proteínas: ribosomas → retículo rugoso → Golgi → vesículas; no confundir producción con modificación y distribución. Diagrama con texto alternativo."
+      ],
+      "transfer_tasks": [
+        {
+          "prompt": "Se observa una estructura acelular con material genético que solo se replica en un hospedero. ¿Qué impide considerarla célula?",
+          "solution": "Ausencia de organización celular y dependencia de hospedero.",
+          "oracle": "Teoría celular y criterio de organización; contrastar rasgos no diagnósticos.",
+          "objective_ids": [
+            "CE-01"
+          ]
+        },
+        {
+          "prompt": "Un microorganismo presenta membrana, citoplasma, ADN y ribosomas, pero no envoltura nuclear. ¿Qué organización celular describe?",
+          "solution": "Procariota.",
+          "oracle": "Clasificación basada en envoltura nuclear, no ausencia de ADN ni tamaño.",
+          "objective_ids": [
+            "CE-02"
+          ]
+        },
+        {
+          "prompt": "Una célula aerobia disminuye específicamente la actividad mitocondrial mientras mantiene oxígeno y sustratos disponibles. ¿Qué función directa se afecta?",
+          "solution": "Producción de ATP por respiración aerobia mitocondrial.",
+          "oracle": "Relacionar función mitocondrial con síntesis de ATP; no afirmar que desaparece todo ATP.",
+          "objective_ids": [
+            "CE-03"
+          ]
+        },
+        {
+          "prompt": "Dos modelos eucariotas poseen núcleo y mitocondrias. Solo uno presenta pared de celulosa y cloroplastos. ¿Cuál representa tejido fotosintético vegetal típico?",
+          "solution": "El modelo con pared de celulosa y cloroplastos.",
+          "oracle": "Comparación de rasgos diagnósticos; núcleo y mitocondrias no distinguen.",
+          "objective_ids": [
+            "CE-04"
+          ]
+        }
+      ],
+      "games": [
+        {
+          "mode": "clasificar",
+          "level": "principiante",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Evaluar afirmaciones y distinguir evidencias válidas. Reconocer rasgos y funciones fundamentales. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "quiz",
+          "level": "principiante",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Seleccionar una respuesta justificada entre alternativas. Reconocer rasgos y funciones fundamentales. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "construir",
+          "level": "principiante",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Construir o seleccionar pasos y relaciones que sostienen una conclusión. Reconocer rasgos y funciones fundamentales. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "clasificar",
+          "level": "intermedio",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Evaluar afirmaciones y distinguir evidencias válidas. Comparar modelos y relacionar organelo con proceso. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "quiz",
+          "level": "intermedio",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Seleccionar una respuesta justificada entre alternativas. Comparar modelos y relacionar organelo con proceso. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "construir",
+          "level": "intermedio",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Construir o seleccionar pasos y relaciones que sostienen una conclusión. Comparar modelos y relacionar organelo con proceso. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "clasificar",
+          "level": "avanzado",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Evaluar afirmaciones y distinguir evidencias válidas. Inferir consecuencias bajo condiciones y justificar excepciones. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "quiz",
+          "level": "avanzado",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Seleccionar una respuesta justificada entre alternativas. Inferir consecuencias bajo condiciones y justificar excepciones. Mapeo previsto, cotejar IDs reales en P2."
+        },
+        {
+          "mode": "construir",
+          "level": "avanzado",
+          "objective_ids": [
+            "CE-01",
+            "CE-02",
+            "CE-03",
+            "CE-04"
+          ],
+          "operation": "Construir o seleccionar pasos y relaciones que sostienen una conclusión. Inferir consecuencias bajo condiciones y justificar excepciones. Mapeo previsto, cotejar IDs reales en P2."
+        }
+      ],
+      "acceptance": [
+        "Acceso voluntario, retorno contextual y sin alteración del historial; sin puntaje ni racha del Repaso.",
+        "Reutilizar navegación y Task/Bridge del piloto solo mediante extracción con regresión y dependencias reconciliadas.",
+        "Comprobar cada decisión desde estímulo, opciones no equivalentes, feedback causal por error, foco y teclado; alternativa textual de organizadores.",
+        "Verificar transferencia nueva frente a banco real, Repaso y simulacro; C09 permanece abierto hasta P2."
+      ],
+      "external_research": {
+        "status": "LIMITADA",
+        "searches": [
+          {
+            "query": "célula procariota eucariota organelos funciones ejercicios Khan Academy OpenStax español",
+            "date": "2026-11-27",
+            "channel": "web",
+            "results_reviewed": 2,
+            "finding": "Khan indexado; apertura sin líneas legibles. OpenStax localizado."
+          },
+          {
+            "query": "OpenStax Biology 2e 4.2 prokaryotic cells 4.3 eukaryotic cells cell structure",
+            "date": "2026-11-27",
+            "channel": "web",
+            "results_reviewed": 2,
+            "finding": "Extractos 4.2 y 4.3 corroboran estructuras y comparación."
+          },
+          {
+            "query": "PHUMA UNAH idea principal comprensión lectora biología célula simulacro guía ejercicios preparación video",
+            "date": "2026-11-27",
+            "channel": "web",
+            "results_reviewed": 0,
+            "finding": "Sin muestra específica de célula PHUMA inspeccionada."
+          }
+        ],
+        "resources": [
+          {
+            "id": "os42",
+            "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells",
+            "title": "Biology 2e 4.2 Prokaryotic Cells",
+            "producer": "OpenStax",
+            "lineage": "openstax",
+            "kind": "GUIA",
+            "scope": "DISCIPLINAR",
+            "access": "PARCIAL",
+            "locator": "Extracto indexado sección 4.2",
+            "finding": "Rasgos compartidos y organización procariota.",
+            "quality": "Contraste complementario; no sustituye guía oficial",
+            "limitations": "No se inspeccionaron figuras completas.",
+            "decision": "REFUERZA"
+          },
+          {
+            "id": "os43",
+            "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+            "title": "Biology 2e 4.3 Eukaryotic Cells",
+            "producer": "OpenStax",
+            "lineage": "openstax",
+            "kind": "GUIA",
+            "scope": "DISCIPLINAR",
+            "access": "PARCIAL",
+            "locator": "Extracto indexado sección 4.3",
+            "finding": "Contraste eucariota y diferencias animal/vegetal.",
+            "quality": "Contraste complementario; no sustituye guía oficial",
+            "limitations": "Mismo linaje que 4.2; no fuente independiente.",
+            "decision": "REFUERZA"
+          },
+          {
+            "id": "khan",
+            "url": "https://es.khanacademy.org/science/biology/structure-of-a-cell/prokaryotic-and-eukaryotic-cells/a/intro-to-eukaryotic-cells",
+            "title": "Introducción a las células eucariontes",
+            "producer": "Khan Academy",
+            "lineage": "khan",
+            "kind": "GUIA",
+            "scope": "DISCIPLINAR",
+            "access": "SIN_ACCESO",
+            "locator": "Apertura con cero líneas legibles",
+            "finding": "No se pudo inspeccionar artículo.",
+            "quality": "Contraste complementario; no sustituye guía oficial",
+            "limitations": "No sostiene decisiones.",
+            "decision": "DESCARTA"
+          }
+        ],
+        "coverage_note": "Guía oficial p. 8 inspeccionada; un linaje externo parcial. P. 28 y 73 anclan tipo de operación, no dificultad de Célula.",
+        "stop_reason": "Checkpoint parcial: revisar fuentes completas, videos y ejercicios de célula y comprobar banco antes de congelar P0.",
+        "limitations": "Sin reactivo oficial específico de célula observado, ni equivalencia psicométrica ni reproducción audiovisual. Comparabilidad de operación es provisional.",
+        "profiles": [
+          {
+            "level": "principiante",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "os42"
+            ],
+            "operation": "Identificar estructuras y tipos",
+            "reasoning_steps": "Reconocer rasgos comunes",
+            "prerequisites": "Concepto de célula",
+            "representations": "Esquema rotulado",
+            "reading_load": "Breve",
+            "distractors": "Confundir ADN y núcleo",
+            "format": "Cuatro opciones en transferencia; juegos mantienen modalidad.",
+            "autonomy": "Ayudas graduadas en aprendizaje",
+            "time_basis": "Sin medición, calibración cualitativa.",
+            "phuma_relation": "PREPARATORIO",
+            "original_example": "Clasificar modelo sin envoltura nuclear",
+            "decision": "Fundamentos"
+          },
+          {
+            "level": "intermedio",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "os42",
+              "os43"
+            ],
+            "operation": "Clasificar y relacionar estructura-función",
+            "reasoning_steps": "Contrastar rasgos y función directa",
+            "prerequisites": "Tipos y organelos",
+            "representations": "Tabla comparativa",
+            "reading_load": "Contexto breve",
+            "distractors": "Confusión organelo/proceso",
+            "format": "Cuatro opciones en transferencia; juegos mantienen modalidad.",
+            "autonomy": "Sin pista reveladora en transferencia",
+            "time_basis": "Sin medición, calibración cualitativa.",
+            "phuma_relation": "COMPARABLE",
+            "original_example": "Inhibir ribosomas y prever función",
+            "decision": "Comparabilidad provisional solo de operación de clasificación/causalidad con ejemplos de biología oficiales p. 28/73, no dificultad de célula."
+          },
+          {
+            "level": "avanzado",
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "external_resource_ids": [
+              "os43"
+            ],
+            "operation": "Inferir consecuencias y excepciones",
+            "reasoning_steps": "Relacionar causa específica y función, excluir inferencias absolutas",
+            "prerequisites": "Estructura-función",
+            "representations": "Mapa de proceso",
+            "reading_load": "Condiciones múltiples",
+            "distractors": "Efecto indirecto y generalización",
+            "format": "Cuatro opciones en transferencia; juegos mantienen modalidad.",
+            "autonomy": "Sin pista reveladora en transferencia",
+            "time_basis": "Sin medición, calibración cualitativa.",
+            "phuma_relation": "AMPLIACION",
+            "original_example": "Mitocondria alterada: ATP por respiración aerobia",
+            "decision": "Profundización, no dificultad medida"
+          }
+        ],
+        "decisions": [
+          {
+            "objective_ids": [
+              "CE-01",
+              "CE-02",
+              "CE-03",
+              "CE-04"
+            ],
+            "resource_ids": [
+              "os42",
+              "os43"
+            ],
+            "official_anchor_ids": [
+              "PHUMA-UNAH-2026"
+            ],
+            "action": "REFUERZA",
+            "rationale": "Organizadores de comparación y estructura-función; ampliar fuentes antes de congelación."
+          }
+        ]
+      }
+    }
+  ]
+}
