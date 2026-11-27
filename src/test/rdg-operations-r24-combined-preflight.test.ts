@@ -17,7 +17,7 @@ it("R24 combined activation preflight: 450 stable IDs, disjoint successors, prio
  const before=new Map(old.map(x=>[x.id,x]));expect(before.size).toBe(450);
  const state=load("qa/certification/batch-state.json").rdg_continuity;
  const prior=new Map<string,string>();
- for(const p of state.v79_semantic_pass_paths)for(const f of load(p).records)if(f.semantic_status==="PASS_SEMANTIC")prior.set(f.id,f.content_hash);
+ for(const p of state.r26_prior_pass_paths)for(const f of load(p).records)if(f.semantic_status==="PASS_SEMANTIC")prior.set(f.id,f.content_hash);
  expect(prior.size).toBe(98);
  const counts=[0,0,0],records:MathModel[]=[],changed=new Set<string>();
  for(const a of r21){
