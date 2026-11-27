@@ -7,8 +7,8 @@
   "source_job": 140640468373,
   "summary": {
     "reviewed": 30,
-    "eligible_pending_publication": 28,
-    "held": 2,
+    "eligible_pending_publication": 27,
+    "held": 3,
     "new_semantic_pass": 0
   },
   "records": [
@@ -95,8 +95,7 @@
       "reason_codes": [
         "C_VISIBLE_KEY_SHORTCUT_REVIEW",
         "G_ZERO_TEMPLATE_UTILITY_REVIEW",
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -155,7 +154,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -241,8 +240,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -301,7 +299,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -389,8 +387,7 @@
       "reason_codes": [
         "C_VISIBLE_KEY_SHORTCUT_REVIEW",
         "G_ZERO_TEMPLATE_UTILITY_REVIEW",
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -449,7 +446,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -535,8 +532,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -595,7 +591,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -681,8 +677,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -741,7 +736,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -827,8 +822,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -887,7 +881,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -973,8 +967,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -1033,7 +1026,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -1119,8 +1112,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -1179,7 +1171,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -1265,8 +1257,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -1325,7 +1316,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -1412,8 +1403,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -1472,7 +1462,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -1559,8 +1549,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -1619,7 +1608,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -1706,8 +1695,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -1766,7 +1754,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -1852,8 +1840,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -1912,7 +1899,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -1998,8 +1985,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -2058,7 +2044,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -2144,8 +2130,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -2204,7 +2189,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -2290,8 +2275,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -2350,7 +2334,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -2436,8 +2420,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -2496,7 +2479,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -2582,8 +2565,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -2642,7 +2624,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -2729,8 +2711,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -2789,7 +2770,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -2876,8 +2857,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -2936,7 +2916,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -3023,8 +3003,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -3083,7 +3062,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -3169,8 +3148,7 @@
       "empirical_status": "NOT_RUN",
       "technical_status": "PASS_CANDIDATE_CI",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -3229,7 +3207,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -3326,8 +3304,7 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -3408,7 +3385,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -3505,8 +3482,7 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -3587,7 +3563,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -3684,8 +3660,7 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -3766,7 +3741,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -3863,8 +3838,7 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -3945,7 +3919,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -4042,8 +4016,7 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -4124,7 +4097,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -4192,8 +4165,8 @@
           "reason": "Reconstrucción desde estímulo visible: √(49/121)=7/11; 7/11−8/22=3/11; 3/11÷5=3/55; coincide con oráculo y hash CI."
         },
         "C": {
-          "score": 3,
-          "reason": "Tres decisiones con objetivos 3/55, 3/11, 7/11; 3 errores probados por hash."
+          "score": 2,
+          "reason": "Las decisiones sobre resultado y raíz comparten el error de elegir la raíz negativa. Las tres claves son correctas, pero la independencia diagnóstica necesita revisión."
         },
         "D": {
           "score": 3,
@@ -4222,7 +4195,8 @@
       "empirical_status": "NOT_RUN",
       "reason_codes": [
         "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "E_REPEATED_ERROR_CAUSE_REVIEW",
+        "C_DIAGNOSTIC_INDEPENDENCE_REVIEW"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -4282,11 +4256,12 @@
         }
       ],
       "explicacion_verificada": "√(49/121)=7/11; 7/11−8/22=3/11; 3/11÷5=3/55",
-      "promotion_candidate": true,
+      "promotion_candidate": false,
       "risks": [
         "CALIBRACION_CUALITATIVA",
         "SCREEN_LIMITADO",
-        "SIN_LECTOR_PANTALLA_O_DISPOSITIVO_FISICO"
+        "SIN_LECTOR_PANTALLA_O_DISPOSITIVO_FISICO",
+        "DEPENDENCIA_DE_ERROR_ENTRE_AFIRMACIONES"
       ],
       "reviewed_at": "2026-11-27",
       "modelo_revisor": "Revisión asistida; no acreditación docente",
@@ -4303,7 +4278,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -4400,8 +4375,7 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -4460,7 +4434,7 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
@@ -4557,8 +4531,7 @@
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
       "reason_codes": [
-        "R27_RUNTIME_FICHA_CHECK_PENDING",
-        "PUBLICATION_PENDING_OBSERVATION"
+        "R27_RUNTIME_FICHA_CHECK_PENDING"
       ],
       "evidence_refs": [
         "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
@@ -4617,11 +4590,18 @@
       "publication_evidence": {
         "published_sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
         "production_ci": 46042581216,
-        "production_ci_status": "PENDING_OBSERVATION",
+        "production_ci_status": "SUCCESS",
         "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
         "render_status": "LIVE_WHEN_OBSERVED"
       }
     }
   ],
-  "limitations": "No PASS todavía. Dos variantes de cero mantienen deuda C/G por clave visible como último sumando. 28 candidatos sujetos a cotejo de ficha/runtime y CI de producción. Sin aval docente/empírico."
+  "limitations": "No PASS todavía. Dos variantes de cero con deuda C/G y una clasificación de raíz con E/C por causa repetida; 27 candidatos sujetos a cotejo runtime. Producción R26 CI SUCCESS y Render LIVE. Sin aval docente/empírico.",
+  "production_observation": {
+    "sha": "7d487e6b30cd43e8367c9ffab90577ba40605196",
+    "ci": 46042581216,
+    "ci_status": "SUCCESS",
+    "render_deploy": "dep-dc4rt43bc2fs73a70bfg",
+    "render_status": "LIVE_WHEN_OBSERVED"
+  }
 }

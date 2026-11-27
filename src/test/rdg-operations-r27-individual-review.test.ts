@@ -29,5 +29,5 @@ it("R27: 30 active identities, independent key/step and all alternatives, actual
   expect(good).toBe(f.promotion_candidate);if(good)eligible++;else held++;
   console.log("RDG_R27_FICHA "+JSON.stringify({id:x.id,hash:hash(x),stimulus:x.prompt,options:x.options,answerIndex:x.answerIndex,steps:x.steps,assertions:x.assertions,explanation:x.explanation,optionExplanations:x.optionExplanations,stepOptionExplanations:x.stepOptionExplanations,assertionExplanations:x.assertionExplanations,eligible:good,semantic_status:"REVIEW"}));
  }
- expect(eligible).toBe(28);expect(held).toBe(2);console.log("RDG_R27_SUMMARY "+JSON.stringify({ids:30,eligible_pending_publication:eligible,held,new_pass:0}));
+ expect(eligible).toBe(27);expect(held).toBe(3);console.log("RDG_R27_SUMMARY "+JSON.stringify({ids:30,eligible_pending_publication:eligible,held,new_pass:0}));
 });
