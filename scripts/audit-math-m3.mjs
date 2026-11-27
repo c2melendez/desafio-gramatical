@@ -1,3 +1,4 @@
+import {operationInverseR22FromPrompt} from "./oracle-operation-inverse-r22.mjs";
 import {MATH_LEVELS,MATH_MODES,MATH_TOPICS,MATH_LEVEL_COUNT,mathPool} from "../src/lib/math-m1.ts";
 import {MATH_M2_LEVEL_COUNT,mathM2Pool} from "../src/lib/math-m2.ts";
 import {MATH_M3_LEVEL_COUNT,MATH_M3_NEW_PER_LEVEL,MATH_M3_TOTAL,MATH_M3_NEW_TOTAL,mathM3Pool,mathM3NewPool,mathStimulusSignature} from "../src/lib/math-m3.ts";
@@ -74,7 +75,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
   const signature=mathStimulusSignature(item);
   if(localKeys.has(signature))issues.push(cell+": duplicate stimulus "+item.id);
   localKeys.add(signature);
-  const oracle=independentOracle(item.oracle.kind,item.oracle.inputs);
+  const oracle=item.oracle.kind==="Operaciones-inversa-r22"?operationInverseR22FromPrompt(item.prompt):independentOracle(item.oracle.kind,item.oracle.inputs);
   if(!eq(item.oracle.answer,oracle)||!eq(item.oracle.answer,(()=>{const p=item.expected.split("/").map(Number);return ratio(p[0],p[1]??1)})()))
    issues.push(cell+": invalid independent oracle "+item.id);
   if(item.options.length!==4||new Set(item.options).size!==4||item.options[item.answerIndex]!==item.expected)
