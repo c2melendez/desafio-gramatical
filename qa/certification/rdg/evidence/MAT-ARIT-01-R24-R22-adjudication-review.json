@@ -1,0 +1,2021 @@
+{
+  "scope": "MAT-ARIT-01",
+  "status": "REVIEW",
+  "criteria_revision": "7.9",
+  "source_sha": "3bd6a1753f8414db4a25473bfa6a011640f78428",
+  "summary": {
+    "review": 22,
+    "semantic_pass": 0
+  },
+  "limitations": "Partial adjudication; G and H pending; no publication; not full certification.",
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "content_hash": "e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd",
+      "previous_sha256": "f48ec3d5415cf304f6a3ea6ff71a872fcf2346e9f832daa0cb32de8d8c4a2b20",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "principiante",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Calcula (42 − 42) ÷ 7 + 11. ¿Cuál es el resultado?",
+      "respuesta_esperada": "11",
+      "operation": "cero-dividido-por-no-cero",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 11,
+        "step": 0,
+        "wrong": [
+          17,
+          46,
+          18
+        ],
+        "mid": [
+          42,
+          84,
+          -42
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01; Cancelar iguales, dividir cero por divisor no nulo y sumar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 11, paso 0; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Calcula (42 − 42) ÷ 7 + 11. ¿Cuál es el resultado?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Cancelar iguales, dividir cero por divisor no nulo y sumar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-3",
+      "content_hash": "41c1328ebc68848bf9af53f62bea2f1288164dca072763dcb1735518a10fc86f",
+      "previous_sha256": "102ce9bc7601e05e67555d4515638575e9c191df6963ad67a4972b86d0df3b07",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "principiante",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Calcula 252 ÷ (7 + 11). ¿Cuál es el resultado?",
+      "respuesta_esperada": "14",
+      "operation": "cociente-con-agrupacion",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 14,
+        "step": 18,
+        "wrong": [
+          47,
+          25,
+          234
+        ],
+        "mid": [
+          77,
+          7,
+          11
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01; Agrupar divisor y calcular cociente."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 14, paso 18; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Calcula 252 ÷ (7 + 11). ¿Cuál es el resultado?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash 41c1328ebc68848bf9af53f62bea2f1288164dca072763dcb1735518a10fc86f"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Agrupar divisor y calcular cociente. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "content_hash": "36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9",
+      "previous_sha256": "07e5a8971e05f4831083520e9d7f36b6ccb4bb77f312a9c98305d71210a4fff1",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "principiante",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Calcula (60 − 60) ÷ 6 + 12. ¿Cuál es el resultado?",
+      "respuesta_esperada": "12",
+      "operation": "cero-dividido-por-no-cero",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 12,
+        "step": 0,
+        "wrong": [
+          22,
+          66,
+          18
+        ],
+        "mid": [
+          60,
+          120,
+          -60
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01; Cancelar iguales, dividir cero por divisor no nulo y sumar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 12, paso 0; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Calcula (60 − 60) ÷ 6 + 12. ¿Cuál es el resultado?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash 36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Cancelar iguales, dividir cero por divisor no nulo y sumar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+      "content_hash": "6d9d9aaf5ecf1579c44479342b66e6fd541239047733350f5b668163f5c47612",
+      "previous_sha256": "4aeb35d06bc914c8c34bb25d3b8501edbdda4ce892ac039c07266b782326872a",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 35 × □ − (35 − 6) × □ = 48. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "respuesta_esperada": "8",
+      "operation": "factor-comun-diferencia-compuesta",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 8,
+        "step": 6,
+        "wrong": [
+          48,
+          -8,
+          54
+        ],
+        "mid": [
+          41,
+          35,
+          -6
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 8, paso 6; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 35 × □ − (35 − 6) × □ = 48. El mismo entero sustituye ambos cuadros. ¿Cuál es?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash 6d9d9aaf5ecf1579c44479342b66e6fd541239047733350f5b668163f5c47612"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+      "content_hash": "24533f05e26bad10465fb86e8dab63f12dd6cb52789b7bc8d920f06d6c4f9dae",
+      "previous_sha256": "9436c43c5ca52a01c2b1320c8862fac01025aaa0c660c74e2fa5c3bde5eeb287",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 39 × □ − (39 − 7) × □ = 70. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "respuesta_esperada": "10",
+      "operation": "factor-comun-diferencia-compuesta",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 10,
+        "step": 7,
+        "wrong": [
+          70,
+          -10,
+          77
+        ],
+        "mid": [
+          46,
+          39,
+          -7
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 10, paso 7; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 39 × □ − (39 − 7) × □ = 70. El mismo entero sustituye ambos cuadros. ¿Cuál es?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash 24533f05e26bad10465fb86e8dab63f12dd6cb52789b7bc8d920f06d6c4f9dae"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+      "content_hash": "ed1a4ceef4b3e24600caa6afa4f2797f82652195c317521bf29c77098b300348",
+      "previous_sha256": "00ecc4dfe58c868452e093cf25deaf68edf64487ad46a2d102fea044d54be5d3",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 43 × □ − (43 − 8) × □ = 96. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "respuesta_esperada": "12",
+      "operation": "factor-comun-diferencia-compuesta",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 12,
+        "step": 8,
+        "wrong": [
+          96,
+          -12,
+          104
+        ],
+        "mid": [
+          51,
+          43,
+          -8
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 12, paso 8; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 43 × □ − (43 − 8) × □ = 96. El mismo entero sustituye ambos cuadros. ¿Cuál es?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash ed1a4ceef4b3e24600caa6afa4f2797f82652195c317521bf29c77098b300348"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+      "content_hash": "8cb915d3f09f20377bc2b05d1b5e43ae3bab368a4a4d1796e1b82351218a4adf",
+      "previous_sha256": "b16aca894bebb8e0016c4a54defde60538cc4b92377d4943d827a901394059ee",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 80 − [12 − □ × (18 − 3)] = 128. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "4",
+      "operation": "resta-anidada-distributiva",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 4,
+        "step": 60,
+        "wrong": [
+          60,
+          -4,
+          45
+        ],
+        "mid": [
+          48,
+          -60,
+          196
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 4, paso 60; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 80 − [12 − □ × (18 − 3)] = 128. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash 8cb915d3f09f20377bc2b05d1b5e43ae3bab368a4a4d1796e1b82351218a4adf"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+      "content_hash": "cc6ba29fe36500dfd46b74d95943c40129e99bd712404bacb039b41ebf7e9e05",
+      "previous_sha256": "340303855000b1fba75d518ed667c23fee6b0676e0210751725efb0d44fc6152",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 85 − [13 − □ × (20 − 4)] = 152. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "5",
+      "operation": "resta-anidada-distributiva",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 5,
+        "step": 80,
+        "wrong": [
+          80,
+          -5,
+          64
+        ],
+        "mid": [
+          67,
+          -80,
+          224
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 5, paso 80; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 85 − [13 − □ × (20 − 4)] = 152. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash cc6ba29fe36500dfd46b74d95943c40129e99bd712404bacb039b41ebf7e9e05"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+      "content_hash": "f049110d67949469e2a62e1869fe067fc89b4f64392397359534dbbd84675f6e",
+      "previous_sha256": "d8234d34bfe8573f2b39dfe47c44f8c4cb498d54769bfa79eeafa0ad56716f2c",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 90 − [14 − □ × (22 − 5)] = 178. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "6",
+      "operation": "resta-anidada-distributiva",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 6,
+        "step": 102,
+        "wrong": [
+          102,
+          -6,
+          85
+        ],
+        "mid": [
+          88,
+          -102,
+          254
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 6, paso 102; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 90 − [14 − □ × (22 − 5)] = 178. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash f049110d67949469e2a62e1869fe067fc89b4f64392397359534dbbd84675f6e"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+      "content_hash": "0195d56d5ba79d6964555395b3bd8bc0265f1b402a372c94a4079b67187d8407",
+      "previous_sha256": "0eef44c9eb3413f8391d229c5933a219180d45a67e3e9a0af12d7c6967a515d4",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa (√81 − 2) × (□ + √25) − 4 = 101. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "10",
+      "operation": "dos-raices-en-producto-agrupado",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 10,
+        "step": 15,
+        "wrong": [
+          15,
+          20,
+          -10
+        ],
+        "mid": [
+          105,
+          98,
+          19
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01,OP-04; Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 10, paso 15; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa (√81 − 2) × (□ + √25) − 4 = 101. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash 0195d56d5ba79d6964555395b3bd8bc0265f1b402a372c94a4079b67187d8407"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+      "content_hash": "fa7c5dde7ce6f45888576cb2d42d05ca27e1c7ba8179cb568fbfe13aea75bb48",
+      "previous_sha256": "8304eb14f4037791a25c24b5e00eddea805bb92013683198ddb7d5824cdb81a1",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa (√100 − 3) × (□ + √36) − 5 = 114. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "11",
+      "operation": "dos-raices-en-producto-agrupado",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 11,
+        "step": 17,
+        "wrong": [
+          17,
+          23,
+          -11
+        ],
+        "mid": [
+          119,
+          112,
+          22
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01,OP-04; Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 11, paso 17; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa (√100 − 3) × (□ + √36) − 5 = 114. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash fa7c5dde7ce6f45888576cb2d42d05ca27e1c7ba8179cb568fbfe13aea75bb48"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+      "content_hash": "aa3b724bff1d9984b2426ca494caff452debf129c9b196084e89f112e2b1ca8c",
+      "previous_sha256": "8938c0796cf9d5fe38e780c99692b566020e316b9c3c561cf9c4e2480794810e",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa (√121 − 4) × (□ + √49) − 6 = 127. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "12",
+      "operation": "dos-raices-en-producto-agrupado",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 12,
+        "step": 19,
+        "wrong": [
+          19,
+          26,
+          -12
+        ],
+        "mid": [
+          133,
+          126,
+          25
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01,OP-04; Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 12, paso 19; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 3 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa (√121 − 4) × (□ + √49) − 6 = 127. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 3 errores específicos y explicación del procedimiento, hash aa3b724bff1d9984b2426ca494caff452debf129c9b196084e89f112e2b1ca8c"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "content_hash": "12dfbbbf3d67f973b81466e661755a6f1c195f4a51f3e98b330abe4e74b37734",
+      "previous_sha256": "2424a69545ad388cb602301a4772acbba067d62975bb2f72763a59871077c73a",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 47 × □ − (47 − 9) × □ = 126. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "respuesta_esperada": "14",
+      "operation": "factor-comun-diferencia-compuesta",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 14,
+        "step": 9,
+        "wrong": [
+          126,
+          -14,
+          135
+        ],
+        "mid": [
+          56,
+          47,
+          -9
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 14, paso 9; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 47 × □ − (47 − 9) × □ = 126. El mismo entero sustituye ambos cuadros. ¿Cuál es?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash 12dfbbbf3d67f973b81466e661755a6f1c195f4a51f3e98b330abe4e74b37734"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "content_hash": "9bbe3fd450415ceabfaf8c9d289983122a2867aa8383b99266e5c44063a4882d",
+      "previous_sha256": "55b6a363d97d3231894f1eb7f4471f44866bda1a0b732af891879987394d1f63",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 51 × □ − (51 − 10) × □ = 160. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "respuesta_esperada": "16",
+      "operation": "factor-comun-diferencia-compuesta",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 16,
+        "step": 10,
+        "wrong": [
+          160,
+          -16,
+          170
+        ],
+        "mid": [
+          61,
+          51,
+          -10
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 16, paso 10; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 51 × □ − (51 − 10) × □ = 160. El mismo entero sustituye ambos cuadros. ¿Cuál es?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash 9bbe3fd450415ceabfaf8c9d289983122a2867aa8383b99266e5c44063a4882d"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+      "content_hash": "f324d59679b24b61e7e5fdb1c1eb0a03282312cca8c4ebedc0a3a535ae8318e3",
+      "previous_sha256": "c71f9afe39de25f3822fe8aa6135f1cac77163e984e91ba9155652d674779473",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 55 × □ − (55 − 11) × □ = 198. El mismo entero sustituye ambos cuadros. ¿Cuál es?",
+      "respuesta_esperada": "18",
+      "operation": "factor-comun-diferencia-compuesta",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 18,
+        "step": 11,
+        "wrong": [
+          198,
+          -18,
+          209
+        ],
+        "mid": [
+          66,
+          55,
+          -11
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 18, paso 11; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 55 × □ − (55 − 11) × □ = 198. El mismo entero sustituye ambos cuadros. ¿Cuál es?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash f324d59679b24b61e7e5fdb1c1eb0a03282312cca8c4ebedc0a3a535ae8318e3"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Extraer la incógnita común, cancelar términos, dividir por el coeficiente y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+      "content_hash": "c87801812c8fafad59236d3d8232d4b336d00f050a5f6ec7a7f0b042d578c3b7",
+      "previous_sha256": "b04365545109328c34df75e7b79b6b33f6db7b29b292e7e8363a7a72d946ca22",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 95 − [15 − □ × (24 − 6)] = 206. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "7",
+      "operation": "resta-anidada-distributiva",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 7,
+        "step": 126,
+        "wrong": [
+          126,
+          -7,
+          108
+        ],
+        "mid": [
+          111,
+          -126,
+          286
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 7, paso 126; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 95 − [15 − □ × (24 − 6)] = 206. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash c87801812c8fafad59236d3d8232d4b336d00f050a5f6ec7a7f0b042d578c3b7"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+      "content_hash": "1598ed5ce131f4639b7b1761595f1e5e7dcb4df5c68316b61be469087a899f42",
+      "previous_sha256": "dc36bb0df6e71159982789f6541d45a13477467861f44cb88f1b678c8e3d60f1",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 100 − [16 − □ × (26 − 7)] = 236. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "8",
+      "operation": "resta-anidada-distributiva",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 8,
+        "step": 152,
+        "wrong": [
+          152,
+          -8,
+          133
+        ],
+        "mid": [
+          136,
+          -152,
+          320
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 8, paso 152; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 100 − [16 − □ × (26 − 7)] = 236. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash 1598ed5ce131f4639b7b1761595f1e5e7dcb4df5c68316b61be469087a899f42"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+      "content_hash": "be406a05a9c90fbcb3cede74ace29d267832f9110a326c54818ea287fcd2c266",
+      "previous_sha256": "ac3553665ecf646b901fd7634552e64d2d113cb07099f31dd1a8a775e1b384c6",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa 105 − [17 − □ × (28 − 8)] = 268. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "9",
+      "operation": "resta-anidada-distributiva",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 9,
+        "step": 180,
+        "wrong": [
+          180,
+          -9,
+          160
+        ],
+        "mid": [
+          163,
+          -180,
+          356
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 9, paso 180; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa 105 − [17 − □ × (28 − 8)] = 268. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash be406a05a9c90fbcb3cede74ace29d267832f9110a326c54818ea287fcd2c266"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Invertir la resta exterior, aislar el producto, dividir por la diferencia y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "content_hash": "c24d71e7b8281f7acfd1d5e7b158810adc4bd18e70d5f5bad2e2ea247de824b4",
+      "previous_sha256": "d5faf5c1edf0bcc107fed782c5693a3fe27d2872e84914443490e0eda236378d",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa (√144 − 2) × (□ + √64) − 7 = 203. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "13",
+      "operation": "dos-raices-en-producto-agrupado",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 13,
+        "step": 21,
+        "wrong": [
+          21,
+          29,
+          -13
+        ],
+        "mid": [
+          210,
+          200,
+          28
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01,OP-04; Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 13, paso 21; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa (√144 − 2) × (□ + √64) − 7 = 203. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash c24d71e7b8281f7acfd1d5e7b158810adc4bd18e70d5f5bad2e2ea247de824b4"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "content_hash": "4659b1321c3ff860122a8f19dd6e00e623e978f2b9ac04d8fbb03a6bb9d7e0fc",
+      "previous_sha256": "75a821c39ef0624b6147ca6eb8646b99661d5b822ad1997712b91c8529a9f665",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa (√169 − 3) × (□ + √81) − 8 = 222. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "14",
+      "operation": "dos-raices-en-producto-agrupado",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 14,
+        "step": 23,
+        "wrong": [
+          23,
+          32,
+          -14
+        ],
+        "mid": [
+          230,
+          220,
+          31
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01,OP-04; Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 14, paso 23; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa (√169 − 3) × (□ + √81) − 8 = 222. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash 4659b1321c3ff860122a8f19dd6e00e623e978f2b9ac04d8fbb03a6bb9d7e0fc"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+      "content_hash": "48fff4582801dc1e487e006e184cad9a44d4381fadc2bee904c1cb25f03c8260",
+      "previous_sha256": "8a9b2928068881356dea06662ab371277c04a680352bd74335d5a0d81cc74bde",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-01",
+        "OP-04"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa (√196 − 4) × (□ + √100) − 9 = 241. ¿Qué entero sustituye □?",
+      "respuesta_esperada": "15",
+      "operation": "dos-raices-en-producto-agrupado",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 15,
+        "step": 25,
+        "wrong": [
+          25,
+          35,
+          -15
+        ],
+        "mid": [
+          250,
+          240,
+          34
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "Exact candidate hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01,OP-04; Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 15, paso 25; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa (√196 − 4) × (□ + √100) − 9 = 241. ¿Qué entero sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash 48fff4582801dc1e487e006e184cad9a44d4381fadc2bee904c1cb25f03c8260"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Evaluar dos raíces exactas, invertir resta y producto, aislar sumando y verificar. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+      "content_hash": "b09926afe513a150a0a1c75f430bdee669048ab56ee566849a93a3655ce6bf73",
+      "previous_sha256": "29a31bf05db2fa42b8268d1c2fa7a6ac20a2315155bd15fe370746693a78d668",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "avanzado",
+      "exam": [
+        "PHUMA"
+      ],
+      "objective_ids": [
+        "OP-03"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "stimulus": "Completa la igualdad 15 × (14 − 5) + □ = 15 × (14 + 6). ¿Qué número sustituye □?",
+      "respuesta_esperada": "165",
+      "operation": "completar-igualdad-distributiva",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "key": 165,
+        "step": 135,
+        "wrong": [
+          300,
+          -15,
+          11
+        ],
+        "mid": [
+          205,
+          285,
+          9
+        ],
+        "source_ci": 45871043578,
+        "source_job": 140094040051,
+        "hash_note": "R24 changes only cognitive evidence; combined global oracle and UI verified current hash"
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-03; Evaluar ambos productos agrupados, restar el conocido del miembro derecho y verificar la igualdad."
+        },
+        "B": {
+          "score": 3,
+          "reason": "Cálculo independiente registrado: clave 165, paso 135; auditor global candidato PASS."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Clave y paso distintos; 6 selecciones erróneas verificadas con puntuación y causa en UI."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado delimita operación o incógnita: Completa la igualdad 15 × (14 − 5) + □ = 15 × (14 + 6). ¿Qué número sustituye □?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "UI verificó 6 errores específicos y explicación del procedimiento, hash b09926afe513a150a0a1c75f430bdee669048ab56ee566849a93a3655ce6bf73"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Evaluar ambos productos agrupados, restar el conocido del miembro derecho y verificar la igualdad. Calibración cualitativa, no psicométrica."
+        },
+        "G": {
+          "score": 2,
+          "reason": "Sin nuevas señales en filtro R24; falta adjudicar utilidad de variación dentro de familia y contraste RDG/examen vigente por hash."
+        },
+        "H": {
+          "score": null,
+          "reason": "Interacción por botones y texto verificada; falta adjudicación de accesibilidad individual."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "technical_status": "PASS_CANDIDATE_CI",
+      "reason_codes": [
+        "G_CANONICAL_AND_FAMILY_REVIEW_PENDING",
+        "H_ACCESSIBILITY_ADJUDICATION_PENDING",
+        "PUBLICATION_PENDING"
+      ],
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-R22-R23-ui-evidence.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45871043578",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/45920392108"
+      ],
+      "evidence_level": "E1",
+      "criteria_revision": "7.9"
+    }
+  ]
+}
