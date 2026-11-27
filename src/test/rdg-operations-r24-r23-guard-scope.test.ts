@@ -1,5 +1,6 @@
+// Historical R20 evidence: keep exact baseline; active R26 has a separate full-bank regression.
 import {expect,it} from "vitest";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R20Pool as mathM3Pool} from "@/lib/math-m3";
 import {type MathModel} from "@/lib/math-m1";
 import {repairOperationR23Candidate} from "@/lib/math-operations-r23-candidate";
 import {expectedOperationClassificationTruthCount} from "@/lib/math-operations-classification";

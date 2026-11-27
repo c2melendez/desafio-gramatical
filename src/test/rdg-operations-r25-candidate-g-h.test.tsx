@@ -1,10 +1,11 @@
+// Historical R20 evidence: keep exact baseline; active R26 has a separate full-bank regression.
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {afterEach,expect,it,vi} from "vitest";
 import {cleanup,fireEvent,render,screen,within} from "@testing-library/react";
 import {MathExerciseCard} from "@/components/games/MathExerciseCard";
 import {MATH_LEVELS,MATH_MODES,type MathModel} from "@/lib/math-m1";
-import {mathM3Pool,mathM3R21CandidatePool} from "@/lib/math-m3";
+import {mathM3R20Pool as mathM3Pool,mathM3R21CandidatePool} from "@/lib/math-m3";
 import {repairOperationR22Candidate} from "@/lib/math-operations-r22-candidate";
 import {repairOperationR23Candidate} from "@/lib/math-operations-r23-candidate";
 import {OPERATIONS_ROUTE} from "@/lib/rdg/operations";

@@ -1,9 +1,10 @@
+// Historical R20 evidence: keep exact baseline; active R26 has a separate full-bank regression.
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it,vi,afterEach} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
-import {mathM3Pool,mathM3R21CandidatePool} from "@/lib/math-m3";
+import {mathM3R20Pool as mathM3Pool,mathM3R21CandidatePool} from "@/lib/math-m3";
 import {MathExerciseCard} from "@/components/games/MathExerciseCard";
 import {operationR20WrongCause} from "@/lib/math-operations-r20-error-cause";
 // @ts-expect-error JS selector has no TypeScript declaration.
