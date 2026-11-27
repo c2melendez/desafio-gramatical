@@ -1,0 +1,52 @@
+{
+  "status": "CANDIDATE_NOT_ACTIVE",
+  "candidate_sha": "c2d46d1e2a60a9501dc2e8b96f041cd29d05ce15",
+  "successors": "qa/certification/rdg/evidence/MAT-ARIT-01-R24-combined-successors.json",
+  "previous_selection_paths": [
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-06.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+  ],
+  "selection_paths": [
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R24-candidate.json",
+    "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+  ],
+  "summary": {
+    "total": 450,
+    "changed": 89,
+    "preserved": 361,
+    "prior_pass": 98,
+    "counts": [
+      59,
+      22,
+      8
+    ],
+    "signals": [],
+    "semantic_pass": 0
+  },
+  "limits": "No production activation or new semantic PASS; independent guard review pending.",
+  "hash_reconciliation": {
+    "source_sha": "c02c4bb8968bf3ed315ae5538e7cd371cfd3e83b",
+    "ci_run": 45917921630,
+    "ci_job": 140241504015,
+    "combined_test": "PASS",
+    "global_candidate_audit": "PASS",
+    "overall_ci": "FAIL_STALE_SELECTION",
+    "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+    "old_candidate_hash": "a9e3066f3998d059a1d27ccef9ad050b18c74f1d6e19bd4370c7fe9412f9a04f",
+    "new_candidate_hash": "b09926afe513a150a0a1c75f430bdee669048ab56ee566849a93a3655ce6bf73"
+  }
+}

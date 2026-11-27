@@ -1,6 +1,10 @@
+import {operationInverseR22FromPrompt} from "./oracle-operation-inverse-r22.mjs";
 import {MATH_LEVELS,MATH_MODES,MATH_TOPICS,MATH_LEVEL_COUNT,mathPool} from "../src/lib/math-m1.ts";
 import {MATH_M2_LEVEL_COUNT,mathM2Pool} from "../src/lib/math-m2.ts";
 import {MATH_M3_LEVEL_COUNT,MATH_M3_NEW_PER_LEVEL,MATH_M3_TOTAL,MATH_M3_NEW_TOTAL,mathM3Pool,mathM3NewPool,mathStimulusSignature} from "../src/lib/math-m3.ts";
+import {mathM3R21CandidatePool} from "../src/lib/math-m3.ts";
+import {repairOperationR22Candidate} from "../src/lib/math-operations-r22-candidate.ts";
+import {repairOperationR23Candidate} from "../src/lib/math-operations-r23-candidate.ts";
 import {selectRotation,emptyRotation,recordRotation} from "../src/lib/rotation.ts";
 import {execFileSync} from "node:child_process";
 import {expectedOperationClassificationTruthCount} from "../src/lib/math-operations-classification.ts";
@@ -56,12 +60,14 @@ function independentOracle(kind,values){
 }
 
 
+const candidate=process.argv.includes('--r24-candidate');
+const inverseOps=new Set(['factor-comun-diferencia-compuesta','resta-anidada-distributiva','dos-raices-en-producto-agrupado']);
 const issues=[],rows=[],globalIds=new Set(),stage={principiante:1,intermedio:2,avanzado:3};
 let coreCount=0,newCount=0;
 for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
  for(const mode of MATH_MODES)for(const level of MATH_LEVELS){
  const core=mathM2Pool(topic.name,subtopic,level,mode),fresh=mathM3NewPool(topic.name,subtopic,level,mode);
- const bank=mathM3Pool(topic.name,subtopic,level,mode);
+ const bank=candidate?mathM3R21CandidatePool(topic.name,subtopic,level,mode).map(repairOperationR22Candidate).map(repairOperationR23Candidate):mathM3Pool(topic.name,subtopic,level,mode);
  const cell=topic.name+"/"+subtopic+"/"+mode+"/"+level,issuesBefore=issues.length;
  for(const issue of verifyMathM3Cell(bank,level))issues.push(cell+": structural guard "+issue);
  if(core.length!==MATH_M2_LEVEL_COUNT[level]||fresh.length!==MATH_M3_NEW_PER_LEVEL[level]||bank.length!==MATH_M3_LEVEL_COUNT[level])
@@ -74,7 +80,8 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
   const signature=mathStimulusSignature(item);
   if(localKeys.has(signature))issues.push(cell+": duplicate stimulus "+item.id);
   localKeys.add(signature);
-  const oracle=independentOracle(item.oracle.kind,item.oracle.inputs);
+  const oracle=item.oracle.kind==="Operaciones-inversa-r22"?operationInverseR22FromPrompt(item.prompt):independentOracle(item.oracle.kind,item.oracle.inputs);
+  if(item.oracle.kind==="Operaciones-inversa-r22"&&(subtopic!=="Operaciones"||level!=="avanzado"||mode==="clasificar"||!inverseOps.has(item.operation)||!/^math-m2-aritmetica-operaciones-(quiz|construir)-avanzado-(0|1|2|3|4|5|9|10|11)$/.test(item.id)))issues.push(cell+": inverse oracle outside exact R22 scope "+item.id);
   if(!eq(item.oracle.answer,oracle)||!eq(item.oracle.answer,(()=>{const p=item.expected.split("/").map(Number);return ratio(p[0],p[1]??1)})()))
    issues.push(cell+": invalid independent oracle "+item.id);
   if(item.options.length!==4||new Set(item.options).size!==4||item.options[item.answerIndex]!==item.expected)
@@ -105,9 +112,9 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
    if(bank.filter(x=>x.operation===R11_OPERATIONS[level]&&x.oracle.kind==="Operaciones-mixtas").length!==3)issues.push(cell+": invalid R11 mixed-operation coverage");
   }
   if(level==="intermedio"){for(const op of R15_OPERATIONS)expected.add(op);if(R15_OPERATIONS.some(op=>bank.filter(x=>x.operation===op&&x.oracle.kind==="Operaciones-decision").length!==3))issues.push(cell+": invalid R15 exact coverage");}
-  if(level==="avanzado"){for(const op of R14_OPERATIONS)expected.add(op);if(R14_OPERATIONS.some(op=>bank.filter(x=>x.operation===op&&x.oracle.kind==="Operaciones-avanzadas").length!==3))issues.push(cell+": invalid R14 exact coverage");}
-  if(R13_OPERATIONS[level].some(op=>bank.filter(x=>x.operation===op&&x.oracle.kind==="Operaciones-contraste").length!==(level==="principiante"?2:3)))issues.push(cell+": invalid R13 exact coverage");
-  if(R12_OPERATIONS[level].some(op=>bank.filter(x=>x.operation===op&&x.oracle.kind==="Operaciones-transferencia").length!==3))issues.push(cell+": invalid R12 exact coverage");
+  if(level==="avanzado"){for(const op of R14_OPERATIONS)expected.add(op);if(R14_OPERATIONS.some(op=>bank.filter(x=>x.operation===op&&(x.oracle.kind==="Operaciones-avanzadas"||(candidate&&mode!=="clasificar"&&inverseOps.has(op)&&x.oracle.kind==="Operaciones-inversa-r22"))).length!==3))issues.push(cell+": invalid R14 exact coverage");}
+  if(R13_OPERATIONS[level].some(op=>bank.filter(x=>x.operation===op&&(x.oracle.kind==="Operaciones-contraste"||(candidate&&level==="avanzado"&&mode!=="clasificar"&&inverseOps.has(op)&&x.oracle.kind==="Operaciones-inversa-r22"))).length!==(level==="principiante"?2:3)))issues.push(cell+": invalid R13 exact coverage");
+  if(R12_OPERATIONS[level].some(op=>bank.filter(x=>x.operation===op&&(x.oracle.kind==="Operaciones-transferencia"||(candidate&&level==="avanzado"&&mode!=="clasificar"&&inverseOps.has(op)&&x.oracle.kind==="Operaciones-inversa-r22"))).length!==3))issues.push(cell+": invalid R12 exact coverage");
   if(operations.size!==expected.size||[...expected].some(x=>!operations.has(x))||bank.filter(x=>x.operation===R8_OPERATIONS[level]&&x.oracle.kind==="Operaciones-diversidad").length!==3||R10_OPERATIONS[level].some(op=>bank.filter(x=>x.operation===op&&x.oracle.kind==="Operaciones-diversidad").length!==3)||bank.filter(x=>x.oracle.kind==="Operaciones-racionales").length!==(level==="principiante"?0:3))issues.push(cell+": invalid R8/R10/OP04 exact coverage");
  }else if(subtopic==="Operaciones"&&level!=="principiante"){
   const old=level==="intermedio"?"modificar-parentesis-y-factor":"distributiva-y-cancelacion";
@@ -128,7 +135,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
  }
 if(rows.length!==198||coreCount!==6600||newCount!==MATH_M3_NEW_TOTAL||coreCount+newCount!==MATH_M3_TOTAL||globalIds.size!==MATH_M3_TOTAL)
  issues.push("Global totals inconsistent: "+JSON.stringify({cells:rows.length,coreCount,newCount,ids:globalIds.size}));
-const report={module:"matematicas-M3",status:issues.length?"FAIL":"PASS",
+const report={module:"matematicas-M3",scope:candidate?"R24_CANDIDATE":"PRODUCTION",status:issues.length?"FAIL":"PASS",
  sha:execFileSync("git",["rev-parse","HEAD"],{encoding:"utf8"}).trim(),counts:{cells:rows.length,before:coreCount,added:newCount,after:coreCount+newCount,unique_ids:globalIds.size},
  targets:MATH_M3_LEVEL_COUNT,review:"AUTOMATICA_ESTRUCTURAL; DOCENTE_PENDIENTE; INDEPENDENCIA_CONCEPTUAL_NO_CERTIFICADA",
  rows,issues};
