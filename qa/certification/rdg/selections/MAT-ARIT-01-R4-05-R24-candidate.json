@@ -158,7 +158,7 @@
     },
     {
       "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
-      "content_sha256": "a9e3066f3998d059a1d27ccef9ad050b18c74f1d6e19bd4370c7fe9412f9a04f",
+      "content_sha256": "b09926afe513a150a0a1c75f430bdee669048ab56ee566849a93a3655ce6bf73",
       "objective_ids": [
         "OP-03"
       ]
@@ -417,6 +417,6 @@
       ]
     }
   ],
-  "selection_baseline": "c2d46d1e2a60a9501dc2e8b96f041cd29d05ce15",
+  "selection_baseline": "c02c4bb8968bf3ed315ae5538e7cd371cfd3e83b",
   "previous_selection": "qa/certification/rdg/selections/MAT-ARIT-01-R4-05.json"
 }
