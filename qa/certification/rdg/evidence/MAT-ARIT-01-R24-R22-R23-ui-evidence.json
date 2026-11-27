@@ -1,0 +1,470 @@
+{
+  "scope": "MAT-ARIT-01",
+  "criteria_revision": "7.9",
+  "status": "REVIEW",
+  "source_sha": "d35311b05cf8943fe3762a6f7176c577c98b0c5c",
+  "ci_run": 45920168396,
+  "ci_job": 140248735766,
+  "test_step": "SUCCESS",
+  "overall_ci": "IN_PROGRESS_WHEN_OBSERVED",
+  "test": "src/test/rdg-operations-r24-successor-feedback.test.tsx",
+  "summary": {
+    "ids": 30,
+    "correct": 30,
+    "errors": 129,
+    "semantic_pass": 0
+  },
+  "limits": "Evidence C/E: correct scoring and each incorrect choice renders its explicit explanation. H requires additional accessibility assessment. No full A-H decision or semantic promotion. Teacher and empirical approval pending.",
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "hash": "e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-3",
+      "hash": "41c1328ebc68848bf9af53f62bea2f1288164dca072763dcb1735518a10fc86f",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "hash": "36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-12",
+      "hash": "d3dbbcd7fa0257e62bc5398ecb827fa07cbff29708f49b066135222a7221a1e9",
+      "mode": "clasificar",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-13",
+      "hash": "f78a66034ca7a32c4b7c697f8827ca4b8eacbc094aae514c9a2ce23c804b21b6",
+      "mode": "clasificar",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-14",
+      "hash": "ddd7ee990666174a94cbd5be89d9b7643fe34122dd0947ede42828fdc603e35d",
+      "mode": "clasificar",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-15",
+      "hash": "588126d1635f62ee18e4982fdfb778ef0a23423423a9b2c57614255846f7f6f3",
+      "mode": "clasificar",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-16",
+      "hash": "a09828cffae299085413718c2a096425618197384cab92cf9ce5fec9ccdc031b",
+      "mode": "clasificar",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+      "hash": "56a42f81536dbe0240df6d6c429039347ba218732ea0ac12201ca5f574ec7d2d",
+      "mode": "clasificar",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-intermedio-16",
+      "hash": "2d636317237aa786ab0f0292201c87ba168116e80feebe967783bd54b210a81d",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-intermedio-16",
+      "hash": "73ca70653603f898ecef293ff4e4db0e7428927f3354ea837e7a8896617ccd8a",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-0",
+      "hash": "6d9d9aaf5ecf1579c44479342b66e6fd541239047733350f5b668163f5c47612",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-1",
+      "hash": "24533f05e26bad10465fb86e8dab63f12dd6cb52789b7bc8d920f06d6c4f9dae",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-2",
+      "hash": "ed1a4ceef4b3e24600caa6afa4f2797f82652195c317521bf29c77098b300348",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-3",
+      "hash": "8cb915d3f09f20377bc2b05d1b5e43ae3bab368a4a4d1796e1b82351218a4adf",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-4",
+      "hash": "cc6ba29fe36500dfd46b74d95943c40129e99bd712404bacb039b41ebf7e9e05",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-5",
+      "hash": "f049110d67949469e2a62e1869fe067fc89b4f64392397359534dbbd84675f6e",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-9",
+      "hash": "0195d56d5ba79d6964555395b3bd8bc0265f1b402a372c94a4079b67187d8407",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-10",
+      "hash": "fa7c5dde7ce6f45888576cb2d42d05ca27e1c7ba8179cb568fbfe13aea75bb48",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-avanzado-11",
+      "hash": "aa3b724bff1d9984b2426ca494caff452debf129c9b196084e89f112e2b1ca8c",
+      "mode": "quiz",
+      "correct": 1,
+      "errors": 3,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-0",
+      "hash": "12dfbbbf3d67f973b81466e661755a6f1c195f4a51f3e98b330abe4e74b37734",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-1",
+      "hash": "9bbe3fd450415ceabfaf8c9d289983122a2867aa8383b99266e5c44063a4882d",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-2",
+      "hash": "f324d59679b24b61e7e5fdb1c1eb0a03282312cca8c4ebedc0a3a535ae8318e3",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-3",
+      "hash": "c87801812c8fafad59236d3d8232d4b336d00f050a5f6ec7a7f0b042d578c3b7",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-4",
+      "hash": "1598ed5ce131f4639b7b1761595f1e5e7dcb4df5c68316b61be469087a899f42",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-5",
+      "hash": "be406a05a9c90fbcb3cede74ace29d267832f9110a326c54818ea287fcd2c266",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-9",
+      "hash": "c24d71e7b8281f7acfd1d5e7b158810adc4bd18e70d5f5bad2e2ea247de824b4",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-10",
+      "hash": "4659b1321c3ff860122a8f19dd6e00e623e978f2b9ac04d8fbb03a6bb9d7e0fc",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-11",
+      "hash": "48fff4582801dc1e487e006e184cad9a44d4381fadc2bee904c1cb25f03c8260",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-avanzado-13",
+      "hash": "b09926afe513a150a0a1c75f430bdee669048ab56ee566849a93a3655ce6bf73",
+      "mode": "construir",
+      "correct": 1,
+      "errors": 6,
+      "semantic_status": "REVIEW",
+      "evidence_level": "E1",
+      "criteria_evidence": {
+        "C": "Scoring and selected alternative identity verified",
+        "E": "Explicit selected-error feedback and worked explanation verified"
+      },
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN"
+    }
+  ]
+}
