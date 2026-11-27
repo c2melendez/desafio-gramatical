@@ -1,0 +1,191 @@
+{
+  "scope": "MAT-ARIT-01",
+  "criteria_revision": "7.9",
+  "status": "CANDIDATE_SCREEN_REVIEW",
+  "source": {
+    "candidate_sha": "9fc949f40adb35516438446376fd20aef9a5a854",
+    "ci": 46043595300,
+    "job": 140657198774,
+    "ci_status": "SUCCESS"
+  },
+  "exam": {
+    "repository": "c2melendez/academia-paa-phuma",
+    "sha": "5baf93053faef098a73e6c47fb854c1ace2ccf6d",
+    "modules": [
+      {
+        "path": "data/mathEngine.js",
+        "blob": "6cde547793334bc0fc6b5e50172bf6266d8cd029"
+      },
+      {
+        "path": "data/spanishEditorialBank.js",
+        "blob": "b132fb9d44d9ff5a59e45135b1dce6c6d32ead1c"
+      },
+      {
+        "path": "data/disciplinaryBank.js",
+        "blob": "174d75c15d31c5e24958ba22a1724b2b8c47242f"
+      },
+      {
+        "path": "data/spanishExplanations.js",
+        "blob": "78d84d9a0681ab140f9453fb45bd566280779900"
+      },
+      {
+        "path": "data/visualBank.js",
+        "blob": "0f4b1c711e9d25b943eba626554eb6e217634465"
+      },
+      {
+        "path": "data/readingBank.js",
+        "blob": "94981c7c92a873c21d618bb575828c65b21b6203"
+      },
+      {
+        "path": "data/precisionBank.js",
+        "blob": "ac982223f6a6dbf67fbf3baa24c4c0f37227473f"
+      },
+      {
+        "path": "data/advancedVisualBank.js",
+        "blob": "630c428f2fa9b70982f33de0ab35bba925adbc82"
+      },
+      {
+        "path": "data/enrichmentBank.js",
+        "blob": "ad60e760f6c21cbde22bf632584484a6114efadd"
+      },
+      {
+        "path": "data/foundationBank.js",
+        "blob": "33d07fb9bc0cac0a1f37ec2624bf65458a53932a"
+      },
+      {
+        "path": "data/gapClosureBank.js",
+        "blob": "567a5789dcf049d7091854dde8be3fb1c956686c"
+      },
+      {
+        "path": "data/curated.js",
+        "blob": "c0164bab87c46689122ee5a8b6b8dc9b26da06d4"
+      },
+      {
+        "path": "src/catalog.js",
+        "blob": "6fa93116f47913bc180d373f69cfe9de49f3dcb0"
+      },
+      {
+        "path": "data/questionBank.js",
+        "blob": "0fa5ef568a8ddb3c1ded058cbba6c3493b9a2240"
+      }
+    ],
+    "method": "Ejecución aislada de los 14 módulos originales del mismo SHA; texto normalizado, expresión y firma específica de diferencia agrupada. Pantalla R26 reutilizable para estímulo de raíz intacto. Resultados de ejecución observados en esta corrida, no inferidos de CI.",
+    "total": 989,
+    "math": 415
+  },
+  "summary": {
+    "ids": 3,
+    "changed_stimuli": 2,
+    "exam_signal_ids": 0,
+    "semantic_pass": 0
+  },
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "previous_hash": "e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd",
+      "hash": "966b26066a12fab5cfc78c74b4eebe19018f42498b4e1fff2b3382040dffd6fd",
+      "prompt": "Calcula (42 − 42) ÷ 7 + (31 − 14). ¿Cuál es el resultado?",
+      "oracle": {
+        "key": "17",
+        "step": "0",
+        "wrong": [
+          "23",
+          "24",
+          "45"
+        ],
+        "mid": [
+          "-42",
+          "42",
+          "84"
+        ]
+      },
+      "semantic_status": "REVIEW",
+      "signatures": [
+        "calcula(42-42)/7+(31-14).¿cuáleselresultado?",
+        "expr|(42-42)/7+(31-14)",
+        "zero|42|42|7|31|14"
+      ],
+      "exam_matches": [],
+      "stimulus_unchanged": false,
+      "prior_screen_hash": "e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd",
+      "prior_screen_reusable": false
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "previous_hash": "36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9",
+      "hash": "3e08ef33b33ba3f3708bbbcf5d31f8e9c22304f60aa1fc53bcdc3c20925eacb3",
+      "prompt": "Calcula (60 − 60) ÷ 6 + (37 − 18). ¿Cuál es el resultado?",
+      "oracle": {
+        "key": "19",
+        "step": "0",
+        "wrong": [
+          "25",
+          "29",
+          "55"
+        ],
+        "mid": [
+          "-60",
+          "120",
+          "60"
+        ]
+      },
+      "semantic_status": "REVIEW",
+      "signatures": [
+        "calcula(60-60)/6+(37-18).¿cuáleselresultado?",
+        "expr|(60-60)/6+(37-18)",
+        "zero|60|60|6|37|18"
+      ],
+      "exam_matches": [],
+      "stimulus_unchanged": false,
+      "prior_screen_hash": "36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9",
+      "prior_screen_reusable": false
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+      "previous_hash": "56a42f81536dbe0240df6d6c429039347ba218732ea0ac12201ca5f574ec7d2d",
+      "hash": "b608920d86a65dbccc72be481b3e12aea61a01d03bdfc5c6c16f335ac033dac2",
+      "oracle": {
+        "target": {
+          "step": "3/11",
+          "aux": "7/11",
+          "key": "3/55"
+        },
+        "expectedClaims": {
+          "step": "3/11",
+          "aux": "-7/11",
+          "key": "15/11"
+        }
+      },
+      "assertions": [
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 3/11.",
+          "truth": true
+        },
+        {
+          "text": "La raíz cuadrada principal es -7/11.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 15/11.",
+          "truth": false
+        }
+      ],
+      "reasons": {
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 3/11.": "La raíz principal es 7/11. Con denominador 22, el paréntesis vale 3/11. Dividir por 5 equivale a multiplicar por 1/5; resulta (14−8)/(22×5)=3/55. El valor afirmado es 3/11; el correcto es 3/11.",
+        "La raíz cuadrada principal es -7/11.": "Se eligió la raíz negativa en lugar de la principal. La raíz principal es no negativa: 7/11; su cuadrado es 49/121. El valor afirmado es -7/11; el correcto es 7/11.",
+        "El resultado solicitado es 15/11.": "Se multiplicó por el divisor en lugar de dividir. El paréntesis vale 3/11; multiplicar por 5 da 15/11, pero dividir por 5 equivale a multiplicar por 1/5: 3/55."
+      },
+      "semantic_status": "REVIEW",
+      "prompt": "Calcula (√(49/121) − 8/22) ÷ 5. Expresa una fracción simplificada.",
+      "signatures": [
+        "calcula(√(49/121)-8/22)/5.expresaunafracciónsimplificada.",
+        "expr|(√(49/121)-8/22)/5"
+      ],
+      "exam_matches": [],
+      "stimulus_unchanged": true,
+      "prior_screen_hash": "56a42f81536dbe0240df6d6c429039347ba218732ea0ac12201ca5f574ec7d2d",
+      "prior_screen_reusable": true
+    }
+  ],
+  "limits": "Cribado acotado; sin equivalencia universal. Pendientes integración, auditor activo k7, manifiestos y adjudicación."
+}
