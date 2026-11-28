@@ -1,0 +1,1167 @@
+{
+  "scope": "MAT-ARIT-01",
+  "status": "SEMANTIC_PASS_CANDIDATE_LEDGER",
+  "criteria_revision": "7.9",
+  "policy_version": "8.0",
+  "summary": {
+    "prior_pass": 135,
+    "new_pass": 6,
+    "total_pass": 141,
+    "remaining": 309,
+    "remaining_r21": 46
+  },
+  "source_paths": [
+    "qa/certification/rdg/evidence/MAT-ARIT-01-R34-r21-review.json"
+  ],
+  "publication_evidence": {
+    "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+    "production_ci": 46103082832,
+    "production_ci_status": "SUCCESS",
+    "production_ci_job": 140849715301,
+    "browser_job": 140849715124,
+    "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+    "render_status": "LIVE_WHEN_OBSERVED",
+    "pr_ci": 46105334314,
+    "pr_ci_status": "SUCCESS",
+    "pr_job": 140856699797,
+    "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f",
+    "review_merged_sha": "38b2306171a9152571f49180b25d4259e055a415"
+  },
+  "records": [
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+      "content_hash": "5a40bd57b08647b04ad5de6d5f185b9f49315a085c3ec09a63c2079bbfde4a3a",
+      "previous_sha256": "01f920658c1166d4794ff83ca915a25e58b746db2f215b517ecda768ec4bdfde",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7, 54, 56; correspondencia cualitativa conservada de expediente previo",
+      "operation": "modificar-parentesis-y-factor",
+      "family_id": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (18+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "respuesta_esperada": "25",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción por estímulo y afirmaciones; contraste con oráculo R21 y CI R30 por hash",
+        "operands": [
+          18,
+          5,
+          2
+        ],
+        "value": 25,
+        "decisions": [
+          {
+            "kind": "step",
+            "given": 46,
+            "expected": 46,
+            "truth": true,
+            "variant": "original"
+          },
+          {
+            "kind": "auxiliary",
+            "given": 1,
+            "expected": 1,
+            "truth": true,
+            "variant": "factor"
+          },
+          {
+            "kind": "answer",
+            "given": 23,
+            "expected": 25,
+            "truth": false,
+            "variant": "answer"
+          }
+        ],
+        "links": [],
+        "source_ci": 46103082832,
+        "source_job": 140849715301
+      },
+      "oracle_status": "VERIFIED",
+      "assertion_decisions": [
+        {
+          "kind": "step",
+          "text": "Antes de modificar los datos, el valor de la expresión original es 46.",
+          "truth": true,
+          "given": 46,
+          "value": 46,
+          "reason": "Antes de los cambios los operandos conservan sus valores: (18+5)×2=46. El valor afirmado es 46; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 1.",
+          "truth": true,
+          "given": 1,
+          "value": 1,
+          "reason": "El factor disminuye una unidad: 2−1=1. El valor afirmado es 1; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 23.",
+          "truth": false,
+          "given": 23,
+          "value": 25,
+          "reason": "Primero aplica ambos cambios: 5+2=7 y 2−1=1. Luego (18+7)×1=25. El valor afirmado es 23; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        }
+      ],
+      "explicacion_verificada": "(18+5+2)×(2−1)=25×1=25",
+      "independence_signals": [],
+      "tuple_signals": [],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-02; (18+5+2)×(2−1)=25×1=25, contrastar tres afirmaciones sobre la operación."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(18+5+2)×(2−1)=25×1=25; step: 46 = 46 | auxiliary: 1 = 1 | answer: 23 ≠ 25; Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres decisiones verificables; cribado de relaciones directas sin señales. step: 46 = 46 | auxiliary: 1 = 1 | answer: 23 ≠ 25; Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado y condición explícitos: La expresión original es (18+5)×2. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Causas y respuesta reconstruidas; R21 UI comprobó los juicios por hash. step: 46 = 46 | auxiliary: 1 = 1 | answer: 23 ≠ 25; Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Intermedio: combinar dos cambios de los operandos (5→7 y 2→1) y comprobar el efecto. No equivalencia psicométrica."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (18+5+2)×(2−1)=25×1=25. Consolidación paramétrica, no equivalencia universal."
+        },
+        "H": {
+          "score": 3,
+          "reason": "R26 H por hash idéntico: botones nativos, foco, feedback textual, región viva y continuación. Alcance JSDOM, no validación física."
+        }
+      },
+      "semantic_status": "PASS_SEMANTIC",
+      "technical_status": "PASS",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [],
+      "promotion_candidate": true,
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "group|5|18|2",
+      "variation_justification": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (18+5+2)×(2−1)=25×1=25. Consolidación paramétrica, no equivalencia universal.",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46103082832/job/140849715301",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R34-r21-review.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46105334314/job/140856699797"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-2",
+        "hash": "5a40bd57b08647b04ad5de6d5f185b9f49315a085c3ec09a63c2079bbfde4a3a",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R34-visible-assertions",
+        "production_ci": 46103082832,
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "review_ci": 46105334314,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida por ID; sin aval docente",
+      "decision_basis": "Adjudicación individual R35: cálculo desde estímulo, revisión de las tres decisiones y causas, sin señales C/G en R34; conserva A–H y evidencia H de R26 por hash exacto. CI R34 SUCCESS; contenido publicado en R30, validación de unión de este PR requerida antes de fusionar.",
+      "evidence_level": "E1",
+      "publication_evidence": {
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "production_ci": 46103082832,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 140849715301,
+        "browser_job": 140849715124,
+        "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+        "render_status": "LIVE_WHEN_OBSERVED",
+        "pr_ci": 46105334314,
+        "pr_ci_status": "SUCCESS",
+        "pr_job": 140856699797,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f",
+        "review_merged_sha": "38b2306171a9152571f49180b25d4259e055a415"
+      },
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_DOCENTE_O_EMPIRICA"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+      "content_hash": "8be443b16fcba68711a3af73db0a216dd9185636553ea4cc1fc18ccbf87f4efa",
+      "previous_sha256": "6670de329bff92118aa310bdaa45a21c796f0e3ae90b88195b6636c5dc758d09",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7, 54, 56; correspondencia cualitativa conservada de expediente previo",
+      "operation": "modificar-parentesis-y-factor",
+      "family_id": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (19+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "respuesta_esperada": "174",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción por estímulo y afirmaciones; contraste con oráculo R21 y CI R30 por hash",
+        "operands": [
+          19,
+          8,
+          7
+        ],
+        "value": 174,
+        "decisions": [
+          {
+            "kind": "auxiliary",
+            "given": 8,
+            "expected": 6,
+            "truth": false,
+            "variant": "factor"
+          },
+          {
+            "kind": "answer",
+            "given": 162,
+            "expected": 174,
+            "truth": false,
+            "variant": "answer"
+          },
+          {
+            "kind": "step",
+            "given": 29,
+            "expected": 29,
+            "truth": true,
+            "variant": "modified-sum"
+          }
+        ],
+        "links": [],
+        "source_ci": 46103082832,
+        "source_job": 140849715301
+      },
+      "oracle_status": "VERIFIED",
+      "assertion_decisions": [
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 8.",
+          "truth": false,
+          "given": 8,
+          "value": 6,
+          "reason": "El factor disminuye una unidad: 7−1=6. El valor afirmado es 8; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 162.",
+          "truth": false,
+          "given": 162,
+          "value": 174,
+          "reason": "Primero aplica ambos cambios: 8+2=10 y 7−1=6. Luego (19+10)×6=174. El valor afirmado es 162; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 29.",
+          "truth": true,
+          "given": 29,
+          "value": 29,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 19+(8+2)=29. El valor afirmado es 29; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "explicacion_verificada": "(19+8+2)×(7−1)=29×6=174",
+      "independence_signals": [],
+      "tuple_signals": [],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-02; (19+8+2)×(7−1)=29×6=174, contrastar tres afirmaciones sobre la operación."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(19+8+2)×(7−1)=29×6=174; auxiliary: 8 ≠ 6; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo. | answer: 162 ≠ 174; Ese valor puede obtenerse si se omite aumentar el segundo sumando. | step: 29 = 29"
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres decisiones verificables; cribado de relaciones directas sin señales. auxiliary: 8 ≠ 6; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo. | answer: 162 ≠ 174; Ese valor puede obtenerse si se omite aumentar el segundo sumando. | step: 29 = 29"
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado y condición explícitos: La expresión original es (19+8)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Causas y respuesta reconstruidas; R21 UI comprobó los juicios por hash. auxiliary: 8 ≠ 6; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo. | answer: 162 ≠ 174; Ese valor puede obtenerse si se omite aumentar el segundo sumando. | step: 29 = 29"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Intermedio: combinar dos cambios de los operandos (8→10 y 7→6) y comprobar el efecto. No equivalencia psicométrica."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (19+8+2)×(7−1)=29×6=174. Consolidación paramétrica, no equivalencia universal."
+        },
+        "H": {
+          "score": 3,
+          "reason": "R26 H por hash idéntico: botones nativos, foco, feedback textual, región viva y continuación. Alcance JSDOM, no validación física."
+        }
+      },
+      "semantic_status": "PASS_SEMANTIC",
+      "technical_status": "PASS",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [],
+      "promotion_candidate": true,
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "group|8|19|7",
+      "variation_justification": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (19+8+2)×(7−1)=29×6=174. Consolidación paramétrica, no equivalencia universal.",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46103082832/job/140849715301",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R34-r21-review.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46105334314/job/140856699797"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-3",
+        "hash": "8be443b16fcba68711a3af73db0a216dd9185636553ea4cc1fc18ccbf87f4efa",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R34-visible-assertions",
+        "production_ci": 46103082832,
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "review_ci": 46105334314,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida por ID; sin aval docente",
+      "decision_basis": "Adjudicación individual R35: cálculo desde estímulo, revisión de las tres decisiones y causas, sin señales C/G en R34; conserva A–H y evidencia H de R26 por hash exacto. CI R34 SUCCESS; contenido publicado en R30, validación de unión de este PR requerida antes de fusionar.",
+      "evidence_level": "E1",
+      "publication_evidence": {
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "production_ci": 46103082832,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 140849715301,
+        "browser_job": 140849715124,
+        "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+        "render_status": "LIVE_WHEN_OBSERVED",
+        "pr_ci": 46105334314,
+        "pr_ci_status": "SUCCESS",
+        "pr_job": 140856699797,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f",
+        "review_merged_sha": "38b2306171a9152571f49180b25d4259e055a415"
+      },
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_DOCENTE_O_EMPIRICA"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+      "content_hash": "42c682438356474480c1cee80daf133b04405bcc31fd186795925e24217cfec8",
+      "previous_sha256": "a044697e674a1154ecd4976e6543ac0b3245dffd5690161200c546225b02199e",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7, 54, 56; correspondencia cualitativa conservada de expediente previo",
+      "operation": "modificar-parentesis-y-factor",
+      "family_id": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (20+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "respuesta_esperada": "132",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción por estímulo y afirmaciones; contraste con oráculo R21 y CI R30 por hash",
+        "operands": [
+          20,
+          11,
+          5
+        ],
+        "value": 132,
+        "decisions": [
+          {
+            "kind": "answer",
+            "given": 132,
+            "expected": 132,
+            "truth": true,
+            "variant": "answer"
+          },
+          {
+            "kind": "step",
+            "given": 31,
+            "expected": 33,
+            "truth": false,
+            "variant": "modified-sum"
+          },
+          {
+            "kind": "auxiliary",
+            "given": 6,
+            "expected": 4,
+            "truth": false,
+            "variant": "factor"
+          }
+        ],
+        "links": [],
+        "source_ci": 46103082832,
+        "source_job": 140849715301
+      },
+      "oracle_status": "VERIFIED",
+      "assertion_decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 132.",
+          "truth": true,
+          "given": 132,
+          "value": 132,
+          "reason": "Primero aplica ambos cambios: 11+2=13 y 5−1=4. Luego (20+13)×4=132. El valor afirmado es 132; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 31.",
+          "truth": false,
+          "given": 31,
+          "value": 33,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 20+(11+2)=33. El valor afirmado es 31; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 6.",
+          "truth": false,
+          "given": 6,
+          "value": 4,
+          "reason": "El factor disminuye una unidad: 5−1=4. El valor afirmado es 6; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        }
+      ],
+      "explicacion_verificada": "(20+11+2)×(5−1)=33×4=132",
+      "independence_signals": [],
+      "tuple_signals": [],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-02; (20+11+2)×(5−1)=33×4=132, contrastar tres afirmaciones sobre la operación."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(20+11+2)×(5−1)=33×4=132; answer: 132 = 132 | step: 31 ≠ 33; Ese valor puede obtenerse si se conserva el segundo sumando original. | auxiliary: 6 ≠ 4; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres decisiones verificables; cribado de relaciones directas sin señales. answer: 132 = 132 | step: 31 ≠ 33; Ese valor puede obtenerse si se conserva el segundo sumando original. | auxiliary: 6 ≠ 4; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado y condición explícitos: La expresión original es (20+11)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Causas y respuesta reconstruidas; R21 UI comprobó los juicios por hash. answer: 132 = 132 | step: 31 ≠ 33; Ese valor puede obtenerse si se conserva el segundo sumando original. | auxiliary: 6 ≠ 4; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Intermedio: combinar dos cambios de los operandos (11→13 y 5→4) y comprobar el efecto. No equivalencia psicométrica."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (20+11+2)×(5−1)=33×4=132. Consolidación paramétrica, no equivalencia universal."
+        },
+        "H": {
+          "score": 3,
+          "reason": "R26 H por hash idéntico: botones nativos, foco, feedback textual, región viva y continuación. Alcance JSDOM, no validación física."
+        }
+      },
+      "semantic_status": "PASS_SEMANTIC",
+      "technical_status": "PASS",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [],
+      "promotion_candidate": true,
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "group|11|20|5",
+      "variation_justification": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (20+11+2)×(5−1)=33×4=132. Consolidación paramétrica, no equivalencia universal.",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46103082832/job/140849715301",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R34-r21-review.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46105334314/job/140856699797"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-4",
+        "hash": "42c682438356474480c1cee80daf133b04405bcc31fd186795925e24217cfec8",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R34-visible-assertions",
+        "production_ci": 46103082832,
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "review_ci": 46105334314,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida por ID; sin aval docente",
+      "decision_basis": "Adjudicación individual R35: cálculo desde estímulo, revisión de las tres decisiones y causas, sin señales C/G en R34; conserva A–H y evidencia H de R26 por hash exacto. CI R34 SUCCESS; contenido publicado en R30, validación de unión de este PR requerida antes de fusionar.",
+      "evidence_level": "E1",
+      "publication_evidence": {
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "production_ci": 46103082832,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 140849715301,
+        "browser_job": 140849715124,
+        "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+        "render_status": "LIVE_WHEN_OBSERVED",
+        "pr_ci": 46105334314,
+        "pr_ci_status": "SUCCESS",
+        "pr_job": 140856699797,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f",
+        "review_merged_sha": "38b2306171a9152571f49180b25d4259e055a415"
+      },
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_DOCENTE_O_EMPIRICA"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+      "content_hash": "2a669cd2e82a421bb09523dab9b0a12e1cd44286031c62da8c2831def032833e",
+      "previous_sha256": "1e09f16b190834e4d02c13aca51286898cc8c464d3fb8c69cb929ef58a95ad52",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7, 54, 56; correspondencia cualitativa conservada de expediente previo",
+      "operation": "modificar-parentesis-y-factor",
+      "family_id": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (9+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "respuesta_esperada": "162",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción por estímulo y afirmaciones; contraste con oráculo R21 y CI R30 por hash",
+        "operands": [
+          9,
+          16,
+          7
+        ],
+        "value": 162,
+        "decisions": [
+          {
+            "kind": "answer",
+            "given": 162,
+            "expected": 162,
+            "truth": true,
+            "variant": "answer"
+          },
+          {
+            "kind": "step",
+            "given": 25,
+            "expected": 27,
+            "truth": false,
+            "variant": "modified-sum"
+          },
+          {
+            "kind": "auxiliary",
+            "given": 8,
+            "expected": 6,
+            "truth": false,
+            "variant": "factor"
+          }
+        ],
+        "links": [],
+        "source_ci": 46103082832,
+        "source_job": 140849715301
+      },
+      "oracle_status": "VERIFIED",
+      "assertion_decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 162.",
+          "truth": true,
+          "given": 162,
+          "value": 162,
+          "reason": "Primero aplica ambos cambios: 16+2=18 y 7−1=6. Luego (9+18)×6=162. El valor afirmado es 162; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 25.",
+          "truth": false,
+          "given": 25,
+          "value": 27,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 9+(16+2)=27. El valor afirmado es 25; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se conserva el segundo sumando original."
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 8.",
+          "truth": false,
+          "given": 8,
+          "value": 6,
+          "reason": "El factor disminuye una unidad: 7−1=6. El valor afirmado es 8; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        }
+      ],
+      "explicacion_verificada": "(9+16+2)×(7−1)=27×6=162",
+      "independence_signals": [],
+      "tuple_signals": [],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-02; (9+16+2)×(7−1)=27×6=162, contrastar tres afirmaciones sobre la operación."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(9+16+2)×(7−1)=27×6=162; answer: 162 = 162 | step: 25 ≠ 27; Ese valor puede obtenerse si se conserva el segundo sumando original. | auxiliary: 8 ≠ 6; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres decisiones verificables; cribado de relaciones directas sin señales. answer: 162 = 162 | step: 25 ≠ 27; Ese valor puede obtenerse si se conserva el segundo sumando original. | auxiliary: 8 ≠ 6; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado y condición explícitos: La expresión original es (9+16)×7. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Causas y respuesta reconstruidas; R21 UI comprobó los juicios por hash. answer: 162 = 162 | step: 25 ≠ 27; Ese valor puede obtenerse si se conserva el segundo sumando original. | auxiliary: 8 ≠ 6; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Intermedio: combinar dos cambios de los operandos (16→18 y 7→6) y comprobar el efecto. No equivalencia psicométrica."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (9+16+2)×(7−1)=27×6=162. Consolidación paramétrica, no equivalencia universal."
+        },
+        "H": {
+          "score": 3,
+          "reason": "R26 H por hash idéntico: botones nativos, foco, feedback textual, región viva y continuación. Alcance JSDOM, no validación física."
+        }
+      },
+      "semantic_status": "PASS_SEMANTIC",
+      "technical_status": "PASS",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [],
+      "promotion_candidate": true,
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "group|9|16|7",
+      "variation_justification": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (9+16+2)×(7−1)=27×6=162. Consolidación paramétrica, no equivalencia universal.",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46103082832/job/140849715301",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R34-r21-review.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46105334314/job/140856699797"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-10",
+        "hash": "2a669cd2e82a421bb09523dab9b0a12e1cd44286031c62da8c2831def032833e",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R34-visible-assertions",
+        "production_ci": 46103082832,
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "review_ci": 46105334314,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida por ID; sin aval docente",
+      "decision_basis": "Adjudicación individual R35: cálculo desde estímulo, revisión de las tres decisiones y causas, sin señales C/G en R34; conserva A–H y evidencia H de R26 por hash exacto. CI R34 SUCCESS; contenido publicado en R30, validación de unión de este PR requerida antes de fusionar.",
+      "evidence_level": "E1",
+      "publication_evidence": {
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "production_ci": 46103082832,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 140849715301,
+        "browser_job": 140849715124,
+        "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+        "render_status": "LIVE_WHEN_OBSERVED",
+        "pr_ci": 46105334314,
+        "pr_ci_status": "SUCCESS",
+        "pr_job": 140856699797,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f",
+        "review_merged_sha": "38b2306171a9152571f49180b25d4259e055a415"
+      },
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_DOCENTE_O_EMPIRICA"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+      "content_hash": "b50f1ab0f38fb3d2fe9edfe87e7103a2a263648e9594d8937c0bd6c7b0b1d72d",
+      "previous_sha256": "093012a648fcb097642ed640ae5b70ea429a0e5ee077f7dfe78b9487bdd5848b",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7, 54, 56; correspondencia cualitativa conservada de expediente previo",
+      "operation": "modificar-parentesis-y-factor",
+      "family_id": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (10+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "respuesta_esperada": "72",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción por estímulo y afirmaciones; contraste con oráculo R21 y CI R30 por hash",
+        "operands": [
+          10,
+          6,
+          5
+        ],
+        "value": 72,
+        "decisions": [
+          {
+            "kind": "step",
+            "given": 18,
+            "expected": 18,
+            "truth": true,
+            "variant": "modified-sum"
+          },
+          {
+            "kind": "auxiliary",
+            "given": 6,
+            "expected": 4,
+            "truth": false,
+            "variant": "factor"
+          },
+          {
+            "kind": "answer",
+            "given": 64,
+            "expected": 72,
+            "truth": false,
+            "variant": "answer"
+          }
+        ],
+        "links": [],
+        "source_ci": 46103082832,
+        "source_job": 140849715301
+      },
+      "oracle_status": "VERIFIED",
+      "assertion_decisions": [
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 18.",
+          "truth": true,
+          "given": 18,
+          "value": 18,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 10+(6+2)=18. El valor afirmado es 18; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 6.",
+          "truth": false,
+          "given": 6,
+          "value": 4,
+          "reason": "El factor disminuye una unidad: 5−1=4. El valor afirmado es 6; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo."
+        },
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 64.",
+          "truth": false,
+          "given": 64,
+          "value": 72,
+          "reason": "Primero aplica ambos cambios: 6+2=8 y 5−1=4. Luego (10+8)×4=72. El valor afirmado es 64; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        }
+      ],
+      "explicacion_verificada": "(10+6+2)×(5−1)=18×4=72",
+      "independence_signals": [],
+      "tuple_signals": [],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-02; (10+6+2)×(5−1)=18×4=72, contrastar tres afirmaciones sobre la operación."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(10+6+2)×(5−1)=18×4=72; step: 18 = 18 | auxiliary: 6 ≠ 4; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo. | answer: 64 ≠ 72; Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres decisiones verificables; cribado de relaciones directas sin señales. step: 18 = 18 | auxiliary: 6 ≠ 4; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo. | answer: 64 ≠ 72; Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado y condición explícitos: La expresión original es (10+6)×5. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Causas y respuesta reconstruidas; R21 UI comprobó los juicios por hash. step: 18 = 18 | auxiliary: 6 ≠ 4; Ese valor puede obtenerse si se aumenta el factor en vez de disminuirlo. | answer: 64 ≠ 72; Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Intermedio: combinar dos cambios de los operandos (6→8 y 5→4) y comprobar el efecto. No equivalencia psicométrica."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (10+6+2)×(5−1)=18×4=72. Consolidación paramétrica, no equivalencia universal."
+        },
+        "H": {
+          "score": 3,
+          "reason": "R26 H por hash idéntico: botones nativos, foco, feedback textual, región viva y continuación. Alcance JSDOM, no validación física."
+        }
+      },
+      "semantic_status": "PASS_SEMANTIC",
+      "technical_status": "PASS",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [],
+      "promotion_candidate": true,
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "group|6|10|5",
+      "variation_justification": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (10+6+2)×(5−1)=18×4=72. Consolidación paramétrica, no equivalencia universal.",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46103082832/job/140849715301",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R34-r21-review.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46105334314/job/140856699797"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-11",
+        "hash": "b50f1ab0f38fb3d2fe9edfe87e7103a2a263648e9594d8937c0bd6c7b0b1d72d",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R34-visible-assertions",
+        "production_ci": 46103082832,
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "review_ci": 46105334314,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida por ID; sin aval docente",
+      "decision_basis": "Adjudicación individual R35: cálculo desde estímulo, revisión de las tres decisiones y causas, sin señales C/G en R34; conserva A–H y evidencia H de R26 por hash exacto. CI R34 SUCCESS; contenido publicado en R30, validación de unión de este PR requerida antes de fusionar.",
+      "evidence_level": "E1",
+      "publication_evidence": {
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "production_ci": 46103082832,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 140849715301,
+        "browser_job": 140849715124,
+        "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+        "render_status": "LIVE_WHEN_OBSERVED",
+        "pr_ci": 46105334314,
+        "pr_ci_status": "SUCCESS",
+        "pr_job": 140856699797,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f",
+        "review_merged_sha": "38b2306171a9152571f49180b25d4259e055a415"
+      },
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_DOCENTE_O_EMPIRICA"
+      ]
+    },
+    {
+      "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+      "content_hash": "2b5475d620af5edfdf433596f6ac041b30a51e0483c1fc7f5d45ae18909a7e80",
+      "previous_sha256": "530a5f527b21d9c19d173587d277400cc5dd177e7e18f6b5a5c236bdf25b2ae6",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-02"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "p. física 7, 54, 56; correspondencia cualitativa conservada de expediente previo",
+      "operation": "modificar-parentesis-y-factor",
+      "family_id": "modificar-parentesis-y-factor",
+      "stimulus": "La expresión original es (12+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?",
+      "respuesta_esperada": "182",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción por estímulo y afirmaciones; contraste con oráculo R21 y CI R30 por hash",
+        "operands": [
+          12,
+          12,
+          8
+        ],
+        "value": 182,
+        "decisions": [
+          {
+            "kind": "answer",
+            "given": 168,
+            "expected": 182,
+            "truth": false,
+            "variant": "answer"
+          },
+          {
+            "kind": "step",
+            "given": 26,
+            "expected": 26,
+            "truth": true,
+            "variant": "modified-sum"
+          },
+          {
+            "kind": "auxiliary",
+            "given": 7,
+            "expected": 7,
+            "truth": true,
+            "variant": "factor"
+          }
+        ],
+        "links": [],
+        "source_ci": 46103082832,
+        "source_job": 140849715301
+      },
+      "oracle_status": "VERIFIED",
+      "assertion_decisions": [
+        {
+          "kind": "answer",
+          "text": "El valor de la expresión solicitada es 168.",
+          "truth": false,
+          "given": 168,
+          "value": 182,
+          "reason": "Primero aplica ambos cambios: 12+2=14 y 8−1=7. Luego (12+14)×7=182. El valor afirmado es 168; no coincide con el correcto.",
+          "cause": "Ese valor puede obtenerse si se omite aumentar el segundo sumando."
+        },
+        {
+          "kind": "step",
+          "text": "Después de los cambios, la suma dentro del paréntesis es 26.",
+          "truth": true,
+          "given": 26,
+          "value": 26,
+          "reason": "Se modifica el segundo sumando antes de evaluar: 12+(12+2)=26. El valor afirmado es 26; coincide con el correcto.",
+          "cause": null
+        },
+        {
+          "kind": "auxiliary",
+          "text": "El factor después del cambio es 7.",
+          "truth": true,
+          "given": 7,
+          "value": 7,
+          "reason": "El factor disminuye una unidad: 8−1=7. El valor afirmado es 7; coincide con el correcto.",
+          "cause": null
+        }
+      ],
+      "explicacion_verificada": "(12+12+2)×(8−1)=26×7=182",
+      "independence_signals": [],
+      "tuple_signals": [],
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-02; (12+12+2)×(8−1)=26×7=182, contrastar tres afirmaciones sobre la operación."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(12+12+2)×(8−1)=26×7=182; answer: 168 ≠ 182; Ese valor puede obtenerse si se omite aumentar el segundo sumando. | step: 26 = 26 | auxiliary: 7 = 7"
+        },
+        "C": {
+          "score": 3,
+          "reason": "Tres decisiones verificables; cribado de relaciones directas sin señales. answer: 168 ≠ 182; Ese valor puede obtenerse si se omite aumentar el segundo sumando. | step: 26 = 26 | auxiliary: 7 = 7"
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado y condición explícitos: La expresión original es (12+12)×8. Si el segundo sumando aumenta 2 y el factor exterior disminuye 1, ¿cuánto vale la expresión modificada?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Causas y respuesta reconstruidas; R21 UI comprobó los juicios por hash. answer: 168 ≠ 182; Ese valor puede obtenerse si se omite aumentar el segundo sumando. | step: 26 = 26 | auxiliary: 7 = 7"
+        },
+        "F": {
+          "score": 3,
+          "reason": "Intermedio: combinar dos cambios de los operandos (12→14 y 8→7) y comprobar el efecto. No equivalencia psicométrica."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (12+12+2)×(8−1)=26×7=182. Consolidación paramétrica, no equivalencia universal."
+        },
+        "H": {
+          "score": 3,
+          "reason": "R26 H por hash idéntico: botones nativos, foco, feedback textual, región viva y continuación. Alcance JSDOM, no validación física."
+        }
+      },
+      "semantic_status": "PASS_SEMANTIC",
+      "technical_status": "PASS",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [],
+      "promotion_candidate": true,
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "group|12|12|8",
+      "variation_justification": "Sin señales de estímulo, examen, Repaso o tupla en R26 del mismo hash. 17/50 en su celda; límite observado 3/10; (12+12+2)×(8−1)=26×7=182. Consolidación paramétrica, no equivalencia universal.",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R26-exam-g-h-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R18-review.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46103082832/job/140849715301",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R34-r21-review.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46105334314/job/140856699797"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m1-aritmetica-operaciones-clasificar-intermedio-13",
+        "hash": "2b5475d620af5edfdf433596f6ac041b30a51e0483c1fc7f5d45ae18909a7e80",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R34-visible-assertions",
+        "production_ci": 46103082832,
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "review_ci": 46105334314,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida por ID; sin aval docente",
+      "decision_basis": "Adjudicación individual R35: cálculo desde estímulo, revisión de las tres decisiones y causas, sin señales C/G en R34; conserva A–H y evidencia H de R26 por hash exacto. CI R34 SUCCESS; contenido publicado en R30, validación de unión de este PR requerida antes de fusionar.",
+      "evidence_level": "E1",
+      "publication_evidence": {
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "production_ci": 46103082832,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 140849715301,
+        "browser_job": 140849715124,
+        "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+        "render_status": "LIVE_WHEN_OBSERVED",
+        "pr_ci": 46105334314,
+        "pr_ci_status": "SUCCESS",
+        "pr_job": 140856699797,
+        "review_head": "6bfe48863f043bf58532c178e80dd34378b2d89f",
+        "review_merged_sha": "38b2306171a9152571f49180b25d4259e055a415"
+      },
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_DOCENTE_O_EMPIRICA"
+      ]
+    }
+  ],
+  "limits": "Candidato de unión: no fusionar sin CI SUCCESS. No cambia banco; R34 conserva 4 básicos, 11 intermedios y 31 avanzados en REVIEW. C09 pendiente; sin aval docente ni empírico."
+}
