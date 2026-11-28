@@ -46,5 +46,21 @@ class StemOverlapTests(unittest.TestCase):
                 self.assertIsNone(g['observed_min_seconds'])
                 self.assertFalse(g['reuse_authorized'])
 
+    def test_shared_obligation_is_not_second_execution(self):
+        r = fixture()
+        r['version'] = 2
+        alias = r['stages'][1]
+        alias.update(shared_execution_from='regresion_suite_existente', seconds=0)
+        del alias['stdout'], alias['stderr']
+        result = inspect(r, SHA)
+        self.assertEqual(result['groups'][0]['decision'], 'CONSOLIDATED')
+        self.assertEqual(result['groups'][0]['actual_successful_executions'], 1)
+        self.assertEqual(result['shared_obligations'], 1)
+        self.assertEqual(result['saved_seconds'], 0)
+        self.assertFalse(result['groups'][0]['reuse_authorized'])
+        alias['shared_execution_from']='mutacion_critica'
+        with self.assertRaises(ValueError):
+            inspect(r, SHA)
+
 if __name__ == '__main__':
     unittest.main()

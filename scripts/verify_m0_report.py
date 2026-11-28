@@ -2,6 +2,7 @@
 """Verifica de forma independiente el resultado del runner; no certifica pedagogía."""
 import argparse
 import json
+import math
 import subprocess
 from pathlib import Path
 
@@ -38,6 +39,31 @@ def inspect(report, sha):
             problems.append('FAIL con código cero: '+str(name))
         if stage.get('status')=='NOT_APPLICABLE' and not stage.get('reason'):
             problems.append('N/A sin justificación: '+str(name))
+    shared = [s for s in by.values() if 'shared_execution_from' in s]
+    for stage in shared:
+        name = stage.get('name')
+        origin = by.get(stage.get('shared_execution_from'), {})
+        # One allowed same-report pair, not a generic trust mechanism.
+        valid = (report.get('version') == 2
+                 and name == 'regresion_y_funcional'
+                 and stage.get('shared_execution_from') == 'regresion_suite_existente'
+                 and stage.get('command') == origin.get('command') == ['bun','run','test']
+                 and stage.get('required') is True and origin.get('required') is True
+                 and 'shared_execution_from' not in origin
+                 and stage.get('status') == origin.get('status') in ('PASS', 'FAIL')
+                 and stage.get('exit_code') == origin.get('exit_code')
+                 and stage.get('seconds') == 0
+                 and 'stdout' not in stage and 'stderr' not in stage
+                 and stages.index(origin) + 1 == stages.index(stage))
+        if valid and stage['status'] == 'PASS':
+            seconds = origin.get('seconds')
+            valid = (type(origin.get('exit_code')) is int and origin['exit_code'] == 0
+                     and type(seconds) in (int, float) and math.isfinite(seconds) and seconds >= 0
+                     and isinstance(origin.get('stdout'), str) and isinstance(origin.get('stderr'), str))
+        if not valid:
+            problems.append('ejecución compartida inválida: '+str(name))
+    if report.get('version') == 2 and len(shared) != 1:
+        problems.append('informe v2 requiere una referencia de regresión explícita')
     missing=REQUIRED-set(by)
     if missing:problems.append('etapas ausentes: '+', '.join(sorted(missing)))
     if report.get('module')!='M0':problems.append('módulo incorrecto')
@@ -55,6 +81,8 @@ def inspect(report, sha):
             'missing':sorted(missing),'problems':problems,
             'pass':sum(s.get('status')=='PASS' for s in by.values()),
             'not_run':sum(s.get('status')=='NOT_RUN' for s in by.values()),
+            'shared_obligations':len(shared),
+            'executed_pass':sum(s.get('status')=='PASS' and 'shared_execution_from' not in s for s in by.values()),
             'fail':sum(s.get('status')=='FAIL' for s in by.values())}
 
 def main():
