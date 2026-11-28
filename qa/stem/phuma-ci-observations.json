@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "scope": "five successful production push runs; observed step durations in seconds from Actions job API",
+  "repository": "c2melendez/desafio-gramatical",
+  "runner_blob": "d7b2495dba989c1f71a339f7628302ee3b581055",
+  "observations": [
+    {
+      "run_id": 46101229251,
+      "head_sha": "e68fc9a04de728f388173bcd8d336aacd5a745f7",
+      "workflow_blob": "fa25b3b56894bfffcb3bb91e829cf72aef9f6ccb",
+      "verify_job": 140843891460,
+      "browser_job": 140843891213,
+      "conclusion": "success",
+      "seconds": {
+        "install": 1,
+        "build": 3,
+        "vitest": 47,
+        "m0": 101,
+        "browser_build": 5,
+        "browser_checks": 56
+      }
+    },
+    {
+      "run_id": 46101969479,
+      "head_sha": "ab3feefcff7718e839fe0177359608d44ce06792",
+      "workflow_blob": "8898e7c36ca8986359897f94153641a8142b959b",
+      "verify_job": 140846201173,
+      "browser_job": 140846201483,
+      "conclusion": "success",
+      "seconds": {
+        "install": 1,
+        "build": 4,
+        "vitest": 51,
+        "m0": 109,
+        "browser_build": 5,
+        "browser_checks": 55
+      }
+    },
+    {
+      "run_id": 46103082832,
+      "head_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+      "workflow_blob": "8898e7c36ca8986359897f94153641a8142b959b",
+      "verify_job": 140849715301,
+      "browser_job": 140849715124,
+      "conclusion": "success",
+      "seconds": {
+        "install": 2,
+        "build": 6,
+        "vitest": 82,
+        "m0": 180,
+        "browser_build": 5,
+        "browser_checks": 54
+      }
+    },
+    {
+      "run_id": 46105150906,
+      "head_sha": "61b0bb91a566e9e6834c77fc21579e727495d0d1",
+      "workflow_blob": "8898e7c36ca8986359897f94153641a8142b959b",
+      "verify_job": 140856122074,
+      "browser_job": 140856121763,
+      "conclusion": "success",
+      "seconds": {
+        "install": 1,
+        "build": 4,
+        "vitest": 51,
+        "m0": 112,
+        "browser_build": 6,
+        "browser_checks": 53
+      }
+    },
+    {
+      "run_id": 46105167349,
+      "head_sha": "2b598941155aa3af1805e8cb0d4f43aa0364d9c3",
+      "workflow_blob": "8898e7c36ca8986359897f94153641a8142b959b",
+      "verify_job": 140856173007,
+      "browser_job": 140856173193,
+      "conclusion": "success",
+      "seconds": {
+        "install": 2,
+        "build": 5,
+        "vitest": 82,
+        "m0": 178,
+        "browser_build": 6,
+        "browser_checks": 60
+      }
+    }
+  ],
+  "limitations": "M0 aggregate includes two Vitest invocations and other controls. No per-stage historical durations or equivalence asserted. No savings achieved."
+}
