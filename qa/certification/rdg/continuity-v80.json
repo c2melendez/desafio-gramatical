@@ -1,7 +1,7 @@
 {
   "policy_version": "8.0",
   "criteria_revision": "7.9",
-  "observed_base_sha": "2b598941155aa3af1805e8cb0d4f43aa0364d9c3",
+  "observed_base_sha": "bc654b24f001c7c1a1d2dc8b56495367a21f85b9",
   "fronts": [
     {
       "block_id": "MAT-ARIT-01",
@@ -29,12 +29,13 @@
         "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
         "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json",
         "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-R33-pass.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R33-pass.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R35-pass.json"
       ],
-      "registered_pass": 135,
+      "registered_pass": 141,
       "selected": 450,
-      "remaining": 315,
-      "next_action": "R33: consolidar 10 PASS con CI de unión; 4 básicos retenidos por independencia; revisar 48 R21 restantes; C09 pendiente."
+      "remaining": 309,
+      "next_action": "R35: CI de unión de seis intermedios; reparar 46 R21 restantes (4 básicos, 11 intermedios, 31 avanzados); C09 pendiente."
     },
     {
       "block_id": "ESPANOL-01",
@@ -61,5 +62,5 @@
       "next_action": "Complete external calibration and validate candidate, no public navigation."
     }
   ],
-  "notes": "R30 contenido CI SUCCESS y Render LIVE comprobados. Ledger R33 candidato hasta CI de unión. Cursor histórico conservado."
+  "notes": "R34 CI SUCCESS; R35 candidato de unión; C09 pendiente. Cursor histórico conservado."
 }
