@@ -1,7 +1,7 @@
 {
   "policy_version": "8.0",
   "criteria_revision": "7.9",
-  "observed_base_sha": "a9e042cfa4857ba475a81cba05b6dd26ee8fc131",
+  "observed_base_sha": "2b598941155aa3af1805e8cb0d4f43aa0364d9c3",
   "fronts": [
     {
       "block_id": "MAT-ARIT-01",
@@ -28,12 +28,13 @@
         "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
         "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
         "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json",
-        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json"
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R33-pass.json"
       ],
-      "registered_pass": 125,
+      "registered_pass": 139,
       "selected": 450,
-      "remaining": 325,
-      "next_action": "R30: verificar integración selectiva de 62 sucesores R21/R28 y preservar 125 PASS; adjudicar individualmente A–H tras CI/Render; C09 pendiente."
+      "remaining": 311,
+      "next_action": "R33: consolidar 14 PASS con CI de unión; revisar 17 R21 intermedios y 31 avanzados; C09 pendiente."
     },
     {
       "block_id": "ESPANOL-01",
@@ -60,5 +61,5 @@
       "next_action": "Complete external calibration and validate candidate, no public navigation."
     }
   ],
-  "notes": "Checkpoint references existing ledgers, not a second bank. Counts are derived from selected IDs and records; not new decisions. Preserve historical cursor. CI/Render of integrated SHA still must be observed."
+  "notes": "R30 contenido CI SUCCESS y Render LIVE comprobados. Ledger R33 candidato hasta CI de unión. Cursor histórico conservado."
 }

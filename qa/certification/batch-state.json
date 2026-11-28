@@ -75,7 +75,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R30: verificar integración selectiva de 62 sucesores R21/R28 y preservar 125 PASS; adjudicar individualmente A–H tras CI/Render; C09 pendiente.",
+    "next_action": "R33: consolidar 14 PASS con CI de unión; revisar 17 R21 intermedios y 31 avanzados; C09 pendiente.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -133,7 +133,7 @@
     ],
     "selection_total": 450,
     "examined_semantic_ids": 450,
-    "semantic_pass_ids": 125,
+    "semantic_pass_ids": 139,
     "review_ids": 59,
     "review_evidence": [
       "qa/certification/rdg/evidence/MAT-ARIT-01-01-OP04-review.json",
@@ -569,7 +569,8 @@
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
       "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json",
-      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json"
+      "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json",
+      "qa/certification/rdg/evidence/MAT-ARIT-01-R33-pass.json"
     ],
     "r17_selection_paths": [
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R17.json",
@@ -775,8 +776,8 @@
     },
     "v79_individual_accounting": {
       "total": 450,
-      "pass": 125,
-      "not_pass": 325,
+      "pass": 139,
+      "not_pass": 311,
       "source": "union unique PASS_SEMANTIC IDs from v79_semantic_pass_paths; historical counters retained separately",
       "teacher_approved": 0,
       "empirical_evaluated": 0
@@ -903,6 +904,27 @@
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
-    ]
+    ],
+    "r33_revision": {
+      "status": "SEMANTIC_PASS_CANDIDATE_LEDGER",
+      "pass_path": "qa/certification/rdg/evidence/MAT-ARIT-01-R33-pass.json",
+      "new_pass": 14,
+      "prior_pass": 125,
+      "remaining": 311,
+      "publication_evidence": {
+        "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+        "production_ci": 46103082832,
+        "production_ci_status": "SUCCESS",
+        "production_ci_job": 140849715301,
+        "browser_job": 140849715124,
+        "render_deploy": "dep-dc54l4bbc2fs73ahev30",
+        "render_status": "LIVE_WHEN_OBSERVED"
+      },
+      "review_ci": [
+        46103216584,
+        46103294878
+      ],
+      "remaining_r21": 48
+    }
   }
 }

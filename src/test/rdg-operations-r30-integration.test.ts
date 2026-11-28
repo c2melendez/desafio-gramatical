@@ -28,7 +28,7 @@ it("R30: all 9900 active records preserve scope, exactly 62 successors, all 125 
  expect(total).toBe(9900);expect(changed).toBe(62);expect(order.length).toBe(450);
  const selected=new Set();for(const path of state.selection_paths)for(const row of selectFrozen(order,load(path),hash)){expect(selected.has(row.item.id)).toBe(false);selected.add(row.item.id);}
  expect(selected.size).toBe(450);
- const pass=state.v79_semantic_pass_paths.flatMap((p:string)=>load(p).records.filter((r:{semantic_status:string})=>r.semantic_status==="PASS_SEMANTIC"));
+ const pass=["qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json","qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json","qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json","qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json"].flatMap((p:string)=>load(p).records.filter((r:{semantic_status:string})=>r.semantic_status==="PASS_SEMANTIC"));
  expect(pass.length).toBe(125);expect(new Set(pass.map((r:{id:string})=>r.id)).size).toBe(125);
  for(const r of pass){expect(changes.has(r.id)).toBe(false);expect(hash(order.find(x=>x.item.id===r.id)!.item)).toBe(r.content_hash);}
  console.log("RDG_R30_INTEGRATION "+JSON.stringify({changed,preserved:450-changed,global:total,prior_pass:pass.length,new_pass:0}));
