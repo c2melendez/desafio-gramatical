@@ -280,6 +280,13 @@
             "channel": "web",
             "results_reviewed": 0,
             "finding": "Sin muestra específica verificable de simulacro/video en los resultados inspeccionados."
+          },
+          {
+            "query": "recursos didácticos idea principal tema y detalles comprensión lectora secundaria",
+            "date": "2026-11-27",
+            "channel": "web",
+            "results_reviewed": 3,
+            "finding": "INTEF página completa; Andalucía 503 y secundariaenlinea 502; no atribuir consulta completa a resultados indexados."
           }
         ],
         "resources": [
