@@ -89,13 +89,14 @@ export function prioritizePending(index, repairGroups){
   const repair=repairs.get(entry.id);
   let action=entry.queue==='EVIDENCIA_VIGENTE'?'PRESERVAR_EVIDENCIA':entry.queue==='REVALIDACION'?'REVALIDAR':'REVISION_ORDINARIA';
   if(repair&&entry.queue!=='EVIDENCIA_VIGENTE'){
-   action=entry.queue==='REVISION_SEMANTICA'&&entry.content_sha256===repair.previous_sha256&&entry.live_content_sha256===repair.previous_sha256
+   if(repair.kind==='CANDIDATE_REPAIR'&&entry.queue==='REVISION_SEMANTICA'&&entry.content_sha256===repair.candidate_sha256&&entry.live_content_sha256===repair.candidate_sha256)action='ADJUDICAR_SUCESOR';
+   else action=entry.queue==='REVISION_SEMANTICA'&&entry.content_sha256===repair.previous_sha256&&entry.live_content_sha256===repair.previous_sha256
       ?repair.kind==='CANDIDATE_REPAIR'?'RECONCILIAR_CANDIDATO':'RESOLVER_BLOQUEO'
       :'REVALIDAR';
   }
   return {id:entry.id,content_sha256:entry.content_sha256,manifest:entry.manifest,action,repair:repair??null};
  });
- const counts=Object.fromEntries(['PRESERVAR_EVIDENCIA','REVALIDAR','RECONCILIAR_CANDIDATO','RESOLVER_BLOQUEO','REVISION_ORDINARIA'].map(action=>[action,entries.filter(e=>e.action===action).length]));
+ const counts=Object.fromEntries(['PRESERVAR_EVIDENCIA','REVALIDAR','RECONCILIAR_CANDIDATO','RESOLVER_BLOQUEO','ADJUDICAR_SUCESOR','REVISION_ORDINARIA'].map(action=>[action,entries.filter(e=>e.action===action).length]));
  return {counts,entries,new_pass:0,publication_authorized:false};
 }
 export function loadRepairGroups(front,read=path=>readFileSync(path)){
@@ -108,10 +109,14 @@ export function loadRepairGroups(front,read=path=>readFileSync(path)){
  need(candidate.records.length===candidate.summary.changed&&candidate.records.every(r=>r.semantic_status==='REVIEW'),'unexpected R21 records');
  need(review.scope===front.block_id&&front.ledger_paths.includes(reviewPath),'R27 ledger not registered');
  const blockers=review.records.filter(r=>r.semantic_status==='REVIEW');
+ const r28Path='qa/certification/rdg/evidence/MAT-ARIT-01-R28-exam-screen.json';
+ const r28=JSON.parse(read(r28Path));
+ need(r28.scope===front.block_id&&r28.status==='CANDIDATE_SCREEN_REVIEW'&&r28.summary.semantic_pass===0&&r28.records.length===blockers.length,'unexpected R28 screen');
+ for(const r of r28.records)need(blockers.some(b=>b.id===r.id&&b.content_hash===r.previous_hash)&&r.semantic_status==='REVIEW','R28 predecessor does not match blocker');
  need(blockers.every(r=>Array.isArray(r.reason_codes)&&r.reason_codes.length>0),'review record without blocker');
  return [
   {source:candidatePath,kind:'CANDIDATE_REPAIR',records:candidate.records.map(r=>({id:r.id,previous_sha256:r.previous_sha256,candidate_sha256:r.content_sha256}))},
-  {source:reviewPath,kind:'KNOWN_REVIEW_BLOCKER',records:blockers.map(r=>({id:r.id,previous_sha256:r.content_hash,reason_codes:r.reason_codes}))}
+  {source:r28Path,kind:'CANDIDATE_REPAIR',records:r28.records.map(r=>({id:r.id,previous_sha256:r.previous_hash,candidate_sha256:r.hash,reason_codes:blockers.find(b=>b.id===r.id).reason_codes}))}
  ];
 }
 

@@ -14,14 +14,14 @@
       "rdg_status": "RDG_READY",
       "contract_path": "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
       "selection_paths": [
-        "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
-        "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20-R30.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20-R30.json",
         "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
-        "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26-R30.json",
         "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R26.json",
-        "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26.json",
-        "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26.json",
-        "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26-R30.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26-R30.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20-R30.json",
         "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
       ],
       "ledger_paths": [
@@ -33,7 +33,7 @@
       "registered_pass": 125,
       "selected": 450,
       "remaining": 325,
-      "next_action": "Reconcile R28 and R21; C09 and production evidence pending."
+      "next_action": "R30: verificar integración selectiva de 62 sucesores R21/R28 y preservar 125 PASS; adjudicar individualmente A–H tras CI/Render; C09 pendiente."
     },
     {
       "block_id": "ESPANOL-01",

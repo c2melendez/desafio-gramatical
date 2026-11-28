@@ -75,7 +75,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "v8.0: R29 integrado (125 PASS); verificar CI/Render del SHA de integración. Reconciliar R28 y R21 sin alterar los PASS; C09 pendiente. Completar P0 y G-REPASO de Idea principal y Célula con motor compartido candidato.",
+    "next_action": "R30: verificar integración selectiva de 62 sucesores R21/R28 y preservar 125 PASS; adjudicar individualmente A–H tras CI/Render; C09 pendiente.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -121,14 +121,14 @@
       "limits": "No evaluación docente, empírica, lector de pantalla o dispositivo físico. R04 bidireccional completa y expediente individual en P2."
     },
     "selection_paths": [
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20-R30.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20-R30.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26-R30.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R26.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26.json",
-      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26-R30.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26-R30.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20-R30.json",
       "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
     ],
     "selection_total": 450,
@@ -892,6 +892,17 @@
         "observed_at": "2026-11-27"
       }
     },
-    "v80_checkpoint_path": "qa/certification/rdg/continuity-v80.json"
+    "v80_checkpoint_path": "qa/certification/rdg/continuity-v80.json",
+    "r26_selection_paths": [
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+      "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+    ]
   }
 }

@@ -2,7 +2,7 @@ import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
 import {expect,it} from "vitest";
 import {MATH_LEVELS,MATH_MODES} from "@/lib/math-m1";
-import {mathM3Pool} from "@/lib/math-m3";
+import {mathM3R26Pool as mathM3Pool} from "@/lib/math-m3";
 const load=(p:string)=>JSON.parse(readFileSync(p,"utf8"));
 const hash=(x:unknown)=>createHash("sha256").update(JSON.stringify(x)).digest("hex");
 const data=load("qa/certification/rdg/evidence/MAT-ARIT-01-R27-individual-review.json");

@@ -1,5 +1,7 @@
 import {repairOperationR22Candidate} from "./math-operations-r22-candidate";
 import {repairOperationR23Candidate} from "./math-operations-r23-candidate";
+import {repairOperationRootR28Candidate} from "./math-operations-root-r28-candidate";
+import {repairOperationZeroR28Candidate} from "./math-operations-zero-r28-candidate";
 import type {Level,Mode} from "./grammar";
 import {MATH_LEVELS,MATH_MODES,MATH_SUBTOPICS,MATH_LEVEL_COUNT,MATH_TOPICS,mathModel,type MathModel} from "./math-m1";
 import {mathM2Pool,MATH_M2_LEVEL_COUNT} from "./math-m2";
@@ -115,7 +117,12 @@ export function mathM3R21CandidatePool(topic:string,subtopic:string,level:Level,
  return mathM3R19Pool(topic,subtopic,level,mode).map(repairOperationClassificationR21Candidate);
 }
 
-/** R26: activate only 30 R22/R23 successors after reviewed preflight; R21 stays separate. */
-export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+/** Historical R26, preserved for evidence. */
+export function mathM3R26Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
  return mathM3R20Pool(topic,subtopic,level,mode).map(repairOperationR22Candidate).map(repairOperationR23Candidate);
+}
+
+/** R30: combine the disjoint R21, R26 and R28 successors. */
+export function mathM3Pool(topic:string,subtopic:string,level:Level,mode:Mode):MathModel[]{
+ return mathM3R21CandidatePool(topic,subtopic,level,mode).map(repairOperationR22Candidate).map(repairOperationR23Candidate).map(repairOperationZeroR28Candidate).map(repairOperationRootR28Candidate);
 }

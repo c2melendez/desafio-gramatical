@@ -28,8 +28,12 @@ test('repair candidate consumes only matching pending predecessor, never PASS',(
  const result=prioritizePending(indexEvidence(fixture()),repair([{id:'y',previous_sha256:other,candidate_sha256:h}]));
  assert.equal(result.counts.PRESERVAR_EVIDENCIA,1);assert.equal(result.counts.RECONCILIAR_CANDIDATO,1);assert.equal(result.counts.REVISION_ORDINARIA,0);assert.equal(result.new_pass,0);assert.equal(result.publication_authorized,false);
 });
-test('stale repair predecessor is routed to revalidation',()=>{
+test('exact integrated successor goes to individual adjudication, not PASS',()=>{
  const result=prioritizePending(indexEvidence(fixture()),repair([{id:'y',previous_sha256:h,candidate_sha256:other}]));
+ assert.equal(result.counts.ADJUDICAR_SUCESOR,1);assert.equal(result.counts.REVALIDAR,0);assert.equal(result.new_pass,0);
+});
+test('stale repair predecessor is routed to revalidation',()=>{
+ const result=prioritizePending(indexEvidence(fixture()),repair([{id:'y',previous_sha256:h,candidate_sha256:'c'.repeat(64)}]));
  assert.equal(result.counts.REVALIDAR,1);assert.equal(result.counts.RECONCILIAR_CANDIDATO,0);
 });
 test('known blocker does not enter ordinary review',()=>{
@@ -57,6 +61,7 @@ test('real repository index and preserved legacy continuity',async()=>{
  const queue=prioritizePending(result,loadRepairGroups(f));
  assert.equal(Object.values(queue.counts).reduce((a,b)=>a+b,0),result.counts.selected);
  assert.equal(queue.counts.PRESERVAR_EVIDENCIA,result.counts.reusable);
+ assert.equal(queue.counts.ADJUDICAR_SUCESOR,62);assert.equal(queue.counts.REVALIDAR,0);assert.equal(queue.counts.PRESERVAR_EVIDENCIA,125);assert.equal(queue.counts.REVISION_ORDINARIA,263);
  assert.equal(queue.new_pass,0);assert.equal(queue.publication_authorized,false);
  assert.ok(queue.entries.every(e=>e.action!=='REVISION_ORDINARIA'||e.repair===null));
  console.log('RDG_STEM05_QUEUE '+JSON.stringify(queue.counts));
