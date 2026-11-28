@@ -61,7 +61,10 @@ test('real repository index and preserved legacy continuity',async()=>{
  const queue=prioritizePending(result,loadRepairGroups(f));
  assert.equal(Object.values(queue.counts).reduce((a,b)=>a+b,0),result.counts.selected);
  assert.equal(queue.counts.PRESERVAR_EVIDENCIA,result.counts.reusable);
- assert.equal(queue.counts.ADJUDICAR_SUCESOR,62);assert.equal(queue.counts.REVALIDAR,0);assert.equal(queue.counts.PRESERVAR_EVIDENCIA,125);assert.equal(queue.counts.REVISION_ORDINARIA,263);
+ // R30 introduced 62 successors; current PASS may consume those repairs.
+ const repairs=new Set(loadRepairGroups(f).flatMap(g=>g.records.map(r=>r.id)));
+ const resolved=result.entries.filter(e=>repairs.has(e.id)&&e.queue==='EVIDENCIA_VIGENTE').length;
+ assert.equal(repairs.size,62);assert.equal(queue.counts.ADJUDICAR_SUCESOR,62-resolved);assert.equal(queue.counts.REVALIDAR,0);assert.equal(queue.counts.PRESERVAR_EVIDENCIA,f.registered_pass);assert.equal(queue.counts.REVISION_ORDINARIA,450-f.registered_pass-(62-resolved));
  assert.equal(queue.new_pass,0);assert.equal(queue.publication_authorized,false);
  assert.ok(queue.entries.every(e=>e.action!=='REVISION_ORDINARIA'||e.repair===null));
  console.log('RDG_STEM05_QUEUE '+JSON.stringify(queue.counts));
