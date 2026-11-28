@@ -26,7 +26,7 @@ function independentOracle(kind,values){
  case "Operaciones-diversidad":{const [a,b,c,d,stage]=x;switch(stage){case 1:return ratio(a/b*c-d);case 2:return ratio((a-c)*(b+d));case 3:return ratio(c*(a-b)-c*a);case 4:return ratio(-a+b-c);case 5:return ratio(a+b*c);case 6:return ratio(a*b-c*d);case 7:return ratio(2*a-c);case 8:return ratio(a*b-a*c+d*b-d*c);case 9:return ratio(a*b-a*c-d*b-d*c);default:throw Error("Operaciones-diversidad: familia no reconocida");} }
  case "Operaciones-decision":{const [a,b,c,d,e,k]=x;switch(k){case 1:return ratio(a*d+e-a*b-c);case 2:return ratio(2*a-c,2*b*d);default:throw Error("R15 familia desconocida");}}
  case "Operaciones-avanzadas":{const [a,b,c,d,e,k]=x;switch(k){case 1:return ratio(a*(b+d)-a*(b-c));case 2:return ratio((a*(b+c)-a*b)/d);case 3:return ratio(2*a-2*c+d,2*b);case 4:return ratio(2*a-c+d,b);default:throw Error("R14 familia desconocida");}}
- case "Operaciones-contraste":{const [a,b,c,d,e,k]=x;switch(k){case 1:return ratio(c-a*b);case 2:return ratio(c);case 3:return ratio((a+b+d)*(c-e)-(a+b)*c);case 4:return ratio((b+c)/a);case 5:return ratio(a*(b-c)-b*(a-d));case 6:return ratio((a-b)*(c+d)-e);default:throw Error("R13 familia desconocida");}}
+ case "Operaciones-contraste":{const [a,b,c,d,e,k]=x;switch(k){case 1:return ratio(c-a*b);case 2:return ratio(c);case 3:return ratio((a+b+d)*(c-e)-(a+b)*c);case 4:return ratio((b+c)/a);case 5:return ratio(a*(b-c)-b*(a-d));case 6:return ratio((a-b)*(c+d)-e);case 7:if(b===0||e!==0)throw Error("R28 dominio");return ratio((a-a)/b+c-d);default:throw Error("R13 familia desconocida");}}
  case "Operaciones-transferencia":{const [a,b,c,d,e,k]=x;switch(k){case 1:return ratio(a-(-b)-c);case 2:return ratio(a/(b+c));case 3:return ratio(a-b*c-d);case 4:return ratio(a-b*c+d);case 5:return ratio(a*b-(a-c)*b);case 6:return ratio(a-(b-c*(d-e)));default:throw Error("R12 familia desconocida");}}
  case "Operaciones-mixtas":{const [p,a,b,c,d,e,stage]=x;return stage===2?ratio(p+a*b-c):ratio(a-p*b+(c-d)/e);}
  case "Operaciones-racionales":{const [p,d,n,m,stage]=x;return stage===3?ratio(2*p+4*n-m,2*d):ratio(p+n-m,d);}
@@ -80,6 +80,7 @@ for(const topic of MATH_TOPICS)for(const subtopic of topic.subtopics)
   const signature=mathStimulusSignature(item);
   if(localKeys.has(signature))issues.push(cell+": duplicate stimulus "+item.id);
   localKeys.add(signature);
+  if(item.oracle.kind==="Operaciones-contraste"&&item.oracle.inputs[5]===7&&(!["math-m2-aritmetica-operaciones-quiz-principiante-9","math-m2-aritmetica-operaciones-construir-principiante-8"].includes(item.id)||subtopic!=="Operaciones"||level!=="principiante"||mode==="clasificar"))issues.push(cell+": R28 oracle outside exact scope "+item.id);
   const oracle=item.oracle.kind==="Operaciones-inversa-r22"?operationInverseR22FromPrompt(item.prompt):independentOracle(item.oracle.kind,item.oracle.inputs);
   if(item.oracle.kind==="Operaciones-inversa-r22"&&(subtopic!=="Operaciones"||level!=="avanzado"||mode==="clasificar"||!inverseOps.has(item.operation)||!/^math-m2-aritmetica-operaciones-(quiz|construir)-avanzado-(0|1|2|3|4|5|9|10|11)$/.test(item.id)))issues.push(cell+": inverse oracle outside exact R22 scope "+item.id);
   if(!eq(item.oracle.answer,oracle)||!eq(item.oracle.answer,(()=>{const p=item.expected.split("/").map(Number);return ratio(p[0],p[1]??1)})()))
