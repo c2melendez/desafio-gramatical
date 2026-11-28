@@ -11,8 +11,8 @@ it("R35: six individually adjudicated intermedios, visible arithmetic, immutable
  const path="qa/certification/rdg/evidence/MAT-ARIT-01-R35-pass.json",l=load(path),s=load("qa/certification/batch-state.json").rdg_continuity,source=load(l.source_paths[0]);
  const bank=MATH_LEVELS.flatMap(level=>MATH_MODES.flatMap(mode=>mathM3Pool("Aritmética","Operaciones",level,mode)));
  const contract=load(s.rdg_contract_path);
- const eligible=source.records.filter((r:any)=>r.nivel==="intermedio"&&Object.values(r.rubric).every((v:any)=>v.score>=3));
- expect(eligible).toHaveLength(6);expect(l.records.map((r:any)=>r.id)).toEqual(eligible.map((r:any)=>r.id));
+ const eligible=source.records.filter((r:{nivel:string;rubric:Record<string,{score:number}>})=>r.nivel==="intermedio"&&Object.values(r.rubric).every((v:{score:number})=>v.score>=3));
+ expect(eligible).toHaveLength(6);expect(l.records.map((r:{id:string})=>r.id)).toEqual(eligible.map((r:{id:string})=>r.id));
  const values=[25,174,132,162,72,182];
  for(const [i,r] of l.records.entries()){
   const x=bank.find(v=>v.id===r.id);if(!x)throw Error("missing ID");
@@ -37,8 +37,8 @@ it("R35: six individually adjudicated intermedios, visible arithmetic, immutable
   expect(r.publication_evidence.pr_ci).toBe(46105334314);
   expect(r.publication_evidence.published_sha).toBe("eedcce7aa754645c79d661294744c90d0932f06f");
  }
- const all=s.v79_semantic_pass_paths.flatMap((p:string)=>load(p).records.filter((r:any)=>r.semantic_status==="PASS_SEMANTIC"));
- expect(all.length).toBeGreaterThanOrEqual(141);expect(new Set(all.map((r:any)=>r.id)).size).toBe(all.length);
+ const all=s.v79_semantic_pass_paths.flatMap((p:string)=>load(p).records.filter((r:{semantic_status:string})=>r.semantic_status==="PASS_SEMANTIC"));
+ expect(all.length).toBeGreaterThanOrEqual(141);expect(new Set(all.map((r:{id:string})=>r.id)).size).toBe(all.length);
  expect(s.semantic_pass_ids).toBe(all.length);
  for(const r of all)expect(hash(bank.find(x=>x.id===r.id))).toBe(r.content_hash);
  console.log("RDG_R35_CONSOLIDATION "+JSON.stringify({new_pass:6,total:all.length,remaining:450-all.length}));
