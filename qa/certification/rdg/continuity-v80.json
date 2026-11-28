@@ -31,10 +31,10 @@
         "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json",
         "qa/certification/rdg/evidence/MAT-ARIT-01-R33-pass.json"
       ],
-      "registered_pass": 139,
+      "registered_pass": 135,
       "selected": 450,
-      "remaining": 311,
-      "next_action": "R33: consolidar 14 PASS con CI de unión; revisar 17 R21 intermedios y 31 avanzados; C09 pendiente."
+      "remaining": 315,
+      "next_action": "R33: consolidar 10 PASS con CI de unión; 4 básicos retenidos por independencia; revisar 48 R21 restantes; C09 pendiente."
     },
     {
       "block_id": "ESPANOL-01",

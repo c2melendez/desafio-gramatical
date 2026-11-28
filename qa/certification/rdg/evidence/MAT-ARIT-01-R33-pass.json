@@ -5,9 +5,10 @@
   "policy_version": "8.0",
   "summary": {
     "prior_pass": 125,
-    "new_pass": 14,
-    "total_pass": 139,
-    "remaining": 311
+    "new_pass": 10,
+    "total_pass": 135,
+    "remaining": 315,
+    "held": 4
   },
   "source_paths": [
     "qa/certification/rdg/evidence/MAT-ARIT-01-R31-r28-review.json",
@@ -752,8 +753,8 @@
           "reason": "Valores independientes: suma 6+14=20, parcial 6×6=36, resultado 120. auxiliary: 84 ≠ 36. Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero. answer: 120 = 120. step: 20 = 20."
         },
         "C": {
-          "score": 3,
-          "reason": "Tres subdecisiones evaluables con operaciones explícitas y máscara variable. auxiliary: 84 ≠ 36. Ese valor puede obtenerse si se calcula el producto del segundo sumando, no del primero. answer: 120 = 120. step: 20 = 20. Cada falsedad tiene operación de origen distinta; no depende de saber cuántas afirmaciones son verdaderas."
+          "score": 2,
+          "reason": "Los valores afirmados admiten equivalencia directa con los operandos visibles: STEP_ANSWER. Riesgo de deducir un juicio a partir de otro; revisar independencia diagnóstica antes de promover."
         },
         "D": {
           "score": 3,
@@ -776,12 +777,14 @@
           "reason": "H individual R26 por el mismo hash: tres decisiones, botones nativos, foco, feedback textual, aria-live y continuación. JSDOM, sin evaluación física ni lector de pantalla."
         }
       },
-      "semantic_status": "PASS_SEMANTIC",
+      "semantic_status": "REVIEW",
       "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
-      "reason_codes": [],
-      "promotion_candidate": true,
+      "reason_codes": [
+        "C_TRIVIAL_EQUIVALENCE_SIGNAL"
+      ],
+      "promotion_candidate": false,
       "criteria_revision": "7.9",
       "policy_version": "8.0",
       "variation_class": "CONSOLIDACION_PARAMETRICA",
@@ -826,7 +829,7 @@
         "CRIBADO_LIMITADO",
         "SIN_EVALUACION_FISICA_DOCENTE_O_EMPIRICA"
       ],
-      "decision_basis": "Revisión individual A–H, prueba activa por ID/hash y publicación del contenido R30 con CI SUCCESS/Render LIVE; no acreditación docente o empírica.",
+      "decision_basis": "REVIEW: C=2 por dependencia lógica detectada tras CI R32.",
       "evidence_level": "E1",
       "publication_evidence": {
         "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
@@ -841,7 +844,10 @@
         "pr_job": 140850353369,
         "review_head": "8548610d2f050cc57ea63886b1d6973cb9cf21af",
         "review_merged_sha": "2b598941155aa3af1805e8cb0d4f43aa0364d9c3"
-      }
+      },
+      "independence_signals": [
+        "STEP_ANSWER"
+      ]
     },
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-2",
@@ -920,8 +926,8 @@
           "reason": "Valores independientes: suma 7+4=11, parcial 7×4=28, resultado 44. answer: 44 = 44. step: 11 = 11. auxiliary: 28 = 28."
         },
         "C": {
-          "score": 3,
-          "reason": "Tres subdecisiones evaluables con operaciones explícitas y máscara variable. answer: 44 = 44. step: 11 = 11. auxiliary: 28 = 28. Cada falsedad tiene operación de origen distinta; no depende de saber cuántas afirmaciones son verdaderas."
+          "score": 2,
+          "reason": "Los valores afirmados admiten equivalencia directa con los operandos visibles: STEP_ANSWER, AUX_ANSWER, STEP_AUX. Riesgo de deducir un juicio a partir de otro; revisar independencia diagnóstica antes de promover."
         },
         "D": {
           "score": 3,
@@ -944,12 +950,14 @@
           "reason": "H individual R26 por el mismo hash: tres decisiones, botones nativos, foco, feedback textual, aria-live y continuación. JSDOM, sin evaluación física ni lector de pantalla."
         }
       },
-      "semantic_status": "PASS_SEMANTIC",
+      "semantic_status": "REVIEW",
       "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
-      "reason_codes": [],
-      "promotion_candidate": true,
+      "reason_codes": [
+        "C_TRIVIAL_EQUIVALENCE_SIGNAL"
+      ],
+      "promotion_candidate": false,
       "criteria_revision": "7.9",
       "policy_version": "8.0",
       "variation_class": "CONSOLIDACION_PARAMETRICA",
@@ -994,7 +1002,7 @@
         "CRIBADO_LIMITADO",
         "SIN_EVALUACION_FISICA_DOCENTE_O_EMPIRICA"
       ],
-      "decision_basis": "Revisión individual A–H, prueba activa por ID/hash y publicación del contenido R30 con CI SUCCESS/Render LIVE; no acreditación docente o empírica.",
+      "decision_basis": "REVIEW: C=2 por dependencia lógica detectada tras CI R32.",
       "evidence_level": "E1",
       "publication_evidence": {
         "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
@@ -1009,7 +1017,12 @@
         "pr_job": 140850353369,
         "review_head": "8548610d2f050cc57ea63886b1d6973cb9cf21af",
         "review_merged_sha": "2b598941155aa3af1805e8cb0d4f43aa0364d9c3"
-      }
+      },
+      "independence_signals": [
+        "STEP_ANSWER",
+        "AUX_ANSWER",
+        "STEP_AUX"
+      ]
     },
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-3",
@@ -1256,8 +1269,8 @@
           "reason": "Valores independientes: suma 9+10=19, parcial 9×7=63, resultado 133. auxiliary: 63 = 63. answer: 133 = 133. step: -1 ≠ 19. Ese valor puede obtenerse si se resta el segundo sumando al primero."
         },
         "C": {
-          "score": 3,
-          "reason": "Tres subdecisiones evaluables con operaciones explícitas y máscara variable. auxiliary: 63 = 63. answer: 133 = 133. step: -1 ≠ 19. Ese valor puede obtenerse si se resta el segundo sumando al primero. Cada falsedad tiene operación de origen distinta; no depende de saber cuántas afirmaciones son verdaderas."
+          "score": 2,
+          "reason": "Los valores afirmados admiten equivalencia directa con los operandos visibles: AUX_ANSWER. Riesgo de deducir un juicio a partir de otro; revisar independencia diagnóstica antes de promover."
         },
         "D": {
           "score": 3,
@@ -1280,12 +1293,14 @@
           "reason": "H individual R26 por el mismo hash: tres decisiones, botones nativos, foco, feedback textual, aria-live y continuación. JSDOM, sin evaluación física ni lector de pantalla."
         }
       },
-      "semantic_status": "PASS_SEMANTIC",
+      "semantic_status": "REVIEW",
       "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
-      "reason_codes": [],
-      "promotion_candidate": true,
+      "reason_codes": [
+        "C_TRIVIAL_EQUIVALENCE_SIGNAL"
+      ],
+      "promotion_candidate": false,
       "criteria_revision": "7.9",
       "policy_version": "8.0",
       "variation_class": "CONSOLIDACION_PARAMETRICA",
@@ -1330,7 +1345,7 @@
         "CRIBADO_LIMITADO",
         "SIN_EVALUACION_FISICA_DOCENTE_O_EMPIRICA"
       ],
-      "decision_basis": "Revisión individual A–H, prueba activa por ID/hash y publicación del contenido R30 con CI SUCCESS/Render LIVE; no acreditación docente o empírica.",
+      "decision_basis": "REVIEW: C=2 por dependencia lógica detectada tras CI R32.",
       "evidence_level": "E1",
       "publication_evidence": {
         "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
@@ -1345,7 +1360,10 @@
         "pr_job": 140850353369,
         "review_head": "8548610d2f050cc57ea63886b1d6973cb9cf21af",
         "review_merged_sha": "2b598941155aa3af1805e8cb0d4f43aa0364d9c3"
-      }
+      },
+      "independence_signals": [
+        "AUX_ANSWER"
+      ]
     },
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-5",
@@ -1760,8 +1778,8 @@
           "reason": "Valores independientes: suma 12+6=18, parcial 12×8=96, resultado 144. auxiliary: 96 = 96. answer: 60 ≠ 144. Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 12+6×8. step: 18 = 18."
         },
         "C": {
-          "score": 3,
-          "reason": "Tres subdecisiones evaluables con operaciones explícitas y máscara variable. auxiliary: 96 = 96. answer: 60 ≠ 144. Ese valor puede obtenerse si se multiplica antes de resolver el paréntesis: 12+6×8. step: 18 = 18. Cada falsedad tiene operación de origen distinta; no depende de saber cuántas afirmaciones son verdaderas."
+          "score": 2,
+          "reason": "Los valores afirmados admiten equivalencia directa con los operandos visibles: STEP_AUX. Riesgo de deducir un juicio a partir de otro; revisar independencia diagnóstica antes de promover."
         },
         "D": {
           "score": 3,
@@ -1784,12 +1802,14 @@
           "reason": "H individual R26 por el mismo hash: tres decisiones, botones nativos, foco, feedback textual, aria-live y continuación. JSDOM, sin evaluación física ni lector de pantalla."
         }
       },
-      "semantic_status": "PASS_SEMANTIC",
+      "semantic_status": "REVIEW",
       "technical_status": "PASS",
       "teacher_status": "PENDING",
       "empirical_status": "NOT_RUN",
-      "reason_codes": [],
-      "promotion_candidate": true,
+      "reason_codes": [
+        "C_TRIVIAL_EQUIVALENCE_SIGNAL"
+      ],
+      "promotion_candidate": false,
       "criteria_revision": "7.9",
       "policy_version": "8.0",
       "variation_class": "CONSOLIDACION_PARAMETRICA",
@@ -1834,7 +1854,7 @@
         "CRIBADO_LIMITADO",
         "SIN_EVALUACION_FISICA_DOCENTE_O_EMPIRICA"
       ],
-      "decision_basis": "Revisión individual A–H, prueba activa por ID/hash y publicación del contenido R30 con CI SUCCESS/Render LIVE; no acreditación docente o empírica.",
+      "decision_basis": "REVIEW: C=2 por dependencia lógica detectada tras CI R32.",
       "evidence_level": "E1",
       "publication_evidence": {
         "published_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
@@ -1849,7 +1869,10 @@
         "pr_job": 140850353369,
         "review_head": "8548610d2f050cc57ea63886b1d6973cb9cf21af",
         "review_merged_sha": "2b598941155aa3af1805e8cb0d4f43aa0364d9c3"
-      }
+      },
+      "independence_signals": [
+        "STEP_AUX"
+      ]
     },
     {
       "id": "math-m1-aritmetica-operaciones-clasificar-principiante-8",
@@ -2356,5 +2379,5 @@
       }
     }
   ],
-  "limits": "El contenido evaluado está publicado en R30. Las fichas R31/R32 históricas se preservan. C09 pendiente; aval docente y empírico no otorgados."
+  "limits": "El contenido evaluado está publicado en R30. Las fichas R31/R32 históricas se preservan. C09 pendiente; aval docente y empírico no otorgados. Revisión adicional: cuatro básicos R21 retenidos por equivalencias algebraicas; no se promueven."
 }
