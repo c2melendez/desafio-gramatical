@@ -38,5 +38,46 @@ class IndependentReportTests(unittest.TestCase):
         r=report();r['stages'][0]['status']='NOT_APPLICABLE'
         self.assertEqual(inspect(r,SHA)['integrity'],'FAIL')
 
+    def shared_report(self):
+        r=report()
+        r['version']=2
+        r['stages']=[s for s in r['stages'] if s['name'] not in ('regresion_suite_existente','regresion_y_funcional')]
+        r['stages'] += [
+            {'name':'regresion_suite_existente','required':True,'status':'PASS','command':['bun','run','test'],'exit_code':0,'seconds':72.6,'stdout':'tests passed','stderr':''},
+            {'name':'regresion_y_funcional','required':True,'status':'PASS','command':['bun','run','test'],'exit_code':0,'seconds':0,'shared_execution_from':'regresion_suite_existente'},
+        ]
+        return r
+
+    def test_shared_pair_covers_31_obligations_with_30_executed_pass(self):
+        result=inspect(self.shared_report(),SHA)
+        self.assertTrue(result['closure_ready'], result)
+        self.assertEqual(result['pass'],31)
+        self.assertEqual(result['executed_pass'],30)
+        self.assertEqual(result['shared_obligations'],1)
+
+    def test_shared_pair_rejects_missing_or_false_origin(self):
+        for variant in ('chain','wrong_command','missing_output','false_green','moved','wrong_version','fake_output','no_alias','missing_origin'):
+            r=self.shared_report()
+            origin, alias=r['stages'][-2:]
+            if variant=='chain': origin['shared_execution_from']='build'
+            elif variant=='wrong_command': alias['command']=['true']
+            elif variant=='missing_output': del origin['stdout']
+            elif variant=='false_green': origin.update(status='FAIL',exit_code=7)
+            elif variant=='moved': r['stages'].insert(0,r['stages'].pop())
+            elif variant=='wrong_version': r['version']=1
+            elif variant=='fake_output': alias['stdout']='invented'
+            elif variant=='no_alias': del alias['shared_execution_from']
+            elif variant=='missing_origin': r['stages'].remove(origin)
+            with self.subTest(variant=variant):
+                self.assertFalse(inspect(r,SHA)['closure_ready'])
+
+    def test_shared_failure_never_closes(self):
+        r=self.shared_report()
+        for s in r['stages'][-2:]: s.update(status='FAIL',exit_code=7)
+        r['status']='FAIL'
+        result=inspect(r,SHA)
+        self.assertEqual(result['integrity'],'PASS')
+        self.assertFalse(result['closure_ready'])
+
 if __name__=='__main__':
     unittest.main()
