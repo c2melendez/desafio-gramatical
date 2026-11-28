@@ -63,6 +63,14 @@ jobs:
           python3 qa/certification/verify_sources.py
           node --import ./scripts/ts-resolve.mjs --test qa/certification/test-select-frozen.mjs qa/certification/rdg/test-validate.mjs qa/certification/rdg/test-incremental-index.mjs
           python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py' -v
+          node --import ./scripts/ts-resolve.mjs qa/certification/rdg/incremental-index.mjs > qa-rdg-work-queue.json
+      - name: STEM-05 - conservar cola incremental por ID y hash
+        uses: actions/upload-artifact@v4
+        with:
+          name: phuma-rdg-incremental-work-queue
+          path: qa-rdg-work-queue.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Diagnóstico técnico legado - auditar hasta 450 registros sin certificación semántica
         if: ${{ !cancelled() && steps.install_cert_deps.outcome == 'success' }}
         run: |

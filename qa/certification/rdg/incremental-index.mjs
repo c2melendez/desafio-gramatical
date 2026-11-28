@@ -70,10 +70,55 @@ export async function loadFront(front,read=path=>readFileSync(path),inventory=li
  for(const {data} of manifests){const embedded=assertRdgContract(data);need(data.block_id===front.block_id&&embedded.block_id===contract.block_id&&embedded.revision===contract.revision,'selection/contract revision mismatch');for(const [path,digest] of Object.entries(dependencies))need(embedded.dependency_hashes?.[path]===digest,'selection/contract dependency mismatch');}
  return indexEvidence({scope:front.scope,manifests,ledgers:front.ledger_paths.map(path=>({path,data:load(path)})),dependencies,currentDependencies,currentItems:await inventory(front.scope)});
 }
+// Operational queue, not an adjudicator. Existing repair evidence takes priority
+// over ordinary review; an old predecessor must never authorize a new hash.
+export function prioritizePending(index, repairGroups){
+ const byId=new Map(index.entries.map(entry=>[entry.id,entry]));
+ need(byId.size===index.entries.length,'duplicate indexed ID');
+ const repairs=new Map();
+ for(const group of repairGroups){
+  need(typeof group.source==='string'&&group.source.length>0&&['CANDIDATE_REPAIR','KNOWN_REVIEW_BLOCKER'].includes(group.kind),'invalid repair group');
+  for(const record of group.records){
+   need(byId.has(record.id)&&hex(record.previous_sha256),'unknown repair ID or invalid predecessor');
+   need(!repairs.has(record.id),'duplicate repair ID: '+record.id);
+   if(group.kind==='CANDIDATE_REPAIR')need(hex(record.candidate_sha256)&&record.candidate_sha256!==record.previous_sha256,'invalid candidate successor');
+   repairs.set(record.id,{kind:group.kind,source:group.source,...record});
+  }
+ }
+ const entries=index.entries.map(entry=>{
+  const repair=repairs.get(entry.id);
+  let action=entry.queue==='EVIDENCIA_VIGENTE'?'PRESERVAR_EVIDENCIA':entry.queue==='REVALIDACION'?'REVALIDAR':'REVISION_ORDINARIA';
+  if(repair&&entry.queue!=='EVIDENCIA_VIGENTE'){
+   action=entry.queue==='REVISION_SEMANTICA'&&entry.content_sha256===repair.previous_sha256&&entry.live_content_sha256===repair.previous_sha256
+      ?repair.kind==='CANDIDATE_REPAIR'?'RECONCILIAR_CANDIDATO':'RESOLVER_BLOQUEO'
+      :'REVALIDAR';
+  }
+  return {id:entry.id,content_sha256:entry.content_sha256,manifest:entry.manifest,action,repair:repair??null};
+ });
+ const counts=Object.fromEntries(['PRESERVAR_EVIDENCIA','REVALIDAR','RECONCILIAR_CANDIDATO','RESOLVER_BLOQUEO','REVISION_ORDINARIA'].map(action=>[action,entries.filter(e=>e.action===action).length]));
+ return {counts,entries,new_pass:0,publication_authorized:false};
+}
+export function loadRepairGroups(front,read=path=>readFileSync(path)){
+ // Explicit current pilot only; other fronts need their own repair inventory.
+ if(front.block_id!=='MAT-ARIT-01')return [];
+ const candidatePath='qa/certification/rdg/evidence/MAT-ARIT-01-R21-candidate-successors.json';
+ const reviewPath='qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json';
+ const candidate=JSON.parse(read(candidatePath)),review=JSON.parse(read(reviewPath));
+ need(candidate.scope===front.block_id&&candidate.status==='CANDIDATE_CI_SUCCESS_NOT_ACTIVE'&&candidate.summary.semantic_pass===0,'unexpected R21 evidence scope/status');
+ need(candidate.records.length===candidate.summary.changed&&candidate.records.every(r=>r.semantic_status==='REVIEW'),'unexpected R21 records');
+ need(review.scope===front.block_id&&front.ledger_paths.includes(reviewPath),'R27 ledger not registered');
+ const blockers=review.records.filter(r=>r.semantic_status==='REVIEW');
+ need(blockers.every(r=>Array.isArray(r.reason_codes)&&r.reason_codes.length>0),'review record without blocker');
+ return [
+  {source:candidatePath,kind:'CANDIDATE_REPAIR',records:candidate.records.map(r=>({id:r.id,previous_sha256:r.previous_sha256,candidate_sha256:r.content_sha256}))},
+  {source:reviewPath,kind:'KNOWN_REVIEW_BLOCKER',records:blockers.map(r=>({id:r.id,previous_sha256:r.content_hash,reason_codes:r.reason_codes}))}
+ ];
+}
+
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
  try{
   const checkpoint=JSON.parse(readFileSync('qa/certification/rdg/continuity-v80.json','utf8'));
-  const result=await Promise.all(checkpoint.fronts.filter(f=>f.phase==='P2').map(async f=>({block_id:f.block_id,...await loadFront(f)})));
+  const result=await Promise.all(checkpoint.fronts.filter(f=>f.phase==='P2').map(async f=>{const index=await loadFront(f);return {block_id:f.block_id,...index,work_queue:prioritizePending(index,loadRepairGroups(f))};}));
   console.log(JSON.stringify({scope:'existing evidence index; no new adjudication',fronts:result},null,2));
  }catch(e){console.error(e.message);process.exitCode=1;}
 }
