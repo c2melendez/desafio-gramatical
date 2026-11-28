@@ -22,6 +22,18 @@ def run_stage(name, command):
     except (OSError, subprocess.TimeoutExpired) as exc:
         return {"name": name, "required": True, "status": "FAIL", "command": command, "error": str(exc)}
 
+def run_regression_pair():
+    # Both obligations execute the same complete Vitest command. Evaluate them
+    # at one explicit checkpoint after build and the intervening audits.
+    # No historical cache, no cross-job reuse, no second execution claim.
+    origin = run_stage('regresion_suite_existente', ['bun','run','test'])
+    alias = {"name": "regresion_y_funcional", "required": True,
+             "status": origin["status"], "command": list(origin["command"]),
+             "shared_execution_from": origin["name"], "seconds": 0}
+    if "exit_code" in origin:
+        alias["exit_code"] = origin["exit_code"]
+    return [origin, alias]
+
 def acceptable(stages):
     return bool(stages) and all(s.get("status") == "PASS" for s in stages if s.get("required")) and any(s.get("required") for s in stages)
 
@@ -49,13 +61,12 @@ def main():
         run_stage('familias', ['node','scripts/check-family-evidence.mjs']),
         run_stage('cuarentena', ['node','scripts/test-quarantine.mjs']),
         run_stage('build', ['bun','run','build']),
-        run_stage('regresion_suite_existente', ['bun','run','test']),
         run_stage('lint', ['bunx','eslint','.','--rule','prettier/prettier: off']),
         run_stage('auditoria_contenido_existente', ['bun','run','audit:content']),
         run_stage('contratos_lock_negativos', ['python3','-m','unittest','discover','-s','scripts','-p','test_check_m0_contract_lock.py']),
         run_stage('estado_y_contratos', ['python3','scripts/check_m0_contract_lock.py']),
         run_stage('inventario_por_item_y_calidad', ['node','--import','./scripts/ts-resolve.mjs','scripts/test-audit-m0-baseline-quality.mjs']),
-        run_stage('regresion_y_funcional', ['bun','run','test']),
+        *run_regression_pair(),
         run_stage('mutacion_critica', ['node','--import','./scripts/ts-resolve.mjs','scripts/test-m0-critical-mutations.mjs']),
         run_stage('seguridad_estatica_cliente', ['node','scripts/security-client-audit.mjs']),
         run_stage('privacidad_estatica_negativos', ['node','scripts/privacy-m0-static.mjs','--test']),
@@ -68,7 +79,7 @@ def main():
     try:
         revision = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
         changed = bool(subprocess.check_output(['git','status','--porcelain','--untracked-files=all'],cwd=ROOT,text=True).strip())
-        report = {"version":1, "module":args.module, "area":args.area, "phase":args.phase, "revision":revision, "arbol_modificado":changed,
+        report = {"version":2, "module":args.module, "area":args.area, "phase":args.phase, "revision":revision, "arbol_modificado":changed,
                   "fecha_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
                   "status":"PASS" if acceptable(stages) else "FAIL", "stages":stages}
         with open(args.output,'x',encoding='utf-8') as out:

@@ -29,6 +29,7 @@ def inspect(report, sha):
             raise ValueError('etapa inválida o duplicada')
         by_name[s['name']] = s
     groups = defaultdict(list)
+    shared_count = 0
     for name, command in STAGES.items():
         stage = by_name.get(name)
         if not stage or stage.get('required') is not True or stage.get('command') != command:
@@ -38,24 +39,42 @@ def inspect(report, sha):
         executed = (stage.get('status') == 'PASS' and type(stage.get('exit_code')) is int
                     and stage['exit_code'] == 0 and valid_seconds
                     and isinstance(stage.get('stdout'), str) and isinstance(stage.get('stderr'), str))
+        shared_from = stage.get('shared_execution_from')
+        if shared_from is not None:
+            origin = by_name.get(shared_from, {})
+            if (report.get('version') != 2 or name != 'regresion_y_funcional'
+                    or shared_from != 'regresion_suite_existente'
+                    or origin.get('command') != command
+                    or 'shared_execution_from' in origin
+                    or stage.get('status') != origin.get('status')
+                    or stage.get('exit_code') != origin.get('exit_code')
+                    or seconds != 0 or 'stdout' in stage or 'stderr' in stage):
+                raise ValueError('referencia compartida inválida')
+            shared_count += 1
+            executed = False
         groups[tuple(command)].append({
             'stage': name, 'status': stage.get('status'), 'exit_code': stage.get('exit_code'),
             'observed_seconds': seconds if valid_seconds else None,
             'execution_complete': executed,
+            'shared_execution_from': shared_from,
             'stdout_tail_sha256': hashlib.sha256(stage['stdout'].encode()).hexdigest() if isinstance(stage.get('stdout'), str) else None,
         })
     results = []
     for command, calls in groups.items():
         complete = all(c['execution_complete'] for c in calls)
+        consolidated = (len(calls) == 2 and calls[0]['execution_complete']
+                        and calls[1]['shared_execution_from'] == calls[0]['stage']
+                        and calls[1]['status'] == 'PASS')
         results.append({
             'command': list(command), 'calls': calls,
-            'decision': 'REVIEW' if complete else 'DIAGNOSE',
+            'decision': 'CONSOLIDATED' if consolidated else 'REVIEW' if complete else 'DIAGNOSE',
             'observed_min_seconds': min(c['observed_seconds'] for c in calls) if complete else None,
             'reuse_authorized': False,
+            'actual_successful_executions': sum(c['execution_complete'] for c in calls),
         })
     return {'schema_version': 1, 'checkout_sha': sha, 'scope': 'M0-nested-commands',
             'tree_modified': report.get('arbol_modificado'), 'groups': results,
-            'saved_seconds': 0, 'limitations': 'Command equality and log tails do not establish input/environment or semantic equivalence. Outer CI and browser jobs remain independent.'}
+            'shared_obligations': shared_count, 'saved_seconds': 0, 'limitations': 'Command equality and log tails do not establish input/environment or semantic equivalence. Outer CI and browser jobs remain independent.'}
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
