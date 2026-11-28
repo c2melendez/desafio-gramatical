@@ -61,7 +61,7 @@ jobs:
       - name: v7.8.1 - verificar integridad de PDF originales y guard G-ACTION
         run: |
           python3 qa/certification/verify_sources.py
-          node --test qa/certification/test-select-frozen.mjs qa/certification/rdg/test-validate.mjs
+          node --import ./scripts/ts-resolve.mjs --test qa/certification/test-select-frozen.mjs qa/certification/rdg/test-validate.mjs qa/certification/rdg/test-incremental-index.mjs
           python3 -m unittest discover -s qa/certification -p 'test_guard_avance_phuma_v7_6.py' -v
       - name: Diagnóstico técnico legado - auditar hasta 450 registros sin certificación semántica
         if: ${{ !cancelled() && steps.install_cert_deps.outcome == 'success' }}

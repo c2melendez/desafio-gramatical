@@ -27,9 +27,9 @@
   ],
   "last_verified_ci_run": 45753039032,
   "english_excluded": true,
-  "active_prompt_version": "7.9",
+  "active_prompt_version": "8.0",
   "batch_policy": {
-    "mode": "RDG_FIRST_BLOCK_PHASED",
+    "mode": "RDG_FIRST_INDEPENDENT_SUBTOPICS",
     "max_ids": 450,
     "adaptive_sizes": [
       50,
@@ -42,14 +42,23 @@
     "legacy_cursor_preserved": true,
     "semantic_approved_from_legacy": 0,
     "requires_frozen_ids_and_hashes": true,
-    "certification_mode": "SEMANTIC_SCALABLE_FAMILY_ID",
+    "certification_mode": "SEMANTIC_INCREMENTAL_FAMILY_ID",
     "adaptive_sizes_role": "capacidad técnica; encadenar manifiestos, no cuota",
     "legacy_cursor_role": "diagnostic_only_do_not_advance_as_certification",
-    "semantic_pass_aspiration_per_run": 150,
+    "semantic_pass_aspiration_per_run": 450,
     "aspiration_is_not_quota": true,
     "criteria_revision": "7.9",
     "family_evidence_reuse": true,
-    "individual_decision_required": true
+    "individual_decision_required": true,
+    "initial_processing_capacity": 1350,
+    "expanded_processing_capacity": 2250,
+    "initial_parallel_subtopics": 3,
+    "expanded_parallel_subtopics": 5,
+    "scaled_pass_aspiration": [
+      900,
+      1350
+    ],
+    "expanded_capacity_requires_measured_quality": true
   },
   "rdg_continuity": {
     "active_subtopic": {
@@ -66,7 +75,7 @@
     "plan_sha256": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
     "external_research_required": true,
     "research_status": "CALIBRACION_CUALITATIVA_CON_LIMITACIONES",
-    "next_action": "R29: integrar evidencia de 27 PASS; activar 3 R28 tras contraste de examen y regresiones; continuar 59 R21, C09 pendiente.",
+    "next_action": "v8.0: R29 integrado (125 PASS); verificar CI/Render del SHA de integración. Reconciliar R28 y R21 sin alterar los PASS; C09 pendiente. Completar P0 y G-REPASO de Idea principal y Célula con motor compartido candidato.",
     "previous_publication": {
       "sha": "f76f67b48019e982928bc0c0f8cb53d69dd4e5c9",
       "candidate_ci": 45710370482,
@@ -882,6 +891,7 @@
         "review_merged_sha": "8bf6bc197f20b1e97a1be45cc96193910aee2cb4",
         "observed_at": "2026-11-27"
       }
-    }
+    },
+    "v80_checkpoint_path": "qa/certification/rdg/continuity-v80.json"
   }
 }

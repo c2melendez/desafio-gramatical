@@ -1,0 +1,64 @@
+{
+  "policy_version": "8.0",
+  "criteria_revision": "7.9",
+  "observed_base_sha": "a9e042cfa4857ba475a81cba05b6dd26ee8fc131",
+  "fronts": [
+    {
+      "block_id": "MAT-ARIT-01",
+      "scope": {
+        "area": "matematicas",
+        "topic": "Aritmética",
+        "subtopic": "Operaciones"
+      },
+      "phase": "P2",
+      "rdg_status": "RDG_READY",
+      "contract_path": "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+      "selection_paths": [
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-01-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-02-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-03.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-04-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-05-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-06-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-07-R26.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-08-R20.json",
+        "qa/certification/rdg/selections/MAT-ARIT-01-R4-09.json"
+      ],
+      "ledger_paths": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-OP04-pass.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R15-pass.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R12-R14-pass.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json"
+      ],
+      "registered_pass": 125,
+      "selected": 450,
+      "remaining": 325,
+      "next_action": "Reconcile R28 and R21; C09 and production evidence pending."
+    },
+    {
+      "block_id": "ESPANOL-01",
+      "scope": {
+        "area": "espanol",
+        "topic": "Comprensión lectora",
+        "subtopic": "Idea principal"
+      },
+      "phase": "P0",
+      "rdg_status": "CANDIDATE_NOT_READY",
+      "plan_path": "qa/certification/rdg/plans/ESPANOL-01-Idea-principal.json",
+      "next_action": "Complete external calibration and validate candidate, no public navigation."
+    },
+    {
+      "block_id": "NATURALES-01",
+      "scope": {
+        "area": "naturales",
+        "topic": "Biología",
+        "subtopic": "Célula"
+      },
+      "phase": "P0",
+      "rdg_status": "CANDIDATE_NOT_READY",
+      "plan_path": "qa/certification/rdg/plans/NATURALES-01-Celula.json",
+      "next_action": "Complete external calibration and validate candidate, no public navigation."
+    }
+  ],
+  "notes": "Checkpoint references existing ledgers, not a second bank. Counts are derived from selected IDs and records; not new decisions. Preserve historical cursor. CI/Render of integrated SHA still must be observed."
+}
