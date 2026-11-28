@@ -1,0 +1,440 @@
+{
+  "scope": "MAT-ARIT-01",
+  "status": "INDIVIDUAL_REVIEW_PENDING_ACTIVE_UI_AND_PUBLICATION",
+  "criteria_revision": "7.9",
+  "policy_version": "8.0",
+  "base_sha": "eedcce7aa754645c79d661294744c90d0932f06f",
+  "source_ci": 46102091014,
+  "summary": {
+    "reviewed": 3,
+    "new_pass": 0,
+    "review": 3
+  },
+  "records": [
+    {
+      "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+      "content_hash": "966b26066a12fab5cfc78c74b4eebe19018f42498b4e1fff2b3382040dffd6fd",
+      "previous_sha256": "e9f3340fe71290c00048d5b31e3d72e18003082fadf9e6d680519397b76052fd",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "quiz",
+      "nivel": "principiante",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "family_id": "cero-dividido-por-no-cero",
+      "operation": "cero-dividido-por-no-cero",
+      "stimulus": "Calcula (42 − 42) ÷ 7 + (31 − 14). ¿Cuál es el resultado?",
+      "respuesta_esperada": "17",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción desde estímulo visible y contraste de oráculo independiente R28 por hash en CI R30",
+        "reconstruction": "(42−42)÷7+(31−14)=0÷7+17=17",
+        "key": "17",
+        "step": "0",
+        "source_ci": 46102091014,
+        "source_job": 140846579313,
+        "oracle": {
+          "key": "17",
+          "step": "0",
+          "wrong": [
+            "23",
+            "24",
+            "45"
+          ],
+          "mid": [
+            "-42",
+            "42",
+            "84"
+          ]
+        }
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01: resolver dos agrupaciones, dividir cero por 7 no nulo y sumar; precedencia y signos."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(42−42)÷7+(31−14)=0÷7+17=17"
+        },
+        "C": {
+          "score": 3,
+          "reason": "17 no es un operando visible. 23 conserva 42÷7 y omite la resta del numerador; 45 suma 31+14; 24 sustituye el cociente cero por el divisor 7. Tres alternativas distintas y falsas."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado íntegro y respuesta solicitada explícita: Calcula (42 − 42) ÷ 7 + (31 − 14). ¿Cuál es el resultado?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Cada alternativa discrimina una causa: omisión de la resta, sustitución de la diferencia por suma o confusión del divisor con sumando; explicación reconstruye ambos paréntesis y cero dividido por 7."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Básico: aplicar precedencia a dos agrupaciones enteras y reconocer 0÷7=0; sin ecuación inversa ni racionales. Ancla cualitativa OP-01."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Consolidación paramétrica de división de cero y precedencia. Requiere calcular 31−14; ya no se copia el sumando. R28 no detecta coincidencias de estímulo con 415 preguntas matemáticas ni con Repaso/banco, y el test verifica tupla individual; familia y selección de rondas no cambian."
+        },
+        "H": {
+          "score": 2,
+          "reason": "Una selección de resultado con opciones numéricas y explicación textual; comprobar botones, retroalimentación causal y continuación en banco activo. Evidencia activa individual R31 todavía pendiente de CI; no se promueve."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PASS_R30_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "R31_ACTIVE_H_AND_PUBLICATION_PENDING"
+      ],
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "calcula(42-42)/7+(31-14).¿cuáleselresultado?; expr|(42-42)/7+(31-14); zero|42|42|7|31|14",
+      "variation_justification": "Consolidación paramétrica de división de cero y precedencia. Requiere calcular 31−14; ya no se copia el sumando. R28 no detecta coincidencias de estímulo con 415 preguntas matemáticas ni con Repaso/banco, y el test verifica tupla individual; familia y selección de rondas no cambian.",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "assertion_decisions": [],
+      "assertionExplanations": {},
+      "independent_wrong": [
+        "23",
+        "24",
+        "45"
+      ],
+      "independent_mid": [
+        "-42",
+        "42",
+        "84"
+      ],
+      "explicacion_verificada": "(42−42)÷7+(31−14)=0÷7+17=17",
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R28-exam-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R30-integration.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46102091014/job/140846579313"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m2-aritmetica-operaciones-quiz-principiante-9",
+        "hash": "966b26066a12fab5cfc78c74b4eebe19018f42498b4e1fff2b3382040dffd6fd",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R28-visible-arithmetic",
+        "candidate_ci": 46102091014,
+        "active_sha": "eedcce7aa754645c79d661294744c90d0932f06f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida; no aval docente",
+      "promotion_candidate": false,
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_O_DOCENTE"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+      "content_hash": "3e08ef33b33ba3f3708bbbcf5d31f8e9c22304f60aa1fc53bcdc3c20925eacb3",
+      "previous_sha256": "36f07ade6ac806edbda8930a7a1151b124b36eabd984d88111ff8cceebaa32c9",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "construir",
+      "nivel": "principiante",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-01"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,54,56,58,61; anclas cualitativas del plan R4",
+      "family_id": "cero-dividido-por-no-cero",
+      "operation": "cero-dividido-por-no-cero",
+      "stimulus": "Calcula (60 − 60) ÷ 6 + (37 − 18). ¿Cuál es el resultado?",
+      "respuesta_esperada": "19",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción desde estímulo visible y contraste de oráculo independiente R28 por hash en CI R30",
+        "reconstruction": "(60−60)÷6+(37−18)=0÷6+19=19",
+        "key": "19",
+        "step": "0",
+        "source_ci": 46102091014,
+        "source_job": 140846579313,
+        "oracle": {
+          "key": "19",
+          "step": "0",
+          "wrong": [
+            "25",
+            "29",
+            "55"
+          ],
+          "mid": [
+            "-60",
+            "120",
+            "60"
+          ]
+        }
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-01: identificar la diferencia de iguales, dividir por 6 no nulo y resolver la segunda agrupación."
+        },
+        "B": {
+          "score": 4,
+          "reason": "(60−60)÷6+(37−18)=0÷6+19=19"
+        },
+        "C": {
+          "score": 3,
+          "reason": "19 no aparece como operando. Paso 0: 60 omite el segundo término, −60 omite el primero, 120 suma iguales. Resultado: 29 omite resta del numerador, 55 suma 37+18, 25 agrega el divisor 6 al resultado. Seis errores falsos y diferenciados."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado íntegro y respuesta solicitada explícita: Calcula (60 − 60) ÷ 6 + (37 − 18). ¿Cuál es el resultado?"
+        },
+        "E": {
+          "score": 3,
+          "reason": "Retroalimentación por paso: omitir primero/segundo término o sumar iguales; resultado: omitir resta, sumar el segundo paréntesis o tomar divisor como sumando. Procedimiento 0÷6+19=19."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Básico: construir dos decisiones, cancelar iguales y calcular diferencia de enteros; ambas son necesarias en la ronda, sin requerir ecuación inversa."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Consolidación paramétrica con datos distintos del quiz y objetivo procedimental adicional: seleccionar 0 antes de 19. No se memoriza la clave del quiz (17); estímulo/tupla sin señal acotada y distribución familiar no alterada."
+        },
+        "H": {
+          "score": 2,
+          "reason": "Dos decisiones secuenciales con opciones numéricas, feedback de la selección errónea y continuación; verificar en banco activo. Evidencia activa individual R31 todavía pendiente de CI; no se promueve."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PASS_R30_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "R31_ACTIVE_H_AND_PUBLICATION_PENDING"
+      ],
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "calcula(60-60)/6+(37-18).¿cuáleselresultado?; expr|(60-60)/6+(37-18); zero|60|60|6|37|18",
+      "variation_justification": "Consolidación paramétrica con datos distintos del quiz y objetivo procedimental adicional: seleccionar 0 antes de 19. No se memoriza la clave del quiz (17); estímulo/tupla sin señal acotada y distribución familiar no alterada.",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "assertion_decisions": [],
+      "assertionExplanations": {},
+      "independent_wrong": [
+        "25",
+        "29",
+        "55"
+      ],
+      "independent_mid": [
+        "-60",
+        "120",
+        "60"
+      ],
+      "explicacion_verificada": "(60−60)÷6+(37−18)=0÷6+19=19",
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R28-exam-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R30-integration.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46102091014/job/140846579313"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m2-aritmetica-operaciones-construir-principiante-8",
+        "hash": "3e08ef33b33ba3f3708bbbcf5d31f8e9c22304f60aa1fc53bcdc3c20925eacb3",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R28-visible-arithmetic",
+        "candidate_ci": 46102091014,
+        "active_sha": "eedcce7aa754645c79d661294744c90d0932f06f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida; no aval docente",
+      "promotion_candidate": false,
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_O_DOCENTE"
+      ]
+    },
+    {
+      "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+      "content_hash": "b608920d86a65dbccc72be481b3e12aea61a01d03bdfc5c6c16f335ac033dac2",
+      "previous_sha256": "56a42f81536dbe0240df6d6c429039347ba218732ea0ac12201ca5f574ec7d2d",
+      "area": "matematicas",
+      "tema": "Aritmética",
+      "subtema": "Operaciones",
+      "modalidad": "clasificar",
+      "nivel": "intermedio",
+      "exam": [
+        "PHUMA"
+      ],
+      "competencia": "Operaciones con números reales",
+      "objective_ids": [
+        "OP-04"
+      ],
+      "fuente_id": "PHUMA-UNAH-2026",
+      "pagina_seccion": "7,58,61",
+      "family_id": "cociente-de-diferencia-racional-con-raiz",
+      "operation": "cociente-de-diferencia-racional-con-raiz",
+      "stimulus": "Calcula (√(49/121) − 8/22) ÷ 5. Expresa una fracción simplificada.",
+      "respuesta_esperada": "3/55",
+      "oraculo_independiente": {
+        "status": "VERIFIED",
+        "method": "Reconstrucción desde estímulo visible y contraste de oráculo independiente R28 por hash en CI R30",
+        "reconstruction": "√(49/121)=7/11; 7/11−8/22=3/11; (3/11)÷5=3/55",
+        "key": "3/55",
+        "step": "3/11",
+        "source_ci": 46102091014,
+        "source_job": 140846579313,
+        "oracle": {
+          "target": {
+            "step": "3/11",
+            "aux": "7/11",
+            "key": "3/55"
+          },
+          "expectedClaims": {
+            "step": "3/11",
+            "aux": "-7/11",
+            "key": "15/11"
+          }
+        }
+      },
+      "oracle_status": "VERIFIED",
+      "rubric": {
+        "A": {
+          "score": 3,
+          "reason": "OP-04: raíz principal racional, denominador común y división de fracciones; decisiones de clasificación sobre tres operaciones."
+        },
+        "B": {
+          "score": 4,
+          "reason": "√(49/121)=7/11; 7/11−8/22=3/11; (3/11)÷5=3/55"
+        },
+        "C": {
+          "score": 3,
+          "reason": "3/11 es la diferencia correcta; −7/11 contradice raíz principal; 15/11 multiplica 3/11 por 5 en vez de dividir. Los dos errores ya no derivan de elegir la raíz negativa. La validez de cada afirmación exige su operación."
+        },
+        "D": {
+          "score": 3,
+          "reason": "Enunciado íntegro y respuesta solicitada explícita: Calcula (√(49/121) − 8/22) ÷ 5. Expresa una fracción simplificada."
+        },
+        "E": {
+          "score": 3,
+          "reason": "La raíz falsa se explica por no negatividad y cuadrado 49/121; 15/11 por confundir multiplicar con dividir, y el paso verdadero se justifica con denominador 22. Causas distintas y cálculo explícito."
+        },
+        "F": {
+          "score": 3,
+          "reason": "Intermedio: combina raíz exacta, reducción de fracciones, diferencia y división, y contrasta tres decisiones; calibración cualitativa."
+        },
+        "G": {
+          "score": 3,
+          "reason": "Estímulo, clave, paso, familia y máscara se conservan: reutilizar cribado de R26 y distribución anterior, con causa errónea nueva que mejora independencia diagnóstica. R28 confirma ausencia de coincidencias de estímulo en examen para este hash sucesor."
+        },
+        "H": {
+          "score": 2,
+          "reason": "Tres afirmaciones secuenciales, botones Verdadero/Falso y retroalimentación textual específica; comprobar en banco activo. Evidencia activa individual R31 todavía pendiente de CI; no se promueve."
+        }
+      },
+      "semantic_status": "REVIEW",
+      "technical_status": "PASS_R30_CANDIDATE_CI",
+      "teacher_status": "PENDING",
+      "empirical_status": "NOT_RUN",
+      "reason_codes": [
+        "R31_ACTIVE_H_AND_PUBLICATION_PENDING"
+      ],
+      "criteria_revision": "7.9",
+      "policy_version": "8.0",
+      "variation_class": "CONSOLIDACION_PARAMETRICA",
+      "variation_signature": "calcula(√(49/121)-8/22)/5.expresaunafracciónsimplificada.; expr|(√(49/121)-8/22)/5",
+      "variation_justification": "Estímulo, clave, paso, familia y máscara se conservan: reutilizar cribado de R26 y distribución anterior, con causa errónea nueva que mejora independencia diagnóstica. R28 confirma ausencia de coincidencias de estímulo en examen para este hash sucesor.",
+      "family_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "distribution_evidence_ref": "qa/certification/rdg/evidence/MAT-ARIT-01-v79-distribucion-verificada.json",
+      "dependency_hashes": {
+        "qa/certification/rdg/plans/MAT-ARIT-01-R4-candidate.json": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "src/components/review/OperationsReview.tsx": "313b415667df5c77a21254916c939faa4d6ce90c49616f768835a74542dbf18c",
+        "src/lib/rdg/operations.ts": "9b66339c6e9861d3c1595e2c1ddd65d39cba5ea40418ee2dceee083a8c8b53bf",
+        "docs/fuentes_certificacion_paa_phuma_v6.json": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f"
+      },
+      "assertion_decisions": [
+        {
+          "text": "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 3/11.",
+          "truth": true
+        },
+        {
+          "text": "La raíz cuadrada principal es -7/11.",
+          "truth": false
+        },
+        {
+          "text": "El resultado solicitado es 15/11.",
+          "truth": false
+        }
+      ],
+      "assertionExplanations": {
+        "El valor correcto del paso «Resuelve la diferencia dentro del paréntesis» es 3/11.": "La raíz principal es 7/11. Con denominador 22, el paréntesis vale 3/11. Dividir por 5 equivale a multiplicar por 1/5; resulta (14−8)/(22×5)=3/55. El valor afirmado es 3/11; el correcto es 3/11.",
+        "La raíz cuadrada principal es -7/11.": "Se eligió la raíz negativa en lugar de la principal. La raíz principal es no negativa: 7/11; su cuadrado es 49/121. El valor afirmado es -7/11; el correcto es 7/11.",
+        "El resultado solicitado es 15/11.": "Se multiplicó por el divisor en lugar de dividir. El paréntesis vale 3/11; multiplicar por 5 da 15/11, pero dividir por 5 equivale a multiplicar por 1/5: 3/55."
+      },
+      "independent_wrong": [],
+      "independent_mid": [],
+      "explicacion_verificada": "√(49/121)=7/11; 7/11−8/22=3/11; (3/11)÷5=3/55",
+      "evidence_refs": [
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R28-exam-screen.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-v79-R27-pass.json",
+        "qa/certification/rdg/contracts/MAT-ARIT-01-R4.json",
+        "qa/certification/rdg/evidence/MAT-ARIT-01-R30-integration.json",
+        "https://github.com/c2melendez/desafio-gramatical/actions/runs/46102091014/job/140846579313"
+      ],
+      "evidence_fingerprint": {
+        "id": "math-m2-aritmetica-operaciones-clasificar-intermedio-17",
+        "hash": "b608920d86a65dbccc72be481b3e12aea61a01d03bdfc5c6c16f335ac033dac2",
+        "source": "8b033a121b3200e88a2626bb527fe08c2ff6c93841577832a4fee5240a3df80f",
+        "route": "f37fd2b8dcaa0784009f95eb3062fa8b692a845cad01bbb3ef9c4c73c4bbc237",
+        "criteria": "7.9",
+        "oraculo": "R28-visible-arithmetic",
+        "candidate_ci": 46102091014,
+        "active_sha": "eedcce7aa754645c79d661294744c90d0932f06f"
+      },
+      "reviewed_at": "2026-11-27",
+      "modelo_revisor": "Revisión asistida; no aval docente",
+      "promotion_candidate": false,
+      "risks": [
+        "CALIBRACION_CUALITATIVA",
+        "CRIBADO_ACOTADO",
+        "SIN_VALIDACION_FISICA_O_DOCENTE"
+      ]
+    }
+  ],
+  "limits": "Revisión A–H específica del sucesor. H se mantiene en 2 hasta ejecutar test activo R31; verificar publicación R30 del SHA exacto antes de otorgar PASS. No modifica los 125 PASS."
+}
