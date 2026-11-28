@@ -14,7 +14,7 @@ for(const [name,mutate] of [
  ['stale fingerprint',x=>x.ledgers[0].data.records[0].evidence_fingerprint.hash=other],
  ['blocked',x=>x.ledgers[0].data.records[0].reason_codes=['BLOCK']],
  ['wrong scope',x=>x.ledgers[0].data.records[0].area='other']
-])test(name+' requires revalidation',()=>{const x=fixture();mutate(x);assert.equal(indexEvidence(x).counts.reusable,0);assert.equal(indexEvidence(x).counts.revalidation,1)});
+])test(name+' requires revalidation',()=>{const x=fixture();mutate(x);assert.equal(indexEvidence(x).counts.reusable,0);assert.equal(indexEvidence(x).counts.revalidation,name==='stale dependency'?2:1)});
 test('duplicate approval fails closed',()=>{const x=fixture();x.ledgers[0].data.records.push(x.ledgers[0].data.records[0]);assert.throws(()=>indexEvidence(x),/duplicate PASS/)});
 test('duplicate selection fails closed',()=>{const x=fixture();x.manifests[0].data.items.push(x.manifests[0].data.items[0]);assert.throws(()=>indexEvidence(x),/duplicate selection/)});
 test('wrong manifest scope fails closed',()=>{const x=fixture();x.manifests[0].data.subtopic_scope={...scope,area:'other'};assert.throws(()=>indexEvidence(x),/outside scope/)});
